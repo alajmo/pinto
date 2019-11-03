@@ -1,0 +1,14 @@
+.picker-sl {
+  position: relative;
+  width: 21em;
+  height: 21em;
+  border-radius: 3px;
+
+  background-image: linear-gradient(180deg, white, rgba(255, 255, 255, 0) 50%),
+    linear-gradient(0deg, black, rgba(0, 0, 0, 0) 50%),
+    linear-gradient(90deg, #808080, rgba(128, 128, 128, 0));
+
+  & .picker-selector {
+    border-radius: 100%;
+  }
+}

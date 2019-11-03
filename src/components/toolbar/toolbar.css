@@ -1,0 +1,25 @@
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  background: #1d1f21;
+
+  & .right-items {
+    display: flex;
+    flex-direction: row;
+
+    & div {
+      margin-right: 20px;
+      padding: 10px;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

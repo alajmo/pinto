@@ -1,0 +1,28 @@
+.modal {
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: auto;
+  background: #42464b; /* #1d1f21; */
+  border: 10px solid #35393c;
+  z-index: 9999;
+
+  &.small {
+    left: 50%;
+    width: 400px;
+    margin-left: -200px;
+  }
+
+  &.medium {
+    left: 50%;
+    width: 500px;
+    margin-left: -250px;
+  }
+
+  &.large {
+    left: 50%;
+    width: 600px;
+    margin-left: -300px;
+  }
+}

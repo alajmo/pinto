@@ -1,0 +1,31 @@
+.keyword-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+
+  padding: 20px;
+  box-sizing: border-box;
+  background: #1d1f21;
+  height: 100%;
+
+  & .form-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  & .form-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  & .text-decoration[data-display-text-decoration='false'] {
+    display: none;
+  }
+}

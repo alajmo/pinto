@@ -1,0 +1,19 @@
+.select {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  & .label {
+    color: white;
+    font-size: 0.75rem;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+
+  & .select-input {
+    display: flex;
+    flex-direction: row;
+    height: 45px;
+    color: white;
+  }
+}

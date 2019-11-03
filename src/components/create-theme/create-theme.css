@@ -1,0 +1,24 @@
+.create-theme-modal {
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+
+  & .create-theme-form {
+    margin-bottom: 30px;
+
+    & h2 {
+      margin-bottom: 20px;
+    }
+  }
+
+  & .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    box-sizing: border-box;
+
+    & button:first-child {
+      margin-right: 20px;
+    }
+  }
+}

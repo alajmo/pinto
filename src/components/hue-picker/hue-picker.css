@@ -1,0 +1,24 @@
+.picker-hue {
+  position: relative;
+  width: 1em;
+  height: 21em;
+  border-radius: 3px;
+
+  margin-left: 20px;
+  padding: 0.5em;
+
+  background-image: linear-gradient(
+    0deg,
+    red,
+    yellow,
+    lime,
+    cyan,
+    blue,
+    magenta,
+    red
+  );
+
+  & .picker-selector {
+    border-radius: 2px;
+  }
+}

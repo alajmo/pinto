@@ -1,0 +1,14 @@
+.output {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #f7f7;
+}
+
+.output__content {
+  display: flex;
+  background: lightblue;
+  margin: 5px 5px;
+}

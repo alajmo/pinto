@@ -1,0 +1,77 @@
+.palette {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+
+  & .palette-colors {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+
+    & .palette-color {
+      width: 25px;
+      height: 25px;
+      margin: 1px;
+      box-sizing: border-box;
+      cursor: pointer;
+
+      &.palette-color--remove {
+        animation: shake 0.3s;
+        animation-iteration-count: infinite;
+      }
+
+      &.palette-color--selected {
+        border: 3px solid black;
+      }
+
+      &:hover {
+        border: 3px solid #1E90FF;
+      }
+    }
+  }
+
+  & .palette-buttons {
+    & .palette-button-add,
+    & .palette-button-remove {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 25px;
+      height: 25px;
+      margin: 5px;
+      box-shadow: 0 0 0 1px silver;
+      font-size: 20px;
+
+      &:hover,
+      &:focus,
+      &:active {
+        /* box-shadow: 0 0 2px 1px dodgerblue; */
+      }
+    }
+
+    & .palette-button-remove {
+      &.palette-button-remove--active {
+        background: red;
+      }
+    }
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  33% {
+    transform: rotate(5deg);
+  }
+  66% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}

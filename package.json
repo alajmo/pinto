@@ -1,0 +1,60 @@
+{
+  "name": "idetheme",
+  "version": "0.3.0",
+  "description": "IdeTheme is a free and open-source editor used to create color themes",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samiralajmovic/idetheme.git"
+  },
+  "contributors": [
+    {
+      "name": "Samir Alajmovic",
+      "email": "alajmovic.samir@gmail.com",
+      "url": "https://alajmovic.com"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samiralajmovic/idetheme/issues"
+  },
+  "homepage": "https://github.com/samiralajmovic/idetheme#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.7.0",
+    "lighterhtml": "^2.0.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-transform-regenerator": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "autoprefixer": "^9.7.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "core-js": "^3.4.5",
+    "css-loader": "^3.2.0",
+    "cssnano": "^4.1.10",
+    "file-loader": "^4.2.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "postcss-cli": "^6.1.2",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-modules": "^1.4.1",
+    "postcss-preset-env": "^6.7.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  }
+}

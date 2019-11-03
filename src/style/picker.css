@@ -1,0 +1,25 @@
+:root {
+  --width-slider: 2em;
+}
+
+.picker-selector {
+  position: absolute;
+  display: block;
+  transform: translate(-50%, -50%);
+  padding: calc(var(--width-slider) / 2);
+  z-index: 1;
+  font-size: 10px;
+  font-family: sans-serif;
+  background: currentColor;
+  color: #444;
+  cursor: pointer;
+  pointer-events: auto;
+  border: 2px solid white;
+  box-shadow: 0 0 3px 1px #67b9ff;
+  box-sizing: border-box;
+}
+
+.picker-slider {
+  box-sizing: border-box;
+  padding: calc(var(--width-slider) / 2);
+}

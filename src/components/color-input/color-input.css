@@ -1,0 +1,40 @@
+.color-input {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  & .label {
+    color: white;
+    font-size: 0.75rem;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+
+  & .color {
+    display: flex;
+    flex-direction: row;
+    height: 45px;
+
+    &.active {
+      border-bottom: 5px solid #1e90ff;
+    }
+
+    & input {
+      background: #35393c;
+      color: #babdbc;
+      font-size: 1rem;
+      font-family: 'Roboto';
+      letter-spacing: 0.25em;
+      line-height: 1.2;
+      max-width: 120px;
+      box-sizing: border-box;
+      padding: 12px 16px 14px 16px;
+    }
+
+    & .color-sample {
+      height: 100%;
+      width: 45px;
+      box-sizing: border-box;
+    }
+  }
+}

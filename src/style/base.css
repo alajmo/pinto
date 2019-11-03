@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  font-family: 'monospace', 'Helvetica Neue', 'Calibri Light', Roboto,
+    sans-serif;
+  line-height: normal;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1.5em;
+  margin-top: 0.75em;
+  margin-bottom: 0em;
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 1em;
+  /* margin-top: 1em; */
+  /* margin-bottom: 0em; */
+}
+
+h3 {
+  font-size: 1.125em;
+  line-height: 1.3333em;
+  /* margin-top: 1.3333em; */
+  /* margin-bottom: 0em; */
+}
+
+h4 {
+  font-size: 0.875em;
+  line-height: 1.7143em;
+  /* margin-top: 1.7143em; */
+  /* margin-bottom: 0em; */
+}
+
+h5 {
+  font-size: 0.8125em;
+  line-height: 1.8462em;
+  /* margin-top: 1.8462em; */
+  /* margin-bottom: 0em; */
+}
+
+h6 {
+  font-size: 0.5625em;
+  line-height: 2.6667em;
+  /* margin-top: 2.6667em; */
+  /* margin-bottom: 0em; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  margin: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+p {
+  display: block;
+  font-size: 1em;
+  line-height: 1.5;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+ol {
+  margin: initial;
+  font-size: 1em;
+  line-height: 1.5;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+ul {
+  margin: initial;
+  padding: 0 0 0 32px;
+  font-size: 1em;
+  line-height: 1.5;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+li {
+  display: list-item;
+}
+
+button.default {
+  color: white;
+  font-family: 'monospace', 'Helvetica Neue', 'Calibri Light', Roboto;
+  font-size: 1.125em;
+  padding: 10px 20px 10px 20px;
+  border: 2px solid white;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &:hover {
+    color: #1d1f21;
+    background: white;
+    font-family: 'monospace', 'Helvetica Neue', 'Calibri Light', Roboto;
+    font-size: 1.125em;
+    padding: 10px 20px 10px 20px;
+    border: 2px solid white;
+    box-sizing: border-box;
+  }
+}
+
+button.naked {
+  cursor: pointer;
+  color: white;
+  font-family: 'monospace', 'Helvetica Neue', 'Calibri Light', Roboto;
+  font-size: 1.125em;
+  box-sizing: border-box;
+
+  &:hover {
+    box-sizing: border-box;
+    text-decoration: underline;
+  }
+}

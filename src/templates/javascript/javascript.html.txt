@@ -1,0 +1,61 @@
+
+<span class="Statement">import</span><span class="Normal"> { add } from </span><span class="Constant">'add'</span></span><span class="Normal">;
+<span class="Statement">import</span><span class="Normal"> ChromeSamples from </span><span class="Constant">'chrome'</span><span class="Normal">;
+</span>
+<span class="Statement">export</span><span class="Normal"> { utilityFunction };
+</span>
+<span class="Statement">const</span><span class="Normal"> EXAMPLE = </span><span class="Constant">'EXAMPLE'</span></span><span class="Normal">;
+<span class="Statement">const</span><span class="Normal"> EXAMPLE_2 = </span><span class="Constant">'EXAMPLE'</span></span><span class="Normal">;
+<span class="Statement">const</span><span class="Normal"> EXAMPLE_3 = </span><span class="Constant">`EXAMPLE`</span><span class="Normal">;
+</span>
+<span class="Statement">class</span><span class="Normal"> Polygon {
+  constructor(height, width) {
+    this.name = </span><span class="Constant">'Polygon'</span><span class="Normal">;
+    this.height = height;
+    this.width = width;
+  }
+
+  </span><span class="Comment">/*
+   * Some method
+   */</span>
+<span class="Normal">  sayName() {
+    </span><span class="Comment">// </span><span class="Todo">TODO</span><span class="Comment">: Some text</span>
+<span class="Normal">    ChromeSamples.log(</span><span class="Constant">'Hi, I am a '</span><span class="Normal">, this.name + </span><span class="Constant">'.'</span><span class="Normal">);
+  }
+
+  sayHistory() {
+    ChromeSamples.log(
+      </span><span class="Constant">'"Polygon" is derived from the Greek polus (many) '</span><span class="Normal"> +
+        </span><span class="Constant">'and gonia (angle).'</span><span class="Normal">,
+    );
+
+    add();
+
+    </span><span class="Statement">const</span><span class="Normal"> example = </span><span class="Constant">`Inside Out </span><span class="Special">${add}</span></span><span class="Constant">`<span class="Normal">;
+
+    let i = </span></span><span class="javaScriptValue">0<span class="Normal">;
+    </span><span class="Statement">while</span><span class="Normal"> (i < </span><span class="javaScriptValue">10</span><span class="Normal">) {
+      i += </span></span><span class="javaScriptValue">1<span class="Normal">;
+    }
+
+    </span><span class="Statement">if</span><span class="Normal"> (</span></span><span class="javaScriptValue">1<span class="Normal"> === </span></span><span class="javaScriptValue">1<span class="Normal">) {
+      console.log(</span><span class="Constant">'Hello World'</span><span class="Normal">);
+    }
+
+    console.log(</span><span class="Constant">true</span><span class="Normal">, </span><span class="Statement">null</span><span class="Normal">, </span><span class="Statement">undefined</span><span class="Normal">);
+
+    </span><span class="Statement">try</span><span class="Normal"> {
+      hello = </span><span class="javaScriptValue">10</span><span class="Normal">;
+    } </span><span class="Statement">catch</span><span class="Normal"> (err) {
+      console.error(err);
+    }
+
+    app.get(</span><span class="Constant">'/'</span><span class="Normal">, (req, res) => {
+      res.send(</span><span class="Constant">'hello world'</span><span class="Normal">);
+    });
+  }
+}
+</span>
+<span class="Function">function</span><span class="Normal"> utilityFunction(damn) {
+  console.log(damn);
+}</span>
