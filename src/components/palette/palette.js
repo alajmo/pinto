@@ -5,9 +5,9 @@ export { Palette };
 
 function Palette(state, Store) {
   return html`
-    <h4>Palette</h4>
-
     <div class="palette">
+      <div class="palette-header">Palette</div>
+
       <div class="palette-colors" onclick="${state.clickPaletteColor}">
         ${state.palette.palette.colors.map((color, i) =>
           PaletteColorElement(

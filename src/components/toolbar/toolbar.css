@@ -7,6 +7,7 @@
   width: 100%;
   box-sizing: border-box;
   background: #1d1f21;
+  max-height: 80px;
 
   & .right-items {
     display: flex;

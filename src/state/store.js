@@ -89,7 +89,7 @@ async function CreateStore() {
       const state = store.getState();
       const selectedInput = state.app.selectedInput;
 
-      if (state.palette.palette.selectedPaletteColor) {
+      if (Number.isInteger(state.palette.palette.selectedPaletteColor)) {
         store.dispatch('palette', 'changePaletteColor', {
           colorIndex: state.palette.palette.selectedPaletteColor,
           color: hslToHex(state.picker.color),
