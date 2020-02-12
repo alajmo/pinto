@@ -1,0 +1,17 @@
+.seperator-medium {
+  box-sizing: border-box;
+  width: 100%;
+  height: 6px;
+  background: #35393c;
+  margin-top: $(margin-small);
+  margin-bottom: $(margin-small);
+}
+
+.seperator-small {
+  box-sizing: border-box;
+  width: 100%;
+  height: 4px;
+  background: #35393c;
+  margin-top: $(margin-small);
+  margin-bottom: $(margin-small);
+}

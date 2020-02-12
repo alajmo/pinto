@@ -1,0 +1,51 @@
+h1 {
+  font-size: 2em;
+  line-height: 1.5em;
+  margin-top: 0.75em;
+  margin-bottom: 0em;
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 1em;
+}
+
+h3 {
+  font-size: 1.125em;
+  line-height: 1.3333em;
+}
+
+h4 {
+  font-size: 0.875em;
+  line-height: 1.7143em;
+}
+
+h5 {
+  font-size: 0.8125em;
+  line-height: 1.8462em;
+}
+
+h6 {
+  font-size: 0.5625em;
+  line-height: 2.6667em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  margin: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+p {
+  display: block;
+  font-size: 1em;
+  line-height: 1.5;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}

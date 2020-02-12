@@ -8,6 +8,7 @@
   box-sizing: border-box;
   background: #1d1f21;
   max-height: 80px;
+  font-size: var(--sk);
 
   & .right-items {
     display: flex;

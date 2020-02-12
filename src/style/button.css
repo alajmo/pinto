@@ -1,0 +1,32 @@
+button.default {
+  color: white;
+  font-family: 'monospace', 'Helvetica Neue', 'Calibri Light', Roboto;
+  font-size: 1.125em;
+  padding: 10px 20px 10px 20px;
+  border: 2px solid white;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &:hover {
+    color: #1d1f21;
+    background: white;
+    font-family: 'monospace', 'Helvetica Neue', 'Calibri Light', Roboto;
+    font-size: 1.125em;
+    padding: 10px 20px 10px 20px;
+    border: 2px solid white;
+    box-sizing: border-box;
+  }
+}
+
+button.naked {
+  cursor: pointer;
+  color: white;
+  font-family: 'monospace', 'Helvetica Neue', 'Calibri Light', Roboto;
+  font-size: 1.125em;
+  box-sizing: border-box;
+
+  &:hover {
+    box-sizing: border-box;
+    text-decoration: underline;
+  }
+}

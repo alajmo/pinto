@@ -1,0 +1,20 @@
+ol {
+  margin: initial;
+  font-size: 1em;
+  line-height: 1.5;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+ul {
+  margin: initial;
+  padding: 0 0 0 32px;
+  font-size: 1em;
+  line-height: 1.5;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+li {
+  display: list-item;
+}

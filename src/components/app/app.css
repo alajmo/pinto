@@ -39,21 +39,3 @@
     }
   }
 }
-
-.seperator-medium {
-  box-sizing: border-box;
-  width: 100%;
-  height: 6px;
-  background: #35393c;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.seperator-small {
-  box-sizing: border-box;
-  width: 100%;
-  height: 4px;
-  background: #35393c;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
