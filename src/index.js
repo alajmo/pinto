@@ -1,6 +1,4 @@
-import 'style/reset.css';
 import 'style/base.css';
-import 'style/picker.css';
 
 import { render, html } from 'lighterhtml';
 import { App } from 'components/app/app.js';
