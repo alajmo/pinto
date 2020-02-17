@@ -14,7 +14,7 @@ function AppState({ themes = [] } = {}) {
     mode: THEME.dark,
 
     themes,
-    activeModal: null,
+    activeModal: 'new',
 
     createThemeModal: {
       themeName: '',

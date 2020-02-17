@@ -1,3 +1,5 @@
+@import 'variables.css';
+
 ol {
   margin: initial;
   font-size: 1em;
@@ -17,4 +19,53 @@ ul {
 
 li {
   display: list-item;
+}
+
+.single-line-list {
+  box-sizing: border-box;
+
+  & .sub-header {
+    margin-bottom: calc(var(--margin) * 5);
+  }
+
+  & .sub-header--inset {
+  }
+
+  & .list {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+
+    & .row {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+
+      padding-top: calc(var(--padding) * 4);
+      padding-bottom: calc(var(--padding) * 4);
+      padding-left: calc(var(--padding) * 3);
+      padding-right: calc(var(--padding) * 3);
+
+      & .support {
+        flex: 0 1 auto;
+      }
+
+      & .primary {
+        flex: 1 1 auto;
+      }
+
+      & .control {
+        flex: 0 1 auto;
+      }
+    }
+  }
+}
+
+ul.two-line {
+}
+
+ul.hhree-line {
 }

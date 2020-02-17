@@ -46,7 +46,7 @@ function CreateTheme(state, Store) {
   };
 
   return html`
-    <div class="modal small create-theme-modal">
+    <div class="modal--small create-theme-modal">
       <div class="create-theme-form">
         <h2>New Theme</h2>
 
@@ -54,8 +54,8 @@ function CreateTheme(state, Store) {
       </div>
 
       <div class="buttons">
-        <button class="default" onclick="${c.create}">Create</button>
-        <button class="default" onclick="${c.cancel}">Cancel</button>
+        <button class="outline" onclick="${c.create}">Create</button>
+        <button class="outline" onclick="${c.cancel}">Cancel</button>
       </div>
     </div>
   `;

@@ -1,10 +1,14 @@
-$primary-color: blue;
-$secondary-color: red;
+:root {
+  --app-width: 600px;
 
-$primary-accent-color: lightblue;
-$secondary-accent-color: lightred;
+  /* Colors */
+  --primary-color: blue;
+  --secondary-color: red;
 
-$padding: 4px;
-$margin: 4px;
+  --primary-accent-color: lightblue;
+  --secondary-accent-color: lightred;
 
-$margin-small: 12px;
+  /* Padding / Margin */
+  --padding: 4px;
+  --margin: 4px;
+}

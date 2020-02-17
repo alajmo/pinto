@@ -6,7 +6,7 @@ export { Modal };
 
 function Modal({ size = 'small', children }) {
   return html`
-    <div class="modal ${size}">
+    <div class="modal--${size}">
       ${children}
     </div>
   `;

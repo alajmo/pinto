@@ -255,11 +255,11 @@ function KeywordForm(state, Store) {
     <div class="keyword-form">
       <h3>${selectedKeyword}</h3>
 
-      <div class="seperator-medium"></div>
+      <div class="divider--medium"></div>
 
       <h4 onclick="${components.toggleTextDecoration}">Text Decoration</h4>
 
-      <div class="seperator-small"></div>
+      <div class="divider--small"></div>
 
       <div
         class="text-decoration"
@@ -271,7 +271,7 @@ function KeywordForm(state, Store) {
 
       <h4>Color</h4>
 
-      <div class="seperator-small"></div>
+      <div class="divider--small"></div>
 
       <div class="form-column">
         <div class="form-row">

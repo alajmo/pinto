@@ -1,3 +1,5 @@
+@import '../../style/variables.css';
+
 .app {
   display: flex;
   flex-direction: column;
@@ -6,14 +8,14 @@
   flex: 1;
   width: 100%;
   box-sizing: border-box;
-  min-width: 600px;
+  min-width: var(--app-width);
   background: #35393c;
 
   & .row-1 {
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: calc(var(--margin) * 3);
     box-sizing: border-box;
   }
 
@@ -30,7 +32,7 @@
     & .column-1,
     & .column-2 {
       box-sizing: border-box;
-      margin-right: 10px;
+      margin-right: calc(var(--margin) * 3);
     }
 
     & .column-3 {

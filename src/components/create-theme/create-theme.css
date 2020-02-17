@@ -1,13 +1,13 @@
+@import '../../style/variables.css';
+
 .create-theme-modal {
-  padding: 20px;
   box-sizing: border-box;
-  margin-bottom: 30px;
 
   & .create-theme-form {
-    margin-bottom: 30px;
+    margin-bottom: calc(var(--margin) * 8);
 
     & h2 {
-      margin-bottom: 20px;
+      margin-bottom: calc(var(--margin) * 5);
     }
   }
 
@@ -18,7 +18,7 @@
     box-sizing: border-box;
 
     & button:first-child {
-      margin-right: 20px;
+      margin-right: calc(var(--margin) * 5);
     }
   }
 }

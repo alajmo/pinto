@@ -47,7 +47,7 @@ function FontSettings(state, Store) {
     <div class="keyword-form">
       <h3>Font Settings</h3>
 
-      <div class="seperator-medium"></div>
+      <div class="divider--medium"></div>
 
       ${Select(components.fontFamily)} ${NumberInput(components.fontSize)}
       ${NumberInput(components.lineHeight)}

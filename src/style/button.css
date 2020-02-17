@@ -1,10 +1,16 @@
-button.default {
+button.outline,
+button.text,
+button.contained,
+button.toggle {
+  cursor: pointer;
+}
+
+button.outline {
   color: white;
   font-family: 'monospace', 'Helvetica Neue', 'Calibri Light', Roboto;
   font-size: 1.125em;
   padding: 10px 20px 10px 20px;
   border: 2px solid white;
-  cursor: pointer;
   box-sizing: border-box;
 
   &:hover {
@@ -18,8 +24,7 @@ button.default {
   }
 }
 
-button.naked {
-  cursor: pointer;
+button.text {
   color: white;
   font-family: 'monospace', 'Helvetica Neue', 'Calibri Light', Roboto;
   font-size: 1.125em;
@@ -29,4 +34,10 @@ button.naked {
     box-sizing: border-box;
     text-decoration: underline;
   }
+}
+
+button.contained {
+}
+
+button.toggle {
 }

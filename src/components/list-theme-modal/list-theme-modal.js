@@ -24,39 +24,37 @@ function ListThemeModal(state, Store) {
   };
 
   return html`
-    <div class="modal medium list-theme-modal">
-      <h2>Themes</h2>
+    <div class="modal--medium theme-list-modal">
+      <div class="single-line-list">
+        <h2 class="sub-header">Themes</h2>
 
-      <ul class="theme-list">
-        ${state.app.themes.map(
-          (theme, i) => html`
-            <li>
-              <div class="open-btn naked">
-                ${theme.theme.name}
-              </div>
+        <ul class="list">
+          ${state.app.themes.map(
+            (theme, i) => html`
+              <li class="row">
+                <div class="support">
+                  ${theme.theme.name}
+                </div>
 
-              <div class="theme-list-buttons">
-                <button
-                  class="open-btn naked"
-                  onclick="${() => c.loadTheme(theme)}"
-                >
-                  Open
-                </button>
+                <div class="primary"></div>
 
-                <button
-                  class="remove-btn naked"
-                  onclick="${() => c.removeTheme(theme)}"
-                >
-                  Remove
-                </button>
-              </div>
-            </li>
-          `,
-        )}
-      </ul>
+                <div class="control">
+                  <button class="text" onclick="${() => c.loadTheme(theme)}">
+                    Open
+                  </button>
+
+                  <button class="text" onclick="${() => c.removeTheme(theme)}">
+                    Remove
+                  </button>
+                </div>
+              </li>
+            `,
+          )}
+        </ul>
+      </div>
 
       <div class="buttons">
-        <button class="default" onclick="${c.close}">Close</button>
+        <button class="outline" onclick="${c.close}">Close</button>
       </div>
     </div>
   `;

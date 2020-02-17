@@ -1,13 +1,17 @@
+@import '../../style/variables.css';
+
+/* TODO: Add general form css element */
+
 .keyword-form {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   flex: 1;
+  height: 100%;
+  padding: calc(var(--padding) * 5);
 
-  padding: 20px;
   box-sizing: border-box;
   background: #1d1f21;
-  height: 100%;
 
   & .form-column {
     display: flex;

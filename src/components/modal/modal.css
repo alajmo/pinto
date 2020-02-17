@@ -1,4 +1,8 @@
-.modal {
+@import '../../style/variables.css';
+
+.modal--small,
+.modal--medium,
+.modal--large {
   position: fixed;
   top: 25%;
   left: 25%;
@@ -8,21 +12,23 @@
   border: 10px solid #35393c;
   z-index: 9999;
 
-  &.small {
-    left: 50%;
-    width: 400px;
-    margin-left: -200px;
-  }
+  padding: calc(var(--padding) * 5);
+}
 
-  &.medium {
-    left: 50%;
-    width: 500px;
-    margin-left: -250px;
-  }
+.modal--small {
+  left: 50%;
+  width: 400px;
+  margin-left: -200px;
+}
 
-  &.large {
-    left: 50%;
-    width: 600px;
-    margin-left: -300px;
-  }
+.modal--medium {
+  left: 50%;
+  width: 500px;
+  margin-left: -250px;
+}
+
+.modal--large {
+  left: 50%;
+  width: 600px;
+  margin-left: -300px;
 }

@@ -38,7 +38,7 @@ function Sidebar(state, Store) {
       <div class="sidebar--open" data-display-sidebar=${state.app.showSidebar}>
         <h3>Options</h3>
 
-        <div class="seperator-medium"></div>
+        <div class="divider--medium"></div>
 
         <div
           class="item"
@@ -51,7 +51,7 @@ function Sidebar(state, Store) {
 
         <h3>Default Keywords</h3>
 
-        <div class="seperator-medium"></div>
+        <div class="divider--medium"></div>
 
         <ol class="items" onclick="${selectKeyword}">
           ${keywords.map(
@@ -68,7 +68,7 @@ function Sidebar(state, Store) {
 
         <h3>Language Keywords</h3>
 
-        <div class="seperator-medium"></div>
+        <div class="divider--medium"></div>
       </div>
     </div>
   `;

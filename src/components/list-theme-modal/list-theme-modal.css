@@ -1,60 +1,26 @@
-.list-theme-modal {
-  padding: 20px;
+@import '../../style/variables.css';
+
+.theme-list-modal {
   box-sizing: border-box;
 
-  & h2 {
-    margin-bottom: 20px;
+  & .single-line-list {
+    margin-bottom: calc(var(--margin) * 10);
+  }
+
+  & .control {
+    & button {
+      margin-right: calc(var(--margin) * 5);
+    }
+  }
+
+  & .row:nth-child(odd) {
+    background: #35393c;
   }
 
   & .buttons {
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    box-sizing: border-box;
-  }
-}
-
-ul.theme-list {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 30px;
-
-  & li {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    padding-top: 10px;
-    padding-bottom: 10px;
-
-    &:nth-child(odd) {
-      background: #35393c;
-    }
-
-    &:hover {
-      /* background: #1d1f21; */
-      /* background: white; */
-      /* color: #1d1f21; */
-    }
-
-    & .open-btn {
-      padding: 5px 0 5px 10px;
-      cursor: pointer;
-    }
-
-    & .remove-btn {
-      padding: 5px 10px 5px 0;
-      cursor: pointer;
-    }
-  }
-}
-
-.theme-list-buttons {
-  box-sizing: border-box;
-
-  & button:first-child {
-    margin-right: 20px;
   }
 }

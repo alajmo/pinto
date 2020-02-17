@@ -1,11 +1,13 @@
+@import '../../style/variables.css';
+
 .sidebar {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  flex: 1;
+  height: 100%;
+  padding: calc(var(--padding) * 5);
   box-sizing: border-box;
   background: #1d1f21;
-  height: 100%;
-  flex: 1;
 
   & .item {
     font-size: 1.25rem;
