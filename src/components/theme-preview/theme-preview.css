@@ -1,0 +1,97 @@
+@import '../../style/variables.css';
+
+.theme {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1 0 auto;
+  height: 100%;
+  background: var(--bg-accent);
+
+  & .breadcrumb {
+    display: flex;
+    flex-direction: row;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+
+    width: 100%;
+    margin-bottom: calc(var(--margin) * 3);
+    padding-bottom: calc(var(--padding) * 2);
+
+    font-size: var(--font-medium);
+
+    border-bottom: var(--divider-small);
+
+    & .left-icons {
+      display: flex;
+      flex-direction: row;
+      flex: 0 0 auto;
+      justify-content: flex-start;
+      align-items: center;
+      user-select: none;
+
+      & *:not(:last-child) {
+        margin-right: calc(var(--margin) * 4);
+      }
+    }
+
+    & .right-icons {
+      user-select: none;
+      & i:not(:last-child) {
+        margin-right: calc(var(--padding) * 4);
+      }
+    }
+
+    & div:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  & .code {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto;
+
+    & .language-preview {
+      cursor: pointer;
+      white-space: pre;
+      margin: 0;
+      min-height: min-content;
+      width: min-content;
+      background: inherit;
+      width: 100%;
+
+      padding: 0;
+    }
+  }
+}
+
+.LineNr {
+  display: inline-block;
+  width: 34px;
+  padding-right: 4px;
+  padding-left: 4px;
+  text-align: right;
+}
+
+.language-preview {
+  & .first-LineNr {
+    padding-top: 10px;
+  }
+
+  & .last-LineNr {
+    padding-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .right-icons {
+    position: fixed;
+    right: 0;
+    padding-right: calc(var(--padding) * 2);
+  }
+}

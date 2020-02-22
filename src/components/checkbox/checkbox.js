@@ -1,18 +1,29 @@
 import './checkbox.css';
-import { render, html } from 'lighterhtml';
+import { html } from 'lighterhtml';
 
 export { Checkbox };
 
-function Checkbox({ name, value, label, onclick }) {
+function Checkbox({
+  name,
+  value = false,
+  label,
+  onchange = () => {},
+  onclick,
+  disabled = false,
+}) {
   return html`
-    <div class="form-column">
+    <div>
       <input
+        tabindex="0"
         class="checkbox"
         type="checkbox"
-        name="${name}"
         id="${name}"
+        name="${name}"
+        checked="${value}"
+        value="${value}"
+        disabled="${disabled}"
+        onchange="${onchange}"
         onclick="${onclick}"
-        checked=${value ? true : false}
       />
       <label class="label-checkbox" for="${name}">
         ${label}

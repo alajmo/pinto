@@ -1,23 +1,41 @@
+@import '../../style/variables.css';
+
 .checkbox {
   display: flex;
   flex-direction: row;
-  margin-bottom: 10px;
-
-  position: absolute;
   opacity: 0;
+
+  /**
+   * Label
+   */
 
   & + label {
     position: relative;
     cursor: pointer;
     padding: 0;
-
-    font-size: 0.75rem;
+    color: var(--inactive-color);
+    font-size: var(--font-medium);
   }
 
-  /* Box. */
-  & + label:before {
+  &:disabled + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    color: var(--disabled-fg-color);
+    font-size: var(--font-medium);
+  }
+
+  &:hover + label {
+    color: var(--hover-color);
+  }
+
+  /**
+   * Box
+   */
+
+  &[value='false'] + label:before {
     content: '';
-    margin-right: 30px;
+    margin-right: calc(var(--margin) * 3);
     display: inline-block;
     vertical-align: text-top;
     width: 20px;
@@ -27,38 +45,65 @@
     background: #35393c;
   }
 
-  /* Checkbox */
-  &:checked + label:after {
+  &[value='true'] + label:before {
+    content: '';
+    margin-right: calc(var(--margin) * 3);
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: -3px;
+    background: #35393c;
+  }
+
+  &:hover + label:before {
+    border: 1px solid var(--hover-color);
+  }
+
+  &:focus + label:before,
+  &:active + label:before {
+    border: 1px solid var(--primary-accent-color);
+  }
+
+  &:disabled + label:before {
+    background: var(--disabled-bg-color);
+  }
+
+  /**
+   * Checkmark
+   */
+
+  &[value='true'] + label:after {
     content: '';
     position: absolute;
     left: 5px;
     top: 6px;
     width: 2px;
     height: 2px;
-    box-shadow: 2px 0 0 #babdbc, 4px 0 0 #babdbc, 4px -2px 0 #babdbc,
-      4px -4px 0 #babdbc, 4px -6px 0 #babdbc, 4px -8px 0 #babdbc;
+    box-shadow: 2px 0 0 var(--inactive-color), 4px 0 0 var(--inactive-color),
+      4px -2px 0 var(--inactive-color), 4px -4px 0 var(--inactive-color),
+      4px -6px 0 var(--inactive-color), 4px -8px 0 var(--inactive-color);
     transform: rotate(45deg);
   }
 
-  &:hover + label:before {
-    background: #babdbc;
+  &:hover + label:after {
+    box-shadow: 2px 0 0 var(--hover-color), 4px 0 0 var(--hover-color),
+      4px -2px 0 var(--hover-color), 4px -4px 0 var(--hover-color),
+      4px -6px 0 var(--hover-color), 4px -8px 0 var(--hover-color);
   }
 
-  &:focus + label:before {
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
-  }
-
-  &:checked + label:before {
-    background: #35393c;
-  }
-
-  &:disabled + label {
-    color: #b8b8b8;
-    cursor: auto;
-  }
-
-  &:disabled + label:before {
-    box-shadow: none;
-    background: #ddd;
+  &:disabled + label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 6px;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 var(--disabled-fg-color),
+      4px 0 0 var(--disabled-fg-color), 4px -2px 0 var(--disabled-fg-color),
+      4px -4px 0 var(--disabled-fg-color), 4px -6px 0 var(--disabled-fg-color),
+      4px -8px 0 var(--disabled-fg-color);
+    transform: rotate(45deg);
   }
 }

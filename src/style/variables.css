@@ -1,14 +1,61 @@
 :root {
-  --app-width: 600px;
-
-  /* Colors */
-  --primary-color: blue;
-  --secondary-color: red;
-
-  --primary-accent-color: lightblue;
-  --secondary-accent-color: lightred;
+  --app-width-large: 1666px;
 
   /* Padding / Margin */
   --padding: 4px;
   --margin: 4px;
+
+  /* Font */
+  --font-size: 12px;
+  --letter-spacing: 0.02em;
+  --font-small: 0.9rem;
+  --font-xs: 0.9rem;
+  --font-medium: 1.1rem;
+  --font-large: 1.25rem;
+  --font-color: white;
+
+  /* Input */
+  --input-height: 45px;
+  --input-padding: 12px 16px 14px 16px;
+  --input-active-box-shadow: 0 3px 0 0 white;
+
+  /* Divider */
+  --divider-xs: 2px solid #2b2c2e;
+  --divider-small: 3px solid var(--bg-primary);
+  --divider-medium: 6px solid var(--bg-primary);
+  --divider-large: 8px solid var(--bg-primary);
+
+  /* Colors */
+  --primary-color: #1e90ff;
+  --primary-accent-color: #22adf6;
+  --primary-accent-color-100: #80bfff;
+  /* --secondary-color: #2CC788; */
+  --secondary-color: 44, 199, 136;
+  --secondary-accent-color: #4ed8a0;
+
+  --warning-color: 255, 105, 97;
+  --warning-accent-color: #4ed8a0;
+
+  --black: #000000;
+  --white: #ffffff;
+  --white-rgb: 255, 255, 255;
+  --gray-50: #babdbc;
+  --gray-100: #4a4f54;
+  --gray-150: 151, 156, 154;
+
+  --inactive-color: #babdbc;
+  --hover-color: #dddede;
+  --focus-color: white;
+  --disabled-color: #979797;
+  --disabled-bg-color: #181818;
+  --disabled-fg-color: #4b4b4b;
+
+  --bg-primary: #35393c;
+  --bg-accent: #1d1f21;
+  --bg-modal: #42464b;
+
+  /* Scroll */
+  --scroll-bg: var(--bg-primary);
+  --scroll-hover-bg: #4d5357;
+  --scroll-active-bg: #656c72;
 }

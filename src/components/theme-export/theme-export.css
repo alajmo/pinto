@@ -1,0 +1,63 @@
+@import '../../style/variables.css';
+
+.theme-export {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1 0 auto;
+  height: 100%;
+
+  & .breadcrumb {
+    display: flex;
+    flex-direction: row;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    margin-bottom: calc(var(--margin) * 3);
+    padding-bottom: calc(var(--padding) * 2);
+    border-bottom: var(--divider-small);
+
+    & .left-icons {
+      display: flex;
+      flex-direction: row;
+      flex: 0 0 auto;
+    }
+
+    & .right-icons {
+      & i:not(:last-child) {
+        margin-right: calc(var(--padding) * 4);
+      }
+    }
+
+    & div:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  & .export-code {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto;
+
+    & .export-code-content {
+      white-space: pre;
+      margin: 0;
+      min-height: min-content;
+      width: min-content;
+      background: inherit;
+
+      padding: calc(var(--padding) * 3) calc(var(--padding) * 2);
+    }
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .right-icons {
+    position: fixed;
+    right: 0;
+    padding-right: calc(var(--padding) * 2);
+  }
+}

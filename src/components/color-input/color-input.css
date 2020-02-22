@@ -1,40 +1,22 @@
-.color-input {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+@import '../../style/variables.css';
 
-  & .label {
-    color: white;
-    font-size: 0.75rem;
-    margin-bottom: 20px;
-    box-sizing: border-box;
+.color {
+  display: flex;
+  flex-direction: row;
+  height: var(--input-height);
+
+  & input {
+    max-width: 100px;
   }
 
-  & .color {
-    display: flex;
-    flex-direction: row;
-    height: 45px;
+  & .color-sample {
+    height: 100%;
+    width: var(--input-height);
+  }
 
-    &.active {
-      border-bottom: 5px solid #1e90ff;
-    }
-
-    & input {
-      background: #35393c;
-      color: #babdbc;
-      font-size: 1rem;
-      font-family: 'Roboto';
-      letter-spacing: 0.25em;
-      line-height: 1.2;
-      max-width: 120px;
-      box-sizing: border-box;
-      padding: 12px 16px 14px 16px;
-    }
-
+  &:focus-within {
     & .color-sample {
-      height: 100%;
-      width: 45px;
-      box-sizing: border-box;
+      box-shadow: 0 0 0 1px var(--primary-accent-color);
     }
   }
 }

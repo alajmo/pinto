@@ -1,0 +1,37 @@
+@import '../../style/variables.css';
+
+.file-upload {
+  font-size: var(--font-medium);
+  font-family: 'monospace', 'Helvetica Neue', 'Calibri Light', Roboto;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: calc(var(--padding) * 3) calc(var(--padding) * 5);
+  color: var(--gray-50);
+  outline: none;
+
+  &:hover {
+    color: var(--white);
+  }
+
+  &:focus {
+    outline: 1px solid var(--primary-accent-color);
+  }
+
+  &:active {
+    color: var(--white);
+  }
+
+  & input[type='file'] {
+    display: none;
+
+    &:focus {
+      outline: 1px solid var(--primary-accent-color);
+    }
+
+    &:active {
+      color: var(--white);
+      outline: 1px solid var(--primary-accent-color);
+    }
+  }
+}

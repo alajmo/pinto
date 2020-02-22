@@ -1,0 +1,19 @@
+<span title="LineNr "class="LineNr first-LineNr">1</span>  <span title="Normal "class="Normal">---
+</span><span title="LineNr "class="LineNr">2</span>  <span title="Normal "class="Normal"> doe: &quot;a deer, a female deer&quot;
+</span><span title="LineNr "class="LineNr">3</span>  <span title="Normal "class="Normal"> ray: &quot;a drop of golden sun&quot;
+</span><span title="LineNr "class="LineNr">4</span>  <span title="Normal "class="Normal"> pi: 3.14159
+</span><span title="LineNr "class="LineNr">5</span>  <span title="Normal "class="Normal"> xmas: true
+</span><span title="LineNr "class="LineNr">6</span>  <span title="Normal "class="Normal"> french-hens: 3
+</span><span title="LineNr "class="LineNr">7</span>  <span title="Normal "class="Normal"> calling-birds:
+</span><span title="LineNr "class="LineNr">8</span>  <span title="Normal "class="Normal">   - huey
+</span><span title="LineNr "class="LineNr">9</span>  <span title="Normal "class="Normal">   - dewey
+</span><span title="LineNr "class="LineNr">10</span>  <span title="Normal "class="Normal">   - louie
+</span><span title="LineNr "class="LineNr">11</span>  <span title="Normal "class="Normal">   - fred
+</span><span title="LineNr "class="LineNr">12</span>  <span title="Normal "class="Normal"> xmas-fifth-day:
+</span><span title="LineNr "class="LineNr">13</span>  <span title="Normal "class="Normal">   calling-birds: four
+</span><span title="LineNr "class="LineNr">14</span>  <span title="Normal "class="Normal">   french-hens: 3
+</span><span title="LineNr "class="LineNr">15</span>  <span title="Normal "class="Normal">   golden-rings: 5
+</span><span title="LineNr "class="LineNr">16</span>  <span title="Normal "class="Normal">   partridges:
+</span><span title="LineNr "class="LineNr">17</span>  <span title="Normal "class="Normal">     count: 1
+</span><span title="LineNr "class="LineNr">18</span>  <span title="Normal "class="Normal">     location: &quot;a pear tree&quot;
+</span><span title="LineNr "class="LineNr last-LineNr">19</span>  <span title="Normal "class="Normal">   turtle-doves: two</span>

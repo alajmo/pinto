@@ -1,4 +1,4 @@
-export const createStore = ({ state, events, reducers, effects }) => {
+export const createStore = ({ state, events, reducers }) => {
   let listeners = [];
 
   const store = Object.freeze({
@@ -8,21 +8,21 @@ export const createStore = ({ state, events, reducers, effects }) => {
 
     getEvents: () => ({ ...events }),
 
-    dispatch: (part, action, payload) => {
-      const update = reducers[part][action](state, payload);
+    dispatch: async (part, action, payload) => {
+      const update = await reducers[part][action](state, payload);
       state = update.state;
 
-      listeners.forEach(listener => {
-        update.trigger.forEach(event => {
+      for (const listener of listeners) {
+        for (const event of update.trigger) {
           if (typeof event === 'string') {
             if (listener[event]) {
-              listener[event]();
+              await listener[event]();
             }
           } else if (typeof event === 'object' && listener[event.event]) {
-            listener[event.event](event.payload);
+            await listener[event.event](event.payload);
           }
-        });
-      });
+        }
+      }
     },
 
     subscribe: newListener => {

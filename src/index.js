@@ -1,6 +1,6 @@
 import 'style/base.css';
 
-import { render, html } from 'lighterhtml';
+import { render } from 'lighterhtml';
 import { App } from 'components/app/app.js';
 import { Store } from 'state/store.js';
 
@@ -12,7 +12,10 @@ function main() {
   init();
 
   async function init() {
-    const app = App(await Store);
-    render(document.body, app);
+    const { element, onRenderComplete } = App(await Store);
+
+    render(document.body, element);
+
+    onRenderComplete();
   }
 }

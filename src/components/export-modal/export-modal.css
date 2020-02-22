@@ -1,0 +1,17 @@
+.export-code {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+
+  & .export-code-content {
+    white-space: pre;
+    margin: 0;
+    min-height: min-content;
+    width: min-content;
+    background: inherit;
+
+    padding: calc(var(--padding) * 3) calc(var(--padding) * 2);
+  }
+}

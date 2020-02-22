@@ -1,33 +1,57 @@
+@import './variables.css';
+
+@font-face {
+  font-family: 'Liberation Mono';
+  src: url('./assets/fonts/LiberationMono.woff2') format('woff2'),
+    url('./assets/fonts/LiberationMono.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ubuntu Mono';
+  src: url('./assets/fonts/UbuntuMono-Regular.woff2') format('woff2'),
+    url('./assets/fonts/UbuntuMono-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dosis';
+  src: url('./assets/fonts/Dosis-Regular.woff2') format('woff2'),
+    url('./assets/fonts/Dosis-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+p {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
 h1 {
-  font-size: 2em;
+  font-size: 1.25rem;
   line-height: 1.5em;
-  margin-top: 0.75em;
-  margin-bottom: 0em;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.15rem;
   line-height: 1em;
 }
 
 h3 {
-  font-size: 1.125em;
+  font-size: 1.1rem;
   line-height: 1.3333em;
 }
 
 h4 {
-  font-size: 0.875em;
-  line-height: 1.7143em;
-}
-
-h5 {
-  font-size: 0.8125em;
-  line-height: 1.8462em;
-}
-
-h6 {
-  font-size: 0.5625em;
-  line-height: 2.6667em;
+  font-size: 1rem;
+  line-height: 1.3333em;
 }
 
 h1,
@@ -36,16 +60,70 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: bold;
   margin: 0;
-  margin-left: 0;
-  margin-right: 0;
 }
 
-p {
-  display: block;
-  font-size: 1em;
-  line-height: 1.5;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+ul.modal-ul {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-bottom: calc(var(--margin) * 6);
+
+  & > li {
+    margin-left: calc(var(--margin) * 4);
+    padding-right: calc(var(--padding) * 4);
+    list-style-type: square;
+  }
+}
+
+ol.modal-ol {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-top: 0;
+  margin-bottom: calc(var(--margin) * 6);
+
+  & > li {
+    margin-left: calc(var(--margin) * 4);
+    padding-right: calc(var(--padding) * 4);
+    list-style-type: decimal;
+  }
+}
+
+.text-body {
+  user-select: text !important;
+
+  & p {
+    margin-bottom: calc(var(--margin) * 6);
+    font-size: var(--font-small);
+  }
+
+  & h3 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding-bottom: calc(var(--padding) * 3);
+  }
+
+  & h4 {
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding-bottom: calc(var(--padding) * 3);
+  }
+
+  & li {
+    margin-bottom: calc(var(--margin) * 3);
+    font-size: var(--font-small);
+  }
+
+  & .bold {
+    font-weight: 600;
+    color: var(--inactive-color);
+  }
+
+  & a {
+    color: var(--primary-accent-color);
+    text-decoration: none;
+  }
 }

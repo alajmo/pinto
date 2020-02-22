@@ -1,0 +1,12 @@
+@import '../../style/variables.css';
+
+.palette-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 0 1 auto;
+  width: 500px;
+
+  background: var(--bg-accent);
+}

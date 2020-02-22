@@ -1,21 +1,35 @@
-import './number-input.css';
-import { render, html } from 'lighterhtml';
+import { html } from 'lighterhtml';
 
 export { NumberInput };
 
-function NumberInput({ value, name, label, onchange }) {
+function NumberInput({
+  type = 'number',
+  step = 1,
+  value,
+  className = 'filled',
+  name,
+  label,
+  onchange,
+  min = false,
+  max = false,
+}) {
   return html`
-    <div class="form-column">
-      <label class="label-input" for="${name}">${label}</label>
+    <div class="input">
+      ${label ? html`<label for="${name}">${label}</label>` : null}
 
       <input
-        class="number-input"
-        type="number"
+        class="${className}"
+        type="${type}"
+        step="${step}"
         name="${name}"
         id="${name}"
         value="${value}"
+        min="${min}"
+        max="${max}"
         onchange="${onchange}"
       />
     </div>
   `;
 }
+
+onkeypress="return isNumberKey(event)"

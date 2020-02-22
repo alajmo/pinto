@@ -1,0 +1,93 @@
+@import '../../style/variables.css';
+
+/**
+ * Card Element, meant to surround all forms that contain input.
+ */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+
+  & .card-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: calc(var(--padding) * 2);
+    border-bottom: var(--divider-small);
+    margin-bottom: calc(var(--margin) * 8);
+    user-select: none;
+
+    & .card-header--left {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+
+      & .card-header--left-content {
+        margin-left: calc(var(--margin) * 4);
+      }
+    }
+
+    & .card-header--right {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  & .card-main-content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: visible;
+    overflow-y: visible;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 2px;
+
+    margin-bottom: calc(var(--margin) * 2);
+
+    & > * {
+      margin-bottom: calc(var(--margin) * 6);
+    }
+  }
+
+  & .card-bottom-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  & .card-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: calc(var(--margin) * 8);
+  }
+
+  & .card-row-end {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: calc(var(--margin) * 8);
+
+    & *:not(:last-child) {
+      margin-right: calc(var(--margin) * 6);
+    }
+  }
+}
+
+.card-overflow {
+  overflow: hidden;
+
+  & .card-main-content {
+    overflow-y: auto;
+  }
+}

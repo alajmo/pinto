@@ -1,35 +1,18 @@
 @import '../../style/variables.css';
 
-/* TODO: Add general form css element */
-
 .keyword-form {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  flex: 1;
-  height: 100%;
-  padding: calc(var(--padding) * 5);
+  align-items: flex-start;
+  flex: 0 1 auto;
+  width: 500px;
 
-  box-sizing: border-box;
-  background: #1d1f21;
+  background: var(--bg-accent);
 
-  & .form-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-  }
-
-  & .form-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-  }
-
-  & .text-decoration[data-display-text-decoration='false'] {
-    display: none;
+  & .max-width {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 }

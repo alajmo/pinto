@@ -1,0 +1,146 @@
+@import '../../style/variables.css';
+
+.color-inputs {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  & .color-inputs__title {
+    user-select: none !important;
+  }
+
+  & .color-inputs__hex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: calc(var(--padding) * 2);
+  }
+
+  & .color-inputs__items {
+  }
+
+  & > :first-child {
+    width: 100%;
+
+    & > * {
+      margin-bottom: 15px;
+    }
+  }
+
+  & > :not(:first-child) {
+    /* flex: 1; */
+    width: 45%;
+    /* background: blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: space-between;
+
+    & > *:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  & > *:not(:last-child) {
+    /* margin-bottom: 10px; */
+  }
+}
+
+.radio-color-input {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: start;
+  align-items: center;
+  /* background: red; */
+
+  /* width: 100%; */
+
+  & > *:not(:last-child) {
+    margin-right: calc(var(--margin) * 2);
+  }
+
+  & .radio-color-input-picker {
+    position: relative;
+    width: 60px;
+    height: 18px;
+
+    background-image: linear-gradient(
+      90deg,
+      red,
+      yellow,
+      lime,
+      cyan,
+      blue,
+      magenta,
+      red
+    );
+
+    & .picker-selector {
+      position: absolute;
+      display: block;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 10px;
+
+      background: white;
+      border: 1px solid black;
+      border-radius: 4px;
+
+      pointer-events: auto;
+
+      z-index: 1;
+    }
+  }
+
+  & .rgb-input-preview {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.hex-input {
+  width: auto;
+}
+
+input.hex-filled {
+  background: var(--bg-primary);
+  color: var(--inactive-color);
+  font-size: var(--font-large);
+  letter-spacing: 0.25em;
+  line-height: 1.2;
+  height: 10px;
+  width: 120px;
+  padding: var(--input-padding);
+  padding-left: calc(var(--padding) * 4);
+  height: 33px;
+
+  &[type='number'] {
+    width: 100px;
+  }
+
+  &:hover {
+    color: var(--hover-color);
+  }
+
+  &:focus {
+    color: var(--focus-color);
+    box-shadow: 0 0 0 1px var(--primary-accent-color);
+  }
+}
+
+.color-inputs__previews {
+  display: flex;
+  cursor: pointer;
+
+  & .color-inputs__preview {
+    width: 33px;
+    height: 33px;
+  }
+}

@@ -1,0 +1,52 @@
+@import '../../style/variables.css';
+
+.colors-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 0 1 auto;
+
+  height: 100%;
+  min-height: 0px;
+  width: 100%;
+  background: var(--bg-accent);
+
+  overflow-y: auto;
+
+  & .colors-preview-content {
+    overflow-y: auto;
+    height: 100%;
+    padding-right: calc(var(--padding) * 5);
+    min-width: 300px;
+  }
+
+  & .keyword-colors-list {
+    & > *:first-child {
+      margin-bottom: calc(var(--margin) * 4);
+    }
+  }
+
+  & .unique-colors {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: calc(var(--margin) * 4);
+
+    & .unique-color {
+      width: 35px;
+      height: 35px;
+      margin: 1px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+  }
+
+  & .colors-preview {
+    display: block;
+    width: auto;
+    padding: calc(var(--padding) * 2);
+  }
+}

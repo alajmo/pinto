@@ -1,6 +1,5 @@
 import './color-input.css';
 import { html } from 'lighterhtml';
-import { hslToHex } from 'lib/color.js';
 
 export { ColorInput };
 
@@ -12,17 +11,16 @@ function ColorInput({
   onfocus,
   onfocusout,
   triggeredFromInput = false,
-  selected = false,
 }) {
-  const hex = hslToHex(value);
-  const inputValue = triggeredFromInput ? hex : value;
+  const inputValue = hex;
 
   return html`
-    <div class="color-input">
+    <div class="input">
       <label class="label" for="${name}">${label}</label>
 
-      <div class="color ${selected ? 'active' : ''}">
+      <div class="color">
         <input
+          class="filled"
           autocomplete="off"
           aria-label="Type a color name or hex value"
           name="${name}"
@@ -35,10 +33,7 @@ function ColorInput({
           onclick="select()"
         />
 
-        <div
-          class="color-sample ${selected ? 'active' : ''}"
-          style="background: ${value};"
-        ></div>
+        <div class="color-sample" style="background: ${value};"></div>
       </div>
     </div>
   `;

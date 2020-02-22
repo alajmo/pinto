@@ -1,0 +1,23 @@
+@import '../../style/variables.css';
+
+.input-grow {
+  display: inline-block;
+  min-width: 50px;
+  max-width: 400px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  color: var(--inactive-color);
+  user-select: none;
+
+  &:hover:not([contenteditable='false']):not(:focus) {
+    color: var(--hover-color);
+  }
+
+  &:focus {
+    color: var(--focus-color);
+    text-overflow: clip;
+  }
+}

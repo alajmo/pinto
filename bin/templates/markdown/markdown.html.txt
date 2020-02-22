@@ -1,0 +1,117 @@
+<span title="LineNr "class="LineNr first-LineNr">1</span>  <span title="markdownLinkTextDelimiter "class="markdownLinkTextDelimiter">[![</span><span title="markdownLinkText "class="markdownLinkText">Build
+</span><span title="LineNr "class="LineNr">2</span>  <span title="markdownLinkText "class="markdownLinkText">Status</span><span title="markdownLinkTextDelimiter "class="markdownLinkTextDelimiter">]</span><span title="markdownLinkDelimiter "class="markdownLinkDelimiter">(</span><span title="markdownUrl "class="markdownUrl">https://github.com/samiralajmovic/mani/workflows/build/badge.svg</span><span title="markdownLinkDelimiter "class="markdownLinkDelimiter">)</span><span title="markdownLinkTextDelimiter "class="markdownLinkTextDelimiter">]</span><span title="markdownLinkDelimiter "class="markdownLinkDelimiter">(</span><span title="markdownUrl "class="markdownUrl">https://github.com/samiralajmovic/mani/actions</span><span title="markdownLinkDelimiter "class="markdownLinkDelimiter">)
+</span><span title="LineNr "class="LineNr">3</span>  <span title="markdownLinkTextDelimiter "class="markdownLinkTextDelimiter">[![</span><span title="markdownLinkText "class="markdownLinkText">Release</span><span title="markdownLinkTextDelimiter "class="markdownLinkTextDelimiter">]</span><span title="markdownLinkDelimiter "class="markdownLinkDelimiter">(</span><span title="markdownUrl "class="markdownUrl">https://img.shields.io/github/release-pre/samiralajmovic/mani.svg</span><span title="markdownLinkDelimiter "class="markdownLinkDelimiter">)</span><span title="markdownLinkTextDelimiter "class="markdownLinkTextDelimiter">]</span><span title="markdownLinkDelimiter "class="markdownLinkDelimiter">(</span><span title="markdownUrl "class="markdownUrl">https://github.com/samiralajmovic/mani/releases</span><span title="markdownLinkDelimiter "class="markdownLinkDelimiter">)
+</span><span title="LineNr "class="LineNr">4</span>  <span title="markdownLinkTextDelimiter "class="markdownLinkTextDelimiter">[![</span><span title="markdownLinkText "class="markdownLinkText">License</span><span title="markdownLinkTextDelimiter "class="markdownLinkTextDelimiter">]</span><span title="markdownLinkDelimiter "class="markdownLinkDelimiter">(</span><span title="markdownUrl "class="markdownUrl">https://img.shields.io/badge/license-MIT-green</span><span title="markdownLinkDelimiter "class="markdownLinkDelimiter">)</span><span title="markdownLinkTextDelimiter "class="markdownLinkTextDelimiter">]</span><span title="markdownLinkDelimiter "class="markdownLinkDelimiter">(</span><span title="markdownUrl "class="markdownUrl">https://img.shields.io/badge/license-MIT-green</span><span title="markdownLinkDelimiter "class="markdownLinkDelimiter">)
+</span><span title="LineNr "class="LineNr">5</span>  <span title="markdownLinkTextDelimiter "class="markdownLinkTextDelimiter">[![</span><span title="markdownLinkText "class="markdownLinkText">Go Report
+</span><span title="LineNr "class="LineNr">6</span>  <span title="markdownLinkText "class="markdownLinkText">Card</span><span title="markdownLinkTextDelimiter "class="markdownLinkTextDelimiter">]</span><span title="markdownLinkDelimiter "class="markdownLinkDelimiter">(</span><span title="markdownUrl "class="markdownUrl">https://goreportcard.com/badge/github.com/samiralajmovic/mani</span><span title="markdownLinkDelimiter "class="markdownLinkDelimiter">)</span><span title="markdownLinkTextDelimiter "class="markdownLinkTextDelimiter">]</span><span title="markdownLinkDelimiter "class="markdownLinkDelimiter">(</span><span title="markdownUrl "class="markdownUrl">https://goreportcard.com/report/github.com/samiralajmovic/mani</span><span title="markdownLinkDelimiter "class="markdownLinkDelimiter">)
+</span><span title="LineNr "class="LineNr">7</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">8</span>  <span title="markdownHeadingDelimiter "class="markdownHeadingDelimiter">#</span><span title="markdownH1 "class="markdownH1"> mani
+</span><span title="LineNr "class="LineNr">9</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">10</span>  <span title="markdownCodeDelimiter "class="markdownCodeDelimiter">`</span><span title="markdownCode "class="markdownCode">mani</span><span title="markdownCodeDelimiter "class="markdownCodeDelimiter">`</span><span title="Normal "class="Normal"> is a tool that helps you manage multiple repositories. It&#39;s helpful when
+</span><span title="LineNr "class="LineNr">11</span>  <span title="Normal "class="Normal">you are working with microservices or multi-project system and libraries and
+</span><span title="LineNr "class="LineNr">12</span>  <span title="Normal "class="Normal">want a central place for pulling all repositories and running commands over the
+</span><span title="LineNr "class="LineNr">13</span>  <span title="Normal "class="Normal">different projects. You specify projects and commands in a yaml config and then
+</span><span title="LineNr "class="LineNr">14</span>  <span title="Normal "class="Normal">run the commands over all or a subset of the projects.
+</span><span title="LineNr "class="LineNr">15</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">16</span>  <span title="markdownHeadingDelimiter "class="markdownHeadingDelimiter">##</span><span title="markdownH2 "class="markdownH2"> Features
+</span><span title="LineNr "class="LineNr">17</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">18</span>  <span title="markdownListMarker "class="markdownListMarker">-</span><span title="Normal "class="Normal"> Clone multiple repositories in one command - Run commands over multiple
+</span><span title="LineNr "class="LineNr">19</span>  <span title="Normal "class="Normal">projects - Declarative configuration - Single CLI binary with auto-completion
+</span><span title="LineNr "class="LineNr">20</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">21</span>  <span title="markdownHeadingDelimiter "class="markdownHeadingDelimiter">##</span><span title="markdownH2 "class="markdownH2"> Install
+</span><span title="LineNr "class="LineNr">22</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">23</span>  <span title="markdownCodeDelimiter "class="markdownCodeDelimiter">`</span><span title="markdownCode "class="markdownCode">mani</span><span title="markdownCodeDelimiter "class="markdownCodeDelimiter">`</span><span title="Normal "class="Normal"> is available on Linux and Mac.
+</span><span title="LineNr "class="LineNr">24</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">25</span>  <span title="markdownListMarker "class="markdownListMarker">-</span><span title="Normal "class="Normal"> Binaries are available as tarballs in the
+</span><span title="LineNr "class="LineNr">26</span>  <span title="markdownLinkTextDelimiter "class="markdownLinkTextDelimiter">[</span><span title="markdownLinkText "class="markdownLinkText">release</span><span title="markdownLinkTextDelimiter "class="markdownLinkTextDelimiter">]</span><span title="markdownLinkDelimiter "class="markdownLinkDelimiter">(</span><span title="markdownUrl "class="markdownUrl">https://github.com/samiralajmovic/mani/releases</span><span title="markdownLinkDelimiter "class="markdownLinkDelimiter">)</span><span title="Normal "class="Normal"> page.  - Build from
+</span><span title="LineNr "class="LineNr">27</span>  <span title="Normal "class="Normal">source: 1.  Clone the repo 2.  Add the following command in your go.mod file
+</span><span title="LineNr "class="LineNr">28</span>  <span title="markdownCodeDelimiter "class="markdownCodeDelimiter">```text replace ( github.com/samiralajmovic/mani &#61;&gt; MY_MANI_CLONED_GIT_REPO) ```
+</span><span title="LineNr "class="LineNr">29</span>  <span title="markdownCode "class="markdownCode">3.  Build and run the executable ```shell go build ```
+</span><span title="LineNr "class="LineNr">30</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">31</span>  <span title="markdownCode "class="markdownCode">### Auto-completion
+</span><span title="LineNr "class="LineNr">32</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">33</span>  <span title="markdownCode "class="markdownCode">#### Bash
+</span><span title="LineNr "class="LineNr">34</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">35</span>  <span title="markdownCode "class="markdownCode">Auto-complete requires
+</span><span title="LineNr "class="LineNr">36</span>  <span title="markdownCode "class="markdownCode">[bash-completion](https://github.com/scop/bash-completion#installation).
+</span><span title="LineNr "class="LineNr">37</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">38</span>  <span title="markdownCode "class="markdownCode">There&#39;s two ways to add `mani` auto-completion:
+</span><span title="LineNr "class="LineNr">39</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">40</span>  <span title="markdownCode "class="markdownCode">- Source the completion script in your `~/.bashrc` file:
+</span><span title="LineNr "class="LineNr">41</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">42</span>  <span title="markdownCode "class="markdownCode">  `echo &#39;source &lt;(mani completion)&#39; &gt;&gt;~/.bashrc`
+</span><span title="LineNr "class="LineNr">43</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">44</span>  <span title="markdownCode "class="markdownCode">or
+</span><span title="LineNr "class="LineNr">45</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">46</span>  <span title="markdownCode "class="markdownCode">- Add the completion script to the `/etc/bash_completion.d directory:`
+</span><span title="LineNr "class="LineNr">47</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">48</span>  <span title="markdownCode "class="markdownCode">  `mani completion &gt;/etc/bash_completion.d/mani`
+</span><span title="LineNr "class="LineNr">49</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">50</span>  <span title="markdownCode "class="markdownCode">#### Zsh
+</span><span title="LineNr "class="LineNr">51</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">52</span>  <span title="markdownCode "class="markdownCode">Coming.
+</span><span title="LineNr "class="LineNr">53</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">54</span>  <span title="markdownCode "class="markdownCode">## Usage
+</span><span title="LineNr "class="LineNr">55</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">56</span>  <span title="markdownCode "class="markdownCode">Checkout the [example](/example) directory to see how it can be used. You can
+</span><span title="LineNr "class="LineNr">57</span>  <span title="markdownCode "class="markdownCode">also always run `mani help` to see available commands.
+</span><span title="LineNr "class="LineNr">58</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">59</span>  <span title="markdownCode "class="markdownCode">### Create a New Mani Repository
+</span><span title="LineNr "class="LineNr">60</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">61</span>  <span title="markdownCode "class="markdownCode">Run the following command inside a directory to initialize a mani repo:
+</span><span title="LineNr "class="LineNr">62</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">63</span>  <span title="markdownCode "class="markdownCode">```sh $ mani init ```
+</span><span title="LineNr "class="LineNr">64</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">65</span>  <span title="markdownCode "class="markdownCode">This will generate two files:
+</span><span title="LineNr "class="LineNr">66</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">67</span>  <span title="markdownCode "class="markdownCode">- `mani.yaml`: contains projects and custom commands. Any sub-directory that has
+</span><span title="LineNr "class="LineNr">68</span>  <span title="markdownCode "class="markdownCode">a `.git` inside it will be included (add flag `--auto-discovery&#61;false` to turn
+</span><span title="LineNr "class="LineNr">69</span>  <span title="markdownCode "class="markdownCode">off this feature).  - `.gitignore`: includes the projects specified in
+</span><span title="LineNr "class="LineNr">70</span>  <span title="markdownCode "class="markdownCode">`mani.yaml` file.
+</span><span title="LineNr "class="LineNr">71</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">72</span>  <span title="markdownCode "class="markdownCode">It can be helpful to initialize the `mani` repository as a git repository, so
+</span><span title="LineNr "class="LineNr">73</span>  <span title="markdownCode "class="markdownCode">that your teammates can easily download the `mani` repository and run `mani
+</span><span title="LineNr "class="LineNr">74</span>  <span title="markdownCode "class="markdownCode">sync` to clone all repositories and get the same project setup as you.
+</span><span title="LineNr "class="LineNr">75</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">76</span>  <span title="markdownCode "class="markdownCode">### Add New Project to Mani Repository
+</span><span title="LineNr "class="LineNr">77</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">78</span>  <span title="markdownCode "class="markdownCode">Add another project to `mani.yaml` and run `mani sync` to pull the repository
+</span><span title="LineNr "class="LineNr">79</span>  <span title="markdownCode "class="markdownCode">and add it to the `.gitignore`.
+</span><span title="LineNr "class="LineNr">80</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">81</span>  <span title="markdownCode "class="markdownCode">### Run commands across multiple projects
+</span><span title="LineNr "class="LineNr">82</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">83</span>  <span title="markdownCode "class="markdownCode">```sh # Run arbitrary command mani exec &#39;ls -alh&#39; --all-projects
+</span><span title="LineNr "class="LineNr">84</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">85</span>  <span title="markdownCode "class="markdownCode"># Specify projects using tags flag mani run list-files -t frontend
+</span><span title="LineNr "class="LineNr">86</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">87</span>  <span title="markdownCode "class="markdownCode"># SPecify project using project flag mani run list-files -p project-a ```
+</span><span title="LineNr "class="LineNr">88</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">89</span>  <span title="markdownCode "class="markdownCode">## Config Structure
+</span><span title="LineNr "class="LineNr">90</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">91</span>  <span title="markdownCode "class="markdownCode">The `mani.yaml` config is based on two concepts: __projects__ and __commands__.
+</span><span title="LineNr "class="LineNr">92</span>  <span title="markdownCode "class="markdownCode">__Projects__ are simply directories, which may be git repositories, in which
+</span><span title="LineNr "class="LineNr">93</span>  <span title="markdownCode "class="markdownCode">case they have an url attribute. __Commands__ are arbitrary shell commands that
+</span><span title="LineNr "class="LineNr">94</span>  <span title="markdownCode "class="markdownCode">you write and then run for selected __projects__.
+</span><span title="LineNr "class="LineNr">95</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">96</span>  <span title="markdownCode "class="markdownCode">```yaml projects: - name: example path: .
+</span><span title="LineNr "class="LineNr">97</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">98</span>  <span title="markdownCode "class="markdownCode">  - name: idetheme path: frontend/idetheme url:
+</span><span title="LineNr "class="LineNr">99</span>  <span title="markdownCode "class="markdownCode">https://github.com/samiralajmovic/idetheme tags: - frontend
+</span><span title="LineNr "class="LineNr">100</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">101</span>  <span title="markdownCode "class="markdownCode">commands: - name: multi command: | # multiline command echo &quot;1st line&quot; echo &quot;2nd
+</span><span title="LineNr "class="LineNr">102</span>  <span title="markdownCode "class="markdownCode">line&quot;
+</span><span title="LineNr "class="LineNr">103</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">104</span>  <span title="markdownCode "class="markdownCode">  - name: checkout args: branch: master # default value, override with: mani run
+</span><span title="LineNr "class="LineNr">105</span>  <span title="markdownCode "class="markdownCode">checkout -a branch&#61;development command: git checkout $branch ```
+</span><span title="LineNr "class="LineNr">106</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">107</span>  <span title="markdownCode "class="markdownCode">## Roadmap
+</span><span title="LineNr "class="LineNr">108</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">109</span>  <span title="markdownCode "class="markdownCode">`mani` is under active development and some of the things I aim to add/fix is:
+</span><span title="LineNr "class="LineNr">110</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">111</span>  <span title="markdownCode "class="markdownCode">- [ ] Add completion for zsh - [ ] Add tests - [ ] Add package to
+</span><span title="LineNr "class="LineNr">112</span>  <span title="markdownCode "class="markdownCode">brew/snap/Ubuntu/Debian - [ ] Add Windows support - [ ] Add CRUD methods for
+</span><span title="LineNr "class="LineNr">113</span>  <span title="markdownCode "class="markdownCode">project to config via cli (user-input) - [ ] Add CRUD methods for command to
+</span><span title="LineNr "class="LineNr">114</span>  <span title="markdownCode "class="markdownCode">config via cli (user-input) - [ ] Add `--auto-discovery` flag to sync
+</span><span title="LineNr "class="LineNr">115</span>  <span title="markdownCode "class="markdownCode">sub-command - [ ] Add property for global variables, as well as global variables
+</span><span title="LineNr "class="LineNr">116</span>  <span title="markdownCode "class="markdownCode">that are sourced commands (like `date` command to return current date) - [ ]
+</span><span title="LineNr "class="LineNr last-LineNr">117</span>  <span title="markdownCode "class="markdownCode">Remove duplicate flag auto-completion (both and without &#61; showing)</span>

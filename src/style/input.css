@@ -1,0 +1,89 @@
+@import 'variables.css';
+
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &.row {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  & label {
+    color: var(--inactive-color);
+    font-size: var(--font-medium);
+    margin-bottom: calc(var(--margin) * 2);
+  }
+
+  &:focus-within {
+    & label {
+      color: var(--primary-accent-color);
+    }
+  }
+}
+
+.input > input.text {
+  color: var(--inactive-color);
+  font-size: var(--font-medium);
+  letter-spacing: 0.25em;
+  line-height: 1.2;
+  height: var(--input-height);
+  width: auto;
+  padding: var(--input-padding);
+  padding-left: 0;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  &:hover {
+    color: var(--hover-color);
+  }
+
+  &:focus {
+    color: var(--focus-color);
+  }
+}
+
+.input input.filled {
+  background: var(--bg-primary);
+  color: var(--inactive-color);
+  font-size: var(--font-medium);
+  letter-spacing: 0.25em;
+  line-height: 1.2;
+  height: var(--input-height);
+  width: 100%;
+  padding: var(--input-padding);
+
+  &[type='number'] {
+    width: 100px;
+  }
+
+  &:hover {
+    color: var(--hover-color);
+  }
+
+  &:focus {
+    color: var(--focus-color);
+    box-shadow: 0 0 0 1px var(--primary-accent-color);
+  }
+}
+
+.input input.stripped {
+  background: var(--bg-primary);
+  color: var(--inactive-color);
+  font-size: var(--font-xs);
+  width: 60px;
+  padding: 6px 8px;
+
+  &:hover {
+    color: var(--hover-color);
+  }
+
+  &:focus {
+    color: var(--focus-color);
+    box-shadow: 0 0 0 1px var(--primary-accent-color);
+  }
+}

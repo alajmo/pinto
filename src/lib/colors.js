@@ -1,4 +1,4 @@
-export const COLORS = [
+export const XTERM_COLORS = [
   {
     colorId: 0,
     hexString: '#000000',

@@ -5,9 +5,14 @@ function dragTrack(e, id, cb) {
   e.stopPropagation();
 
   const dragArea = document.getElementById(id);
+
   startDrag();
 
   function startDrag() {
+    dragArea.className = dragArea.className + ' no-cursor';
+    // dragArea.children[0].className =
+    //   dragArea.children[0].className + ' no-cursor';
+
     window.addEventListener('mousemove', duringDrag, false);
     window.addEventListener('mouseup', stopDrag, false);
 
@@ -23,6 +28,12 @@ function dragTrack(e, id, cb) {
   function stopDrag() {
     window.removeEventListener('mousemove', duringDrag, false);
     window.removeEventListener('mouseup', stopDrag, false);
+
+    dragArea.className = dragArea.className.replace('no-cursor', '');
+    // dragArea.children[0].className = dragArea.children[0].className.replace(
+    //   'no-cursor',
+    //   '',
+    // );
   }
 
   function onMove(e) {

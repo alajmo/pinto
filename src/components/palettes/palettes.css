@@ -1,0 +1,13 @@
+@import '../../style/variables.css';
+
+.palettes {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding-right: calc(var(--padding) * 4);
+
+  & > *:not(:first-child) {
+    margin-top: calc(var(--margin) * 15);
+  }
+}

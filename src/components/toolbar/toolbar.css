@@ -1,27 +1,65 @@
+@import '../../style/variables.css';
+
 .toolbar {
   display: flex;
+  flex: 1;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
-  width: 100%;
-  box-sizing: border-box;
-  background: #1d1f21;
-  max-height: 80px;
-  font-size: var(--sk);
+  user-select: none;
+
+  padding-top: calc(var(--padding) * 4);
+  background: var(--bg-accent);
+
+  & .left-items {
+    & .logo {
+      margin-right: calc(var(--margin) * 4);
+      padding-right: calc(var(--padding) * 4);
+      border-right: var(--divider-small);
+      user-select: none;
+
+      & i {
+        color: var(--primary-accent-color);
+        font-size: 30px;
+      }
+    }
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+  }
 
   & .right-items {
     display: flex;
     flex-direction: row;
+    user-select: none;
 
-    & div {
-      margin-right: 20px;
-      padding: 10px;
+    & .option {
+      padding: calc(var(--padding) * 2);
       cursor: pointer;
+      color: var(--inactive-color);
+      user-select: none;
 
       &:hover {
-        text-decoration: underline;
+        color: var(--hover-color);
+      }
+
+      &:active {
+        color: var(--focus-color);
       }
     }
+
+    & .option:not(:last-child) {
+      margin-right: calc(var(--margin) * 5);
+    }
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .right-items {
+    position: fixed;
+    right: 0;
   }
 }

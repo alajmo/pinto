@@ -4,17 +4,12 @@ ol {
   margin: initial;
   font-size: 1em;
   line-height: 1.5;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
 }
 
 ul {
   margin: initial;
-  padding: 0 0 0 32px;
   font-size: 1em;
   line-height: 1.5;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
 }
 
 li {
@@ -22,39 +17,59 @@ li {
 }
 
 .single-line-list {
-  box-sizing: border-box;
-
   & .sub-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: calc(var(--margin) * 5);
+
+    &.divider {
+      padding-bottom: calc(var(--padding) * 2);
+      border-bottom: 4px solid var(--bg-primary);
+    }
   }
 
   & .sub-header--inset {
   }
 
   & .list {
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     padding: 0;
     margin: 0;
 
     & .row {
-      box-sizing: border-box;
       display: flex;
       flex-direction: row;
       flex: 1;
 
-      padding-top: calc(var(--padding) * 4);
-      padding-bottom: calc(var(--padding) * 4);
-      padding-left: calc(var(--padding) * 3);
-      padding-right: calc(var(--padding) * 3);
+      padding-top: calc(var(--padding) * 1);
+      padding-right: calc(var(--padding) * 1);
+      padding-bottom: calc(var(--padding) * 1);
+      padding-left: calc(var(--padding) * 1);
 
       & .support {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
         flex: 0 1 auto;
+        max-width: 180px;
+
+        &,
+        & > * {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          padding-left: calc(var(--padding) * 2);
+        }
       }
 
       & .primary {
         flex: 1 1 auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: calc(var(--padding) * 4);
       }
 
       & .control {
@@ -62,10 +77,4 @@ li {
       }
     }
   }
-}
-
-ul.two-line {
-}
-
-ul.hhree-line {
 }

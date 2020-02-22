@@ -28,7 +28,7 @@ const config = {
     rules: [
       {
         test: /\.js$/,
-        exclude: /(node_modules)/,
+        exclude: [/(node_modules)/, /(templates)/],
         use: {
           loader: 'babel-loader',
         },
@@ -47,14 +47,37 @@ const config = {
           'postcss-loader',
         ],
       },
+
       {
         test: /\.(html.txt)$/,
+        exclude: [/(node_modules)/],
         use: {
           loader: 'html-loader',
           options: {
             attrs: [':data-src'],
           },
         },
+      },
+
+      {
+        test: /\.(example.*)$/,
+        exclude: [/(node_modules)/],
+        use: {
+          loader: 'html-loader',
+          options: {
+            attrs: [':data-src'],
+          },
+        },
+      },
+
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: ['file-loader'],
+      },
+
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: ['file-loader'],
       },
     ],
   },
@@ -86,7 +109,7 @@ const config = {
     historyApiFallback: true,
     compress: false,
     clientLogLevel: 'info',
-    port: 3000,
+    port: 5000,
     inline: true,
     filename: 'bundle.js',
     publicPath: '/',

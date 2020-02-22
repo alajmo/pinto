@@ -1,0 +1,340 @@
+<span title="LineNr "class="LineNr first-LineNr">1</span>  <span title="goDirective "class="goDirective">package</span><span title="Normal "class="Normal"> main
+</span><span title="LineNr "class="LineNr">2</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">3</span>  <span title="goDirective "class="goDirective">import</span><span title="Normal "class="Normal"> (
+</span><span title="LineNr "class="LineNr">4</span>  <span title="Normal "class="Normal">	</span><span title="goString "class="goString">&quot;bytes&quot;
+</span><span title="LineNr "class="LineNr">5</span>  <span title="Normal "class="Normal">	</span><span title="goString "class="goString">&quot;fmt&quot;
+</span><span title="LineNr "class="LineNr">6</span>  <span title="Normal "class="Normal">	</span><span title="goString "class="goString">&quot;net/url&quot;
+</span><span title="LineNr "class="LineNr">7</span>  <span title="Normal "class="Normal">	</span><span title="goString "class="goString">&quot;os&quot;
+</span><span title="LineNr "class="LineNr">8</span>  <span title="Normal "class="Normal">	</span><span title="goString "class="goString">&quot;strconv&quot;
+</span><span title="LineNr "class="LineNr">9</span>  <span title="Normal "class="Normal">	</span><span title="goString "class="goString">&quot;strings&quot;
+</span><span title="LineNr "class="LineNr">10</span>  <span title="Normal "class="Normal">	</span><span title="goString "class="goString">&quot;time&quot;
+</span><span title="LineNr "class="LineNr">11</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">12</span>  <span title="Normal "class="Normal">	</span><span title="goString "class="goString">&quot;github.com/cortexproject/cortex/pkg/util&quot;
+</span><span title="LineNr "class="LineNr">13</span>  <span title="Normal "class="Normal">	</span><span title="goString "class="goString">&quot;github.com/cortexproject/cortex/pkg/util/flagext&quot;
+</span><span title="LineNr "class="LineNr">14</span>  <span title="Normal "class="Normal">	</span><span title="goString "class="goString">&quot;github.com/docker/docker/daemon/logger&quot;
+</span><span title="LineNr "class="LineNr">15</span>  <span title="Normal "class="Normal">	</span><span title="goString "class="goString">&quot;github.com/docker/docker/daemon/logger/templates&quot;
+</span><span title="LineNr "class="LineNr">16</span>  <span title="Normal "class="Normal">	</span><span title="goString "class="goString">&quot;github.com/prometheus/common/model&quot;
+</span><span title="LineNr "class="LineNr">17</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">18</span>  <span title="Normal "class="Normal">	</span><span title="goString "class="goString">&quot;github.com/grafana/loki/pkg/helpers&quot;
+</span><span title="LineNr "class="LineNr">19</span>  <span title="Normal "class="Normal">	</span><span title="goString "class="goString">&quot;github.com/grafana/loki/pkg/logentry/stages&quot;
+</span><span title="LineNr "class="LineNr">20</span>  <span title="Normal "class="Normal">	</span><span title="goString "class="goString">&quot;github.com/grafana/loki/pkg/promtail/client&quot;
+</span><span title="LineNr "class="LineNr">21</span>  <span title="Normal "class="Normal">	</span><span title="goString "class="goString">&quot;github.com/grafana/loki/pkg/promtail/targets&quot;
+</span><span title="LineNr "class="LineNr">22</span>  <span title="Normal "class="Normal">)
+</span><span title="LineNr "class="LineNr">23</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">24</span>  <span title="goDeclaration "class="goDeclaration">const</span><span title="Normal "class="Normal"> (
+</span><span title="LineNr "class="LineNr">25</span>  <span title="Normal "class="Normal">	driverName &#61; </span><span title="goString "class="goString">&quot;loki&quot;
+</span><span title="LineNr "class="LineNr">26</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">27</span>  <span title="Normal "class="Normal">	cfgExternalLabelsKey &#61; </span><span title="goString "class="goString">&quot;loki-external-labels&quot;
+</span><span title="LineNr "class="LineNr">28</span>  <span title="Normal "class="Normal">	cfgURLKey            &#61; </span><span title="goString "class="goString">&quot;loki-url&quot;
+</span><span title="LineNr "class="LineNr">29</span>  <span title="Normal "class="Normal">	cfgTLSCAFileKey      &#61; </span><span title="goString "class="goString">&quot;loki-tls-ca-file&quot;
+</span><span title="LineNr "class="LineNr">30</span>  <span title="Normal "class="Normal">	cfgTLSCertFileKey    &#61; </span><span title="goString "class="goString">&quot;loki-tls-cert-file&quot;
+</span><span title="LineNr "class="LineNr">31</span>  <span title="Normal "class="Normal">	cfgTLSKeyFileKey     &#61; </span><span title="goString "class="goString">&quot;loki-tls-key-file&quot;
+</span><span title="LineNr "class="LineNr">32</span>  <span title="Normal "class="Normal">	cfgTLSServerNameKey  &#61; </span><span title="goString "class="goString">&quot;loki-tls-server-name&quot;
+</span><span title="LineNr "class="LineNr">33</span>  <span title="Normal "class="Normal">	cfgTLSInsecure       &#61; </span><span title="goString "class="goString">&quot;loki-tls-insecure-skip-verify&quot;
+</span><span title="LineNr "class="LineNr">34</span>  <span title="Normal "class="Normal">	cfgProxyURLKey       &#61; </span><span title="goString "class="goString">&quot;loki-proxy-url&quot;
+</span><span title="LineNr "class="LineNr">35</span>  <span title="Normal "class="Normal">	cfgTimeoutKey        &#61; </span><span title="goString "class="goString">&quot;loki-timeout&quot;
+</span><span title="LineNr "class="LineNr">36</span>  <span title="Normal "class="Normal">	cfgBatchWaitKey      &#61; </span><span title="goString "class="goString">&quot;loki-batch-wait&quot;
+</span><span title="LineNr "class="LineNr">37</span>  <span title="Normal "class="Normal">	cfgBatchSizeKey      &#61; </span><span title="goString "class="goString">&quot;loki-batch-size&quot;
+</span><span title="LineNr "class="LineNr">38</span>  <span title="Normal "class="Normal">	cfgMinBackoffKey     &#61; </span><span title="goString "class="goString">&quot;loki-min-backoff&quot;
+</span><span title="LineNr "class="LineNr">39</span>  <span title="Normal "class="Normal">	cfgMaxBackoffKey     &#61; </span><span title="goString "class="goString">&quot;loki-max-backoff&quot;
+</span><span title="LineNr "class="LineNr">40</span>  <span title="Normal "class="Normal">	cfgMaxRetriesKey     &#61; </span><span title="goString "class="goString">&quot;loki-retries&quot;
+</span><span title="LineNr "class="LineNr">41</span>  <span title="Normal "class="Normal">	cfgPipelineStagesKey &#61; </span><span title="goString "class="goString">&quot;loki-pipeline-stage-file&quot;
+</span><span title="LineNr "class="LineNr">42</span>  <span title="Normal "class="Normal">	cfgTenantIDKey       &#61; </span><span title="goString "class="goString">&quot;loki-tenant-id&quot;
+</span><span title="LineNr "class="LineNr">43</span>  <span title="Normal "class="Normal">	cfgNofile            &#61; </span><span title="goString "class="goString">&quot;no-file&quot;
+</span><span title="LineNr "class="LineNr">44</span>  <span title="Normal "class="Normal">	cfgKeepFile          &#61; </span><span title="goString "class="goString">&quot;keep-file&quot;
+</span><span title="LineNr "class="LineNr">45</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">46</span>  <span title="Normal "class="Normal">	swarmServiceLabelKey &#61; </span><span title="goString "class="goString">&quot;com.docker.swarm.service.name&quot;
+</span><span title="LineNr "class="LineNr">47</span>  <span title="Normal "class="Normal">	swarmStackLabelKey   &#61; </span><span title="goString "class="goString">&quot;com.docker.stack.namespace&quot;
+</span><span title="LineNr "class="LineNr">48</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">49</span>  <span title="Normal "class="Normal">	swarmServiceLabelName &#61; </span><span title="goString "class="goString">&quot;swarm_service&quot;
+</span><span title="LineNr "class="LineNr">50</span>  <span title="Normal "class="Normal">	swarmStackLabelName   &#61; </span><span title="goString "class="goString">&quot;swarm_stack&quot;
+</span><span title="LineNr "class="LineNr">51</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">52</span>  <span title="Normal "class="Normal">	composeServiceLabelKey &#61; </span><span title="goString "class="goString">&quot;com.docker.compose.service&quot;
+</span><span title="LineNr "class="LineNr">53</span>  <span title="Normal "class="Normal">	composeProjectLabelKey &#61; </span><span title="goString "class="goString">&quot;com.docker.compose.project&quot;
+</span><span title="LineNr "class="LineNr">54</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">55</span>  <span title="Normal "class="Normal">	composeServiceLabelName &#61; </span><span title="goString "class="goString">&quot;compose_service&quot;
+</span><span title="LineNr "class="LineNr">56</span>  <span title="Normal "class="Normal">	composeProjectLabelName &#61; </span><span title="goString "class="goString">&quot;compose_project&quot;
+</span><span title="LineNr "class="LineNr">57</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">58</span>  <span title="Normal "class="Normal">	defaultExternalLabels &#61; </span><span title="goString "class="goString">&quot;container_name&#61;{{.Name}}&quot;
+</span><span title="LineNr "class="LineNr">59</span>  <span title="Normal "class="Normal">	defaultHostLabelName  &#61; model.LabelName(</span><span title="goString "class="goString">&quot;host&quot;</span><span title="Normal "class="Normal">)
+</span><span title="LineNr "class="LineNr">60</span>  <span title="Normal "class="Normal">)
+</span><span title="LineNr "class="LineNr">61</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">62</span>  <span title="goDeclaration "class="goDeclaration">var</span><span title="Normal "class="Normal"> (
+</span><span title="LineNr "class="LineNr">63</span>  <span title="Normal "class="Normal">	defaultClientConfig &#61; client.Config{
+</span><span title="LineNr "class="LineNr">64</span>  <span title="Normal "class="Normal">		BatchWait: </span><span title="goDecimalInt "class="goDecimalInt">1</span><span title="Normal "class="Normal"> * time.Second,
+</span><span title="LineNr "class="LineNr">65</span>  <span title="Normal "class="Normal">		BatchSize: </span><span title="goDecimalInt "class="goDecimalInt">100</span><span title="Normal "class="Normal"> * </span><span title="goDecimalInt "class="goDecimalInt">1024</span><span title="Normal "class="Normal">,
+</span><span title="LineNr "class="LineNr">66</span>  <span title="Normal "class="Normal">		BackoffConfig: util.BackoffConfig{
+</span><span title="LineNr "class="LineNr">67</span>  <span title="Normal "class="Normal">			MinBackoff: </span><span title="goDecimalInt "class="goDecimalInt">100</span><span title="Normal "class="Normal"> * time.Millisecond,
+</span><span title="LineNr "class="LineNr">68</span>  <span title="Normal "class="Normal">			MaxBackoff: </span><span title="goDecimalInt "class="goDecimalInt">10</span><span title="Normal "class="Normal"> * time.Second,
+</span><span title="LineNr "class="LineNr">69</span>  <span title="Normal "class="Normal">			MaxRetries: </span><span title="goDecimalInt "class="goDecimalInt">10</span><span title="Normal "class="Normal">,
+</span><span title="LineNr "class="LineNr">70</span>  <span title="Normal "class="Normal">		},
+</span><span title="LineNr "class="LineNr">71</span>  <span title="Normal "class="Normal">		Timeout: </span><span title="goDecimalInt "class="goDecimalInt">10</span><span title="Normal "class="Normal"> * time.Second,
+</span><span title="LineNr "class="LineNr">72</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">73</span>  <span title="Normal "class="Normal">)
+</span><span title="LineNr "class="LineNr">74</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">75</span>  <span title="goDeclaration "class="goDeclaration">type</span><span title="Normal "class="Normal"> config </span><span title="goDeclType "class="goDeclType">struct</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">76</span>  <span title="Normal "class="Normal">	labels       model.LabelSet
+</span><span title="LineNr "class="LineNr">77</span>  <span title="Normal "class="Normal">	clientConfig client.Config
+</span><span title="LineNr "class="LineNr">78</span>  <span title="Normal "class="Normal">	pipeline     PipelineConfig
+</span><span title="LineNr "class="LineNr">79</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">80</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">81</span>  <span title="goDeclaration "class="goDeclaration">type</span><span title="Normal "class="Normal"> PipelineConfig </span><span title="goDeclType "class="goDeclType">struct</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">82</span>  <span title="Normal "class="Normal">	PipelineStages stages.PipelineStages </span><span title="goRawString "class="goRawString">`yaml:&quot;pipeline_stages,omitempty&quot;`
+</span><span title="LineNr "class="LineNr">83</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">84</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">85</span>  <span title="goDeclaration "class="goDeclaration">func</span><span title="Normal "class="Normal"> validateDriverOpt(loggerInfo logger.Info) </span><span title="goType "class="goType">error</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">86</span>  <span title="Normal "class="Normal">	config :&#61; loggerInfo.Config
+</span><span title="LineNr "class="LineNr">87</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">88</span>  <span title="Normal "class="Normal">	</span><span title="goRepeat "class="goRepeat">for</span><span title="Normal "class="Normal"> opt :&#61; </span><span title="goRepeat "class="goRepeat">range</span><span title="Normal "class="Normal"> config {
+</span><span title="LineNr "class="LineNr">89</span>  <span title="Normal "class="Normal">		</span><span title="goConditional "class="goConditional">switch</span><span title="Normal "class="Normal"> opt {
+</span><span title="LineNr "class="LineNr">90</span>  <span title="Normal "class="Normal">		</span><span title="goLabel "class="goLabel">case</span><span title="Normal "class="Normal"> cfgURLKey:
+</span><span title="LineNr "class="LineNr">91</span>  <span title="Normal "class="Normal">		</span><span title="goLabel "class="goLabel">case</span><span title="Normal "class="Normal"> cfgExternalLabelsKey:
+</span><span title="LineNr "class="LineNr">92</span>  <span title="Normal "class="Normal">		</span><span title="goLabel "class="goLabel">case</span><span title="Normal "class="Normal"> cfgTLSCAFileKey:
+</span><span title="LineNr "class="LineNr">93</span>  <span title="Normal "class="Normal">		</span><span title="goLabel "class="goLabel">case</span><span title="Normal "class="Normal"> cfgTLSCertFileKey:
+</span><span title="LineNr "class="LineNr">94</span>  <span title="Normal "class="Normal">		</span><span title="goLabel "class="goLabel">case</span><span title="Normal "class="Normal"> cfgTLSKeyFileKey:
+</span><span title="LineNr "class="LineNr">95</span>  <span title="Normal "class="Normal">		</span><span title="goLabel "class="goLabel">case</span><span title="Normal "class="Normal"> cfgTLSServerNameKey:
+</span><span title="LineNr "class="LineNr">96</span>  <span title="Normal "class="Normal">		</span><span title="goLabel "class="goLabel">case</span><span title="Normal "class="Normal"> cfgTLSInsecure:
+</span><span title="LineNr "class="LineNr">97</span>  <span title="Normal "class="Normal">		</span><span title="goLabel "class="goLabel">case</span><span title="Normal "class="Normal"> cfgTimeoutKey:
+</span><span title="LineNr "class="LineNr">98</span>  <span title="Normal "class="Normal">		</span><span title="goLabel "class="goLabel">case</span><span title="Normal "class="Normal"> cfgProxyURLKey:
+</span><span title="LineNr "class="LineNr">99</span>  <span title="Normal "class="Normal">		</span><span title="goLabel "class="goLabel">case</span><span title="Normal "class="Normal"> cfgBatchWaitKey:
+</span><span title="LineNr "class="LineNr">100</span>  <span title="Normal "class="Normal">		</span><span title="goLabel "class="goLabel">case</span><span title="Normal "class="Normal"> cfgBatchSizeKey:
+</span><span title="LineNr "class="LineNr">101</span>  <span title="Normal "class="Normal">		</span><span title="goLabel "class="goLabel">case</span><span title="Normal "class="Normal"> cfgMinBackoffKey:
+</span><span title="LineNr "class="LineNr">102</span>  <span title="Normal "class="Normal">		</span><span title="goLabel "class="goLabel">case</span><span title="Normal "class="Normal"> cfgMaxBackoffKey:
+</span><span title="LineNr "class="LineNr">103</span>  <span title="Normal "class="Normal">		</span><span title="goLabel "class="goLabel">case</span><span title="Normal "class="Normal"> cfgMaxRetriesKey:
+</span><span title="LineNr "class="LineNr">104</span>  <span title="Normal "class="Normal">		</span><span title="goLabel "class="goLabel">case</span><span title="Normal "class="Normal"> cfgPipelineStagesKey:
+</span><span title="LineNr "class="LineNr">105</span>  <span title="Normal "class="Normal">		</span><span title="goLabel "class="goLabel">case</span><span title="Normal "class="Normal"> cfgTenantIDKey:
+</span><span title="LineNr "class="LineNr">106</span>  <span title="Normal "class="Normal">		</span><span title="goLabel "class="goLabel">case</span><span title="Normal "class="Normal"> cfgNofile:
+</span><span title="LineNr "class="LineNr">107</span>  <span title="Normal "class="Normal">		</span><span title="goLabel "class="goLabel">case</span><span title="Normal "class="Normal"> cfgKeepFile:
+</span><span title="LineNr "class="LineNr">108</span>  <span title="Normal "class="Normal">		</span><span title="goLabel "class="goLabel">case</span><span title="Normal "class="Normal"> </span><span title="goString "class="goString">&quot;labels&quot;</span><span title="Normal "class="Normal">:
+</span><span title="LineNr "class="LineNr">109</span>  <span title="Normal "class="Normal">		</span><span title="goLabel "class="goLabel">case</span><span title="Normal "class="Normal"> </span><span title="goString "class="goString">&quot;env&quot;</span><span title="Normal "class="Normal">:
+</span><span title="LineNr "class="LineNr">110</span>  <span title="Normal "class="Normal">		</span><span title="goLabel "class="goLabel">case</span><span title="Normal "class="Normal"> </span><span title="goString "class="goString">&quot;env-regex&quot;</span><span title="Normal "class="Normal">:
+</span><span title="LineNr "class="LineNr">111</span>  <span title="Normal "class="Normal">		</span><span title="goLabel "class="goLabel">case</span><span title="Normal "class="Normal"> </span><span title="goString "class="goString">&quot;max-size&quot;</span><span title="Normal "class="Normal">:
+</span><span title="LineNr "class="LineNr">112</span>  <span title="Normal "class="Normal">		</span><span title="goLabel "class="goLabel">case</span><span title="Normal "class="Normal"> </span><span title="goString "class="goString">&quot;max-file&quot;</span><span title="Normal "class="Normal">:
+</span><span title="LineNr "class="LineNr">113</span>  <span title="Normal "class="Normal">		</span><span title="goLabel "class="goLabel">default</span><span title="Normal "class="Normal">:
+</span><span title="LineNr "class="LineNr">114</span>  <span title="Normal "class="Normal">			</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> fmt.Errorf(</span><span title="goString "class="goString">&quot;%s: wrong log-opt: &#39;%s&#39; - %s&quot;</span><span title="Normal "class="Normal">, driverName, opt, loggerInfo.ContainerID)
+</span><span title="LineNr "class="LineNr">115</span>  <span title="Normal "class="Normal">		}
+</span><span title="LineNr "class="LineNr">116</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">117</span>  <span title="Normal "class="Normal">	_, ok :&#61; config[cfgURLKey]
+</span><span title="LineNr "class="LineNr">118</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> !ok {
+</span><span title="LineNr "class="LineNr">119</span>  <span title="Normal "class="Normal">		</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> fmt.Errorf(</span><span title="goString "class="goString">&quot;%s: %s is required in the config&quot;</span><span title="Normal "class="Normal">, driverName, cfgURLKey)
+</span><span title="LineNr "class="LineNr">120</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">121</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">122</span>  <span title="Normal "class="Normal">	</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> </span><span title="goConstants "class="goConstants">nil
+</span><span title="LineNr "class="LineNr">123</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">124</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">125</span>  <span title="goDeclaration "class="goDeclaration">func</span><span title="Normal "class="Normal"> parseConfig(logCtx logger.Info) (*config, </span><span title="goType "class="goType">error</span><span title="Normal "class="Normal">) {
+</span><span title="LineNr "class="LineNr">126</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> err :&#61; validateDriverOpt(logCtx); err !&#61; </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">127</span>  <span title="Normal "class="Normal">		</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal">, err
+</span><span title="LineNr "class="LineNr">128</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">129</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">130</span>  <span title="Normal "class="Normal">	clientConfig :&#61; defaultClientConfig
+</span><span title="LineNr "class="LineNr">131</span>  <span title="Normal "class="Normal">	labels :&#61; model.LabelSet{}
+</span><span title="LineNr "class="LineNr">132</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">133</span>  <span title="Normal "class="Normal">	</span><span title="goComment "class="goComment">// parse URL
+</span><span title="LineNr "class="LineNr">134</span>  <span title="Normal "class="Normal">	rawURL, ok :&#61; logCtx.Config[cfgURLKey]
+</span><span title="LineNr "class="LineNr">135</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> !ok {
+</span><span title="LineNr "class="LineNr">136</span>  <span title="Normal "class="Normal">		</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal">, fmt.Errorf(</span><span title="goString "class="goString">&quot;%s: option %s is required&quot;</span><span title="Normal "class="Normal">, driverName, cfgURLKey)
+</span><span title="LineNr "class="LineNr">137</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">138</span>  <span title="Normal "class="Normal">	url, err :&#61; url.Parse(rawURL)
+</span><span title="LineNr "class="LineNr">139</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> err !&#61; </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">140</span>  <span title="Normal "class="Normal">		</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal">, fmt.Errorf(</span><span title="goString "class="goString">&quot;%s: option %s is invalid %s&quot;</span><span title="Normal "class="Normal">, driverName, cfgURLKey, err)
+</span><span title="LineNr "class="LineNr">141</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">142</span>  <span title="Normal "class="Normal">	clientConfig.URL &#61; flagext.URLValue{URL: url}
+</span><span title="LineNr "class="LineNr">143</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">144</span>  <span title="Normal "class="Normal">	</span><span title="goComment "class="goComment">// parse timeout
+</span><span title="LineNr "class="LineNr">145</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> err :&#61; parseDuration(cfgTimeoutKey, logCtx, </span><span title="goType "class="goType">func</span><span title="Normal "class="Normal">(d time.Duration) { clientConfig.Timeout &#61; d }); err !&#61; </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">146</span>  <span title="Normal "class="Normal">		</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal">, err
+</span><span title="LineNr "class="LineNr">147</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">148</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">149</span>  <span title="Normal "class="Normal">	</span><span title="goComment "class="goComment">// parse batch wait and batch size
+</span><span title="LineNr "class="LineNr">150</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> err :&#61; parseDuration(cfgBatchWaitKey, logCtx, </span><span title="goType "class="goType">func</span><span title="Normal "class="Normal">(d time.Duration) { clientConfig.BatchWait &#61; d }); err !&#61; </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">151</span>  <span title="Normal "class="Normal">		</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal">, err
+</span><span title="LineNr "class="LineNr">152</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">153</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> err :&#61; parseInt(cfgBatchSizeKey, logCtx, </span><span title="goType "class="goType">func</span><span title="Normal "class="Normal">(i </span><span title="goSignedInts "class="goSignedInts">int</span><span title="Normal "class="Normal">) { clientConfig.BatchSize &#61; i }); err !&#61; </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">154</span>  <span title="Normal "class="Normal">		</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal">, err
+</span><span title="LineNr "class="LineNr">155</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">156</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">157</span>  <span title="Normal "class="Normal">	</span><span title="goComment "class="goComment">// parse backoff
+</span><span title="LineNr "class="LineNr">158</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> err :&#61; parseDuration(cfgMinBackoffKey, logCtx, </span><span title="goType "class="goType">func</span><span title="Normal "class="Normal">(d time.Duration) { clientConfig.BackoffConfig.MinBackoff &#61; d }); err !&#61; </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">159</span>  <span title="Normal "class="Normal">		</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal">, err
+</span><span title="LineNr "class="LineNr">160</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">161</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> err :&#61; parseDuration(cfgMaxBackoffKey, logCtx, </span><span title="goType "class="goType">func</span><span title="Normal "class="Normal">(d time.Duration) { clientConfig.BackoffConfig.MaxBackoff &#61; d }); err !&#61; </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">162</span>  <span title="Normal "class="Normal">		</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal">, err
+</span><span title="LineNr "class="LineNr">163</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">164</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> err :&#61; parseInt(cfgMaxRetriesKey, logCtx, </span><span title="goType "class="goType">func</span><span title="Normal "class="Normal">(i </span><span title="goSignedInts "class="goSignedInts">int</span><span title="Normal "class="Normal">) { clientConfig.BackoffConfig.MaxRetries &#61; i }); err !&#61; </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">165</span>  <span title="Normal "class="Normal">		</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal">, err
+</span><span title="LineNr "class="LineNr">166</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">167</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">168</span>  <span title="Normal "class="Normal">	</span><span title="goComment "class="goComment">// parse http &amp; tls config
+</span><span title="LineNr "class="LineNr">169</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> tlsCAFile, ok :&#61; logCtx.Config[cfgTLSCAFileKey]; ok {
+</span><span title="LineNr "class="LineNr">170</span>  <span title="Normal "class="Normal">		clientConfig.Client.TLSConfig.CAFile &#61; tlsCAFile
+</span><span title="LineNr "class="LineNr">171</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">172</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> tlsCertFile, ok :&#61; logCtx.Config[cfgTLSCertFileKey]; ok {
+</span><span title="LineNr "class="LineNr">173</span>  <span title="Normal "class="Normal">		clientConfig.Client.TLSConfig.CertFile &#61; tlsCertFile
+</span><span title="LineNr "class="LineNr">174</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">175</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> tlsCertFile, ok :&#61; logCtx.Config[cfgTLSCertFileKey]; ok {
+</span><span title="LineNr "class="LineNr">176</span>  <span title="Normal "class="Normal">		clientConfig.Client.TLSConfig.CertFile &#61; tlsCertFile
+</span><span title="LineNr "class="LineNr">177</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">178</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> tlsKeyFile, ok :&#61; logCtx.Config[cfgTLSKeyFileKey]; ok {
+</span><span title="LineNr "class="LineNr">179</span>  <span title="Normal "class="Normal">		clientConfig.Client.TLSConfig.KeyFile &#61; tlsKeyFile
+</span><span title="LineNr "class="LineNr">180</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">181</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> tlsServerName, ok :&#61; logCtx.Config[cfgTLSServerNameKey]; ok {
+</span><span title="LineNr "class="LineNr">182</span>  <span title="Normal "class="Normal">		clientConfig.Client.TLSConfig.ServerName &#61; tlsServerName
+</span><span title="LineNr "class="LineNr">183</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">184</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> tlsInsecureSkipRaw, ok :&#61; logCtx.Config[cfgTLSInsecure]; ok {
+</span><span title="LineNr "class="LineNr">185</span>  <span title="Normal "class="Normal">		tlsInsecureSkip, err :&#61; strconv.ParseBool(tlsInsecureSkipRaw)
+</span><span title="LineNr "class="LineNr">186</span>  <span title="Normal "class="Normal">		</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> err !&#61; </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">187</span>  <span title="Normal "class="Normal">			</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal">, fmt.Errorf(</span><span title="goString "class="goString">&quot;%s: invalid external labels: %s&quot;</span><span title="Normal "class="Normal">, driverName, tlsInsecureSkipRaw)
+</span><span title="LineNr "class="LineNr">188</span>  <span title="Normal "class="Normal">		}
+</span><span title="LineNr "class="LineNr">189</span>  <span title="Normal "class="Normal">		clientConfig.Client.TLSConfig.InsecureSkipVerify &#61; tlsInsecureSkip
+</span><span title="LineNr "class="LineNr">190</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">191</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> tlsProxyURL, ok :&#61; logCtx.Config[cfgProxyURLKey]; ok {
+</span><span title="LineNr "class="LineNr">192</span>  <span title="Normal "class="Normal">		proxyURL, err :&#61; url.Parse(tlsProxyURL)
+</span><span title="LineNr "class="LineNr">193</span>  <span title="Normal "class="Normal">		</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> err !&#61; </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">194</span>  <span title="Normal "class="Normal">			</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal">, fmt.Errorf(</span><span title="goString "class="goString">&quot;%s: option %s is invalid %s&quot;</span><span title="Normal "class="Normal">, driverName, cfgProxyURLKey, err)
+</span><span title="LineNr "class="LineNr">195</span>  <span title="Normal "class="Normal">		}
+</span><span title="LineNr "class="LineNr">196</span>  <span title="Normal "class="Normal">		clientConfig.Client.ProxyURL.URL &#61; proxyURL
+</span><span title="LineNr "class="LineNr">197</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">198</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">199</span>  <span title="Normal "class="Normal">	</span><span title="goComment "class="goComment">// parse tenant id
+</span><span title="LineNr "class="LineNr">200</span>  <span title="Normal "class="Normal">	tenantID, ok :&#61; logCtx.Config[cfgTenantIDKey]
+</span><span title="LineNr "class="LineNr">201</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> ok &amp;&amp; tenantID !&#61; </span><span title="goString "class="goString">&quot;&quot;</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">202</span>  <span title="Normal "class="Normal">		clientConfig.TenantID &#61; tenantID
+</span><span title="LineNr "class="LineNr">203</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">204</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">205</span>  <span title="Normal "class="Normal">	</span><span title="goComment "class="goComment">// parse external labels
+</span><span title="LineNr "class="LineNr">206</span>  <span title="Normal "class="Normal">	extlbs, ok :&#61; logCtx.Config[cfgExternalLabelsKey]
+</span><span title="LineNr "class="LineNr">207</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> !ok {
+</span><span title="LineNr "class="LineNr">208</span>  <span title="Normal "class="Normal">		extlbs &#61; defaultExternalLabels
+</span><span title="LineNr "class="LineNr">209</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">210</span>  <span title="Normal "class="Normal">	lvs :&#61; strings.Split(extlbs, </span><span title="goString "class="goString">&quot;,&quot;</span><span title="Normal "class="Normal">)
+</span><span title="LineNr "class="LineNr">211</span>  <span title="Normal "class="Normal">	</span><span title="goRepeat "class="goRepeat">for</span><span title="Normal "class="Normal"> _, lv :&#61; </span><span title="goRepeat "class="goRepeat">range</span><span title="Normal "class="Normal"> lvs {
+</span><span title="LineNr "class="LineNr">212</span>  <span title="Normal "class="Normal">		lvparts :&#61; strings.Split(lv, </span><span title="goString "class="goString">&quot;&#61;&quot;</span><span title="Normal "class="Normal">)
+</span><span title="LineNr "class="LineNr">213</span>  <span title="Normal "class="Normal">		</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> </span><span title="goBuiltins "class="goBuiltins">len</span><span title="Normal "class="Normal">(lvparts) !&#61; </span><span title="goDecimalInt "class="goDecimalInt">2</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">214</span>  <span title="Normal "class="Normal">			</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal">, fmt.Errorf(</span><span title="goString "class="goString">&quot;%s: invalid external labels: %s&quot;</span><span title="Normal "class="Normal">, driverName, extlbs)
+</span><span title="LineNr "class="LineNr">215</span>  <span title="Normal "class="Normal">		}
+</span><span title="LineNr "class="LineNr">216</span>  <span title="Normal "class="Normal">		labelName :&#61; model.LabelName(lvparts[</span><span title="goDecimalInt "class="goDecimalInt">0</span><span title="Normal "class="Normal">])
+</span><span title="LineNr "class="LineNr">217</span>  <span title="Normal "class="Normal">		</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> !labelName.IsValid() {
+</span><span title="LineNr "class="LineNr">218</span>  <span title="Normal "class="Normal">			</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal">, fmt.Errorf(</span><span title="goString "class="goString">&quot;%s: invalid external label name: %s&quot;</span><span title="Normal "class="Normal">, driverName, labelName)
+</span><span title="LineNr "class="LineNr">219</span>  <span title="Normal "class="Normal">		}
+</span><span title="LineNr "class="LineNr">220</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">221</span>  <span title="Normal "class="Normal">		</span><span title="goComment "class="goComment">// expand the value using docker template {{.Name}}.{{.ImageName}}
+</span><span title="LineNr "class="LineNr">222</span>  <span title="Normal "class="Normal">		value, err :&#61; expandLabelValue(logCtx, lvparts[</span><span title="goDecimalInt "class="goDecimalInt">1</span><span title="Normal "class="Normal">])
+</span><span title="LineNr "class="LineNr">223</span>  <span title="Normal "class="Normal">		</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> err !&#61; </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">224</span>  <span title="Normal "class="Normal">			</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal">, fmt.Errorf(</span><span title="goString "class="goString">&quot;%s: could not expand label value: %s err : %s&quot;</span><span title="Normal "class="Normal">, driverName, lvparts[</span><span title="goDecimalInt "class="goDecimalInt">1</span><span title="Normal "class="Normal">], err)
+</span><span title="LineNr "class="LineNr">225</span>  <span title="Normal "class="Normal">		}
+</span><span title="LineNr "class="LineNr">226</span>  <span title="Normal "class="Normal">		labelValue :&#61; model.LabelValue(value)
+</span><span title="LineNr "class="LineNr">227</span>  <span title="Normal "class="Normal">		</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> !labelValue.IsValid() {
+</span><span title="LineNr "class="LineNr">228</span>  <span title="Normal "class="Normal">			</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal">, fmt.Errorf(</span><span title="goString "class="goString">&quot;%s: invalid external label value: %s&quot;</span><span title="Normal "class="Normal">, driverName, value)
+</span><span title="LineNr "class="LineNr">229</span>  <span title="Normal "class="Normal">		}
+</span><span title="LineNr "class="LineNr">230</span>  <span title="Normal "class="Normal">		labels[labelName] &#61; labelValue
+</span><span title="LineNr "class="LineNr">231</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">232</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">233</span>  <span title="Normal "class="Normal">	</span><span title="goComment "class="goComment">// other labels coming from docker labels or env selected by user labels, labels-regex, env, env-regex config.
+</span><span title="LineNr "class="LineNr">234</span>  <span title="Normal "class="Normal">	attrs, err :&#61; logCtx.ExtraAttributes(</span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal">)
+</span><span title="LineNr "class="LineNr">235</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> err !&#61; </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">236</span>  <span title="Normal "class="Normal">		</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal">, err
+</span><span title="LineNr "class="LineNr">237</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">238</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">239</span>  <span title="Normal "class="Normal">	</span><span title="goComment "class="goComment">// parse docker swarms labels and adds them automatically to attrs
+</span><span title="LineNr "class="LineNr">240</span>  <span title="Normal "class="Normal">	swarmService :&#61; logCtx.ContainerLabels[swarmServiceLabelKey]
+</span><span title="LineNr "class="LineNr">241</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> swarmService !&#61; </span><span title="goString "class="goString">&quot;&quot;</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">242</span>  <span title="Normal "class="Normal">		attrs[swarmServiceLabelName] &#61; swarmService
+</span><span title="LineNr "class="LineNr">243</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">244</span>  <span title="Normal "class="Normal">	swarmStack :&#61; logCtx.ContainerLabels[swarmStackLabelKey]
+</span><span title="LineNr "class="LineNr">245</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> swarmStack !&#61; </span><span title="goString "class="goString">&quot;&quot;</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">246</span>  <span title="Normal "class="Normal">		attrs[swarmStackLabelName] &#61; swarmStack
+</span><span title="LineNr "class="LineNr">247</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">248</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">249</span>  <span title="Normal "class="Normal">	</span><span title="goComment "class="goComment">// parse docker compose labels and adds them automatically to attrs
+</span><span title="LineNr "class="LineNr">250</span>  <span title="Normal "class="Normal">	composeService :&#61; logCtx.ContainerLabels[composeServiceLabelKey]
+</span><span title="LineNr "class="LineNr">251</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> composeService !&#61; </span><span title="goString "class="goString">&quot;&quot;</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">252</span>  <span title="Normal "class="Normal">		attrs[composeServiceLabelName] &#61; composeService
+</span><span title="LineNr "class="LineNr">253</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">254</span>  <span title="Normal "class="Normal">	composeProject :&#61; logCtx.ContainerLabels[composeProjectLabelKey]
+</span><span title="LineNr "class="LineNr">255</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> composeProject !&#61; </span><span title="goString "class="goString">&quot;&quot;</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">256</span>  <span title="Normal "class="Normal">		attrs[composeProjectLabelName] &#61; composeProject
+</span><span title="LineNr "class="LineNr">257</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">258</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">259</span>  <span title="Normal "class="Normal">	</span><span title="goRepeat "class="goRepeat">for</span><span title="Normal "class="Normal"> key, value :&#61; </span><span title="goRepeat "class="goRepeat">range</span><span title="Normal "class="Normal"> attrs {
+</span><span title="LineNr "class="LineNr">260</span>  <span title="Normal "class="Normal">		labelName :&#61; model.LabelName(key)
+</span><span title="LineNr "class="LineNr">261</span>  <span title="Normal "class="Normal">		</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> !labelName.IsValid() {
+</span><span title="LineNr "class="LineNr">262</span>  <span title="Normal "class="Normal">			</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal">, fmt.Errorf(</span><span title="goString "class="goString">&quot;%s: invalid label name from attribute: %s&quot;</span><span title="Normal "class="Normal">, driverName, key)
+</span><span title="LineNr "class="LineNr">263</span>  <span title="Normal "class="Normal">		}
+</span><span title="LineNr "class="LineNr">264</span>  <span title="Normal "class="Normal">		labelValue :&#61; model.LabelValue(value)
+</span><span title="LineNr "class="LineNr">265</span>  <span title="Normal "class="Normal">		</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> !labelValue.IsValid() {
+</span><span title="LineNr "class="LineNr">266</span>  <span title="Normal "class="Normal">			</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal">, fmt.Errorf(</span><span title="goString "class="goString">&quot;%s: invalid label value from attribute: %s&quot;</span><span title="Normal "class="Normal">, driverName, value)
+</span><span title="LineNr "class="LineNr">267</span>  <span title="Normal "class="Normal">		}
+</span><span title="LineNr "class="LineNr">268</span>  <span title="Normal "class="Normal">		labels[labelName] &#61; labelValue
+</span><span title="LineNr "class="LineNr">269</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">270</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">271</span>  <span title="Normal "class="Normal">	</span><span title="goComment "class="goComment">// adds host label and filename
+</span><span title="LineNr "class="LineNr">272</span>  <span title="Normal "class="Normal">	host, err :&#61; os.Hostname()
+</span><span title="LineNr "class="LineNr">273</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> err &#61;&#61; </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">274</span>  <span title="Normal "class="Normal">		labels[defaultHostLabelName] &#61; model.LabelValue(host)
+</span><span title="LineNr "class="LineNr">275</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">276</span>  <span title="Normal "class="Normal">	labels[targets.FilenameLabel] &#61; model.LabelValue(logCtx.LogPath)
+</span><span title="LineNr "class="LineNr">277</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">278</span>  <span title="Normal "class="Normal">	</span><span title="goComment "class="goComment">// parse pipeline stages
+</span><span title="LineNr "class="LineNr">279</span>  <span title="Normal "class="Normal">	</span><span title="goDeclaration "class="goDeclaration">var</span><span title="Normal "class="Normal"> pipeline PipelineConfig
+</span><span title="LineNr "class="LineNr">280</span>  <span title="Normal "class="Normal">	pipelineFile, ok :&#61; logCtx.Config[cfgPipelineStagesKey]
+</span><span title="LineNr "class="LineNr">281</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> ok {
+</span><span title="LineNr "class="LineNr">282</span>  <span title="Normal "class="Normal">		</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> err :&#61; helpers.LoadConfig(pipelineFile, &amp;pipeline); err !&#61; </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">283</span>  <span title="Normal "class="Normal">			</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal">, fmt.Errorf(</span><span title="goString "class="goString">&quot;%s: error loading config file %s: %s&quot;</span><span title="Normal "class="Normal">, driverName, pipelineFile, err)
+</span><span title="LineNr "class="LineNr">284</span>  <span title="Normal "class="Normal">		}
+</span><span title="LineNr "class="LineNr">285</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">286</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">287</span>  <span title="Normal "class="Normal">	</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> &amp;config{
+</span><span title="LineNr "class="LineNr">288</span>  <span title="Normal "class="Normal">		labels:       labels,
+</span><span title="LineNr "class="LineNr">289</span>  <span title="Normal "class="Normal">		clientConfig: clientConfig,
+</span><span title="LineNr "class="LineNr">290</span>  <span title="Normal "class="Normal">		pipeline:     pipeline,
+</span><span title="LineNr "class="LineNr">291</span>  <span title="Normal "class="Normal">	}, </span><span title="goConstants "class="goConstants">nil
+</span><span title="LineNr "class="LineNr">292</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">293</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">294</span>  <span title="goDeclaration "class="goDeclaration">func</span><span title="Normal "class="Normal"> expandLabelValue(info logger.Info, defaultTemplate </span><span title="goType "class="goType">string</span><span title="Normal "class="Normal">) (</span><span title="goType "class="goType">string</span><span title="Normal "class="Normal">, </span><span title="goType "class="goType">error</span><span title="Normal "class="Normal">) {
+</span><span title="LineNr "class="LineNr">295</span>  <span title="Normal "class="Normal">	tmpl, err :&#61; templates.NewParse(</span><span title="goString "class="goString">&quot;label_value&quot;</span><span title="Normal "class="Normal">, defaultTemplate)
+</span><span title="LineNr "class="LineNr">296</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> err !&#61; </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">297</span>  <span title="Normal "class="Normal">		</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> </span><span title="goString "class="goString">&quot;&quot;</span><span title="Normal "class="Normal">, err
+</span><span title="LineNr "class="LineNr">298</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">299</span>  <span title="Normal "class="Normal">	buf :&#61; </span><span title="goBuiltins "class="goBuiltins">new</span><span title="Normal "class="Normal">(</span><span title="goExtraType "class="goExtraType">bytes.Buffer</span><span title="Normal "class="Normal">)
+</span><span title="LineNr "class="LineNr">300</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> err :&#61; tmpl.Execute(buf, &amp;info); err !&#61; </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">301</span>  <span title="Normal "class="Normal">		</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> </span><span title="goString "class="goString">&quot;&quot;</span><span title="Normal "class="Normal">, err
+</span><span title="LineNr "class="LineNr">302</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">303</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">304</span>  <span title="Normal "class="Normal">	</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> buf.String(), </span><span title="goConstants "class="goConstants">nil
+</span><span title="LineNr "class="LineNr">305</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">306</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">307</span>  <span title="goDeclaration "class="goDeclaration">func</span><span title="Normal "class="Normal"> parseDuration(key </span><span title="goType "class="goType">string</span><span title="Normal "class="Normal">, logCtx logger.Info, set </span><span title="goType "class="goType">func</span><span title="Normal "class="Normal">(d time.Duration)) </span><span title="goType "class="goType">error</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">308</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> raw, ok :&#61; logCtx.Config[key]; ok {
+</span><span title="LineNr "class="LineNr">309</span>  <span title="Normal "class="Normal">		val, err :&#61; time.ParseDuration(raw)
+</span><span title="LineNr "class="LineNr">310</span>  <span title="Normal "class="Normal">		</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> err !&#61; </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">311</span>  <span title="Normal "class="Normal">			</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> fmt.Errorf(</span><span title="goString "class="goString">&quot;%s: invalid option %s format: %s&quot;</span><span title="Normal "class="Normal">, driverName, key, raw)
+</span><span title="LineNr "class="LineNr">312</span>  <span title="Normal "class="Normal">		}
+</span><span title="LineNr "class="LineNr">313</span>  <span title="Normal "class="Normal">		set(val)
+</span><span title="LineNr "class="LineNr">314</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">315</span>  <span title="Normal "class="Normal">	</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> </span><span title="goConstants "class="goConstants">nil
+</span><span title="LineNr "class="LineNr">316</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">317</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">318</span>  <span title="goDeclaration "class="goDeclaration">func</span><span title="Normal "class="Normal"> parseInt(key </span><span title="goType "class="goType">string</span><span title="Normal "class="Normal">, logCtx logger.Info, set </span><span title="goType "class="goType">func</span><span title="Normal "class="Normal">(i </span><span title="goSignedInts "class="goSignedInts">int</span><span title="Normal "class="Normal">)) </span><span title="goType "class="goType">error</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">319</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> raw, ok :&#61; logCtx.Config[key]; ok {
+</span><span title="LineNr "class="LineNr">320</span>  <span title="Normal "class="Normal">		val, err :&#61; strconv.Atoi(raw)
+</span><span title="LineNr "class="LineNr">321</span>  <span title="Normal "class="Normal">		</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> err !&#61; </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">322</span>  <span title="Normal "class="Normal">			</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> fmt.Errorf(</span><span title="goString "class="goString">&quot;%s: invalid option %s format: %s&quot;</span><span title="Normal "class="Normal">, driverName, key, raw)
+</span><span title="LineNr "class="LineNr">323</span>  <span title="Normal "class="Normal">		}
+</span><span title="LineNr "class="LineNr">324</span>  <span title="Normal "class="Normal">		set(val)
+</span><span title="LineNr "class="LineNr">325</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">326</span>  <span title="Normal "class="Normal">	</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> </span><span title="goConstants "class="goConstants">nil
+</span><span title="LineNr "class="LineNr">327</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">328</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">329</span>  <span title="goDeclaration "class="goDeclaration">func</span><span title="Normal "class="Normal"> parseBoolean(key </span><span title="goType "class="goType">string</span><span title="Normal "class="Normal">, logCtx logger.Info, defaultValue </span><span title="goType "class="goType">bool</span><span title="Normal "class="Normal">) (</span><span title="goType "class="goType">bool</span><span title="Normal "class="Normal">, </span><span title="goType "class="goType">error</span><span title="Normal "class="Normal">) {
+</span><span title="LineNr "class="LineNr">330</span>  <span title="Normal "class="Normal">	value, ok :&#61; logCtx.Config[key]
+</span><span title="LineNr "class="LineNr">331</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> !ok || value &#61;&#61; </span><span title="goString "class="goString">&quot;&quot;</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">332</span>  <span title="Normal "class="Normal">		</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> defaultValue, </span><span title="goConstants "class="goConstants">nil
+</span><span title="LineNr "class="LineNr">333</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">334</span>  <span title="Normal "class="Normal">	b, err :&#61; strconv.ParseBool(value)
+</span><span title="LineNr "class="LineNr">335</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> err !&#61; </span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">336</span>  <span title="Normal "class="Normal">		</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> </span><span title="goConstants "class="goConstants">false</span><span title="Normal "class="Normal">, err
+</span><span title="LineNr "class="LineNr">337</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">338</span>  <span title="Normal "class="Normal">	</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> b, </span><span title="goConstants "class="goConstants">nil
+</span><span title="LineNr "class="LineNr">339</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr last-LineNr">340</span>  <span title="Normal "class="Normal"></span>

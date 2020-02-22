@@ -1,0 +1,34 @@
+@import 'variables.css';
+
+body {
+  scrollbar-width: 15px;
+  scrollbar-color: var(--bg-accent) var(--bg-primary);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--bg-accent);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: var(--scroll-bg);
+}
+
+::-webkit-scrollbar-track-piece,
+::-webkit-scrollbar-track {
+  background: var(--bg-accent);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-bg);
+  /* border-radius: 30px; */
+
+  &:hover {
+    background: var(--scroll-hover-bg);
+  }
+
+  &:active {
+    background: var(--scroll-active-bg);
+  }
+}

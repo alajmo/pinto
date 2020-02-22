@@ -1,14 +1,27 @@
+@import '../../style/variables.css';
+
 .picker-sl {
   position: relative;
-  width: 21em;
-  height: 21em;
-  border-radius: 3px;
+  width: 202px;
+  height: 202px;
 
-  background-image: linear-gradient(180deg, white, rgba(255, 255, 255, 0) 50%),
-    linear-gradient(0deg, black, rgba(0, 0, 0, 0) 50%),
-    linear-gradient(90deg, #808080, rgba(128, 128, 128, 0));
-
-  & .picker-selector {
-    border-radius: 100%;
+  & canvas {
+    z-index: 1;
   }
+}
+
+.sl-selector {
+  position: absolute;
+  display: block;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+
+  background: white;
+  border: 1px solid black;
+  border-radius: 4px;
+
+  pointer-events: auto;
+
+  z-index: 9999;
 }

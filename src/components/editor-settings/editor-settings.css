@@ -1,0 +1,43 @@
+@import '../../style/variables.css';
+
+.editor-settings {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 0 1 auto;
+
+  height: 100%;
+  min-height: 0px;
+  width: 100%;
+  background: var(--bg-accent);
+
+  overflow-y: hidden;
+
+  & .editor-settings-content {
+    overflow-y: auto;
+    height: 100%;
+    padding-right: calc(var(--padding) * 5);
+    min-width: 300px;
+  }
+
+  & .language-status {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    & .language-status--title {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: calc(var(--margin) * 1);
+    }
+
+    & .language-status--keyword {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: calc(var(--padding) * 2) calc(var(--padding) * 4);
+    }
+  }
+}

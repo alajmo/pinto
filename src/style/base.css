@@ -1,29 +1,70 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import 'reset.css';
 
 @import 'variables.css';
 
-@import 'divider.css';
+@import 'icon.css';
+@import 'scroll.css';
 @import 'typography.css';
 @import 'button.css';
+@import 'input.css';
+@import 'form.css';
 @import 'list.css';
-@import 'picker.css';
 
 body,
 html {
-  flex-direction: column;
-  display: flex;
-
   width: 100%;
   height: 100%;
 
   margin: 0;
   padding: 0;
 
-  color: white;
-
   font-family: 'monospace', Roboto, sans-serif;
-  font-size: 16px;
-  letter-spacing: 0.02em;
+  font-size: var(--font-size);
+  letter-spacing: var(--letter-spacing);
   line-height: normal;
+  color: var(--font-color);
+  background: var(--bg-primary);
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.no-cursor {
+  cursor: none !important;
+}
+
+.label-text,
+button,
+input,
+select,
+.stripped,
+label {
+  user-select: none !important;
+}
+
+a {
+  outline: none;
+
+  &:hover {
+    outline: 1px solid white;
+  }
+
+  &:focus {
+    outline: 1px solid white;
+  }
+
+  &:active {
+    outline: 1px solid white;
+  }
+}
+
+.code-snippet {
+  background-color: #2d2d2d;
+  color: white;
+  border-radius: 3px;
+  padding: 1px 3px;
 }

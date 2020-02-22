@@ -1,0 +1,62 @@
+@import './variables.css';
+
+/**
+ * Form Element, meant to surround all forms that contain input.
+ */
+
+.form {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+
+  & .item {
+    margin-bottom: calc(var(--margin) * 6);
+    width: 100%;
+    user-select: none;
+
+    &.divider {
+      padding-bottom: calc(var(--padding) * 2);
+      border-bottom: var(--divider-small);
+    }
+
+    &.divider--small {
+      padding-bottom: calc(var(--padding) * 2);
+      border-bottom: var(--divider-small);
+    }
+
+    &.divider--medium {
+      padding-bottom: calc(var(--padding) * 2);
+      border-bottom: var(--divider-medium);
+    }
+
+    &.divider--large {
+      padding-bottom: calc(var(--padding) * 2);
+      border-bottom: var(--divider-large);
+    }
+  }
+
+  & .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  & .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  & .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: calc(var(--margin) * 4);
+
+    & button:not(:last-child) {
+      margin-right: calc(var(--margin) * 5);
+    }
+  }
+}

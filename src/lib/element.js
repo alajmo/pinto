@@ -1,3 +1,0 @@
-export { element };
-
-function element() {}
