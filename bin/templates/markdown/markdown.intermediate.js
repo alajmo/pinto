@@ -2161,7 +2161,7 @@ module.exports = [
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 122,
-        "char": "  - name: idetheme\n"
+        "char": "  - name: pinto\n"
     },
     {
         "group": "LineNr",
@@ -2172,7 +2172,7 @@ module.exports = [
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 123,
-        "char": "    path: frontend/idetheme\n"
+        "char": "    path: frontend/pinto\n"
     },
     {
         "group": "LineNr",
@@ -2183,7 +2183,7 @@ module.exports = [
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 124,
-        "char": "    url: https://github.com/samiralajmovic/idetheme\n"
+        "char": "    url: https://github.com/samiralajmovic/pinto\n"
     },
     {
         "group": "LineNr",

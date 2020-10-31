@@ -202,8 +202,8 @@ function AboutView({ props }) {
                 ><a
                   target="_blank"
                   rel="nofollow"
-                  href="https://github.com/samiralajmovic/idetheme"
-                  >github.com/samiralajmovic/idetheme</a
+                  href="https://github.com/samiralajmovic/pinto"
+                  >github.com/samiralajmovic/pinto</a
                 ></span
               >
             </li>

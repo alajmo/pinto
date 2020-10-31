@@ -119,9 +119,9 @@ projects:
   - name: example
     path: .
 
-  - name: idetheme
-    path: frontend/idetheme
-    url: https://github.com/samiralajmovic/idetheme
+  - name: pinto
+    path: frontend/pinto
+    url: https://github.com/samiralajmovic/pinto
     tags:
       - frontend
 

@@ -102,7 +102,7 @@ function CreateLocalStorageStore() {
 
   function exportThemesJson() {
     const data = getThemes();
-    const filename = 'idetheme-themes.json';
+    const filename = 'pinto-themes.json';
 
     const file = new Blob([JSON.stringify(data)], {
       type: 'application/json',
@@ -118,10 +118,10 @@ function CreateLocalStorageStore() {
 
     if (themeId) {
       data = getTheme(themeId);
-      filename = `idetheme-${data.theme.name}.json`;
+      filename = `pinto-${data.theme.name}.json`;
     } else {
       data = getThemes();
-      filename = 'idetheme-themes.json';
+      filename = 'pinto-themes.json';
     }
 
     const file = new Blob([JSON.stringify(data)], {

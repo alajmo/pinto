@@ -119,9 +119,9 @@
 </span><span title="LineNr "class="LineNr">119</span>  <span title="markdownCode "class="markdownCode">  - name: example
 </span><span title="LineNr "class="LineNr">120</span>  <span title="markdownCode "class="markdownCode">    path: .
 </span><span title="LineNr "class="LineNr">121</span>  <span title="Normal "class="Normal">
-</span><span title="LineNr "class="LineNr">122</span>  <span title="markdownCode "class="markdownCode">  - name: idetheme
-</span><span title="LineNr "class="LineNr">123</span>  <span title="markdownCode "class="markdownCode">    path: frontend/idetheme
-</span><span title="LineNr "class="LineNr">124</span>  <span title="markdownCode "class="markdownCode">    url: https://github.com/samiralajmovic/idetheme
+</span><span title="LineNr "class="LineNr">122</span>  <span title="markdownCode "class="markdownCode">  - name: pinto
+</span><span title="LineNr "class="LineNr">123</span>  <span title="markdownCode "class="markdownCode">    path: frontend/pinto
+</span><span title="LineNr "class="LineNr">124</span>  <span title="markdownCode "class="markdownCode">    url: https://github.com/samiralajmovic/pinto
 </span><span title="LineNr "class="LineNr">125</span>  <span title="markdownCode "class="markdownCode">    tags:
 </span><span title="LineNr "class="LineNr">126</span>  <span title="markdownCode "class="markdownCode">      - frontend
 </span><span title="LineNr "class="LineNr">127</span>  <span title="Normal "class="Normal">
