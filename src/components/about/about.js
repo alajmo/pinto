@@ -28,8 +28,7 @@ function AboutView({ props }) {
       <div class="form">
         <div class="item text-body">
           <p>
-            Colortheme Editor is an application used to create color themes for
-            Vim.
+            Pinto is an application used to create color themes for Vim.
           </p>
 
           <h3>

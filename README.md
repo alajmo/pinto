@@ -7,7 +7,7 @@ Create, view and edit vim color themes. [pintovim.com](https://pintovim.com) del
 ## Development
 
 ```
-# Dev server
+# Development server
 npm run start
 
 # Production build
