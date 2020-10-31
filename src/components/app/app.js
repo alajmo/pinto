@@ -104,7 +104,7 @@ function App(Store) {
     Store.dispatch('app', 'setupEventListeners', element);
 
     mitt.on('LOAD_TEMPLATE', () => {
-      console.log('LOAD_TEMPLATE');
+      // console.log('LOAD_TEMPLATE');
 
       const state = Store.getState();
 
@@ -114,14 +114,14 @@ function App(Store) {
     });
 
     mitt.on('KEYWORD_ENABLE_TOGGLE', () => {
-      console.log('KEYWORD_ENABLE_TOGGLE');
+      // console.log('KEYWORD_ENABLE_TOGGLE');
 
       const state = Store.getState();
       templateRenderer.updateKeywordElement(state);
     });
 
     mitt.on('RENDER', options => {
-      console.log('RENDER');
+      // console.log('RENDER');
 
       const state = Store.getState();
       renderers.forEach(fn => fn(state, Store, options));

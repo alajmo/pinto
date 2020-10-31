@@ -253,7 +253,7 @@ async function CreateStore() {
     },
 
     [events.SELECT_KEYWORD]: (keyword) => {
-      console.log('SELECT_KEYWORD');
+      // console.log('SELECT_KEYWORD');
 
       const state = store.getState();
 
