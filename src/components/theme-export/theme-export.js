@@ -56,17 +56,17 @@ function exportCode(state) {
     keywordGroups: [
       {
         title: 'Default Keywords',
-        keywords: refs.misc.filter(k => keywords[k].enabled),
+        keywords: refs.misc.filter(k => keywords[k].active),
         display: true,
       },
       {
         title: 'Major Keywords',
-        keywords: refs.major.filter(k => keywords[k].enabled),
+        keywords: refs.major.filter(k => keywords[k].active),
         display: true,
       },
       {
         title: 'Minor Keywords',
-        keywords: refs.minor.filter(k => keywords[k].enabled),
+        keywords: refs.minor.filter(k => keywords[k].active),
         display: true,
       },
 

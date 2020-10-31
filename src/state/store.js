@@ -355,7 +355,7 @@ async function CreateStore() {
     }
 
     // TODO: Uncomment these
-    // promptUnsavedChangesOnExit();
+    promptUnsavedChangesOnExit();
   });
 
   mitt.on('CHANGES_SAVED', () => {
@@ -367,7 +367,7 @@ async function CreateStore() {
     mitt.emit('RENDER');
 
     // TODO: Uncomment these
-    // dontPromptUnsavedChangesOnExit();
+    dontPromptUnsavedChangesOnExit();
   });
 
   return store;

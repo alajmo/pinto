@@ -26,6 +26,7 @@ set t_Co=256
 
 ${keywordGroups
   .filter(({ display }) => display)
+  .filter(({ keywords }) => keywords.length > 0)
   .map(
     group => {
       const alignedText = alignText(group.keywords
