@@ -65,9 +65,7 @@ h6 {
 
 ul.modal-ul {
   display: flex;
-  flex-flow: row wrap;
-  align-items: stretch;
-  justify-content: space-between;
+  flex-flow: column;
   margin-bottom: calc(var(--margin) * 6);
 
   & > li {
@@ -79,11 +77,10 @@ ul.modal-ul {
 
 ol.modal-ol {
   display: flex;
-  flex-flow: row wrap;
-  align-items: stretch;
-  justify-content: space-between;
+  flex-flow: column;
   margin-top: 0;
   margin-bottom: calc(var(--margin) * 6);
+  max-width: 100%;
 
   & > li {
     margin-left: calc(var(--margin) * 4);

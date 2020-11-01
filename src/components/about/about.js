@@ -166,19 +166,6 @@ function AboutView({ props }) {
             Additional Information
           </h3>
 
-          <p>
-            If you experience any bug or have suggestions for improvements,
-            please send an email to
-            <span style="font-weight: bold"
-              ><a
-                target="_blank"
-                rel="nofollow"
-                href="mailto:alajmovic.samir@gmail.com"
-                >alajmovic.samir@gmail.com</a
-              ></span
-            >.
-          </p>
-
           <ul>
             <li>
               <span class="bold">Version</span><br />
@@ -187,7 +174,7 @@ function AboutView({ props }) {
 
             <li>
               <span class="bold">Updated</span><br />
-              August 3, 2020
+              November 1, 2020
             </li>
 
             <li>
