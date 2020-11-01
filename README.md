@@ -1,6 +1,6 @@
 # pinto
 
-Create, view and edit vim color themes. [pintovim.com](https://pintovim.com) delivers the source in this project.
+Create, view and edit vim color themes. [pintovim.dev](https://pintovim.dev) delivers the source in this project.
 
 ![screenshot](/screenshots/pinto-1.png)
 
