@@ -34,11 +34,13 @@ function ListThemeTemplate({ state, Store }) {
         Store.dispatch('app', 'loadTheme', theme.theme.id);
       },
 
-      removeTheme: theme => {
-        const confirmed = confirm('Press a button!');
+      removeTheme: async theme => {
+        const confirmed = confirm(
+          `Are you sure you want to delete theme ${theme.theme.name}?`,
+        );
 
         if (confirmed) {
-          Store.dispatch('app', 'removeTheme', theme.theme.id);
+          await Store.dispatch('app', 'removeTheme', theme.theme.id);
           mitt.emit('RENDER');
         }
       },
@@ -82,8 +84,12 @@ function ListThemeView({ state, props }) {
 
                   <div class="primary">
                     ${state.theme.id === theme.theme.id
-                      ? html` <span class="theme-opened">active</span> `
-                      : html` <span></span> `}
+                      ? html`
+                          <span class="theme-opened">active</span>
+                        `
+                      : html`
+                          <span></span>
+                        `}
                   </div>
 
                   <div class="control">

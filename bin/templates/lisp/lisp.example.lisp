@@ -1,24 +1,9 @@
-;;;
-;;; Now the main command, one of
-;;;
-;;;  - LOAD FROM some files
-;;;  - LOAD DATABASE FROM a MySQL remote database
-;;;  - LOAD MESSAGES FROM a syslog daemon receiver we're going to start here
-;;;
-
 (in-package #:pgloader.parser)
 
 (defrule end-of-command (and ignore-whitespace #\; ignore-whitespace)
   (:constant :eoc))
 
 (defrule command (and (or load-archive
-			  load-csv-file
-			  load-fixed-cols-file
-                          load-copy-file
-			  load-dbf-file
-                          load-ixf-file
-                          load-pgsql-database
-			  load-mysql-database
                           load-mssql-database
 			  load-sqlite-database
 			  ;; load-syslog-messages
@@ -141,45 +126,6 @@
 	   ;; normal error processing happen
 	   (parse-commands content))))))
 
-
-;;;
-;;; Parse an URI without knowing before hand what kind of uri it is.
-;;;
-(defvar *data-source-filename-extensions*
-  '((:csv     . ("csv" "tsv" "txt" "text"))
-    (:copy    . ("copy" "dat"))         ; reject data files are .dat
-    (:sqlite  . ("sqlite" "db" "sqlite3"))
-    (:dbf     . ("db3" "dbf"))
-    (:ixf     . ("ixf"))))
-
-(defun parse-filename-for-source-type (filename)
-  "Given just an existing filename, decide what data source might be found
-   inside..."
-  (multiple-value-bind (abs paths filename no-path-p)
-      (uiop:split-unix-namestring-directory-components
-       (uiop:native-namestring filename))
-    (declare (ignore abs paths no-path-p))
-    (let ((dotted-parts (reverse (sq:split-sequence #\. filename))))
-      (when (<= 2 (length dotted-parts))
-        (destructuring-bind (ext name-or-ext &rest parts)
-            dotted-parts
-          (declare (ignore parts))
-          (if (string-equal "tar" name-or-ext) :archive
-              (loop :for (type . extensions) :in *data-source-filename-extensions*
-                 :when (member ext extensions :test #'string-equal)
-                 :return type)))))))
-
-(defvar *parse-rule-for-source-types*
-  '(:csv     csv-file-source
-    :fixed   fixed-file-source
-    :copy    copy-file-source
-    :dbf     dbf-file-source
-    :ixf     ixf-file-source
-    :sqlite  sqlite-uri
-    :pgsql   pgsql-uri
-    :mysql   mysql-uri
-    :mssql   mssql-uri)
-  "A plist to associate source type and its source parsing rule.")
 
 (defun parse-source-string-for-type (type source-string)
   "use the parse rules as per xxx-source rules"
@@ -187,12 +133,6 @@
 
 (defrule source-uri (or csv-uri
                         fixed-uri
-                        copy-uri
-                        dbf-uri
-                        ixf-uri
-                        sqlite-db-uri
-                        pgsql-uri
-                        mysql-uri
                         mssql-uri
                         filename-or-http-uri))
 
@@ -214,7 +154,6 @@
 (defun parse-target-string (target-string)
   (parse 'pgsql-uri target-string))
 
-
 ;;;
 ;;; Command line accumulative options parser
 ;;;
@@ -310,24 +249,3 @@
         command
       (declare (ignore source))
       (list pg-db-uri nil gucs))))
-
-(defrule pg-db-uri-from-source-table-target (or load-ixf-command)
-  (:lambda (command)
-    (destructuring-bind (source pg-db-uri table-name &key gucs &allow-other-keys)
-        command
-      (declare (ignore source))
-      (list pg-db-uri table-name gucs))))
-
-(defrule pg-db-uri-from-source-and-encoding (or load-dbf-command)
-  (:lambda (command)
-    (destructuring-bind (source encoding pg-db-uri table-name
-                                &key gucs &allow-other-keys)
-        command
-      (declare (ignore source encoding))
-      (list pg-db-uri table-name gucs))))
-
-(defun parse-target-pg-db-uri (command-file)
-  "Partially parse COMMAND-FILE and return its target connection string."
-  (let* ((content (read-file-into-string command-file)))
-
-    (parse 'pg-db-uri-from-command content :junk-allowed t)))

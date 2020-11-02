@@ -1840,7 +1840,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 77,
-        "char": " require_all_configs()\n"
+        "char": " make_lsp_sections()\n"
     },
     {
         "group": "LineNr",
@@ -1854,10 +1854,64 @@ module.exports = [
         "char": "  "
     },
     {
-        "group": "luaComment",
-        "linkedGroup": "Comment",
+        "group": "luaStatement",
+        "linkedGroup": "Statement",
         "row": 78,
-        "char": "-- Configs are lazy-loaded, tickle them to populate the `configs` singleton.\n"
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 78,
+        "char": " make_section("
+    },
+    {
+        "group": "luaNumber",
+        "linkedGroup": "Constant",
+        "row": 78,
+        "char": "0"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 78,
+        "char": ", "
+    },
+    {
+        "group": "luaString",
+        "linkedGroup": "Constant",
+        "row": 78,
+        "char": "&#39;"
+    },
+    {
+        "group": "luaSpecial",
+        "linkedGroup": "Special",
+        "row": 78,
+        "char": "\\n"
+    },
+    {
+        "group": "luaString",
+        "linkedGroup": "Constant",
+        "row": 78,
+        "char": "&#39;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 78,
+        "char": ", sorted_map_table(configs, "
+    },
+    {
+        "group": "luaFunction",
+        "linkedGroup": "Identifier",
+        "row": 78,
+        "char": "function"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 78,
+        "char": "(template_name, template_object)\n"
     },
     {
         "group": "LineNr",
@@ -1868,85 +1922,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 79,
-        "char": "  "
-    },
-    {
-        "group": "luaRepeat",
-        "linkedGroup": "Statement",
-        "row": 79,
-        "char": "for"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 79,
-        "char": " _,v "
-    },
-    {
-        "group": "luaIn",
-        "linkedGroup": "Statement",
-        "row": 79,
-        "char": "in"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 79,
-        "char": " "
-    },
-    {
-        "group": "luaFunc",
-        "linkedGroup": "Identifier",
-        "row": 79,
-        "char": "ipairs"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 79,
-        "char": "(vim.fn.glob("
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 79,
-        "char": "&#39;lua/nvim_lsp/*.lua&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 79,
-        "char": ", "
-    },
-    {
-        "group": "luaNumber",
-        "linkedGroup": "Constant",
-        "row": 79,
-        "char": "1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 79,
-        "char": ", "
-    },
-    {
-        "group": "luaNumber",
-        "linkedGroup": "Constant",
-        "row": 79,
-        "char": "1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 79,
-        "char": ")) "
+        "char": "    "
     },
     {
         "group": "luaStatement",
         "linkedGroup": "Statement",
         "row": 79,
-        "char": "do\n"
+        "char": "local"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 79,
+        "char": " template_def &#61; template_object.document_config\n"
     },
     {
         "group": "LineNr",
@@ -1969,55 +1957,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 80,
-        "char": " module_name &#61; v:gsub("
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 80,
-        "char": "&#39;.*/&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 80,
-        "char": ", "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 80,
-        "char": "&#39;&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 80,
-        "char": "):gsub("
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 80,
-        "char": "&#39;%.lua$&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 80,
-        "char": ", "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 80,
-        "char": "&#39;&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 80,
-        "char": ")\n"
+        "char": " docs &#61; template_def.docs\n"
     },
     {
         "group": "LineNr",
@@ -2028,31 +1968,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 81,
-        "char": "    "
-    },
-    {
-        "group": "luaFunc",
-        "linkedGroup": "Identifier",
-        "row": 81,
-        "char": "require"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 81,
-        "char": "("
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 81,
-        "char": "&#39;nvim_lsp/&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 81,
-        "char": "..module_name)\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -2063,13 +1979,25 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 82,
-        "char": "  "
+        "char": "    "
     },
     {
         "group": "luaStatement",
         "linkedGroup": "Statement",
         "row": 82,
-        "char": "end\n"
+        "char": "local"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 82,
+        "char": " params &#61; "
+    },
+    {
+        "group": "luaTable",
+        "linkedGroup": "Type",
+        "row": 82,
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -2077,10 +2005,10 @@ module.exports = [
         "char": "83"
     },
     {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 83,
-        "char": "end\n"
+        "char": "      template_name &#61; template_name;\n"
     },
     {
         "group": "LineNr",
@@ -2091,7 +2019,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 84,
-        "char": "\n"
+        "char": "      preamble &#61; "
+    },
+    {
+        "group": "luaString",
+        "linkedGroup": "Constant",
+        "row": 84,
+        "char": "&quot;&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 84,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -2099,28 +2039,22 @@ module.exports = [
         "char": "85"
     },
     {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 85,
-        "char": "local"
+        "char": "      body &#61; "
+    },
+    {
+        "group": "luaString",
+        "linkedGroup": "Constant",
+        "row": 85,
+        "char": "&quot;&quot;"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 85,
-        "char": " "
-    },
-    {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
-        "row": 85,
-        "char": "function"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 85,
-        "char": " make_lsp_sections()\n"
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -2131,67 +2065,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 86,
-        "char": "  "
+        "char": "    "
     },
     {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
+        "group": "luaTable",
+        "linkedGroup": "Type",
         "row": 86,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 86,
-        "char": " make_section("
-    },
-    {
-        "group": "luaNumber",
-        "linkedGroup": "Constant",
-        "row": 86,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 86,
-        "char": ", "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 86,
-        "char": "&#39;"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 86,
-        "char": "\\n"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 86,
-        "char": "&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 86,
-        "char": ", sorted_map_table(configs, "
-    },
-    {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
-        "row": 86,
-        "char": "function"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 86,
-        "char": "(template_name, template_object)\n"
+        "char": "}\n"
     },
     {
         "group": "LineNr",
@@ -2202,19 +2082,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 87,
-        "char": "    "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 87,
-        "char": "local"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 87,
-        "char": " template_def &#61; template_object.document_config\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -2225,19 +2093,49 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 88,
-        "char": "    "
+        "char": "    params.body &#61; make_section("
     },
     {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
+        "group": "luaNumber",
+        "linkedGroup": "Constant",
         "row": 88,
-        "char": "local"
+        "char": "2"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 88,
-        "char": " docs &#61; template_def.docs\n"
+        "char": ", "
+    },
+    {
+        "group": "luaString",
+        "linkedGroup": "Constant",
+        "row": 88,
+        "char": "&#39;"
+    },
+    {
+        "group": "luaSpecial",
+        "linkedGroup": "Special",
+        "row": 88,
+        "char": "\\n\\n"
+    },
+    {
+        "group": "luaString",
+        "linkedGroup": "Constant",
+        "row": 88,
+        "char": "&#39;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 88,
+        "char": ", "
+    },
+    {
+        "group": "luaTable",
+        "linkedGroup": "Type",
+        "row": 88,
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -2248,7 +2146,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 89,
-        "char": "\n"
+        "char": "      "
+    },
+    {
+        "group": "luaFunction",
+        "linkedGroup": "Identifier",
+        "row": 89,
+        "char": "function"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 89,
+        "char": "()\n"
     },
     {
         "group": "LineNr",
@@ -2259,25 +2169,61 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 90,
-        "char": "    "
+        "char": "        "
     },
     {
-        "group": "luaStatement",
+        "group": "luaCond",
         "linkedGroup": "Statement",
         "row": 90,
-        "char": "local"
+        "char": "if"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 90,
-        "char": " params &#61; "
+        "char": " "
     },
     {
-        "group": "luaTable",
-        "linkedGroup": "Type",
+        "group": "luaOperator",
+        "linkedGroup": "Statement",
         "row": 90,
-        "char": "{\n"
+        "char": "not"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 90,
+        "char": " template_def.commands "
+    },
+    {
+        "group": "luaCond",
+        "linkedGroup": "Statement",
+        "row": 90,
+        "char": "then"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 90,
+        "char": " "
+    },
+    {
+        "group": "luaStatement",
+        "linkedGroup": "Statement",
+        "row": 90,
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 90,
+        "char": " "
+    },
+    {
+        "group": "luaCond",
+        "linkedGroup": "Statement",
+        "row": 90,
+        "char": "end\n"
     },
     {
         "group": "LineNr",
@@ -2288,7 +2234,61 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 91,
-        "char": "      template_name &#61; template_name;\n"
+        "char": "        "
+    },
+    {
+        "group": "luaStatement",
+        "linkedGroup": "Statement",
+        "row": 91,
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 91,
+        "char": " make_section("
+    },
+    {
+        "group": "luaNumber",
+        "linkedGroup": "Constant",
+        "row": 91,
+        "char": "0"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 91,
+        "char": ", "
+    },
+    {
+        "group": "luaString",
+        "linkedGroup": "Constant",
+        "row": 91,
+        "char": "&#39;"
+    },
+    {
+        "group": "luaSpecial",
+        "linkedGroup": "Special",
+        "row": 91,
+        "char": "\\n"
+    },
+    {
+        "group": "luaString",
+        "linkedGroup": "Constant",
+        "row": 91,
+        "char": "&#39;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 91,
+        "char": ", "
+    },
+    {
+        "group": "luaTable",
+        "linkedGroup": "Type",
+        "row": 91,
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -2299,13 +2299,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 92,
-        "char": "      preamble &#61; "
+        "char": "          "
     },
     {
         "group": "luaString",
         "linkedGroup": "Constant",
         "row": 92,
-        "char": "&quot;&quot;"
+        "char": "&quot;Commands:&quot;"
     },
     {
         "group": "Normal",
@@ -2322,19 +2322,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 93,
-        "char": "      body &#61; "
+        "char": "          sorted_map_table(template_def.commands, "
     },
     {
-        "group": "luaString",
-        "linkedGroup": "Constant",
+        "group": "luaFunction",
+        "linkedGroup": "Identifier",
         "row": 93,
-        "char": "&quot;&quot;"
+        "char": "function"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 93,
-        "char": ";\n"
+        "char": "(name, def)\n"
     },
     {
         "group": "LineNr",
@@ -2345,13 +2345,25 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 94,
-        "char": "    "
+        "char": "            "
     },
     {
-        "group": "luaTable",
-        "linkedGroup": "Type",
+        "group": "luaCond",
+        "linkedGroup": "Statement",
         "row": 94,
-        "char": "}\n"
+        "char": "if"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 94,
+        "char": " def.description "
+    },
+    {
+        "group": "luaCond",
+        "linkedGroup": "Statement",
+        "row": 94,
+        "char": "then\n"
     },
     {
         "group": "LineNr",
@@ -2362,7 +2374,43 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 95,
-        "char": "\n"
+        "char": "              "
+    },
+    {
+        "group": "luaStatement",
+        "linkedGroup": "Statement",
+        "row": 95,
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 95,
+        "char": " "
+    },
+    {
+        "group": "luaFunc",
+        "linkedGroup": "Identifier",
+        "row": 95,
+        "char": "string.format"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 95,
+        "char": "("
+    },
+    {
+        "group": "luaString",
+        "linkedGroup": "Constant",
+        "row": 95,
+        "char": "&quot;- %s: %s&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 95,
+        "char": ", name, def.description)\n"
     },
     {
         "group": "LineNr",
@@ -2373,49 +2421,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 96,
-        "char": "    params.body &#61; make_section("
+        "char": "            "
     },
     {
-        "group": "luaNumber",
-        "linkedGroup": "Constant",
+        "group": "luaCond",
+        "linkedGroup": "Statement",
         "row": 96,
-        "char": "2"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 96,
-        "char": ", "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 96,
-        "char": "&#39;"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 96,
-        "char": "\\n\\n"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 96,
-        "char": "&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 96,
-        "char": ", "
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 96,
-        "char": "{\n"
+        "char": "end\n"
     },
     {
         "group": "LineNr",
@@ -2426,19 +2438,43 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 97,
-        "char": "      "
+        "char": "            "
     },
     {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
+        "group": "luaStatement",
+        "linkedGroup": "Statement",
         "row": 97,
-        "char": "function"
+        "char": "return"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 97,
-        "char": "()\n"
+        "char": " "
+    },
+    {
+        "group": "luaFunc",
+        "linkedGroup": "Identifier",
+        "row": 97,
+        "char": "string.format"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 97,
+        "char": "("
+    },
+    {
+        "group": "luaString",
+        "linkedGroup": "Constant",
+        "row": 97,
+        "char": "&quot;- %s&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 97,
+        "char": ", name)\n"
     },
     {
         "group": "LineNr",
@@ -2449,61 +2485,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 98,
-        "char": "        "
+        "char": "          "
     },
     {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
+        "group": "luaFunction",
+        "linkedGroup": "Identifier",
         "row": 98,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 98,
-        "char": " "
-    },
-    {
-        "group": "luaOperator",
-        "linkedGroup": "Statement",
-        "row": 98,
-        "char": "not"
+        "char": "end"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 98,
-        "char": " template_def.commands "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 98,
-        "char": "then"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 98,
-        "char": " "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 98,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 98,
-        "char": " "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 98,
-        "char": "end\n"
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -2517,58 +2511,16 @@ module.exports = [
         "char": "        "
     },
     {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 99,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 99,
-        "char": " make_section("
-    },
-    {
-        "group": "luaNumber",
-        "linkedGroup": "Constant",
-        "row": 99,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 99,
-        "char": ", "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 99,
-        "char": "&#39;"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 99,
-        "char": "\\n"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 99,
-        "char": "&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 99,
-        "char": ", "
-    },
-    {
         "group": "luaTable",
         "linkedGroup": "Type",
         "row": 99,
-        "char": "{\n"
+        "char": "}"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 99,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -2579,13 +2531,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 100,
-        "char": "          "
+        "char": "      "
     },
     {
-        "group": "luaString",
-        "linkedGroup": "Constant",
+        "group": "luaFunction",
+        "linkedGroup": "Identifier",
         "row": 100,
-        "char": "&quot;Commands:&quot;"
+        "char": "end"
     },
     {
         "group": "Normal",
@@ -2602,7 +2554,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 101,
-        "char": "          sorted_map_table(template_def.commands, "
+        "char": "      "
     },
     {
         "group": "luaFunction",
@@ -2614,7 +2566,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 101,
-        "char": "(name, def)\n"
+        "char": "()\n"
     },
     {
         "group": "LineNr",
@@ -2625,7 +2577,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 102,
-        "char": "            "
+        "char": "        "
     },
     {
         "group": "luaCond",
@@ -2637,13 +2589,49 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 102,
-        "char": " def.description "
+        "char": " "
+    },
+    {
+        "group": "luaOperator",
+        "linkedGroup": "Statement",
+        "row": 102,
+        "char": "not"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 102,
+        "char": " template_def.default_config "
     },
     {
         "group": "luaCond",
         "linkedGroup": "Statement",
         "row": 102,
-        "char": "then\n"
+        "char": "then"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 102,
+        "char": " "
+    },
+    {
+        "group": "luaStatement",
+        "linkedGroup": "Statement",
+        "row": 102,
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 102,
+        "char": " "
+    },
+    {
+        "group": "luaCond",
+        "linkedGroup": "Statement",
+        "row": 102,
+        "char": "end\n"
     },
     {
         "group": "LineNr",
@@ -2654,7 +2642,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 103,
-        "char": "              "
+        "char": "        "
     },
     {
         "group": "luaStatement",
@@ -2666,31 +2654,49 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 103,
-        "char": " "
+        "char": " make_section("
     },
     {
-        "group": "luaFunc",
-        "linkedGroup": "Identifier",
+        "group": "luaNumber",
+        "linkedGroup": "Constant",
         "row": 103,
-        "char": "string.format"
+        "char": "0"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 103,
-        "char": "("
+        "char": ", "
     },
     {
         "group": "luaString",
         "linkedGroup": "Constant",
         "row": 103,
-        "char": "&quot;- %s: %s&quot;"
+        "char": "&#39;"
+    },
+    {
+        "group": "luaSpecial",
+        "linkedGroup": "Special",
+        "row": 103,
+        "char": "\\n"
+    },
+    {
+        "group": "luaString",
+        "linkedGroup": "Constant",
+        "row": 103,
+        "char": "&#39;"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 103,
-        "char": ", name, def.description)\n"
+        "char": ", "
+    },
+    {
+        "group": "luaTable",
+        "linkedGroup": "Type",
+        "row": 103,
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -2701,13 +2707,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 104,
-        "char": "            "
+        "char": "          "
     },
     {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
+        "group": "luaString",
+        "linkedGroup": "Constant",
         "row": 104,
-        "char": "end\n"
+        "char": "&quot;Default Values:&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 104,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -2718,43 +2730,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 105,
-        "char": "            "
+        "char": "          sorted_map_table(template_def.default_config, "
     },
     {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 105,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 105,
-        "char": " "
-    },
-    {
-        "group": "luaFunc",
+        "group": "luaFunction",
         "linkedGroup": "Identifier",
         "row": 105,
-        "char": "string.format"
+        "char": "function"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 105,
-        "char": "("
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 105,
-        "char": "&quot;- %s&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 105,
-        "char": ", name)\n"
+        "char": "(k, v)\n"
     },
     {
         "group": "LineNr",
@@ -2765,19 +2753,67 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 106,
-        "char": "          "
+        "char": "            "
     },
     {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
+        "group": "luaStatement",
+        "linkedGroup": "Statement",
         "row": 106,
-        "char": "end"
+        "char": "local"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 106,
-        "char": ")\n"
+        "char": " description &#61; ((docs "
+    },
+    {
+        "group": "luaOperator",
+        "linkedGroup": "Statement",
+        "row": 106,
+        "char": "or"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 106,
+        "char": " "
+    },
+    {
+        "group": "luaTable",
+        "linkedGroup": "Type",
+        "row": 106,
+        "char": "{}"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 106,
+        "char": ").default_config "
+    },
+    {
+        "group": "luaOperator",
+        "linkedGroup": "Statement",
+        "row": 106,
+        "char": "or"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 106,
+        "char": " "
+    },
+    {
+        "group": "luaTable",
+        "linkedGroup": "Type",
+        "row": 106,
+        "char": "{}"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 106,
+        "char": ")[k]\n"
     },
     {
         "group": "LineNr",
@@ -2788,19 +2824,61 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 107,
-        "char": "        "
+        "char": "            "
     },
     {
-        "group": "luaTable",
-        "linkedGroup": "Type",
+        "group": "luaCond",
+        "linkedGroup": "Statement",
         "row": 107,
-        "char": "}"
+        "char": "if"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 107,
-        "char": ")\n"
+        "char": " description "
+    },
+    {
+        "group": "luaOperator",
+        "linkedGroup": "Statement",
+        "row": 107,
+        "char": "and"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 107,
+        "char": " "
+    },
+    {
+        "group": "luaFunc",
+        "linkedGroup": "Identifier",
+        "row": 107,
+        "char": "type"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 107,
+        "char": "(description) ~&#61; "
+    },
+    {
+        "group": "luaString",
+        "linkedGroup": "Constant",
+        "row": 107,
+        "char": "&#39;string&#39;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 107,
+        "char": " "
+    },
+    {
+        "group": "luaCond",
+        "linkedGroup": "Statement",
+        "row": 107,
+        "char": "then\n"
     },
     {
         "group": "LineNr",
@@ -2811,19 +2889,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 108,
-        "char": "      "
-    },
-    {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
-        "row": 108,
-        "char": "end"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 108,
-        "char": ";\n"
+        "char": "              description &#61; inspect(description)\n"
     },
     {
         "group": "LineNr",
@@ -2834,19 +2900,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 109,
-        "char": "      "
+        "char": "            "
     },
     {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
+        "group": "luaCond",
+        "linkedGroup": "Statement",
         "row": 109,
-        "char": "function"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 109,
-        "char": "()\n"
+        "char": "end\n"
     },
     {
         "group": "LineNr",
@@ -2857,43 +2917,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 110,
-        "char": "        "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 110,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 110,
-        "char": " "
-    },
-    {
-        "group": "luaOperator",
-        "linkedGroup": "Statement",
-        "row": 110,
-        "char": "not"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 110,
-        "char": " template_def.default_config "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 110,
-        "char": "then"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 110,
-        "char": " "
+        "char": "            "
     },
     {
         "group": "luaStatement",
@@ -2905,13 +2929,55 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 110,
-        "char": " "
+        "char": " indent("
     },
     {
-        "group": "luaCond",
+        "group": "luaNumber",
+        "linkedGroup": "Constant",
+        "row": 110,
+        "char": "2"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 110,
+        "char": ", "
+    },
+    {
+        "group": "luaFunc",
+        "linkedGroup": "Identifier",
+        "row": 110,
+        "char": "string.format"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 110,
+        "char": "("
+    },
+    {
+        "group": "luaString",
+        "linkedGroup": "Constant",
+        "row": 110,
+        "char": "&quot;%s &#61; %s&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 110,
+        "char": ", k, description "
+    },
+    {
+        "group": "luaOperator",
         "linkedGroup": "Statement",
         "row": 110,
-        "char": "end\n"
+        "char": "or"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 110,
+        "char": " inspect(v)))\n"
     },
     {
         "group": "LineNr",
@@ -2922,61 +2988,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 111,
-        "char": "        "
+        "char": "          "
     },
     {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
+        "group": "luaFunction",
+        "linkedGroup": "Identifier",
         "row": 111,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 111,
-        "char": " make_section("
-    },
-    {
-        "group": "luaNumber",
-        "linkedGroup": "Constant",
-        "row": 111,
-        "char": "0"
+        "char": "end"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 111,
-        "char": ", "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 111,
-        "char": "&#39;"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 111,
-        "char": "\\n"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 111,
-        "char": "&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 111,
-        "char": ", "
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 111,
-        "char": "{\n"
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -2987,19 +3011,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 112,
-        "char": "          "
+        "char": "        "
     },
     {
-        "group": "luaString",
-        "linkedGroup": "Constant",
+        "group": "luaTable",
+        "linkedGroup": "Type",
         "row": 112,
-        "char": "&quot;Default Values:&quot;"
+        "char": "}"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 112,
-        "char": ";\n"
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -3010,19 +3034,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 113,
-        "char": "          sorted_map_table(template_def.default_config, "
+        "char": "      "
     },
     {
         "group": "luaFunction",
         "linkedGroup": "Identifier",
         "row": 113,
-        "char": "function"
+        "char": "end"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 113,
-        "char": "(k, v)\n"
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -3033,67 +3057,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 114,
-        "char": "            "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 114,
-        "char": "local"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 114,
-        "char": " description &#61; ((docs "
-    },
-    {
-        "group": "luaOperator",
-        "linkedGroup": "Statement",
-        "row": 114,
-        "char": "or"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 114,
-        "char": " "
+        "char": "    "
     },
     {
         "group": "luaTable",
         "linkedGroup": "Type",
         "row": 114,
-        "char": "{}"
+        "char": "}"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 114,
-        "char": ").default_config "
-    },
-    {
-        "group": "luaOperator",
-        "linkedGroup": "Statement",
-        "row": 114,
-        "char": "or"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 114,
-        "char": " "
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 114,
-        "char": "{}"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 114,
-        "char": ")[k]\n"
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -3104,61 +3080,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 115,
-        "char": "            "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 115,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 115,
-        "char": " description "
-    },
-    {
-        "group": "luaOperator",
-        "linkedGroup": "Statement",
-        "row": 115,
-        "char": "and"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 115,
-        "char": " "
-    },
-    {
-        "group": "luaFunc",
-        "linkedGroup": "Identifier",
-        "row": 115,
-        "char": "type"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 115,
-        "char": "(description) ~&#61; "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 115,
-        "char": "&#39;string&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 115,
-        "char": " "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 115,
-        "char": "then\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -3169,7 +3091,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 116,
-        "char": "              description &#61; inspect(description)\n"
+        "char": "    "
+    },
+    {
+        "group": "luaStatement",
+        "linkedGroup": "Statement",
+        "row": 116,
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 116,
+        "char": " template(lsp_section_template, params)\n"
     },
     {
         "group": "LineNr",
@@ -3180,13 +3114,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 117,
-        "char": "            "
+        "char": "  "
     },
     {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
+        "group": "luaFunction",
+        "linkedGroup": "Identifier",
         "row": 117,
-        "char": "end\n"
+        "char": "end"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 117,
+        "char": "))\n"
     },
     {
         "group": "LineNr",
@@ -3194,70 +3134,10 @@ module.exports = [
         "char": "118"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 118,
-        "char": "            "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 118,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 118,
-        "char": " indent("
-    },
-    {
-        "group": "luaNumber",
-        "linkedGroup": "Constant",
-        "row": 118,
-        "char": "2"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 118,
-        "char": ", "
-    },
-    {
-        "group": "luaFunc",
+        "group": "luaFunction",
         "linkedGroup": "Identifier",
         "row": 118,
-        "char": "string.format"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 118,
-        "char": "("
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 118,
-        "char": "&quot;%s &#61; %s&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 118,
-        "char": ", k, description "
-    },
-    {
-        "group": "luaOperator",
-        "linkedGroup": "Statement",
-        "row": 118,
-        "char": "or"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 118,
-        "char": " inspect(v)))\n"
+        "char": "end\n"
     },
     {
         "group": "LineNr",
@@ -3268,19 +3148,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 119,
-        "char": "          "
-    },
-    {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
-        "row": 119,
-        "char": "end"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 119,
-        "char": ")\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -3288,22 +3156,28 @@ module.exports = [
         "char": "120"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "luaStatement",
+        "linkedGroup": "Statement",
         "row": 120,
-        "char": "        "
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 120,
-        "char": "}"
+        "char": "local"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 120,
-        "char": ")\n"
+        "char": " "
+    },
+    {
+        "group": "luaFunction",
+        "linkedGroup": "Identifier",
+        "row": 120,
+        "char": "function"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 120,
+        "char": " make_implemented_servers_list()\n"
     },
     {
         "group": "LineNr",
@@ -3314,19 +3188,67 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 121,
-        "char": "      "
+        "char": "  "
     },
     {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
+        "group": "luaStatement",
+        "linkedGroup": "Statement",
         "row": 121,
-        "char": "end"
+        "char": "return"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 121,
-        "char": ";\n"
+        "char": " make_section("
+    },
+    {
+        "group": "luaNumber",
+        "linkedGroup": "Constant",
+        "row": 121,
+        "char": "0"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 121,
+        "char": ", "
+    },
+    {
+        "group": "luaString",
+        "linkedGroup": "Constant",
+        "row": 121,
+        "char": "&#39;"
+    },
+    {
+        "group": "luaSpecial",
+        "linkedGroup": "Special",
+        "row": 121,
+        "char": "\\n"
+    },
+    {
+        "group": "luaString",
+        "linkedGroup": "Constant",
+        "row": 121,
+        "char": "&#39;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 121,
+        "char": ", sorted_map_table(configs, "
+    },
+    {
+        "group": "luaFunction",
+        "linkedGroup": "Identifier",
+        "row": 121,
+        "char": "function"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 121,
+        "char": "(k)\n"
     },
     {
         "group": "LineNr",
@@ -3338,6 +3260,42 @@ module.exports = [
         "linkedGroup": "",
         "row": 122,
         "char": "    "
+    },
+    {
+        "group": "luaStatement",
+        "linkedGroup": "Statement",
+        "row": 122,
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 122,
+        "char": " template("
+    },
+    {
+        "group": "luaString",
+        "linkedGroup": "Constant",
+        "row": 122,
+        "char": "&quot;- [{{server}}](#{{server}})&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 122,
+        "char": ", "
+    },
+    {
+        "group": "luaTable",
+        "linkedGroup": "Type",
+        "row": 122,
+        "char": "{"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 122,
+        "char": "server&#61;k"
     },
     {
         "group": "luaTable",
@@ -3360,7 +3318,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 123,
-        "char": "\n"
+        "char": "  "
+    },
+    {
+        "group": "luaFunction",
+        "linkedGroup": "Identifier",
+        "row": 123,
+        "char": "end"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 123,
+        "char": "))\n"
     },
     {
         "group": "LineNr",
@@ -3368,28 +3338,10 @@ module.exports = [
         "char": "124"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "luaFunction",
+        "linkedGroup": "Identifier",
         "row": 124,
-        "char": "    "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 124,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 124,
-        "char": " docs "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 124,
-        "char": "then\n"
+        "char": "end\n"
     },
     {
         "group": "LineNr",
@@ -3400,67 +3352,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 125,
-        "char": "      "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 125,
-        "char": "local"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 125,
-        "char": " tempdir &#61; "
-    },
-    {
-        "group": "luaFunc",
-        "linkedGroup": "Identifier",
-        "row": 125,
-        "char": "os.getenv"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 125,
-        "char": "("
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 125,
-        "char": "&quot;DOCGEN_TEMPDIR&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 125,
-        "char": ") "
-    },
-    {
-        "group": "luaOperator",
-        "linkedGroup": "Statement",
-        "row": 125,
-        "char": "or"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 125,
-        "char": " uv.fs_mkdtemp("
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 125,
-        "char": "&quot;/tmp/nvim-lsp.XXXXXX&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 125,
-        "char": ")\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -3468,12 +3360,6 @@ module.exports = [
         "char": "126"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 126,
-        "char": "      "
-    },
-    {
         "group": "luaStatement",
         "linkedGroup": "Statement",
         "row": 126,
@@ -3483,13 +3369,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 126,
-        "char": " preamble_parts &#61; make_parts "
+        "char": " "
     },
     {
-        "group": "luaTable",
-        "linkedGroup": "Type",
+        "group": "luaFunction",
+        "linkedGroup": "Identifier",
         "row": 126,
-        "char": "{\n"
+        "char": "function"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 126,
+        "char": " generate_readme(template_file, params)\n"
     },
     {
         "group": "LineNr",
@@ -3500,19 +3392,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 127,
-        "char": "        "
+        "char": "  vim.validate "
     },
     {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
+        "group": "luaTable",
+        "linkedGroup": "Type",
         "row": 127,
-        "char": "function"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 127,
-        "char": "()\n"
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -3523,49 +3409,37 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 128,
-        "char": "          "
+        "char": "    lsp_server_details &#61; "
     },
     {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
+        "group": "luaTable",
+        "linkedGroup": "Type",
         "row": 128,
-        "char": "if"
+        "char": "{"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 128,
-        "char": " docs.description "
+        "char": "params.lsp_server_details, "
     },
     {
-        "group": "luaOperator",
-        "linkedGroup": "Statement",
-        "row": 128,
-        "char": "and"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 128,
-        "char": " #docs.description &gt; "
-    },
-    {
-        "group": "luaNumber",
+        "group": "luaString",
         "linkedGroup": "Constant",
         "row": 128,
-        "char": "0"
+        "char": "&#39;s&#39;"
+    },
+    {
+        "group": "luaTable",
+        "linkedGroup": "Type",
+        "row": 128,
+        "char": "}"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 128,
-        "char": " "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 128,
-        "char": "then\n"
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -3576,19 +3450,37 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 129,
-        "char": "            "
+        "char": "    implemented_servers_list &#61; "
     },
     {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
+        "group": "luaTable",
+        "linkedGroup": "Type",
         "row": 129,
-        "char": "return"
+        "char": "{"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 129,
-        "char": " docs.description\n"
+        "char": "params.implemented_servers_list, "
+    },
+    {
+        "group": "luaString",
+        "linkedGroup": "Constant",
+        "row": 129,
+        "char": "&#39;s&#39;"
+    },
+    {
+        "group": "luaTable",
+        "linkedGroup": "Type",
+        "row": 129,
+        "char": "}"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 129,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -3599,13 +3491,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 130,
-        "char": "          "
+        "char": "  "
     },
     {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
+        "group": "luaTable",
+        "linkedGroup": "Type",
         "row": 130,
-        "char": "end\n"
+        "char": "}\n"
     },
     {
         "group": "LineNr",
@@ -3616,19 +3508,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 131,
-        "char": "        "
+        "char": "  "
     },
     {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
+        "group": "luaStatement",
+        "linkedGroup": "Statement",
         "row": 131,
-        "char": "end"
+        "char": "local"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 131,
-        "char": ";\n"
+        "char": " input_template &#61; readfile(template_file)\n"
     },
     {
         "group": "LineNr",
@@ -3639,19 +3531,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 132,
-        "char": "        "
+        "char": "  "
     },
     {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
+        "group": "luaStatement",
+        "linkedGroup": "Statement",
         "row": 132,
-        "char": "function"
+        "char": "local"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 132,
-        "char": "()\n"
+        "char": " readme_data &#61; template(input_template, params)\n"
     },
     {
         "group": "LineNr",
@@ -3662,25 +3554,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 133,
-        "char": "          "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 133,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 133,
-        "char": " template_object.install "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 133,
-        "char": "then\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -3691,25 +3565,25 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 134,
-        "char": "            "
+        "char": "  "
     },
     {
         "group": "luaStatement",
         "linkedGroup": "Statement",
         "row": 134,
-        "char": "return"
+        "char": "local"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 134,
-        "char": " "
+        "char": " writer &#61; "
     },
     {
         "group": "luaFunc",
         "linkedGroup": "Identifier",
         "row": 134,
-        "char": "string.format"
+        "char": "io.open"
     },
     {
         "group": "Normal",
@@ -3721,13 +3595,25 @@ module.exports = [
         "group": "luaString",
         "linkedGroup": "Constant",
         "row": 134,
-        "char": "&quot;Can be installed in Nvim with `:LspInstall %s`&quot;"
+        "char": "&quot;README.md&quot;"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 134,
-        "char": ", template_name)\n"
+        "char": ", "
+    },
+    {
+        "group": "luaString",
+        "linkedGroup": "Constant",
+        "row": 134,
+        "char": "&quot;w&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 134,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -3738,13 +3624,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 135,
-        "char": "          "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 135,
-        "char": "end\n"
+        "char": "  writer:write(readme_data)\n"
     },
     {
         "group": "LineNr",
@@ -3755,19 +3635,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 136,
-        "char": "        "
-    },
-    {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
-        "row": 136,
-        "char": "end"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 136,
-        "char": ";\n"
+        "char": "  writer:close()\n"
     },
     {
         "group": "LineNr",
@@ -3775,22 +3643,10 @@ module.exports = [
         "char": "137"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 137,
-        "char": "        "
-    },
-    {
         "group": "luaFunction",
         "linkedGroup": "Identifier",
         "row": 137,
-        "char": "function"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 137,
-        "char": "()\n"
+        "char": "end\n"
     },
     {
         "group": "LineNr",
@@ -3801,31 +3657,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 138,
-        "char": "          "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 138,
-        "char": "local"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 138,
-        "char": " package_json_name &#61; util.path.join(tempdir, template_name.."
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 138,
-        "char": "&#39;.package.json&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 138,
-        "char": ");\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -3836,25 +3668,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 139,
-        "char": "          "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 139,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 139,
-        "char": " docs.package_json "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 139,
-        "char": "then\n"
+        "char": "require_all_configs()\n"
     },
     {
         "group": "LineNr",
@@ -3865,37 +3679,25 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 140,
-        "char": "            "
+        "char": "generate_readme("
     },
     {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
+        "group": "luaString",
+        "linkedGroup": "Constant",
         "row": 140,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 140,
-        "char": " "
-    },
-    {
-        "group": "luaOperator",
-        "linkedGroup": "Statement",
-        "row": 140,
-        "char": "not"
+        "char": "&quot;scripts/README_template.md&quot;"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 140,
-        "char": " util.path.is_file(package_json_name) "
+        "char": ", "
     },
     {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
+        "group": "luaTable",
+        "linkedGroup": "Type",
         "row": 140,
-        "char": "then\n"
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -3906,43 +3708,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 141,
-        "char": "              "
-    },
-    {
-        "group": "luaFunc",
-        "linkedGroup": "Identifier",
-        "row": 141,
-        "char": "os.execute"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 141,
-        "char": "("
-    },
-    {
-        "group": "luaFunc",
-        "linkedGroup": "Identifier",
-        "row": 141,
-        "char": "string.format"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 141,
-        "char": "("
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 141,
-        "char": "&quot;curl -L -o %q %q&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 141,
-        "char": ", package_json_name, docs.package_json))\n"
+        "char": "  implemented_servers_list &#61; make_implemented_servers_list();\n"
     },
     {
         "group": "LineNr",
@@ -3953,13 +3719,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 142,
-        "char": "            "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 142,
-        "char": "end\n"
+        "char": "  lsp_server_details &#61; make_lsp_sections();\n"
     },
     {
         "group": "LineNr",
@@ -3967,3399 +3727,15 @@ module.exports = [
         "char": "143"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "luaTable",
+        "linkedGroup": "Type",
         "row": 143,
-        "char": "            "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 143,
-        "char": "if"
+        "char": "}"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 143,
-        "char": " "
-    },
-    {
-        "group": "luaOperator",
-        "linkedGroup": "Statement",
-        "row": 143,
-        "char": "not"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 143,
-        "char": " util.path.is_file(package_json_name) "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 143,
-        "char": "then\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 144,
-        "char": "144"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 144,
-        "char": "              "
-    },
-    {
-        "group": "luaFunc",
-        "linkedGroup": "Identifier",
-        "row": 144,
-        "char": "print"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 144,
-        "char": "("
-    },
-    {
-        "group": "luaFunc",
-        "linkedGroup": "Identifier",
-        "row": 144,
-        "char": "string.format"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 144,
-        "char": "("
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 144,
-        "char": "&quot;Failed to download package.json for %q at %q&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 144,
-        "char": ", template_name, docs.package_json))\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 145,
-        "char": "145"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 145,
-        "char": "              "
-    },
-    {
-        "group": "luaFunc",
-        "linkedGroup": "Identifier",
-        "row": 145,
-        "char": "os.exit"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 145,
-        "char": "("
-    },
-    {
-        "group": "luaNumber",
-        "linkedGroup": "Constant",
-        "row": 145,
-        "char": "1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 145,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 146,
-        "char": "146"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 146,
-        "char": "              "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 146,
-        "char": "return\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 147,
-        "char": "147"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 147,
-        "char": "            "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 147,
-        "char": "end\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 148,
-        "char": "148"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 148,
-        "char": "            "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 148,
-        "char": "local"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 148,
-        "char": " data &#61; fn.json_decode(readfile(package_json_name))\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 149,
-        "char": "149"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 149,
-        "char": "            "
-    },
-    {
-        "group": "luaComment",
-        "linkedGroup": "Comment",
-        "row": 149,
-        "char": "-- The entire autogenerated section.\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 150,
-        "char": "150"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 150,
-        "char": "            "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 150,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 150,
-        "char": " make_section("
-    },
-    {
-        "group": "luaNumber",
-        "linkedGroup": "Constant",
-        "row": 150,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 150,
-        "char": ", "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 150,
-        "char": "&#39;"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 150,
-        "char": "\\n"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 150,
-        "char": "&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 150,
-        "char": ", "
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 150,
-        "char": "{\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 151,
-        "char": "151"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 151,
-        "char": "              "
-    },
-    {
-        "group": "luaComment",
-        "linkedGroup": "Comment",
-        "row": 151,
-        "char": "-- The default settings section\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 152,
-        "char": "152"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 152,
-        "char": "              "
-    },
-    {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
-        "row": 152,
-        "char": "function"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 152,
-        "char": "()\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 153,
-        "char": "153"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 153,
-        "char": "                "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 153,
-        "char": "local"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 153,
-        "char": " default_settings &#61; (data.contributes "
-    },
-    {
-        "group": "luaOperator",
-        "linkedGroup": "Statement",
-        "row": 153,
-        "char": "or"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 153,
-        "char": " "
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 153,
-        "char": "{}"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 153,
-        "char": ").configuration\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 154,
-        "char": "154"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 154,
-        "char": "                "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 154,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 154,
-        "char": " "
-    },
-    {
-        "group": "luaOperator",
-        "linkedGroup": "Statement",
-        "row": 154,
-        "char": "not"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 154,
-        "char": " default_settings.properties "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 154,
-        "char": "then"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 154,
-        "char": " "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 154,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 154,
-        "char": " "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 154,
-        "char": "end\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 155,
-        "char": "155"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 155,
-        "char": "                "
-    },
-    {
-        "group": "luaComment",
-        "linkedGroup": "Comment",
-        "row": 155,
-        "char": "-- The outer section.\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 156,
-        "char": "156"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 156,
-        "char": "                "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 156,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 156,
-        "char": " make_section("
-    },
-    {
-        "group": "luaNumber",
-        "linkedGroup": "Constant",
-        "row": 156,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 156,
-        "char": ", "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 156,
-        "char": "&#39;"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 156,
-        "char": "\\n"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 156,
-        "char": "&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 156,
-        "char": ", "
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 156,
-        "char": "{\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 157,
-        "char": "157"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 157,
-        "char": "                  "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 157,
-        "char": "&#39;This server accepts configuration via the `settings` key.&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 157,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 158,
-        "char": "158"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 158,
-        "char": "                  "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 158,
-        "char": "&#39;&lt;details&gt;&lt;summary&gt;Available settings:&lt;/summary&gt;&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 158,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 159,
-        "char": "159"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 159,
-        "char": "                  "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 159,
-        "char": "&#39;&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 159,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 160,
-        "char": "160"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 160,
-        "char": "                  "
-    },
-    {
-        "group": "luaComment",
-        "linkedGroup": "Comment",
-        "row": 160,
-        "char": "-- The list of properties.\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 161,
-        "char": "161"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 161,
-        "char": "                  make_section("
-    },
-    {
-        "group": "luaNumber",
-        "linkedGroup": "Constant",
-        "row": 161,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 161,
-        "char": ", "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 161,
-        "char": "&#39;"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 161,
-        "char": "\\n\\n"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 161,
-        "char": "&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 161,
-        "char": ", sorted_map_table(default_settings.properties, "
-    },
-    {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
-        "row": 161,
-        "char": "function"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 161,
-        "char": "(k, v)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 162,
-        "char": "162"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 162,
-        "char": "                    "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 162,
-        "char": "local"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 162,
-        "char": " "
-    },
-    {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
-        "row": 162,
-        "char": "function"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 162,
-        "char": " tick(s) "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 162,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 162,
-        "char": " "
-    },
-    {
-        "group": "luaFunc",
-        "linkedGroup": "Identifier",
-        "row": 162,
-        "char": "string.format"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 162,
-        "char": "("
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 162,
-        "char": "&quot;`%s`&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 162,
-        "char": ", s) "
-    },
-    {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
-        "row": 162,
-        "char": "end\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 163,
-        "char": "163"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 163,
-        "char": "                    "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 163,
-        "char": "local"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 163,
-        "char": " "
-    },
-    {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
-        "row": 163,
-        "char": "function"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 163,
-        "char": " bold(s) "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 163,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 163,
-        "char": " "
-    },
-    {
-        "group": "luaFunc",
-        "linkedGroup": "Identifier",
-        "row": 163,
-        "char": "string.format"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 163,
-        "char": "("
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 163,
-        "char": "&quot;**%s**&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 163,
-        "char": ", s) "
-    },
-    {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
-        "row": 163,
-        "char": "end\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 164,
-        "char": "164"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 164,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 165,
-        "char": "165"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 165,
-        "char": "                    "
-    },
-    {
-        "group": "luaComment",
-        "linkedGroup": "Comment",
-        "row": 165,
-        "char": "-- https://github.github.com/gfm/#backslash-escapes\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 166,
-        "char": "166"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 166,
-        "char": "                    "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 166,
-        "char": "local"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 166,
-        "char": " "
-    },
-    {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
-        "row": 166,
-        "char": "function"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 166,
-        "char": " excape_markdown_punctuations(str)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 167,
-        "char": "167"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 167,
-        "char": "                      "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 167,
-        "char": "local"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 167,
-        "char": " pattern &#61; "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "&quot;"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "("
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "*"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "."
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|?"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|!"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\&quot;\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|#"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "$"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|%"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|&#39;"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|("
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|)"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|,"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|-"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "/"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|:"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|;"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|&lt;"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|&#61;"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|&gt;"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|@"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "["
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\\\\\\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "]"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "^"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|_"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|`"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|{"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "|}"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": ")&quot;\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 168,
-        "char": "168"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 168,
-        "char": "                      "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 168,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 168,
-        "char": " fn.substitute(str, pattern, "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 168,
-        "char": "&quot;"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 168,
-        "char": "\\\\\\\\\\\\"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 168,
-        "char": "0&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 168,
-        "char": ", "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 168,
-        "char": "&quot;g&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 168,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 169,
-        "char": "169"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 169,
-        "char": "                    "
-    },
-    {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
-        "row": 169,
-        "char": "end\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 170,
-        "char": "170"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 170,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 171,
-        "char": "171"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 171,
-        "char": "                    "
-    },
-    {
-        "group": "luaComment",
-        "linkedGroup": "Comment",
-        "row": 171,
-        "char": "-- local function pre(s) return string.format(&quot;&lt;pre&gt;%s&lt;/pre&gt;&quot;, s) end\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 172,
-        "char": "172"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 172,
-        "char": "                    "
-    },
-    {
-        "group": "luaComment",
-        "linkedGroup": "Comment",
-        "row": 172,
-        "char": "-- local function code(s) return string.format(&quot;&lt;code&gt;%s&lt;/code&gt;&quot;, s) end\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 173,
-        "char": "173"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 173,
-        "char": "                    "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 173,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 173,
-        "char": " make_section("
-    },
-    {
-        "group": "luaNumber",
-        "linkedGroup": "Constant",
-        "row": 173,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 173,
-        "char": ", "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 173,
-        "char": "&#39;"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 173,
-        "char": "\\n"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 173,
-        "char": "&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 173,
-        "char": ", "
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 173,
-        "char": "{\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 174,
-        "char": "174"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 174,
-        "char": "                      "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 174,
-        "char": "&quot;- &quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 174,
-        "char": "..make_section("
-    },
-    {
-        "group": "luaNumber",
-        "linkedGroup": "Constant",
-        "row": 174,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 174,
-        "char": ", "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 174,
-        "char": "&#39;: &#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 174,
-        "char": ", "
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 174,
-        "char": "{\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 175,
-        "char": "175"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 175,
-        "char": "                        bold(tick(k));\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 176,
-        "char": "176"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 176,
-        "char": "                        "
-    },
-    {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
-        "row": 176,
-        "char": "function"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 176,
-        "char": "()\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 177,
-        "char": "177"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 177,
-        "char": "                          "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 177,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 177,
-        "char": " v.enum "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 177,
-        "char": "then\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 178,
-        "char": "178"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 178,
-        "char": "                            "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 178,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 178,
-        "char": " tick("
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 178,
-        "char": "&quot;enum &quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 178,
-        "char": "..inspect(v.enum))\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 179,
-        "char": "179"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 179,
-        "char": "                          "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 179,
-        "char": "end\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 180,
-        "char": "180"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 180,
-        "char": "                          "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 180,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 180,
-        "char": " v."
-    },
-    {
-        "group": "luaFunc",
-        "linkedGroup": "Identifier",
-        "row": 180,
-        "char": "type"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 180,
-        "char": " "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 180,
-        "char": "then\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 181,
-        "char": "181"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 181,
-        "char": "                            "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 181,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 181,
-        "char": " tick("
-    },
-    {
-        "group": "luaFunc",
-        "linkedGroup": "Identifier",
-        "row": 181,
-        "char": "table.concat"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 181,
-        "char": "(tbl_flatten"
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 181,
-        "char": "{"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 181,
-        "char": "v."
-    },
-    {
-        "group": "luaFunc",
-        "linkedGroup": "Identifier",
-        "row": 181,
-        "char": "type"
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 181,
-        "char": "}"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 181,
-        "char": ", "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 181,
-        "char": "&#39;|&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 181,
-        "char": "))\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 182,
-        "char": "182"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 182,
-        "char": "                          "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 182,
-        "char": "end\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 183,
-        "char": "183"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 183,
-        "char": "                        "
-    },
-    {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
-        "row": 183,
-        "char": "end"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 183,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 184,
-        "char": "184"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 184,
-        "char": "                      "
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 184,
-        "char": "}"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 184,
-        "char": ");\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 185,
-        "char": "185"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 185,
-        "char": "                      "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 185,
-        "char": "&#39;&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 185,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 186,
-        "char": "186"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 186,
-        "char": "                      make_section("
-    },
-    {
-        "group": "luaNumber",
-        "linkedGroup": "Constant",
-        "row": 186,
-        "char": "2"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 186,
-        "char": ", "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 186,
-        "char": "&#39;"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 186,
-        "char": "\\n\\n"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 186,
-        "char": "&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 186,
-        "char": ", "
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 186,
-        "char": "{\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 187,
-        "char": "187"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 187,
-        "char": "                        "
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 187,
-        "char": "{"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 187,
-        "char": "v.default "
-    },
-    {
-        "group": "luaOperator",
-        "linkedGroup": "Statement",
-        "row": 187,
-        "char": "and"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 187,
-        "char": " "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 187,
-        "char": "&quot;Default: &quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 187,
-        "char": "..tick(inspect(v.default, "
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 187,
-        "char": "{"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 187,
-        "char": "newline&#61;"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 187,
-        "char": "&#39;&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 187,
-        "char": ";indent&#61;"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 187,
-        "char": "&#39;&#39;"
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 187,
-        "char": "}"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 187,
-        "char": "))"
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 187,
-        "char": "}"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 187,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 188,
-        "char": "188"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 188,
-        "char": "                        "
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 188,
-        "char": "{"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 188,
-        "char": "v.items "
-    },
-    {
-        "group": "luaOperator",
-        "linkedGroup": "Statement",
-        "row": 188,
-        "char": "and"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 188,
-        "char": " "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 188,
-        "char": "&quot;Array items: &quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 188,
-        "char": "..tick(inspect(v.items, "
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 188,
-        "char": "{"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 188,
-        "char": "newline&#61;"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 188,
-        "char": "&#39;&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 188,
-        "char": ";indent&#61;"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 188,
-        "char": "&#39;&#39;"
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 188,
-        "char": "}"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 188,
-        "char": "))"
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 188,
-        "char": "}"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 188,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 189,
-        "char": "189"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 189,
-        "char": "                        "
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 189,
-        "char": "{"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 189,
-        "char": "excape_markdown_punctuations(v.description)"
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 189,
-        "char": "}"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 189,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 190,
-        "char": "190"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 190,
-        "char": "                      "
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 190,
-        "char": "}"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 190,
-        "char": ");\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 191,
-        "char": "191"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 191,
-        "char": "                    "
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 191,
-        "char": "}"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 191,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 192,
-        "char": "192"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 192,
-        "char": "                  "
-    },
-    {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
-        "row": 192,
-        "char": "end"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 192,
-        "char": "));\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 193,
-        "char": "193"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 193,
-        "char": "                  "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 193,
-        "char": "&#39;&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 193,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 194,
-        "char": "194"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 194,
-        "char": "                  "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 194,
-        "char": "&#39;&lt;/details&gt;&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 194,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 195,
-        "char": "195"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 195,
-        "char": "                "
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 195,
-        "char": "}"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 195,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 196,
-        "char": "196"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 196,
-        "char": "              "
-    },
-    {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
-        "row": 196,
-        "char": "end"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 196,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 197,
-        "char": "197"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 197,
-        "char": "            "
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 197,
-        "char": "}"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 197,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 198,
-        "char": "198"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 198,
-        "char": "          "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 198,
-        "char": "end\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 199,
-        "char": "199"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 199,
-        "char": "        "
-    },
-    {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
-        "row": 199,
-        "char": "end\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 200,
-        "char": "200"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 200,
-        "char": "      "
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 200,
-        "char": "}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 201,
-        "char": "201"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 201,
-        "char": "      "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 201,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 201,
-        "char": " "
-    },
-    {
-        "group": "luaOperator",
-        "linkedGroup": "Statement",
-        "row": 201,
-        "char": "not"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 201,
-        "char": " "
-    },
-    {
-        "group": "luaFunc",
-        "linkedGroup": "Identifier",
-        "row": 201,
-        "char": "os.getenv"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 201,
-        "char": "("
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 201,
-        "char": "&quot;DOCGEN_TEMPDIR&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 201,
-        "char": ") "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 201,
-        "char": "then\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 202,
-        "char": "202"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 202,
-        "char": "        "
-    },
-    {
-        "group": "luaFunc",
-        "linkedGroup": "Identifier",
-        "row": 202,
-        "char": "os.execute"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 202,
-        "char": "("
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 202,
-        "char": "&quot;rm -rf &quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 202,
-        "char": "..tempdir)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 203,
-        "char": "203"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 203,
-        "char": "      "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 203,
-        "char": "end\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 204,
-        "char": "204"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 204,
-        "char": "      "
-    },
-    {
-        "group": "luaComment",
-        "linkedGroup": "Comment",
-        "row": 204,
-        "char": "-- Insert a newline after the preamble if it exists.\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 205,
-        "char": "205"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 205,
-        "char": "      "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 205,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 205,
-        "char": " #preamble_parts &gt; "
-    },
-    {
-        "group": "luaNumber",
-        "linkedGroup": "Constant",
-        "row": 205,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 205,
-        "char": " "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 205,
-        "char": "then"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 205,
-        "char": " "
-    },
-    {
-        "group": "luaFunc",
-        "linkedGroup": "Identifier",
-        "row": 205,
-        "char": "table.insert"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 205,
-        "char": "(preamble_parts, "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 205,
-        "char": "&#39;&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 205,
-        "char": ") "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 205,
-        "char": "end\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 206,
-        "char": "206"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 206,
-        "char": "      params.preamble &#61; "
-    },
-    {
-        "group": "luaFunc",
-        "linkedGroup": "Identifier",
-        "row": 206,
-        "char": "table.concat"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 206,
-        "char": "(preamble_parts, "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 206,
-        "char": "&#39;"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 206,
-        "char": "\\n"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 206,
-        "char": "&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 206,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 207,
-        "char": "207"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 207,
-        "char": "    "
-    },
-    {
-        "group": "luaCond",
-        "linkedGroup": "Statement",
-        "row": 207,
-        "char": "end\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 208,
-        "char": "208"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 208,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 209,
-        "char": "209"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 209,
-        "char": "    "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 209,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 209,
-        "char": " template(lsp_section_template, params)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 210,
-        "char": "210"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 210,
-        "char": "  "
-    },
-    {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
-        "row": 210,
-        "char": "end"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 210,
-        "char": "))\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 211,
-        "char": "211"
-    },
-    {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
-        "row": 211,
-        "char": "end\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 212,
-        "char": "212"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 212,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 213,
-        "char": "213"
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 213,
-        "char": "local"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 213,
-        "char": " "
-    },
-    {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
-        "row": 213,
-        "char": "function"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 213,
-        "char": " make_implemented_servers_list()\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 214,
-        "char": "214"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 214,
-        "char": "  "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 214,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 214,
-        "char": " make_section("
-    },
-    {
-        "group": "luaNumber",
-        "linkedGroup": "Constant",
-        "row": 214,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 214,
-        "char": ", "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 214,
-        "char": "&#39;"
-    },
-    {
-        "group": "luaSpecial",
-        "linkedGroup": "Special",
-        "row": 214,
-        "char": "\\n"
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 214,
-        "char": "&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 214,
-        "char": ", sorted_map_table(configs, "
-    },
-    {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
-        "row": 214,
-        "char": "function"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 214,
-        "char": "(k)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 215,
-        "char": "215"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 215,
-        "char": "    "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 215,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 215,
-        "char": " template("
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 215,
-        "char": "&quot;- [{{server}}](#{{server}})&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 215,
-        "char": ", "
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 215,
-        "char": "{"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 215,
-        "char": "server&#61;k"
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 215,
-        "char": "}"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 215,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 216,
-        "char": "216"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 216,
-        "char": "  "
-    },
-    {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
-        "row": 216,
-        "char": "end"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 216,
-        "char": "))\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 217,
-        "char": "217"
-    },
-    {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
-        "row": 217,
-        "char": "end\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 218,
-        "char": "218"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 218,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 219,
-        "char": "219"
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 219,
-        "char": "local"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 219,
-        "char": " "
-    },
-    {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
-        "row": 219,
-        "char": "function"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 219,
-        "char": " generate_readme(template_file, params)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 220,
-        "char": "220"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 220,
-        "char": "  vim.validate "
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 220,
-        "char": "{\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 221,
-        "char": "221"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 221,
-        "char": "    lsp_server_details &#61; "
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 221,
-        "char": "{"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 221,
-        "char": "params.lsp_server_details, "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 221,
-        "char": "&#39;s&#39;"
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 221,
-        "char": "}"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 221,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 222,
-        "char": "222"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 222,
-        "char": "    implemented_servers_list &#61; "
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 222,
-        "char": "{"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 222,
-        "char": "params.implemented_servers_list, "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 222,
-        "char": "&#39;s&#39;"
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 222,
-        "char": "}"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 222,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 223,
-        "char": "223"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 223,
-        "char": "  "
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 223,
-        "char": "}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 224,
-        "char": "224"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 224,
-        "char": "  "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 224,
-        "char": "local"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 224,
-        "char": " input_template &#61; readfile(template_file)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 225,
-        "char": "225"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 225,
-        "char": "  "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 225,
-        "char": "local"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 225,
-        "char": " readme_data &#61; template(input_template, params)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 226,
-        "char": "226"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 226,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 227,
-        "char": "227"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 227,
-        "char": "  "
-    },
-    {
-        "group": "luaStatement",
-        "linkedGroup": "Statement",
-        "row": 227,
-        "char": "local"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 227,
-        "char": " writer &#61; "
-    },
-    {
-        "group": "luaFunc",
-        "linkedGroup": "Identifier",
-        "row": 227,
-        "char": "io.open"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 227,
-        "char": "("
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 227,
-        "char": "&quot;README.md&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 227,
-        "char": ", "
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 227,
-        "char": "&quot;w&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 227,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 228,
-        "char": "228"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 228,
-        "char": "  writer:write(readme_data)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 229,
-        "char": "229"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 229,
-        "char": "  writer:close()\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 230,
-        "char": "230"
-    },
-    {
-        "group": "luaFunction",
-        "linkedGroup": "Identifier",
-        "row": 230,
-        "char": "end\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 231,
-        "char": "231"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 231,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 232,
-        "char": "232"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 232,
-        "char": "require_all_configs()\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 233,
-        "char": "233"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 233,
-        "char": "generate_readme("
-    },
-    {
-        "group": "luaString",
-        "linkedGroup": "Constant",
-        "row": 233,
-        "char": "&quot;scripts/README_template.md&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 233,
-        "char": ", "
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 233,
-        "char": "{\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 234,
-        "char": "234"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 234,
-        "char": "  implemented_servers_list &#61; make_implemented_servers_list();\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 235,
-        "char": "235"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 235,
-        "char": "  lsp_server_details &#61; make_lsp_sections();\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 236,
-        "char": "236"
-    },
-    {
-        "group": "luaTable",
-        "linkedGroup": "Type",
-        "row": 236,
-        "char": "}"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 236,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 237,
-        "char": "237"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 237,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 238,
-        "char": "238"
-    },
-    {
-        "group": "luaComment",
-        "linkedGroup": "Comment",
-        "row": 238,
-        "char": "-- vim:et ts&#61;2 sw&#61;2\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 239,
-        "char": "239"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 239,
-        "char": ""
+        "char": ")"
     }
 ]

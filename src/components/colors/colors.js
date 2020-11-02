@@ -36,11 +36,11 @@ function ColorsTemplate({ state, Store }) {
 }
 
 function ColorsView({ state, Store, props }) {
-  const defaultKeywords = getDefaultKeywords(state.theme.refs);
+  const defaultKeywords = getDefaultKeywords(state.theme.groupKeywords);
 
   const languageKeywords = getLanguageKeywords(
-    state.theme.languages,
-    state.theme.refs,
+    state.theme.groups,
+    state.theme.groupKeywords,
   );
 
   const uniqueColors = getUniqueColors(

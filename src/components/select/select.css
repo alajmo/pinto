@@ -44,7 +44,7 @@
     position: absolute;
     white-space: nowrap;
     min-width: 10rem;
-    max-height: 500px;
+    /* max-height: 500px; */
     overflow: auto;
     z-index: 9999;
     display: none;

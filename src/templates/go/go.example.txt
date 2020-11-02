@@ -1,340 +1,172 @@
-package main
+package btree
 
 import (
-	"bytes"
 	"fmt"
-	"net/url"
-	"os"
-	"strconv"
+	"io"
+	"sort"
 	"strings"
-	"time"
-
-	"github.com/cortexproject/cortex/pkg/util"
-	"github.com/cortexproject/cortex/pkg/util/flagext"
-	"github.com/docker/docker/daemon/logger"
-	"github.com/docker/docker/daemon/logger/templates"
-	"github.com/prometheus/common/model"
-
-	"github.com/grafana/loki/pkg/helpers"
-	"github.com/grafana/loki/pkg/logentry/stages"
-	"github.com/grafana/loki/pkg/promtail/client"
-	"github.com/grafana/loki/pkg/promtail/targets"
+	"sync"
 )
 
+// Item represents a single object in the tree.
+type Item interface {
+	// Less tests whether the current item is less than the given argument.
+	//
+	// This must provide a strict weak ordering.
+	// If !a.Less(b) && !b.Less(a), we treat this to mean a == b (i.e. we can only
+	// hold one of either a or b in the tree).
+	Less(than Item) bool
+}
+
 const (
-	driverName = "loki"
-
-	cfgExternalLabelsKey = "loki-external-labels"
-	cfgURLKey            = "loki-url"
-	cfgTLSCAFileKey      = "loki-tls-ca-file"
-	cfgTLSCertFileKey    = "loki-tls-cert-file"
-	cfgTLSKeyFileKey     = "loki-tls-key-file"
-	cfgTLSServerNameKey  = "loki-tls-server-name"
-	cfgTLSInsecure       = "loki-tls-insecure-skip-verify"
-	cfgProxyURLKey       = "loki-proxy-url"
-	cfgTimeoutKey        = "loki-timeout"
-	cfgBatchWaitKey      = "loki-batch-wait"
-	cfgBatchSizeKey      = "loki-batch-size"
-	cfgMinBackoffKey     = "loki-min-backoff"
-	cfgMaxBackoffKey     = "loki-max-backoff"
-	cfgMaxRetriesKey     = "loki-retries"
-	cfgPipelineStagesKey = "loki-pipeline-stage-file"
-	cfgTenantIDKey       = "loki-tenant-id"
-	cfgNofile            = "no-file"
-	cfgKeepFile          = "keep-file"
-
-	swarmServiceLabelKey = "com.docker.swarm.service.name"
-	swarmStackLabelKey   = "com.docker.stack.namespace"
-
-	swarmServiceLabelName = "swarm_service"
-	swarmStackLabelName   = "swarm_stack"
-
-	composeServiceLabelKey = "com.docker.compose.service"
-	composeProjectLabelKey = "com.docker.compose.project"
-
-	composeServiceLabelName = "compose_service"
-	composeProjectLabelName = "compose_project"
-
-	defaultExternalLabels = "container_name={{.Name}}"
-	defaultHostLabelName  = model.LabelName("host")
+	DefaultFreeListSize = 32
 )
 
 var (
-	defaultClientConfig = client.Config{
-		BatchWait: 1 * time.Second,
-		BatchSize: 100 * 1024,
-		BackoffConfig: util.BackoffConfig{
-			MinBackoff: 100 * time.Millisecond,
-			MaxBackoff: 10 * time.Second,
-			MaxRetries: 10,
-		},
-		Timeout: 10 * time.Second,
-	}
+	nilItems    = make(items, 16)
+	nilChildren = make(children, 16)
 )
 
-type config struct {
-	labels       model.LabelSet
-	clientConfig client.Config
-	pipeline     PipelineConfig
+func (f *FreeList) newNode() (n *node) {
+	f.mu.Lock()
+	index := len(f.freelist) - 1
+	if index < 0 {
+		f.mu.Unlock()
+		return new(node)
+	}
+	n = f.freelist[index]
+	f.freelist[index] = nil
+	f.freelist = f.freelist[:index]
+	f.mu.Unlock()
+	return
 }
 
-type PipelineConfig struct {
-	PipelineStages stages.PipelineStages `yaml:"pipeline_stages,omitempty"`
+// NewWithFreeList creates a new B-Tree that uses the given node free list.
+func NewWithFreeList(degree int, f *FreeList) *BTree {
+	if degree <= 1 {
+		panic("bad degree")
+	}
+	return &BTree{
+		degree: degree,
+		cow:    &copyOnWriteContext{freelist: f},
+	}
 }
 
-func validateDriverOpt(loggerInfo logger.Info) error {
-	config := loggerInfo.Config
-
-	for opt := range config {
-		switch opt {
-		case cfgURLKey:
-		case cfgExternalLabelsKey:
-		case cfgTLSCAFileKey:
-		case cfgTLSCertFileKey:
-		case cfgTLSKeyFileKey:
-		case cfgTLSServerNameKey:
-		case cfgTLSInsecure:
-		case cfgTimeoutKey:
-		case cfgProxyURLKey:
-		case cfgBatchWaitKey:
-		case cfgBatchSizeKey:
-		case cfgMinBackoffKey:
-		case cfgMaxBackoffKey:
-		case cfgMaxRetriesKey:
-		case cfgPipelineStagesKey:
-		case cfgTenantIDKey:
-		case cfgNofile:
-		case cfgKeepFile:
-		case "labels":
-		case "env":
-		case "env-regex":
-		case "max-size":
-		case "max-file":
-		default:
-			return fmt.Errorf("%s: wrong log-opt: '%s' - %s", driverName, opt, loggerInfo.ContainerID)
-		}
-	}
-	_, ok := config[cfgURLKey]
-	if !ok {
-		return fmt.Errorf("%s: %s is required in the config", driverName, cfgURLKey)
-	}
-
-	return nil
+// node is an internal node in a tree.
+//
+// It must at all times maintain the invariant that either
+//   * len(children) == 0, len(items) unconstrained
+//   * len(children) == len(items) + 1
+type node struct {
+	items    items
+	children children
+	cow      *copyOnWriteContext
 }
 
-func parseConfig(logCtx logger.Info) (*config, error) {
-	if err := validateDriverOpt(logCtx); err != nil {
-		return nil, err
+func (n *node) mutableFor(cow *copyOnWriteContext) *node {
+	if n.cow == cow {
+		return n
 	}
-
-	clientConfig := defaultClientConfig
-	labels := model.LabelSet{}
-
-	// parse URL
-	rawURL, ok := logCtx.Config[cfgURLKey]
-	if !ok {
-		return nil, fmt.Errorf("%s: option %s is required", driverName, cfgURLKey)
+	out := cow.newNode()
+	if cap(out.items) >= len(n.items) {
+		out.items = out.items[:len(n.items)]
+	} else {
+		out.items = make(items, len(n.items), cap(n.items))
 	}
-	url, err := url.Parse(rawURL)
-	if err != nil {
-		return nil, fmt.Errorf("%s: option %s is invalid %s", driverName, cfgURLKey, err)
+	copy(out.items, n.items)
+	// Copy children
+	if cap(out.children) >= len(n.children) {
+		out.children = out.children[:len(n.children)]
+	} else {
+		out.children = make(children, len(n.children), cap(n.children))
 	}
-	clientConfig.URL = flagext.URLValue{URL: url}
-
-	// parse timeout
-	if err := parseDuration(cfgTimeoutKey, logCtx, func(d time.Duration) { clientConfig.Timeout = d }); err != nil {
-		return nil, err
-	}
-
-	// parse batch wait and batch size
-	if err := parseDuration(cfgBatchWaitKey, logCtx, func(d time.Duration) { clientConfig.BatchWait = d }); err != nil {
-		return nil, err
-	}
-	if err := parseInt(cfgBatchSizeKey, logCtx, func(i int) { clientConfig.BatchSize = i }); err != nil {
-		return nil, err
-	}
-
-	// parse backoff
-	if err := parseDuration(cfgMinBackoffKey, logCtx, func(d time.Duration) { clientConfig.BackoffConfig.MinBackoff = d }); err != nil {
-		return nil, err
-	}
-	if err := parseDuration(cfgMaxBackoffKey, logCtx, func(d time.Duration) { clientConfig.BackoffConfig.MaxBackoff = d }); err != nil {
-		return nil, err
-	}
-	if err := parseInt(cfgMaxRetriesKey, logCtx, func(i int) { clientConfig.BackoffConfig.MaxRetries = i }); err != nil {
-		return nil, err
-	}
-
-	// parse http & tls config
-	if tlsCAFile, ok := logCtx.Config[cfgTLSCAFileKey]; ok {
-		clientConfig.Client.TLSConfig.CAFile = tlsCAFile
-	}
-	if tlsCertFile, ok := logCtx.Config[cfgTLSCertFileKey]; ok {
-		clientConfig.Client.TLSConfig.CertFile = tlsCertFile
-	}
-	if tlsCertFile, ok := logCtx.Config[cfgTLSCertFileKey]; ok {
-		clientConfig.Client.TLSConfig.CertFile = tlsCertFile
-	}
-	if tlsKeyFile, ok := logCtx.Config[cfgTLSKeyFileKey]; ok {
-		clientConfig.Client.TLSConfig.KeyFile = tlsKeyFile
-	}
-	if tlsServerName, ok := logCtx.Config[cfgTLSServerNameKey]; ok {
-		clientConfig.Client.TLSConfig.ServerName = tlsServerName
-	}
-	if tlsInsecureSkipRaw, ok := logCtx.Config[cfgTLSInsecure]; ok {
-		tlsInsecureSkip, err := strconv.ParseBool(tlsInsecureSkipRaw)
-		if err != nil {
-			return nil, fmt.Errorf("%s: invalid external labels: %s", driverName, tlsInsecureSkipRaw)
-		}
-		clientConfig.Client.TLSConfig.InsecureSkipVerify = tlsInsecureSkip
-	}
-	if tlsProxyURL, ok := logCtx.Config[cfgProxyURLKey]; ok {
-		proxyURL, err := url.Parse(tlsProxyURL)
-		if err != nil {
-			return nil, fmt.Errorf("%s: option %s is invalid %s", driverName, cfgProxyURLKey, err)
-		}
-		clientConfig.Client.ProxyURL.URL = proxyURL
-	}
-
-	// parse tenant id
-	tenantID, ok := logCtx.Config[cfgTenantIDKey]
-	if ok && tenantID != "" {
-		clientConfig.TenantID = tenantID
-	}
-
-	// parse external labels
-	extlbs, ok := logCtx.Config[cfgExternalLabelsKey]
-	if !ok {
-		extlbs = defaultExternalLabels
-	}
-	lvs := strings.Split(extlbs, ",")
-	for _, lv := range lvs {
-		lvparts := strings.Split(lv, "=")
-		if len(lvparts) != 2 {
-			return nil, fmt.Errorf("%s: invalid external labels: %s", driverName, extlbs)
-		}
-		labelName := model.LabelName(lvparts[0])
-		if !labelName.IsValid() {
-			return nil, fmt.Errorf("%s: invalid external label name: %s", driverName, labelName)
-		}
-
-		// expand the value using docker template {{.Name}}.{{.ImageName}}
-		value, err := expandLabelValue(logCtx, lvparts[1])
-		if err != nil {
-			return nil, fmt.Errorf("%s: could not expand label value: %s err : %s", driverName, lvparts[1], err)
-		}
-		labelValue := model.LabelValue(value)
-		if !labelValue.IsValid() {
-			return nil, fmt.Errorf("%s: invalid external label value: %s", driverName, value)
-		}
-		labels[labelName] = labelValue
-	}
-
-	// other labels coming from docker labels or env selected by user labels, labels-regex, env, env-regex config.
-	attrs, err := logCtx.ExtraAttributes(nil)
-	if err != nil {
-		return nil, err
-	}
-
-	// parse docker swarms labels and adds them automatically to attrs
-	swarmService := logCtx.ContainerLabels[swarmServiceLabelKey]
-	if swarmService != "" {
-		attrs[swarmServiceLabelName] = swarmService
-	}
-	swarmStack := logCtx.ContainerLabels[swarmStackLabelKey]
-	if swarmStack != "" {
-		attrs[swarmStackLabelName] = swarmStack
-	}
-
-	// parse docker compose labels and adds them automatically to attrs
-	composeService := logCtx.ContainerLabels[composeServiceLabelKey]
-	if composeService != "" {
-		attrs[composeServiceLabelName] = composeService
-	}
-	composeProject := logCtx.ContainerLabels[composeProjectLabelKey]
-	if composeProject != "" {
-		attrs[composeProjectLabelName] = composeProject
-	}
-
-	for key, value := range attrs {
-		labelName := model.LabelName(key)
-		if !labelName.IsValid() {
-			return nil, fmt.Errorf("%s: invalid label name from attribute: %s", driverName, key)
-		}
-		labelValue := model.LabelValue(value)
-		if !labelValue.IsValid() {
-			return nil, fmt.Errorf("%s: invalid label value from attribute: %s", driverName, value)
-		}
-		labels[labelName] = labelValue
-	}
-
-	// adds host label and filename
-	host, err := os.Hostname()
-	if err == nil {
-		labels[defaultHostLabelName] = model.LabelValue(host)
-	}
-	labels[targets.FilenameLabel] = model.LabelValue(logCtx.LogPath)
-
-	// parse pipeline stages
-	var pipeline PipelineConfig
-	pipelineFile, ok := logCtx.Config[cfgPipelineStagesKey]
-	if ok {
-		if err := helpers.LoadConfig(pipelineFile, &pipeline); err != nil {
-			return nil, fmt.Errorf("%s: error loading config file %s: %s", driverName, pipelineFile, err)
-		}
-	}
-
-	return &config{
-		labels:       labels,
-		clientConfig: clientConfig,
-		pipeline:     pipeline,
-	}, nil
+	copy(out.children, n.children)
+	return out
 }
 
-func expandLabelValue(info logger.Info, defaultTemplate string) (string, error) {
-	tmpl, err := templates.NewParse("label_value", defaultTemplate)
-	if err != nil {
-		return "", err
-	}
-	buf := new(bytes.Buffer)
-	if err := tmpl.Execute(buf, &info); err != nil {
-		return "", err
-	}
-
-	return buf.String(), nil
+func (n *node) mutableChild(i int) *node {
+	c := n.children[i].mutableFor(n.cow)
+	n.children[i] = c
+	return c
 }
 
-func parseDuration(key string, logCtx logger.Info, set func(d time.Duration)) error {
-	if raw, ok := logCtx.Config[key]; ok {
-		val, err := time.ParseDuration(raw)
-		if err != nil {
-			return fmt.Errorf("%s: invalid option %s format: %s", driverName, key, raw)
+// remove removes an item from the subtree rooted at this node.
+func (n *node) remove(item Item, minItems int, typ toRemove) Item {
+	var i int
+	var found bool
+	switch typ {
+	case removeMax:
+		if len(n.children) == 0 {
+			return n.items.pop()
 		}
-		set(val)
-	}
-	return nil
-}
-
-func parseInt(key string, logCtx logger.Info, set func(i int)) error {
-	if raw, ok := logCtx.Config[key]; ok {
-		val, err := strconv.Atoi(raw)
-		if err != nil {
-			return fmt.Errorf("%s: invalid option %s format: %s", driverName, key, raw)
+		i = len(n.items)
+	case removeMin:
+		if len(n.children) == 0 {
+			return n.items.removeAt(0)
 		}
-		set(val)
+		i = 0
+	case removeItem:
+		i, found = n.items.find(item)
+		if len(n.children) == 0 {
+			if found {
+				return n.items.removeAt(i)
+			}
+			return nil
+		}
+	default:
+		panic("invalid type")
 	}
-	return nil
+	// If we get to here, we have children.
+	if len(n.children[i].items) <= minItems {
+		return n.growChildAndRemove(i, item, minItems, typ)
+	}
+	child := n.mutableChild(i)
+	// Either we had enough items to begin with, or we've done some
+	// merging/stealing, because we've got enough now and we're ready to return
+	// stuff.
+	if found {
+		// The item exists at index 'i', and the child we've selected can give us a
+		// predecessor, since if we've gotten here it's got > minItems items in it.
+		out := n.items[i]
+		// We use our special-case 'remove' call with typ=maxItem to pull the
+		// predecessor of item i (the rightmost leaf of our immediate left child)
+		// and set it into where we pulled the item from.
+		n.items[i] = child.remove(nil, minItems, removeMax)
+		return out
+	}
+	// Final recursive call.  Once we're here, we know that the item isn't in this
+	// node and that the child is big enough to remove from.
+	return child.remove(item, minItems, typ)
 }
 
-func parseBoolean(key string, logCtx logger.Info, defaultValue bool) (bool, error) {
-	value, ok := logCtx.Config[key]
-	if !ok || value == "" {
-		return defaultValue, nil
+// Used for testing/debugging purposes.
+func (n *node) print(w io.Writer, level int) {
+	fmt.Fprintf(w, "%sNODE:%v\n", strings.Repeat("  ", level), n.items)
+	for _, c := range n.children {
+		c.print(w, level+1)
 	}
-	b, err := strconv.ParseBool(value)
-	if err != nil {
-		return false, err
-	}
-	return b, nil
 }
 
+// BTree is an implementation of a B-Tree.
+//
+// BTree stores Item instances in an ordered structure, allowing easy insertion,
+// removal, and iteration.
+//
+// Write operations are not safe for concurrent mutation by multiple
+// goroutines, but Read operations are.
+type BTree struct {
+	degree int
+	length int
+	root   *node
+	cow    *copyOnWriteContext
+}
+
+// Has returns true if the given key is in the tree.
+func (t *BTree) Has(key Item) bool {
+	return t.Get(key) != nil
+}
+
+// Len returns the number of items currently in the tree.
+func (t *BTree) Len() int {
+	return t.length
+}

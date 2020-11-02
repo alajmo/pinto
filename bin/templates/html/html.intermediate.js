@@ -182,61 +182,7 @@ module.exports = [
         "group": "htmlTagName",
         "linkedGroup": "Statement",
         "row": 7,
-        "char": "meta"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 7,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 7,
-        "char": "http-equiv"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 7,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 7,
-        "char": "&quot;X-UA-Compatible&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 7,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 7,
-        "char": "content"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 7,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 7,
-        "char": "&quot;IE&#61;edge,chrome&#61;1&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 7,
-        "char": " /&gt;\n"
+        "char": "meta\n"
     },
     {
         "group": "LineNr",
@@ -244,10 +190,28 @@ module.exports = [
         "char": "8"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
         "row": 8,
-        "char": "\n"
+        "char": "      "
+    },
+    {
+        "group": "htmlArg",
+        "linkedGroup": "Type",
+        "row": 8,
+        "char": "name"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 8,
+        "char": "&#61;"
+    },
+    {
+        "group": "htmlString",
+        "linkedGroup": "Constant",
+        "row": 8,
+        "char": "&quot;viewport&quot;\n"
     },
     {
         "group": "LineNr",
@@ -255,52 +219,10 @@ module.exports = [
         "char": "9"
     },
     {
-        "group": "htmlHead",
-        "linkedGroup": "PreProc",
-        "row": 9,
-        "char": "    "
-    },
-    {
         "group": "htmlTag",
         "linkedGroup": "Identifier",
         "row": 9,
-        "char": "&lt;"
-    },
-    {
-        "group": "htmlTagName",
-        "linkedGroup": "Statement",
-        "row": 9,
-        "char": "meta"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 9,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 9,
-        "char": "http-equiv"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 9,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 9,
-        "char": "&quot;cleartype&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 9,
-        "char": " "
+        "char": "      "
     },
     {
         "group": "htmlArg",
@@ -318,13 +240,7 @@ module.exports = [
         "group": "htmlString",
         "linkedGroup": "Constant",
         "row": 9,
-        "char": "&quot;on&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 9,
-        "char": " /&gt;\n"
+        "char": "&quot;width&#61;device-width, initial-scale&#61;1, maximum-scale&#61;1&quot;\n"
     },
     {
         "group": "LineNr",
@@ -332,22 +248,10 @@ module.exports = [
         "char": "10"
     },
     {
-        "group": "htmlHead",
-        "linkedGroup": "PreProc",
-        "row": 10,
-        "char": "    "
-    },
-    {
         "group": "htmlTag",
         "linkedGroup": "Identifier",
         "row": 10,
-        "char": "&lt;"
-    },
-    {
-        "group": "htmlTagName",
-        "linkedGroup": "Statement",
-        "row": 10,
-        "char": "meta\n"
+        "char": "    /&gt;\n"
     },
     {
         "group": "LineNr",
@@ -355,28 +259,10 @@ module.exports = [
         "char": "11"
     },
     {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 11,
-        "char": "      "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 11,
-        "char": "name"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 11,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 11,
-        "char": "&quot;viewport&quot;\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -384,10 +270,52 @@ module.exports = [
         "char": "12"
     },
     {
+        "group": "htmlHead",
+        "linkedGroup": "PreProc",
+        "row": 12,
+        "char": "    "
+    },
+    {
         "group": "htmlTag",
         "linkedGroup": "Identifier",
         "row": 12,
-        "char": "      "
+        "char": "&lt;"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 12,
+        "char": "meta"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 12,
+        "char": " "
+    },
+    {
+        "group": "htmlArg",
+        "linkedGroup": "Type",
+        "row": 12,
+        "char": "name"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 12,
+        "char": "&#61;"
+    },
+    {
+        "group": "htmlString",
+        "linkedGroup": "Constant",
+        "row": 12,
+        "char": "&quot;description&quot;"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 12,
+        "char": " "
     },
     {
         "group": "htmlArg",
@@ -405,7 +333,13 @@ module.exports = [
         "group": "htmlString",
         "linkedGroup": "Constant",
         "row": 12,
-        "char": "&quot;width&#61;device-width, initial-scale&#61;1, maximum-scale&#61;1&quot;\n"
+        "char": "&quot;&quot;"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 12,
+        "char": " /&gt;\n"
     },
     {
         "group": "LineNr",
@@ -413,10 +347,100 @@ module.exports = [
         "char": "13"
     },
     {
+        "group": "htmlHead",
+        "linkedGroup": "PreProc",
+        "row": 13,
+        "char": "    "
+    },
+    {
         "group": "htmlTag",
         "linkedGroup": "Identifier",
         "row": 13,
-        "char": "    /&gt;\n"
+        "char": "&lt;"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 13,
+        "char": "link"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 13,
+        "char": " "
+    },
+    {
+        "group": "htmlArg",
+        "linkedGroup": "Type",
+        "row": 13,
+        "char": "rel"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 13,
+        "char": "&#61;"
+    },
+    {
+        "group": "htmlString",
+        "linkedGroup": "Constant",
+        "row": 13,
+        "char": "&quot;apple-touch-icon&quot;"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 13,
+        "char": " "
+    },
+    {
+        "group": "htmlArg",
+        "linkedGroup": "Type",
+        "row": 13,
+        "char": "sizes"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 13,
+        "char": "&#61;"
+    },
+    {
+        "group": "htmlString",
+        "linkedGroup": "Constant",
+        "row": 13,
+        "char": "&quot;76x76&quot;"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 13,
+        "char": " "
+    },
+    {
+        "group": "htmlArg",
+        "linkedGroup": "Type",
+        "row": 13,
+        "char": "href"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 13,
+        "char": "&#61;"
+    },
+    {
+        "group": "htmlString",
+        "linkedGroup": "Constant",
+        "row": 13,
+        "char": "&quot;&quot;"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 13,
+        "char": " /&gt;\n"
     },
     {
         "group": "LineNr",
@@ -424,10 +448,76 @@ module.exports = [
         "char": "14"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "htmlHead",
+        "linkedGroup": "PreProc",
         "row": 14,
-        "char": "\n"
+        "char": "    "
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 14,
+        "char": "&lt;"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 14,
+        "char": "link"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 14,
+        "char": " "
+    },
+    {
+        "group": "htmlArg",
+        "linkedGroup": "Type",
+        "row": 14,
+        "char": "rel"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 14,
+        "char": "&#61;"
+    },
+    {
+        "group": "htmlString",
+        "linkedGroup": "Constant",
+        "row": 14,
+        "char": "&quot;apple-touch-startup-image&quot;"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 14,
+        "char": " "
+    },
+    {
+        "group": "htmlArg",
+        "linkedGroup": "Type",
+        "row": 14,
+        "char": "href"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 14,
+        "char": "&#61;"
+    },
+    {
+        "group": "htmlString",
+        "linkedGroup": "Constant",
+        "row": 14,
+        "char": "&quot;&quot;"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 14,
+        "char": " /&gt;\n"
     },
     {
         "group": "LineNr",
@@ -450,61 +540,37 @@ module.exports = [
         "group": "htmlTagName",
         "linkedGroup": "Statement",
         "row": 15,
-        "char": "meta"
+        "char": "title"
     },
     {
         "group": "htmlTag",
         "linkedGroup": "Identifier",
         "row": 15,
-        "char": " "
+        "char": "&gt;"
     },
     {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
+        "group": "htmlTitle",
+        "linkedGroup": "Title",
         "row": 15,
-        "char": "name"
+        "char": "Test"
     },
     {
-        "group": "htmlTag",
+        "group": "htmlEndTag",
         "linkedGroup": "Identifier",
         "row": 15,
-        "char": "&#61;"
+        "char": "&lt;/"
     },
     {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
         "row": 15,
-        "char": "&quot;description&quot;"
+        "char": "title"
     },
     {
-        "group": "htmlTag",
+        "group": "htmlEndTag",
         "linkedGroup": "Identifier",
         "row": 15,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 15,
-        "char": "content"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 15,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 15,
-        "char": "&quot;&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 15,
-        "char": " /&gt;\n"
+        "char": "&gt;\n"
     },
     {
         "group": "LineNr",
@@ -527,7 +593,7 @@ module.exports = [
         "group": "htmlTagName",
         "linkedGroup": "Statement",
         "row": 16,
-        "char": "meta"
+        "char": "link"
     },
     {
         "group": "htmlTag",
@@ -539,7 +605,7 @@ module.exports = [
         "group": "htmlArg",
         "linkedGroup": "Type",
         "row": 16,
-        "char": "name"
+        "char": "rel"
     },
     {
         "group": "htmlTag",
@@ -551,7 +617,7 @@ module.exports = [
         "group": "htmlString",
         "linkedGroup": "Constant",
         "row": 16,
-        "char": "&quot;author&quot;"
+        "char": "&quot;stylesheet&quot;"
     },
     {
         "group": "htmlTag",
@@ -563,7 +629,7 @@ module.exports = [
         "group": "htmlArg",
         "linkedGroup": "Type",
         "row": 16,
-        "char": "content"
+        "char": "href"
     },
     {
         "group": "htmlTag",
@@ -575,7 +641,7 @@ module.exports = [
         "group": "htmlString",
         "linkedGroup": "Constant",
         "row": 16,
-        "char": "&quot;&quot;"
+        "char": "&quot;style.css&quot;"
     },
     {
         "group": "htmlTag",
@@ -615,61 +681,13 @@ module.exports = [
         "group": "htmlTagName",
         "linkedGroup": "Statement",
         "row": 18,
-        "char": "link"
+        "char": "noscript"
     },
     {
         "group": "htmlTag",
         "linkedGroup": "Identifier",
         "row": 18,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 18,
-        "char": "rel"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 18,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 18,
-        "char": "&quot;manifest&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 18,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 18,
-        "char": "href"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 18,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 18,
-        "char": "&quot;site.webmanifest&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 18,
-        "char": " /&gt;\n"
+        "char": "&gt;\n"
     },
     {
         "group": "LineNr",
@@ -680,73 +698,7 @@ module.exports = [
         "group": "htmlHead",
         "linkedGroup": "PreProc",
         "row": 19,
-        "char": "    "
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 19,
-        "char": "&lt;"
-    },
-    {
-        "group": "htmlTagName",
-        "linkedGroup": "Statement",
-        "row": 19,
-        "char": "link"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 19,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 19,
-        "char": "rel"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 19,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 19,
-        "char": "&quot;apple-touch-icon&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 19,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 19,
-        "char": "href"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 19,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 19,
-        "char": "&quot;icon.png&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 19,
-        "char": " /&gt;\n"
+        "char": "      This application requires javascript.\n"
     },
     {
         "group": "LineNr",
@@ -754,10 +706,28 @@ module.exports = [
         "char": "20"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "htmlHead",
+        "linkedGroup": "PreProc",
         "row": 20,
-        "char": "\n"
+        "char": "    "
+    },
+    {
+        "group": "htmlEndTag",
+        "linkedGroup": "Identifier",
+        "row": 20,
+        "char": "&lt;/"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 20,
+        "char": "noscript"
+    },
+    {
+        "group": "htmlEndTag",
+        "linkedGroup": "Identifier",
+        "row": 20,
+        "char": "&gt;\n"
     },
     {
         "group": "LineNr",
@@ -768,97 +738,25 @@ module.exports = [
         "group": "htmlHead",
         "linkedGroup": "PreProc",
         "row": 21,
-        "char": "    "
+        "char": "  "
     },
     {
-        "group": "htmlTag",
+        "group": "htmlEndTag",
         "linkedGroup": "Identifier",
         "row": 21,
-        "char": "&lt;"
+        "char": "&lt;/"
     },
     {
         "group": "htmlTagName",
         "linkedGroup": "Statement",
         "row": 21,
-        "char": "link"
+        "char": "head"
     },
     {
-        "group": "htmlTag",
+        "group": "htmlEndTag",
         "linkedGroup": "Identifier",
         "row": 21,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 21,
-        "char": "rel"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 21,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 21,
-        "char": "&quot;shortcut icon&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 21,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 21,
-        "char": "href"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 21,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 21,
-        "char": "&quot;&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 21,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 21,
-        "char": "type"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 21,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 21,
-        "char": "&quot;image/x-icon&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 21,
-        "char": " /&gt;\n"
+        "char": "&gt;\n"
     },
     {
         "group": "LineNr",
@@ -877,10 +775,10 @@ module.exports = [
         "char": "23"
     },
     {
-        "group": "htmlHead",
-        "linkedGroup": "PreProc",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 23,
-        "char": "    "
+        "char": "  "
     },
     {
         "group": "htmlTag",
@@ -892,85 +790,13 @@ module.exports = [
         "group": "htmlTagName",
         "linkedGroup": "Statement",
         "row": 23,
-        "char": "link"
+        "char": "body"
     },
     {
         "group": "htmlTag",
         "linkedGroup": "Identifier",
         "row": 23,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 23,
-        "char": "rel"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 23,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 23,
-        "char": "&quot;shortcut icon&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 23,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 23,
-        "char": "sizes"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 23,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 23,
-        "char": "&quot;192x192&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 23,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 23,
-        "char": "href"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 23,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 23,
-        "char": "&quot;android-icon.png&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 23,
-        "char": " /&gt;\n"
+        "char": "&gt;\n"
     },
     {
         "group": "LineNr",
@@ -981,7 +807,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 24,
-        "char": "\n"
+        "char": "    "
+    },
+    {
+        "group": "htmlComment",
+        "linkedGroup": "Comment",
+        "row": 24,
+        "char": "&lt;!"
+    },
+    {
+        "group": "htmlCommentPart",
+        "linkedGroup": "Comment",
+        "row": 24,
+        "char": "--[if lt IE 11]&gt;\n"
     },
     {
         "group": "LineNr",
@@ -989,76 +827,10 @@ module.exports = [
         "char": "25"
     },
     {
-        "group": "htmlHead",
-        "linkedGroup": "PreProc",
+        "group": "htmlCommentPart",
+        "linkedGroup": "Comment",
         "row": 25,
-        "char": "    "
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 25,
-        "char": "&lt;"
-    },
-    {
-        "group": "htmlTagName",
-        "linkedGroup": "Statement",
-        "row": 25,
-        "char": "link"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 25,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 25,
-        "char": "rel"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 25,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 25,
-        "char": "&quot;apple-touch-icon&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 25,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 25,
-        "char": "href"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 25,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 25,
-        "char": "&quot;&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 25,
-        "char": " /&gt;\n"
+        "char": "      &lt;p&gt;You are using an &lt;strong&gt;outdated&lt;/strong&gt; browser.&lt;/p&gt;\n"
     },
     {
         "group": "LineNr",
@@ -1066,100 +838,16 @@ module.exports = [
         "char": "26"
     },
     {
-        "group": "htmlHead",
-        "linkedGroup": "PreProc",
+        "group": "htmlCommentPart",
+        "linkedGroup": "Comment",
         "row": 26,
-        "char": "    "
+        "char": "    &lt;![endif]--"
     },
     {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
+        "group": "htmlComment",
+        "linkedGroup": "Comment",
         "row": 26,
-        "char": "&lt;"
-    },
-    {
-        "group": "htmlTagName",
-        "linkedGroup": "Statement",
-        "row": 26,
-        "char": "link"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 26,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 26,
-        "char": "rel"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 26,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 26,
-        "char": "&quot;apple-touch-icon&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 26,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 26,
-        "char": "sizes"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 26,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 26,
-        "char": "&quot;76x76&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 26,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 26,
-        "char": "href"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 26,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 26,
-        "char": "&quot;&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 26,
-        "char": " /&gt;\n"
+        "char": "&gt;\n"
     },
     {
         "group": "LineNr",
@@ -1167,100 +855,10 @@ module.exports = [
         "char": "27"
     },
     {
-        "group": "htmlHead",
-        "linkedGroup": "PreProc",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 27,
-        "char": "    "
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 27,
-        "char": "&lt;"
-    },
-    {
-        "group": "htmlTagName",
-        "linkedGroup": "Statement",
-        "row": 27,
-        "char": "link"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 27,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 27,
-        "char": "rel"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 27,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 27,
-        "char": "&quot;apple-touch-icon&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 27,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 27,
-        "char": "sizes"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 27,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 27,
-        "char": "&quot;120x120&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 27,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 27,
-        "char": "href"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 27,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 27,
-        "char": "&quot;&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 27,
-        "char": " /&gt;\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1268,8 +866,8 @@ module.exports = [
         "char": "28"
     },
     {
-        "group": "htmlHead",
-        "linkedGroup": "PreProc",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 28,
         "char": "    "
     },
@@ -1283,85 +881,13 @@ module.exports = [
         "group": "htmlTagName",
         "linkedGroup": "Statement",
         "row": 28,
-        "char": "link"
+        "char": "main"
     },
     {
         "group": "htmlTag",
         "linkedGroup": "Identifier",
         "row": 28,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 28,
-        "char": "rel"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 28,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 28,
-        "char": "&quot;apple-touch-icon&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 28,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 28,
-        "char": "sizes"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 28,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 28,
-        "char": "&quot;152x152&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 28,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 28,
-        "char": "href"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 28,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 28,
-        "char": "&quot;&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 28,
-        "char": " /&gt;\n"
+        "char": "&gt;\n"
     },
     {
         "group": "LineNr",
@@ -1372,7 +898,49 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 29,
-        "char": "\n"
+        "char": "      "
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 29,
+        "char": "&lt;"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 29,
+        "char": "h1"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 29,
+        "char": "&gt;"
+    },
+    {
+        "group": "htmlH1",
+        "linkedGroup": "Title",
+        "row": 29,
+        "char": "Header 1"
+    },
+    {
+        "group": "htmlEndTag",
+        "linkedGroup": "Identifier",
+        "row": 29,
+        "char": "&lt;/"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 29,
+        "char": "h1"
+    },
+    {
+        "group": "htmlEndTag",
+        "linkedGroup": "Identifier",
+        "row": 29,
+        "char": "&gt;\n"
     },
     {
         "group": "LineNr",
@@ -1380,10 +948,10 @@ module.exports = [
         "char": "30"
     },
     {
-        "group": "htmlHead",
-        "linkedGroup": "PreProc",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 30,
-        "char": "    "
+        "char": "      "
     },
     {
         "group": "htmlTag",
@@ -1395,61 +963,37 @@ module.exports = [
         "group": "htmlTagName",
         "linkedGroup": "Statement",
         "row": 30,
-        "char": "link"
+        "char": "h2"
     },
     {
         "group": "htmlTag",
         "linkedGroup": "Identifier",
         "row": 30,
-        "char": " "
+        "char": "&gt;"
     },
     {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
+        "group": "htmlH2",
+        "linkedGroup": "Title",
         "row": 30,
-        "char": "rel"
+        "char": "Header 2"
     },
     {
-        "group": "htmlTag",
+        "group": "htmlEndTag",
         "linkedGroup": "Identifier",
         "row": 30,
-        "char": "&#61;"
+        "char": "&lt;/"
     },
     {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
         "row": 30,
-        "char": "&quot;apple-touch-startup-image&quot;"
+        "char": "h2"
     },
     {
-        "group": "htmlTag",
+        "group": "htmlEndTag",
         "linkedGroup": "Identifier",
         "row": 30,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 30,
-        "char": "href"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 30,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 30,
-        "char": "&quot;&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 30,
-        "char": " /&gt;\n"
+        "char": "&gt;\n"
     },
     {
         "group": "LineNr",
@@ -1460,7 +1004,49 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 31,
-        "char": "\n"
+        "char": "      "
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 31,
+        "char": "&lt;"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 31,
+        "char": "h3"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 31,
+        "char": "&gt;"
+    },
+    {
+        "group": "htmlH3",
+        "linkedGroup": "Title",
+        "row": 31,
+        "char": "Header 3"
+    },
+    {
+        "group": "htmlEndTag",
+        "linkedGroup": "Identifier",
+        "row": 31,
+        "char": "&lt;/"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 31,
+        "char": "h3"
+    },
+    {
+        "group": "htmlEndTag",
+        "linkedGroup": "Identifier",
+        "row": 31,
+        "char": "&gt;\n"
     },
     {
         "group": "LineNr",
@@ -1468,10 +1054,10 @@ module.exports = [
         "char": "32"
     },
     {
-        "group": "htmlHead",
-        "linkedGroup": "PreProc",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 32,
-        "char": "    "
+        "char": "      "
     },
     {
         "group": "htmlTag",
@@ -1483,13 +1069,19 @@ module.exports = [
         "group": "htmlTagName",
         "linkedGroup": "Statement",
         "row": 32,
-        "char": "title"
+        "char": "h4"
     },
     {
         "group": "htmlTag",
         "linkedGroup": "Identifier",
         "row": 32,
         "char": "&gt;"
+    },
+    {
+        "group": "htmlH4",
+        "linkedGroup": "Title",
+        "row": 32,
+        "char": "Header 4"
     },
     {
         "group": "htmlEndTag",
@@ -1501,7 +1093,7 @@ module.exports = [
         "group": "htmlTagName",
         "linkedGroup": "Statement",
         "row": 32,
-        "char": "title"
+        "char": "h4"
     },
     {
         "group": "htmlEndTag",
@@ -1518,7 +1110,49 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 33,
-        "char": "\n"
+        "char": "      "
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 33,
+        "char": "&lt;"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 33,
+        "char": "h5"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 33,
+        "char": "&gt;"
+    },
+    {
+        "group": "htmlH5",
+        "linkedGroup": "Title",
+        "row": 33,
+        "char": "Header 5"
+    },
+    {
+        "group": "htmlEndTag",
+        "linkedGroup": "Identifier",
+        "row": 33,
+        "char": "&lt;/"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 33,
+        "char": "h5"
+    },
+    {
+        "group": "htmlEndTag",
+        "linkedGroup": "Identifier",
+        "row": 33,
+        "char": "&gt;\n"
     },
     {
         "group": "LineNr",
@@ -1526,10 +1160,10 @@ module.exports = [
         "char": "34"
     },
     {
-        "group": "htmlHead",
-        "linkedGroup": "PreProc",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 34,
-        "char": "    "
+        "char": "      "
     },
     {
         "group": "htmlTag",
@@ -1541,61 +1175,37 @@ module.exports = [
         "group": "htmlTagName",
         "linkedGroup": "Statement",
         "row": 34,
-        "char": "link"
+        "char": "h6"
     },
     {
         "group": "htmlTag",
         "linkedGroup": "Identifier",
         "row": 34,
-        "char": " "
+        "char": "&gt;"
     },
     {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
+        "group": "htmlH6",
+        "linkedGroup": "Title",
         "row": 34,
-        "char": "rel"
+        "char": "Header 6"
     },
     {
-        "group": "htmlTag",
+        "group": "htmlEndTag",
         "linkedGroup": "Identifier",
         "row": 34,
-        "char": "&#61;"
+        "char": "&lt;/"
     },
     {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
         "row": 34,
-        "char": "&quot;stylesheet&quot;"
+        "char": "h6"
     },
     {
-        "group": "htmlTag",
+        "group": "htmlEndTag",
         "linkedGroup": "Identifier",
         "row": 34,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 34,
-        "char": "href"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 34,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 34,
-        "char": "&quot;style.css&quot;"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 34,
-        "char": " /&gt;\n"
+        "char": "&gt;\n"
     },
     {
         "group": "LineNr",
@@ -1614,10 +1224,10 @@ module.exports = [
         "char": "36"
     },
     {
-        "group": "htmlHead",
-        "linkedGroup": "PreProc",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 36,
-        "char": "    "
+        "char": "      "
     },
     {
         "group": "htmlTag",
@@ -1629,7 +1239,7 @@ module.exports = [
         "group": "htmlTagName",
         "linkedGroup": "Statement",
         "row": 36,
-        "char": "noscript"
+        "char": "p"
     },
     {
         "group": "htmlTag",
@@ -1643,10 +1253,10 @@ module.exports = [
         "char": "37"
     },
     {
-        "group": "htmlHead",
-        "linkedGroup": "PreProc",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 37,
-        "char": "      This application requires javascript.\n"
+        "char": "        Paragraph\n"
     },
     {
         "group": "LineNr",
@@ -1654,10 +1264,10 @@ module.exports = [
         "char": "38"
     },
     {
-        "group": "htmlHead",
-        "linkedGroup": "PreProc",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 38,
-        "char": "    "
+        "char": "      "
     },
     {
         "group": "htmlEndTag",
@@ -1669,7 +1279,7 @@ module.exports = [
         "group": "htmlTagName",
         "linkedGroup": "Statement",
         "row": 38,
-        "char": "noscript"
+        "char": "p"
     },
     {
         "group": "htmlEndTag",
@@ -1683,28 +1293,10 @@ module.exports = [
         "char": "39"
     },
     {
-        "group": "htmlHead",
-        "linkedGroup": "PreProc",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 39,
-        "char": "  "
-    },
-    {
-        "group": "htmlEndTag",
-        "linkedGroup": "Identifier",
-        "row": 39,
-        "char": "&lt;/"
-    },
-    {
-        "group": "htmlTagName",
-        "linkedGroup": "Statement",
-        "row": 39,
-        "char": "head"
-    },
-    {
-        "group": "htmlEndTag",
-        "linkedGroup": "Identifier",
-        "row": 39,
-        "char": "&gt;\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1715,7 +1307,73 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 40,
-        "char": "\n"
+        "char": "      "
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 40,
+        "char": "&lt;"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 40,
+        "char": "a"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 40,
+        "char": " "
+    },
+    {
+        "group": "htmlArg",
+        "linkedGroup": "Type",
+        "row": 40,
+        "char": "href"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 40,
+        "char": "&#61;"
+    },
+    {
+        "group": "htmlString",
+        "linkedGroup": "Constant",
+        "row": 40,
+        "char": "&quot;https://pintovim.dev&quot;"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 40,
+        "char": "&gt;"
+    },
+    {
+        "group": "htmlLink",
+        "linkedGroup": "Underlined",
+        "row": 40,
+        "char": "https://pintovim.dev"
+    },
+    {
+        "group": "htmlEndTag",
+        "linkedGroup": "Identifier",
+        "row": 40,
+        "char": "&lt;/"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 40,
+        "char": "a"
+    },
+    {
+        "group": "htmlEndTag",
+        "linkedGroup": "Identifier",
+        "row": 40,
+        "char": "&gt;\n"
     },
     {
         "group": "LineNr",
@@ -1726,25 +1384,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 41,
-        "char": "  "
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 41,
-        "char": "&lt;"
-    },
-    {
-        "group": "htmlTagName",
-        "linkedGroup": "Statement",
-        "row": 41,
-        "char": "body"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 41,
-        "char": "&gt;\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1755,19 +1395,49 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 42,
-        "char": "    "
+        "char": "      "
     },
     {
-        "group": "htmlComment",
-        "linkedGroup": "Comment",
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
         "row": 42,
-        "char": "&lt;!"
+        "char": "&lt;"
     },
     {
-        "group": "htmlCommentPart",
-        "linkedGroup": "Comment",
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
         "row": 42,
-        "char": "--[if lt IE 11]&gt;\n"
+        "char": "h2"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 42,
+        "char": "&gt;"
+    },
+    {
+        "group": "htmlH2",
+        "linkedGroup": "Title",
+        "row": 42,
+        "char": "An Unordered HTML List"
+    },
+    {
+        "group": "htmlEndTag",
+        "linkedGroup": "Identifier",
+        "row": 42,
+        "char": "&lt;/"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 42,
+        "char": "h2"
+    },
+    {
+        "group": "htmlEndTag",
+        "linkedGroup": "Identifier",
+        "row": 42,
+        "char": "&gt;\n"
     },
     {
         "group": "LineNr",
@@ -1775,10 +1445,10 @@ module.exports = [
         "char": "43"
     },
     {
-        "group": "htmlCommentPart",
-        "linkedGroup": "Comment",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 43,
-        "char": "      &lt;p&gt;\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1786,10 +1456,28 @@ module.exports = [
         "char": "44"
     },
     {
-        "group": "htmlCommentPart",
-        "linkedGroup": "Comment",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 44,
-        "char": "        You are using an &lt;strong&gt;outdated&lt;/strong&gt; browser. Please\n"
+        "char": "      "
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 44,
+        "char": "&lt;"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 44,
+        "char": "ul"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 44,
+        "char": "&gt;\n"
     },
     {
         "group": "LineNr",
@@ -1797,10 +1485,52 @@ module.exports = [
         "char": "45"
     },
     {
-        "group": "htmlCommentPart",
-        "linkedGroup": "Comment",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 45,
-        "char": "        &lt;a href&#61;&quot;https://browsehappy.com/&quot;&gt;upgrade your browser&lt;/a&gt; to improve\n"
+        "char": "        "
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 45,
+        "char": "&lt;"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 45,
+        "char": "li"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 45,
+        "char": "&gt;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 45,
+        "char": "Coffee"
+    },
+    {
+        "group": "htmlEndTag",
+        "linkedGroup": "Identifier",
+        "row": 45,
+        "char": "&lt;/"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 45,
+        "char": "li"
+    },
+    {
+        "group": "htmlEndTag",
+        "linkedGroup": "Identifier",
+        "row": 45,
+        "char": "&gt;\n"
     },
     {
         "group": "LineNr",
@@ -1808,10 +1538,52 @@ module.exports = [
         "char": "46"
     },
     {
-        "group": "htmlCommentPart",
-        "linkedGroup": "Comment",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 46,
-        "char": "        your experience and security.\n"
+        "char": "        "
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 46,
+        "char": "&lt;"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 46,
+        "char": "li"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 46,
+        "char": "&gt;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 46,
+        "char": "Tea"
+    },
+    {
+        "group": "htmlEndTag",
+        "linkedGroup": "Identifier",
+        "row": 46,
+        "char": "&lt;/"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 46,
+        "char": "li"
+    },
+    {
+        "group": "htmlEndTag",
+        "linkedGroup": "Identifier",
+        "row": 46,
+        "char": "&gt;\n"
     },
     {
         "group": "LineNr",
@@ -1819,10 +1591,52 @@ module.exports = [
         "char": "47"
     },
     {
-        "group": "htmlCommentPart",
-        "linkedGroup": "Comment",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 47,
-        "char": "      &lt;/p&gt;\n"
+        "char": "        "
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 47,
+        "char": "&lt;"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 47,
+        "char": "li"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 47,
+        "char": "&gt;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 47,
+        "char": "Milk"
+    },
+    {
+        "group": "htmlEndTag",
+        "linkedGroup": "Identifier",
+        "row": 47,
+        "char": "&lt;/"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 47,
+        "char": "li"
+    },
+    {
+        "group": "htmlEndTag",
+        "linkedGroup": "Identifier",
+        "row": 47,
+        "char": "&gt;\n"
     },
     {
         "group": "LineNr",
@@ -1830,14 +1644,26 @@ module.exports = [
         "char": "48"
     },
     {
-        "group": "htmlCommentPart",
-        "linkedGroup": "Comment",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 48,
-        "char": "    &lt;![endif]--"
+        "char": "      "
     },
     {
-        "group": "htmlComment",
-        "linkedGroup": "Comment",
+        "group": "htmlEndTag",
+        "linkedGroup": "Identifier",
+        "row": 48,
+        "char": "&lt;/"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 48,
+        "char": "ul"
+    },
+    {
+        "group": "htmlEndTag",
+        "linkedGroup": "Identifier",
         "row": 48,
         "char": "&gt;\n"
     },
@@ -1861,7 +1687,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 50,
-        "char": "    "
+        "char": "      "
     },
     {
         "group": "htmlTag",
@@ -1873,10 +1699,34 @@ module.exports = [
         "group": "htmlTagName",
         "linkedGroup": "Statement",
         "row": 50,
-        "char": "main"
+        "char": "h2"
     },
     {
         "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 50,
+        "char": "&gt;"
+    },
+    {
+        "group": "htmlH2",
+        "linkedGroup": "Title",
+        "row": 50,
+        "char": "An Ordered HTML List"
+    },
+    {
+        "group": "htmlEndTag",
+        "linkedGroup": "Identifier",
+        "row": 50,
+        "char": "&lt;/"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 50,
+        "char": "h2"
+    },
+    {
+        "group": "htmlEndTag",
         "linkedGroup": "Identifier",
         "row": 50,
         "char": "&gt;\n"
@@ -1890,49 +1740,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 51,
-        "char": "      "
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 51,
-        "char": "&lt;"
-    },
-    {
-        "group": "htmlTagName",
-        "linkedGroup": "Statement",
-        "row": 51,
-        "char": "h1"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 51,
-        "char": "&gt;"
-    },
-    {
-        "group": "htmlH1",
-        "linkedGroup": "Title",
-        "row": 51,
-        "char": "Hello World"
-    },
-    {
-        "group": "htmlEndTag",
-        "linkedGroup": "Identifier",
-        "row": 51,
-        "char": "&lt;/"
-    },
-    {
-        "group": "htmlTagName",
-        "linkedGroup": "Statement",
-        "row": 51,
-        "char": "h1"
-    },
-    {
-        "group": "htmlEndTag",
-        "linkedGroup": "Identifier",
-        "row": 51,
-        "char": "&gt;\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1955,7 +1763,7 @@ module.exports = [
         "group": "htmlTagName",
         "linkedGroup": "Statement",
         "row": 52,
-        "char": "p"
+        "char": "ol"
     },
     {
         "group": "htmlTag",
@@ -1972,7 +1780,49 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 53,
-        "char": "        main content\n"
+        "char": "        "
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 53,
+        "char": "&lt;"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 53,
+        "char": "li"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 53,
+        "char": "&gt;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 53,
+        "char": "Coffee"
+    },
+    {
+        "group": "htmlEndTag",
+        "linkedGroup": "Identifier",
+        "row": 53,
+        "char": "&lt;/"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 53,
+        "char": "li"
+    },
+    {
+        "group": "htmlEndTag",
+        "linkedGroup": "Identifier",
+        "row": 53,
+        "char": "&gt;\n"
     },
     {
         "group": "LineNr",
@@ -1983,7 +1833,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 54,
-        "char": "      "
+        "char": "        "
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 54,
+        "char": "&lt;"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 54,
+        "char": "li"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 54,
+        "char": "&gt;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 54,
+        "char": "Tea"
     },
     {
         "group": "htmlEndTag",
@@ -1995,7 +1869,7 @@ module.exports = [
         "group": "htmlTagName",
         "linkedGroup": "Statement",
         "row": 54,
-        "char": "p"
+        "char": "li"
     },
     {
         "group": "htmlEndTag",
@@ -2012,7 +1886,49 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 55,
-        "char": "\n"
+        "char": "        "
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 55,
+        "char": "&lt;"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 55,
+        "char": "li"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 55,
+        "char": "&gt;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 55,
+        "char": "Milk"
+    },
+    {
+        "group": "htmlEndTag",
+        "linkedGroup": "Identifier",
+        "row": 55,
+        "char": "&lt;/"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 55,
+        "char": "li"
+    },
+    {
+        "group": "htmlEndTag",
+        "linkedGroup": "Identifier",
+        "row": 55,
+        "char": "&gt;\n"
     },
     {
         "group": "LineNr",
@@ -2026,30 +1942,6 @@ module.exports = [
         "char": "      "
     },
     {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 56,
-        "char": "&lt;"
-    },
-    {
-        "group": "htmlTagName",
-        "linkedGroup": "Statement",
-        "row": 56,
-        "char": "h2"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 56,
-        "char": "&gt;"
-    },
-    {
-        "group": "htmlH2",
-        "linkedGroup": "Title",
-        "row": 56,
-        "char": "Header 2"
-    },
-    {
         "group": "htmlEndTag",
         "linkedGroup": "Identifier",
         "row": 56,
@@ -2059,7 +1951,7 @@ module.exports = [
         "group": "htmlTagName",
         "linkedGroup": "Statement",
         "row": 56,
-        "char": "h2"
+        "char": "ol"
     },
     {
         "group": "htmlEndTag",
@@ -2076,31 +1968,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 57,
-        "char": "      "
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 57,
-        "char": "&lt;"
-    },
-    {
-        "group": "htmlTagName",
-        "linkedGroup": "Statement",
-        "row": 57,
-        "char": "h3"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 57,
-        "char": "&gt;"
-    },
-    {
-        "group": "htmlH3",
-        "linkedGroup": "Title",
-        "row": 57,
-        "char": "Header 3"
+        "char": "    "
     },
     {
         "group": "htmlEndTag",
@@ -2112,7 +1980,7 @@ module.exports = [
         "group": "htmlTagName",
         "linkedGroup": "Statement",
         "row": 57,
-        "char": "h3"
+        "char": "main"
     },
     {
         "group": "htmlEndTag",
@@ -2129,49 +1997,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 58,
-        "char": "      "
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 58,
-        "char": "&lt;"
-    },
-    {
-        "group": "htmlTagName",
-        "linkedGroup": "Statement",
-        "row": 58,
-        "char": "h4"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 58,
-        "char": "&gt;"
-    },
-    {
-        "group": "htmlH4",
-        "linkedGroup": "Title",
-        "row": 58,
-        "char": "Header 4"
-    },
-    {
-        "group": "htmlEndTag",
-        "linkedGroup": "Identifier",
-        "row": 58,
-        "char": "&lt;/"
-    },
-    {
-        "group": "htmlTagName",
-        "linkedGroup": "Statement",
-        "row": 58,
-        "char": "h4"
-    },
-    {
-        "group": "htmlEndTag",
-        "linkedGroup": "Identifier",
-        "row": 58,
-        "char": "&gt;\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -2182,7 +2008,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 59,
-        "char": "      "
+        "char": "    "
     },
     {
         "group": "htmlTag",
@@ -2194,7 +2020,49 @@ module.exports = [
         "group": "htmlTagName",
         "linkedGroup": "Statement",
         "row": 59,
-        "char": "h5"
+        "char": "button"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 59,
+        "char": " "
+    },
+    {
+        "group": "htmlEvent",
+        "linkedGroup": "Special",
+        "row": 59,
+        "char": "onclick&#61;&quot;"
+    },
+    {
+        "group": "htmlEventDQ",
+        "linkedGroup": "Special",
+        "row": 59,
+        "char": "console.log"
+    },
+    {
+        "group": "javaScriptParens",
+        "linkedGroup": "javaScriptParens",
+        "row": 59,
+        "char": "("
+    },
+    {
+        "group": "javaScriptNumber",
+        "linkedGroup": "javaScriptValue",
+        "row": 59,
+        "char": "1"
+    },
+    {
+        "group": "javaScriptParens",
+        "linkedGroup": "javaScriptParens",
+        "row": 59,
+        "char": ")"
+    },
+    {
+        "group": "htmlEvent",
+        "linkedGroup": "Special",
+        "row": 59,
+        "char": "&quot;"
     },
     {
         "group": "htmlTag",
@@ -2203,10 +2071,10 @@ module.exports = [
         "char": "&gt;"
     },
     {
-        "group": "htmlH5",
-        "linkedGroup": "Title",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 59,
-        "char": "Header 5"
+        "char": "Click me"
     },
     {
         "group": "htmlEndTag",
@@ -2218,7 +2086,7 @@ module.exports = [
         "group": "htmlTagName",
         "linkedGroup": "Statement",
         "row": 59,
-        "char": "h5"
+        "char": "button"
     },
     {
         "group": "htmlEndTag",
@@ -2235,49 +2103,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 60,
-        "char": "      "
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 60,
-        "char": "&lt;"
-    },
-    {
-        "group": "htmlTagName",
-        "linkedGroup": "Statement",
-        "row": 60,
-        "char": "h6"
-    },
-    {
-        "group": "htmlTag",
-        "linkedGroup": "Identifier",
-        "row": 60,
-        "char": "&gt;"
-    },
-    {
-        "group": "htmlH6",
-        "linkedGroup": "Title",
-        "row": 60,
-        "char": "Header 5"
-    },
-    {
-        "group": "htmlEndTag",
-        "linkedGroup": "Identifier",
-        "row": 60,
-        "char": "&lt;/"
-    },
-    {
-        "group": "htmlTagName",
-        "linkedGroup": "Statement",
-        "row": 60,
-        "char": "h6"
-    },
-    {
-        "group": "htmlEndTag",
-        "linkedGroup": "Identifier",
-        "row": 60,
-        "char": "&gt;\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -2291,6 +2117,54 @@ module.exports = [
         "char": "    "
     },
     {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 61,
+        "char": "&lt;"
+    },
+    {
+        "group": "htmlTagName",
+        "linkedGroup": "Statement",
+        "row": 61,
+        "char": "input"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 61,
+        "char": " "
+    },
+    {
+        "group": "htmlArg",
+        "linkedGroup": "Type",
+        "row": 61,
+        "char": "type"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 61,
+        "char": "&#61;"
+    },
+    {
+        "group": "htmlString",
+        "linkedGroup": "Constant",
+        "row": 61,
+        "char": "&quot;text&quot;"
+    },
+    {
+        "group": "htmlTag",
+        "linkedGroup": "Identifier",
+        "row": 61,
+        "char": "&gt;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 61,
+        "char": "Input Box"
+    },
+    {
         "group": "htmlEndTag",
         "linkedGroup": "Identifier",
         "row": 61,
@@ -2300,7 +2174,7 @@ module.exports = [
         "group": "htmlTagName",
         "linkedGroup": "Statement",
         "row": 61,
-        "char": "main"
+        "char": "input"
     },
     {
         "group": "htmlEndTag",
@@ -2399,49 +2273,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 64,
-        "char": "    "
-    },
-    {
-        "group": "htmlScriptTag",
-        "linkedGroup": "Identifier",
-        "row": 64,
-        "char": "&lt;"
-    },
-    {
-        "group": "htmlSpecialTagName",
-        "linkedGroup": "Statement",
-        "row": 64,
-        "char": "script"
-    },
-    {
-        "group": "htmlScriptTag",
-        "linkedGroup": "Identifier",
-        "row": 64,
-        "char": " "
-    },
-    {
-        "group": "htmlArg",
-        "linkedGroup": "Type",
-        "row": 64,
-        "char": "src"
-    },
-    {
-        "group": "htmlScriptTag",
-        "linkedGroup": "Identifier",
-        "row": 64,
-        "char": "&#61;"
-    },
-    {
-        "group": "htmlString",
-        "linkedGroup": "Constant",
-        "row": 64,
-        "char": "&quot;env.js&quot;"
-    },
-    {
-        "group": "htmlScriptTag",
-        "linkedGroup": "Identifier",
-        "row": 64,
-        "char": "&gt;"
+        "char": "  "
     },
     {
         "group": "htmlEndTag",
@@ -2450,10 +2282,10 @@ module.exports = [
         "char": "&lt;/"
     },
     {
-        "group": "htmlSpecialTagName",
+        "group": "htmlTagName",
         "linkedGroup": "Statement",
         "row": 64,
-        "char": "script"
+        "char": "body"
     },
     {
         "group": "htmlEndTag",
@@ -2467,12 +2299,6 @@ module.exports = [
         "char": "65"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 65,
-        "char": "  "
-    },
-    {
         "group": "htmlEndTag",
         "linkedGroup": "Identifier",
         "row": 65,
@@ -2482,35 +2308,12 @@ module.exports = [
         "group": "htmlTagName",
         "linkedGroup": "Statement",
         "row": 65,
-        "char": "body"
-    },
-    {
-        "group": "htmlEndTag",
-        "linkedGroup": "Identifier",
-        "row": 65,
-        "char": "&gt;\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 66,
-        "char": "66"
-    },
-    {
-        "group": "htmlEndTag",
-        "linkedGroup": "Identifier",
-        "row": 66,
-        "char": "&lt;/"
-    },
-    {
-        "group": "htmlTagName",
-        "linkedGroup": "Statement",
-        "row": 66,
         "char": "html"
     },
     {
         "group": "htmlEndTag",
         "linkedGroup": "Identifier",
-        "row": 66,
+        "row": 65,
         "char": "&gt;"
     }
 ]

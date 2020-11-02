@@ -9725,13 +9725,7 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 214,
-        "char": "; "
-    },
-    {
-        "group": "typescriptLineComment",
-        "linkedGroup": "Comment",
-        "row": 214,
-        "char": "// Inside a single-quoted string nothing is interpreted\n"
+        "char": "; \n"
     },
     {
         "group": "LineNr",
@@ -9739,10 +9733,16 @@ module.exports = [
         "char": "215"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
         "row": 215,
-        "char": "\n"
+        "char": "          "
+    },
+    {
+        "group": "typescriptLineComment",
+        "linkedGroup": "Comment",
+        "row": 215,
+        "char": "// Inside a single-quoted string nothing is interpreted\n"
     },
     {
         "group": "LineNr",
@@ -9750,46 +9750,10 @@ module.exports = [
         "char": "216"
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 216,
-        "char": "        session"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 216,
-        "char": "."
-    },
-    {
-        "group": "typescriptDOMDocMethod",
-        "linkedGroup": "Statement",
-        "row": 216,
-        "char": "write"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 216,
-        "char": "("
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 216,
-        "char": "escapedData"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 216,
-        "char": ")"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 216,
-        "char": ";\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -9800,37 +9764,43 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 217,
-        "char": "      "
+        "char": "        session"
     },
     {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
         "row": 217,
-        "char": "}"
+        "char": "."
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 217,
-        "char": " "
-    },
-    {
-        "group": "typescriptConditional",
+        "group": "typescriptDOMDocMethod",
         "linkedGroup": "Statement",
         "row": 217,
-        "char": "else"
+        "char": "write"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 217,
+        "char": "("
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 217,
+        "char": "escapedData"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 217,
+        "char": ")"
     },
     {
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 217,
-        "char": " "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 217,
-        "char": "{\n"
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -9841,43 +9811,37 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 218,
-        "char": "        session"
+        "char": "      "
     },
     {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
         "row": 218,
-        "char": "."
-    },
-    {
-        "group": "typescriptDOMDocMethod",
-        "linkedGroup": "Statement",
-        "row": 218,
-        "char": "write"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 218,
-        "char": "("
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 218,
-        "char": "data"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 218,
-        "char": ")"
+        "char": "}"
     },
     {
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 218,
-        "char": ";\n"
+        "char": " "
+    },
+    {
+        "group": "typescriptConditional",
+        "linkedGroup": "Statement",
+        "row": 218,
+        "char": "else"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 218,
+        "char": " "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 218,
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -9888,13 +9852,43 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 219,
-        "char": "      "
+        "char": "        session"
     },
     {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
         "row": 219,
-        "char": "}\n"
+        "char": "."
+    },
+    {
+        "group": "typescriptDOMDocMethod",
+        "linkedGroup": "Statement",
+        "row": 219,
+        "char": "write"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 219,
+        "char": "("
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 219,
+        "char": "data"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 219,
+        "char": ")"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 219,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -9905,7 +9899,7 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 220,
-        "char": "    "
+        "char": "      "
     },
     {
         "group": "typescriptBraces",
@@ -9922,25 +9916,13 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 221,
-        "char": "  "
+        "char": "    "
     },
     {
         "group": "typescriptBraces",
         "linkedGroup": "Identifier",
         "row": 221,
-        "char": "}"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 221,
-        "char": ")"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 221,
-        "char": ";\n"
+        "char": "}\n"
     },
     {
         "group": "LineNr",
@@ -9951,61 +9933,13 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 222,
-        "char": "  rpc"
+        "char": "  "
     },
     {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
         "row": 222,
-        "char": "."
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 222,
-        "char": "on"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 222,
-        "char": "("
-    },
-    {
-        "group": "typescriptString",
-        "linkedGroup": "Constant",
-        "row": 222,
-        "char": "&#39;info renderer&#39;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 222,
-        "char": ", "
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 222,
-        "char": "("
-    },
-    {
-        "group": "typescriptCall",
-        "linkedGroup": "PreProc",
-        "row": 222,
-        "char": "{ uid"
-    },
-    {
-        "group": "typescriptFuncComma",
-        "linkedGroup": "Statement",
-        "row": 222,
-        "char": ","
-    },
-    {
-        "group": "typescriptCall",
-        "linkedGroup": "PreProc",
-        "row": 222,
-        "char": " type }"
+        "char": "}"
     },
     {
         "group": "typescriptParens",
@@ -10014,28 +9948,10 @@ module.exports = [
         "char": ")"
     },
     {
-        "group": "typescriptArrowFuncArg",
-        "linkedGroup": "PreProc",
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
         "row": 222,
-        "char": " "
-    },
-    {
-        "group": "typescriptArrowFunc",
-        "linkedGroup": "Type",
-        "row": 222,
-        "char": "&#61;&gt;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 222,
-        "char": " "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 222,
-        "char": "{\n"
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -10046,13 +9962,91 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 223,
-        "char": "    "
+        "char": "  rpc"
     },
     {
-        "group": "typescriptLineComment",
-        "linkedGroup": "Comment",
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
         "row": 223,
-        "char": "// Used in the &quot;About&quot; dialog\n"
+        "char": "."
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 223,
+        "char": "on"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 223,
+        "char": "("
+    },
+    {
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
+        "row": 223,
+        "char": "&#39;info renderer&#39;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 223,
+        "char": ", "
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 223,
+        "char": "("
+    },
+    {
+        "group": "typescriptCall",
+        "linkedGroup": "PreProc",
+        "row": 223,
+        "char": "{ uid"
+    },
+    {
+        "group": "typescriptFuncComma",
+        "linkedGroup": "Statement",
+        "row": 223,
+        "char": ","
+    },
+    {
+        "group": "typescriptCall",
+        "linkedGroup": "PreProc",
+        "row": 223,
+        "char": " type }"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 223,
+        "char": ")"
+    },
+    {
+        "group": "typescriptArrowFuncArg",
+        "linkedGroup": "PreProc",
+        "row": 223,
+        "char": " "
+    },
+    {
+        "group": "typescriptArrowFunc",
+        "linkedGroup": "Type",
+        "row": 223,
+        "char": "&#61;&gt;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 223,
+        "char": " "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 223,
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -10063,31 +10057,13 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 224,
-        "char": "    setRendererType"
+        "char": "    "
     },
     {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
+        "group": "typescriptLineComment",
+        "linkedGroup": "Comment",
         "row": 224,
-        "char": "("
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 224,
-        "char": "uid, type"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 224,
-        "char": ")"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 224,
-        "char": ";\n"
+        "char": "// Used in the &quot;About&quot; dialog\n"
     },
     {
         "group": "LineNr",
@@ -10098,13 +10074,19 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 225,
-        "char": "  "
+        "char": "    setRendererType"
     },
     {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
         "row": 225,
-        "char": "}"
+        "char": "("
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 225,
+        "char": "uid, type"
     },
     {
         "group": "typescriptParens",
@@ -10127,49 +10109,13 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 226,
-        "char": "  rpc"
+        "char": "  "
     },
     {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
         "row": 226,
-        "char": "."
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 226,
-        "char": "on"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 226,
-        "char": "("
-    },
-    {
-        "group": "typescriptString",
-        "linkedGroup": "Constant",
-        "row": 226,
-        "char": "&#39;open external&#39;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 226,
-        "char": ", "
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 226,
-        "char": "("
-    },
-    {
-        "group": "typescriptCall",
-        "linkedGroup": "PreProc",
-        "row": 226,
-        "char": "{ url }"
+        "char": "}"
     },
     {
         "group": "typescriptParens",
@@ -10178,28 +10124,10 @@ module.exports = [
         "char": ")"
     },
     {
-        "group": "typescriptArrowFuncArg",
-        "linkedGroup": "PreProc",
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
         "row": 226,
-        "char": " "
-    },
-    {
-        "group": "typescriptArrowFunc",
-        "linkedGroup": "Type",
-        "row": 226,
-        "char": "&#61;&gt;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 226,
-        "char": " "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 226,
-        "char": "{\n"
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -10210,7 +10138,7 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 227,
-        "char": "    shell"
+        "char": "  rpc"
     },
     {
         "group": "typescriptDotNotation",
@@ -10222,7 +10150,7 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 227,
-        "char": "openExternal"
+        "char": "on"
     },
     {
         "group": "typescriptParens",
@@ -10231,10 +10159,28 @@ module.exports = [
         "char": "("
     },
     {
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
+        "row": 227,
+        "char": "&#39;open external&#39;"
+    },
+    {
         "group": "typescriptFuncCallArg",
         "linkedGroup": "typescriptFuncCallArg",
         "row": 227,
-        "char": "url"
+        "char": ", "
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 227,
+        "char": "("
+    },
+    {
+        "group": "typescriptCall",
+        "linkedGroup": "PreProc",
+        "row": 227,
+        "char": "{ url }"
     },
     {
         "group": "typescriptParens",
@@ -10243,10 +10189,28 @@ module.exports = [
         "char": ")"
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
+        "group": "typescriptArrowFuncArg",
+        "linkedGroup": "PreProc",
         "row": 227,
-        "char": ";\n"
+        "char": " "
+    },
+    {
+        "group": "typescriptArrowFunc",
+        "linkedGroup": "Type",
+        "row": 227,
+        "char": "&#61;&gt;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 227,
+        "char": " "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 227,
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -10257,13 +10221,31 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 228,
-        "char": "  "
+        "char": "    shell"
     },
     {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
         "row": 228,
-        "char": "}"
+        "char": "."
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 228,
+        "char": "openExternal"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 228,
+        "char": "("
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 228,
+        "char": "url"
     },
     {
         "group": "typescriptParens",
@@ -10286,67 +10268,25 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 229,
-        "char": "  rpc"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 229,
-        "char": "."
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 229,
-        "char": "on"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 229,
-        "char": "("
-    },
-    {
-        "group": "typescriptString",
-        "linkedGroup": "Constant",
-        "row": 229,
-        "char": "&#39;open context menu&#39;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 229,
-        "char": ", "
-    },
-    {
-        "group": "typescriptArrowFuncArg",
-        "linkedGroup": "PreProc",
-        "row": 229,
-        "char": "selection"
-    },
-    {
-        "group": "typescriptArrowFuncDef",
-        "linkedGroup": "typescriptArrowFuncDef",
-        "row": 229,
-        "char": " "
-    },
-    {
-        "group": "typescriptArrowFunc",
-        "linkedGroup": "Type",
-        "row": 229,
-        "char": "&#61;&gt;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 229,
-        "char": " "
+        "char": "  "
     },
     {
         "group": "typescriptBraces",
         "linkedGroup": "Identifier",
         "row": 229,
-        "char": "{\n"
+        "char": "}"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 229,
+        "char": ")"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 229,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -10357,17 +10297,59 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 230,
-        "char": "    "
+        "char": "  rpc"
     },
     {
-        "group": "typescriptVariable",
-        "linkedGroup": "Identifier",
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
         "row": 230,
-        "char": "const"
+        "char": "."
     },
     {
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
+        "row": 230,
+        "char": "on"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 230,
+        "char": "("
+    },
+    {
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
+        "row": 230,
+        "char": "&#39;open context menu&#39;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 230,
+        "char": ", "
+    },
+    {
+        "group": "typescriptArrowFuncArg",
+        "linkedGroup": "PreProc",
+        "row": 230,
+        "char": "selection"
+    },
+    {
+        "group": "typescriptArrowFuncDef",
+        "linkedGroup": "typescriptArrowFuncDef",
+        "row": 230,
+        "char": " "
+    },
+    {
+        "group": "typescriptArrowFunc",
+        "linkedGroup": "Type",
+        "row": 230,
+        "char": "&#61;&gt;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
         "row": 230,
         "char": " "
     },
@@ -10375,37 +10357,7 @@ module.exports = [
         "group": "typescriptBraces",
         "linkedGroup": "Identifier",
         "row": 230,
-        "char": "{"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 230,
-        "char": " createWindow "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 230,
-        "char": "}"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 230,
-        "char": " "
-    },
-    {
-        "group": "typescriptAssign",
-        "linkedGroup": "typescriptAssign",
-        "row": 230,
-        "char": "&#61;"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 230,
-        "char": " app;\n"
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -10440,7 +10392,7 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 231,
-        "char": " buildFromTemplate "
+        "char": " createWindow "
     },
     {
         "group": "typescriptBraces",
@@ -10464,7 +10416,7 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 231,
-        "char": " Menu;\n"
+        "char": " app;\n"
     },
     {
         "group": "LineNr",
@@ -10475,61 +10427,55 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 232,
-        "char": "    buildFromTemplate"
+        "char": "    "
     },
     {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
+        "group": "typescriptVariable",
+        "linkedGroup": "Identifier",
         "row": 232,
-        "char": "("
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 232,
-        "char": "contextMenuTemplate"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 232,
-        "char": "("
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 232,
-        "char": "createWindow, selection"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 232,
-        "char": "))"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 232,
-        "char": "."
+        "char": "const"
     },
     {
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 232,
-        "char": "popup"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 232,
-        "char": "("
+        "char": " "
     },
     {
         "group": "typescriptBraces",
         "linkedGroup": "Identifier",
         "row": 232,
-        "char": "{\n"
+        "char": "{"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 232,
+        "char": " buildFromTemplate "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 232,
+        "char": "}"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 232,
+        "char": " "
+    },
+    {
+        "group": "typescriptAssign",
+        "linkedGroup": "typescriptAssign",
+        "row": 232,
+        "char": "&#61;"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 232,
+        "char": " Menu;\n"
     },
     {
         "group": "LineNr",
@@ -10537,22 +10483,64 @@ module.exports = [
         "char": "233"
     },
     {
-        "group": "typescriptObjectLiteral",
-        "linkedGroup": "typescriptObjectLiteral",
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
         "row": 233,
-        "char": "      "
+        "char": "    buildFromTemplate"
     },
     {
-        "group": "typescriptObjectLabel",
-        "linkedGroup": "Statement",
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
         "row": 233,
-        "char": "window"
+        "char": "("
     },
     {
-        "group": "typescriptObjectLiteral",
-        "linkedGroup": "typescriptObjectLiteral",
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
         "row": 233,
-        "char": ",\n"
+        "char": "contextMenuTemplate"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 233,
+        "char": "("
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 233,
+        "char": "createWindow, selection"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 233,
+        "char": "))"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 233,
+        "char": "."
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 233,
+        "char": "popup"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 233,
+        "char": "("
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 233,
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -10563,25 +10551,19 @@ module.exports = [
         "group": "typescriptObjectLiteral",
         "linkedGroup": "typescriptObjectLiteral",
         "row": 234,
-        "char": "    "
+        "char": "      "
     },
     {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
+        "group": "typescriptObjectLabel",
+        "linkedGroup": "Statement",
         "row": 234,
-        "char": "}"
+        "char": "window"
     },
     {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
+        "group": "typescriptObjectLiteral",
+        "linkedGroup": "typescriptObjectLiteral",
         "row": 234,
-        "char": ")"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 234,
-        "char": ";\n"
+        "char": ",\n"
     },
     {
         "group": "LineNr",
@@ -10589,10 +10571,10 @@ module.exports = [
         "char": "235"
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
+        "group": "typescriptObjectLiteral",
+        "linkedGroup": "typescriptObjectLiteral",
         "row": 235,
-        "char": "  "
+        "char": "    "
     },
     {
         "group": "typescriptBraces",
@@ -10621,61 +10603,13 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 236,
-        "char": "  rpc"
+        "char": "  "
     },
     {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
         "row": 236,
-        "char": "."
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 236,
-        "char": "on"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 236,
-        "char": "("
-    },
-    {
-        "group": "typescriptString",
-        "linkedGroup": "Constant",
-        "row": 236,
-        "char": "&#39;open hamburger menu&#39;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 236,
-        "char": ", "
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 236,
-        "char": "("
-    },
-    {
-        "group": "typescriptCall",
-        "linkedGroup": "PreProc",
-        "row": 236,
-        "char": "{ x"
-    },
-    {
-        "group": "typescriptFuncComma",
-        "linkedGroup": "Statement",
-        "row": 236,
-        "char": ","
-    },
-    {
-        "group": "typescriptCall",
-        "linkedGroup": "PreProc",
-        "row": 236,
-        "char": " y }"
+        "char": "}"
     },
     {
         "group": "typescriptParens",
@@ -10684,28 +10618,10 @@ module.exports = [
         "char": ")"
     },
     {
-        "group": "typescriptArrowFuncArg",
-        "linkedGroup": "PreProc",
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
         "row": 236,
-        "char": " "
-    },
-    {
-        "group": "typescriptArrowFunc",
-        "linkedGroup": "Type",
-        "row": 236,
-        "char": "&#61;&gt;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 236,
-        "char": " "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 236,
-        "char": "{\n"
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -10716,7 +10632,7 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 237,
-        "char": "    Menu"
+        "char": "  rpc"
     },
     {
         "group": "typescriptDotNotation",
@@ -10728,25 +10644,7 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 237,
-        "char": "getApplicationMenu"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 237,
-        "char": "()"
-    },
-    {
-        "group": "typescriptUnaryOp",
-        "linkedGroup": "typescriptUnaryOp",
-        "row": 237,
-        "char": "!"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 237,
-        "char": ".popup"
+        "char": "on"
     },
     {
         "group": "typescriptParens",
@@ -10755,124 +10653,40 @@ module.exports = [
         "char": "("
     },
     {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
         "row": 237,
-        "char": "{"
-    },
-    {
-        "group": "typescriptObjectLiteral",
-        "linkedGroup": "typescriptObjectLiteral",
-        "row": 237,
-        "char": " "
-    },
-    {
-        "group": "typescriptObjectLabel",
-        "linkedGroup": "Statement",
-        "row": 237,
-        "char": "x"
-    },
-    {
-        "group": "typescriptObjectColon",
-        "linkedGroup": "typescriptObjectColon",
-        "row": 237,
-        "char": ":"
-    },
-    {
-        "group": "typescriptObjectLiteral",
-        "linkedGroup": "typescriptObjectLiteral",
-        "row": 237,
-        "char": " "
-    },
-    {
-        "group": "typescriptGlobal",
-        "linkedGroup": "Type",
-        "row": 237,
-        "char": "Math"
-    },
-    {
-        "group": "typescriptGlobalMathDot",
-        "linkedGroup": "typescriptGlobalMathDot",
-        "row": 237,
-        "char": "."
-    },
-    {
-        "group": "typescriptMathStaticMethod",
-        "linkedGroup": "Statement",
-        "row": 237,
-        "char": "ceil"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 237,
-        "char": "("
+        "char": "&#39;open hamburger menu&#39;"
     },
     {
         "group": "typescriptFuncCallArg",
         "linkedGroup": "typescriptFuncCallArg",
-        "row": 237,
-        "char": "x"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 237,
-        "char": ")"
-    },
-    {
-        "group": "typescriptObjectLiteral",
-        "linkedGroup": "typescriptObjectLiteral",
         "row": 237,
         "char": ", "
     },
     {
-        "group": "typescriptObjectLabel",
-        "linkedGroup": "Statement",
-        "row": 237,
-        "char": "y"
-    },
-    {
-        "group": "typescriptObjectColon",
-        "linkedGroup": "typescriptObjectColon",
-        "row": 237,
-        "char": ":"
-    },
-    {
-        "group": "typescriptObjectLiteral",
-        "linkedGroup": "typescriptObjectLiteral",
-        "row": 237,
-        "char": " "
-    },
-    {
-        "group": "typescriptGlobal",
-        "linkedGroup": "Type",
-        "row": 237,
-        "char": "Math"
-    },
-    {
-        "group": "typescriptGlobalMathDot",
-        "linkedGroup": "typescriptGlobalMathDot",
-        "row": 237,
-        "char": "."
-    },
-    {
-        "group": "typescriptMathStaticMethod",
-        "linkedGroup": "Statement",
-        "row": 237,
-        "char": "ceil"
-    },
-    {
         "group": "typescriptParens",
         "linkedGroup": "Normal",
         "row": 237,
         "char": "("
     },
     {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
+        "group": "typescriptCall",
+        "linkedGroup": "PreProc",
         "row": 237,
-        "char": "y"
+        "char": "{ x"
+    },
+    {
+        "group": "typescriptFuncComma",
+        "linkedGroup": "Statement",
+        "row": 237,
+        "char": ","
+    },
+    {
+        "group": "typescriptCall",
+        "linkedGroup": "PreProc",
+        "row": 237,
+        "char": " y }"
     },
     {
         "group": "typescriptParens",
@@ -10881,8 +10695,20 @@ module.exports = [
         "char": ")"
     },
     {
-        "group": "typescriptObjectLiteral",
-        "linkedGroup": "typescriptObjectLiteral",
+        "group": "typescriptArrowFuncArg",
+        "linkedGroup": "PreProc",
+        "row": 237,
+        "char": " "
+    },
+    {
+        "group": "typescriptArrowFunc",
+        "linkedGroup": "Type",
+        "row": 237,
+        "char": "&#61;&gt;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
         "row": 237,
         "char": " "
     },
@@ -10890,19 +10716,7 @@ module.exports = [
         "group": "typescriptBraces",
         "linkedGroup": "Identifier",
         "row": 237,
-        "char": "}"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 237,
-        "char": ")"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 237,
-        "char": ";\n"
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -10913,7 +10727,175 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 238,
-        "char": "  "
+        "char": "    Menu"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 238,
+        "char": "."
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 238,
+        "char": "getApplicationMenu"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 238,
+        "char": "()"
+    },
+    {
+        "group": "typescriptUnaryOp",
+        "linkedGroup": "typescriptUnaryOp",
+        "row": 238,
+        "char": "!"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 238,
+        "char": ".popup"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 238,
+        "char": "("
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 238,
+        "char": "{"
+    },
+    {
+        "group": "typescriptObjectLiteral",
+        "linkedGroup": "typescriptObjectLiteral",
+        "row": 238,
+        "char": " "
+    },
+    {
+        "group": "typescriptObjectLabel",
+        "linkedGroup": "Statement",
+        "row": 238,
+        "char": "x"
+    },
+    {
+        "group": "typescriptObjectColon",
+        "linkedGroup": "typescriptObjectColon",
+        "row": 238,
+        "char": ":"
+    },
+    {
+        "group": "typescriptObjectLiteral",
+        "linkedGroup": "typescriptObjectLiteral",
+        "row": 238,
+        "char": " "
+    },
+    {
+        "group": "typescriptGlobal",
+        "linkedGroup": "Type",
+        "row": 238,
+        "char": "Math"
+    },
+    {
+        "group": "typescriptGlobalMathDot",
+        "linkedGroup": "typescriptGlobalMathDot",
+        "row": 238,
+        "char": "."
+    },
+    {
+        "group": "typescriptMathStaticMethod",
+        "linkedGroup": "Statement",
+        "row": 238,
+        "char": "ceil"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 238,
+        "char": "("
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 238,
+        "char": "x"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 238,
+        "char": ")"
+    },
+    {
+        "group": "typescriptObjectLiteral",
+        "linkedGroup": "typescriptObjectLiteral",
+        "row": 238,
+        "char": ", "
+    },
+    {
+        "group": "typescriptObjectLabel",
+        "linkedGroup": "Statement",
+        "row": 238,
+        "char": "y"
+    },
+    {
+        "group": "typescriptObjectColon",
+        "linkedGroup": "typescriptObjectColon",
+        "row": 238,
+        "char": ":"
+    },
+    {
+        "group": "typescriptObjectLiteral",
+        "linkedGroup": "typescriptObjectLiteral",
+        "row": 238,
+        "char": " "
+    },
+    {
+        "group": "typescriptGlobal",
+        "linkedGroup": "Type",
+        "row": 238,
+        "char": "Math"
+    },
+    {
+        "group": "typescriptGlobalMathDot",
+        "linkedGroup": "typescriptGlobalMathDot",
+        "row": 238,
+        "char": "."
+    },
+    {
+        "group": "typescriptMathStaticMethod",
+        "linkedGroup": "Statement",
+        "row": 238,
+        "char": "ceil"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 238,
+        "char": "("
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 238,
+        "char": "y"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 238,
+        "char": ")"
+    },
+    {
+        "group": "typescriptObjectLiteral",
+        "linkedGroup": "typescriptObjectLiteral",
+        "row": 238,
+        "char": " "
     },
     {
         "group": "typescriptBraces",
@@ -10945,10 +10927,22 @@ module.exports = [
         "char": "  "
     },
     {
-        "group": "typescriptLineComment",
-        "linkedGroup": "Comment",
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
         "row": 239,
-        "char": "// Same deal as above, grabbing the window titlebar when the window\n"
+        "char": "}"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 239,
+        "char": ")"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 239,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -10965,7 +10959,7 @@ module.exports = [
         "group": "typescriptLineComment",
         "linkedGroup": "Comment",
         "row": 240,
-        "char": "// is maximized on Windows results in unmaximize, without hitting any\n"
+        "char": "// Same deal as above, grabbing the window titlebar when the window\n"
     },
     {
         "group": "LineNr",
@@ -10982,7 +10976,7 @@ module.exports = [
         "group": "typescriptLineComment",
         "linkedGroup": "Comment",
         "row": 241,
-        "char": "// app buttons\n"
+        "char": "// is maximized on Windows results in unmaximize, without hitting any\n"
     },
     {
         "group": "LineNr",
@@ -10996,154 +10990,10 @@ module.exports = [
         "char": "  "
     },
     {
-        "group": "typescriptRepeat",
-        "linkedGroup": "Statement",
+        "group": "typescriptLineComment",
+        "linkedGroup": "Comment",
         "row": 242,
-        "char": "for"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 242,
-        "char": " "
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 242,
-        "char": "("
-    },
-    {
-        "group": "typescriptVariable",
-        "linkedGroup": "Identifier",
-        "row": 242,
-        "char": "const"
-    },
-    {
-        "group": "typescriptLoopParen",
-        "linkedGroup": "typescriptLoopParen",
-        "row": 242,
-        "char": " "
-    },
-    {
-        "group": "typescriptVariableDeclaration",
-        "linkedGroup": "typescriptVariableDeclaration",
-        "row": 242,
-        "char": "ev"
-    },
-    {
-        "group": "typescriptLoopParen",
-        "linkedGroup": "typescriptLoopParen",
-        "row": 242,
-        "char": " "
-    },
-    {
-        "group": "typescriptForOperator",
-        "linkedGroup": "Statement",
-        "row": 242,
-        "char": "of"
-    },
-    {
-        "group": "typescriptLoopParen",
-        "linkedGroup": "typescriptLoopParen",
-        "row": 242,
-        "char": " "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 242,
-        "char": "["
-    },
-    {
-        "group": "typescriptString",
-        "linkedGroup": "Constant",
-        "row": 242,
-        "char": "&#39;maximize&#39;"
-    },
-    {
-        "group": "typescriptArray",
-        "linkedGroup": "typescriptArray",
-        "row": 242,
-        "char": ", "
-    },
-    {
-        "group": "typescriptString",
-        "linkedGroup": "Constant",
-        "row": 242,
-        "char": "&#39;unmaximize&#39;"
-    },
-    {
-        "group": "typescriptArray",
-        "linkedGroup": "typescriptArray",
-        "row": 242,
-        "char": ", "
-    },
-    {
-        "group": "typescriptString",
-        "linkedGroup": "Constant",
-        "row": 242,
-        "char": "&#39;minimize&#39;"
-    },
-    {
-        "group": "typescriptArray",
-        "linkedGroup": "typescriptArray",
-        "row": 242,
-        "char": ", "
-    },
-    {
-        "group": "typescriptString",
-        "linkedGroup": "Constant",
-        "row": 242,
-        "char": "&#39;restore&#39;"
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 242,
-        "char": "]"
-    },
-    {
-        "group": "typescriptLoopParen",
-        "linkedGroup": "typescriptLoopParen",
-        "row": 242,
-        "char": " "
-    },
-    {
-        "group": "typescriptCastKeyword",
-        "linkedGroup": "Special",
-        "row": 242,
-        "char": "as"
-    },
-    {
-        "group": "typescriptLoopParen",
-        "linkedGroup": "typescriptLoopParen",
-        "row": 242,
-        "char": " "
-    },
-    {
-        "group": "typescriptPredefinedType",
-        "linkedGroup": "Type",
-        "row": 242,
-        "char": "any"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 242,
-        "char": ")"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 242,
-        "char": " "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 242,
-        "char": "{\n"
+        "char": "// app buttons\n"
     },
     {
         "group": "LineNr",
@@ -11154,25 +11004,19 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 243,
-        "char": "    "
+        "char": "  "
     },
     {
-        "group": "typescriptBOMWindowProp",
-        "linkedGroup": "Type",
+        "group": "typescriptRepeat",
+        "linkedGroup": "Statement",
         "row": 243,
-        "char": "window"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 243,
-        "char": "."
+        "char": "for"
     },
     {
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 243,
-        "char": "on"
+        "char": " "
     },
     {
         "group": "typescriptParens",
@@ -11181,82 +11025,136 @@ module.exports = [
         "char": "("
     },
     {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
+        "group": "typescriptVariable",
+        "linkedGroup": "Identifier",
         "row": 243,
-        "char": "ev, "
+        "char": "const"
     },
     {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 243,
-        "char": "()"
-    },
-    {
-        "group": "typescriptArrowFuncArg",
-        "linkedGroup": "PreProc",
+        "group": "typescriptLoopParen",
+        "linkedGroup": "typescriptLoopParen",
         "row": 243,
         "char": " "
     },
     {
-        "group": "typescriptArrowFunc",
-        "linkedGroup": "Type",
+        "group": "typescriptVariableDeclaration",
+        "linkedGroup": "typescriptVariableDeclaration",
         "row": 243,
-        "char": "&#61;&gt;"
+        "char": "ev"
     },
     {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
+        "group": "typescriptLoopParen",
+        "linkedGroup": "typescriptLoopParen",
         "row": 243,
-        "char": " rpc"
+        "char": " "
     },
     {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
+        "group": "typescriptForOperator",
+        "linkedGroup": "Statement",
         "row": 243,
-        "char": "."
+        "char": "of"
     },
     {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
+        "group": "typescriptLoopParen",
+        "linkedGroup": "typescriptLoopParen",
         "row": 243,
-        "char": "emit"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 243,
-        "char": "("
-    },
-    {
-        "group": "typescriptString",
-        "linkedGroup": "Constant",
-        "row": 243,
-        "char": "&#39;windowGeometry change&#39;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 243,
-        "char": ", "
+        "char": " "
     },
     {
         "group": "typescriptBraces",
         "linkedGroup": "Identifier",
         "row": 243,
-        "char": "{}"
+        "char": "["
+    },
+    {
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
+        "row": 243,
+        "char": "&#39;maximize&#39;"
+    },
+    {
+        "group": "typescriptArray",
+        "linkedGroup": "typescriptArray",
+        "row": 243,
+        "char": ", "
+    },
+    {
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
+        "row": 243,
+        "char": "&#39;unmaximize&#39;"
+    },
+    {
+        "group": "typescriptArray",
+        "linkedGroup": "typescriptArray",
+        "row": 243,
+        "char": ", "
+    },
+    {
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
+        "row": 243,
+        "char": "&#39;minimize&#39;"
+    },
+    {
+        "group": "typescriptArray",
+        "linkedGroup": "typescriptArray",
+        "row": 243,
+        "char": ", "
+    },
+    {
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
+        "row": 243,
+        "char": "&#39;restore&#39;"
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 243,
+        "char": "]"
+    },
+    {
+        "group": "typescriptLoopParen",
+        "linkedGroup": "typescriptLoopParen",
+        "row": 243,
+        "char": " "
+    },
+    {
+        "group": "typescriptCastKeyword",
+        "linkedGroup": "Special",
+        "row": 243,
+        "char": "as"
+    },
+    {
+        "group": "typescriptLoopParen",
+        "linkedGroup": "typescriptLoopParen",
+        "row": 243,
+        "char": " "
+    },
+    {
+        "group": "typescriptPredefinedType",
+        "linkedGroup": "Type",
+        "row": 243,
+        "char": "any"
     },
     {
         "group": "typescriptParens",
         "linkedGroup": "Normal",
         "row": 243,
-        "char": "))"
+        "char": ")"
     },
     {
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 243,
-        "char": ";\n"
+        "char": " "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 243,
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -11267,13 +11165,109 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 244,
-        "char": "  "
+        "char": "    "
+    },
+    {
+        "group": "typescriptBOMWindowProp",
+        "linkedGroup": "Type",
+        "row": 244,
+        "char": "window"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 244,
+        "char": "."
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 244,
+        "char": "on"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 244,
+        "char": "("
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 244,
+        "char": "ev, "
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 244,
+        "char": "()"
+    },
+    {
+        "group": "typescriptArrowFuncArg",
+        "linkedGroup": "PreProc",
+        "row": 244,
+        "char": " "
+    },
+    {
+        "group": "typescriptArrowFunc",
+        "linkedGroup": "Type",
+        "row": 244,
+        "char": "&#61;&gt;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 244,
+        "char": " rpc"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 244,
+        "char": "."
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 244,
+        "char": "emit"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 244,
+        "char": "("
+    },
+    {
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
+        "row": 244,
+        "char": "&#39;windowGeometry change&#39;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 244,
+        "char": ", "
     },
     {
         "group": "typescriptBraces",
         "linkedGroup": "Identifier",
         "row": 244,
-        "char": "}\n"
+        "char": "{}"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 244,
+        "char": "))"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 244,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -11287,70 +11281,10 @@ module.exports = [
         "char": "  "
     },
     {
-        "group": "typescriptBOMWindowProp",
-        "linkedGroup": "Type",
-        "row": 245,
-        "char": "window"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 245,
-        "char": "."
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 245,
-        "char": "on"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 245,
-        "char": "("
-    },
-    {
-        "group": "typescriptString",
-        "linkedGroup": "Constant",
-        "row": 245,
-        "char": "&#39;move&#39;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 245,
-        "char": ", "
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 245,
-        "char": "()"
-    },
-    {
-        "group": "typescriptArrowFuncArg",
-        "linkedGroup": "PreProc",
-        "row": 245,
-        "char": " "
-    },
-    {
-        "group": "typescriptArrowFunc",
-        "linkedGroup": "Type",
-        "row": 245,
-        "char": "&#61;&gt;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 245,
-        "char": " "
-    },
-    {
         "group": "typescriptBraces",
         "linkedGroup": "Identifier",
         "row": 245,
-        "char": "{\n"
+        "char": "}\n"
     },
     {
         "group": "LineNr",
@@ -11361,43 +11295,7 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 246,
-        "char": "    "
-    },
-    {
-        "group": "typescriptVariable",
-        "linkedGroup": "Identifier",
-        "row": 246,
-        "char": "const"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 246,
-        "char": " "
-    },
-    {
-        "group": "typescriptVariableDeclaration",
-        "linkedGroup": "typescriptVariableDeclaration",
-        "row": 246,
-        "char": "position"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 246,
-        "char": " "
-    },
-    {
-        "group": "typescriptAssign",
-        "linkedGroup": "typescriptAssign",
-        "row": 246,
-        "char": "&#61;"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 246,
-        "char": " "
+        "char": "  "
     },
     {
         "group": "typescriptBOMWindowProp",
@@ -11415,7 +11313,25 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 246,
-        "char": "getPosition"
+        "char": "on"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 246,
+        "char": "("
+    },
+    {
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
+        "row": 246,
+        "char": "&#39;move&#39;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 246,
+        "char": ", "
     },
     {
         "group": "typescriptParens",
@@ -11424,10 +11340,28 @@ module.exports = [
         "char": "()"
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
+        "group": "typescriptArrowFuncArg",
+        "linkedGroup": "PreProc",
         "row": 246,
-        "char": ";\n"
+        "char": " "
+    },
+    {
+        "group": "typescriptArrowFunc",
+        "linkedGroup": "Type",
+        "row": 246,
+        "char": "&#61;&gt;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 246,
+        "char": " "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 246,
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -11438,7 +11372,49 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 247,
-        "char": "    rpc"
+        "char": "    "
+    },
+    {
+        "group": "typescriptVariable",
+        "linkedGroup": "Identifier",
+        "row": 247,
+        "char": "const"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 247,
+        "char": " "
+    },
+    {
+        "group": "typescriptVariableDeclaration",
+        "linkedGroup": "typescriptVariableDeclaration",
+        "row": 247,
+        "char": "position"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 247,
+        "char": " "
+    },
+    {
+        "group": "typescriptAssign",
+        "linkedGroup": "typescriptAssign",
+        "row": 247,
+        "char": "&#61;"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 247,
+        "char": " "
+    },
+    {
+        "group": "typescriptBOMWindowProp",
+        "linkedGroup": "Type",
+        "row": 247,
+        "char": "window"
     },
     {
         "group": "typescriptDotNotation",
@@ -11450,163 +11426,13 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 247,
-        "char": "emit"
+        "char": "getPosition"
     },
     {
         "group": "typescriptParens",
         "linkedGroup": "Normal",
         "row": 247,
-        "char": "("
-    },
-    {
-        "group": "typescriptString",
-        "linkedGroup": "Constant",
-        "row": 247,
-        "char": "&#39;move&#39;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 247,
-        "char": ", "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 247,
-        "char": "{"
-    },
-    {
-        "group": "typescriptObjectLiteral",
-        "linkedGroup": "typescriptObjectLiteral",
-        "row": 247,
-        "char": " "
-    },
-    {
-        "group": "typescriptObjectLabel",
-        "linkedGroup": "Statement",
-        "row": 247,
-        "char": "bounds"
-    },
-    {
-        "group": "typescriptObjectColon",
-        "linkedGroup": "typescriptObjectColon",
-        "row": 247,
-        "char": ":"
-    },
-    {
-        "group": "typescriptObjectLiteral",
-        "linkedGroup": "typescriptObjectLiteral",
-        "row": 247,
-        "char": " "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 247,
-        "char": "{"
-    },
-    {
-        "group": "typescriptObjectLiteral",
-        "linkedGroup": "typescriptObjectLiteral",
-        "row": 247,
-        "char": " "
-    },
-    {
-        "group": "typescriptObjectLabel",
-        "linkedGroup": "Statement",
-        "row": 247,
-        "char": "x"
-    },
-    {
-        "group": "typescriptObjectColon",
-        "linkedGroup": "typescriptObjectColon",
-        "row": 247,
-        "char": ":"
-    },
-    {
-        "group": "typescriptObjectLiteral",
-        "linkedGroup": "typescriptObjectLiteral",
-        "row": 247,
-        "char": " position"
-    },
-    {
-        "group": "typescriptProperty",
-        "linkedGroup": "typescriptProperty",
-        "row": 247,
-        "char": "["
-    },
-    {
-        "group": "typescriptNumber",
-        "linkedGroup": "Constant",
-        "row": 247,
-        "char": "0"
-    },
-    {
-        "group": "typescriptObjectLiteral",
-        "linkedGroup": "typescriptObjectLiteral",
-        "row": 247,
-        "char": "], "
-    },
-    {
-        "group": "typescriptObjectLabel",
-        "linkedGroup": "Statement",
-        "row": 247,
-        "char": "y"
-    },
-    {
-        "group": "typescriptObjectColon",
-        "linkedGroup": "typescriptObjectColon",
-        "row": 247,
-        "char": ":"
-    },
-    {
-        "group": "typescriptObjectLiteral",
-        "linkedGroup": "typescriptObjectLiteral",
-        "row": 247,
-        "char": " position"
-    },
-    {
-        "group": "typescriptProperty",
-        "linkedGroup": "typescriptProperty",
-        "row": 247,
-        "char": "["
-    },
-    {
-        "group": "typescriptNumber",
-        "linkedGroup": "Constant",
-        "row": 247,
-        "char": "1"
-    },
-    {
-        "group": "typescriptObjectLiteral",
-        "linkedGroup": "typescriptObjectLiteral",
-        "row": 247,
-        "char": "] "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 247,
-        "char": "}"
-    },
-    {
-        "group": "typescriptObjectLiteral",
-        "linkedGroup": "typescriptObjectLiteral",
-        "row": 247,
-        "char": " "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 247,
-        "char": "}"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 247,
-        "char": ")"
+        "char": "()"
     },
     {
         "group": "typescriptBlock",
@@ -11623,7 +11449,163 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 248,
-        "char": "  "
+        "char": "    rpc"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 248,
+        "char": "."
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 248,
+        "char": "emit"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 248,
+        "char": "("
+    },
+    {
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
+        "row": 248,
+        "char": "&#39;move&#39;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 248,
+        "char": ", "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 248,
+        "char": "{"
+    },
+    {
+        "group": "typescriptObjectLiteral",
+        "linkedGroup": "typescriptObjectLiteral",
+        "row": 248,
+        "char": " "
+    },
+    {
+        "group": "typescriptObjectLabel",
+        "linkedGroup": "Statement",
+        "row": 248,
+        "char": "bounds"
+    },
+    {
+        "group": "typescriptObjectColon",
+        "linkedGroup": "typescriptObjectColon",
+        "row": 248,
+        "char": ":"
+    },
+    {
+        "group": "typescriptObjectLiteral",
+        "linkedGroup": "typescriptObjectLiteral",
+        "row": 248,
+        "char": " "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 248,
+        "char": "{"
+    },
+    {
+        "group": "typescriptObjectLiteral",
+        "linkedGroup": "typescriptObjectLiteral",
+        "row": 248,
+        "char": " "
+    },
+    {
+        "group": "typescriptObjectLabel",
+        "linkedGroup": "Statement",
+        "row": 248,
+        "char": "x"
+    },
+    {
+        "group": "typescriptObjectColon",
+        "linkedGroup": "typescriptObjectColon",
+        "row": 248,
+        "char": ":"
+    },
+    {
+        "group": "typescriptObjectLiteral",
+        "linkedGroup": "typescriptObjectLiteral",
+        "row": 248,
+        "char": " position"
+    },
+    {
+        "group": "typescriptProperty",
+        "linkedGroup": "typescriptProperty",
+        "row": 248,
+        "char": "["
+    },
+    {
+        "group": "typescriptNumber",
+        "linkedGroup": "Constant",
+        "row": 248,
+        "char": "0"
+    },
+    {
+        "group": "typescriptObjectLiteral",
+        "linkedGroup": "typescriptObjectLiteral",
+        "row": 248,
+        "char": "], "
+    },
+    {
+        "group": "typescriptObjectLabel",
+        "linkedGroup": "Statement",
+        "row": 248,
+        "char": "y"
+    },
+    {
+        "group": "typescriptObjectColon",
+        "linkedGroup": "typescriptObjectColon",
+        "row": 248,
+        "char": ":"
+    },
+    {
+        "group": "typescriptObjectLiteral",
+        "linkedGroup": "typescriptObjectLiteral",
+        "row": 248,
+        "char": " position"
+    },
+    {
+        "group": "typescriptProperty",
+        "linkedGroup": "typescriptProperty",
+        "row": 248,
+        "char": "["
+    },
+    {
+        "group": "typescriptNumber",
+        "linkedGroup": "Constant",
+        "row": 248,
+        "char": "1"
+    },
+    {
+        "group": "typescriptObjectLiteral",
+        "linkedGroup": "typescriptObjectLiteral",
+        "row": 248,
+        "char": "] "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 248,
+        "char": "}"
+    },
+    {
+        "group": "typescriptObjectLiteral",
+        "linkedGroup": "typescriptObjectLiteral",
+        "row": 248,
+        "char": " "
     },
     {
         "group": "typescriptBraces",
@@ -11652,67 +11634,25 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 249,
-        "char": "  rpc"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 249,
-        "char": "."
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 249,
-        "char": "on"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 249,
-        "char": "("
-    },
-    {
-        "group": "typescriptString",
-        "linkedGroup": "Constant",
-        "row": 249,
-        "char": "&#39;close&#39;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 249,
-        "char": ", "
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 249,
-        "char": "()"
-    },
-    {
-        "group": "typescriptArrowFuncArg",
-        "linkedGroup": "PreProc",
-        "row": 249,
-        "char": " "
-    },
-    {
-        "group": "typescriptArrowFunc",
-        "linkedGroup": "Type",
-        "row": 249,
-        "char": "&#61;&gt;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 249,
-        "char": " "
+        "char": "  "
     },
     {
         "group": "typescriptBraces",
         "linkedGroup": "Identifier",
         "row": 249,
-        "char": "{\n"
+        "char": "}"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 249,
+        "char": ")"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 249,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -11723,13 +11663,7 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 250,
-        "char": "    "
-    },
-    {
-        "group": "typescriptBOMWindowProp",
-        "linkedGroup": "Type",
-        "row": 250,
-        "char": "window"
+        "char": "  rpc"
     },
     {
         "group": "typescriptDotNotation",
@@ -11738,10 +11672,28 @@ module.exports = [
         "char": "."
     },
     {
-        "group": "typescriptDOMDocMethod",
-        "linkedGroup": "Statement",
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
         "row": 250,
-        "char": "close"
+        "char": "on"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 250,
+        "char": "("
+    },
+    {
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
+        "row": 250,
+        "char": "&#39;close&#39;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 250,
+        "char": ", "
     },
     {
         "group": "typescriptParens",
@@ -11750,10 +11702,28 @@ module.exports = [
         "char": "()"
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
+        "group": "typescriptArrowFuncArg",
+        "linkedGroup": "PreProc",
         "row": 250,
-        "char": ";\n"
+        "char": " "
+    },
+    {
+        "group": "typescriptArrowFunc",
+        "linkedGroup": "Type",
+        "row": 250,
+        "char": "&#61;&gt;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 250,
+        "char": " "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 250,
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -11764,19 +11734,31 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 251,
-        "char": "  "
+        "char": "    "
     },
     {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
+        "group": "typescriptBOMWindowProp",
+        "linkedGroup": "Type",
         "row": 251,
-        "char": "}"
+        "char": "window"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 251,
+        "char": "."
+    },
+    {
+        "group": "typescriptDOMDocMethod",
+        "linkedGroup": "Statement",
+        "row": 251,
+        "char": "close"
     },
     {
         "group": "typescriptParens",
         "linkedGroup": "Normal",
         "row": 251,
-        "char": ")"
+        "char": "()"
     },
     {
         "group": "typescriptBlock",
@@ -11793,67 +11775,25 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 252,
-        "char": "  rpc"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 252,
-        "char": "."
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 252,
-        "char": "on"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 252,
-        "char": "("
-    },
-    {
-        "group": "typescriptString",
-        "linkedGroup": "Constant",
-        "row": 252,
-        "char": "&#39;command&#39;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 252,
-        "char": ", "
-    },
-    {
-        "group": "typescriptArrowFuncArg",
-        "linkedGroup": "PreProc",
-        "row": 252,
-        "char": "command"
-    },
-    {
-        "group": "typescriptArrowFuncDef",
-        "linkedGroup": "typescriptArrowFuncDef",
-        "row": 252,
-        "char": " "
-    },
-    {
-        "group": "typescriptArrowFunc",
-        "linkedGroup": "Type",
-        "row": 252,
-        "char": "&#61;&gt;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 252,
-        "char": " "
+        "char": "  "
     },
     {
         "group": "typescriptBraces",
         "linkedGroup": "Identifier",
         "row": 252,
-        "char": "{\n"
+        "char": "}"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 252,
+        "char": ")"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 252,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -11864,43 +11804,7 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 253,
-        "char": "    "
-    },
-    {
-        "group": "typescriptVariable",
-        "linkedGroup": "Identifier",
-        "row": 253,
-        "char": "const"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 253,
-        "char": " "
-    },
-    {
-        "group": "typescriptVariableDeclaration",
-        "linkedGroup": "typescriptVariableDeclaration",
-        "row": 253,
-        "char": "focusedWindow"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 253,
-        "char": " "
-    },
-    {
-        "group": "typescriptAssign",
-        "linkedGroup": "typescriptAssign",
-        "row": 253,
-        "char": "&#61;"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 253,
-        "char": " BrowserWindow"
+        "char": "  rpc"
     },
     {
         "group": "typescriptDotNotation",
@@ -11912,19 +11816,55 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 253,
-        "char": "getFocusedWindow"
+        "char": "on"
     },
     {
         "group": "typescriptParens",
         "linkedGroup": "Normal",
         "row": 253,
-        "char": "()"
+        "char": "("
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
         "row": 253,
-        "char": ";\n"
+        "char": "&#39;command&#39;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 253,
+        "char": ", "
+    },
+    {
+        "group": "typescriptArrowFuncArg",
+        "linkedGroup": "PreProc",
+        "row": 253,
+        "char": "command"
+    },
+    {
+        "group": "typescriptArrowFuncDef",
+        "linkedGroup": "typescriptArrowFuncDef",
+        "row": 253,
+        "char": " "
+    },
+    {
+        "group": "typescriptArrowFunc",
+        "linkedGroup": "Type",
+        "row": 253,
+        "char": "&#61;&gt;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 253,
+        "char": " "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 253,
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -11935,31 +11875,61 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 254,
-        "char": "    execCommand"
+        "char": "    "
+    },
+    {
+        "group": "typescriptVariable",
+        "linkedGroup": "Identifier",
+        "row": 254,
+        "char": "const"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 254,
+        "char": " "
+    },
+    {
+        "group": "typescriptVariableDeclaration",
+        "linkedGroup": "typescriptVariableDeclaration",
+        "row": 254,
+        "char": "focusedWindow"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 254,
+        "char": " "
+    },
+    {
+        "group": "typescriptAssign",
+        "linkedGroup": "typescriptAssign",
+        "row": 254,
+        "char": "&#61;"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 254,
+        "char": " BrowserWindow"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 254,
+        "char": "."
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 254,
+        "char": "getFocusedWindow"
     },
     {
         "group": "typescriptParens",
         "linkedGroup": "Normal",
         "row": 254,
-        "char": "("
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 254,
-        "char": "command, focusedWindow"
-    },
-    {
-        "group": "typescriptUnaryOp",
-        "linkedGroup": "typescriptUnaryOp",
-        "row": 254,
-        "char": "!"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 254,
-        "char": ")"
+        "char": "()"
     },
     {
         "group": "typescriptBlock",
@@ -11976,13 +11946,25 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 255,
-        "char": "  "
+        "char": "    execCommand"
     },
     {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
         "row": 255,
-        "char": "}"
+        "char": "("
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 255,
+        "char": "command, focusedWindow"
+    },
+    {
+        "group": "typescriptUnaryOp",
+        "linkedGroup": "typescriptUnaryOp",
+        "row": 255,
+        "char": "!"
     },
     {
         "group": "typescriptParens",
@@ -12008,10 +11990,22 @@ module.exports = [
         "char": "  "
     },
     {
-        "group": "typescriptLineComment",
-        "linkedGroup": "Comment",
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
         "row": 256,
-        "char": "// pass on the full screen events from the window to react\n"
+        "char": "}"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 256,
+        "char": ")"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 256,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -12022,79 +12016,13 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 257,
-        "char": "  rpc"
+        "char": "  "
     },
     {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
+        "group": "typescriptLineComment",
+        "linkedGroup": "Comment",
         "row": 257,
-        "char": "."
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 257,
-        "char": "win"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 257,
-        "char": "."
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 257,
-        "char": "on"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 257,
-        "char": "("
-    },
-    {
-        "group": "typescriptString",
-        "linkedGroup": "Constant",
-        "row": 257,
-        "char": "&#39;enter-full-screen&#39;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 257,
-        "char": ", "
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 257,
-        "char": "()"
-    },
-    {
-        "group": "typescriptArrowFuncArg",
-        "linkedGroup": "PreProc",
-        "row": 257,
-        "char": " "
-    },
-    {
-        "group": "typescriptArrowFunc",
-        "linkedGroup": "Type",
-        "row": 257,
-        "char": "&#61;&gt;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 257,
-        "char": " "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 257,
-        "char": "{\n"
+        "char": "// pass on the full screen events from the window to react\n"
     },
     {
         "group": "LineNr",
@@ -12105,7 +12033,7 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 258,
-        "char": "    rpc"
+        "char": "  rpc"
     },
     {
         "group": "typescriptDotNotation",
@@ -12117,7 +12045,19 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 258,
-        "char": "emit"
+        "char": "win"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 258,
+        "char": "."
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 258,
+        "char": "on"
     },
     {
         "group": "typescriptParens",
@@ -12129,7 +12069,7 @@ module.exports = [
         "group": "typescriptString",
         "linkedGroup": "Constant",
         "row": 258,
-        "char": "&#39;enter full screen&#39;"
+        "char": "&#39;enter-full-screen&#39;"
     },
     {
         "group": "typescriptFuncCallArg",
@@ -12138,22 +12078,34 @@ module.exports = [
         "char": ", "
     },
     {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 258,
-        "char": "{}"
-    },
-    {
         "group": "typescriptParens",
         "linkedGroup": "Normal",
         "row": 258,
-        "char": ")"
+        "char": "()"
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
+        "group": "typescriptArrowFuncArg",
+        "linkedGroup": "PreProc",
         "row": 258,
-        "char": ";\n"
+        "char": " "
+    },
+    {
+        "group": "typescriptArrowFunc",
+        "linkedGroup": "Type",
+        "row": 258,
+        "char": "&#61;&gt;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 258,
+        "char": " "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 258,
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -12164,13 +12116,43 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 259,
-        "char": "  "
+        "char": "    rpc"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 259,
+        "char": "."
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 259,
+        "char": "emit"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 259,
+        "char": "("
+    },
+    {
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
+        "row": 259,
+        "char": "&#39;enter full screen&#39;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 259,
+        "char": ", "
     },
     {
         "group": "typescriptBraces",
         "linkedGroup": "Identifier",
         "row": 259,
-        "char": "}"
+        "char": "{}"
     },
     {
         "group": "typescriptParens",
@@ -12193,79 +12175,25 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 260,
-        "char": "  rpc"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 260,
-        "char": "."
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 260,
-        "char": "win"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 260,
-        "char": "."
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 260,
-        "char": "on"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 260,
-        "char": "("
-    },
-    {
-        "group": "typescriptString",
-        "linkedGroup": "Constant",
-        "row": 260,
-        "char": "&#39;leave-full-screen&#39;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 260,
-        "char": ", "
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 260,
-        "char": "()"
-    },
-    {
-        "group": "typescriptArrowFuncArg",
-        "linkedGroup": "PreProc",
-        "row": 260,
-        "char": " "
-    },
-    {
-        "group": "typescriptArrowFunc",
-        "linkedGroup": "Type",
-        "row": 260,
-        "char": "&#61;&gt;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 260,
-        "char": " "
+        "char": "  "
     },
     {
         "group": "typescriptBraces",
         "linkedGroup": "Identifier",
         "row": 260,
-        "char": "{\n"
+        "char": "}"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 260,
+        "char": ")"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 260,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -12276,7 +12204,7 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 261,
-        "char": "    rpc"
+        "char": "  rpc"
     },
     {
         "group": "typescriptDotNotation",
@@ -12288,7 +12216,19 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 261,
-        "char": "emit"
+        "char": "win"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 261,
+        "char": "."
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 261,
+        "char": "on"
     },
     {
         "group": "typescriptParens",
@@ -12300,7 +12240,7 @@ module.exports = [
         "group": "typescriptString",
         "linkedGroup": "Constant",
         "row": 261,
-        "char": "&#39;leave full screen&#39;"
+        "char": "&#39;leave-full-screen&#39;"
     },
     {
         "group": "typescriptFuncCallArg",
@@ -12309,22 +12249,34 @@ module.exports = [
         "char": ", "
     },
     {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 261,
-        "char": "{}"
-    },
-    {
         "group": "typescriptParens",
         "linkedGroup": "Normal",
         "row": 261,
-        "char": ")"
+        "char": "()"
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
+        "group": "typescriptArrowFuncArg",
+        "linkedGroup": "PreProc",
         "row": 261,
-        "char": ";\n"
+        "char": " "
+    },
+    {
+        "group": "typescriptArrowFunc",
+        "linkedGroup": "Type",
+        "row": 261,
+        "char": "&#61;&gt;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 261,
+        "char": " "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 261,
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -12335,13 +12287,43 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 262,
-        "char": "  "
+        "char": "    rpc"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 262,
+        "char": "."
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 262,
+        "char": "emit"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 262,
+        "char": "("
+    },
+    {
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
+        "row": 262,
+        "char": "&#39;leave full screen&#39;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 262,
+        "char": ", "
     },
     {
         "group": "typescriptBraces",
         "linkedGroup": "Identifier",
         "row": 262,
-        "char": "}"
+        "char": "{}"
     },
     {
         "group": "typescriptParens",
@@ -12367,70 +12349,22 @@ module.exports = [
         "char": "  "
     },
     {
-        "group": "typescriptVariable",
+        "group": "typescriptBraces",
         "linkedGroup": "Identifier",
         "row": 263,
-        "char": "const"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 263,
-        "char": " "
-    },
-    {
-        "group": "typescriptVariableDeclaration",
-        "linkedGroup": "typescriptVariableDeclaration",
-        "row": 263,
-        "char": "deleteSessions"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 263,
-        "char": " "
-    },
-    {
-        "group": "typescriptAssign",
-        "linkedGroup": "typescriptAssign",
-        "row": 263,
-        "char": "&#61;"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 263,
-        "char": " "
+        "char": "}"
     },
     {
         "group": "typescriptParens",
         "linkedGroup": "Normal",
         "row": 263,
-        "char": "()"
-    },
-    {
-        "group": "typescriptArrowFuncArg",
-        "linkedGroup": "PreProc",
-        "row": 263,
-        "char": " "
-    },
-    {
-        "group": "typescriptArrowFunc",
-        "linkedGroup": "Type",
-        "row": 263,
-        "char": "&#61;&gt;"
+        "char": ")"
     },
     {
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 263,
-        "char": " "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 263,
-        "char": "{\n"
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -12441,49 +12375,49 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 264,
-        "char": "    sessions"
+        "char": "  "
     },
     {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
+        "group": "typescriptVariable",
+        "linkedGroup": "Identifier",
         "row": 264,
-        "char": "."
+        "char": "const"
     },
     {
-        "group": "typescriptES6SetMethod",
-        "linkedGroup": "Statement",
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
         "row": 264,
-        "char": "forEach"
+        "char": " "
+    },
+    {
+        "group": "typescriptVariableDeclaration",
+        "linkedGroup": "typescriptVariableDeclaration",
+        "row": 264,
+        "char": "deleteSessions"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 264,
+        "char": " "
+    },
+    {
+        "group": "typescriptAssign",
+        "linkedGroup": "typescriptAssign",
+        "row": 264,
+        "char": "&#61;"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 264,
+        "char": " "
     },
     {
         "group": "typescriptParens",
         "linkedGroup": "Normal",
         "row": 264,
-        "char": "(("
-    },
-    {
-        "group": "typescriptCall",
-        "linkedGroup": "PreProc",
-        "row": 264,
-        "char": "session"
-    },
-    {
-        "group": "typescriptFuncComma",
-        "linkedGroup": "Statement",
-        "row": 264,
-        "char": ","
-    },
-    {
-        "group": "typescriptCall",
-        "linkedGroup": "PreProc",
-        "row": 264,
-        "char": " key"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 264,
-        "char": ")"
+        "char": "()"
     },
     {
         "group": "typescriptArrowFuncArg",
@@ -12498,8 +12432,8 @@ module.exports = [
         "char": "&#61;&gt;"
     },
     {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
         "row": 264,
         "char": " "
     },
@@ -12518,7 +12452,7 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 265,
-        "char": "      session"
+        "char": "    sessions"
     },
     {
         "group": "typescriptDotNotation",
@@ -12527,22 +12461,64 @@ module.exports = [
         "char": "."
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
+        "group": "typescriptES6SetMethod",
+        "linkedGroup": "Statement",
         "row": 265,
-        "char": "removeAllListeners"
+        "char": "forEach"
     },
     {
         "group": "typescriptParens",
         "linkedGroup": "Normal",
         "row": 265,
-        "char": "()"
+        "char": "(("
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
+        "group": "typescriptCall",
+        "linkedGroup": "PreProc",
         "row": 265,
-        "char": ";\n"
+        "char": "session"
+    },
+    {
+        "group": "typescriptFuncComma",
+        "linkedGroup": "Statement",
+        "row": 265,
+        "char": ","
+    },
+    {
+        "group": "typescriptCall",
+        "linkedGroup": "PreProc",
+        "row": 265,
+        "char": " key"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 265,
+        "char": ")"
+    },
+    {
+        "group": "typescriptArrowFuncArg",
+        "linkedGroup": "PreProc",
+        "row": 265,
+        "char": " "
+    },
+    {
+        "group": "typescriptArrowFunc",
+        "linkedGroup": "Type",
+        "row": 265,
+        "char": "&#61;&gt;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 265,
+        "char": " "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 265,
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -12565,7 +12541,7 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 266,
-        "char": "destroy"
+        "char": "removeAllListeners"
     },
     {
         "group": "typescriptParens",
@@ -12588,7 +12564,7 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 267,
-        "char": "      sessions"
+        "char": "      session"
     },
     {
         "group": "typescriptDotNotation",
@@ -12597,28 +12573,16 @@ module.exports = [
         "char": "."
     },
     {
-        "group": "typescriptCacheMethod",
-        "linkedGroup": "Statement",
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
         "row": 267,
-        "char": "delete"
+        "char": "destroy"
     },
     {
         "group": "typescriptParens",
         "linkedGroup": "Normal",
         "row": 267,
-        "char": "("
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 267,
-        "char": "key"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 267,
-        "char": ")"
+        "char": "()"
     },
     {
         "group": "typescriptBlock",
@@ -12635,13 +12599,31 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 268,
-        "char": "    "
+        "char": "      sessions"
     },
     {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
         "row": 268,
-        "char": "}"
+        "char": "."
+    },
+    {
+        "group": "typescriptCacheMethod",
+        "linkedGroup": "Statement",
+        "row": 268,
+        "char": "delete"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 268,
+        "char": "("
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 268,
+        "char": "key"
     },
     {
         "group": "typescriptParens",
@@ -12664,13 +12646,19 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 269,
-        "char": "  "
+        "char": "    "
     },
     {
         "group": "typescriptBraces",
         "linkedGroup": "Identifier",
         "row": 269,
         "char": "}"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 269,
+        "char": ")"
     },
     {
         "group": "typescriptBlock",
@@ -12690,10 +12678,16 @@ module.exports = [
         "char": "  "
     },
     {
-        "group": "typescriptLineComment",
-        "linkedGroup": "Comment",
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
         "row": 270,
-        "char": "// we reset the rpc channel only upon\n"
+        "char": "}"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 270,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -12710,7 +12704,7 @@ module.exports = [
         "group": "typescriptLineComment",
         "linkedGroup": "Comment",
         "row": 271,
-        "char": "// subsequent refreshes (ie: F5)\n"
+        "char": "// we reset the rpc channel only upon\n"
     },
     {
         "group": "LineNr",
@@ -12724,52 +12718,10 @@ module.exports = [
         "char": "  "
     },
     {
-        "group": "typescriptVariable",
-        "linkedGroup": "Identifier",
+        "group": "typescriptLineComment",
+        "linkedGroup": "Comment",
         "row": 272,
-        "char": "let"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 272,
-        "char": " "
-    },
-    {
-        "group": "typescriptVariableDeclaration",
-        "linkedGroup": "typescriptVariableDeclaration",
-        "row": 272,
-        "char": "i"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 272,
-        "char": " "
-    },
-    {
-        "group": "typescriptAssign",
-        "linkedGroup": "typescriptAssign",
-        "row": 272,
-        "char": "&#61;"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 272,
-        "char": " "
-    },
-    {
-        "group": "typescriptNumber",
-        "linkedGroup": "Constant",
-        "row": 272,
-        "char": "0"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 272,
-        "char": ";\n"
+        "char": "// subsequent refreshes (ie: F5)\n"
     },
     {
         "group": "LineNr",
@@ -12783,82 +12735,52 @@ module.exports = [
         "char": "  "
     },
     {
-        "group": "typescriptBOMWindowProp",
-        "linkedGroup": "Type",
-        "row": 273,
-        "char": "window"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 273,
-        "char": "."
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 273,
-        "char": "webContents"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 273,
-        "char": "."
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 273,
-        "char": "on"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 273,
-        "char": "("
-    },
-    {
-        "group": "typescriptString",
-        "linkedGroup": "Constant",
-        "row": 273,
-        "char": "&#39;did-navigate&#39;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 273,
-        "char": ", "
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 273,
-        "char": "()"
-    },
-    {
-        "group": "typescriptArrowFuncArg",
-        "linkedGroup": "PreProc",
-        "row": 273,
-        "char": " "
-    },
-    {
-        "group": "typescriptArrowFunc",
-        "linkedGroup": "Type",
-        "row": 273,
-        "char": "&#61;&gt;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 273,
-        "char": " "
-    },
-    {
-        "group": "typescriptBraces",
+        "group": "typescriptVariable",
         "linkedGroup": "Identifier",
         "row": 273,
-        "char": "{\n"
+        "char": "let"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 273,
+        "char": " "
+    },
+    {
+        "group": "typescriptVariableDeclaration",
+        "linkedGroup": "typescriptVariableDeclaration",
+        "row": 273,
+        "char": "i"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 273,
+        "char": " "
+    },
+    {
+        "group": "typescriptAssign",
+        "linkedGroup": "typescriptAssign",
+        "row": 273,
+        "char": "&#61;"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 273,
+        "char": " "
+    },
+    {
+        "group": "typescriptNumber",
+        "linkedGroup": "Constant",
+        "row": 273,
+        "char": "0"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 273,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -12869,19 +12791,37 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 274,
-        "char": "    "
+        "char": "  "
     },
     {
-        "group": "typescriptConditional",
-        "linkedGroup": "Statement",
+        "group": "typescriptBOMWindowProp",
+        "linkedGroup": "Type",
         "row": 274,
-        "char": "if"
+        "char": "window"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 274,
+        "char": "."
     },
     {
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 274,
-        "char": " "
+        "char": "webContents"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 274,
+        "char": "."
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 274,
+        "char": "on"
     },
     {
         "group": "typescriptParens",
@@ -12890,26 +12830,38 @@ module.exports = [
         "char": "("
     },
     {
-        "group": "typescriptConditionalParen",
-        "linkedGroup": "typescriptConditionalParen",
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
         "row": 274,
-        "char": "i"
+        "char": "&#39;did-navigate&#39;"
     },
     {
-        "group": "typescriptBinaryOp",
-        "linkedGroup": "typescriptBinaryOp",
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
         "row": 274,
-        "char": "++"
+        "char": ", "
     },
     {
         "group": "typescriptParens",
         "linkedGroup": "Normal",
         "row": 274,
-        "char": ")"
+        "char": "()"
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
+        "group": "typescriptArrowFuncArg",
+        "linkedGroup": "PreProc",
+        "row": 274,
+        "char": " "
+    },
+    {
+        "group": "typescriptArrowFunc",
+        "linkedGroup": "Type",
+        "row": 274,
+        "char": "&#61;&gt;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
         "row": 274,
         "char": " "
     },
@@ -12928,19 +12880,55 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 275,
-        "char": "      deleteSessions"
+        "char": "    "
     },
     {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
+        "group": "typescriptConditional",
+        "linkedGroup": "Statement",
         "row": 275,
-        "char": "()"
+        "char": "if"
     },
     {
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 275,
-        "char": ";\n"
+        "char": " "
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 275,
+        "char": "("
+    },
+    {
+        "group": "typescriptConditionalParen",
+        "linkedGroup": "typescriptConditionalParen",
+        "row": 275,
+        "char": "i"
+    },
+    {
+        "group": "typescriptBinaryOp",
+        "linkedGroup": "typescriptBinaryOp",
+        "row": 275,
+        "char": "++"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 275,
+        "char": ")"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 275,
+        "char": " "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 275,
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -12951,13 +12939,19 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 276,
-        "char": "    "
+        "char": "      deleteSessions"
     },
     {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
         "row": 276,
-        "char": "}\n"
+        "char": "()"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 276,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -12968,25 +12962,13 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 277,
-        "char": "  "
+        "char": "    "
     },
     {
         "group": "typescriptBraces",
         "linkedGroup": "Identifier",
         "row": 277,
-        "char": "}"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 277,
-        "char": ")"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 277,
-        "char": ";\n"
+        "char": "}\n"
     },
     {
         "group": "LineNr",
@@ -12994,10 +12976,28 @@ module.exports = [
         "char": "278"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
         "row": 278,
-        "char": "\n"
+        "char": "  "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 278,
+        "char": "}"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 278,
+        "char": ")"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 278,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -13005,16 +13005,10 @@ module.exports = [
         "char": "279"
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 279,
-        "char": "  "
-    },
-    {
-        "group": "typescriptLineComment",
-        "linkedGroup": "Comment",
-        "row": 279,
-        "char": "// If file is dropped onto the terminal window, navigate event is prevented\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -13031,7 +13025,7 @@ module.exports = [
         "group": "typescriptLineComment",
         "linkedGroup": "Comment",
         "row": 280,
-        "char": "// and his path is added to active session.\n"
+        "char": "// If file is dropped onto the terminal window, navigate event is prevented\n"
     },
     {
         "group": "LineNr",
@@ -13045,106 +13039,10 @@ module.exports = [
         "char": "  "
     },
     {
-        "group": "typescriptBOMWindowProp",
-        "linkedGroup": "Type",
+        "group": "typescriptLineComment",
+        "linkedGroup": "Comment",
         "row": 281,
-        "char": "window"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 281,
-        "char": "."
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 281,
-        "char": "webContents"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 281,
-        "char": "."
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 281,
-        "char": "on"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 281,
-        "char": "("
-    },
-    {
-        "group": "typescriptString",
-        "linkedGroup": "Constant",
-        "row": 281,
-        "char": "&#39;will-navigate&#39;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 281,
-        "char": ", "
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 281,
-        "char": "("
-    },
-    {
-        "group": "typescriptCall",
-        "linkedGroup": "PreProc",
-        "row": 281,
-        "char": "event"
-    },
-    {
-        "group": "typescriptFuncComma",
-        "linkedGroup": "Statement",
-        "row": 281,
-        "char": ","
-    },
-    {
-        "group": "typescriptCall",
-        "linkedGroup": "PreProc",
-        "row": 281,
-        "char": " url"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 281,
-        "char": ")"
-    },
-    {
-        "group": "typescriptArrowFuncArg",
-        "linkedGroup": "PreProc",
-        "row": 281,
-        "char": " "
-    },
-    {
-        "group": "typescriptArrowFunc",
-        "linkedGroup": "Type",
-        "row": 281,
-        "char": "&#61;&gt;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 281,
-        "char": " "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 281,
-        "char": "{\n"
+        "char": "// and his path is added to active session.\n"
     },
     {
         "group": "LineNr",
@@ -13155,97 +13053,13 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 282,
-        "char": "    "
+        "char": "  "
     },
     {
-        "group": "typescriptVariable",
-        "linkedGroup": "Identifier",
+        "group": "typescriptBOMWindowProp",
+        "linkedGroup": "Type",
         "row": 282,
-        "char": "const"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 282,
-        "char": " "
-    },
-    {
-        "group": "typescriptVariableDeclaration",
-        "linkedGroup": "typescriptVariableDeclaration",
-        "row": 282,
-        "char": "protocol"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 282,
-        "char": " "
-    },
-    {
-        "group": "typescriptAssign",
-        "linkedGroup": "typescriptAssign",
-        "row": 282,
-        "char": "&#61;"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 282,
-        "char": " "
-    },
-    {
-        "group": "typescriptOperator",
-        "linkedGroup": "Identifier",
-        "row": 282,
-        "char": "typeof"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 282,
-        "char": " url "
-    },
-    {
-        "group": "typescriptBinaryOp",
-        "linkedGroup": "typescriptBinaryOp",
-        "row": 282,
-        "char": "&#61;&#61;&#61;"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 282,
-        "char": " "
-    },
-    {
-        "group": "typescriptString",
-        "linkedGroup": "Constant",
-        "row": 282,
-        "char": "&#39;string&#39;"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 282,
-        "char": " &amp;&amp; parseUrl"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 282,
-        "char": "("
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 282,
-        "char": "url"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 282,
-        "char": ")"
+        "char": "window"
     },
     {
         "group": "typescriptDotNotation",
@@ -13254,16 +13068,94 @@ module.exports = [
         "char": "."
     },
     {
-        "group": "typescriptURLUtilsProp",
-        "linkedGroup": "Statement",
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
         "row": 282,
-        "char": "protocol"
+        "char": "webContents"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 282,
+        "char": "."
     },
     {
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 282,
-        "char": ";\n"
+        "char": "on"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 282,
+        "char": "("
+    },
+    {
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
+        "row": 282,
+        "char": "&#39;will-navigate&#39;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 282,
+        "char": ", "
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 282,
+        "char": "("
+    },
+    {
+        "group": "typescriptCall",
+        "linkedGroup": "PreProc",
+        "row": 282,
+        "char": "event"
+    },
+    {
+        "group": "typescriptFuncComma",
+        "linkedGroup": "Statement",
+        "row": 282,
+        "char": ","
+    },
+    {
+        "group": "typescriptCall",
+        "linkedGroup": "PreProc",
+        "row": 282,
+        "char": " url"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 282,
+        "char": ")"
+    },
+    {
+        "group": "typescriptArrowFuncArg",
+        "linkedGroup": "PreProc",
+        "row": 282,
+        "char": " "
+    },
+    {
+        "group": "typescriptArrowFunc",
+        "linkedGroup": "Type",
+        "row": 282,
+        "char": "&#61;&gt;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 282,
+        "char": " "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 282,
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -13277,10 +13169,10 @@ module.exports = [
         "char": "    "
     },
     {
-        "group": "typescriptConditional",
-        "linkedGroup": "Statement",
+        "group": "typescriptVariable",
+        "linkedGroup": "Identifier",
         "row": 283,
-        "char": "if"
+        "char": "const"
     },
     {
         "group": "typescriptBlock",
@@ -13289,16 +13181,40 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
+        "group": "typescriptVariableDeclaration",
+        "linkedGroup": "typescriptVariableDeclaration",
         "row": 283,
-        "char": "("
+        "char": "protocol"
     },
     {
-        "group": "typescriptConditionalParen",
-        "linkedGroup": "typescriptConditionalParen",
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
         "row": 283,
-        "char": "protocol "
+        "char": " "
+    },
+    {
+        "group": "typescriptAssign",
+        "linkedGroup": "typescriptAssign",
+        "row": 283,
+        "char": "&#61;"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 283,
+        "char": " "
+    },
+    {
+        "group": "typescriptOperator",
+        "linkedGroup": "Identifier",
+        "row": 283,
+        "char": "typeof"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 283,
+        "char": " url "
     },
     {
         "group": "typescriptBinaryOp",
@@ -13307,8 +13223,8 @@ module.exports = [
         "char": "&#61;&#61;&#61;"
     },
     {
-        "group": "typescriptConditionalParen",
-        "linkedGroup": "typescriptConditionalParen",
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
         "row": 283,
         "char": " "
     },
@@ -13316,7 +13232,25 @@ module.exports = [
         "group": "typescriptString",
         "linkedGroup": "Constant",
         "row": 283,
-        "char": "&#39;file:&#39;"
+        "char": "&#39;string&#39;"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 283,
+        "char": " &amp;&amp; parseUrl"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 283,
+        "char": "("
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 283,
+        "char": "url"
     },
     {
         "group": "typescriptParens",
@@ -13325,16 +13259,22 @@ module.exports = [
         "char": ")"
     },
     {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 283,
+        "char": "."
+    },
+    {
+        "group": "typescriptURLUtilsProp",
+        "linkedGroup": "Statement",
+        "row": 283,
+        "char": "protocol"
+    },
+    {
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 283,
-        "char": " "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 283,
-        "char": "{\n"
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -13345,31 +13285,67 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 284,
-        "char": "      event"
+        "char": "    "
     },
     {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 284,
-        "char": "."
-    },
-    {
-        "group": "typescriptDOMEventMethod",
+        "group": "typescriptConditional",
         "linkedGroup": "Statement",
         "row": 284,
-        "char": "preventDefault"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 284,
-        "char": "()"
+        "char": "if"
     },
     {
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 284,
-        "char": ";\n"
+        "char": " "
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 284,
+        "char": "("
+    },
+    {
+        "group": "typescriptConditionalParen",
+        "linkedGroup": "typescriptConditionalParen",
+        "row": 284,
+        "char": "protocol "
+    },
+    {
+        "group": "typescriptBinaryOp",
+        "linkedGroup": "typescriptBinaryOp",
+        "row": 284,
+        "char": "&#61;&#61;&#61;"
+    },
+    {
+        "group": "typescriptConditionalParen",
+        "linkedGroup": "typescriptConditionalParen",
+        "row": 284,
+        "char": " "
+    },
+    {
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
+        "row": 284,
+        "char": "&#39;file:&#39;"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 284,
+        "char": ")"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 284,
+        "char": " "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 284,
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -13377,10 +13353,34 @@ module.exports = [
         "char": "285"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
         "row": 285,
-        "char": "\n"
+        "char": "      event"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 285,
+        "char": "."
+    },
+    {
+        "group": "typescriptDOMEventMethod",
+        "linkedGroup": "Statement",
+        "row": 285,
+        "char": "preventDefault"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 285,
+        "char": "()"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 285,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -13388,70 +13388,10 @@ module.exports = [
         "char": "286"
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 286,
-        "char": "      "
-    },
-    {
-        "group": "typescriptVariable",
-        "linkedGroup": "Identifier",
-        "row": 286,
-        "char": "const"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 286,
-        "char": " "
-    },
-    {
-        "group": "typescriptVariableDeclaration",
-        "linkedGroup": "typescriptVariableDeclaration",
-        "row": 286,
-        "char": "path"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 286,
-        "char": " "
-    },
-    {
-        "group": "typescriptAssign",
-        "linkedGroup": "typescriptAssign",
-        "row": 286,
-        "char": "&#61;"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 286,
-        "char": " fileUriToPath"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 286,
-        "char": "("
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 286,
-        "char": "url"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 286,
-        "char": ")"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 286,
-        "char": ";\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -13459,10 +13399,70 @@ module.exports = [
         "char": "287"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
         "row": 287,
-        "char": "\n"
+        "char": "      "
+    },
+    {
+        "group": "typescriptVariable",
+        "linkedGroup": "Identifier",
+        "row": 287,
+        "char": "const"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 287,
+        "char": " "
+    },
+    {
+        "group": "typescriptVariableDeclaration",
+        "linkedGroup": "typescriptVariableDeclaration",
+        "row": 287,
+        "char": "path"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 287,
+        "char": " "
+    },
+    {
+        "group": "typescriptAssign",
+        "linkedGroup": "typescriptAssign",
+        "row": 287,
+        "char": "&#61;"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 287,
+        "char": " fileUriToPath"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 287,
+        "char": "("
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 287,
+        "char": "url"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 287,
+        "char": ")"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 287,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -13470,118 +13470,10 @@ module.exports = [
         "char": "288"
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 288,
-        "char": "      rpc"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 288,
-        "char": "."
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 288,
-        "char": "emit"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 288,
-        "char": "("
-    },
-    {
-        "group": "typescriptString",
-        "linkedGroup": "Constant",
-        "row": 288,
-        "char": "&#39;session data send&#39;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 288,
-        "char": ", "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 288,
-        "char": "{"
-    },
-    {
-        "group": "typescriptObjectLiteral",
-        "linkedGroup": "typescriptObjectLiteral",
-        "row": 288,
-        "char": " "
-    },
-    {
-        "group": "typescriptObjectLabel",
-        "linkedGroup": "Statement",
-        "row": 288,
-        "char": "data"
-    },
-    {
-        "group": "typescriptObjectColon",
-        "linkedGroup": "typescriptObjectColon",
-        "row": 288,
-        "char": ":"
-    },
-    {
-        "group": "typescriptObjectLiteral",
-        "linkedGroup": "typescriptObjectLiteral",
-        "row": 288,
-        "char": " path, "
-    },
-    {
-        "group": "typescriptObjectLabel",
-        "linkedGroup": "Statement",
-        "row": 288,
-        "char": "escaped"
-    },
-    {
-        "group": "typescriptObjectColon",
-        "linkedGroup": "typescriptObjectColon",
-        "row": 288,
-        "char": ":"
-    },
-    {
-        "group": "typescriptObjectLiteral",
-        "linkedGroup": "typescriptObjectLiteral",
-        "row": 288,
-        "char": " "
-    },
-    {
-        "group": "typescriptBoolean",
-        "linkedGroup": "Constant",
-        "row": 288,
-        "char": "true"
-    },
-    {
-        "group": "typescriptObjectLiteral",
-        "linkedGroup": "typescriptObjectLiteral",
-        "row": 288,
-        "char": " "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 288,
-        "char": "}"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 288,
-        "char": ")"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 288,
-        "char": ";\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -13592,43 +13484,19 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 289,
-        "char": "    "
+        "char": "      rpc"
     },
     {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
         "row": 289,
-        "char": "}"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 289,
-        "char": " "
-    },
-    {
-        "group": "typescriptConditional",
-        "linkedGroup": "Statement",
-        "row": 289,
-        "char": "else"
+        "char": "."
     },
     {
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 289,
-        "char": " "
-    },
-    {
-        "group": "typescriptConditional",
-        "linkedGroup": "Statement",
-        "row": 289,
-        "char": "if"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 289,
-        "char": " "
+        "char": "emit"
     },
     {
         "group": "typescriptParens",
@@ -13637,52 +13505,82 @@ module.exports = [
         "char": "("
     },
     {
-        "group": "typescriptConditionalParen",
-        "linkedGroup": "typescriptConditionalParen",
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
         "row": 289,
-        "char": "protocol "
+        "char": "&#39;session data send&#39;"
     },
     {
-        "group": "typescriptBinaryOp",
-        "linkedGroup": "typescriptBinaryOp",
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
         "row": 289,
-        "char": "&#61;&#61;&#61;"
+        "char": ", "
     },
     {
-        "group": "typescriptConditionalParen",
-        "linkedGroup": "typescriptConditionalParen",
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 289,
+        "char": "{"
+    },
+    {
+        "group": "typescriptObjectLiteral",
+        "linkedGroup": "typescriptObjectLiteral",
         "row": 289,
         "char": " "
     },
     {
-        "group": "typescriptString",
-        "linkedGroup": "Constant",
+        "group": "typescriptObjectLabel",
+        "linkedGroup": "Statement",
         "row": 289,
-        "char": "&#39;http:&#39;"
+        "char": "data"
     },
     {
-        "group": "typescriptConditionalParen",
-        "linkedGroup": "typescriptConditionalParen",
+        "group": "typescriptObjectColon",
+        "linkedGroup": "typescriptObjectColon",
         "row": 289,
-        "char": " || protocol "
+        "char": ":"
     },
     {
-        "group": "typescriptBinaryOp",
-        "linkedGroup": "typescriptBinaryOp",
+        "group": "typescriptObjectLiteral",
+        "linkedGroup": "typescriptObjectLiteral",
         "row": 289,
-        "char": "&#61;&#61;&#61;"
+        "char": " path, "
     },
     {
-        "group": "typescriptConditionalParen",
-        "linkedGroup": "typescriptConditionalParen",
+        "group": "typescriptObjectLabel",
+        "linkedGroup": "Statement",
+        "row": 289,
+        "char": "escaped"
+    },
+    {
+        "group": "typescriptObjectColon",
+        "linkedGroup": "typescriptObjectColon",
+        "row": 289,
+        "char": ":"
+    },
+    {
+        "group": "typescriptObjectLiteral",
+        "linkedGroup": "typescriptObjectLiteral",
         "row": 289,
         "char": " "
     },
     {
-        "group": "typescriptString",
+        "group": "typescriptBoolean",
         "linkedGroup": "Constant",
         "row": 289,
-        "char": "&#39;https:&#39;"
+        "char": "true"
+    },
+    {
+        "group": "typescriptObjectLiteral",
+        "linkedGroup": "typescriptObjectLiteral",
+        "row": 289,
+        "char": " "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 289,
+        "char": "}"
     },
     {
         "group": "typescriptParens",
@@ -13694,13 +13592,7 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 289,
-        "char": " "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 289,
-        "char": "{\n"
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -13711,31 +13603,115 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 290,
-        "char": "      event"
+        "char": "    "
     },
     {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
         "row": 290,
-        "char": "."
-    },
-    {
-        "group": "typescriptDOMEventMethod",
-        "linkedGroup": "Statement",
-        "row": 290,
-        "char": "preventDefault"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 290,
-        "char": "()"
+        "char": "}"
     },
     {
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 290,
-        "char": ";\n"
+        "char": " "
+    },
+    {
+        "group": "typescriptConditional",
+        "linkedGroup": "Statement",
+        "row": 290,
+        "char": "else"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 290,
+        "char": " "
+    },
+    {
+        "group": "typescriptConditional",
+        "linkedGroup": "Statement",
+        "row": 290,
+        "char": "if"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 290,
+        "char": " "
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 290,
+        "char": "("
+    },
+    {
+        "group": "typescriptConditionalParen",
+        "linkedGroup": "typescriptConditionalParen",
+        "row": 290,
+        "char": "protocol "
+    },
+    {
+        "group": "typescriptBinaryOp",
+        "linkedGroup": "typescriptBinaryOp",
+        "row": 290,
+        "char": "&#61;&#61;&#61;"
+    },
+    {
+        "group": "typescriptConditionalParen",
+        "linkedGroup": "typescriptConditionalParen",
+        "row": 290,
+        "char": " "
+    },
+    {
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
+        "row": 290,
+        "char": "&#39;http:&#39;"
+    },
+    {
+        "group": "typescriptConditionalParen",
+        "linkedGroup": "typescriptConditionalParen",
+        "row": 290,
+        "char": " || protocol "
+    },
+    {
+        "group": "typescriptBinaryOp",
+        "linkedGroup": "typescriptBinaryOp",
+        "row": 290,
+        "char": "&#61;&#61;&#61;"
+    },
+    {
+        "group": "typescriptConditionalParen",
+        "linkedGroup": "typescriptConditionalParen",
+        "row": 290,
+        "char": " "
+    },
+    {
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
+        "row": 290,
+        "char": "&#39;https:&#39;"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 290,
+        "char": ")"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 290,
+        "char": " "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 290,
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -13746,7 +13722,7 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 291,
-        "char": "      rpc"
+        "char": "      event"
     },
     {
         "group": "typescriptDotNotation",
@@ -13755,70 +13731,16 @@ module.exports = [
         "char": "."
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 291,
-        "char": "emit"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 291,
-        "char": "("
-    },
-    {
-        "group": "typescriptString",
-        "linkedGroup": "Constant",
-        "row": 291,
-        "char": "&#39;session data send&#39;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 291,
-        "char": ", "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 291,
-        "char": "{"
-    },
-    {
-        "group": "typescriptObjectLiteral",
-        "linkedGroup": "typescriptObjectLiteral",
-        "row": 291,
-        "char": " "
-    },
-    {
-        "group": "typescriptObjectLabel",
+        "group": "typescriptDOMEventMethod",
         "linkedGroup": "Statement",
         "row": 291,
-        "char": "data"
-    },
-    {
-        "group": "typescriptObjectColon",
-        "linkedGroup": "typescriptObjectColon",
-        "row": 291,
-        "char": ":"
-    },
-    {
-        "group": "typescriptObjectLiteral",
-        "linkedGroup": "typescriptObjectLiteral",
-        "row": 291,
-        "char": " url "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 291,
-        "char": "}"
+        "char": "preventDefault"
     },
     {
         "group": "typescriptParens",
         "linkedGroup": "Normal",
         "row": 291,
-        "char": ")"
+        "char": "()"
     },
     {
         "group": "typescriptBlock",
@@ -13835,13 +13757,85 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 292,
-        "char": "    "
+        "char": "      rpc"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 292,
+        "char": "."
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 292,
+        "char": "emit"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 292,
+        "char": "("
+    },
+    {
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
+        "row": 292,
+        "char": "&#39;session data send&#39;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 292,
+        "char": ", "
     },
     {
         "group": "typescriptBraces",
         "linkedGroup": "Identifier",
         "row": 292,
-        "char": "}\n"
+        "char": "{"
+    },
+    {
+        "group": "typescriptObjectLiteral",
+        "linkedGroup": "typescriptObjectLiteral",
+        "row": 292,
+        "char": " "
+    },
+    {
+        "group": "typescriptObjectLabel",
+        "linkedGroup": "Statement",
+        "row": 292,
+        "char": "data"
+    },
+    {
+        "group": "typescriptObjectColon",
+        "linkedGroup": "typescriptObjectColon",
+        "row": 292,
+        "char": ":"
+    },
+    {
+        "group": "typescriptObjectLiteral",
+        "linkedGroup": "typescriptObjectLiteral",
+        "row": 292,
+        "char": " url "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 292,
+        "char": "}"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 292,
+        "char": ")"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 292,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -13852,25 +13846,13 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 293,
-        "char": "  "
+        "char": "    "
     },
     {
         "group": "typescriptBraces",
         "linkedGroup": "Identifier",
         "row": 293,
-        "char": "}"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 293,
-        "char": ")"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 293,
-        "char": ";\n"
+        "char": "}\n"
     },
     {
         "group": "LineNr",
@@ -13878,10 +13860,28 @@ module.exports = [
         "char": "294"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
         "row": 294,
-        "char": "\n"
+        "char": "  "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 294,
+        "char": "}"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 294,
+        "char": ")"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 294,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -13889,16 +13889,10 @@ module.exports = [
         "char": "295"
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 295,
-        "char": "  "
-    },
-    {
-        "group": "typescriptLineComment",
-        "linkedGroup": "Comment",
-        "row": 295,
-        "char": "// xterm makes link clickable\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -13912,106 +13906,10 @@ module.exports = [
         "char": "  "
     },
     {
-        "group": "typescriptBOMWindowProp",
-        "linkedGroup": "Type",
+        "group": "typescriptLineComment",
+        "linkedGroup": "Comment",
         "row": 296,
-        "char": "window"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 296,
-        "char": "."
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 296,
-        "char": "webContents"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 296,
-        "char": "."
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 296,
-        "char": "on"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 296,
-        "char": "("
-    },
-    {
-        "group": "typescriptString",
-        "linkedGroup": "Constant",
-        "row": 296,
-        "char": "&#39;new-window&#39;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 296,
-        "char": ", "
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 296,
-        "char": "("
-    },
-    {
-        "group": "typescriptCall",
-        "linkedGroup": "PreProc",
-        "row": 296,
-        "char": "event"
-    },
-    {
-        "group": "typescriptFuncComma",
-        "linkedGroup": "Statement",
-        "row": 296,
-        "char": ","
-    },
-    {
-        "group": "typescriptCall",
-        "linkedGroup": "PreProc",
-        "row": 296,
-        "char": " url"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 296,
-        "char": ")"
-    },
-    {
-        "group": "typescriptArrowFuncArg",
-        "linkedGroup": "PreProc",
-        "row": 296,
-        "char": " "
-    },
-    {
-        "group": "typescriptArrowFunc",
-        "linkedGroup": "Type",
-        "row": 296,
-        "char": "&#61;&gt;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 296,
-        "char": " "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 296,
-        "char": "{\n"
+        "char": "// xterm makes link clickable\n"
     },
     {
         "group": "LineNr",
@@ -14022,97 +13920,13 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 297,
-        "char": "    "
+        "char": "  "
     },
     {
-        "group": "typescriptVariable",
-        "linkedGroup": "Identifier",
+        "group": "typescriptBOMWindowProp",
+        "linkedGroup": "Type",
         "row": 297,
-        "char": "const"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 297,
-        "char": " "
-    },
-    {
-        "group": "typescriptVariableDeclaration",
-        "linkedGroup": "typescriptVariableDeclaration",
-        "row": 297,
-        "char": "protocol"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 297,
-        "char": " "
-    },
-    {
-        "group": "typescriptAssign",
-        "linkedGroup": "typescriptAssign",
-        "row": 297,
-        "char": "&#61;"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 297,
-        "char": " "
-    },
-    {
-        "group": "typescriptOperator",
-        "linkedGroup": "Identifier",
-        "row": 297,
-        "char": "typeof"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 297,
-        "char": " url "
-    },
-    {
-        "group": "typescriptBinaryOp",
-        "linkedGroup": "typescriptBinaryOp",
-        "row": 297,
-        "char": "&#61;&#61;&#61;"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 297,
-        "char": " "
-    },
-    {
-        "group": "typescriptString",
-        "linkedGroup": "Constant",
-        "row": 297,
-        "char": "&#39;string&#39;"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 297,
-        "char": " &amp;&amp; parseUrl"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 297,
-        "char": "("
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 297,
-        "char": "url"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 297,
-        "char": ")"
+        "char": "window"
     },
     {
         "group": "typescriptDotNotation",
@@ -14121,16 +13935,94 @@ module.exports = [
         "char": "."
     },
     {
-        "group": "typescriptURLUtilsProp",
-        "linkedGroup": "Statement",
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
         "row": 297,
-        "char": "protocol"
+        "char": "webContents"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 297,
+        "char": "."
     },
     {
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 297,
-        "char": ";\n"
+        "char": "on"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 297,
+        "char": "("
+    },
+    {
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
+        "row": 297,
+        "char": "&#39;new-window&#39;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 297,
+        "char": ", "
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 297,
+        "char": "("
+    },
+    {
+        "group": "typescriptCall",
+        "linkedGroup": "PreProc",
+        "row": 297,
+        "char": "event"
+    },
+    {
+        "group": "typescriptFuncComma",
+        "linkedGroup": "Statement",
+        "row": 297,
+        "char": ","
+    },
+    {
+        "group": "typescriptCall",
+        "linkedGroup": "PreProc",
+        "row": 297,
+        "char": " url"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 297,
+        "char": ")"
+    },
+    {
+        "group": "typescriptArrowFuncArg",
+        "linkedGroup": "PreProc",
+        "row": 297,
+        "char": " "
+    },
+    {
+        "group": "typescriptArrowFunc",
+        "linkedGroup": "Type",
+        "row": 297,
+        "char": "&#61;&gt;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 297,
+        "char": " "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 297,
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -14144,16 +14036,76 @@ module.exports = [
         "char": "    "
     },
     {
-        "group": "typescriptConditional",
-        "linkedGroup": "Statement",
+        "group": "typescriptVariable",
+        "linkedGroup": "Identifier",
         "row": 298,
-        "char": "if"
+        "char": "const"
     },
     {
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 298,
         "char": " "
+    },
+    {
+        "group": "typescriptVariableDeclaration",
+        "linkedGroup": "typescriptVariableDeclaration",
+        "row": 298,
+        "char": "protocol"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 298,
+        "char": " "
+    },
+    {
+        "group": "typescriptAssign",
+        "linkedGroup": "typescriptAssign",
+        "row": 298,
+        "char": "&#61;"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 298,
+        "char": " "
+    },
+    {
+        "group": "typescriptOperator",
+        "linkedGroup": "Identifier",
+        "row": 298,
+        "char": "typeof"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 298,
+        "char": " url "
+    },
+    {
+        "group": "typescriptBinaryOp",
+        "linkedGroup": "typescriptBinaryOp",
+        "row": 298,
+        "char": "&#61;&#61;&#61;"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 298,
+        "char": " "
+    },
+    {
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
+        "row": 298,
+        "char": "&#39;string&#39;"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 298,
+        "char": " &amp;&amp; parseUrl"
     },
     {
         "group": "typescriptParens",
@@ -14162,52 +14114,10 @@ module.exports = [
         "char": "("
     },
     {
-        "group": "typescriptConditionalParen",
-        "linkedGroup": "typescriptConditionalParen",
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
         "row": 298,
-        "char": "protocol "
-    },
-    {
-        "group": "typescriptBinaryOp",
-        "linkedGroup": "typescriptBinaryOp",
-        "row": 298,
-        "char": "&#61;&#61;&#61;"
-    },
-    {
-        "group": "typescriptConditionalParen",
-        "linkedGroup": "typescriptConditionalParen",
-        "row": 298,
-        "char": " "
-    },
-    {
-        "group": "typescriptString",
-        "linkedGroup": "Constant",
-        "row": 298,
-        "char": "&#39;http:&#39;"
-    },
-    {
-        "group": "typescriptConditionalParen",
-        "linkedGroup": "typescriptConditionalParen",
-        "row": 298,
-        "char": " || protocol "
-    },
-    {
-        "group": "typescriptBinaryOp",
-        "linkedGroup": "typescriptBinaryOp",
-        "row": 298,
-        "char": "&#61;&#61;&#61;"
-    },
-    {
-        "group": "typescriptConditionalParen",
-        "linkedGroup": "typescriptConditionalParen",
-        "row": 298,
-        "char": " "
-    },
-    {
-        "group": "typescriptString",
-        "linkedGroup": "Constant",
-        "row": 298,
-        "char": "&#39;https:&#39;"
+        "char": "url"
     },
     {
         "group": "typescriptParens",
@@ -14216,16 +14126,22 @@ module.exports = [
         "char": ")"
     },
     {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 298,
+        "char": "."
+    },
+    {
+        "group": "typescriptURLUtilsProp",
+        "linkedGroup": "Statement",
+        "row": 298,
+        "char": "protocol"
+    },
+    {
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 298,
-        "char": " "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 298,
-        "char": "{\n"
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -14236,31 +14152,91 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 299,
-        "char": "      event"
+        "char": "    "
     },
     {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 299,
-        "char": "."
-    },
-    {
-        "group": "typescriptDOMEventMethod",
+        "group": "typescriptConditional",
         "linkedGroup": "Statement",
         "row": 299,
-        "char": "preventDefault"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 299,
-        "char": "()"
+        "char": "if"
     },
     {
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 299,
-        "char": ";\n"
+        "char": " "
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 299,
+        "char": "("
+    },
+    {
+        "group": "typescriptConditionalParen",
+        "linkedGroup": "typescriptConditionalParen",
+        "row": 299,
+        "char": "protocol "
+    },
+    {
+        "group": "typescriptBinaryOp",
+        "linkedGroup": "typescriptBinaryOp",
+        "row": 299,
+        "char": "&#61;&#61;&#61;"
+    },
+    {
+        "group": "typescriptConditionalParen",
+        "linkedGroup": "typescriptConditionalParen",
+        "row": 299,
+        "char": " "
+    },
+    {
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
+        "row": 299,
+        "char": "&#39;http:&#39;"
+    },
+    {
+        "group": "typescriptConditionalParen",
+        "linkedGroup": "typescriptConditionalParen",
+        "row": 299,
+        "char": " || protocol "
+    },
+    {
+        "group": "typescriptBinaryOp",
+        "linkedGroup": "typescriptBinaryOp",
+        "row": 299,
+        "char": "&#61;&#61;&#61;"
+    },
+    {
+        "group": "typescriptConditionalParen",
+        "linkedGroup": "typescriptConditionalParen",
+        "row": 299,
+        "char": " "
+    },
+    {
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
+        "row": 299,
+        "char": "&#39;https:&#39;"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 299,
+        "char": ")"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 299,
+        "char": " "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 299,
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -14271,7 +14247,7 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 300,
-        "char": "      shell"
+        "char": "      event"
     },
     {
         "group": "typescriptDotNotation",
@@ -14280,28 +14256,16 @@ module.exports = [
         "char": "."
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
+        "group": "typescriptDOMEventMethod",
+        "linkedGroup": "Statement",
         "row": 300,
-        "char": "openExternal"
+        "char": "preventDefault"
     },
     {
         "group": "typescriptParens",
         "linkedGroup": "Normal",
         "row": 300,
-        "char": "("
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 300,
-        "char": "url"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 300,
-        "char": ")"
+        "char": "()"
     },
     {
         "group": "typescriptBlock",
@@ -14318,13 +14282,43 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 301,
-        "char": "    "
+        "char": "      shell"
     },
     {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
         "row": 301,
-        "char": "}\n"
+        "char": "."
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 301,
+        "char": "openExternal"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 301,
+        "char": "("
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 301,
+        "char": "url"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 301,
+        "char": ")"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 301,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -14335,25 +14329,13 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 302,
-        "char": "  "
+        "char": "    "
     },
     {
         "group": "typescriptBraces",
         "linkedGroup": "Identifier",
         "row": 302,
-        "char": "}"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 302,
-        "char": ")"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 302,
-        "char": ";\n"
+        "char": "}\n"
     },
     {
         "group": "LineNr",
@@ -14361,10 +14343,28 @@ module.exports = [
         "char": "303"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
         "row": 303,
-        "char": "\n"
+        "char": "  "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 303,
+        "char": "}"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 303,
+        "char": ")"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 303,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -14372,16 +14372,10 @@ module.exports = [
         "char": "304"
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 304,
-        "char": "  "
-    },
-    {
-        "group": "typescriptLineComment",
-        "linkedGroup": "Comment",
-        "row": 304,
-        "char": "// expose internals to extension authors\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -14395,34 +14389,10 @@ module.exports = [
         "char": "  "
     },
     {
-        "group": "typescriptBOMWindowProp",
-        "linkedGroup": "Type",
+        "group": "typescriptLineComment",
+        "linkedGroup": "Comment",
         "row": 305,
-        "char": "window"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 305,
-        "char": "."
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 305,
-        "char": "rpc "
-    },
-    {
-        "group": "typescriptAssign",
-        "linkedGroup": "typescriptAssign",
-        "row": 305,
-        "char": "&#61;"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 305,
-        "char": " rpc;\n"
+        "char": "// expose internals to extension authors\n"
     },
     {
         "group": "LineNr",
@@ -14451,7 +14421,7 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 306,
-        "char": "sessions "
+        "char": "rpc "
     },
     {
         "group": "typescriptAssign",
@@ -14463,7 +14433,7 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 306,
-        "char": " sessions;\n"
+        "char": " rpc;\n"
     },
     {
         "group": "LineNr",
@@ -14471,10 +14441,40 @@ module.exports = [
         "char": "307"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
         "row": 307,
-        "char": "\n"
+        "char": "  "
+    },
+    {
+        "group": "typescriptBOMWindowProp",
+        "linkedGroup": "Type",
+        "row": 307,
+        "char": "window"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 307,
+        "char": "."
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 307,
+        "char": "sessions "
+    },
+    {
+        "group": "typescriptAssign",
+        "linkedGroup": "typescriptAssign",
+        "row": 307,
+        "char": "&#61;"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 307,
+        "char": " sessions;\n"
     },
     {
         "group": "LineNr",
@@ -14482,76 +14482,10 @@ module.exports = [
         "char": "308"
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 308,
-        "char": "  "
-    },
-    {
-        "group": "typescriptVariable",
-        "linkedGroup": "Identifier",
-        "row": 308,
-        "char": "const"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 308,
-        "char": " "
-    },
-    {
-        "group": "typescriptVariableDeclaration",
-        "linkedGroup": "typescriptVariableDeclaration",
-        "row": 308,
-        "char": "load"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 308,
-        "char": " "
-    },
-    {
-        "group": "typescriptAssign",
-        "linkedGroup": "typescriptAssign",
-        "row": 308,
-        "char": "&#61;"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 308,
-        "char": " "
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 308,
-        "char": "()"
-    },
-    {
-        "group": "typescriptArrowFuncArg",
-        "linkedGroup": "PreProc",
-        "row": 308,
-        "char": " "
-    },
-    {
-        "group": "typescriptArrowFunc",
-        "linkedGroup": "Type",
-        "row": 308,
-        "char": "&#61;&gt;"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 308,
-        "char": " "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 308,
-        "char": "{\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -14562,55 +14496,73 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 309,
-        "char": "    app"
+        "char": "  "
     },
     {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
+        "group": "typescriptVariable",
+        "linkedGroup": "Identifier",
         "row": 309,
-        "char": "."
-    },
-    {
-        "group": "typescriptDOMDocProp",
-        "linkedGroup": "Statement",
-        "row": 309,
-        "char": "plugins"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 309,
-        "char": "."
+        "char": "const"
     },
     {
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 309,
-        "char": "onWindow"
+        "char": " "
+    },
+    {
+        "group": "typescriptVariableDeclaration",
+        "linkedGroup": "typescriptVariableDeclaration",
+        "row": 309,
+        "char": "load"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 309,
+        "char": " "
+    },
+    {
+        "group": "typescriptAssign",
+        "linkedGroup": "typescriptAssign",
+        "row": 309,
+        "char": "&#61;"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 309,
+        "char": " "
     },
     {
         "group": "typescriptParens",
         "linkedGroup": "Normal",
         "row": 309,
-        "char": "("
+        "char": "()"
     },
     {
-        "group": "typescriptBOMWindowProp",
+        "group": "typescriptArrowFuncArg",
+        "linkedGroup": "PreProc",
+        "row": 309,
+        "char": " "
+    },
+    {
+        "group": "typescriptArrowFunc",
         "linkedGroup": "Type",
         "row": 309,
-        "char": "window"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 309,
-        "char": ")"
+        "char": "&#61;&gt;"
     },
     {
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 309,
-        "char": ";\n"
+        "char": " "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 309,
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -14621,13 +14573,49 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 310,
-        "char": "  "
+        "char": "    app"
     },
     {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
         "row": 310,
-        "char": "}"
+        "char": "."
+    },
+    {
+        "group": "typescriptDOMDocProp",
+        "linkedGroup": "Statement",
+        "row": 310,
+        "char": "plugins"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 310,
+        "char": "."
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 310,
+        "char": "onWindow"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 310,
+        "char": "("
+    },
+    {
+        "group": "typescriptBOMWindowProp",
+        "linkedGroup": "Type",
+        "row": 310,
+        "char": "window"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 310,
+        "char": ")"
     },
     {
         "group": "typescriptBlock",
@@ -14641,10 +14629,22 @@ module.exports = [
         "char": "311"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
         "row": 311,
-        "char": "\n"
+        "char": "  "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 311,
+        "char": "}"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 311,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -14652,16 +14652,10 @@ module.exports = [
         "char": "312"
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 312,
-        "char": "  "
-    },
-    {
-        "group": "typescriptLineComment",
-        "linkedGroup": "Comment",
-        "row": 312,
-        "char": "// load plugins\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -14672,19 +14666,13 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 313,
-        "char": "  load"
+        "char": "  "
     },
     {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
+        "group": "typescriptLineComment",
+        "linkedGroup": "Comment",
         "row": 313,
-        "char": "()"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 313,
-        "char": ";\n"
+        "char": "// load plugins\n"
     },
     {
         "group": "LineNr",
@@ -14692,10 +14680,22 @@ module.exports = [
         "char": "314"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
         "row": 314,
-        "char": "\n"
+        "char": "  load"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 314,
+        "char": "()"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 314,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -14703,130 +14703,10 @@ module.exports = [
         "char": "315"
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 315,
-        "char": "  "
-    },
-    {
-        "group": "typescriptVariable",
-        "linkedGroup": "Identifier",
-        "row": 315,
-        "char": "const"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 315,
-        "char": " "
-    },
-    {
-        "group": "typescriptVariableDeclaration",
-        "linkedGroup": "typescriptVariableDeclaration",
-        "row": 315,
-        "char": "pluginsUnsubscribe"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 315,
-        "char": " "
-    },
-    {
-        "group": "typescriptAssign",
-        "linkedGroup": "typescriptAssign",
-        "row": 315,
-        "char": "&#61;"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 315,
-        "char": " app"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 315,
-        "char": "."
-    },
-    {
-        "group": "typescriptDOMDocProp",
-        "linkedGroup": "Statement",
-        "row": 315,
-        "char": "plugins"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 315,
-        "char": "."
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 315,
-        "char": "subscribe"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 315,
-        "char": "(("
-    },
-    {
-        "group": "typescriptCall",
-        "linkedGroup": "PreProc",
-        "row": 315,
-        "char": "err"
-    },
-    {
-        "group": "typescriptTypeAnnotation",
-        "linkedGroup": "typescriptTypeAnnotation",
-        "row": 315,
-        "char": ":"
-    },
-    {
-        "group": "typescriptCall",
-        "linkedGroup": "PreProc",
-        "row": 315,
-        "char": " "
-    },
-    {
-        "group": "typescriptPredefinedType",
-        "linkedGroup": "Type",
-        "row": 315,
-        "char": "any"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 315,
-        "char": ")"
-    },
-    {
-        "group": "typescriptArrowFuncArg",
-        "linkedGroup": "PreProc",
-        "row": 315,
-        "char": " "
-    },
-    {
-        "group": "typescriptArrowFunc",
-        "linkedGroup": "Type",
-        "row": 315,
-        "char": "&#61;&gt;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 315,
-        "char": " "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 315,
-        "char": "{\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -14837,13 +14717,13 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 316,
-        "char": "    "
+        "char": "  "
     },
     {
-        "group": "typescriptConditional",
-        "linkedGroup": "Statement",
+        "group": "typescriptVariable",
+        "linkedGroup": "Identifier",
         "row": 316,
-        "char": "if"
+        "char": "const"
     },
     {
         "group": "typescriptBlock",
@@ -14852,22 +14732,82 @@ module.exports = [
         "char": " "
     },
     {
+        "group": "typescriptVariableDeclaration",
+        "linkedGroup": "typescriptVariableDeclaration",
+        "row": 316,
+        "char": "pluginsUnsubscribe"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 316,
+        "char": " "
+    },
+    {
+        "group": "typescriptAssign",
+        "linkedGroup": "typescriptAssign",
+        "row": 316,
+        "char": "&#61;"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 316,
+        "char": " app"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 316,
+        "char": "."
+    },
+    {
+        "group": "typescriptDOMDocProp",
+        "linkedGroup": "Statement",
+        "row": 316,
+        "char": "plugins"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 316,
+        "char": "."
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 316,
+        "char": "subscribe"
+    },
+    {
         "group": "typescriptParens",
         "linkedGroup": "Normal",
         "row": 316,
-        "char": "("
+        "char": "(("
     },
     {
-        "group": "typescriptUnaryOp",
-        "linkedGroup": "typescriptUnaryOp",
-        "row": 316,
-        "char": "!"
-    },
-    {
-        "group": "typescriptConditionalParen",
-        "linkedGroup": "typescriptConditionalParen",
+        "group": "typescriptCall",
+        "linkedGroup": "PreProc",
         "row": 316,
         "char": "err"
+    },
+    {
+        "group": "typescriptTypeAnnotation",
+        "linkedGroup": "typescriptTypeAnnotation",
+        "row": 316,
+        "char": ":"
+    },
+    {
+        "group": "typescriptCall",
+        "linkedGroup": "PreProc",
+        "row": 316,
+        "char": " "
+    },
+    {
+        "group": "typescriptPredefinedType",
+        "linkedGroup": "Type",
+        "row": 316,
+        "char": "any"
     },
     {
         "group": "typescriptParens",
@@ -14876,8 +14816,20 @@ module.exports = [
         "char": ")"
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
+        "group": "typescriptArrowFuncArg",
+        "linkedGroup": "PreProc",
+        "row": 316,
+        "char": " "
+    },
+    {
+        "group": "typescriptArrowFunc",
+        "linkedGroup": "Type",
+        "row": 316,
+        "char": "&#61;&gt;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
         "row": 316,
         "char": " "
     },
@@ -14896,19 +14848,55 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 317,
-        "char": "      load"
+        "char": "    "
     },
     {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
+        "group": "typescriptConditional",
+        "linkedGroup": "Statement",
         "row": 317,
-        "char": "()"
+        "char": "if"
     },
     {
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 317,
-        "char": ";\n"
+        "char": " "
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 317,
+        "char": "("
+    },
+    {
+        "group": "typescriptUnaryOp",
+        "linkedGroup": "typescriptUnaryOp",
+        "row": 317,
+        "char": "!"
+    },
+    {
+        "group": "typescriptConditionalParen",
+        "linkedGroup": "typescriptConditionalParen",
+        "row": 317,
+        "char": "err"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 317,
+        "char": ")"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 317,
+        "char": " "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 317,
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -14919,55 +14907,13 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 318,
-        "char": "      "
-    },
-    {
-        "group": "typescriptBOMWindowProp",
-        "linkedGroup": "Type",
-        "row": 318,
-        "char": "window"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 318,
-        "char": "."
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 318,
-        "char": "webContents"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 318,
-        "char": "."
-    },
-    {
-        "group": "typescriptXHRMethod",
-        "linkedGroup": "Statement",
-        "row": 318,
-        "char": "send"
+        "char": "      load"
     },
     {
         "group": "typescriptParens",
         "linkedGroup": "Normal",
         "row": 318,
-        "char": "("
-    },
-    {
-        "group": "typescriptString",
-        "linkedGroup": "Constant",
-        "row": 318,
-        "char": "&#39;plugins change&#39;"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 318,
-        "char": ")"
+        "char": "()"
     },
     {
         "group": "typescriptBlock",
@@ -14984,13 +14930,55 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 319,
-        "char": "      updateBackgroundColor"
+        "char": "      "
+    },
+    {
+        "group": "typescriptBOMWindowProp",
+        "linkedGroup": "Type",
+        "row": 319,
+        "char": "window"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 319,
+        "char": "."
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 319,
+        "char": "webContents"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 319,
+        "char": "."
+    },
+    {
+        "group": "typescriptXHRMethod",
+        "linkedGroup": "Statement",
+        "row": 319,
+        "char": "send"
     },
     {
         "group": "typescriptParens",
         "linkedGroup": "Normal",
         "row": 319,
-        "char": "()"
+        "char": "("
+    },
+    {
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
+        "row": 319,
+        "char": "&#39;plugins change&#39;"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 319,
+        "char": ")"
     },
     {
         "group": "typescriptBlock",
@@ -15007,13 +14995,19 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 320,
-        "char": "    "
+        "char": "      updateBackgroundColor"
     },
     {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
         "row": 320,
-        "char": "}\n"
+        "char": "()"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 320,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -15024,25 +15018,13 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 321,
-        "char": "  "
+        "char": "    "
     },
     {
         "group": "typescriptBraces",
         "linkedGroup": "Identifier",
         "row": 321,
-        "char": "}"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 321,
-        "char": ")"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 321,
-        "char": ";\n"
+        "char": "}\n"
     },
     {
         "group": "LineNr",
@@ -15050,10 +15032,28 @@ module.exports = [
         "char": "322"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
         "row": 322,
-        "char": "\n"
+        "char": "  "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 322,
+        "char": "}"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 322,
+        "char": ")"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 322,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -15061,16 +15061,10 @@ module.exports = [
         "char": "323"
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 323,
-        "char": "  "
-    },
-    {
-        "group": "typescriptLineComment",
-        "linkedGroup": "Comment",
-        "row": 323,
-        "char": "// Keep track of focus time of every window, to figure out\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -15087,7 +15081,7 @@ module.exports = [
         "group": "typescriptLineComment",
         "linkedGroup": "Comment",
         "row": 324,
-        "char": "// which one of the existing window is the last focused.\n"
+        "char": "// Keep track of focus time of every window, to figure out\n"
     },
     {
         "group": "LineNr",
@@ -15104,7 +15098,7 @@ module.exports = [
         "group": "typescriptLineComment",
         "linkedGroup": "Comment",
         "row": 325,
-        "char": "// Works nicely even if a window is closed and removed.\n"
+        "char": "// which one of the existing window is the last focused.\n"
     },
     {
         "group": "LineNr",
@@ -15118,70 +15112,10 @@ module.exports = [
         "char": "  "
     },
     {
-        "group": "typescriptVariable",
-        "linkedGroup": "Identifier",
+        "group": "typescriptLineComment",
+        "linkedGroup": "Comment",
         "row": 326,
-        "char": "const"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 326,
-        "char": " "
-    },
-    {
-        "group": "typescriptVariableDeclaration",
-        "linkedGroup": "typescriptVariableDeclaration",
-        "row": 326,
-        "char": "updateFocusTime"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 326,
-        "char": " "
-    },
-    {
-        "group": "typescriptAssign",
-        "linkedGroup": "typescriptAssign",
-        "row": 326,
-        "char": "&#61;"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 326,
-        "char": " "
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 326,
-        "char": "()"
-    },
-    {
-        "group": "typescriptArrowFuncArg",
-        "linkedGroup": "PreProc",
-        "row": 326,
-        "char": " "
-    },
-    {
-        "group": "typescriptArrowFunc",
-        "linkedGroup": "Type",
-        "row": 326,
-        "char": "&#61;&gt;"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 326,
-        "char": " "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 326,
-        "char": "{\n"
+        "char": "// Works nicely even if a window is closed and removed.\n"
     },
     {
         "group": "LineNr",
@@ -15192,25 +15126,31 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 327,
-        "char": "    "
+        "char": "  "
     },
     {
-        "group": "typescriptBOMWindowProp",
-        "linkedGroup": "Type",
+        "group": "typescriptVariable",
+        "linkedGroup": "Identifier",
         "row": 327,
-        "char": "window"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 327,
-        "char": "."
+        "char": "const"
     },
     {
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 327,
-        "char": "focusTime "
+        "char": " "
+    },
+    {
+        "group": "typescriptVariableDeclaration",
+        "linkedGroup": "typescriptVariableDeclaration",
+        "row": 327,
+        "char": "updateFocusTime"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 327,
+        "char": " "
     },
     {
         "group": "typescriptAssign",
@@ -15225,34 +15165,34 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "typescriptNodeGlobal",
-        "linkedGroup": "Type",
-        "row": 327,
-        "char": "process"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 327,
-        "char": "."
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 327,
-        "char": "uptime"
-    },
-    {
         "group": "typescriptParens",
         "linkedGroup": "Normal",
         "row": 327,
         "char": "()"
     },
     {
+        "group": "typescriptArrowFuncArg",
+        "linkedGroup": "PreProc",
+        "row": 327,
+        "char": " "
+    },
+    {
+        "group": "typescriptArrowFunc",
+        "linkedGroup": "Type",
+        "row": 327,
+        "char": "&#61;&gt;"
+    },
+    {
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 327,
-        "char": ";\n"
+        "char": " "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 327,
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -15263,13 +15203,61 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 328,
-        "char": "  "
+        "char": "    "
     },
     {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
+        "group": "typescriptBOMWindowProp",
+        "linkedGroup": "Type",
         "row": 328,
-        "char": "}"
+        "char": "window"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 328,
+        "char": "."
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 328,
+        "char": "focusTime "
+    },
+    {
+        "group": "typescriptAssign",
+        "linkedGroup": "typescriptAssign",
+        "row": 328,
+        "char": "&#61;"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 328,
+        "char": " "
+    },
+    {
+        "group": "typescriptNodeGlobal",
+        "linkedGroup": "Type",
+        "row": 328,
+        "char": "process"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 328,
+        "char": "."
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 328,
+        "char": "uptime"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 328,
+        "char": "()"
     },
     {
         "group": "typescriptBlock",
@@ -15283,10 +15271,22 @@ module.exports = [
         "char": "329"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
         "row": 329,
-        "char": "\n"
+        "char": "  "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 329,
+        "char": "}"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 329,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -15294,76 +15294,10 @@ module.exports = [
         "char": "330"
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 330,
-        "char": "  "
-    },
-    {
-        "group": "typescriptBOMWindowProp",
-        "linkedGroup": "Type",
-        "row": 330,
-        "char": "window"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 330,
-        "char": "."
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 330,
-        "char": "on"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 330,
-        "char": "("
-    },
-    {
-        "group": "typescriptString",
-        "linkedGroup": "Constant",
-        "row": 330,
-        "char": "&#39;focus&#39;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 330,
-        "char": ", "
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 330,
-        "char": "()"
-    },
-    {
-        "group": "typescriptArrowFuncArg",
-        "linkedGroup": "PreProc",
-        "row": 330,
-        "char": " "
-    },
-    {
-        "group": "typescriptArrowFunc",
-        "linkedGroup": "Type",
-        "row": 330,
-        "char": "&#61;&gt;"
-    },
-    {
-        "group": "typescriptFuncCallArg",
-        "linkedGroup": "typescriptFuncCallArg",
-        "row": 330,
-        "char": " "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 330,
-        "char": "{\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -15374,7 +15308,43 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 331,
-        "char": "    updateFocusTime"
+        "char": "  "
+    },
+    {
+        "group": "typescriptBOMWindowProp",
+        "linkedGroup": "Type",
+        "row": 331,
+        "char": "window"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 331,
+        "char": "."
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 331,
+        "char": "on"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 331,
+        "char": "("
+    },
+    {
+        "group": "typescriptString",
+        "linkedGroup": "Constant",
+        "row": 331,
+        "char": "&#39;focus&#39;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 331,
+        "char": ", "
     },
     {
         "group": "typescriptParens",
@@ -15383,10 +15353,28 @@ module.exports = [
         "char": "()"
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
+        "group": "typescriptArrowFuncArg",
+        "linkedGroup": "PreProc",
         "row": 331,
-        "char": ";\n"
+        "char": " "
+    },
+    {
+        "group": "typescriptArrowFunc",
+        "linkedGroup": "Type",
+        "row": 331,
+        "char": "&#61;&gt;"
+    },
+    {
+        "group": "typescriptFuncCallArg",
+        "linkedGroup": "typescriptFuncCallArg",
+        "row": 331,
+        "char": " "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 331,
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -15397,19 +15385,13 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 332,
-        "char": "  "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 332,
-        "char": "}"
+        "char": "    updateFocusTime"
     },
     {
         "group": "typescriptParens",
         "linkedGroup": "Normal",
         "row": 332,
-        "char": ")"
+        "char": "()"
     },
     {
         "group": "typescriptBlock",
@@ -15423,10 +15405,28 @@ module.exports = [
         "char": "333"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
         "row": 333,
-        "char": "\n"
+        "char": "  "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 333,
+        "char": "}"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 333,
+        "char": ")"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 333,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -15434,16 +15434,10 @@ module.exports = [
         "char": "334"
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 334,
-        "char": "  "
-    },
-    {
-        "group": "typescriptLineComment",
-        "linkedGroup": "Comment",
-        "row": 334,
-        "char": "// the window can be closed by the browser process itself\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -15457,64 +15451,10 @@ module.exports = [
         "char": "  "
     },
     {
-        "group": "typescriptBOMWindowProp",
-        "linkedGroup": "Type",
+        "group": "typescriptLineComment",
+        "linkedGroup": "Comment",
         "row": 335,
-        "char": "window"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 335,
-        "char": "."
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 335,
-        "char": "clean "
-    },
-    {
-        "group": "typescriptAssign",
-        "linkedGroup": "typescriptAssign",
-        "row": 335,
-        "char": "&#61;"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 335,
-        "char": " "
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 335,
-        "char": "()"
-    },
-    {
-        "group": "typescriptArrowFuncArg",
-        "linkedGroup": "PreProc",
-        "row": 335,
-        "char": " "
-    },
-    {
-        "group": "typescriptArrowFunc",
-        "linkedGroup": "Type",
-        "row": 335,
-        "char": "&#61;&gt;"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 335,
-        "char": " "
-    },
-    {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
-        "row": 335,
-        "char": "{\n"
+        "char": "// the window can be closed by the browser process itself\n"
     },
     {
         "group": "LineNr",
@@ -15525,37 +15465,7 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 336,
-        "char": "    app"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 336,
-        "char": "."
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 336,
-        "char": "config"
-    },
-    {
-        "group": "typescriptDotNotation",
-        "linkedGroup": "typescriptDotNotation",
-        "row": 336,
-        "char": "."
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 336,
-        "char": "winRecord"
-    },
-    {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
-        "row": 336,
-        "char": "("
+        "char": "  "
     },
     {
         "group": "typescriptBOMWindowProp",
@@ -15564,16 +15474,58 @@ module.exports = [
         "char": "window"
     },
     {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
         "row": 336,
-        "char": ")"
+        "char": "."
     },
     {
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 336,
-        "char": ";\n"
+        "char": "clean "
+    },
+    {
+        "group": "typescriptAssign",
+        "linkedGroup": "typescriptAssign",
+        "row": 336,
+        "char": "&#61;"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 336,
+        "char": " "
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 336,
+        "char": "()"
+    },
+    {
+        "group": "typescriptArrowFuncArg",
+        "linkedGroup": "PreProc",
+        "row": 336,
+        "char": " "
+    },
+    {
+        "group": "typescriptArrowFunc",
+        "linkedGroup": "Type",
+        "row": 336,
+        "char": "&#61;&gt;"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 336,
+        "char": " "
+    },
+    {
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
+        "row": 336,
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -15584,7 +15536,7 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 337,
-        "char": "    rpc"
+        "char": "    app"
     },
     {
         "group": "typescriptDotNotation",
@@ -15596,13 +15548,37 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 337,
-        "char": "destroy"
+        "char": "config"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 337,
+        "char": "."
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 337,
+        "char": "winRecord"
     },
     {
         "group": "typescriptParens",
         "linkedGroup": "Normal",
         "row": 337,
-        "char": "()"
+        "char": "("
+    },
+    {
+        "group": "typescriptBOMWindowProp",
+        "linkedGroup": "Type",
+        "row": 337,
+        "char": "window"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 337,
+        "char": ")"
     },
     {
         "group": "typescriptBlock",
@@ -15619,7 +15595,19 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 338,
-        "char": "    deleteSessions"
+        "char": "    rpc"
+    },
+    {
+        "group": "typescriptDotNotation",
+        "linkedGroup": "typescriptDotNotation",
+        "row": 338,
+        "char": "."
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 338,
+        "char": "destroy"
     },
     {
         "group": "typescriptParens",
@@ -15642,7 +15630,7 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 339,
-        "char": "    cfgUnsubscribe"
+        "char": "    deleteSessions"
     },
     {
         "group": "typescriptParens",
@@ -15665,7 +15653,7 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 340,
-        "char": "    pluginsUnsubscribe"
+        "char": "    cfgUnsubscribe"
     },
     {
         "group": "typescriptParens",
@@ -15688,13 +15676,13 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 341,
-        "char": "  "
+        "char": "    pluginsUnsubscribe"
     },
     {
-        "group": "typescriptBraces",
-        "linkedGroup": "Identifier",
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
         "row": 341,
-        "char": "}"
+        "char": "()"
     },
     {
         "group": "typescriptBlock",
@@ -15714,10 +15702,16 @@ module.exports = [
         "char": "  "
     },
     {
-        "group": "typescriptLineComment",
-        "linkedGroup": "Comment",
+        "group": "typescriptBraces",
+        "linkedGroup": "Identifier",
         "row": 342,
-        "char": "// Ensure focusTime is set on window open. The focus event doesn&#39;t\n"
+        "char": "}"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 342,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -15734,7 +15728,7 @@ module.exports = [
         "group": "typescriptLineComment",
         "linkedGroup": "Comment",
         "row": 343,
-        "char": "// fire from the dock (see bug #583)\n"
+        "char": "// Ensure focusTime is set on window open. The focus event doesn&#39;t\n"
     },
     {
         "group": "LineNr",
@@ -15745,19 +15739,13 @@ module.exports = [
         "group": "typescriptBlock",
         "linkedGroup": "typescriptBlock",
         "row": 344,
-        "char": "  updateFocusTime"
+        "char": "  "
     },
     {
-        "group": "typescriptParens",
-        "linkedGroup": "Normal",
+        "group": "typescriptLineComment",
+        "linkedGroup": "Comment",
         "row": 344,
-        "char": "()"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 344,
-        "char": ";\n"
+        "char": "// fire from the dock (see bug #583)\n"
     },
     {
         "group": "LineNr",
@@ -15765,10 +15753,22 @@ module.exports = [
         "char": "345"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
         "row": 345,
-        "char": "\n"
+        "char": "  updateFocusTime"
+    },
+    {
+        "group": "typescriptParens",
+        "linkedGroup": "Normal",
+        "row": 345,
+        "char": "()"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 345,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -15776,34 +15776,10 @@ module.exports = [
         "char": "346"
     },
     {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 346,
-        "char": "  "
-    },
-    {
-        "group": "typescriptStatementKeyword",
-        "linkedGroup": "Statement",
-        "row": 346,
-        "char": "return"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 346,
-        "char": " "
-    },
-    {
-        "group": "typescriptBOMWindowProp",
-        "linkedGroup": "Type",
-        "row": 346,
-        "char": "window"
-    },
-    {
-        "group": "typescriptBlock",
-        "linkedGroup": "typescriptBlock",
-        "row": 346,
-        "char": ";\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -15811,9 +15787,44 @@ module.exports = [
         "char": "347"
     },
     {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 347,
+        "char": "  "
+    },
+    {
+        "group": "typescriptStatementKeyword",
+        "linkedGroup": "Statement",
+        "row": 347,
+        "char": "return"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 347,
+        "char": " "
+    },
+    {
+        "group": "typescriptBOMWindowProp",
+        "linkedGroup": "Type",
+        "row": 347,
+        "char": "window"
+    },
+    {
+        "group": "typescriptBlock",
+        "linkedGroup": "typescriptBlock",
+        "row": 347,
+        "char": ";\n"
+    },
+    {
+        "group": "LineNr",
+        "row": 348,
+        "char": "348"
+    },
+    {
         "group": "typescriptBraces",
         "linkedGroup": "Identifier",
-        "row": 347,
+        "row": 348,
         "char": "}"
     }
 ]

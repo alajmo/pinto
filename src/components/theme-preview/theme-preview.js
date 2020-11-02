@@ -1,6 +1,8 @@
 import './theme-preview.css';
 import { html } from 'lighterhtml';
 
+import { keywordToVim } from 'lib/json-to-editor.js';
+import { exportCode } from 'lib/util.js';
 import { Select } from 'components/select/select.js';
 import { mitt } from 'lib/event.js';
 
@@ -16,6 +18,17 @@ function ThemePreviewTemplate({ state, Store }) {
         mitt.emit('RENDER');
       },
 
+      copyVimToClipboard() {
+        const text = keywordToVim(exportCode(state.theme));
+
+        navigator.clipboard.writeText(text).then(
+          () => {},
+          err => {
+            console.error('Could not copy to clipboard: ', err);
+          },
+        );
+      },
+
       copyToClipboard() {
         navigator.clipboard.writeText(state.theme.templateTxt).then(
           () => {},
@@ -29,7 +42,7 @@ function ThemePreviewTemplate({ state, Store }) {
         label: 'Language',
         name: 'language',
         className: 'text',
-        options: Object.keys(state.theme.languages),
+        options: state.theme.languages,
         selected: state.theme.language,
         onchange: async value => {
           await Store.dispatch('theme', 'loadTemplate', value);
@@ -97,15 +110,25 @@ function ThemePreviewView({ props }) {
     <div id="theme" class="theme">
       <div class="breadcrumb">
         <div class="left-icons">
-          <h3>Preview</h3>
           ${Select(props.language())}
         </div>
-
         <div class="right-icons">
-          <i title="Copy template theme to clipboard for selected editor" class="far fa-copy actionable" onclick="${
+
+          <div title="Copy vim theme to clipboard (Shift + V)" onclick="${
+            props.copyVimToClipboard
+          }" class="actionable">
+          vim
+          <i class="far fa-copy" ></i>
+          </div>
+
+          <div title="Copy example file to clipboard" onclick="${
             props.copyToClipboard
-          }"></i>
-          <i title="Show fullscreen preview" class="fas fa-expand-alt actionable" onclick="${
+          }" class="actionable">
+          example
+          <i class="far fa-copy" ></i>
+          </div>
+
+          <i title="Fullscreen preview (Shift + F)" class="fas fa-expand-alt actionable" onclick="${
             props.open
           }"></i>
         </div>

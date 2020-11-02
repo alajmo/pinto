@@ -83,8 +83,9 @@ ol.modal-ol {
   max-width: 100%;
 
   & > li {
-    margin-left: calc(var(--margin) * 4);
+    margin-left: calc(var(--margin) * 6);
     padding-right: calc(var(--padding) * 4);
+    font-size: var(--font-medium);
     list-style-type: decimal;
   }
 }
@@ -94,24 +95,25 @@ ol.modal-ol {
 
   & p {
     margin-bottom: calc(var(--margin) * 6);
-    font-size: var(--font-small);
+    font-size: var(--font-medium);
   }
 
   & h3 {
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-top: calc(var(--margin) * 4);
+    margin-bottom: calc(var(--margin) * 9);
+  }
+
+  & h4 {
     font-weight: bold;
     font-size: 1.2rem;
     padding-bottom: calc(var(--padding) * 3);
   }
 
-  & h4 {
-    font-weight: bold;
-    font-size: 1.1rem;
-    padding-bottom: calc(var(--padding) * 3);
-  }
-
   & li {
     margin-bottom: calc(var(--margin) * 3);
-    font-size: var(--font-small);
+    font-size: var(--font-medium);
   }
 
   & .bold {

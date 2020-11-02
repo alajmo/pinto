@@ -5,7 +5,7 @@ const templatesPath = path.resolve('./bin/templates');
 const templates = fs.readdirSync(templatesPath).sort();
 
 const keywords = {
-  refs: {},
+  groupKeywords: {},
   keywords: [],
 };
 
@@ -128,7 +128,7 @@ templates.forEach(template => {
       return x[0];
     });
 
-  keywords.refs[template] = uniqGroups;
+  keywords.groupKeywords[template] = uniqGroups;
   keywords.keywords = Array.from(new Set(keywords.keywords.concat(uniqGroups)));
 });
 
@@ -140,7 +140,7 @@ templates.forEach(template => {
 //
 //   default: ['Normal', 'Statement'],
 //
-//   refs: ${JSON.stringify(keywords.refs)},
+//   groupKeywords: ${JSON.stringify(keywords.groupKeywords)},
 //   keywords: ${JSON.stringify(keywords.keywords)},
 // };
 // `;

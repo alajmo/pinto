@@ -5,6 +5,7 @@ export { Checkbox };
 
 function Checkbox({
   name,
+  title = '',
   value = false,
   label,
   onchange = () => {},
@@ -17,6 +18,7 @@ function Checkbox({
         tabindex="0"
         class="checkbox"
         type="checkbox"
+        title="${title}"
         id="${name}"
         name="${name}"
         checked="${value}"
@@ -25,7 +27,7 @@ function Checkbox({
         onchange="${onchange}"
         onclick="${onclick}"
       />
-      <label class="label-checkbox" for="${name}">
+      <label title="${title}" class="label-checkbox" for="${name}">
         ${label}
       </label>
     </div>

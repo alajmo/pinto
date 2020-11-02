@@ -88,3 +88,5 @@ $RECYCLE.BIN/
 .com.apple.timemachine.donotpresent
 .cache
 .parcel-cache
+
+.netlify

@@ -41,6 +41,10 @@ import {
   ExportModalView,
   ExportModalTemplate,
 } from 'components/export-modal/export-modal.js';
+import {
+  ManageGroupsView,
+  ManageGroupsTemplate,
+} from 'components/manage-groups/manage-groups.js';
 import { AboutView, AboutTemplate } from 'components/about/about.js';
 import { compose } from 'lib/util.js';
 import {
@@ -113,11 +117,19 @@ function App(Store) {
       templateRenderer.render(state, { allKeywords: true });
     });
 
+    mitt.on('MODIFY_GROUP', () => {
+      // console.log('CREATE_GROUP');
+
+      const state = Store.getState();
+      templateRenderer.updateKeywordElement(state);
+    });
+
     mitt.on('KEYWORD_ENABLE_TOGGLE', () => {
       // console.log('KEYWORD_ENABLE_TOGGLE');
 
       const state = Store.getState();
       templateRenderer.updateKeywordElement(state);
+      templateRenderer.render(state, { allKeywords: true });
     });
 
     mitt.on('RENDER', options => {
@@ -367,6 +379,9 @@ function App(Store) {
         break;
       case 'export':
         modal = compose(ExportModalView)(ExportModalTemplate)({ state, Store });
+        break;
+      case 'manage-group':
+        modal = compose(ManageGroupsView)(ManageGroupsTemplate)({ state, Store });
         break;
       default:
         modal = html`<div></div>`;

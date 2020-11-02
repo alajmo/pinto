@@ -3,7 +3,7 @@ import { Theme } from 'state/theme.js';
 
 export { AppState };
 
-function AppState({ themes = [], languages = [], keyword } = {}) {
+function AppState({ themes = [], groups = [], keyword } = {}) {
   const EDITOR = Enum('vim');
   const LANGUAGE = Enum('javascript');
   const THEME = Enum('dark', 'light');
@@ -15,7 +15,7 @@ function AppState({ themes = [], languages = [], keyword } = {}) {
 
     changesSaved: null,
     themes,
-    activeModal: null, // themes, new, about, export, null
+    activeModal: null, // themes, new, about, export, null, manage-group
 
     createThemeModal: {
       themeName: '',
@@ -28,7 +28,6 @@ function AppState({ themes = [], languages = [], keyword } = {}) {
     showColorPicker: true,
 
     selectedOption: 'keyword', //  settings, palette, keyword
-    selectedPreview: 'theme', // theme
     selectedKeyword: ['Normal'], // ['Normal']
     selectedInput: 'foregroundColor', // foregroundColor, backgroundColor
 
@@ -36,12 +35,22 @@ function AppState({ themes = [], languages = [], keyword } = {}) {
       allKeywordsEnabled: true,
       allKeywordsMinimized: false,
 
-      minimizedLanguages: {
-        misc: true,
-        major: false,
-        minor: true,
+      minimizedGroups: {
+        ...Object.keys(groups).reduce(
+          (prev, curr) => ({
+            [curr]: true,
+            ...prev,
+          }),
+          {},
+        ),
 
-        ...Object.keys(languages).reduce(
+        major: false,
+      },
+    },
+
+    editorSettings: {
+      minimizedGroups: {
+        ...Object.keys(groups).reduce(
           (prev, curr) => ({
             [curr]: true,
             ...prev,
@@ -51,20 +60,10 @@ function AppState({ themes = [], languages = [], keyword } = {}) {
       },
     },
 
-    editorSettings: {
-      minimizedLanguages: {
-        misc: true,
-        major: true,
-        minor: true,
-
-        ...Object.keys(languages).reduce(
-          (prev, curr) => ({
-            [curr]: true,
-            ...prev,
-          }),
-          {},
-        ),
-      },
+    manageGroups: {
+      type: 'create', // create, update
+      groupName: 'Untitled',
+      groupKeywords: [{ keyword: '', linkedKeyword: 'Normal' }],
     },
 
     defaultKeyword: keyword,
@@ -87,8 +86,10 @@ function AppState({ themes = [], languages = [], keyword } = {}) {
     'SELECT_KEYWORD',
     'TOGGLE_COMPONENT',
     'OPEN_MODAL',
+    'OPEN_FULLSCREEN_PREVIEW',
     'SETUP_EVENT_LISTENER',
     'LOAD_THEME',
+    'SAVE_THEME',
   );
 
   const reducers = {
@@ -104,7 +105,12 @@ function AppState({ themes = [], languages = [], keyword } = {}) {
       newState.app.showFullscreenPreview = !newState.app.showFullscreenPreview;
 
       return {
-        trigger: [],
+        trigger: [
+          {
+            event: events.OPEN_FULLSCREEN_PREVIEW,
+            payload: newState.app.showFullscreenPreview,
+          },
+        ],
         state: { ...newState },
       };
     },
@@ -194,10 +200,10 @@ function AppState({ themes = [], languages = [], keyword } = {}) {
       };
     },
 
-    syncThemes(state) {
+    async syncThemes(state, themes) {
       const newState = { ...state };
 
-      newState.app.themes = Theme.getThemes();
+      newState.app.themes = themes;
 
       return {
         trigger: [],
@@ -205,25 +211,16 @@ function AppState({ themes = [], languages = [], keyword } = {}) {
       };
     },
 
-    saveTheme(state) {
+    async saveTheme(state) {
       const newState = { ...state };
 
-      let themeId = state.theme.id;
-      if (themeId) {
-        Theme.saveTheme(state.theme.id, state);
-      } else {
-        themeId = Theme.createTheme(state);
-      }
-
-      newState.app.themes = Theme.getThemes();
-
       return {
-        trigger: [{ event: events.LOAD_THEME, payload: themeId }],
+        trigger: [events.SAVE_THEME],
         state: { ...newState },
       };
     },
 
-    createTheme(state) {
+    async createTheme(state) {
       const newState = { ...state };
 
       let themeId;
@@ -241,7 +238,6 @@ function AppState({ themes = [], languages = [], keyword } = {}) {
       newState.app.activeModal = null;
       newState.app.createThemeModal.themeName = '';
       newState.app.createThemeModal.copy = false;
-      newState.app.themes = Theme.getThemes();
 
       return {
         trigger: [{ event: events.LOAD_THEME, payload: themeId }],
@@ -249,11 +245,11 @@ function AppState({ themes = [], languages = [], keyword } = {}) {
       };
     },
 
-    removeTheme(state, themeId) {
+    async removeTheme(state, themeId) {
       const newState = { ...state };
 
-      Theme.removeTheme(themeId);
-      newState.app.themes = Theme.getThemes();
+      await Theme.removeTheme(themeId);
+      newState.app.themes = await Theme.getThemes();
 
       return {
         trigger: [],
@@ -277,7 +273,6 @@ function AppState({ themes = [], languages = [], keyword } = {}) {
     selectOption(state, option) {
       const newState = { ...state };
       newState.app.selectedOption = option;
-      newState.app.selectedPreview = option === 'export' ? 'export' : 'theme';
 
       if (option !== 'keyword') {
         newState.app.selectedKeyword = [];
@@ -305,8 +300,8 @@ function AppState({ themes = [], languages = [], keyword } = {}) {
       newState.app.sidebar.allKeywordsMinimized = !newState.app.sidebar
         .allKeywordsMinimized;
 
-      Object.keys(newState.app.sidebar.minimizedLanguages).forEach(group => {
-        newState.app.sidebar.minimizedLanguages[group] =
+      Object.keys(newState.app.sidebar.minimizedGroups).forEach(group => {
+        newState.app.sidebar.minimizedGroups[group] =
           newState.app.sidebar.allKeywordsMinimized;
       });
 
@@ -320,8 +315,8 @@ function AppState({ themes = [], languages = [], keyword } = {}) {
       const newState = { ...state };
 
       groups.forEach(group => {
-        newState.app.sidebar.minimizedLanguages[group] = !newState.app.sidebar
-          .minimizedLanguages[group];
+        newState.app.sidebar.minimizedGroups[group] = !newState.app.sidebar
+          .minimizedGroups[group];
       });
 
       return {
@@ -330,12 +325,12 @@ function AppState({ themes = [], languages = [], keyword } = {}) {
       };
     },
 
-    toggleMinimizeLanguage(state, languages) {
+    toggleMinimizeGroup(state, groups) {
       const newState = { ...state };
 
-      languages.forEach(group => {
-        newState.app.editorSettings.minimizedLanguages[group] = !newState.app
-          .editorSettings.minimizedLanguages[group];
+      groups.forEach(group => {
+        newState.app.editorSettings.minimizedGroups[group] = !newState.app
+          .editorSettings.minimizedGroups[group];
       });
 
       return {
@@ -378,6 +373,101 @@ function AppState({ themes = [], languages = [], keyword } = {}) {
       const newState = { ...state };
       newState.app.editorSettings[select] = !newState.app.editorSettings[select]
         .openFontFamily;
+
+      return {
+        trigger: [],
+        state: { ...newState },
+      };
+    },
+
+    setManageGroupData(state, group) {
+      const newState = { ...state };
+
+      newState.app.manageGroups.type = 'update';
+      newState.app.manageGroups.oldGroupName = group.name;
+      newState.app.manageGroups.groupName = group.name;
+      newState.app.manageGroups.groupKeywords = group.keywords.map(k => ({
+        oldKeyword: k.name,
+        keyword: k.name,
+        oldLinkedKeyword: state.theme.keywordLinks[k.name],
+        linkedKeyword: state.theme.keywordLinks[k.name],
+      }));
+
+      return {
+        trigger: [],
+        state: { ...newState },
+      };
+    },
+
+    updateGroupName(state, groupName) {
+      const newState = { ...state };
+
+      newState.app.manageGroups.groupName = groupName;
+
+      return {
+        trigger: [],
+        state: { ...newState },
+      };
+    },
+
+    updateKeyword(state, { i, keyword }) {
+      const newState = { ...state };
+
+      newState.app.manageGroups.groupKeywords[i].keyword = keyword;
+
+      return {
+        trigger: [],
+        state: { ...newState },
+      };
+    },
+
+    updateLinkedKeyword(state, { i, keyword }) {
+      const newState = { ...state };
+
+      newState.app.manageGroups.groupKeywords[i].linkedKeyword = keyword;
+
+      return {
+        trigger: [],
+        state: { ...newState },
+      };
+    },
+
+    resetGroupModal(state) {
+      const newState = { ...state };
+
+      newState.app.manageGroups.type = 'create';
+      newState.app.manageGroups.oldGroupName = 'Untitled';
+      newState.app.manageGroups.groupName = 'Untitled';
+      newState.app.manageGroups.groupKeywords = [
+        { keyword: '', linkedKeyword: 'Normal' },
+      ];
+
+      return {
+        trigger: [],
+        state: { ...newState },
+      };
+    },
+
+    removeKeyword(state, index) {
+      const newState = { ...state };
+
+      newState.app.manageGroups.groupKeywords = newState.app.manageGroups.groupKeywords.filter(
+        (k, i) => i !== index,
+      );
+
+      return {
+        trigger: [],
+        state: { ...newState },
+      };
+    },
+
+    addKeyword(state) {
+      const newState = { ...state };
+
+      newState.app.manageGroups.groupKeywords.push({
+        keyword: '',
+        linkedKeyword: 'Normal',
+      });
 
       return {
         trigger: [],

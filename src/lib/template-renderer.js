@@ -17,14 +17,16 @@ function TemplateRenderer() {
   function step() {
     // Update global settings
     themeElement.style.background = backgroundColor;
-    // codeElement.style.background = backgroundColor;
+    codeElement.style.background = backgroundColor;
     element.style.background = backgroundColor;
     element.style.fontFamily = fontFamily;
     element.style.fontSize = `${fontSize}px`;
     element.style.lineHeight = `${lineHeight}px`;
 
     // Update indiviual elements
-    selectedKeyword.forEach(k => updateTemplate(keywords[k], keywords.Normal));
+    selectedKeyword.forEach(k => {
+      updateTemplate(keywords[k], keywords.Normal);
+    });
   }
 
   // allKeywords is used when we do initial template load.
@@ -35,12 +37,7 @@ function TemplateRenderer() {
     backgroundColor = state.theme.keywords.Normal.backgroundColor;
     keywords = state.theme.keywords;
     selectedKeyword = allKeywords
-      ? [
-          ...state.theme.refs.misc,
-          ...state.theme.refs.major,
-          ...state.theme.refs.minor,
-          ...state.theme.refs[state.theme.language],
-        ]
+      ? Object.keys(keywords)
       : state.app.selectedKeyword;
 
     requestAnimationFrame(step);
@@ -48,7 +45,6 @@ function TemplateRenderer() {
 
   function updateTemplate(keyword, normalKeyword) {
     for (let e of elements[keyword.name]) {
-
       const foregroundColor = keyword.foregroundColor === null ? normalKeyword.foregroundColor : keyword.foregroundColor;
       const backgroundColor = keyword.backgroundColor === null ? normalKeyword.backgroundColor : keyword.backgroundColor;
 

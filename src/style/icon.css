@@ -7,13 +7,22 @@ i {
 .actionable {
   cursor: pointer;
   user-select: none;
+  color: var(--inactive-color);
 
   &:hover {
     color: var(--hover-color);
+
+    & i {
+      color: var(--hover-color);
+    }
   }
 
   &:active {
     color: var(--focus-color);
+
+    & i {
+      color: var(--focus-color);
+    }
   }
 }
 
@@ -21,4 +30,8 @@ i {
 .far,
 .fas {
   color: var(--inactive-color);
+}
+
+.fa-size-large {
+  font-size: 1.5rem;
 }

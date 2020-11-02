@@ -1,3 +1,4 @@
+import { openDB, deleteDB } from 'idb';
 import { saveAs } from 'file-saver';
 import { uuid } from 'lib/uuid.js';
 import { exportCode } from 'lib/util.js';
@@ -5,22 +6,51 @@ import { mitt } from 'lib/event.js';
 import { ThemeModel, PaletteModel } from 'state/models.js';
 import { keywordToVim } from 'lib/json-to-editor.js';
 
-const THEME_PREFIX = 'theme_';
+function CreateModel() {
+  let db;
 
-function CreateLocalStorageStore() {
-  function formatThemeData({ themeName, themeId, theme, palette }) {
+  async function init() {
+    db = await openDB('pinto', 1, {
+      upgrade(db) {
+        const themeStore = 'themes';
+        if (!db.objectStoreNames.contains(themeStore)) {
+          const store = db.createObjectStore(themeStore, {
+            keyPath: 'id',
+          });
+        }
+      },
+    });
+  }
+
+  function formatThemeData({
+    themeName,
+    themeId,
+    theme,
+    palette,
+    created,
+    updated,
+  }) {
     return {
+      id: themeId ? themeId : theme.id,
+      created,
+      updated,
+
       theme: {
-        name: themeName ? themeName : theme.name,
         id: themeId ? themeId : theme.id,
+        name: themeName ? themeName : theme.name,
         version: theme.version,
         editor: theme.editor,
         editorTheme: theme.editorTheme,
         fontSettings: theme.fontSettings,
         keywords: theme.keywords,
         groups: theme.groups,
-        languages: theme.languages,
-        exportOptions: theme.exportOptions,
+        groupKeywords: theme.groupKeywords,
+        keywordLinks: theme.keywordLinks,
+        keywordGroups: theme.keywordGroups,
+
+        fileHandle: theme.fileHandle,
+        created,
+        updated,
       },
 
       palette: {
@@ -39,53 +69,90 @@ function CreateLocalStorageStore() {
     theme = ThemeModel(),
     palette = PaletteModel(),
   }) {
-    saveTheme(themeId, { themeName, theme, palette });
+    const now = new Date().getTime();
+
+    saveTheme(
+      themeId,
+      {
+        themeName,
+        theme,
+        palette,
+      },
+      {
+        created: now,
+        updated: now,
+      },
+    );
 
     return themeId;
   }
 
-  function saveTheme(themeId, { themeName, theme, palette }) {
-    mitt.emit('CHANGES_SAVED');
+  async function saveTheme(
+    themeId,
+    { themeName, theme, palette },
+    { created, updated } = {},
+  ) {
+    if (theme.fileHandle) {
+      const text = keywordToVim(exportCode(theme));
+      const writable = await theme.fileHandle.createWritable();
+      await writable.write(text);
+      await writable.close();
+    }
 
-    const key = `${THEME_PREFIX}${themeId}`;
-    const data = formatThemeData({ themeId, themeName, theme, palette });
+    const data = formatThemeData({
+      themeId,
+      themeName,
+      theme,
+      palette,
+      created: theme.created ? theme.created : created,
+      updated: theme.updated ? theme.updated : updated,
+    });
 
-    return localStorage.setItem(key, JSON.stringify(data));
+    try {
+      mitt.emit('CHANGES_SAVED');
+      return await db.put('themes', data);
+    } catch (e) {
+      console.error(e);
+    }
+
+    return null;
   }
 
-  function getThemes() {
+  async function getThemes() {
     let themes = [];
-
-    const themeKeys = Object.keys(localStorage)
-      .filter(k => k.startsWith(THEME_PREFIX))
-      .map(k => k.replace(THEME_PREFIX, ''));
-
-    for (const themeId of themeKeys) {
-      const theme = getTheme(themeId);
-      if (typeof theme === 'object' && theme.theme.id) {
-        themes.push(theme);
-      }
+    try {
+      themes = await db.getAll('themes');
+    } catch (e) {
+      console.error(e);
     }
 
     return themes;
   }
 
-  function getTheme(themeId) {
-    const themeKey = `${THEME_PREFIX}${themeId}`;
-    const item = localStorage.getItem(themeKey);
-
-    const theme = JSON.parse(item);
+  async function getTheme(themeId) {
+    let theme = null;
+    try {
+      theme = await db.get('themes', themeId);
+    } catch (e) {
+      console.error(e);
+    }
 
     return theme;
   }
 
-  function removeTheme(themeId) {
-    const themeKey = `${THEME_PREFIX}${themeId}`;
-    return localStorage.removeItem(themeKey);
+  async function removeTheme(themeId) {
+    try {
+      return await db.delete('themes', themeId);
+    } catch (e) {
+      console.error(e);
+    }
+
+    // return localStorage.removeItem(themeKey);
   }
 
-  function removeThemes() {
-    return localStorage.clear();
+  async function removeThemes() {
+    return await db.clear('themes');
+    // return localStorage.clear();
   }
 
   function exportThemeVim(theme) {
@@ -100,8 +167,8 @@ function CreateLocalStorageStore() {
     saveAs(file, filename);
   }
 
-  function exportThemesJson() {
-    const data = getThemes();
+  async function exportThemesJson() {
+    const data = await getThemes();
     const filename = 'pinto-themes.json';
 
     const file = new Blob([JSON.stringify(data)], {
@@ -112,15 +179,15 @@ function CreateLocalStorageStore() {
     saveAs(file, filename);
   }
 
-  function exportThemeJson(themeId) {
+  async function exportThemeJson(themeId) {
     let data;
     let filename;
 
     if (themeId) {
-      data = getTheme(themeId);
+      data = await getTheme(themeId);
       filename = `pinto-${data.theme.name}.json`;
     } else {
-      data = getThemes();
+      data = await getThemes();
       filename = 'pinto-themes.json';
     }
 
@@ -135,14 +202,14 @@ function CreateLocalStorageStore() {
   function importThemeJson(files) {
     const reader = new FileReader();
 
-    reader.onload = () => {
+    reader.onload = async () => {
       const data = JSON.parse(reader.result);
       if (Array.isArray(data)) {
         for (const theme of data) {
-          saveTheme(theme.theme.id, theme);
+          await saveTheme(theme.theme.id, theme);
         }
       } else {
-        saveTheme(data.theme.id, data);
+        await saveTheme(data.theme.id, data);
       }
 
       mitt.emit('SYNC');
@@ -152,6 +219,7 @@ function CreateLocalStorageStore() {
   }
 
   return Object.freeze({
+    init,
     exportThemeVim,
 
     exportThemesJson,
@@ -169,4 +237,4 @@ function CreateLocalStorageStore() {
   });
 }
 
-export const Theme = CreateLocalStorageStore();
+export const Theme = CreateModel();

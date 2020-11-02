@@ -6,7 +6,6 @@ function keywordToVim({
   editorTheme,
   keywordGroups,
   keywords,
-  exportOptions,
 }) {
 
   const file = `
@@ -30,7 +29,7 @@ ${keywordGroups
   .map(
     group => {
       const alignedText = alignText(group.keywords
-        .map(keyword => highlight(keywords[keyword], exportOptions))
+        .map(keyword => highlight(keywords[keyword]))
         ).join('');
 
       return `\n" ${group.title}\n\n${alignedText}`;
@@ -42,14 +41,8 @@ ${keywordGroups
   return file;
 }
 
-function highlight(keyword, exportOptions) {
-  if (exportOptions.term && exportOptions.gui) {
-    return `hi ${keyword.name} guisp=NONE guifg=${handleNullColor(keyword.foregroundColor)} guibg=${handleNullColor(keyword.backgroundColor)} ctermfg=${hexToX256(keyword.foregroundColor)} ctermbg=${hexToX256(keyword.backgroundColor)} gui=${formatAttrs(keyword)} cterm=${formatAttrs(keyword)}\n`;
-  } else if (exportOptions.term) {
-    return `hi ${keyword.name} guisp=NONE ctermfg=${hexToX256(keyword.foregroundColor)} ctermbg=${hexToX256(keyword.backgroundColor)} cterm=${formatAttrs(keyword)}\n`;
-  }
-
-  return `hi ${keyword.name} guisp=NONE guifg=${handleNullColor(keyword.foregroundColor)} guibg=${handleNullColor(keyword.backgroundColor)} gui=${formatAttrs(keyword)}\n`;
+function highlight(keyword) {
+  return `hi ${keyword.name} guisp=NONE guifg=${handleNullColor(keyword.foregroundColor)} guibg=${handleNullColor(keyword.backgroundColor)} ctermfg=${hexToX256(keyword.foregroundColor)} ctermbg=${hexToX256(keyword.backgroundColor)} gui=${formatAttrs(keyword)} cterm=${formatAttrs(keyword)}\n`;
 }
 
 function formatAttrs({ bold, italic, underline, lineThrough }) {

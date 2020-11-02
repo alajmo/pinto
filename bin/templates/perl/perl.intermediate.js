@@ -953,7 +953,7 @@ module.exports = [
         "group": "perlSubName",
         "linkedGroup": "Identifier",
         "row": 34,
-        "char": "header "
+        "char": "include "
     },
     {
         "group": "Normal",
@@ -1000,19 +1000,7 @@ module.exports = [
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 35,
-        "char": "$w"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 35,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 35,
-        "char": "$h"
+        "char": "$content"
     },
     {
         "group": "Normal",
@@ -1074,14 +1062,14 @@ module.exports = [
         "char": " .&#61; "
     },
     {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
         "row": 36,
-        "char": "&lt;&lt;SVG"
+        "char": "$content"
     },
     {
-        "group": "perlHereDocStart",
-        "linkedGroup": "perlHereDocStart",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 36,
         "char": ";\n"
     },
@@ -1091,10 +1079,10 @@ module.exports = [
         "char": "37"
     },
     {
-        "group": "perlHereDoc",
-        "linkedGroup": "Constant",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 37,
-        "char": "&lt;?xml version&#61;&quot;1.0&quot; standalone&#61;&quot;no&quot;?&gt;\n"
+        "char": "\t}\n"
     },
     {
         "group": "LineNr",
@@ -1102,10 +1090,10 @@ module.exports = [
         "char": "38"
     },
     {
-        "group": "perlHereDoc",
-        "linkedGroup": "Constant",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 38,
-        "char": "&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot; &quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot;&gt;\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1113,58 +1101,28 @@ module.exports = [
         "char": "39"
     },
     {
-        "group": "perlHereDoc",
-        "linkedGroup": "Constant",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 39,
-        "char": "&lt;svg version&#61;&quot;1.1&quot; width&#61;&quot;"
+        "char": "\t"
     },
     {
-        "group": "perlVarPlain",
+        "group": "perlFunction",
+        "linkedGroup": "Statement",
+        "row": 39,
+        "char": "sub "
+    },
+    {
+        "group": "perlSubName",
         "linkedGroup": "Identifier",
         "row": 39,
-        "char": "$w"
+        "char": "colorAllocate "
     },
     {
-        "group": "perlHereDoc",
-        "linkedGroup": "Constant",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 39,
-        "char": "&quot; height&#61;&quot;"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 39,
-        "char": "$h"
-    },
-    {
-        "group": "perlHereDoc",
-        "linkedGroup": "Constant",
-        "row": 39,
-        "char": "&quot; onload&#61;&quot;init(evt)&quot; viewBox&#61;&quot;0 0 "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 39,
-        "char": "$w"
-    },
-    {
-        "group": "perlHereDoc",
-        "linkedGroup": "Constant",
-        "row": 39,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 39,
-        "char": "$h"
-    },
-    {
-        "group": "perlHereDoc",
-        "linkedGroup": "Constant",
-        "row": 39,
-        "char": "&quot; xmlns&#61;&quot;http://www.w3.org/2000/svg&quot; &gt;\n"
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -1172,10 +1130,82 @@ module.exports = [
         "char": "40"
     },
     {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 40,
-        "char": "SVG\n"
+        "char": "\t\t"
+    },
+    {
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
+        "row": 40,
+        "char": "my"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 40,
+        "char": " ("
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 40,
+        "char": "$self"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 40,
+        "char": ", "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 40,
+        "char": "$r"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 40,
+        "char": ", "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 40,
+        "char": "$g"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 40,
+        "char": ", "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 40,
+        "char": "$b"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 40,
+        "char": ") &#61; "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 40,
+        "char": "@_"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 40,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -1186,7 +1216,79 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 41,
-        "char": "\t}\n"
+        "char": "\t\t"
+    },
+    {
+        "group": "perlStatementControl",
+        "linkedGroup": "Statement",
+        "row": 41,
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 41,
+        "char": " "
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 41,
+        "char": "&quot;"
+    },
+    {
+        "group": "perlString",
+        "linkedGroup": "Constant",
+        "row": 41,
+        "char": "rgb("
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 41,
+        "char": "$r"
+    },
+    {
+        "group": "perlString",
+        "linkedGroup": "Constant",
+        "row": 41,
+        "char": ","
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 41,
+        "char": "$g"
+    },
+    {
+        "group": "perlString",
+        "linkedGroup": "Constant",
+        "row": 41,
+        "char": ","
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 41,
+        "char": "$b"
+    },
+    {
+        "group": "perlString",
+        "linkedGroup": "Constant",
+        "row": 41,
+        "char": ")"
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 41,
+        "char": "&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 41,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -1197,7 +1299,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 42,
-        "char": "\n"
+        "char": "\t}\n"
     },
     {
         "group": "LineNr",
@@ -1208,25 +1310,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 43,
-        "char": "\t"
-    },
-    {
-        "group": "perlFunction",
-        "linkedGroup": "Statement",
-        "row": 43,
-        "char": "sub "
-    },
-    {
-        "group": "perlSubName",
-        "linkedGroup": "Identifier",
-        "row": 43,
-        "char": "include "
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 43,
-        "char": "{\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1237,55 +1321,25 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 44,
-        "char": "\t\t"
+        "char": "\t"
     },
     {
-        "group": "perlStatementStorage",
+        "group": "perlFunction",
         "linkedGroup": "Statement",
         "row": 44,
-        "char": "my"
+        "char": "sub "
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 44,
-        "char": " ("
-    },
-    {
-        "group": "perlVarPlain",
+        "group": "perlSubName",
         "linkedGroup": "Identifier",
         "row": 44,
-        "char": "$self"
+        "char": "svg "
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 44,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 44,
-        "char": "$content"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 44,
-        "char": ") &#61; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 44,
-        "char": "@_"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 44,
-        "char": ";\n"
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -1299,40 +1353,34 @@ module.exports = [
         "char": "\t\t"
     },
     {
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
+        "row": 45,
+        "char": "my"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 45,
+        "char": " "
+    },
+    {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 45,
         "char": "$self"
     },
     {
-        "group": "perlVarSimpleMember",
-        "linkedGroup": "Identifier",
-        "row": 45,
-        "char": "-&gt;{"
-    },
-    {
-        "group": "perlVarSimpleMemberName",
-        "linkedGroup": "Constant",
-        "row": 45,
-        "char": "svg"
-    },
-    {
-        "group": "perlVarSimpleMember",
-        "linkedGroup": "Identifier",
-        "row": 45,
-        "char": "}"
-    },
-    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 45,
-        "char": " .&#61; "
+        "char": " &#61; "
     },
     {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
+        "group": "perlStatementList",
+        "linkedGroup": "Statement",
         "row": 45,
-        "char": "$content"
+        "char": "shift"
     },
     {
         "group": "Normal",
@@ -1349,7 +1397,73 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 46,
-        "char": "\t}\n"
+        "char": "\t\t"
+    },
+    {
+        "group": "perlStatementControl",
+        "linkedGroup": "Statement",
+        "row": 46,
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 46,
+        "char": " "
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 46,
+        "char": "&quot;"
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 46,
+        "char": "$self"
+    },
+    {
+        "group": "perlVarSimpleMember",
+        "linkedGroup": "Identifier",
+        "row": 46,
+        "char": "-&gt;{"
+    },
+    {
+        "group": "perlVarSimpleMemberName",
+        "linkedGroup": "Constant",
+        "row": 46,
+        "char": "svg"
+    },
+    {
+        "group": "perlVarSimpleMember",
+        "linkedGroup": "Identifier",
+        "row": 46,
+        "char": "}"
+    },
+    {
+        "group": "perlString",
+        "linkedGroup": "Constant",
+        "row": 46,
+        "char": "&lt;/svg&gt;"
+    },
+    {
+        "group": "perlSpecialString",
+        "linkedGroup": "Special",
+        "row": 46,
+        "char": "\\n"
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 46,
+        "char": "&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 46,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -1360,7 +1474,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 47,
-        "char": "\n"
+        "char": "\t}\n"
     },
     {
         "group": "LineNr",
@@ -1374,22 +1488,16 @@ module.exports = [
         "char": "\t"
     },
     {
-        "group": "perlFunction",
-        "linkedGroup": "Statement",
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
         "row": 48,
-        "char": "sub "
-    },
-    {
-        "group": "perlSubName",
-        "linkedGroup": "Identifier",
-        "row": 48,
-        "char": "colorAllocate "
+        "char": "1"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 48,
-        "char": "{\n"
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -1400,79 +1508,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 49,
-        "char": "\t\t"
-    },
-    {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 49,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 49,
-        "char": " ("
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 49,
-        "char": "$self"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 49,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 49,
-        "char": "$r"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 49,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 49,
-        "char": "$g"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 49,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 49,
-        "char": "$b"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 49,
-        "char": ") &#61; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 49,
-        "char": "@_"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 49,
-        "char": ";\n"
+        "char": "}\n"
     },
     {
         "group": "LineNr",
@@ -1483,79 +1519,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 50,
-        "char": "\t\t"
-    },
-    {
-        "group": "perlStatementControl",
-        "linkedGroup": "Statement",
-        "row": 50,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 50,
-        "char": " "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 50,
-        "char": "&quot;"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 50,
-        "char": "rgb("
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 50,
-        "char": "$r"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 50,
-        "char": ","
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 50,
-        "char": "$g"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 50,
-        "char": ","
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 50,
-        "char": "$b"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 50,
-        "char": ")"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 50,
-        "char": "&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 50,
-        "char": ";\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1563,10 +1527,22 @@ module.exports = [
         "char": "51"
     },
     {
+        "group": "perlFunction",
+        "linkedGroup": "Statement",
+        "row": 51,
+        "char": "sub "
+    },
+    {
+        "group": "perlSubName",
+        "linkedGroup": "Identifier",
+        "row": 51,
+        "char": "color "
+    },
+    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 51,
-        "char": "\t}\n"
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -1577,7 +1553,43 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 52,
-        "char": "\n"
+        "char": "\t"
+    },
+    {
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
+        "row": 52,
+        "char": "my"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 52,
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 52,
+        "char": "$type"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 52,
+        "char": " &#61; "
+    },
+    {
+        "group": "perlStatementList",
+        "linkedGroup": "Statement",
+        "row": 52,
+        "char": "shift"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 52,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -1591,22 +1603,100 @@ module.exports = [
         "char": "\t"
     },
     {
-        "group": "perlFunction",
+        "group": "perlConditional",
         "linkedGroup": "Statement",
         "row": 53,
-        "char": "sub "
-    },
-    {
-        "group": "perlSubName",
-        "linkedGroup": "Identifier",
-        "row": 53,
-        "char": "filledRectangle "
+        "char": "if"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 53,
-        "char": "{\n"
+        "char": " ("
+    },
+    {
+        "group": "perlOperator",
+        "linkedGroup": "Statement",
+        "row": 53,
+        "char": "defined"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 53,
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 53,
+        "char": "$type"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 53,
+        "char": " "
+    },
+    {
+        "group": "perlOperator",
+        "linkedGroup": "Statement",
+        "row": 53,
+        "char": "and"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 53,
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 53,
+        "char": "$type"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 53,
+        "char": " "
+    },
+    {
+        "group": "perlOperator",
+        "linkedGroup": "Statement",
+        "row": 53,
+        "char": "eq"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 53,
+        "char": " "
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 53,
+        "char": "&quot;"
+    },
+    {
+        "group": "perlString",
+        "linkedGroup": "Constant",
+        "row": 53,
+        "char": "hot"
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 53,
+        "char": "&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 53,
+        "char": ") {\n"
     },
     {
         "group": "LineNr",
@@ -1629,103 +1719,67 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 54,
-        "char": " ("
+        "char": " "
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 54,
-        "char": "$self"
+        "char": "$r"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 54,
-        "char": ", "
+        "char": " &#61; "
     },
     {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
         "row": 54,
-        "char": "$x1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 54,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 54,
-        "char": "$y1"
+        "char": "205"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 54,
-        "char": ", "
+        "char": " + "
     },
     {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
+        "group": "perlStatementNumeric",
+        "linkedGroup": "Statement",
         "row": 54,
-        "char": "$x2"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 54,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 54,
-        "char": "$y2"
+        "char": "int"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 54,
-        "char": ", "
+        "char": "("
     },
     {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
+        "group": "perlStatementNumeric",
+        "linkedGroup": "Statement",
         "row": 54,
-        "char": "$fill"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 54,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 54,
-        "char": "$extra"
+        "char": "rand"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 54,
-        "char": ") &#61; "
+        "char": "("
     },
     {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
         "row": 54,
-        "char": "@_"
+        "char": "50"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 54,
-        "char": ";\n"
+        "char": "));\n"
     },
     {
         "group": "LineNr",
@@ -1739,22 +1793,10 @@ module.exports = [
         "char": "\t\t"
     },
     {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 55,
-        "char": "$x1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 55,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlStatementScalar",
+        "group": "perlStatementStorage",
         "linkedGroup": "Statement",
         "row": 55,
-        "char": "sprintf"
+        "char": "my"
     },
     {
         "group": "Normal",
@@ -1763,40 +1805,64 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 55,
-        "char": "&quot;"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 55,
-        "char": "%0.1f"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 55,
-        "char": "&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 55,
-        "char": ", "
-    },
-    {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 55,
-        "char": "$x1"
+        "char": "$g"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 55,
-        "char": ";\n"
+        "char": " &#61; "
+    },
+    {
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
+        "row": 55,
+        "char": "0"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 55,
+        "char": " + "
+    },
+    {
+        "group": "perlStatementNumeric",
+        "linkedGroup": "Statement",
+        "row": 55,
+        "char": "int"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 55,
+        "char": "("
+    },
+    {
+        "group": "perlStatementNumeric",
+        "linkedGroup": "Statement",
+        "row": 55,
+        "char": "rand"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 55,
+        "char": "("
+    },
+    {
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
+        "row": 55,
+        "char": "230"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 55,
+        "char": "));\n"
     },
     {
         "group": "LineNr",
@@ -1810,22 +1876,10 @@ module.exports = [
         "char": "\t\t"
     },
     {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 56,
-        "char": "$x2"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 56,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlStatementScalar",
+        "group": "perlStatementStorage",
         "linkedGroup": "Statement",
         "row": 56,
-        "char": "sprintf"
+        "char": "my"
     },
     {
         "group": "Normal",
@@ -1834,40 +1888,64 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 56,
-        "char": "&quot;"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 56,
-        "char": "%0.1f"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 56,
-        "char": "&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 56,
-        "char": ", "
-    },
-    {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 56,
-        "char": "$x2"
+        "char": "$b"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 56,
-        "char": ";\n"
+        "char": " &#61; "
+    },
+    {
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
+        "row": 56,
+        "char": "0"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 56,
+        "char": " + "
+    },
+    {
+        "group": "perlStatementNumeric",
+        "linkedGroup": "Statement",
+        "row": 56,
+        "char": "int"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 56,
+        "char": "("
+    },
+    {
+        "group": "perlStatementNumeric",
+        "linkedGroup": "Statement",
+        "row": 56,
+        "char": "rand"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 56,
+        "char": "("
+    },
+    {
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
+        "row": 56,
+        "char": "55"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 56,
+        "char": "));\n"
     },
     {
         "group": "LineNr",
@@ -1881,34 +1959,10 @@ module.exports = [
         "char": "\t\t"
     },
     {
-        "group": "perlStatementStorage",
+        "group": "perlStatementControl",
         "linkedGroup": "Statement",
         "row": 57,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 57,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 57,
-        "char": "$w"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 57,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlStatementScalar",
-        "linkedGroup": "Statement",
-        "row": 57,
-        "char": "sprintf"
+        "char": "return"
     },
     {
         "group": "Normal",
@@ -1926,37 +1980,49 @@ module.exports = [
         "group": "perlString",
         "linkedGroup": "Constant",
         "row": 57,
-        "char": "%0.1f"
+        "char": "rgb("
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 57,
+        "char": "$r"
+    },
+    {
+        "group": "perlString",
+        "linkedGroup": "Constant",
+        "row": 57,
+        "char": ","
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 57,
+        "char": "$g"
+    },
+    {
+        "group": "perlString",
+        "linkedGroup": "Constant",
+        "row": 57,
+        "char": ","
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 57,
+        "char": "$b"
+    },
+    {
+        "group": "perlString",
+        "linkedGroup": "Constant",
+        "row": 57,
+        "char": ")"
     },
     {
         "group": "perlStringStartEnd",
         "linkedGroup": "Constant",
         "row": 57,
         "char": "&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 57,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 57,
-        "char": "$x2"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 57,
-        "char": " - "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 57,
-        "char": "$x1"
     },
     {
         "group": "Normal",
@@ -1973,91 +2039,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 58,
-        "char": "\t\t"
-    },
-    {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 58,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 58,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 58,
-        "char": "$h"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 58,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlStatementScalar",
-        "linkedGroup": "Statement",
-        "row": 58,
-        "char": "sprintf"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 58,
-        "char": " "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 58,
-        "char": "&quot;"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 58,
-        "char": "%0.1f"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 58,
-        "char": "&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 58,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 58,
-        "char": "$y2"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 58,
-        "char": " - "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 58,
-        "char": "$y1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 58,
-        "char": ";\n"
+        "char": "\t}\n"
     },
     {
         "group": "LineNr",
@@ -2068,19 +2050,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 59,
-        "char": "\t\t"
+        "char": "\t"
     },
     {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
+        "group": "perlConditional",
+        "linkedGroup": "Statement",
         "row": 59,
-        "char": "$extra"
+        "char": "if"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 59,
-        "char": " &#61; "
+        "char": " ("
     },
     {
         "group": "perlOperator",
@@ -2098,37 +2080,73 @@ module.exports = [
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 59,
-        "char": "$extra"
+        "char": "$type"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 59,
-        "char": " ? "
+        "char": " "
+    },
+    {
+        "group": "perlOperator",
+        "linkedGroup": "Statement",
+        "row": 59,
+        "char": "and"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 59,
+        "char": " "
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 59,
-        "char": "$extra"
+        "char": "$type"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 59,
-        "char": " : "
+        "char": " "
+    },
+    {
+        "group": "perlOperator",
+        "linkedGroup": "Statement",
+        "row": 59,
+        "char": "eq"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 59,
+        "char": " "
     },
     {
         "group": "perlStringStartEnd",
         "linkedGroup": "Constant",
         "row": 59,
-        "char": "&quot;&quot;"
+        "char": "&quot;"
+    },
+    {
+        "group": "perlString",
+        "linkedGroup": "Constant",
+        "row": 59,
+        "char": "cold"
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 59,
+        "char": "&quot;"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 59,
-        "char": ";\n"
+        "char": ") {\n"
     },
     {
         "group": "LineNr",
@@ -2142,148 +2160,76 @@ module.exports = [
         "char": "\t\t"
     },
     {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
         "row": 60,
-        "char": "$self"
-    },
-    {
-        "group": "perlVarSimpleMember",
-        "linkedGroup": "Identifier",
-        "row": 60,
-        "char": "-&gt;{"
-    },
-    {
-        "group": "perlVarSimpleMemberName",
-        "linkedGroup": "Constant",
-        "row": 60,
-        "char": "svg"
-    },
-    {
-        "group": "perlVarSimpleMember",
-        "linkedGroup": "Identifier",
-        "row": 60,
-        "char": "}"
+        "char": "my"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
-        "row": 60,
-        "char": " .&#61; "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 60,
-        "char": "qq/"
-    },
-    {
-        "group": "perlQQ",
-        "linkedGroup": "Constant",
-        "row": 60,
-        "char": "&lt;rect x&#61;&quot;"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 60,
-        "char": "$x1"
-    },
-    {
-        "group": "perlQQ",
-        "linkedGroup": "Constant",
-        "row": 60,
-        "char": "&quot; y&#61;&quot;"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 60,
-        "char": "$y1"
-    },
-    {
-        "group": "perlQQ",
-        "linkedGroup": "Constant",
-        "row": 60,
-        "char": "&quot; width&#61;&quot;"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 60,
-        "char": "$w"
-    },
-    {
-        "group": "perlQQ",
-        "linkedGroup": "Constant",
-        "row": 60,
-        "char": "&quot; height&#61;&quot;"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 60,
-        "char": "$h"
-    },
-    {
-        "group": "perlQQ",
-        "linkedGroup": "Constant",
-        "row": 60,
-        "char": "&quot; fill&#61;&quot;"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 60,
-        "char": "$fill"
-    },
-    {
-        "group": "perlQQ",
-        "linkedGroup": "Constant",
-        "row": 60,
-        "char": "&quot; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 60,
-        "char": "$extra"
-    },
-    {
-        "group": "perlQQ",
-        "linkedGroup": "Constant",
         "row": 60,
         "char": " "
     },
     {
-        "group": "perlSpecialString",
-        "linkedGroup": "Special",
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
         "row": 60,
-        "char": "\\/"
-    },
-    {
-        "group": "perlQQ",
-        "linkedGroup": "Constant",
-        "row": 60,
-        "char": "&gt;"
-    },
-    {
-        "group": "perlSpecialString",
-        "linkedGroup": "Special",
-        "row": 60,
-        "char": "\\n"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 60,
-        "char": "/"
+        "char": "$r"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 60,
-        "char": ";\n"
+        "char": " &#61; "
+    },
+    {
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
+        "row": 60,
+        "char": "0"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 60,
+        "char": " + "
+    },
+    {
+        "group": "perlStatementNumeric",
+        "linkedGroup": "Statement",
+        "row": 60,
+        "char": "int"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 60,
+        "char": "("
+    },
+    {
+        "group": "perlStatementNumeric",
+        "linkedGroup": "Statement",
+        "row": 60,
+        "char": "rand"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 60,
+        "char": "("
+    },
+    {
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
+        "row": 60,
+        "char": "40"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 60,
+        "char": "));\n"
     },
     {
         "group": "LineNr",
@@ -2294,7 +2240,79 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 61,
-        "char": "\t}\n"
+        "char": "\t\t"
+    },
+    {
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
+        "row": 61,
+        "char": "my"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 61,
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 61,
+        "char": "$b"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 61,
+        "char": " &#61; "
+    },
+    {
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
+        "row": 61,
+        "char": "205"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 61,
+        "char": " + "
+    },
+    {
+        "group": "perlStatementNumeric",
+        "linkedGroup": "Statement",
+        "row": 61,
+        "char": "int"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 61,
+        "char": "("
+    },
+    {
+        "group": "perlStatementNumeric",
+        "linkedGroup": "Statement",
+        "row": 61,
+        "char": "rand"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 61,
+        "char": "("
+    },
+    {
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
+        "row": 61,
+        "char": "50"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 61,
+        "char": "));\n"
     },
     {
         "group": "LineNr",
@@ -2305,7 +2323,79 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 62,
-        "char": "\n"
+        "char": "\t\t"
+    },
+    {
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
+        "row": 62,
+        "char": "my"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 62,
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 62,
+        "char": "$g"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 62,
+        "char": " &#61; "
+    },
+    {
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
+        "row": 62,
+        "char": "0"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 62,
+        "char": " + "
+    },
+    {
+        "group": "perlStatementNumeric",
+        "linkedGroup": "Statement",
+        "row": 62,
+        "char": "int"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 62,
+        "char": "("
+    },
+    {
+        "group": "perlStatementNumeric",
+        "linkedGroup": "Statement",
+        "row": 62,
+        "char": "rand"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 62,
+        "char": "("
+    },
+    {
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
+        "row": 62,
+        "char": "150"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 62,
+        "char": "));\n"
     },
     {
         "group": "LineNr",
@@ -2316,25 +2406,79 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 63,
-        "char": "\t"
+        "char": "\t\t"
     },
     {
-        "group": "perlFunction",
+        "group": "perlStatementControl",
         "linkedGroup": "Statement",
         "row": 63,
-        "char": "sub "
-    },
-    {
-        "group": "perlSubName",
-        "linkedGroup": "Identifier",
-        "row": 63,
-        "char": "stringTTF "
+        "char": "return"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 63,
-        "char": "{\n"
+        "char": " "
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 63,
+        "char": "&quot;"
+    },
+    {
+        "group": "perlString",
+        "linkedGroup": "Constant",
+        "row": 63,
+        "char": "rgb("
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 63,
+        "char": "$r"
+    },
+    {
+        "group": "perlString",
+        "linkedGroup": "Constant",
+        "row": 63,
+        "char": ","
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 63,
+        "char": "$g"
+    },
+    {
+        "group": "perlString",
+        "linkedGroup": "Constant",
+        "row": 63,
+        "char": ","
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 63,
+        "char": "$b"
+    },
+    {
+        "group": "perlString",
+        "linkedGroup": "Constant",
+        "row": 63,
+        "char": ")"
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 63,
+        "char": "&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 63,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -2345,151 +2489,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 64,
-        "char": "\t\t"
-    },
-    {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 64,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 64,
-        "char": " ("
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 64,
-        "char": "$self"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 64,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 64,
-        "char": "$color"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 64,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 64,
-        "char": "$font"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 64,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 64,
-        "char": "$size"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 64,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 64,
-        "char": "$angle"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 64,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 64,
-        "char": "$x"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 64,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 64,
-        "char": "$y"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 64,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 64,
-        "char": "$str"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 64,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 64,
-        "char": "$loc"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 64,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 64,
-        "char": "$extra"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 64,
-        "char": ") &#61; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 64,
-        "char": "@_"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 64,
-        "char": ";\n"
+        "char": "\t}\n"
     },
     {
         "group": "LineNr",
@@ -2500,55 +2500,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 65,
-        "char": "\t\t"
+        "char": "\t"
     },
     {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 65,
-        "char": "$loc"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 65,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlOperator",
+        "group": "perlStatementControl",
         "linkedGroup": "Statement",
         "row": 65,
-        "char": "defined"
+        "char": "return"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 65,
         "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 65,
-        "char": "$loc"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 65,
-        "char": " ? "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 65,
-        "char": "$loc"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 65,
-        "char": " : "
     },
     {
         "group": "perlStringStartEnd",
@@ -2560,7 +2524,7 @@ module.exports = [
         "group": "perlString",
         "linkedGroup": "Constant",
         "row": 65,
-        "char": "left"
+        "char": "rgb(0,0,0)"
     },
     {
         "group": "perlStringStartEnd",
@@ -2583,67 +2547,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 66,
-        "char": "\t\t"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 66,
-        "char": "$extra"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 66,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlOperator",
-        "linkedGroup": "Statement",
-        "row": 66,
-        "char": "defined"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 66,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 66,
-        "char": "$extra"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 66,
-        "char": " ? "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 66,
-        "char": "$extra"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 66,
-        "char": " : "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 66,
-        "char": "&quot;&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 66,
-        "char": ";\n"
+        "char": "}\n"
     },
     {
         "group": "LineNr",
@@ -2654,175 +2558,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 67,
-        "char": "\t\t"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 67,
-        "char": "$self"
-    },
-    {
-        "group": "perlVarSimpleMember",
-        "linkedGroup": "Identifier",
-        "row": 67,
-        "char": "-&gt;{"
-    },
-    {
-        "group": "perlVarSimpleMemberName",
-        "linkedGroup": "Constant",
-        "row": 67,
-        "char": "svg"
-    },
-    {
-        "group": "perlVarSimpleMember",
-        "linkedGroup": "Identifier",
-        "row": 67,
-        "char": "}"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 67,
-        "char": " .&#61; "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 67,
-        "char": "qq/"
-    },
-    {
-        "group": "perlQQ",
-        "linkedGroup": "Constant",
-        "row": 67,
-        "char": "&lt;text text-anchor&#61;&quot;"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 67,
-        "char": "$loc"
-    },
-    {
-        "group": "perlQQ",
-        "linkedGroup": "Constant",
-        "row": 67,
-        "char": "&quot; x&#61;&quot;"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 67,
-        "char": "$x"
-    },
-    {
-        "group": "perlQQ",
-        "linkedGroup": "Constant",
-        "row": 67,
-        "char": "&quot; y&#61;&quot;"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 67,
-        "char": "$y"
-    },
-    {
-        "group": "perlQQ",
-        "linkedGroup": "Constant",
-        "row": 67,
-        "char": "&quot; font-size&#61;&quot;"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 67,
-        "char": "$size"
-    },
-    {
-        "group": "perlQQ",
-        "linkedGroup": "Constant",
-        "row": 67,
-        "char": "&quot; font-family&#61;&quot;"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 67,
-        "char": "$font"
-    },
-    {
-        "group": "perlQQ",
-        "linkedGroup": "Constant",
-        "row": 67,
-        "char": "&quot; fill&#61;&quot;"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 67,
-        "char": "$color"
-    },
-    {
-        "group": "perlQQ",
-        "linkedGroup": "Constant",
-        "row": 67,
-        "char": "&quot; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 67,
-        "char": "$extra"
-    },
-    {
-        "group": "perlQQ",
-        "linkedGroup": "Constant",
-        "row": 67,
-        "char": " &gt;"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 67,
-        "char": "$str"
-    },
-    {
-        "group": "perlQQ",
-        "linkedGroup": "Constant",
-        "row": 67,
-        "char": "&lt;"
-    },
-    {
-        "group": "perlSpecialString",
-        "linkedGroup": "Special",
-        "row": 67,
-        "char": "\\/"
-    },
-    {
-        "group": "perlQQ",
-        "linkedGroup": "Constant",
-        "row": 67,
-        "char": "text&gt;"
-    },
-    {
-        "group": "perlSpecialString",
-        "linkedGroup": "Special",
-        "row": 67,
-        "char": "\\n"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 67,
-        "char": "/"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 67,
-        "char": ";\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -2830,10 +2566,28 @@ module.exports = [
         "char": "68"
     },
     {
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
+        "row": 68,
+        "char": "my"
+    },
+    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 68,
-        "char": "\t}\n"
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain2",
+        "linkedGroup": "Identifier",
+        "row": 68,
+        "char": "%Node"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 68,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -2841,10 +2595,28 @@ module.exports = [
         "char": "69"
     },
     {
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
+        "row": 69,
+        "char": "my"
+    },
+    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 69,
-        "char": "\n"
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain2",
+        "linkedGroup": "Identifier",
+        "row": 69,
+        "char": "%Tmp"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 69,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -2855,25 +2627,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 70,
-        "char": "\t"
-    },
-    {
-        "group": "perlFunction",
-        "linkedGroup": "Statement",
-        "row": 70,
-        "char": "sub "
-    },
-    {
-        "group": "perlSubName",
-        "linkedGroup": "Identifier",
-        "row": 70,
-        "char": "svg "
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 70,
-        "char": "{\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -2881,46 +2635,22 @@ module.exports = [
         "char": "71"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 71,
-        "char": "\t\t"
-    },
-    {
-        "group": "perlStatementStorage",
+        "group": "perlFunction",
         "linkedGroup": "Statement",
         "row": 71,
-        "char": "my"
+        "char": "sub "
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 71,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
+        "group": "perlSubName",
         "linkedGroup": "Identifier",
         "row": 71,
-        "char": "$self"
+        "char": "flow "
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 71,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlStatementList",
-        "linkedGroup": "Statement",
-        "row": 71,
-        "char": "shift"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 71,
-        "char": ";\n"
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -2931,67 +2661,85 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 72,
-        "char": "\t\t"
+        "char": "\t"
     },
     {
-        "group": "perlStatementControl",
+        "group": "perlStatementStorage",
         "linkedGroup": "Statement",
         "row": 72,
-        "char": "return"
+        "char": "my"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 72,
-        "char": " "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 72,
-        "char": "&quot;"
+        "char": " ("
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 72,
-        "char": "$self"
+        "char": "$a"
     },
     {
-        "group": "perlVarSimpleMember",
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 72,
+        "char": ", "
+    },
+    {
+        "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 72,
-        "char": "-&gt;{"
+        "char": "$b"
     },
     {
-        "group": "perlVarSimpleMemberName",
-        "linkedGroup": "Constant",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 72,
-        "char": "svg"
+        "char": ", "
     },
     {
-        "group": "perlVarSimpleMember",
+        "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 72,
-        "char": "}"
+        "char": "$ca"
     },
     {
-        "group": "perlString",
-        "linkedGroup": "Constant",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 72,
-        "char": "&lt;/svg&gt;"
+        "char": ", "
     },
     {
-        "group": "perlSpecialString",
-        "linkedGroup": "Special",
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
         "row": 72,
-        "char": "\\n"
+        "char": "$cb"
     },
     {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 72,
-        "char": "&quot;"
+        "char": ", "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 72,
+        "char": "$v"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 72,
+        "char": ") &#61; "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 72,
+        "char": "@_"
     },
     {
         "group": "Normal",
@@ -3008,7 +2756,79 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 73,
-        "char": "\t}\n"
+        "char": "\t"
+    },
+    {
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
+        "row": 73,
+        "char": "my"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 73,
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 73,
+        "char": "@A"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 73,
+        "char": " &#61; "
+    },
+    {
+        "group": "perlStatementRegexp",
+        "linkedGroup": "Statement",
+        "row": 73,
+        "char": "split"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 73,
+        "char": " "
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 73,
+        "char": "&quot;"
+    },
+    {
+        "group": "perlString",
+        "linkedGroup": "Constant",
+        "row": 73,
+        "char": ","
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 73,
+        "char": "&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 73,
+        "char": ", "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 73,
+        "char": "$a"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 73,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -3022,10 +2842,70 @@ module.exports = [
         "char": "\t"
     },
     {
-        "group": "perlNumber",
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
+        "row": 74,
+        "char": "my"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 74,
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 74,
+        "char": "@B"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 74,
+        "char": " &#61; "
+    },
+    {
+        "group": "perlStatementRegexp",
+        "linkedGroup": "Statement",
+        "row": 74,
+        "char": "split"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 74,
+        "char": " "
+    },
+    {
+        "group": "perlStringStartEnd",
         "linkedGroup": "Constant",
         "row": 74,
-        "char": "1"
+        "char": "&quot;"
+    },
+    {
+        "group": "perlString",
+        "linkedGroup": "Constant",
+        "row": 74,
+        "char": ","
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 74,
+        "char": "&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 74,
+        "char": ", "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 74,
+        "char": "$b"
     },
     {
         "group": "Normal",
@@ -3042,7 +2922,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 75,
-        "char": "}\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -3053,7 +2933,43 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 76,
-        "char": "\n"
+        "char": "\t"
+    },
+    {
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
+        "row": 76,
+        "char": "my"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 76,
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 76,
+        "char": "$len_a"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 76,
+        "char": " &#61; "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 76,
+        "char": "$#A"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 76,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -3061,22 +2977,46 @@ module.exports = [
         "char": "77"
     },
     {
-        "group": "perlFunction",
-        "linkedGroup": "Statement",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 77,
-        "char": "sub "
+        "char": "\t"
     },
     {
-        "group": "perlSubName",
-        "linkedGroup": "Identifier",
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
         "row": 77,
-        "char": "color "
+        "char": "my"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 77,
-        "char": "{\n"
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 77,
+        "char": "$len_b"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 77,
+        "char": " &#61; "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 77,
+        "char": "$#B"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 77,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -3090,10 +3030,34 @@ module.exports = [
         "char": "\t"
     },
     {
-        "group": "perlStatementStorage",
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 78,
+        "char": "$depthmax"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 78,
+        "char": " &#61; "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 78,
+        "char": "$len_b"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 78,
+        "char": " "
+    },
+    {
+        "group": "perlConditional",
         "linkedGroup": "Statement",
         "row": 78,
-        "char": "my"
+        "char": "if"
     },
     {
         "group": "Normal",
@@ -3105,19 +3069,19 @@ module.exports = [
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 78,
-        "char": "$type"
+        "char": "$len_b"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 78,
-        "char": " &#61; "
+        "char": " &gt; "
     },
     {
-        "group": "perlStatementList",
-        "linkedGroup": "Statement",
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
         "row": 78,
-        "char": "shift"
+        "char": "$depthmax"
     },
     {
         "group": "Normal",
@@ -3134,103 +3098,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 79,
-        "char": "\t"
-    },
-    {
-        "group": "perlConditional",
-        "linkedGroup": "Statement",
-        "row": 79,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 79,
-        "char": " ("
-    },
-    {
-        "group": "perlOperator",
-        "linkedGroup": "Statement",
-        "row": 79,
-        "char": "defined"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 79,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 79,
-        "char": "$type"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 79,
-        "char": " "
-    },
-    {
-        "group": "perlOperator",
-        "linkedGroup": "Statement",
-        "row": 79,
-        "char": "and"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 79,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 79,
-        "char": "$type"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 79,
-        "char": " "
-    },
-    {
-        "group": "perlOperator",
-        "linkedGroup": "Statement",
-        "row": 79,
-        "char": "eq"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 79,
-        "char": " "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 79,
-        "char": "&quot;"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 79,
-        "char": "hot"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 79,
-        "char": "&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 79,
-        "char": ") {\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -3241,7 +3109,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 80,
-        "char": "\t\t"
+        "char": "\t"
     },
     {
         "group": "perlStatementStorage",
@@ -3259,7 +3127,7 @@ module.exports = [
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 80,
-        "char": "$r"
+        "char": "$i"
     },
     {
         "group": "Normal",
@@ -3271,49 +3139,13 @@ module.exports = [
         "group": "perlNumber",
         "linkedGroup": "Constant",
         "row": 80,
-        "char": "205"
+        "char": "0"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 80,
-        "char": " + "
-    },
-    {
-        "group": "perlStatementNumeric",
-        "linkedGroup": "Statement",
-        "row": 80,
-        "char": "int"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 80,
-        "char": "("
-    },
-    {
-        "group": "perlStatementNumeric",
-        "linkedGroup": "Statement",
-        "row": 80,
-        "char": "rand"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 80,
-        "char": "("
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 80,
-        "char": "50"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 80,
-        "char": "));\n"
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -3324,7 +3156,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 81,
-        "char": "\t\t"
+        "char": "\t"
     },
     {
         "group": "perlStatementStorage",
@@ -3342,7 +3174,7 @@ module.exports = [
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 81,
-        "char": "$g"
+        "char": "$len_same"
     },
     {
         "group": "Normal",
@@ -3360,43 +3192,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 81,
-        "char": " + "
-    },
-    {
-        "group": "perlStatementNumeric",
-        "linkedGroup": "Statement",
-        "row": 81,
-        "char": "int"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 81,
-        "char": "("
-    },
-    {
-        "group": "perlStatementNumeric",
-        "linkedGroup": "Statement",
-        "row": 81,
-        "char": "rand"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 81,
-        "char": "("
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 81,
-        "char": "230"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 81,
-        "char": "));\n"
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -3407,79 +3203,55 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 82,
-        "char": "\t\t"
+        "char": "\t"
     },
     {
-        "group": "perlStatementStorage",
+        "group": "perlRepeat",
         "linkedGroup": "Statement",
         "row": 82,
-        "char": "my"
+        "char": "for"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 82,
-        "char": " "
+        "char": " (; "
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 82,
-        "char": "$b"
+        "char": "$i"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 82,
-        "char": " &#61; "
+        "char": " &lt;&#61; "
     },
     {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
         "row": 82,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 82,
-        "char": " + "
-    },
-    {
-        "group": "perlStatementNumeric",
-        "linkedGroup": "Statement",
-        "row": 82,
-        "char": "int"
+        "char": "$len_a"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 82,
-        "char": "("
+        "char": "; "
     },
     {
-        "group": "perlStatementNumeric",
-        "linkedGroup": "Statement",
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
         "row": 82,
-        "char": "rand"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 82,
-        "char": "("
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 82,
-        "char": "55"
+        "char": "$i"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 82,
-        "char": "));\n"
+        "char": "++) {\n"
     },
     {
         "group": "LineNr",
@@ -3496,7 +3268,7 @@ module.exports = [
         "group": "perlStatementControl",
         "linkedGroup": "Statement",
         "row": 83,
-        "char": "return"
+        "char": "last"
     },
     {
         "group": "Normal",
@@ -3505,58 +3277,34 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
+        "group": "perlConditional",
+        "linkedGroup": "Statement",
         "row": 83,
-        "char": "&quot;"
+        "char": "if"
     },
     {
-        "group": "perlString",
-        "linkedGroup": "Constant",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 83,
-        "char": "rgb("
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 83,
-        "char": "$r"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 83,
-        "char": ","
+        "char": " "
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 83,
-        "char": "$g"
+        "char": "$i"
     },
     {
-        "group": "perlString",
-        "linkedGroup": "Constant",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 83,
-        "char": ","
+        "char": " &gt; "
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 83,
-        "char": "$b"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 83,
-        "char": ")"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 83,
-        "char": "&quot;"
+        "char": "$len_b"
     },
     {
         "group": "Normal",
@@ -3573,7 +3321,67 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 84,
-        "char": "\t}\n"
+        "char": "\t\t"
+    },
+    {
+        "group": "perlStatementControl",
+        "linkedGroup": "Statement",
+        "row": 84,
+        "char": "last"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 84,
+        "char": " "
+    },
+    {
+        "group": "perlConditional",
+        "linkedGroup": "Statement",
+        "row": 84,
+        "char": "if"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 84,
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 84,
+        "char": "$A[$i]"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 84,
+        "char": " "
+    },
+    {
+        "group": "perlOperator",
+        "linkedGroup": "Statement",
+        "row": 84,
+        "char": "ne"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 84,
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 84,
+        "char": "$B[$i]"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 84,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -3584,103 +3392,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 85,
-        "char": "\t"
-    },
-    {
-        "group": "perlConditional",
-        "linkedGroup": "Statement",
-        "row": 85,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 85,
-        "char": " ("
-    },
-    {
-        "group": "perlOperator",
-        "linkedGroup": "Statement",
-        "row": 85,
-        "char": "defined"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 85,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 85,
-        "char": "$type"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 85,
-        "char": " "
-    },
-    {
-        "group": "perlOperator",
-        "linkedGroup": "Statement",
-        "row": 85,
-        "char": "and"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 85,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 85,
-        "char": "$type"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 85,
-        "char": " "
-    },
-    {
-        "group": "perlOperator",
-        "linkedGroup": "Statement",
-        "row": 85,
-        "char": "eq"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 85,
-        "char": " "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 85,
-        "char": "&quot;"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 85,
-        "char": "cold"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 85,
-        "char": "&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 85,
-        "char": ") {\n"
+        "char": "\t}\n"
     },
     {
         "group": "LineNr",
@@ -3691,25 +3403,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 86,
-        "char": "\t\t"
-    },
-    {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 86,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 86,
-        "char": " "
+        "char": "\t"
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 86,
-        "char": "$r"
+        "char": "$len_same"
     },
     {
         "group": "Normal",
@@ -3718,52 +3418,16 @@ module.exports = [
         "char": " &#61; "
     },
     {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
         "row": 86,
-        "char": "0"
+        "char": "$i"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 86,
-        "char": " + "
-    },
-    {
-        "group": "perlStatementNumeric",
-        "linkedGroup": "Statement",
-        "row": 86,
-        "char": "int"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 86,
-        "char": "("
-    },
-    {
-        "group": "perlStatementNumeric",
-        "linkedGroup": "Statement",
-        "row": 86,
-        "char": "rand"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 86,
-        "char": "("
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 86,
-        "char": "40"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 86,
-        "char": "));\n"
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -3774,25 +3438,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 87,
-        "char": "\t\t"
-    },
-    {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 87,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 87,
-        "char": " "
+        "char": "\t"
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 87,
-        "char": "$b"
+        "char": "$len_same"
     },
     {
         "group": "Normal",
@@ -3804,49 +3456,49 @@ module.exports = [
         "group": "perlNumber",
         "linkedGroup": "Constant",
         "row": 87,
-        "char": "205"
+        "char": "0"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 87,
-        "char": " + "
+        "char": " "
     },
     {
-        "group": "perlStatementNumeric",
+        "group": "perlConditional",
         "linkedGroup": "Statement",
         "row": 87,
-        "char": "int"
+        "char": "if"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 87,
-        "char": "("
+        "char": " "
     },
     {
-        "group": "perlStatementNumeric",
-        "linkedGroup": "Statement",
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
         "row": 87,
-        "char": "rand"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 87,
-        "char": "("
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 87,
-        "char": "50"
+        "char": "$ca"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 87,
-        "char": "));\n"
+        "char": " !&#61; "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 87,
+        "char": "$cb"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 87,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -3857,79 +3509,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 88,
-        "char": "\t\t"
-    },
-    {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 88,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 88,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 88,
-        "char": "$g"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 88,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 88,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 88,
-        "char": " + "
-    },
-    {
-        "group": "perlStatementNumeric",
-        "linkedGroup": "Statement",
-        "row": 88,
-        "char": "int"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 88,
-        "char": "("
-    },
-    {
-        "group": "perlStatementNumeric",
-        "linkedGroup": "Statement",
-        "row": 88,
-        "char": "rand"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 88,
-        "char": "("
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 88,
-        "char": "150"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 88,
-        "char": "));\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -3940,79 +3520,79 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 89,
-        "char": "\t\t"
+        "char": "\t"
     },
     {
-        "group": "perlStatementControl",
+        "group": "perlRepeat",
         "linkedGroup": "Statement",
         "row": 89,
-        "char": "return"
+        "char": "for"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 89,
-        "char": " "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 89,
-        "char": "&quot;"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 89,
-        "char": "rgb("
+        "char": " ("
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 89,
-        "char": "$r"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 89,
-        "char": ","
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 89,
-        "char": "$g"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 89,
-        "char": ","
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 89,
-        "char": "$b"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 89,
-        "char": ")"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 89,
-        "char": "&quot;"
+        "char": "$i"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 89,
-        "char": ";\n"
+        "char": " &#61; "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 89,
+        "char": "$len_a"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 89,
+        "char": "; "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 89,
+        "char": "$i"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 89,
+        "char": " &gt;&#61; "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 89,
+        "char": "$len_same"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 89,
+        "char": "; "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 89,
+        "char": "$i"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 89,
+        "char": "--) {\n"
     },
     {
         "group": "LineNr",
@@ -4023,7 +3603,67 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 90,
-        "char": "\t}\n"
+        "char": "\t\t"
+    },
+    {
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
+        "row": 90,
+        "char": "my"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 90,
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 90,
+        "char": "$k"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 90,
+        "char": " &#61; "
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 90,
+        "char": "&quot;"
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 90,
+        "char": "$A[$i]"
+    },
+    {
+        "group": "perlString",
+        "linkedGroup": "Constant",
+        "row": 90,
+        "char": "-"
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 90,
+        "char": "$i"
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 90,
+        "char": "&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 90,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -4034,43 +3674,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 91,
-        "char": "\t"
+        "char": "\t\t"
     },
     {
-        "group": "perlStatementControl",
-        "linkedGroup": "Statement",
+        "group": "perlComment",
+        "linkedGroup": "Comment",
         "row": 91,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 91,
-        "char": " "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 91,
-        "char": "&quot;"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 91,
-        "char": "rgb(0,0,0)"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 91,
-        "char": "&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 91,
-        "char": ";\n"
+        "char": "# a unique ID is constructed from func-depth-etime;\n"
     },
     {
         "group": "LineNr",
@@ -4081,7 +3691,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 92,
-        "char": "}\n"
+        "char": "\t\t"
+    },
+    {
+        "group": "perlComment",
+        "linkedGroup": "Comment",
+        "row": 92,
+        "char": "# func-depth isn&#39;t unique, it may be repeated later.\n"
     },
     {
         "group": "LineNr",
@@ -4092,7 +3708,115 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 93,
-        "char": "\n"
+        "char": "\t\t"
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 93,
+        "char": "$Node{"
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 93,
+        "char": "&quot;"
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 93,
+        "char": "$k"
+    },
+    {
+        "group": "perlString",
+        "linkedGroup": "Constant",
+        "row": 93,
+        "char": "-"
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 93,
+        "char": "$v"
+    },
+    {
+        "group": "perlString",
+        "linkedGroup": "Constant",
+        "row": 93,
+        "char": "-"
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 93,
+        "char": "$ca"
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 93,
+        "char": "&quot;"
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 93,
+        "char": "}"
+    },
+    {
+        "group": "perlVarSimpleMember",
+        "linkedGroup": "Identifier",
+        "row": 93,
+        "char": "-&gt;{"
+    },
+    {
+        "group": "perlVarSimpleMemberName",
+        "linkedGroup": "Constant",
+        "row": 93,
+        "char": "stime"
+    },
+    {
+        "group": "perlVarSimpleMember",
+        "linkedGroup": "Identifier",
+        "row": 93,
+        "char": "}"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 93,
+        "char": " &#61; "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 93,
+        "char": "$Tmp{$k}"
+    },
+    {
+        "group": "perlVarSimpleMember",
+        "linkedGroup": "Identifier",
+        "row": 93,
+        "char": "-&gt;{"
+    },
+    {
+        "group": "perlVarSimpleMemberName",
+        "linkedGroup": "Constant",
+        "row": 93,
+        "char": "stime"
+    },
+    {
+        "group": "perlVarSimpleMember",
+        "linkedGroup": "Identifier",
+        "row": 93,
+        "char": "}"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 93,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -4100,10 +3824,16 @@ module.exports = [
         "char": "94"
     },
     {
-        "group": "perlStatementStorage",
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 94,
+        "char": "\t\t"
+    },
+    {
+        "group": "perlStatementHash",
         "linkedGroup": "Statement",
         "row": 94,
-        "char": "my"
+        "char": "delete"
     },
     {
         "group": "Normal",
@@ -4112,10 +3842,28 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "perlVarPlain2",
+        "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 94,
-        "char": "%Node"
+        "char": "$Tmp{$k}"
+    },
+    {
+        "group": "perlVarSimpleMember",
+        "linkedGroup": "Identifier",
+        "row": 94,
+        "char": "-&gt;{"
+    },
+    {
+        "group": "perlVarSimpleMemberName",
+        "linkedGroup": "Constant",
+        "row": 94,
+        "char": "stime"
+    },
+    {
+        "group": "perlVarSimpleMember",
+        "linkedGroup": "Identifier",
+        "row": 94,
+        "char": "}"
     },
     {
         "group": "Normal",
@@ -4129,10 +3877,16 @@ module.exports = [
         "char": "95"
     },
     {
-        "group": "perlStatementStorage",
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 95,
+        "char": "\t\t"
+    },
+    {
+        "group": "perlStatementHash",
         "linkedGroup": "Statement",
         "row": 95,
-        "char": "my"
+        "char": "delete"
     },
     {
         "group": "Normal",
@@ -4141,10 +3895,10 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "perlVarPlain2",
+        "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 95,
-        "char": "%Tmp"
+        "char": "$Tmp{$k}"
     },
     {
         "group": "Normal",
@@ -4161,7 +3915,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 96,
-        "char": "\n"
+        "char": "\t}\n"
     },
     {
         "group": "LineNr",
@@ -4169,22 +3923,10 @@ module.exports = [
         "char": "97"
     },
     {
-        "group": "perlFunction",
-        "linkedGroup": "Statement",
-        "row": 97,
-        "char": "sub "
-    },
-    {
-        "group": "perlSubName",
-        "linkedGroup": "Identifier",
-        "row": 97,
-        "char": "flow "
-    },
-    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 97,
-        "char": "{\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -4198,10 +3940,10 @@ module.exports = [
         "char": "\t"
     },
     {
-        "group": "perlStatementStorage",
+        "group": "perlRepeat",
         "linkedGroup": "Statement",
         "row": 98,
-        "char": "my"
+        "char": "for"
     },
     {
         "group": "Normal",
@@ -4213,73 +3955,61 @@ module.exports = [
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 98,
-        "char": "$a"
+        "char": "$i"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 98,
-        "char": ", "
+        "char": " &#61; "
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 98,
-        "char": "$b"
+        "char": "$len_same"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 98,
-        "char": ", "
+        "char": "; "
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 98,
-        "char": "$ca"
+        "char": "$i"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 98,
-        "char": ", "
+        "char": " &lt;&#61; "
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 98,
-        "char": "$cb"
+        "char": "$len_b"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 98,
-        "char": ", "
+        "char": "; "
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 98,
-        "char": "$v"
+        "char": "$i"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 98,
-        "char": ") &#61; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 98,
-        "char": "@_"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 98,
-        "char": ";\n"
+        "char": "++) {\n"
     },
     {
         "group": "LineNr",
@@ -4290,7 +4020,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 99,
-        "char": "\t"
+        "char": "\t\t"
     },
     {
         "group": "perlStatementStorage",
@@ -4308,7 +4038,7 @@ module.exports = [
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 99,
-        "char": "@A"
+        "char": "$k"
     },
     {
         "group": "Normal",
@@ -4317,46 +4047,34 @@ module.exports = [
         "char": " &#61; "
     },
     {
-        "group": "perlStatementRegexp",
-        "linkedGroup": "Statement",
-        "row": 99,
-        "char": "split"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 99,
-        "char": " "
-    },
-    {
         "group": "perlStringStartEnd",
         "linkedGroup": "Constant",
         "row": 99,
         "char": "&quot;"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 99,
-        "char": ","
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 99,
-        "char": "&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 99,
-        "char": ", "
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 99,
-        "char": "$a"
+        "char": "$B[$i]"
+    },
+    {
+        "group": "perlString",
+        "linkedGroup": "Constant",
+        "row": 99,
+        "char": "-"
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 99,
+        "char": "$i"
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 99,
+        "char": "&quot;"
     },
     {
         "group": "Normal",
@@ -4373,25 +4091,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 100,
-        "char": "\t"
-    },
-    {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 100,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 100,
-        "char": " "
+        "char": "\t\t"
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 100,
-        "char": "@B"
+        "char": "$Tmp{$k}"
+    },
+    {
+        "group": "perlVarSimpleMember",
+        "linkedGroup": "Identifier",
+        "row": 100,
+        "char": "-&gt;{"
+    },
+    {
+        "group": "perlVarSimpleMemberName",
+        "linkedGroup": "Constant",
+        "row": 100,
+        "char": "stime"
+    },
+    {
+        "group": "perlVarSimpleMember",
+        "linkedGroup": "Identifier",
+        "row": 100,
+        "char": "}"
     },
     {
         "group": "Normal",
@@ -4400,46 +4124,10 @@ module.exports = [
         "char": " &#61; "
     },
     {
-        "group": "perlStatementRegexp",
-        "linkedGroup": "Statement",
-        "row": 100,
-        "char": "split"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 100,
-        "char": " "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 100,
-        "char": "&quot;"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 100,
-        "char": ","
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 100,
-        "char": "&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 100,
-        "char": ", "
-    },
-    {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 100,
-        "char": "$b"
+        "char": "$v"
     },
     {
         "group": "Normal",
@@ -4456,7 +4144,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 101,
-        "char": "\n"
+        "char": "\t}\n"
     },
     {
         "group": "LineNr",
@@ -4467,43 +4155,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 102,
-        "char": "\t"
-    },
-    {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 102,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 102,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 102,
-        "char": "$len_a"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 102,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 102,
-        "char": "$#A"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 102,
-        "char": ";\n"
+        "char": "}\n"
     },
     {
         "group": "LineNr",
@@ -4514,43 +4166,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 103,
-        "char": "\t"
-    },
-    {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 103,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 103,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 103,
-        "char": "$len_b"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 103,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 103,
-        "char": "$#B"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 103,
-        "char": ";\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -4558,70 +4174,10 @@ module.exports = [
         "char": "104"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "perlComment",
+        "linkedGroup": "Comment",
         "row": 104,
-        "char": "\t"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 104,
-        "char": "$depthmax"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 104,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 104,
-        "char": "$len_b"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 104,
-        "char": " "
-    },
-    {
-        "group": "perlConditional",
-        "linkedGroup": "Statement",
-        "row": 104,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 104,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 104,
-        "char": "$len_b"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 104,
-        "char": " &gt; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 104,
-        "char": "$depthmax"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 104,
-        "char": ";\n"
+        "char": "# Parse input\n"
     },
     {
         "group": "LineNr",
@@ -4629,21 +4185,33 @@ module.exports = [
         "char": "105"
     },
     {
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
+        "row": 105,
+        "char": "my"
+    },
+    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 105,
-        "char": "\n"
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 105,
+        "char": "@Data"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 105,
+        "char": " &#61; &lt;&gt;;\n"
     },
     {
         "group": "LineNr",
         "row": 106,
         "char": "106"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 106,
-        "char": "\t"
     },
     {
         "group": "perlStatementStorage",
@@ -4661,7 +4229,7 @@ module.exports = [
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 106,
-        "char": "$i"
+        "char": "$laststack"
     },
     {
         "group": "Normal",
@@ -4670,10 +4238,10 @@ module.exports = [
         "char": " &#61; "
     },
     {
-        "group": "perlNumber",
+        "group": "perlStringStartEnd",
         "linkedGroup": "Constant",
         "row": 106,
-        "char": "0"
+        "char": "&quot;&quot;"
     },
     {
         "group": "Normal",
@@ -4687,12 +4255,6 @@ module.exports = [
         "char": "107"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 107,
-        "char": "\t"
-    },
-    {
         "group": "perlStatementStorage",
         "linkedGroup": "Statement",
         "row": 107,
@@ -4708,7 +4270,7 @@ module.exports = [
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 107,
-        "char": "$len_same"
+        "char": "$lastcpu"
     },
     {
         "group": "Normal",
@@ -4734,58 +4296,40 @@ module.exports = [
         "char": "108"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 108,
-        "char": "\t"
-    },
-    {
-        "group": "perlRepeat",
+        "group": "perlStatementStorage",
         "linkedGroup": "Statement",
         "row": 108,
-        "char": "for"
+        "char": "my"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 108,
-        "char": " (; "
+        "char": " "
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 108,
-        "char": "$i"
+        "char": "$time"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 108,
-        "char": " &lt;&#61; "
+        "char": " &#61; "
     },
     {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
         "row": 108,
-        "char": "$len_a"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 108,
-        "char": "; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 108,
-        "char": "$i"
+        "char": "0"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 108,
-        "char": "++) {\n"
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -4793,28 +4337,22 @@ module.exports = [
         "char": "109"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 109,
-        "char": "\t\t"
-    },
-    {
-        "group": "perlStatementControl",
+        "group": "perlRepeat",
         "linkedGroup": "Statement",
         "row": 109,
-        "char": "last"
+        "char": "foreach"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 109,
-        "char": " "
+        "char": " ("
     },
     {
-        "group": "perlConditional",
+        "group": "perlStatementList",
         "linkedGroup": "Statement",
         "row": 109,
-        "char": "if"
+        "char": "sort"
     },
     {
         "group": "Normal",
@@ -4826,25 +4364,13 @@ module.exports = [
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 109,
-        "char": "$i"
+        "char": "@Data"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 109,
-        "char": " &gt; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 109,
-        "char": "$len_b"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 109,
-        "char": ";\n"
+        "char": ") {\n"
     },
     {
         "group": "LineNr",
@@ -4855,61 +4381,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 110,
-        "char": "\t\t"
+        "char": "\t"
     },
     {
-        "group": "perlStatementControl",
+        "group": "perlStatementScalar",
         "linkedGroup": "Statement",
         "row": 110,
-        "char": "last"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 110,
-        "char": " "
-    },
-    {
-        "group": "perlConditional",
-        "linkedGroup": "Statement",
-        "row": 110,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 110,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 110,
-        "char": "$A[$i]"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 110,
-        "char": " "
-    },
-    {
-        "group": "perlOperator",
-        "linkedGroup": "Statement",
-        "row": 110,
-        "char": "ne"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 110,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 110,
-        "char": "$B[$i]"
+        "char": "chomp"
     },
     {
         "group": "Normal",
@@ -4926,7 +4404,91 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 111,
-        "char": "\t}\n"
+        "char": "\t"
+    },
+    {
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
+        "row": 111,
+        "char": "my"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 111,
+        "char": " ("
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 111,
+        "char": "$stack"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 111,
+        "char": ", "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 111,
+        "char": "$cpu"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 111,
+        "char": ", "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 111,
+        "char": "$samples"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 111,
+        "char": ") &#61; "
+    },
+    {
+        "group": "perlStatementRegexp",
+        "linkedGroup": "Statement",
+        "row": 111,
+        "char": "split"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 111,
+        "char": " "
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 111,
+        "char": "&#39;"
+    },
+    {
+        "group": "perlStringUnexpanded",
+        "linkedGroup": "Constant",
+        "row": 111,
+        "char": " "
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 111,
+        "char": "&#39;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 111,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -4943,7 +4505,7 @@ module.exports = [
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 112,
-        "char": "$len_same"
+        "char": "$stack"
     },
     {
         "group": "Normal",
@@ -4952,10 +4514,28 @@ module.exports = [
         "char": " &#61; "
     },
     {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 112,
+        "char": "&quot;"
+    },
+    {
+        "group": "perlString",
+        "linkedGroup": "Constant",
+        "row": 112,
+        "char": ","
+    },
+    {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 112,
-        "char": "$i"
+        "char": "$stack"
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 112,
+        "char": "&quot;"
     },
     {
         "group": "Normal",
@@ -4975,22 +4555,10 @@ module.exports = [
         "char": "\t"
     },
     {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
+        "group": "perlStatementControl",
+        "linkedGroup": "Statement",
         "row": 113,
-        "char": "$len_same"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 113,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 113,
-        "char": "0"
+        "char": "next"
     },
     {
         "group": "Normal",
@@ -5002,7 +4570,19 @@ module.exports = [
         "group": "perlConditional",
         "linkedGroup": "Statement",
         "row": 113,
-        "char": "if"
+        "char": "unless"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 113,
+        "char": " "
+    },
+    {
+        "group": "perlOperator",
+        "linkedGroup": "Statement",
+        "row": 113,
+        "char": "defined"
     },
     {
         "group": "Normal",
@@ -5014,19 +4594,7 @@ module.exports = [
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 113,
-        "char": "$ca"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 113,
-        "char": " !&#61; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 113,
-        "char": "$cb"
+        "char": "$samples"
     },
     {
         "group": "Normal",
@@ -5043,7 +4611,67 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 114,
-        "char": "\n"
+        "char": "\tflow("
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 114,
+        "char": "$laststack"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 114,
+        "char": ", "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 114,
+        "char": "$stack"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 114,
+        "char": ", "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 114,
+        "char": "$lastcpu"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 114,
+        "char": ", "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 114,
+        "char": "$cpu"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 114,
+        "char": ", "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 114,
+        "char": "$time"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 114,
+        "char": ");\n"
     },
     {
         "group": "LineNr",
@@ -5057,76 +4685,28 @@ module.exports = [
         "char": "\t"
     },
     {
-        "group": "perlRepeat",
-        "linkedGroup": "Statement",
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
         "row": 115,
-        "char": "for"
+        "char": "$time"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 115,
-        "char": " ("
+        "char": " +&#61; "
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 115,
-        "char": "$i"
+        "char": "$samples"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 115,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 115,
-        "char": "$len_a"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 115,
-        "char": "; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 115,
-        "char": "$i"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 115,
-        "char": " &gt;&#61; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 115,
-        "char": "$len_same"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 115,
-        "char": "; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 115,
-        "char": "$i"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 115,
-        "char": "--) {\n"
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -5137,25 +4717,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 116,
-        "char": "\t\t"
-    },
-    {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 116,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 116,
-        "char": " "
+        "char": "\t"
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 116,
-        "char": "$k"
+        "char": "$laststack"
     },
     {
         "group": "Normal",
@@ -5164,34 +4732,10 @@ module.exports = [
         "char": " &#61; "
     },
     {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 116,
-        "char": "&quot;"
-    },
-    {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 116,
-        "char": "$A[$i]"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 116,
-        "char": "-"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 116,
-        "char": "$i"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 116,
-        "char": "&quot;"
+        "char": "$stack"
     },
     {
         "group": "Normal",
@@ -5208,13 +4752,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 117,
-        "char": "\t\t"
+        "char": "\t"
     },
     {
-        "group": "perlComment",
-        "linkedGroup": "Comment",
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
         "row": 117,
-        "char": "# a unique ID is constructed from func-depth-etime;\n"
+        "char": "$lastcpu"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 117,
+        "char": " &#61; "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 117,
+        "char": "$cpu"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 117,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -5225,13 +4787,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 118,
-        "char": "\t\t"
-    },
-    {
-        "group": "perlComment",
-        "linkedGroup": "Comment",
-        "row": 118,
-        "char": "# func-depth isn&#39;t unique, it may be repeated later.\n"
+        "char": "}\n"
     },
     {
         "group": "LineNr",
@@ -5242,115 +4798,67 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 119,
-        "char": "\t\t"
+        "char": "flow("
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 119,
-        "char": "$Node{"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 119,
-        "char": "&quot;"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 119,
-        "char": "$k"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 119,
-        "char": "-"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 119,
-        "char": "$v"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 119,
-        "char": "-"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 119,
-        "char": "$ca"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 119,
-        "char": "&quot;"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 119,
-        "char": "}"
-    },
-    {
-        "group": "perlVarSimpleMember",
-        "linkedGroup": "Identifier",
-        "row": 119,
-        "char": "-&gt;{"
-    },
-    {
-        "group": "perlVarSimpleMemberName",
-        "linkedGroup": "Constant",
-        "row": 119,
-        "char": "stime"
-    },
-    {
-        "group": "perlVarSimpleMember",
-        "linkedGroup": "Identifier",
-        "row": 119,
-        "char": "}"
+        "char": "$laststack"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 119,
-        "char": " &#61; "
+        "char": ", "
     },
     {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 119,
-        "char": "$Tmp{$k}"
-    },
-    {
-        "group": "perlVarSimpleMember",
-        "linkedGroup": "Identifier",
-        "row": 119,
-        "char": "-&gt;{"
-    },
-    {
-        "group": "perlVarSimpleMemberName",
+        "group": "perlStringStartEnd",
         "linkedGroup": "Constant",
         "row": 119,
-        "char": "stime"
-    },
-    {
-        "group": "perlVarSimpleMember",
-        "linkedGroup": "Identifier",
-        "row": 119,
-        "char": "}"
+        "char": "&quot;&quot;"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 119,
-        "char": ";\n"
+        "char": ", "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 119,
+        "char": "$lastcpu"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 119,
+        "char": ", "
+    },
+    {
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
+        "row": 119,
+        "char": "0"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 119,
+        "char": ", "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 119,
+        "char": "$time"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 119,
+        "char": ");\n"
     },
     {
         "group": "LineNr",
@@ -5358,16 +4866,22 @@ module.exports = [
         "char": "120"
     },
     {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 120,
+        "char": "$timemax"
+    },
+    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 120,
-        "char": "\t\t"
+        "char": " &#61; "
     },
     {
-        "group": "perlStatementHash",
-        "linkedGroup": "Statement",
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
         "row": 120,
-        "char": "delete"
+        "char": "$time"
     },
     {
         "group": "Normal",
@@ -5376,28 +4890,52 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
+        "group": "perlOperator",
+        "linkedGroup": "Statement",
         "row": 120,
-        "char": "$Tmp{$k}"
+        "char": "or"
     },
     {
-        "group": "perlVarSimpleMember",
-        "linkedGroup": "Identifier",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 120,
-        "char": "-&gt;{"
+        "char": " "
     },
     {
-        "group": "perlVarSimpleMemberName",
+        "group": "perlStatementFlow",
+        "linkedGroup": "Statement",
+        "row": 120,
+        "char": "die"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 120,
+        "char": " "
+    },
+    {
+        "group": "perlStringStartEnd",
         "linkedGroup": "Constant",
         "row": 120,
-        "char": "stime"
+        "char": "&quot;"
     },
     {
-        "group": "perlVarSimpleMember",
-        "linkedGroup": "Identifier",
+        "group": "perlString",
+        "linkedGroup": "Constant",
         "row": 120,
-        "char": "}"
+        "char": "ERROR: No stack counts found"
+    },
+    {
+        "group": "perlSpecialString",
+        "linkedGroup": "Special",
+        "row": 120,
+        "char": "\\n"
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 120,
+        "char": "&quot;"
     },
     {
         "group": "Normal",
@@ -5414,31 +4952,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 121,
-        "char": "\t\t"
-    },
-    {
-        "group": "perlStatementHash",
-        "linkedGroup": "Statement",
-        "row": 121,
-        "char": "delete"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 121,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 121,
-        "char": "$Tmp{$k}"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 121,
-        "char": ";\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -5446,10 +4960,10 @@ module.exports = [
         "char": "122"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "perlComment",
+        "linkedGroup": "Comment",
         "row": 122,
-        "char": "\t}\n"
+        "char": "# Draw canvas\n"
     },
     {
         "group": "LineNr",
@@ -5457,10 +4971,76 @@ module.exports = [
         "char": "123"
     },
     {
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
+        "row": 123,
+        "char": "my"
+    },
+    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 123,
-        "char": "\n"
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 123,
+        "char": "$widthpertime"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 123,
+        "char": " &#61; ("
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 123,
+        "char": "$imagewidth"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 123,
+        "char": " - "
+    },
+    {
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
+        "row": 123,
+        "char": "2"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 123,
+        "char": " * "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 123,
+        "char": "$xpad"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 123,
+        "char": ") / "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 123,
+        "char": "$timemax"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 123,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -5468,82 +5048,76 @@ module.exports = [
         "char": "124"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 124,
-        "char": "\t"
-    },
-    {
-        "group": "perlRepeat",
+        "group": "perlStatementStorage",
         "linkedGroup": "Statement",
         "row": 124,
-        "char": "for"
+        "char": "my"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 124,
-        "char": " ("
+        "char": " "
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 124,
-        "char": "$i"
+        "char": "$imageheight"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 124,
-        "char": " &#61; "
+        "char": " &#61; ("
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 124,
-        "char": "$len_same"
+        "char": "$depthmax"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 124,
-        "char": "; "
+        "char": " * "
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 124,
-        "char": "$i"
+        "char": "$frameheight"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 124,
-        "char": " &lt;&#61; "
+        "char": ") + "
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 124,
-        "char": "$len_b"
+        "char": "$ypad1"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 124,
-        "char": "; "
+        "char": " + "
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 124,
-        "char": "$i"
+        "char": "$ypad2"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 124,
-        "char": "++) {\n"
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -5551,12 +5125,6 @@ module.exports = [
         "char": "125"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 125,
-        "char": "\t\t"
-    },
-    {
         "group": "perlStatementStorage",
         "linkedGroup": "Statement",
         "row": 125,
@@ -5572,49 +5140,13 @@ module.exports = [
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 125,
-        "char": "$k"
+        "char": "$im"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 125,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 125,
-        "char": "&quot;"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 125,
-        "char": "$B[$i]"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 125,
-        "char": "-"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 125,
-        "char": "$i"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 125,
-        "char": "&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 125,
-        "char": ";\n"
+        "char": " &#61; SVG-&gt;new();\n"
     },
     {
         "group": "LineNr",
@@ -5622,52 +5154,46 @@ module.exports = [
         "char": "126"
     },
     {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 126,
+        "char": "$im"
+    },
+    {
+        "group": "perlMethod",
+        "linkedGroup": "Identifier",
+        "row": 126,
+        "char": "-&gt;header"
+    },
+    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 126,
-        "char": "\t\t"
+        "char": "("
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 126,
-        "char": "$Tmp{$k}"
-    },
-    {
-        "group": "perlVarSimpleMember",
-        "linkedGroup": "Identifier",
-        "row": 126,
-        "char": "-&gt;{"
-    },
-    {
-        "group": "perlVarSimpleMemberName",
-        "linkedGroup": "Constant",
-        "row": 126,
-        "char": "stime"
-    },
-    {
-        "group": "perlVarSimpleMember",
-        "linkedGroup": "Identifier",
-        "row": 126,
-        "char": "}"
+        "char": "$imagewidth"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 126,
-        "char": " &#61; "
+        "char": ", "
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 126,
-        "char": "$v"
+        "char": "$imageheight"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 126,
-        "char": ";\n"
+        "char": ");\n"
     },
     {
         "group": "LineNr",
@@ -5675,10 +5201,40 @@ module.exports = [
         "char": "127"
     },
     {
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
+        "row": 127,
+        "char": "my"
+    },
+    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 127,
-        "char": "\t}\n"
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 127,
+        "char": "$inc"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 127,
+        "char": " &#61; "
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 127,
+        "char": "&lt;&lt;INC"
+    },
+    {
+        "group": "perlHereDocStart",
+        "linkedGroup": "perlHereDocStart",
+        "row": 127,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -5686,10 +5242,10 @@ module.exports = [
         "char": "128"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "perlHereDoc",
+        "linkedGroup": "Constant",
         "row": 128,
-        "char": "}\n"
+        "char": "&lt;defs &gt;\n"
     },
     {
         "group": "LineNr",
@@ -5697,10 +5253,10 @@ module.exports = [
         "char": "129"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "perlHereDoc",
+        "linkedGroup": "Constant",
         "row": 129,
-        "char": "\n"
+        "char": "\t&lt;linearGradient id&#61;&quot;background&quot; y1&#61;&quot;0&quot; y2&#61;&quot;1&quot; x1&#61;&quot;0&quot; x2&#61;&quot;0&quot; &gt;\n"
     },
     {
         "group": "LineNr",
@@ -5708,10 +5264,10 @@ module.exports = [
         "char": "130"
     },
     {
-        "group": "perlComment",
-        "linkedGroup": "Comment",
+        "group": "perlHereDoc",
+        "linkedGroup": "Constant",
         "row": 130,
-        "char": "# Parse input\n"
+        "char": "\t\t&lt;stop stop-color&#61;&quot;#eeeeee&quot; offset&#61;&quot;5%&quot; /&gt;\n"
     },
     {
         "group": "LineNr",
@@ -5719,28 +5275,10 @@ module.exports = [
         "char": "131"
     },
     {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
+        "group": "perlHereDoc",
+        "linkedGroup": "Constant",
         "row": 131,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 131,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 131,
-        "char": "@Data"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 131,
-        "char": " &#61; &lt;&gt;;\n"
+        "char": "\t\t&lt;stop stop-color&#61;&quot;#eeeeb0&quot; offset&#61;&quot;95%&quot; /&gt;\n"
     },
     {
         "group": "LineNr",
@@ -5748,40 +5286,10 @@ module.exports = [
         "char": "132"
     },
     {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 132,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 132,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 132,
-        "char": "$laststack"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 132,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlStringStartEnd",
+        "group": "perlHereDoc",
         "linkedGroup": "Constant",
         "row": 132,
-        "char": "&quot;&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 132,
-        "char": ";\n"
+        "char": "\t&lt;/linearGradient&gt;\n"
     },
     {
         "group": "LineNr",
@@ -5789,40 +5297,10 @@ module.exports = [
         "char": "133"
     },
     {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 133,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 133,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 133,
-        "char": "$lastcpu"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 133,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlNumber",
+        "group": "perlHereDoc",
         "linkedGroup": "Constant",
         "row": 133,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 133,
-        "char": ";\n"
+        "char": "&lt;/defs&gt;\n"
     },
     {
         "group": "LineNr",
@@ -5830,40 +5308,10 @@ module.exports = [
         "char": "134"
     },
     {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 134,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 134,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 134,
-        "char": "$time"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 134,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlNumber",
+        "group": "perlHereDoc",
         "linkedGroup": "Constant",
         "row": 134,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 134,
-        "char": ";\n"
+        "char": "&lt;style type&#61;&quot;text/css&quot;&gt;\n"
     },
     {
         "group": "LineNr",
@@ -5871,40 +5319,10 @@ module.exports = [
         "char": "135"
     },
     {
-        "group": "perlRepeat",
-        "linkedGroup": "Statement",
+        "group": "perlHereDoc",
+        "linkedGroup": "Constant",
         "row": 135,
-        "char": "foreach"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 135,
-        "char": " ("
-    },
-    {
-        "group": "perlStatementList",
-        "linkedGroup": "Statement",
-        "row": 135,
-        "char": "sort"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 135,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 135,
-        "char": "@Data"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 135,
-        "char": ") {\n"
+        "char": "\trect[rx]:hover { stroke:black; stroke-width:1; }\n"
     },
     {
         "group": "LineNr",
@@ -5912,22 +5330,10 @@ module.exports = [
         "char": "136"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "perlHereDoc",
+        "linkedGroup": "Constant",
         "row": 136,
-        "char": "\t"
-    },
-    {
-        "group": "perlStatementScalar",
-        "linkedGroup": "Statement",
-        "row": 136,
-        "char": "chomp"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 136,
-        "char": ";\n"
+        "char": "\ttext:hover { stroke:black; stroke-width:1; stroke-opacity:0.35; }\n"
     },
     {
         "group": "LineNr",
@@ -5935,94 +5341,10 @@ module.exports = [
         "char": "137"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 137,
-        "char": "\t"
-    },
-    {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 137,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 137,
-        "char": " ("
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 137,
-        "char": "$stack"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 137,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 137,
-        "char": "$cpu"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 137,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 137,
-        "char": "$samples"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 137,
-        "char": ") &#61; "
-    },
-    {
-        "group": "perlStatementRegexp",
-        "linkedGroup": "Statement",
-        "row": 137,
-        "char": "split"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 137,
-        "char": " "
-    },
-    {
-        "group": "perlStringStartEnd",
+        "group": "perlHereDoc",
         "linkedGroup": "Constant",
         "row": 137,
-        "char": "&#39;"
-    },
-    {
-        "group": "perlStringUnexpanded",
-        "linkedGroup": "Constant",
-        "row": 137,
-        "char": " "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 137,
-        "char": "&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 137,
-        "char": ";\n"
+        "char": "&lt;/style&gt;\n"
     },
     {
         "group": "LineNr",
@@ -6030,52 +5352,10 @@ module.exports = [
         "char": "138"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 138,
-        "char": "\t"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 138,
-        "char": "$stack"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 138,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlStringStartEnd",
+        "group": "perlHereDoc",
         "linkedGroup": "Constant",
         "row": 138,
-        "char": "&quot;"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 138,
-        "char": ","
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 138,
-        "char": "$stack"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 138,
-        "char": "&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 138,
-        "char": ";\n"
+        "char": "&lt;script type&#61;&quot;text/ecmascript&quot;&gt;\n"
     },
     {
         "group": "LineNr",
@@ -6083,58 +5363,10 @@ module.exports = [
         "char": "139"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "perlHereDoc",
+        "linkedGroup": "Constant",
         "row": 139,
-        "char": "\t"
-    },
-    {
-        "group": "perlStatementControl",
-        "linkedGroup": "Statement",
-        "row": 139,
-        "char": "next"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 139,
-        "char": " "
-    },
-    {
-        "group": "perlConditional",
-        "linkedGroup": "Statement",
-        "row": 139,
-        "char": "unless"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 139,
-        "char": " "
-    },
-    {
-        "group": "perlOperator",
-        "linkedGroup": "Statement",
-        "row": 139,
-        "char": "defined"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 139,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 139,
-        "char": "$samples"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 139,
-        "char": ";\n"
+        "char": "&lt;![CDATA[\n"
     },
     {
         "group": "LineNr",
@@ -6142,70 +5374,10 @@ module.exports = [
         "char": "140"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "perlHereDoc",
+        "linkedGroup": "Constant",
         "row": 140,
-        "char": "\tflow("
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 140,
-        "char": "$laststack"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 140,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 140,
-        "char": "$stack"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 140,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 140,
-        "char": "$lastcpu"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 140,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 140,
-        "char": "$cpu"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 140,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 140,
-        "char": "$time"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 140,
-        "char": ");\n"
+        "char": "\tvar details;\n"
     },
     {
         "group": "LineNr",
@@ -6213,34 +5385,10 @@ module.exports = [
         "char": "141"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "perlHereDoc",
+        "linkedGroup": "Constant",
         "row": 141,
-        "char": "\t"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 141,
-        "char": "$time"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 141,
-        "char": " +&#61; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 141,
-        "char": "$samples"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 141,
-        "char": ";\n"
+        "char": "\tfunction init(evt) { details &#61; document.getElementById(&quot;details&quot;).firstChild; }\n"
     },
     {
         "group": "LineNr",
@@ -6248,34 +5396,10 @@ module.exports = [
         "char": "142"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "perlHereDoc",
+        "linkedGroup": "Constant",
         "row": 142,
-        "char": "\t"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 142,
-        "char": "$laststack"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 142,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 142,
-        "char": "$stack"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 142,
-        "char": ";\n"
+        "char": "\tfunction s(info) { details.nodeValue &#61; info; }\n"
     },
     {
         "group": "LineNr",
@@ -6283,34 +5407,10 @@ module.exports = [
         "char": "143"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "perlHereDoc",
+        "linkedGroup": "Constant",
         "row": 143,
-        "char": "\t"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 143,
-        "char": "$lastcpu"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 143,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 143,
-        "char": "$cpu"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 143,
-        "char": ";\n"
+        "char": "\tfunction c() { details.nodeValue &#61; &#39; &#39;; }\n"
     },
     {
         "group": "LineNr",
@@ -6318,10 +5418,10 @@ module.exports = [
         "char": "144"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "perlHereDoc",
+        "linkedGroup": "Constant",
         "row": 144,
-        "char": "}\n"
+        "char": "]]&gt;\n"
     },
     {
         "group": "LineNr",
@@ -6329,70 +5429,10 @@ module.exports = [
         "char": "145"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 145,
-        "char": "flow("
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 145,
-        "char": "$laststack"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 145,
-        "char": ", "
-    },
-    {
-        "group": "perlStringStartEnd",
+        "group": "perlHereDoc",
         "linkedGroup": "Constant",
         "row": 145,
-        "char": "&quot;&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 145,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 145,
-        "char": "$lastcpu"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 145,
-        "char": ", "
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 145,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 145,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 145,
-        "char": "$time"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 145,
-        "char": ");\n"
+        "char": "&lt;/script&gt;\n"
     },
     {
         "group": "LineNr",
@@ -6400,82 +5440,10 @@ module.exports = [
         "char": "146"
     },
     {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 146,
-        "char": "$timemax"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 146,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 146,
-        "char": "$time"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 146,
-        "char": " "
-    },
-    {
-        "group": "perlOperator",
-        "linkedGroup": "Statement",
-        "row": 146,
-        "char": "or"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 146,
-        "char": " "
-    },
-    {
-        "group": "perlStatementFlow",
-        "linkedGroup": "Statement",
-        "row": 146,
-        "char": "die"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 146,
-        "char": " "
-    },
-    {
         "group": "perlStringStartEnd",
         "linkedGroup": "Constant",
         "row": 146,
-        "char": "&quot;"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 146,
-        "char": "ERROR: No stack counts found"
-    },
-    {
-        "group": "perlSpecialString",
-        "linkedGroup": "Special",
-        "row": 146,
-        "char": "\\n"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 146,
-        "char": "&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 146,
-        "char": ";\n"
+        "char": "INC\n"
     },
     {
         "group": "LineNr",
@@ -6483,10 +5451,34 @@ module.exports = [
         "char": "147"
     },
     {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 147,
+        "char": "$im"
+    },
+    {
+        "group": "perlMethod",
+        "linkedGroup": "Identifier",
+        "row": 147,
+        "char": "-&gt;include"
+    },
+    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 147,
-        "char": "\n"
+        "char": "("
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 147,
+        "char": "$inc"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 147,
+        "char": ");\n"
     },
     {
         "group": "LineNr",
@@ -6494,10 +5486,94 @@ module.exports = [
         "char": "148"
     },
     {
-        "group": "perlComment",
-        "linkedGroup": "Comment",
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
         "row": 148,
-        "char": "# Draw canvas\n"
+        "char": "$im"
+    },
+    {
+        "group": "perlMethod",
+        "linkedGroup": "Identifier",
+        "row": 148,
+        "char": "-&gt;filledRectangle"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 148,
+        "char": "("
+    },
+    {
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
+        "row": 148,
+        "char": "0"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 148,
+        "char": ", "
+    },
+    {
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
+        "row": 148,
+        "char": "0"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 148,
+        "char": ", "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 148,
+        "char": "$imagewidth"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 148,
+        "char": ", "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 148,
+        "char": "$imageheight"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 148,
+        "char": ", "
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 148,
+        "char": "&#39;"
+    },
+    {
+        "group": "perlStringUnexpanded",
+        "linkedGroup": "Constant",
+        "row": 148,
+        "char": "url(#background)"
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 148,
+        "char": "&#39;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 148,
+        "char": ");\n"
     },
     {
         "group": "LineNr",
@@ -6514,67 +5590,55 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 149,
-        "char": " "
+        "char": " ("
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 149,
-        "char": "$widthpertime"
+        "char": "$white"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 149,
-        "char": " &#61; ("
+        "char": ", "
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 149,
-        "char": "$imagewidth"
+        "char": "$black"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 149,
-        "char": " - "
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 149,
-        "char": "2"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 149,
-        "char": " * "
+        "char": ", "
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 149,
-        "char": "$xpad"
+        "char": "$vvdgrey"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 149,
-        "char": ") / "
+        "char": ", "
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 149,
-        "char": "$timemax"
+        "char": "$vdgrey"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 149,
-        "char": ";\n"
+        "char": ") &#61; (\n"
     },
     {
         "group": "LineNr",
@@ -6582,76 +5646,64 @@ module.exports = [
         "char": "150"
     },
     {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 150,
-        "char": "my"
-    },
-    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 150,
-        "char": " "
+        "char": "\t"
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 150,
-        "char": "$imageheight"
+        "char": "$im"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 150,
-        "char": " &#61; ("
-    },
-    {
-        "group": "perlVarPlain",
+        "group": "perlMethod",
         "linkedGroup": "Identifier",
         "row": 150,
-        "char": "$depthmax"
+        "char": "-&gt;colorAllocate"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 150,
-        "char": " * "
+        "char": "("
     },
     {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
         "row": 150,
-        "char": "$frameheight"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 150,
-        "char": ") + "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 150,
-        "char": "$ypad1"
+        "char": "255"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 150,
-        "char": " + "
+        "char": ", "
     },
     {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
         "row": 150,
-        "char": "$ypad2"
+        "char": "255"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 150,
-        "char": ";\n"
+        "char": ", "
+    },
+    {
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
+        "row": 150,
+        "char": "255"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 150,
+        "char": "),\n"
     },
     {
         "group": "LineNr",
@@ -6659,16 +5711,10 @@ module.exports = [
         "char": "151"
     },
     {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 151,
-        "char": "my"
-    },
-    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 151,
-        "char": " "
+        "char": "\t"
     },
     {
         "group": "perlVarPlain",
@@ -6677,10 +5723,52 @@ module.exports = [
         "char": "$im"
     },
     {
+        "group": "perlMethod",
+        "linkedGroup": "Identifier",
+        "row": 151,
+        "char": "-&gt;colorAllocate"
+    },
+    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 151,
-        "char": " &#61; SVG-&gt;new();\n"
+        "char": "("
+    },
+    {
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
+        "row": 151,
+        "char": "0"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 151,
+        "char": ", "
+    },
+    {
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
+        "row": 151,
+        "char": "0"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 151,
+        "char": ", "
+    },
+    {
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
+        "row": 151,
+        "char": "0"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 151,
+        "char": "),\n"
     },
     {
         "group": "LineNr",
@@ -6688,6 +5776,12 @@ module.exports = [
         "char": "152"
     },
     {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 152,
+        "char": "\t"
+    },
+    {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 152,
@@ -6697,7 +5791,7 @@ module.exports = [
         "group": "perlMethod",
         "linkedGroup": "Identifier",
         "row": 152,
-        "char": "-&gt;header"
+        "char": "-&gt;colorAllocate"
     },
     {
         "group": "Normal",
@@ -6706,10 +5800,10 @@ module.exports = [
         "char": "("
     },
     {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
         "row": 152,
-        "char": "$imagewidth"
+        "char": "40"
     },
     {
         "group": "Normal",
@@ -6718,16 +5812,28 @@ module.exports = [
         "char": ", "
     },
     {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
         "row": 152,
-        "char": "$imageheight"
+        "char": "40"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 152,
-        "char": ");\n"
+        "char": ", "
+    },
+    {
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
+        "row": 152,
+        "char": "40"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 152,
+        "char": "),\n"
     },
     {
         "group": "LineNr",
@@ -6735,40 +5841,64 @@ module.exports = [
         "char": "153"
     },
     {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 153,
-        "char": "my"
-    },
-    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 153,
-        "char": " "
+        "char": "\t"
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 153,
-        "char": "$inc"
+        "char": "$im"
+    },
+    {
+        "group": "perlMethod",
+        "linkedGroup": "Identifier",
+        "row": 153,
+        "char": "-&gt;colorAllocate"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 153,
-        "char": " &#61; "
+        "char": "("
     },
     {
-        "group": "perlStringStartEnd",
+        "group": "perlNumber",
         "linkedGroup": "Constant",
         "row": 153,
-        "char": "&lt;&lt;INC"
+        "char": "160"
     },
     {
-        "group": "perlHereDocStart",
-        "linkedGroup": "perlHereDocStart",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 153,
-        "char": ";\n"
+        "char": ", "
+    },
+    {
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
+        "row": 153,
+        "char": "160"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 153,
+        "char": ", "
+    },
+    {
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
+        "row": 153,
+        "char": "160"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 153,
+        "char": "),\n"
     },
     {
         "group": "LineNr",
@@ -6776,10 +5906,10 @@ module.exports = [
         "char": "154"
     },
     {
-        "group": "perlHereDoc",
-        "linkedGroup": "Constant",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 154,
-        "char": "&lt;defs &gt;\n"
+        "char": "    );\n"
     },
     {
         "group": "LineNr",
@@ -6787,10 +5917,10 @@ module.exports = [
         "char": "155"
     },
     {
-        "group": "perlHereDoc",
-        "linkedGroup": "Constant",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 155,
-        "char": "\t&lt;linearGradient id&#61;&quot;background&quot; y1&#61;&quot;0&quot; y2&#61;&quot;1&quot; x1&#61;&quot;0&quot; x2&#61;&quot;0&quot; &gt;\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -6798,10 +5928,10 @@ module.exports = [
         "char": "156"
     },
     {
-        "group": "perlHereDoc",
-        "linkedGroup": "Constant",
+        "group": "perlComment",
+        "linkedGroup": "Comment",
         "row": 156,
-        "char": "\t\t&lt;stop stop-color&#61;&quot;#eeeeee&quot; offset&#61;&quot;5%&quot; /&gt;\n"
+        "char": "# Draw frames\n"
     },
     {
         "group": "LineNr",
@@ -6809,10 +5939,64 @@ module.exports = [
         "char": "157"
     },
     {
-        "group": "perlHereDoc",
-        "linkedGroup": "Constant",
+        "group": "perlRepeat",
+        "linkedGroup": "Statement",
         "row": 157,
-        "char": "\t\t&lt;stop stop-color&#61;&quot;#eeeeb0&quot; offset&#61;&quot;95%&quot; /&gt;\n"
+        "char": "foreach"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 157,
+        "char": " "
+    },
+    {
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
+        "row": 157,
+        "char": "my"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 157,
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 157,
+        "char": "$id"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 157,
+        "char": " ("
+    },
+    {
+        "group": "perlStatementHash",
+        "linkedGroup": "Statement",
+        "row": 157,
+        "char": "keys"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 157,
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain2",
+        "linkedGroup": "Identifier",
+        "row": 157,
+        "char": "%Node"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 157,
+        "char": ") {\n"
     },
     {
         "group": "LineNr",
@@ -6820,10 +6004,118 @@ module.exports = [
         "char": "158"
     },
     {
-        "group": "perlHereDoc",
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 158,
+        "char": "\t"
+    },
+    {
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
+        "row": 158,
+        "char": "my"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 158,
+        "char": " ("
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 158,
+        "char": "$func"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 158,
+        "char": ", "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 158,
+        "char": "$depth"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 158,
+        "char": ", "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 158,
+        "char": "$etime"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 158,
+        "char": ", "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 158,
+        "char": "$cpu"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 158,
+        "char": ") &#61; "
+    },
+    {
+        "group": "perlStatementRegexp",
+        "linkedGroup": "Statement",
+        "row": 158,
+        "char": "split"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 158,
+        "char": " "
+    },
+    {
+        "group": "perlStringStartEnd",
         "linkedGroup": "Constant",
         "row": 158,
-        "char": "\t&lt;/linearGradient&gt;\n"
+        "char": "&quot;"
+    },
+    {
+        "group": "perlString",
+        "linkedGroup": "Constant",
+        "row": 158,
+        "char": "-"
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 158,
+        "char": "&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 158,
+        "char": ", "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 158,
+        "char": "$id"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 158,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -6831,10 +6123,106 @@ module.exports = [
         "char": "159"
     },
     {
-        "group": "perlHereDoc",
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 159,
+        "char": "\t"
+    },
+    {
+        "group": "perlStatementFlow",
+        "linkedGroup": "Statement",
+        "row": 159,
+        "char": "die"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 159,
+        "char": " "
+    },
+    {
+        "group": "perlStringStartEnd",
         "linkedGroup": "Constant",
         "row": 159,
-        "char": "&lt;/defs&gt;\n"
+        "char": "&quot;"
+    },
+    {
+        "group": "perlString",
+        "linkedGroup": "Constant",
+        "row": 159,
+        "char": "missing start for "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 159,
+        "char": "$id"
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 159,
+        "char": "&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 159,
+        "char": " "
+    },
+    {
+        "group": "perlConditional",
+        "linkedGroup": "Statement",
+        "row": 159,
+        "char": "if"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 159,
+        "char": " !"
+    },
+    {
+        "group": "perlOperator",
+        "linkedGroup": "Statement",
+        "row": 159,
+        "char": "defined"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 159,
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 159,
+        "char": "$Node{$id}"
+    },
+    {
+        "group": "perlVarSimpleMember",
+        "linkedGroup": "Identifier",
+        "row": 159,
+        "char": "-&gt;{"
+    },
+    {
+        "group": "perlVarSimpleMemberName",
+        "linkedGroup": "Constant",
+        "row": 159,
+        "char": "stime"
+    },
+    {
+        "group": "perlVarSimpleMember",
+        "linkedGroup": "Identifier",
+        "row": 159,
+        "char": "}"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 159,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -6842,10 +6230,64 @@ module.exports = [
         "char": "160"
     },
     {
-        "group": "perlHereDoc",
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 160,
+        "char": "\t"
+    },
+    {
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
+        "row": 160,
+        "char": "my"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 160,
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 160,
+        "char": "$stime"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 160,
+        "char": " &#61; "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 160,
+        "char": "$Node{$id}"
+    },
+    {
+        "group": "perlVarSimpleMember",
+        "linkedGroup": "Identifier",
+        "row": 160,
+        "char": "-&gt;{"
+    },
+    {
+        "group": "perlVarSimpleMemberName",
         "linkedGroup": "Constant",
         "row": 160,
-        "char": "&lt;style type&#61;&quot;text/css&quot;&gt;\n"
+        "char": "stime"
+    },
+    {
+        "group": "perlVarSimpleMember",
+        "linkedGroup": "Identifier",
+        "row": 160,
+        "char": "}"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 160,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -6853,10 +6295,58 @@ module.exports = [
         "char": "161"
     },
     {
-        "group": "perlHereDoc",
-        "linkedGroup": "Constant",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 161,
-        "char": "\trect[rx]:hover { stroke:black; stroke-width:1; }\n"
+        "char": "\t"
+    },
+    {
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
+        "row": 161,
+        "char": "my"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 161,
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 161,
+        "char": "$samples"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 161,
+        "char": " &#61; "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 161,
+        "char": "$etime"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 161,
+        "char": " - "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 161,
+        "char": "$stime"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 161,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -6864,10 +6354,10 @@ module.exports = [
         "char": "162"
     },
     {
-        "group": "perlHereDoc",
-        "linkedGroup": "Constant",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 162,
-        "char": "\ttext:hover { stroke:black; stroke-width:1; stroke-opacity:0.35; }\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -6875,10 +6365,70 @@ module.exports = [
         "char": "163"
     },
     {
-        "group": "perlHereDoc",
-        "linkedGroup": "Constant",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 163,
-        "char": "&lt;/style&gt;\n"
+        "char": "\t"
+    },
+    {
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
+        "row": 163,
+        "char": "my"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 163,
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 163,
+        "char": "$x1"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 163,
+        "char": " &#61; "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 163,
+        "char": "$xpad"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 163,
+        "char": " + "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 163,
+        "char": "$stime"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 163,
+        "char": " * "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 163,
+        "char": "$widthpertime"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 163,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -6886,10 +6436,70 @@ module.exports = [
         "char": "164"
     },
     {
-        "group": "perlHereDoc",
-        "linkedGroup": "Constant",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 164,
-        "char": "&lt;script type&#61;&quot;text/ecmascript&quot;&gt;\n"
+        "char": "\t"
+    },
+    {
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
+        "row": 164,
+        "char": "my"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 164,
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 164,
+        "char": "$x2"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 164,
+        "char": " &#61; "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 164,
+        "char": "$xpad"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 164,
+        "char": " + "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 164,
+        "char": "$etime"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 164,
+        "char": " * "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 164,
+        "char": "$widthpertime"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 164,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -6897,10 +6507,58 @@ module.exports = [
         "char": "165"
     },
     {
-        "group": "perlHereDoc",
-        "linkedGroup": "Constant",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 165,
-        "char": "&lt;![CDATA[\n"
+        "char": "\t"
+    },
+    {
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
+        "row": 165,
+        "char": "my"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 165,
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 165,
+        "char": "$width"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 165,
+        "char": " &#61; "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 165,
+        "char": "$x2"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 165,
+        "char": " - "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 165,
+        "char": "$x1"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 165,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -6908,10 +6566,58 @@ module.exports = [
         "char": "166"
     },
     {
-        "group": "perlHereDoc",
-        "linkedGroup": "Constant",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 166,
-        "char": "\tvar details;\n"
+        "char": "\t"
+    },
+    {
+        "group": "perlStatementControl",
+        "linkedGroup": "Statement",
+        "row": 166,
+        "char": "next"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 166,
+        "char": " "
+    },
+    {
+        "group": "perlConditional",
+        "linkedGroup": "Statement",
+        "row": 166,
+        "char": "if"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 166,
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 166,
+        "char": "$width"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 166,
+        "char": " &lt; "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 166,
+        "char": "$minwidth"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 166,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -6919,10 +6625,10 @@ module.exports = [
         "char": "167"
     },
     {
-        "group": "perlHereDoc",
-        "linkedGroup": "Constant",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 167,
-        "char": "\tfunction init(evt) { details &#61; document.getElementById(&quot;details&quot;).firstChild; }\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -6930,10 +6636,106 @@ module.exports = [
         "char": "168"
     },
     {
-        "group": "perlHereDoc",
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 168,
+        "char": "\t"
+    },
+    {
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
+        "row": 168,
+        "char": "my"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 168,
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 168,
+        "char": "$y1"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 168,
+        "char": " &#61; "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 168,
+        "char": "$imageheight"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 168,
+        "char": " - "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 168,
+        "char": "$ypad2"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 168,
+        "char": " - ("
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 168,
+        "char": "$depth"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 168,
+        "char": " + "
+    },
+    {
+        "group": "perlNumber",
         "linkedGroup": "Constant",
         "row": 168,
-        "char": "\tfunction s(info) { details.nodeValue &#61; info; }\n"
+        "char": "1"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 168,
+        "char": ") * "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 168,
+        "char": "$frameheight"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 168,
+        "char": " + "
+    },
+    {
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
+        "row": 168,
+        "char": "1"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 168,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -6941,10 +6743,82 @@ module.exports = [
         "char": "169"
     },
     {
-        "group": "perlHereDoc",
-        "linkedGroup": "Constant",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 169,
-        "char": "\tfunction c() { details.nodeValue &#61; &#39; &#39;; }\n"
+        "char": "\t"
+    },
+    {
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
+        "row": 169,
+        "char": "my"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 169,
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 169,
+        "char": "$y2"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 169,
+        "char": " &#61; "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 169,
+        "char": "$imageheight"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 169,
+        "char": " - "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 169,
+        "char": "$ypad2"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 169,
+        "char": " - "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 169,
+        "char": "$depth"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 169,
+        "char": " * "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 169,
+        "char": "$frameheight"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 169,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -6952,10 +6826,10 @@ module.exports = [
         "char": "170"
     },
     {
-        "group": "perlHereDoc",
-        "linkedGroup": "Constant",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 170,
-        "char": "]]&gt;\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -6963,10 +6837,34 @@ module.exports = [
         "char": "171"
     },
     {
-        "group": "perlHereDoc",
-        "linkedGroup": "Constant",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 171,
-        "char": "&lt;/script&gt;\n"
+        "char": "\t"
+    },
+    {
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
+        "row": 171,
+        "char": "my"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 171,
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 171,
+        "char": "$info"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 171,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -6974,10 +6872,94 @@ module.exports = [
         "char": "172"
     },
     {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 172,
+        "char": "\t"
+    },
+    {
+        "group": "perlConditional",
+        "linkedGroup": "Statement",
+        "row": 172,
+        "char": "if"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 172,
+        "char": " ("
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 172,
+        "char": "$func"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 172,
+        "char": " "
+    },
+    {
+        "group": "perlOperator",
+        "linkedGroup": "Statement",
+        "row": 172,
+        "char": "eq"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 172,
+        "char": " "
+    },
+    {
         "group": "perlStringStartEnd",
         "linkedGroup": "Constant",
         "row": 172,
-        "char": "INC\n"
+        "char": "&quot;&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 172,
+        "char": " "
+    },
+    {
+        "group": "perlOperator",
+        "linkedGroup": "Statement",
+        "row": 172,
+        "char": "and"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 172,
+        "char": " "
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 172,
+        "char": "$depth"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 172,
+        "char": " &#61;&#61; "
+    },
+    {
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
+        "row": 172,
+        "char": "0"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 172,
+        "char": ") {\n"
     },
     {
         "group": "LineNr",
@@ -6985,34 +6967,58 @@ module.exports = [
         "char": "173"
     },
     {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 173,
-        "char": "$im"
-    },
-    {
-        "group": "perlMethod",
-        "linkedGroup": "Identifier",
-        "row": 173,
-        "char": "-&gt;include"
-    },
-    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 173,
-        "char": "("
+        "char": "\t\t"
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 173,
-        "char": "$inc"
+        "char": "$info"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 173,
-        "char": ");\n"
+        "char": " &#61; "
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 173,
+        "char": "&quot;"
+    },
+    {
+        "group": "perlString",
+        "linkedGroup": "Constant",
+        "row": 173,
+        "char": "all ("
+    },
+    {
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
+        "row": 173,
+        "char": "$samples"
+    },
+    {
+        "group": "perlString",
+        "linkedGroup": "Constant",
+        "row": 173,
+        "char": " ms, 100%)"
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 173,
+        "char": "&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 173,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -7020,99 +7026,33 @@ module.exports = [
         "char": "174"
     },
     {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 174,
-        "char": "$im"
+        "char": "\t} "
     },
     {
-        "group": "perlMethod",
-        "linkedGroup": "Identifier",
+        "group": "perlConditional",
+        "linkedGroup": "Statement",
         "row": 174,
-        "char": "-&gt;filledRectangle"
+        "char": "else"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 174,
-        "char": "("
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 174,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 174,
-        "char": ", "
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 174,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 174,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 174,
-        "char": "$imagewidth"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 174,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 174,
-        "char": "$imageheight"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 174,
-        "char": ", "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 174,
-        "char": "&#39;"
-    },
-    {
-        "group": "perlStringUnexpanded",
-        "linkedGroup": "Constant",
-        "row": 174,
-        "char": "url(#background)"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 174,
-        "char": "&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 174,
-        "char": ");\n"
+        "char": " {\n"
     },
     {
         "group": "LineNr",
         "row": 175,
         "char": "175"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 175,
+        "char": "\t\t"
     },
     {
         "group": "perlStatementStorage",
@@ -7124,55 +7064,91 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 175,
-        "char": " ("
+        "char": " "
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 175,
-        "char": "$white"
+        "char": "$pct"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 175,
-        "char": ", "
+        "char": " &#61; "
+    },
+    {
+        "group": "perlStatementScalar",
+        "linkedGroup": "Statement",
+        "row": 175,
+        "char": "sprintf"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 175,
+        "char": " "
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 175,
+        "char": "&quot;"
+    },
+    {
+        "group": "perlString",
+        "linkedGroup": "Constant",
+        "row": 175,
+        "char": "%.2f"
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 175,
+        "char": "&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 175,
+        "char": ", (("
+    },
+    {
+        "group": "perlNumber",
+        "linkedGroup": "Constant",
+        "row": 175,
+        "char": "100"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 175,
+        "char": " * "
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 175,
-        "char": "$black"
+        "char": "$samples"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 175,
-        "char": ", "
+        "char": ") / "
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 175,
-        "char": "$vvdgrey"
+        "char": "$timemax"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 175,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 175,
-        "char": "$vdgrey"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 175,
-        "char": ") &#61; (\n"
+        "char": ");\n"
     },
     {
         "group": "LineNr",
@@ -7183,61 +7159,73 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 176,
-        "char": "\t"
+        "char": "\t\t"
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 176,
-        "char": "$im"
+        "char": "$info"
     },
     {
-        "group": "perlMethod",
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 176,
+        "char": " &#61; "
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 176,
+        "char": "&quot;"
+    },
+    {
+        "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 176,
-        "char": "-&gt;colorAllocate"
+        "char": "$func"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 176,
-        "char": "("
-    },
-    {
-        "group": "perlNumber",
+        "group": "perlString",
         "linkedGroup": "Constant",
         "row": 176,
-        "char": "255"
+        "char": " ("
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
         "row": 176,
-        "char": ", "
+        "char": "$samples"
     },
     {
-        "group": "perlNumber",
+        "group": "perlString",
         "linkedGroup": "Constant",
         "row": 176,
-        "char": "255"
+        "char": " ms, "
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "perlVarPlain",
+        "linkedGroup": "Identifier",
         "row": 176,
-        "char": ", "
+        "char": "$pct"
     },
     {
-        "group": "perlNumber",
+        "group": "perlString",
         "linkedGroup": "Constant",
         "row": 176,
-        "char": "255"
+        "char": "%)"
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 176,
+        "char": "&quot;"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 176,
-        "char": "),\n"
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -7248,61 +7236,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 177,
-        "char": "\t"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 177,
-        "char": "$im"
-    },
-    {
-        "group": "perlMethod",
-        "linkedGroup": "Identifier",
-        "row": 177,
-        "char": "-&gt;colorAllocate"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 177,
-        "char": "("
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 177,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 177,
-        "char": ", "
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 177,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 177,
-        "char": ", "
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 177,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 177,
-        "char": "),\n"
+        "char": "\t}\n"
     },
     {
         "group": "LineNr",
@@ -7316,58 +7250,88 @@ module.exports = [
         "char": "\t"
     },
     {
+        "group": "perlStatementStorage",
+        "linkedGroup": "Statement",
+        "row": 178,
+        "char": "my"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 178,
+        "char": " "
+    },
+    {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 178,
-        "char": "$im"
+        "char": "$color"
     },
     {
-        "group": "perlMethod",
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 178,
+        "char": " &#61; "
+    },
+    {
+        "group": "perlVarPlain",
         "linkedGroup": "Identifier",
         "row": 178,
-        "char": "-&gt;colorAllocate"
+        "char": "$cpu"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 178,
-        "char": "("
+        "char": " ? "
     },
     {
-        "group": "perlNumber",
+        "group": "perlStringStartEnd",
         "linkedGroup": "Constant",
         "row": 178,
-        "char": "40"
+        "char": "&quot;"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 178,
-        "char": ", "
-    },
-    {
-        "group": "perlNumber",
+        "group": "perlString",
         "linkedGroup": "Constant",
         "row": 178,
-        "char": "40"
+        "char": "hot"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 178,
-        "char": ", "
-    },
-    {
-        "group": "perlNumber",
+        "group": "perlStringStartEnd",
         "linkedGroup": "Constant",
         "row": 178,
-        "char": "40"
+        "char": "&quot;"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 178,
-        "char": "),\n"
+        "char": " : "
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 178,
+        "char": "&quot;"
+    },
+    {
+        "group": "perlString",
+        "linkedGroup": "Constant",
+        "row": 178,
+        "char": "cold"
+    },
+    {
+        "group": "perlStringStartEnd",
+        "linkedGroup": "Constant",
+        "row": 178,
+        "char": "&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 178,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -7378,61 +7342,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 179,
-        "char": "\t"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 179,
-        "char": "$im"
-    },
-    {
-        "group": "perlMethod",
-        "linkedGroup": "Identifier",
-        "row": 179,
-        "char": "-&gt;colorAllocate"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 179,
-        "char": "("
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 179,
-        "char": "160"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 179,
-        "char": ", "
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 179,
-        "char": "160"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 179,
-        "char": ", "
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 179,
-        "char": "160"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 179,
-        "char": "),\n"
+        "char": "}\n"
     },
     {
         "group": "LineNr",
@@ -7443,7 +7353,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 180,
-        "char": "    );\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -7451,2784 +7361,33 @@ module.exports = [
         "char": "181"
     },
     {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 181,
-        "char": "$im"
-    },
-    {
-        "group": "perlMethod",
-        "linkedGroup": "Identifier",
-        "row": 181,
-        "char": "-&gt;stringTTF"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 181,
-        "char": "("
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 181,
-        "char": "$black"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 181,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 181,
-        "char": "$fonttype"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 181,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 181,
-        "char": "$fontsize"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 181,
-        "char": " + "
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 181,
-        "char": "5"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 181,
-        "char": ", "
-    },
-    {
-        "group": "perlFloat",
-        "linkedGroup": "Constant",
-        "row": 181,
-        "char": "0.0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 181,
-        "char": ", "
-    },
-    {
-        "group": "perlStatementNumeric",
-        "linkedGroup": "Statement",
-        "row": 181,
-        "char": "int"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 181,
-        "char": "("
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 181,
-        "char": "$imagewidth"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 181,
-        "char": " / "
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 181,
-        "char": "2"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 181,
-        "char": "), "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 181,
-        "char": "$fontsize"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 181,
-        "char": " * "
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 181,
-        "char": "2"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 181,
-        "char": ", "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 181,
-        "char": "&quot;"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 181,
-        "char": "Flame Graph"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 181,
-        "char": "&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 181,
-        "char": ", "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 181,
-        "char": "&quot;"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 181,
-        "char": "middle"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 181,
-        "char": "&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 181,
-        "char": ");\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 182,
-        "char": "182"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 182,
-        "char": "$im"
-    },
-    {
-        "group": "perlMethod",
-        "linkedGroup": "Identifier",
-        "row": 182,
-        "char": "-&gt;stringTTF"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 182,
-        "char": "("
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 182,
-        "char": "$black"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 182,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 182,
-        "char": "$fonttype"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 182,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 182,
-        "char": "$fontsize"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 182,
-        "char": ", "
-    },
-    {
-        "group": "perlFloat",
-        "linkedGroup": "Constant",
-        "row": 182,
-        "char": "0.0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 182,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 182,
-        "char": "$xpad"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 182,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 182,
-        "char": "$imageheight"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 182,
-        "char": " - ("
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 182,
-        "char": "$ypad2"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 182,
-        "char": " / "
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 182,
-        "char": "2"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 182,
-        "char": "), "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 182,
-        "char": "&#39;"
-    },
-    {
-        "group": "perlStringUnexpanded",
-        "linkedGroup": "Constant",
-        "row": 182,
-        "char": "Function:"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 182,
-        "char": "&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 182,
-        "char": ");\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 183,
-        "char": "183"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 183,
-        "char": "$im"
-    },
-    {
-        "group": "perlMethod",
-        "linkedGroup": "Identifier",
-        "row": 183,
-        "char": "-&gt;stringTTF"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 183,
-        "char": "("
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 183,
-        "char": "$black"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 183,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 183,
-        "char": "$fonttype"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 183,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 183,
-        "char": "$fontsize"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 183,
-        "char": ", "
-    },
-    {
-        "group": "perlFloat",
-        "linkedGroup": "Constant",
-        "row": 183,
-        "char": "0.0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 183,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 183,
-        "char": "$xpad"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 183,
-        "char": " + "
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 183,
-        "char": "60"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 183,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 183,
-        "char": "$imageheight"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 183,
-        "char": " - ("
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 183,
-        "char": "$ypad2"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 183,
-        "char": " / "
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 183,
-        "char": "2"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 183,
-        "char": "), "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 183,
-        "char": "&quot;"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 183,
-        "char": " "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 183,
-        "char": "&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 183,
-        "char": ", "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 183,
-        "char": "&quot;&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 183,
-        "char": ", "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 183,
-        "char": "&#39;"
-    },
-    {
-        "group": "perlStringUnexpanded",
-        "linkedGroup": "Constant",
-        "row": 183,
-        "char": "id&#61;&quot;details&quot;"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 183,
-        "char": "&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 183,
-        "char": ");\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 184,
-        "char": "184"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 184,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 185,
-        "char": "185"
-    },
-    {
-        "group": "perlComment",
-        "linkedGroup": "Comment",
-        "row": 185,
-        "char": "# Draw frames\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 186,
-        "char": "186"
-    },
-    {
-        "group": "perlRepeat",
-        "linkedGroup": "Statement",
-        "row": 186,
-        "char": "foreach"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 186,
-        "char": " "
-    },
-    {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 186,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 186,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 186,
-        "char": "$id"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 186,
-        "char": " ("
-    },
-    {
-        "group": "perlStatementHash",
-        "linkedGroup": "Statement",
-        "row": 186,
-        "char": "keys"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 186,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain2",
-        "linkedGroup": "Identifier",
-        "row": 186,
-        "char": "%Node"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 186,
-        "char": ") {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 187,
-        "char": "187"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 187,
-        "char": "\t"
-    },
-    {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 187,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 187,
-        "char": " ("
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 187,
-        "char": "$func"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 187,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 187,
-        "char": "$depth"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 187,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 187,
-        "char": "$etime"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 187,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 187,
-        "char": "$cpu"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 187,
-        "char": ") &#61; "
-    },
-    {
-        "group": "perlStatementRegexp",
-        "linkedGroup": "Statement",
-        "row": 187,
-        "char": "split"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 187,
-        "char": " "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 187,
-        "char": "&quot;"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 187,
-        "char": "-"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 187,
-        "char": "&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 187,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 187,
-        "char": "$id"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 187,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 188,
-        "char": "188"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 188,
-        "char": "\t"
-    },
-    {
-        "group": "perlStatementFlow",
-        "linkedGroup": "Statement",
-        "row": 188,
-        "char": "die"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 188,
-        "char": " "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 188,
-        "char": "&quot;"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 188,
-        "char": "missing start for "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 188,
-        "char": "$id"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 188,
-        "char": "&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 188,
-        "char": " "
-    },
-    {
-        "group": "perlConditional",
-        "linkedGroup": "Statement",
-        "row": 188,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 188,
-        "char": " !"
-    },
-    {
-        "group": "perlOperator",
-        "linkedGroup": "Statement",
-        "row": 188,
-        "char": "defined"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 188,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 188,
-        "char": "$Node{$id}"
-    },
-    {
-        "group": "perlVarSimpleMember",
-        "linkedGroup": "Identifier",
-        "row": 188,
-        "char": "-&gt;{"
-    },
-    {
-        "group": "perlVarSimpleMemberName",
-        "linkedGroup": "Constant",
-        "row": 188,
-        "char": "stime"
-    },
-    {
-        "group": "perlVarSimpleMember",
-        "linkedGroup": "Identifier",
-        "row": 188,
-        "char": "}"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 188,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 189,
-        "char": "189"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 189,
-        "char": "\t"
-    },
-    {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 189,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 189,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 189,
-        "char": "$stime"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 189,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 189,
-        "char": "$Node{$id}"
-    },
-    {
-        "group": "perlVarSimpleMember",
-        "linkedGroup": "Identifier",
-        "row": 189,
-        "char": "-&gt;{"
-    },
-    {
-        "group": "perlVarSimpleMemberName",
-        "linkedGroup": "Constant",
-        "row": 189,
-        "char": "stime"
-    },
-    {
-        "group": "perlVarSimpleMember",
-        "linkedGroup": "Identifier",
-        "row": 189,
-        "char": "}"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 189,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 190,
-        "char": "190"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 190,
-        "char": "\t"
-    },
-    {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 190,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 190,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 190,
-        "char": "$samples"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 190,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 190,
-        "char": "$etime"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 190,
-        "char": " - "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 190,
-        "char": "$stime"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 190,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 191,
-        "char": "191"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 191,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 192,
-        "char": "192"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 192,
-        "char": "\t"
-    },
-    {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 192,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 192,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 192,
-        "char": "$x1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 192,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 192,
-        "char": "$xpad"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 192,
-        "char": " + "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 192,
-        "char": "$stime"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 192,
-        "char": " * "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 192,
-        "char": "$widthpertime"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 192,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 193,
-        "char": "193"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 193,
-        "char": "\t"
-    },
-    {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 193,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 193,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 193,
-        "char": "$x2"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 193,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 193,
-        "char": "$xpad"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 193,
-        "char": " + "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 193,
-        "char": "$etime"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 193,
-        "char": " * "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 193,
-        "char": "$widthpertime"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 193,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 194,
-        "char": "194"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 194,
-        "char": "\t"
-    },
-    {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 194,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 194,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 194,
-        "char": "$width"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 194,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 194,
-        "char": "$x2"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 194,
-        "char": " - "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 194,
-        "char": "$x1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 194,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 195,
-        "char": "195"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 195,
-        "char": "\t"
-    },
-    {
-        "group": "perlStatementControl",
-        "linkedGroup": "Statement",
-        "row": 195,
-        "char": "next"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 195,
-        "char": " "
-    },
-    {
-        "group": "perlConditional",
-        "linkedGroup": "Statement",
-        "row": 195,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 195,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 195,
-        "char": "$width"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 195,
-        "char": " &lt; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 195,
-        "char": "$minwidth"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 195,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 196,
-        "char": "196"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 196,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 197,
-        "char": "197"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 197,
-        "char": "\t"
-    },
-    {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 197,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 197,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 197,
-        "char": "$y1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 197,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 197,
-        "char": "$imageheight"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 197,
-        "char": " - "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 197,
-        "char": "$ypad2"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 197,
-        "char": " - ("
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 197,
-        "char": "$depth"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 197,
-        "char": " + "
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 197,
-        "char": "1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 197,
-        "char": ") * "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 197,
-        "char": "$frameheight"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 197,
-        "char": " + "
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 197,
-        "char": "1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 197,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 198,
-        "char": "198"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 198,
-        "char": "\t"
-    },
-    {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 198,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 198,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 198,
-        "char": "$y2"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 198,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 198,
-        "char": "$imageheight"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 198,
-        "char": " - "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 198,
-        "char": "$ypad2"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 198,
-        "char": " - "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 198,
-        "char": "$depth"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 198,
-        "char": " * "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 198,
-        "char": "$frameheight"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 198,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 199,
-        "char": "199"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 199,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 200,
-        "char": "200"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 200,
-        "char": "\t"
-    },
-    {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 200,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 200,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 200,
-        "char": "$info"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 200,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 201,
-        "char": "201"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 201,
-        "char": "\t"
-    },
-    {
-        "group": "perlConditional",
-        "linkedGroup": "Statement",
-        "row": 201,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 201,
-        "char": " ("
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 201,
-        "char": "$func"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 201,
-        "char": " "
-    },
-    {
-        "group": "perlOperator",
-        "linkedGroup": "Statement",
-        "row": 201,
-        "char": "eq"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 201,
-        "char": " "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 201,
-        "char": "&quot;&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 201,
-        "char": " "
-    },
-    {
-        "group": "perlOperator",
-        "linkedGroup": "Statement",
-        "row": 201,
-        "char": "and"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 201,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 201,
-        "char": "$depth"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 201,
-        "char": " &#61;&#61; "
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 201,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 201,
-        "char": ") {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 202,
-        "char": "202"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 202,
-        "char": "\t\t"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 202,
-        "char": "$info"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 202,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 202,
-        "char": "&quot;"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 202,
-        "char": "all ("
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 202,
-        "char": "$samples"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 202,
-        "char": " ms, 100%)"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 202,
-        "char": "&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 202,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 203,
-        "char": "203"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 203,
-        "char": "\t} "
-    },
-    {
-        "group": "perlConditional",
-        "linkedGroup": "Statement",
-        "row": 203,
-        "char": "else"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 203,
-        "char": " {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 204,
-        "char": "204"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 204,
-        "char": "\t\t"
-    },
-    {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 204,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 204,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 204,
-        "char": "$pct"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 204,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlStatementScalar",
-        "linkedGroup": "Statement",
-        "row": 204,
-        "char": "sprintf"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 204,
-        "char": " "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 204,
-        "char": "&quot;"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 204,
-        "char": "%.2f"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 204,
-        "char": "&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 204,
-        "char": ", (("
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 204,
-        "char": "100"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 204,
-        "char": " * "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 204,
-        "char": "$samples"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 204,
-        "char": ") / "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 204,
-        "char": "$timemax"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 204,
-        "char": ");\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 205,
-        "char": "205"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 205,
-        "char": "\t\t"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 205,
-        "char": "$info"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 205,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 205,
-        "char": "&quot;"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 205,
-        "char": "$func"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 205,
-        "char": " ("
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 205,
-        "char": "$samples"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 205,
-        "char": " ms, "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 205,
-        "char": "$pct"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 205,
-        "char": "%)"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 205,
-        "char": "&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 205,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 206,
-        "char": "206"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 206,
-        "char": "\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 207,
-        "char": "207"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 207,
-        "char": "\t"
-    },
-    {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 207,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 207,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 207,
-        "char": "$color"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 207,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 207,
-        "char": "$cpu"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 207,
-        "char": " ? "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 207,
-        "char": "&quot;"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 207,
-        "char": "hot"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 207,
-        "char": "&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 207,
-        "char": " : "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 207,
-        "char": "&quot;"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 207,
-        "char": "cold"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 207,
-        "char": "&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 207,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 208,
-        "char": "208"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 208,
-        "char": "\t"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 208,
-        "char": "$im"
-    },
-    {
-        "group": "perlMethod",
-        "linkedGroup": "Identifier",
-        "row": 208,
-        "char": "-&gt;filledRectangle"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 208,
-        "char": "("
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 208,
-        "char": "$x1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 208,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 208,
-        "char": "$y1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 208,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 208,
-        "char": "$x2"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 208,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 208,
-        "char": "$y2"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 208,
-        "char": ", color("
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 208,
-        "char": "$color"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 208,
-        "char": "), "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 208,
-        "char": "&#39;"
-    },
-    {
-        "group": "perlStringUnexpanded",
-        "linkedGroup": "Constant",
-        "row": 208,
-        "char": "rx&#61;&quot;2&quot; ry&#61;&quot;2&quot; onmouseover&#61;&quot;s("
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 208,
-        "char": "&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 208,
-        "char": " . "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 208,
-        "char": "&quot;"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 208,
-        "char": "&#39;"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 208,
-        "char": "$info"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 208,
-        "char": "&#39;"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 208,
-        "char": "&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 208,
-        "char": " . "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 208,
-        "char": "&#39;"
-    },
-    {
-        "group": "perlStringUnexpanded",
-        "linkedGroup": "Constant",
-        "row": 208,
-        "char": ")&quot; onmouseout&#61;&quot;c()&quot;"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 208,
-        "char": "&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 208,
-        "char": ");\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 209,
-        "char": "209"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 209,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 210,
-        "char": "210"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 210,
-        "char": "\t"
-    },
-    {
-        "group": "perlConditional",
-        "linkedGroup": "Statement",
-        "row": 210,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 210,
-        "char": " ("
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 210,
-        "char": "$width"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 210,
-        "char": " &gt; "
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 210,
-        "char": "50"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 210,
-        "char": ") {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 211,
-        "char": "211"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 211,
-        "char": "\t\t"
-    },
-    {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 211,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 211,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 211,
-        "char": "$chars"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 211,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlStatementNumeric",
-        "linkedGroup": "Statement",
-        "row": 211,
-        "char": "int"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 211,
-        "char": "("
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 211,
-        "char": "$width"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 211,
-        "char": " / ("
-    },
-    {
-        "group": "perlFloat",
-        "linkedGroup": "Constant",
-        "row": 211,
-        "char": "0.7"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 211,
-        "char": " * "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 211,
-        "char": "$fontsize"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 211,
-        "char": "));\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 212,
-        "char": "212"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 212,
-        "char": "\t\t"
-    },
-    {
-        "group": "perlStatementStorage",
-        "linkedGroup": "Statement",
-        "row": 212,
-        "char": "my"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 212,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 212,
-        "char": "$text"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 212,
-        "char": " &#61; "
-    },
-    {
-        "group": "perlStatementScalar",
-        "linkedGroup": "Statement",
-        "row": 212,
-        "char": "substr"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 212,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 212,
-        "char": "$func"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 212,
-        "char": ", "
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 212,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 212,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 212,
-        "char": "$chars"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 212,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 213,
-        "char": "213"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 213,
-        "char": "\t\t"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 213,
-        "char": "$text"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 213,
-        "char": " .&#61; "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 213,
-        "char": "&quot;"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 213,
-        "char": ".."
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 213,
-        "char": "&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 213,
-        "char": " "
-    },
-    {
-        "group": "perlConditional",
-        "linkedGroup": "Statement",
-        "row": 213,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 213,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 213,
-        "char": "$chars"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 213,
-        "char": " &lt; "
-    },
-    {
-        "group": "perlStatementScalar",
-        "linkedGroup": "Statement",
-        "row": 213,
-        "char": "length"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 213,
-        "char": " "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 213,
-        "char": "$func"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 213,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 214,
-        "char": "214"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 214,
-        "char": "\t\t"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 214,
-        "char": "$im"
-    },
-    {
-        "group": "perlMethod",
-        "linkedGroup": "Identifier",
-        "row": 214,
-        "char": "-&gt;stringTTF"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 214,
-        "char": "("
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 214,
-        "char": "$black"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 214,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 214,
-        "char": "$fonttype"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 214,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 214,
-        "char": "$fontsize"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 214,
-        "char": ", "
-    },
-    {
-        "group": "perlFloat",
-        "linkedGroup": "Constant",
-        "row": 214,
-        "char": "0.0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 214,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 214,
-        "char": "$x1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 214,
-        "char": " + "
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 214,
-        "char": "3"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 214,
-        "char": ", "
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 214,
-        "char": "3"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 214,
-        "char": " + ("
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 214,
-        "char": "$y1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 214,
-        "char": " + "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 214,
-        "char": "$y2"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 214,
-        "char": ") / "
-    },
-    {
-        "group": "perlNumber",
-        "linkedGroup": "Constant",
-        "row": 214,
-        "char": "2"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 214,
-        "char": ", "
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 214,
-        "char": "$text"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 214,
-        "char": ", "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 214,
-        "char": "&quot;&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 214,
-        "char": ",\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 215,
-        "char": "215"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 215,
-        "char": "\t\t    "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 215,
-        "char": "&#39;"
-    },
-    {
-        "group": "perlStringUnexpanded",
-        "linkedGroup": "Constant",
-        "row": 215,
-        "char": "onmouseover&#61;&quot;s("
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 215,
-        "char": "&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 215,
-        "char": " . "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 215,
-        "char": "&quot;"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 215,
-        "char": "&#39;"
-    },
-    {
-        "group": "perlVarPlain",
-        "linkedGroup": "Identifier",
-        "row": 215,
-        "char": "$info"
-    },
-    {
-        "group": "perlString",
-        "linkedGroup": "Constant",
-        "row": 215,
-        "char": "&#39;"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 215,
-        "char": "&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 215,
-        "char": " . "
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 215,
-        "char": "&#39;"
-    },
-    {
-        "group": "perlStringUnexpanded",
-        "linkedGroup": "Constant",
-        "row": 215,
-        "char": ")&quot; onmouseout&#61;&quot;c()&quot;"
-    },
-    {
-        "group": "perlStringStartEnd",
-        "linkedGroup": "Constant",
-        "row": 215,
-        "char": "&#39;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 215,
-        "char": ");\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 216,
-        "char": "216"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 216,
-        "char": "\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 217,
-        "char": "217"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 217,
-        "char": "}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 218,
-        "char": "218"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 218,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 219,
-        "char": "219"
-    },
-    {
         "group": "perlStatementFiledesc",
         "linkedGroup": "Statement",
-        "row": 219,
+        "row": 181,
         "char": "print"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
-        "row": 219,
+        "row": 181,
         "char": " "
     },
     {
         "group": "perlVarPlain",
         "linkedGroup": "Identifier",
-        "row": 219,
+        "row": 181,
         "char": "$im"
     },
     {
         "group": "perlMethod",
         "linkedGroup": "Identifier",
-        "row": 219,
+        "row": 181,
         "char": "-&gt;svg"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
-        "row": 219,
-        "char": ";\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 220,
-        "char": "220"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 220,
-        "char": ""
+        "row": 181,
+        "char": ";"
     }
 ]

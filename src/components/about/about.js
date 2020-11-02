@@ -18,7 +18,7 @@ function AboutTemplate({ state, Store }) {
 
 function AboutView({ props }) {
   return Modal({
-    title: 'About',
+    title: 'Help',
 
     size: 'auto',
 
@@ -28,7 +28,7 @@ function AboutView({ props }) {
       <div class="form">
         <div class="item text-body">
           <p>
-            Pinto is an application used to create color themes for Vim.
+            Create, view and edit Vim color themes.
           </p>
 
           <h3>
@@ -37,48 +37,169 @@ function AboutView({ props }) {
 
           <ol class="modal-ol">
             <li>
-              Change the colorscheme to your liking
+              Change the color scheme to your liking.
             </li>
 
             <li>
               Copy or download the exported content to a file in vim color
               folder, for instance:
+              <code class="code-snippet">~/.vim/colors/[colorscheme].vim</code>
+            </li>
+
+            <li>
+              Load the color scheme by appending a line in your
+              <code class="code-snippet">.vimrc</code> file and re-sourcing
+              <code class="code-snippet">.vimrc</code> OR by running
+              <code class="code-snippet">:colorscheme [colorscheme]</code>
+            </li>
+          </ol>
+
+          <p>
+            Additionally, if your browser supports the
+            <a href="https://web.dev/file-system-access/" target="_blank" rel="nofollow">File System Access API</a>, you can save
+            changes to a local file on your computer and trigger an instant
+            reload in vim (with entr, inotify-tools or other similar software):
+          </p>
+
+          <ol class="modal-ol">
+            <li>
+              Start vim with the
+              <code class="code-snippet">servername flag</code>, for instance,
+
               <code class="code-snippet"
-                >~/.vim/colors/[colorscheme name].vim</code
+                >vim --servername PINTO example.js</code
               >
             </li>
 
             <li>
-              Load the colorscheme by appending a line in your
-              <code class="code-snippet">.vimrc</code> file and re-sourcing
-              <code class="code-snippet">.vimrc</code> OR by running
-              <code class="code-snippet">:colorscheme [colorscheme name]</code>
+              Then from another terminal run
+              <code class="code-snippet">ls ~/.vim/colors/* | entr -c -r -s "vim --servername PINTO --remote-send ':colorscheme MY_COLOR_SCHEME_NAME<cr>'"</code>, and replace MY_COLOR_SCHEME_NAME with your color scheme name.
             </li>
           </ol>
 
           <h3>
-            Vim Syntax Highlightning
+            Keybindings
           </h3>
 
+          <ul class="modal-ul">
+            <li>
+              To select/unselect multiple keywords, hold down
+              <code class="code-snippet">Ctrl</code> and press a keyword.
+            </li>
+
+            <li>
+              <code class="code-snippet">Ctrl + S</code>: Save theme (autosave
+              is enabled but you can always save manually)
+            </li>
+
+            <li>
+              <code class="code-snippet">Ctrl + Shift + S</code>: Save changes
+              to file
+            </li>
+
+            <li>
+              <code class="code-snippet">Shift + N</code>: Create new theme
+            </li>
+
+            <li>
+              <code class="code-snippet">Shift + O</code>: Open theme
+            </li>
+
+            <li>
+              <code class="code-snippet">Shift + E</code>: Export theme
+            </li>
+
+            <li>
+              <code class="code-snippet">Shift + F</code>: Show fullscreen
+            </li>
+
+            <li>
+              <code class="code-snippet">Shift + V</code>: Copy vim theme to
+              clipboard
+            </li>
+
+            <li>
+              <code class="code-snippet">Shift + K </code>: Go to Normal keyword
+            </li>
+
+            <li>
+              <code class="code-snippet">Shift + P</code>: Go to palette editor
+            </li>
+
+            <li><code class="code-snippet">Shift + S</code>: Go to Settings</li>
+          </ul>
+
+          <h3>
+            FAQ
+          </h3>
+
+          <h4>
+            Using the xterm 256 color palette displays the wrong color.
+          </h4>
+
           <p>
-            Vim uses lexical highlightning to style text in different colors and
-            fonts. The different tokens can either be specific
+            The 256 colors come from
+            <a
+              href="https://jonasjacek.github.io/colors/"
+              target="_blank"
+              rel="nofollow"
+              >https://jonasjacek.github.io/colors/</a
+            >. If you're using tmux or some other software, you might get the
+            wrong color for certain color codes. Try upgrading vim to 8.1 > and
+            enable <code class="code-snippet">termguicolors</code>.
+          </p>
+
+          <h4>
+            How can I add my own keywords?
+          </h4>
+
+          <p>
+            Go to Settings and add a new keyword group from the Keyboard Groups section.
+          </p>
+
+          <h4>
+            Where is data saved?
+          </h4>
+
+          <p>
+            Data is saved to IndexedDB in the browser.
+          </p>
+
+          <h4>
+            How does Vim Syntax Highlighting work?
+          </h4>
+
+          <p>
+            Vim uses lexical highlighting to style text in different colors and
+            fonts. The various tokens can either be specific
             <code class="code-snippet">keywords</code> or text matching a
-            pattern. Vim highlightning comprises of multiple keyword groups.
-            There's the preferred/major group, the minor group and then all the
-            language specific keyword groups. Each language group links to
-            either a minor or preferred/major group, and the minor keywords all
-            link to some keyword in the preferred/mayor group. Linking means
-            that if the color/font is not set explicitly for a keyword, then it
-            will inherit the color/font of the keyword it links to. Colortheme
-            Editor uses the default keywords syntax for Vim 8.1. When setting
-            foregroundColor or backgroundColor to NONE, it will not inherit from
-            the keyword it links to, but from the Normal keyword.
+            pattern.
           </p>
 
           <p>
-            To learn more about syntax highlightning write
-            <code class="code-snippet">:help highlightning</code> in vim or go
+            Vim highlighting comprises of multiple keyword groups. There's the
+            preferred/major group, the minor group, and then all the language-specific keyword groups.
+          </p>
+
+          <p>
+            Each language group links to either a minor or preferred/major
+            group, and the minor keywords all link to some keyword in the
+            preferred/major group.
+          </p>
+
+          <p>
+            Linking means that if the color/font is not set explicitly for a keyword, it will inherit the linked keyword's color/font.
+            Pinto uses the default keywords syntax for Vim 8.1.
+          </p>
+
+          <p>
+            When setting <code class="code-snippet">foregroundColor</code> or <code class="code-snippet">backgroundColor</code> to <code class="code-snippet">NONE</code>, it will not
+            inherit from the keyword it links to, but from the <code class="code-snippet">Normal</code> keyword.
+          </p>
+
+          <p>
+            To learn more about syntax highlighting  write
+            <code class="code-snippet">:help highlighting </code> in vim or go
             to
             <a
               target="_blank"
@@ -88,6 +209,16 @@ function AboutView({ props }) {
             >.
           </p>
 
+          <h4>
+            Why is Pinto so slow?
+          </h4>
+
+          <p>
+            Because the author wanted to experiment with a new way of building front-end applications (while creating a useful application in the meantime),
+            and incidentally dug himself a hole too deep to dig himself out of it, time and energy-wise.
+            A rewrite is on the horizon.
+          </p>
+
           <p>
             Some useful commands in vim:
           </p>
@@ -95,24 +226,24 @@ function AboutView({ props }) {
           <ul class="modal-ul">
             <li>
               <code class="code-snippet">:help highlight-groups</code>
-              Default highlightning groups
+              Show default highlighting  groups
             </li>
 
             <li>
               <code class="code-snippet">:highlight</code>
-              Show all keywords, what they link to and their color attributes
+              Show all keywords, what they link to, and their color attributes
             </li>
 
             <li>
               <code class="code-snippet">:verbose hi keyword</code>
-              Show where a keyword (replace keyword with Normal, Comment,
+              Show where a keyword (replace the keyword with Normal, Comment,
               String, etc.) was last set
             </li>
 
             <li>
               <code class="code-snippet">:syntax</code>
-              Show keyword, keyword links, syntax and pattern matching for the
-              current active language
+              Show keyword, keyword links, syntax, and pattern matching for the
+              currently active language
             </li>
 
             <li>
@@ -129,38 +260,17 @@ function AboutView({ props }) {
               >
               See your current highlight settings for the active language
             </li>
-          </ul>
 
-          <h3>
-            Keybindings
-          </h3>
-
-          <ul class="modal-ul">
             <li>
-              To select/unselect multiple keywords hold down
-              <code class="code-snippet">ctrl</code> and press a keyword.
+              <code class="code-snippet">:colorscheme [colorscheme name]</code>
+              Load a colorscheme
+            </li>
+
+            <li>
+              <code class="code-snippet"> @:</code>
+              Repeat last vim command
             </li>
           </ul>
-
-          <h3>
-            FAQ
-          </h3>
-
-          <h4>
-            Using the xterm 256 color palette displays the wrong color.
-          </h4>
-
-          <p>
-            The 256 colors comes from
-            <a
-              href="https://jonasjacek.github.io/colors/"
-              target="_blank"
-              rel="nofollow"
-              >https://jonasjacek.github.io/colors/</a
-            >. If you're using tmux or some other software, you might get the
-            wrong color for certain color codes. Try upgrading vim to 8.1 >, use
-            GUI instead of terminal and enable true color support.
-          </p>
 
           <h3>
             Additional Information
@@ -169,12 +279,12 @@ function AboutView({ props }) {
           <ul>
             <li>
               <span class="bold">Version</span><br />
-              v0.1.0
+              v0.3.0-beta
             </li>
 
             <li>
               <span class="bold">Updated</span><br />
-              November 1, 2020
+              November 20, 2020
             </li>
 
             <li>
@@ -188,8 +298,8 @@ function AboutView({ props }) {
                 ><a
                   target="_blank"
                   rel="nofollow"
-                  href="https://github.com/samiralajmovic/pinto"
-                  >github.com/samiralajmovic/pinto</a
+                  href="https://github.com/alajmo/pinto"
+                  >github.com/alajmo/pinto</a
                 ></span
               >
             </li>

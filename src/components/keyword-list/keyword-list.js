@@ -14,12 +14,14 @@ function KeywordList({
     allSelected,
     minimized,
     selectedKeyword,
+    descriptions,
 
     toggleEnableKeyword,
     toggleEnableAll,
     toggleSelectAll,
     toggleDisplayAll,
 
+    copyFromKeywordToKeyword,
     selectKeyword,
   },
 }) {
@@ -60,14 +62,23 @@ function KeywordList({
                 keyword => html`
                   <li data-selected="${selectedKeyword.includes(keyword)}">
                     <div
+                      title="${descriptions[keyword]}"
                       class="keyword-preview"
                       data-name="${keyword}"
-                      style="${cssPreviewKeyword(keywordData[keyword], keywordData.Normal)}"
+                      style="${cssPreviewKeyword(
+                        keywordData[keyword],
+                        keywordData.Normal,
+                      )}"
                     >
                       ${keyword}
                     </div>
 
                     <div class="keyword-enable-status">
+                      <i
+                        title="Copy attributes from ${keyword} to selected keywords"
+                        onclick="${() => copyFromKeywordToKeyword(keyword)}"
+                        class="fas fa-copy actionable"
+                      ></i>
                       ${showEnableKeywordToggle
                         ? ToggleEnable({
                             enabled: keywordData[keyword].enabled,
@@ -92,14 +103,14 @@ function ToggleEnable({ enabled, toggle }) {
           <i
             title="Enable language keywords"
             onclick="${toggle}"
-            class="fas fa-toggle-on actionable"
+            class="fas fa-eye actionable"
           ></i>
         `
       : html`
           <i
             title="Disable language keywords"
             onclick="${toggle}"
-            class="fas fa-toggle-off actionable"
+            class="fas fa-eye-slash actionable"
           ></i>
         `}
   `;

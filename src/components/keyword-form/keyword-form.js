@@ -45,7 +45,7 @@ function KeywordFormTemplate({ state, Store }) {
               ]}</span> <i title="Copy settings from ${state.theme.keywordLinks[keyword.name]}" class="fas fa-clone actionable" onclick=${() => {
                 Store.dispatch('theme', 'copyFromKeywordToKeyword', {
                   keywordToCopyFrom: state.theme.keywordLinks[keyword.name],
-                  keywordToCopyTo: keyword.name,
+                  keywordToCopyTo: [keyword.name],
                 });
                 mitt.emit('RENDER');
               }}></i></pre>`

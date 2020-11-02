@@ -5,10 +5,34 @@ module.exports = [
         "char": "1"
     },
     {
-        "group": "lispComment",
-        "linkedGroup": "Comment",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 1,
-        "char": ";;;\n"
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 1,
+        "char": "in-package"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 1,
+        "char": " "
+    },
+    {
+        "group": "lispEscapeSpecial",
+        "linkedGroup": "Type",
+        "row": 1,
+        "char": "#:pgloader.parser"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 1,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -16,10 +40,10 @@ module.exports = [
         "char": "2"
     },
     {
-        "group": "lispComment",
-        "linkedGroup": "Comment",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 2,
-        "char": ";;; Now the main command, one of\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -27,10 +51,88 @@ module.exports = [
         "char": "3"
     },
     {
-        "group": "lispComment",
-        "linkedGroup": "Comment",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 3,
-        "char": ";;;\n"
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 3,
+        "char": "defrule"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 3,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 3,
+        "char": "end-of-command"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 3,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 3,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 3,
+        "char": "and"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 3,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 3,
+        "char": "ignore-whitespace"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 3,
+        "char": " "
+    },
+    {
+        "group": "lispEscapeSpecial",
+        "linkedGroup": "Type",
+        "row": 3,
+        "char": "#\\;"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 3,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 3,
+        "char": "ignore-whitespace"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 3,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -38,10 +140,40 @@ module.exports = [
         "char": "4"
     },
     {
-        "group": "lispComment",
-        "linkedGroup": "Comment",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 4,
-        "char": ";;;  - LOAD FROM some files\n"
+        "char": "  "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 4,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 4,
+        "char": ":constant"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 4,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 4,
+        "char": ":eoc"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 4,
+        "char": "))\n"
     },
     {
         "group": "LineNr",
@@ -49,10 +181,10 @@ module.exports = [
         "char": "5"
     },
     {
-        "group": "lispComment",
-        "linkedGroup": "Comment",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 5,
-        "char": ";;;  - LOAD DATABASE FROM a MySQL remote database\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -60,10 +192,76 @@ module.exports = [
         "char": "6"
     },
     {
-        "group": "lispComment",
-        "linkedGroup": "Comment",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 6,
-        "char": ";;;  - LOAD MESSAGES FROM a syslog daemon receiver we&#39;re going to start here\n"
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 6,
+        "char": "defrule"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 6,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 6,
+        "char": "command"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 6,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 6,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 6,
+        "char": "and"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 6,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 6,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 6,
+        "char": "or"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 6,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 6,
+        "char": "load-archive\n"
     },
     {
         "group": "LineNr",
@@ -71,10 +269,16 @@ module.exports = [
         "char": "7"
     },
     {
-        "group": "lispComment",
-        "linkedGroup": "Comment",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 7,
-        "char": ";;;\n"
+        "char": "                          "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 7,
+        "char": "load-mssql-database\n"
     },
     {
         "group": "LineNr",
@@ -82,10 +286,16 @@ module.exports = [
         "char": "8"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 8,
-        "char": "\n"
+        "char": "\t\t\t  "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 8,
+        "char": "load-sqlite-database\n"
     },
     {
         "group": "LineNr",
@@ -93,34 +303,16 @@ module.exports = [
         "char": "9"
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 9,
-        "char": "("
+        "char": "\t\t\t  "
     },
     {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
+        "group": "lispComment",
+        "linkedGroup": "Comment",
         "row": 9,
-        "char": "in-package"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 9,
-        "char": " "
-    },
-    {
-        "group": "lispEscapeSpecial",
-        "linkedGroup": "Type",
-        "row": 9,
-        "char": "#:pgloader.parser"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 9,
-        "char": ")\n"
+        "char": ";; load-syslog-messages\n"
     },
     {
         "group": "LineNr",
@@ -128,10 +320,16 @@ module.exports = [
         "char": "10"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 10,
-        "char": "\n"
+        "char": "                          "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 10,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -139,82 +337,16 @@ module.exports = [
         "char": "11"
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 11,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 11,
-        "char": "defrule"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 11,
-        "char": " "
+        "char": "\t\t      "
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 11,
         "char": "end-of-command"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 11,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 11,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 11,
-        "char": "and"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 11,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 11,
-        "char": "ignore-whitespace"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 11,
-        "char": " "
-    },
-    {
-        "group": "lispEscapeSpecial",
-        "linkedGroup": "Type",
-        "row": 11,
-        "char": "#\\;"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 11,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 11,
-        "char": "ignore-whitespace"
     },
     {
         "group": "lispParen",
@@ -243,7 +375,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 12,
-        "char": ":constant"
+        "char": ":lambda"
     },
     {
         "group": "lispList",
@@ -252,16 +384,22 @@ module.exports = [
         "char": " "
     },
     {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 12,
+        "char": "("
+    },
+    {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 12,
-        "char": ":eoc"
+        "char": "cmd"
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 12,
-        "char": "))\n"
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -269,10 +407,94 @@ module.exports = [
         "char": "13"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 13,
-        "char": "\n"
+        "char": "    "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 13,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 13,
+        "char": "bind"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 13,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 13,
+        "char": "((("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 13,
+        "char": "command"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 13,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 13,
+        "char": "_"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 13,
+        "char": ")"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 13,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 13,
+        "char": "cmd"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 13,
+        "char": "))"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 13,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 13,
+        "char": "command"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 13,
+        "char": ")))\n"
     },
     {
         "group": "LineNr",
@@ -280,76 +502,10 @@ module.exports = [
         "char": "14"
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 14,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 14,
-        "char": "defrule"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 14,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 14,
-        "char": "command"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 14,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 14,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 14,
-        "char": "and"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 14,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 14,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 14,
-        "char": "or"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 14,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 14,
-        "char": "load-archive\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -357,16 +513,64 @@ module.exports = [
         "char": "15"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 15,
-        "char": "\t\t\t  "
+        "char": "("
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 15,
-        "char": "load-csv-file\n"
+        "char": "defrule"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 15,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 15,
+        "char": "commands"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 15,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 15,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 15,
+        "char": "+"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 15,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 15,
+        "char": "command"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 15,
+        "char": "))\n"
     },
     {
         "group": "LineNr",
@@ -374,16 +578,10 @@ module.exports = [
         "char": "16"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 16,
-        "char": "\t\t\t  "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 16,
-        "char": "load-fixed-cols-file\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -391,16 +589,124 @@ module.exports = [
         "char": "17"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 17,
-        "char": "                          "
+        "char": "("
+    },
+    {
+        "group": "lispDecl",
+        "linkedGroup": "Statement",
+        "row": 17,
+        "char": "defun"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 17,
+        "char": " "
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 17,
-        "char": "load-copy-file\n"
+        "char": "parse-commands"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 17,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 17,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 17,
+        "char": "commands-template"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 17,
+        "char": " "
+    },
+    {
+        "group": "lispKey",
+        "linkedGroup": "Type",
+        "row": 17,
+        "char": "&amp;key"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 17,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 17,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 17,
+        "char": "start"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 17,
+        "char": " "
+    },
+    {
+        "group": "lispNumber",
+        "linkedGroup": "Constant",
+        "row": 17,
+        "char": "0"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 17,
+        "char": ")"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 17,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 17,
+        "char": "end"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 17,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 17,
+        "char": "junk-allowed"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 17,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -411,13 +717,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 18,
-        "char": "\t\t\t  "
+        "char": "  "
     },
     {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
+        "group": "lispString",
+        "linkedGroup": "Constant",
         "row": 18,
-        "char": "load-dbf-file\n"
+        "char": "&quot;Parse a command and return a LAMBDA form that takes no parameter.&quot;\n"
     },
     {
         "group": "LineNr",
@@ -428,13 +734,115 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 19,
-        "char": "                          "
+        "char": "  "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 19,
+        "char": "("
+    },
+    {
+        "group": "lispDecl",
+        "linkedGroup": "Statement",
+        "row": 19,
+        "char": "let"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 19,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 19,
+        "char": "(("
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 19,
-        "char": "load-ixf-file\n"
+        "char": "commands"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 19,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 19,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 19,
+        "char": "apply-template"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 19,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 19,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 19,
+        "char": "subseq"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 19,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 19,
+        "char": "commands-template"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 19,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 19,
+        "char": "start"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 19,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 19,
+        "char": "end"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 19,
+        "char": "))))\n"
     },
     {
         "group": "LineNr",
@@ -445,13 +853,31 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 20,
-        "char": "                          "
+        "char": "    "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 20,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 20,
+        "char": "unless"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 20,
+        "char": " "
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 20,
-        "char": "load-pgsql-database\n"
+        "char": "junk-allowed\n"
     },
     {
         "group": "LineNr",
@@ -462,13 +888,61 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 21,
-        "char": "\t\t\t  "
+        "char": "      "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 21,
+        "char": "("
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 21,
-        "char": "load-mysql-database\n"
+        "char": "log-message"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 21,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 21,
+        "char": ":info"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 21,
+        "char": " "
+    },
+    {
+        "group": "lispString",
+        "linkedGroup": "Constant",
+        "row": 21,
+        "char": "&quot;Parsed command:~%~a~%&quot;"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 21,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 21,
+        "char": "commands"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 21,
+        "char": "))\n"
     },
     {
         "group": "LineNr",
@@ -479,13 +953,37 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 22,
-        "char": "                          "
+        "char": "    "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 22,
+        "char": "("
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 22,
-        "char": "load-mssql-database\n"
+        "char": "parse"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 22,
+        "char": " "
+    },
+    {
+        "group": "lispAtomMark",
+        "linkedGroup": "Special",
+        "row": 22,
+        "char": "&#39;"
+    },
+    {
+        "group": "lispAtom",
+        "linkedGroup": "Identifier",
+        "row": 22,
+        "char": "commands\n"
     },
     {
         "group": "LineNr",
@@ -496,13 +994,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 23,
-        "char": "\t\t\t  "
+        "char": "           "
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 23,
-        "char": "load-sqlite-database\n"
+        "char": "commands\n"
     },
     {
         "group": "LineNr",
@@ -513,13 +1011,25 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 24,
-        "char": "\t\t\t  "
+        "char": "           "
     },
     {
-        "group": "lispComment",
-        "linkedGroup": "Comment",
+        "group": "lispKey",
+        "linkedGroup": "Type",
         "row": 24,
-        "char": ";; load-syslog-messages\n"
+        "char": ":start"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 24,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 24,
+        "char": "start\n"
     },
     {
         "group": "LineNr",
@@ -530,13 +1040,25 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 25,
-        "char": "                          "
+        "char": "           "
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispKey",
+        "linkedGroup": "Type",
         "row": 25,
-        "char": ")\n"
+        "char": ":end"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 25,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 25,
+        "char": "end\n"
     },
     {
         "group": "LineNr",
@@ -547,19 +1069,31 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 26,
-        "char": "\t\t      "
+        "char": "           "
+    },
+    {
+        "group": "lispKey",
+        "linkedGroup": "Type",
+        "row": 26,
+        "char": ":junk-allowed"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 26,
+        "char": " "
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 26,
-        "char": "end-of-command"
+        "char": "junk-allowed"
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 26,
-        "char": ")\n"
+        "char": ")))\n"
     },
     {
         "group": "LineNr",
@@ -567,46 +1101,10 @@ module.exports = [
         "char": "27"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 27,
-        "char": "  "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 27,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 27,
-        "char": ":lambda"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 27,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 27,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 27,
-        "char": "cmd"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 27,
-        "char": ")\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -614,10 +1112,34 @@ module.exports = [
         "char": "28"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 28,
-        "char": "    "
+        "char": "("
+    },
+    {
+        "group": "lispDecl",
+        "linkedGroup": "Statement",
+        "row": 28,
+        "char": "defun"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 28,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 28,
+        "char": "inject-inline-data-position"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 28,
+        "char": " "
     },
     {
         "group": "lispParen",
@@ -629,24 +1151,6 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 28,
-        "char": "bind"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 28,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 28,
-        "char": "((("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 28,
         "char": "command"
     },
     {
@@ -656,52 +1160,16 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
         "row": 28,
-        "char": "_"
+        "char": "position"
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 28,
-        "char": ")"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 28,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 28,
-        "char": "cmd"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 28,
-        "char": "))"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 28,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 28,
-        "char": "command"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 28,
-        "char": ")))\n"
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -709,10 +1177,16 @@ module.exports = [
         "char": "29"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 29,
-        "char": "\n"
+        "char": "  "
+    },
+    {
+        "group": "lispString",
+        "linkedGroup": "Constant",
+        "row": 29,
+        "char": "&quot;We have &#39;(:inline nil) somewhere in command, have &#39;(:inline position) instead.&quot;\n"
     },
     {
         "group": "LineNr",
@@ -720,34 +1194,10 @@ module.exports = [
         "char": "30"
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 30,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 30,
-        "char": "defrule"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 30,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 30,
-        "char": "commands"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 30,
-        "char": " "
+        "char": "  "
     },
     {
         "group": "lispParen",
@@ -759,25 +1209,7 @@ module.exports = [
         "group": "lispFunc",
         "linkedGroup": "Statement",
         "row": 30,
-        "char": "+"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 30,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 30,
-        "char": "command"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 30,
-        "char": "))\n"
+        "char": "loop\n"
     },
     {
         "group": "LineNr",
@@ -785,10 +1217,52 @@ module.exports = [
         "char": "31"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 31,
-        "char": "\n"
+        "char": "     "
+    },
+    {
+        "group": "lispKey",
+        "linkedGroup": "Type",
+        "row": 31,
+        "char": ":for"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 31,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 31,
+        "char": "s-exp"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 31,
+        "char": " "
+    },
+    {
+        "group": "lispKey",
+        "linkedGroup": "Type",
+        "row": 31,
+        "char": ":in"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 31,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 31,
+        "char": "command\n"
     },
     {
         "group": "LineNr",
@@ -796,124 +1270,10 @@ module.exports = [
         "char": "32"
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 32,
-        "char": "("
-    },
-    {
-        "group": "lispDecl",
-        "linkedGroup": "Statement",
-        "row": 32,
-        "char": "defun"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 32,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 32,
-        "char": "parse-commands"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 32,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 32,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 32,
-        "char": "commands-template"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 32,
-        "char": " "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 32,
-        "char": "&amp;key"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 32,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 32,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 32,
-        "char": "start"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 32,
-        "char": " "
-    },
-    {
-        "group": "lispNumber",
-        "linkedGroup": "Constant",
-        "row": 32,
-        "char": "0"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 32,
-        "char": ")"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 32,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 32,
-        "char": "end"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 32,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 32,
-        "char": "junk-allowed"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 32,
-        "char": ")\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -924,13 +1284,85 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 33,
-        "char": "  "
+        "char": "     "
     },
     {
-        "group": "lispString",
-        "linkedGroup": "Constant",
+        "group": "lispKey",
+        "linkedGroup": "Type",
         "row": 33,
-        "char": "&quot;Parse a command and return a LAMBDA form that takes no parameter.&quot;\n"
+        "char": ":when"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 33,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 33,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 33,
+        "char": "and"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 33,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 33,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 33,
+        "char": "typep"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 33,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 33,
+        "char": "s-exp"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 33,
+        "char": " "
+    },
+    {
+        "group": "lispAtomMark",
+        "linkedGroup": "Special",
+        "row": 33,
+        "char": "&#39;"
+    },
+    {
+        "group": "lispAtom",
+        "linkedGroup": "Identifier",
+        "row": 33,
+        "char": "md-connection"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 33,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -941,61 +1373,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 34,
-        "char": "  "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 34,
-        "char": "("
-    },
-    {
-        "group": "lispDecl",
-        "linkedGroup": "Statement",
-        "row": 34,
-        "char": "let"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 34,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 34,
-        "char": "(("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 34,
-        "char": "commands"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 34,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 34,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 34,
-        "char": "apply-template"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 34,
-        "char": " "
+        "char": "                "
     },
     {
         "group": "lispParen",
@@ -1007,7 +1385,7 @@ module.exports = [
         "group": "lispFunc",
         "linkedGroup": "Statement",
         "row": 34,
-        "char": "subseq"
+        "char": "slot-boundp"
     },
     {
         "group": "lispList",
@@ -1019,7 +1397,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 34,
-        "char": "commands-template"
+        "char": "s-exp"
     },
     {
         "group": "lispList",
@@ -1028,28 +1406,22 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
+        "group": "lispAtomMark",
+        "linkedGroup": "Special",
         "row": 34,
-        "char": "start"
+        "char": "&#39;"
     },
     {
-        "group": "lispList",
-        "linkedGroup": "lispList",
+        "group": "lispAtom",
+        "linkedGroup": "Identifier",
         "row": 34,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 34,
-        "char": "end"
+        "char": "pgloader.sources::spec"
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 34,
-        "char": "))))\n"
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -1060,7 +1432,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 35,
-        "char": "    "
+        "char": "                "
     },
     {
         "group": "lispParen",
@@ -1072,7 +1444,7 @@ module.exports = [
         "group": "lispFunc",
         "linkedGroup": "Statement",
         "row": 35,
-        "char": "unless"
+        "char": "eq"
     },
     {
         "group": "lispList",
@@ -1084,7 +1456,61 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 35,
-        "char": "junk-allowed\n"
+        "char": ":inline"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 35,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 35,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 35,
+        "char": "first"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 35,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 35,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 35,
+        "char": "md-spec"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 35,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 35,
+        "char": "s-exp"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 35,
+        "char": "))))\n"
     },
     {
         "group": "LineNr",
@@ -1095,7 +1521,55 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 36,
-        "char": "      "
+        "char": "     "
+    },
+    {
+        "group": "lispKey",
+        "linkedGroup": "Type",
+        "row": 36,
+        "char": ":do"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 36,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 36,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 36,
+        "char": "setf"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 36,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 36,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 36,
+        "char": "second"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 36,
+        "char": " "
     },
     {
         "group": "lispParen",
@@ -1107,7 +1581,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 36,
-        "char": "log-message"
+        "char": "md-spec"
     },
     {
         "group": "lispList",
@@ -1119,37 +1593,31 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 36,
-        "char": ":info"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 36,
-        "char": " "
-    },
-    {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 36,
-        "char": "&quot;Parsed command:~%~a~%&quot;"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 36,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 36,
-        "char": "commands"
+        "char": "s-exp"
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 36,
-        "char": "))\n"
+        "char": "))"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 36,
+        "char": " "
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 36,
+        "char": "position"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 36,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -1160,19 +1628,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 37,
-        "char": "    "
+        "char": "     "
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispKey",
+        "linkedGroup": "Type",
         "row": 37,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 37,
-        "char": "parse"
+        "char": ":and"
     },
     {
         "group": "lispList",
@@ -1181,16 +1643,22 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
+        "group": "lispKey",
+        "linkedGroup": "Type",
         "row": 37,
-        "char": "&#39;"
+        "char": ":collect"
     },
     {
-        "group": "lispAtom",
-        "linkedGroup": "Identifier",
+        "group": "lispList",
+        "linkedGroup": "lispList",
         "row": 37,
-        "char": "commands\n"
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 37,
+        "char": "s-exp\n"
     },
     {
         "group": "LineNr",
@@ -1198,16 +1666,10 @@ module.exports = [
         "char": "38"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 38,
-        "char": "           "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 38,
-        "char": "commands\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1218,13 +1680,79 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 39,
-        "char": "           "
+        "char": "     "
     },
     {
         "group": "lispKey",
         "linkedGroup": "Type",
         "row": 39,
-        "char": ":start"
+        "char": ":else"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 39,
+        "char": " "
+    },
+    {
+        "group": "lispKey",
+        "linkedGroup": "Type",
+        "row": 39,
+        "char": ":collect"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 39,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 39,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 39,
+        "char": "if"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 39,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 39,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 39,
+        "char": "and"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 39,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 39,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 39,
+        "char": "consp"
     },
     {
         "group": "lispList",
@@ -1236,7 +1764,67 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 39,
-        "char": "start\n"
+        "char": "s-exp"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 39,
+        "char": ")"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 39,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 39,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 39,
+        "char": "listp"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 39,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 39,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 39,
+        "char": "cdr"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 39,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 39,
+        "char": "s-exp"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 39,
+        "char": ")))\n"
     },
     {
         "group": "LineNr",
@@ -1247,13 +1835,19 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 40,
-        "char": "           "
+        "char": "                        "
     },
     {
-        "group": "lispKey",
-        "linkedGroup": "Type",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 40,
-        "char": ":end"
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 40,
+        "char": "inject-inline-data-position"
     },
     {
         "group": "lispList",
@@ -1265,7 +1859,25 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 40,
-        "char": "end\n"
+        "char": "s-exp"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 40,
+        "char": " "
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 40,
+        "char": "position"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 40,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -1276,25 +1888,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 41,
-        "char": "           "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 41,
-        "char": ":junk-allowed"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 41,
-        "char": " "
+        "char": "                        "
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 41,
-        "char": "junk-allowed"
+        "char": "s-exp"
     },
     {
         "group": "lispParen",
@@ -1340,7 +1940,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 43,
-        "char": "inject-inline-data-position"
+        "char": "process-relative-pathnames"
     },
     {
         "group": "lispList",
@@ -1358,7 +1958,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 43,
-        "char": "command"
+        "char": "filename"
     },
     {
         "group": "lispList",
@@ -1367,10 +1967,10 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 43,
-        "char": "position"
+        "char": "command"
     },
     {
         "group": "lispParen",
@@ -1393,7 +1993,7 @@ module.exports = [
         "group": "lispString",
         "linkedGroup": "Constant",
         "row": 44,
-        "char": "&quot;We have &#39;(:inline nil) somewhere in command, have &#39;(:inline position) instead.&quot;\n"
+        "char": "&quot;Walk the COMMAND to replace relative pathname with absolute ones, merging\n"
     },
     {
         "group": "LineNr",
@@ -1401,22 +2001,10 @@ module.exports = [
         "char": "45"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "lispString",
+        "linkedGroup": "Constant",
         "row": 45,
-        "char": "  "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 45,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 45,
-        "char": "loop\n"
+        "char": "   them within the directory where we found the command FILENAME.&quot;\n"
     },
     {
         "group": "LineNr",
@@ -1427,49 +2015,19 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 46,
-        "char": "     "
+        "char": "  "
     },
     {
-        "group": "lispKey",
-        "linkedGroup": "Type",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 46,
-        "char": ":for"
+        "char": "("
     },
     {
-        "group": "lispList",
-        "linkedGroup": "lispList",
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
         "row": 46,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 46,
-        "char": "s-exp"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 46,
-        "char": " "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 46,
-        "char": ":in"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 46,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 46,
-        "char": "command\n"
+        "char": "loop\n"
     },
     {
         "group": "LineNr",
@@ -1477,10 +2035,52 @@ module.exports = [
         "char": "47"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 47,
-        "char": "\n"
+        "char": "     "
+    },
+    {
+        "group": "lispKey",
+        "linkedGroup": "Type",
+        "row": 47,
+        "char": ":for"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 47,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 47,
+        "char": "s-exp"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 47,
+        "char": " "
+    },
+    {
+        "group": "lispKey",
+        "linkedGroup": "Type",
+        "row": 47,
+        "char": ":in"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 47,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 47,
+        "char": "command\n"
     },
     {
         "group": "LineNr",
@@ -1488,88 +2088,10 @@ module.exports = [
         "char": "48"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 48,
-        "char": "     "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 48,
-        "char": ":when"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 48,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 48,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 48,
-        "char": "and"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 48,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 48,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 48,
-        "char": "typep"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 48,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 48,
-        "char": "s-exp"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 48,
-        "char": " "
-    },
-    {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
-        "row": 48,
-        "char": "&#39;"
-    },
-    {
-        "group": "lispAtom",
-        "linkedGroup": "Identifier",
-        "row": 48,
-        "char": "md-connection"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 48,
-        "char": ")\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1580,7 +2102,19 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 49,
-        "char": "                "
+        "char": "     "
+    },
+    {
+        "group": "lispKey",
+        "linkedGroup": "Type",
+        "row": 49,
+        "char": ":collect"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 49,
+        "char": " "
     },
     {
         "group": "lispParen",
@@ -1592,7 +2126,25 @@ module.exports = [
         "group": "lispFunc",
         "linkedGroup": "Statement",
         "row": 49,
-        "char": "slot-boundp"
+        "char": "cond"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 49,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 49,
+        "char": "(("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 49,
+        "char": "pathnamep"
     },
     {
         "group": "lispList",
@@ -1605,24 +2157,6 @@ module.exports = [
         "linkedGroup": "lispSymbol",
         "row": 49,
         "char": "s-exp"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 49,
-        "char": " "
-    },
-    {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
-        "row": 49,
-        "char": "&#39;"
-    },
-    {
-        "group": "lispAtom",
-        "linkedGroup": "Identifier",
-        "row": 49,
-        "char": "pgloader.sources::spec"
     },
     {
         "group": "lispParen",
@@ -1639,7 +2173,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 50,
-        "char": "                "
+        "char": "                     "
     },
     {
         "group": "lispParen",
@@ -1651,37 +2185,7 @@ module.exports = [
         "group": "lispFunc",
         "linkedGroup": "Statement",
         "row": 50,
-        "char": "eq"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 50,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 50,
-        "char": ":inline"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 50,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 50,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 50,
-        "char": "first"
+        "char": "if"
     },
     {
         "group": "lispList",
@@ -1699,7 +2203,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 50,
-        "char": "md-spec"
+        "char": "uiop:relative-pathname-p"
     },
     {
         "group": "lispList",
@@ -1717,7 +2221,7 @@ module.exports = [
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 50,
-        "char": "))))\n"
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -1728,55 +2232,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 51,
-        "char": "     "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 51,
-        "char": ":do"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 51,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 51,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 51,
-        "char": "setf"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 51,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 51,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 51,
-        "char": "second"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 51,
-        "char": " "
+        "char": "                         "
     },
     {
         "group": "lispParen",
@@ -1788,7 +2244,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 51,
-        "char": "md-spec"
+        "char": "uiop:merge-pathnames*"
     },
     {
         "group": "lispList",
@@ -1803,22 +2259,16 @@ module.exports = [
         "char": "s-exp"
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 51,
-        "char": "))"
-    },
-    {
         "group": "lispList",
         "linkedGroup": "lispList",
         "row": 51,
         "char": " "
     },
     {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 51,
-        "char": "position"
+        "char": "filename"
     },
     {
         "group": "lispParen",
@@ -1835,37 +2285,19 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 52,
-        "char": "     "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 52,
-        "char": ":and"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 52,
-        "char": " "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 52,
-        "char": ":collect"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 52,
-        "char": " "
+        "char": "                         "
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 52,
-        "char": "s-exp\n"
+        "char": "s-exp"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 52,
+        "char": "))\n"
     },
     {
         "group": "LineNr",
@@ -1887,55 +2319,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 54,
-        "char": "     "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 54,
-        "char": ":else"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 54,
-        "char": " "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 54,
-        "char": ":collect"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 54,
-        "char": " "
+        "char": "                    "
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 54,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 54,
-        "char": "if"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 54,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 54,
-        "char": "("
+        "char": "(("
     },
     {
         "group": "lispFunc",
@@ -1959,7 +2349,7 @@ module.exports = [
         "group": "lispFunc",
         "linkedGroup": "Statement",
         "row": 54,
-        "char": "consp"
+        "char": "typep"
     },
     {
         "group": "lispList",
@@ -1974,64 +2364,28 @@ module.exports = [
         "char": "s-exp"
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 54,
-        "char": ")"
-    },
-    {
         "group": "lispList",
         "linkedGroup": "lispList",
         "row": 54,
         "char": " "
     },
     {
-        "group": "lispParen",
+        "group": "lispAtomMark",
         "linkedGroup": "Special",
         "row": 54,
-        "char": "("
+        "char": "&#39;"
     },
     {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
+        "group": "lispAtom",
+        "linkedGroup": "Identifier",
         "row": 54,
-        "char": "listp"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 54,
-        "char": " "
+        "char": "fd-connection"
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 54,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 54,
-        "char": "cdr"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 54,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 54,
-        "char": "s-exp"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 54,
-        "char": ")))\n"
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -2042,7 +2396,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 55,
-        "char": "                        "
+        "char": "                          "
     },
     {
         "group": "lispParen",
@@ -2051,10 +2405,10 @@ module.exports = [
         "char": "("
     },
     {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
         "row": 55,
-        "char": "inject-inline-data-position"
+        "char": "slot-boundp"
     },
     {
         "group": "lispList",
@@ -2075,16 +2429,22 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
+        "group": "lispAtomMark",
+        "linkedGroup": "Special",
         "row": 55,
-        "char": "position"
+        "char": "&#39;"
+    },
+    {
+        "group": "lispAtom",
+        "linkedGroup": "Identifier",
+        "row": 55,
+        "char": "pgloader.connection::path"
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 55,
-        "char": ")\n"
+        "char": "))\n"
     },
     {
         "group": "LineNr",
@@ -2095,7 +2455,61 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 56,
-        "char": "                        "
+        "char": "                     "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 56,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 56,
+        "char": "when"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 56,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 56,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 56,
+        "char": "uiop:relative-pathname-p"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 56,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 56,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 56,
+        "char": "fd-path"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 56,
+        "char": " "
     },
     {
         "group": "lispSymbol",
@@ -2107,7 +2521,7 @@ module.exports = [
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 56,
-        "char": ")))\n"
+        "char": "))\n"
     },
     {
         "group": "LineNr",
@@ -2115,10 +2529,58 @@ module.exports = [
         "char": "57"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 57,
-        "char": "\n"
+        "char": "                       "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 57,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 57,
+        "char": "setf"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 57,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 57,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 57,
+        "char": "fd-path"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 57,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 57,
+        "char": "s-exp"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 57,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -2126,34 +2588,10 @@ module.exports = [
         "char": "58"
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 58,
-        "char": "("
-    },
-    {
-        "group": "lispDecl",
-        "linkedGroup": "Statement",
-        "row": 58,
-        "char": "defun"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 58,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 58,
-        "char": "process-relative-pathnames"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 58,
-        "char": " "
+        "char": "                             "
     },
     {
         "group": "lispParen",
@@ -2165,7 +2603,25 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 58,
-        "char": "filename"
+        "char": "uiop:merge-pathnames*"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 58,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 58,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 58,
+        "char": "fd-path"
     },
     {
         "group": "lispList",
@@ -2177,7 +2633,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 58,
-        "char": "command"
+        "char": "s-exp"
     },
     {
         "group": "lispParen",
@@ -2194,13 +2650,19 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 59,
-        "char": "  "
+        "char": "                                                    "
     },
     {
-        "group": "lispString",
-        "linkedGroup": "Constant",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 59,
-        "char": "&quot;Walk the COMMAND to replace relative pathname with absolute ones, merging\n"
+        "char": "filename"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 59,
+        "char": ")))\n"
     },
     {
         "group": "LineNr",
@@ -2208,10 +2670,22 @@ module.exports = [
         "char": "60"
     },
     {
-        "group": "lispString",
-        "linkedGroup": "Constant",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 60,
-        "char": "   them within the directory where we found the command FILENAME.&quot;\n"
+        "char": "                     "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 60,
+        "char": "s-exp"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 60,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -2219,22 +2693,10 @@ module.exports = [
         "char": "61"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 61,
-        "char": "  "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 61,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 61,
-        "char": "loop\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -2245,13 +2707,37 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 62,
-        "char": "     "
+        "char": "                    "
     },
     {
-        "group": "lispKey",
-        "linkedGroup": "Type",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 62,
-        "char": ":for"
+        "char": "(("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 62,
+        "char": "and"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 62,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 62,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 62,
+        "char": "typep"
     },
     {
         "group": "lispList",
@@ -2272,22 +2758,22 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "lispKey",
-        "linkedGroup": "Type",
+        "group": "lispAtomMark",
+        "linkedGroup": "Special",
         "row": 62,
-        "char": ":in"
+        "char": "&#39;"
     },
     {
-        "group": "lispList",
-        "linkedGroup": "lispList",
+        "group": "lispAtom",
+        "linkedGroup": "Identifier",
         "row": 62,
-        "char": " "
+        "char": "md-connection"
     },
     {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 62,
-        "char": "command\n"
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -2295,10 +2781,58 @@ module.exports = [
         "char": "63"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 63,
-        "char": "\n"
+        "char": "                          "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 63,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 63,
+        "char": "slot-boundp"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 63,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 63,
+        "char": "s-exp"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 63,
+        "char": " "
+    },
+    {
+        "group": "lispAtomMark",
+        "linkedGroup": "Special",
+        "row": 63,
+        "char": "&#39;"
+    },
+    {
+        "group": "lispAtom",
+        "linkedGroup": "Identifier",
+        "row": 63,
+        "char": "pgloader.sources::spec"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 63,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -2309,13 +2843,31 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 64,
-        "char": "     "
+        "char": "                          "
     },
     {
-        "group": "lispKey",
-        "linkedGroup": "Type",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 64,
-        "char": ":collect"
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 64,
+        "char": "eq"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 64,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 64,
+        "char": ":filename"
     },
     {
         "group": "lispList",
@@ -2333,7 +2885,7 @@ module.exports = [
         "group": "lispFunc",
         "linkedGroup": "Statement",
         "row": 64,
-        "char": "cond"
+        "char": "car"
     },
     {
         "group": "lispList",
@@ -2345,13 +2897,13 @@ module.exports = [
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 64,
-        "char": "(("
+        "char": "("
     },
     {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 64,
-        "char": "pathnamep"
+        "char": "md-spec"
     },
     {
         "group": "lispList",
@@ -2369,7 +2921,7 @@ module.exports = [
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 64,
-        "char": ")\n"
+        "char": "))))\n"
     },
     {
         "group": "LineNr",
@@ -2389,10 +2941,46 @@ module.exports = [
         "char": "("
     },
     {
+        "group": "lispDecl",
+        "linkedGroup": "Statement",
+        "row": 65,
+        "char": "let"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 65,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 65,
+        "char": "(("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 65,
+        "char": "path"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 65,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 65,
+        "char": "("
+    },
+    {
         "group": "lispFunc",
         "linkedGroup": "Statement",
         "row": 65,
-        "char": "if"
+        "char": "second"
     },
     {
         "group": "lispList",
@@ -2410,7 +2998,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 65,
-        "char": "uiop:relative-pathname-p"
+        "char": "md-spec"
     },
     {
         "group": "lispList",
@@ -2428,7 +3016,7 @@ module.exports = [
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 65,
-        "char": ")\n"
+        "char": "))))\n"
     },
     {
         "group": "LineNr",
@@ -2439,7 +3027,25 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 66,
-        "char": "                         "
+        "char": "                       "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 66,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 66,
+        "char": "if"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 66,
+        "char": " "
     },
     {
         "group": "lispParen",
@@ -2451,7 +3057,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 66,
-        "char": "uiop:merge-pathnames*"
+        "char": "uiop:relative-pathname-p"
     },
     {
         "group": "lispList",
@@ -2463,19 +3069,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 66,
-        "char": "s-exp"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 66,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 66,
-        "char": "filename"
+        "char": "path"
     },
     {
         "group": "lispParen",
@@ -2492,7 +3086,61 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 67,
-        "char": "                         "
+        "char": "                           "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 67,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 67,
+        "char": "progn"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 67,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 67,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 67,
+        "char": "setf"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 67,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 67,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 67,
+        "char": "md-spec"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 67,
+        "char": " "
     },
     {
         "group": "lispSymbol",
@@ -2504,7 +3152,7 @@ module.exports = [
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 67,
-        "char": "))\n"
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -2512,10 +3160,22 @@ module.exports = [
         "char": "68"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 68,
-        "char": "\n"
+        "char": "                                        "
+    },
+    {
+        "group": "PreProc",
+        "linkedGroup": "PreProc",
+        "row": 68,
+        "char": "`("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 68,
+        "char": ":filename\n"
     },
     {
         "group": "LineNr",
@@ -2526,25 +3186,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 69,
-        "char": "                    "
+        "char": "                                          "
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispBQList",
+        "linkedGroup": "lispBQList",
         "row": 69,
-        "char": "(("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 69,
-        "char": "and"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 69,
-        "char": " "
+        "char": ","
     },
     {
         "group": "lispParen",
@@ -2553,10 +3201,10 @@ module.exports = [
         "char": "("
     },
     {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 69,
-        "char": "typep"
+        "char": "uiop:merge-pathnames*"
     },
     {
         "group": "lispList",
@@ -2568,31 +3216,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 69,
-        "char": "s-exp"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 69,
-        "char": " "
-    },
-    {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
-        "row": 69,
-        "char": "&#39;"
-    },
-    {
-        "group": "lispAtom",
-        "linkedGroup": "Identifier",
-        "row": 69,
-        "char": "fd-connection"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 69,
-        "char": ")\n"
+        "char": "path\n"
     },
     {
         "group": "LineNr",
@@ -2603,55 +3227,31 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 70,
-        "char": "                          "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 70,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 70,
-        "char": "slot-boundp"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 70,
-        "char": " "
+        "char": "                                                                  "
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 70,
-        "char": "s-exp"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 70,
-        "char": " "
-    },
-    {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
-        "row": 70,
-        "char": "&#39;"
-    },
-    {
-        "group": "lispAtom",
-        "linkedGroup": "Identifier",
-        "row": 70,
-        "char": "pgloader.connection::path"
+        "char": "filename"
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 70,
-        "char": "))\n"
+        "char": ")"
+    },
+    {
+        "group": "PreProc",
+        "linkedGroup": "PreProc",
+        "row": 70,
+        "char": ")"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 70,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -2662,61 +3262,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 71,
-        "char": "                     "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 71,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 71,
-        "char": "when"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 71,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 71,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 71,
-        "char": "uiop:relative-pathname-p"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 71,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 71,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 71,
-        "char": "fd-path"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 71,
-        "char": " "
+        "char": "                                  "
     },
     {
         "group": "lispSymbol",
@@ -2728,7 +3274,7 @@ module.exports = [
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 71,
-        "char": "))\n"
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -2739,43 +3285,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 72,
-        "char": "                       "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 72,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 72,
-        "char": "setf"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 72,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 72,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 72,
-        "char": "fd-path"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 72,
-        "char": " "
+        "char": "                           "
     },
     {
         "group": "lispSymbol",
@@ -2787,7 +3297,7 @@ module.exports = [
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 72,
-        "char": ")\n"
+        "char": ")))\n"
     },
     {
         "group": "LineNr",
@@ -2795,58 +3305,10 @@ module.exports = [
         "char": "73"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 73,
-        "char": "                             "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 73,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 73,
-        "char": "uiop:merge-pathnames*"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 73,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 73,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 73,
-        "char": "fd-path"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 73,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 73,
-        "char": "s-exp"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 73,
-        "char": ")\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -2857,19 +3319,19 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 74,
-        "char": "                                                    "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 74,
-        "char": "filename"
+        "char": "                    "
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 74,
-        "char": ")))\n"
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 74,
+        "char": "t\n"
     },
     {
         "group": "LineNr",
@@ -2883,6 +3345,60 @@ module.exports = [
         "char": "                     "
     },
     {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 75,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 75,
+        "char": "if"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 75,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 75,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 75,
+        "char": "and"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 75,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 75,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 75,
+        "char": "consp"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 75,
+        "char": " "
+    },
+    {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 75,
@@ -2892,7 +3408,61 @@ module.exports = [
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 75,
-        "char": ")\n"
+        "char": ")"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 75,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 75,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 75,
+        "char": "listp"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 75,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 75,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 75,
+        "char": "cdr"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 75,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 75,
+        "char": "s-exp"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 75,
+        "char": ")))\n"
     },
     {
         "group": "LineNr",
@@ -2900,10 +3470,52 @@ module.exports = [
         "char": "76"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 76,
-        "char": "\n"
+        "char": "                         "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 76,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 76,
+        "char": "process-relative-pathnames"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 76,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 76,
+        "char": "filename"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 76,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 76,
+        "char": "s-exp"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 76,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -2914,43 +3526,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 77,
-        "char": "                    "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 77,
-        "char": "(("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 77,
-        "char": "and"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 77,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 77,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 77,
-        "char": "typep"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 77,
-        "char": " "
+        "char": "                         "
     },
     {
         "group": "lispSymbol",
@@ -2959,28 +3535,10 @@ module.exports = [
         "char": "s-exp"
     },
     {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 77,
-        "char": " "
-    },
-    {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
-        "row": 77,
-        "char": "&#39;"
-    },
-    {
-        "group": "lispAtom",
-        "linkedGroup": "Identifier",
-        "row": 77,
-        "char": "md-connection"
-    },
-    {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 77,
-        "char": ")\n"
+        "char": ")))))\n"
     },
     {
         "group": "LineNr",
@@ -2988,58 +3546,10 @@ module.exports = [
         "char": "78"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 78,
-        "char": "                          "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 78,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 78,
-        "char": "slot-boundp"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 78,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 78,
-        "char": "s-exp"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 78,
-        "char": " "
-    },
-    {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
-        "row": 78,
-        "char": "&#39;"
-    },
-    {
-        "group": "lispAtom",
-        "linkedGroup": "Identifier",
-        "row": 78,
-        "char": "pgloader.sources::spec"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 78,
-        "char": ")\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -3047,22 +3557,16 @@ module.exports = [
         "char": "79"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 79,
-        "char": "                          "
-    },
-    {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 79,
         "char": "("
     },
     {
-        "group": "lispFunc",
+        "group": "lispDecl",
         "linkedGroup": "Statement",
         "row": 79,
-        "char": "eq"
+        "char": "defun"
     },
     {
         "group": "lispList",
@@ -3074,25 +3578,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 79,
-        "char": ":filename"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 79,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 79,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 79,
-        "char": "car"
+        "char": "parse-commands-from-file"
     },
     {
         "group": "lispList",
@@ -3110,25 +3596,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 79,
-        "char": "md-spec"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 79,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 79,
-        "char": "s-exp"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 79,
-        "char": "))))\n"
+        "char": "maybe-relative-filename\n"
     },
     {
         "group": "LineNr",
@@ -3139,55 +3607,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 80,
-        "char": "                     "
+        "char": "                                 "
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispKey",
+        "linkedGroup": "Type",
         "row": 80,
-        "char": "("
-    },
-    {
-        "group": "lispDecl",
-        "linkedGroup": "Statement",
-        "row": 80,
-        "char": "let"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 80,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 80,
-        "char": "(("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 80,
-        "char": "path"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 80,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 80,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 80,
-        "char": "second"
+        "char": "&amp;aux"
     },
     {
         "group": "lispList",
@@ -3205,25 +3631,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 80,
-        "char": "md-spec"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 80,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 80,
-        "char": "s-exp"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 80,
-        "char": "))))\n"
+        "char": "filename\n"
     },
     {
         "group": "LineNr",
@@ -3234,55 +3642,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 81,
-        "char": "                       "
+        "char": "                                       "
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispComment",
+        "linkedGroup": "Comment",
         "row": 81,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 81,
-        "char": "if"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 81,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 81,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 81,
-        "char": "uiop:relative-pathname-p"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 81,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 81,
-        "char": "path"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 81,
-        "char": ")\n"
+        "char": ";; we want a truename here\n"
     },
     {
         "group": "LineNr",
@@ -3293,7 +3659,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 82,
-        "char": "                           "
+        "char": "                                       "
     },
     {
         "group": "lispParen",
@@ -3305,43 +3671,7 @@ module.exports = [
         "group": "lispFunc",
         "linkedGroup": "Statement",
         "row": 82,
-        "char": "progn"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 82,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 82,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 82,
-        "char": "setf"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 82,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 82,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 82,
-        "char": "md-spec"
+        "char": "probe-file"
     },
     {
         "group": "lispList",
@@ -3353,13 +3683,13 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 82,
-        "char": "s-exp"
+        "char": "maybe-relative-filename"
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 82,
-        "char": ")\n"
+        "char": ")))\n"
     },
     {
         "group": "LineNr",
@@ -3370,19 +3700,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 83,
-        "char": "                                        "
+        "char": "  "
     },
     {
-        "group": "PreProc",
-        "linkedGroup": "PreProc",
+        "group": "lispString",
+        "linkedGroup": "Constant",
         "row": 83,
-        "char": "`("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 83,
-        "char": ":filename\n"
+        "char": "&quot;The command could be using from :inline, in which case we want to parse\n"
     },
     {
         "group": "LineNr",
@@ -3390,40 +3714,10 @@ module.exports = [
         "char": "84"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "lispString",
+        "linkedGroup": "Constant",
         "row": 84,
-        "char": "                                          "
-    },
-    {
-        "group": "lispBQList",
-        "linkedGroup": "lispBQList",
-        "row": 84,
-        "char": ","
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 84,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 84,
-        "char": "uiop:merge-pathnames*"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 84,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 84,
-        "char": "path\n"
+        "char": "   as much as possible then use the command against an already opened stream\n"
     },
     {
         "group": "LineNr",
@@ -3431,34 +3725,10 @@ module.exports = [
         "char": "85"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "lispString",
+        "linkedGroup": "Constant",
         "row": 85,
-        "char": "                                                                  "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 85,
-        "char": "filename"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 85,
-        "char": ")"
-    },
-    {
-        "group": "PreProc",
-        "linkedGroup": "PreProc",
-        "row": 85,
-        "char": ")"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 85,
-        "char": ")\n"
+        "char": "   where we moved at the beginning of the data.&quot;\n"
     },
     {
         "group": "LineNr",
@@ -3469,19 +3739,31 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 86,
-        "char": "                                  "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 86,
-        "char": "s-exp"
+        "char": "  "
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 86,
-        "char": ")\n"
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 86,
+        "char": "if"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 86,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 86,
+        "char": "filename\n"
     },
     {
         "group": "LineNr",
@@ -3492,19 +3774,61 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 87,
-        "char": "                           "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 87,
-        "char": "s-exp"
+        "char": "      "
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 87,
-        "char": ")))\n"
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 87,
+        "char": "log-message"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 87,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 87,
+        "char": ":log"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 87,
+        "char": " "
+    },
+    {
+        "group": "lispString",
+        "linkedGroup": "Constant",
+        "row": 87,
+        "char": "&quot;Parsing commands from file ~s~%&quot;"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 87,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 87,
+        "char": "filename"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 87,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -3512,10 +3836,52 @@ module.exports = [
         "char": "88"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 88,
-        "char": "\n"
+        "char": "      "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 88,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 88,
+        "char": "error"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 88,
+        "char": " "
+    },
+    {
+        "group": "lispString",
+        "linkedGroup": "Constant",
+        "row": 88,
+        "char": "&quot;Can not find file: ~s&quot;"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 88,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 88,
+        "char": "maybe-relative-filename"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 88,
+        "char": "))\n"
     },
     {
         "group": "LineNr",
@@ -3523,22 +3889,10 @@ module.exports = [
         "char": "89"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 89,
-        "char": "                    "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 89,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 89,
-        "char": "t\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -3549,127 +3903,19 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 90,
-        "char": "                     "
+        "char": "  "
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 90,
         "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 90,
-        "char": "if"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 90,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 90,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 90,
-        "char": "and"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 90,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 90,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 90,
-        "char": "consp"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 90,
-        "char": " "
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 90,
-        "char": "s-exp"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 90,
-        "char": ")"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 90,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 90,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 90,
-        "char": "listp"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 90,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 90,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 90,
-        "char": "cdr"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 90,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 90,
-        "char": "s-exp"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 90,
-        "char": ")))\n"
+        "char": "process-relative-pathnames\n"
     },
     {
         "group": "LineNr",
@@ -3680,49 +3926,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 91,
-        "char": "                         "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 91,
-        "char": "("
+        "char": "   "
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 91,
-        "char": "process-relative-pathnames"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 91,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 91,
-        "char": "filename"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 91,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 91,
-        "char": "s-exp"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 91,
-        "char": ")\n"
+        "char": "filename\n"
     },
     {
         "group": "LineNr",
@@ -3733,19 +3943,133 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 92,
-        "char": "                         "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 92,
-        "char": "s-exp"
+        "char": "   "
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 92,
-        "char": ")))))\n"
+        "char": "("
+    },
+    {
+        "group": "lispDecl",
+        "linkedGroup": "Statement",
+        "row": 92,
+        "char": "let"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 92,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 92,
+        "char": "(("
+    },
+    {
+        "group": "lispEscapeSpecial",
+        "linkedGroup": "Type",
+        "row": 92,
+        "char": "*cwd*"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 92,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 92,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 92,
+        "char": "make-pathname"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 92,
+        "char": " "
+    },
+    {
+        "group": "lispKey",
+        "linkedGroup": "Type",
+        "row": 92,
+        "char": ":defaults"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 92,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 92,
+        "char": "filename"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 92,
+        "char": " "
+    },
+    {
+        "group": "lispKey",
+        "linkedGroup": "Type",
+        "row": 92,
+        "char": ":name"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 92,
+        "char": " "
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 92,
+        "char": "nil"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 92,
+        "char": " "
+    },
+    {
+        "group": "lispKey",
+        "linkedGroup": "Type",
+        "row": 92,
+        "char": ":type"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 92,
+        "char": " "
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 92,
+        "char": "nil"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 92,
+        "char": "))\n"
     },
     {
         "group": "LineNr",
@@ -3753,10 +4077,40 @@ module.exports = [
         "char": "93"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 93,
-        "char": "\n"
+        "char": "         "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 93,
+        "char": "("
+    },
+    {
+        "group": "lispEscapeSpecial",
+        "linkedGroup": "Type",
+        "row": 93,
+        "char": "*data-expected-inline*"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 93,
+        "char": " "
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 93,
+        "char": "nil"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 93,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -3764,28 +4118,22 @@ module.exports = [
         "char": "94"
     },
     {
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
+        "row": 94,
+        "char": "\t "
+    },
+    {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 94,
         "char": "("
     },
     {
-        "group": "lispDecl",
-        "linkedGroup": "Statement",
-        "row": 94,
-        "char": "defun"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 94,
-        "char": " "
-    },
-    {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 94,
-        "char": "parse-commands-from-file"
+        "char": "content"
     },
     {
         "group": "lispList",
@@ -3803,7 +4151,25 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 94,
-        "char": "maybe-relative-filename\n"
+        "char": "read-file-into-string"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 94,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 94,
+        "char": "filename"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 94,
+        "char": ")))\n"
     },
     {
         "group": "LineNr",
@@ -3814,13 +4180,19 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 95,
-        "char": "                                 "
+        "char": "     "
     },
     {
-        "group": "lispKey",
-        "linkedGroup": "Type",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 95,
-        "char": "&amp;aux"
+        "char": "("
+    },
+    {
+        "group": "lispDecl",
+        "linkedGroup": "Statement",
+        "row": 95,
+        "char": "multiple-value-bind"
     },
     {
         "group": "lispList",
@@ -3838,7 +4210,25 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 95,
-        "char": "filename\n"
+        "char": "commands"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 95,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 95,
+        "char": "end-commands-position"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 95,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -3849,13 +4239,61 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 96,
-        "char": "                                       "
+        "char": "\t "
     },
     {
-        "group": "lispComment",
-        "linkedGroup": "Comment",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 96,
-        "char": ";; we want a truename here\n"
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 96,
+        "char": "parse-commands"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 96,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 96,
+        "char": "content"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 96,
+        "char": " "
+    },
+    {
+        "group": "lispKey",
+        "linkedGroup": "Type",
+        "row": 96,
+        "char": ":junk-allowed"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 96,
+        "char": " "
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 96,
+        "char": "t"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 96,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -3863,40 +4301,10 @@ module.exports = [
         "char": "97"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 97,
-        "char": "                                       "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 97,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 97,
-        "char": "probe-file"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 97,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 97,
-        "char": "maybe-relative-filename"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 97,
-        "char": ")))\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -3907,13 +4315,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 98,
-        "char": "  "
+        "char": "       "
     },
     {
-        "group": "lispString",
-        "linkedGroup": "Constant",
+        "group": "lispComment",
+        "linkedGroup": "Comment",
         "row": 98,
-        "char": "&quot;The command could be using from :inline, in which case we want to parse\n"
+        "char": ";; INLINE is only allowed where we have a single command in the file\n"
     },
     {
         "group": "LineNr",
@@ -3921,10 +4329,34 @@ module.exports = [
         "char": "99"
     },
     {
-        "group": "lispString",
-        "linkedGroup": "Constant",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 99,
-        "char": "   as much as possible then use the command against an already opened stream\n"
+        "char": "       "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 99,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 99,
+        "char": "if"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 99,
+        "char": " "
+    },
+    {
+        "group": "lispEscapeSpecial",
+        "linkedGroup": "Type",
+        "row": 99,
+        "char": "*data-expected-inline*\n"
     },
     {
         "group": "LineNr",
@@ -3932,10 +4364,22 @@ module.exports = [
         "char": "100"
     },
     {
-        "group": "lispString",
-        "linkedGroup": "Constant",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 100,
-        "char": "   where we moved at the beginning of the data.&quot;\n"
+        "char": "\t   "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 100,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 100,
+        "char": "progn\n"
     },
     {
         "group": "LineNr",
@@ -3946,7 +4390,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 101,
-        "char": "  "
+        "char": "\t     "
     },
     {
         "group": "lispParen",
@@ -3958,7 +4402,37 @@ module.exports = [
         "group": "lispFunc",
         "linkedGroup": "Statement",
         "row": 101,
-        "char": "if"
+        "char": "when"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 101,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 101,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 101,
+        "char": "&#61;"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 101,
+        "char": " "
+    },
+    {
+        "group": "lispNumber",
+        "linkedGroup": "Constant",
+        "row": 101,
+        "char": "0"
     },
     {
         "group": "lispList",
@@ -3970,7 +4444,13 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 101,
-        "char": "filename\n"
+        "char": "end-commands-position"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 101,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -3981,61 +4461,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 102,
-        "char": "      "
+        "char": "\t       "
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispComment",
+        "linkedGroup": "Comment",
         "row": 102,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 102,
-        "char": "log-message"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 102,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 102,
-        "char": ":log"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 102,
-        "char": " "
-    },
-    {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 102,
-        "char": "&quot;Parsing commands from file ~s~%&quot;"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 102,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 102,
-        "char": "filename"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 102,
-        "char": ")\n"
+        "char": ";; didn&#39;t find any command, leave error reporting to esrap\n"
     },
     {
         "group": "LineNr",
@@ -4046,7 +4478,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 103,
-        "char": "      "
+        "char": "\t       "
     },
     {
         "group": "lispParen",
@@ -4055,22 +4487,10 @@ module.exports = [
         "char": "("
     },
     {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 103,
-        "char": "error"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 103,
-        "char": " "
-    },
-    {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 103,
-        "char": "&quot;Can not find file: ~s&quot;"
+        "char": "parse-commands"
     },
     {
         "group": "lispList",
@@ -4082,7 +4502,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 103,
-        "char": "maybe-relative-filename"
+        "char": "content"
     },
     {
         "group": "lispParen",
@@ -4110,7 +4530,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 105,
-        "char": "  "
+        "char": "\t     "
     },
     {
         "group": "lispParen",
@@ -4119,10 +4539,40 @@ module.exports = [
         "char": "("
     },
     {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
         "row": 105,
-        "char": "process-relative-pathnames\n"
+        "char": "when"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 105,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 105,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 105,
+        "char": "and"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 105,
+        "char": " "
+    },
+    {
+        "group": "lispEscapeSpecial",
+        "linkedGroup": "Type",
+        "row": 105,
+        "char": "*data-expected-inline*\n"
     },
     {
         "group": "LineNr",
@@ -4133,13 +4583,37 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 106,
-        "char": "   "
+        "char": "\t\t\t"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 106,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 106,
+        "char": "null"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 106,
+        "char": " "
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 106,
-        "char": "filename\n"
+        "char": "end-commands-position"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 106,
+        "char": "))\n"
     },
     {
         "group": "LineNr",
@@ -4150,43 +4624,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 107,
-        "char": "   "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 107,
-        "char": "("
-    },
-    {
-        "group": "lispDecl",
-        "linkedGroup": "Statement",
-        "row": 107,
-        "char": "let"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 107,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 107,
-        "char": "(("
-    },
-    {
-        "group": "lispEscapeSpecial",
-        "linkedGroup": "Type",
-        "row": 107,
-        "char": "*cwd*"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 107,
-        "char": " "
+        "char": "\t       "
     },
     {
         "group": "lispParen",
@@ -4198,7 +4636,7 @@ module.exports = [
         "group": "lispFunc",
         "linkedGroup": "Statement",
         "row": 107,
-        "char": "make-pathname"
+        "char": "error"
     },
     {
         "group": "lispList",
@@ -4207,10 +4645,10 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "lispKey",
-        "linkedGroup": "Type",
+        "group": "lispString",
+        "linkedGroup": "Constant",
         "row": 107,
-        "char": ":defaults"
+        "char": "&quot;Inline data not found in &#39;~a&#39;.&quot;"
     },
     {
         "group": "lispList",
@@ -4223,54 +4661,6 @@ module.exports = [
         "linkedGroup": "lispSymbol",
         "row": 107,
         "char": "filename"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 107,
-        "char": " "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 107,
-        "char": ":name"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 107,
-        "char": " "
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 107,
-        "char": "nil"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 107,
-        "char": " "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 107,
-        "char": ":type"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 107,
-        "char": " "
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 107,
-        "char": "nil"
     },
     {
         "group": "lispParen",
@@ -4284,40 +4674,10 @@ module.exports = [
         "char": "108"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 108,
-        "char": "         "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 108,
-        "char": "("
-    },
-    {
-        "group": "lispEscapeSpecial",
-        "linkedGroup": "Type",
-        "row": 108,
-        "char": "*data-expected-inline*"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 108,
-        "char": " "
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 108,
-        "char": "nil"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 108,
-        "char": ")\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -4328,7 +4688,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 109,
-        "char": "\t "
+        "char": "\t     "
     },
     {
         "group": "lispParen",
@@ -4337,10 +4697,10 @@ module.exports = [
         "char": "("
     },
     {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
         "row": 109,
-        "char": "content"
+        "char": "when"
     },
     {
         "group": "lispList",
@@ -4355,10 +4715,88 @@ module.exports = [
         "char": "("
     },
     {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
         "row": 109,
-        "char": "read-file-into-string"
+        "char": "and"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 109,
+        "char": " "
+    },
+    {
+        "group": "lispEscapeSpecial",
+        "linkedGroup": "Type",
+        "row": 109,
+        "char": "*data-expected-inline*"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 109,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 109,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 109,
+        "char": "not"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 109,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 109,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 109,
+        "char": "&#61;"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 109,
+        "char": " "
+    },
+    {
+        "group": "lispNumber",
+        "linkedGroup": "Constant",
+        "row": 109,
+        "char": "1"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 109,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 109,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 109,
+        "char": "length"
     },
     {
         "group": "lispList",
@@ -4370,13 +4808,13 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 109,
-        "char": "filename"
+        "char": "commands"
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 109,
-        "char": ")))\n"
+        "char": "))))\n"
     },
     {
         "group": "LineNr",
@@ -4387,7 +4825,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 110,
-        "char": "     "
+        "char": "\t       "
     },
     {
         "group": "lispParen",
@@ -4396,10 +4834,10 @@ module.exports = [
         "char": "("
     },
     {
-        "group": "lispDecl",
+        "group": "lispFunc",
         "linkedGroup": "Statement",
         "row": 110,
-        "char": "multiple-value-bind"
+        "char": "error"
     },
     {
         "group": "lispList",
@@ -4414,10 +4852,10 @@ module.exports = [
         "char": "("
     },
     {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
         "row": 110,
-        "char": "commands"
+        "char": "concatenate"
     },
     {
         "group": "lispList",
@@ -4426,16 +4864,16 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 110,
-        "char": "end-commands-position"
-    },
-    {
-        "group": "lispParen",
+        "group": "lispAtomMark",
         "linkedGroup": "Special",
         "row": 110,
-        "char": ")\n"
+        "char": "&#39;"
+    },
+    {
+        "group": "lispAtom",
+        "linkedGroup": "Identifier",
+        "row": 110,
+        "char": "string\n"
     },
     {
         "group": "LineNr",
@@ -4446,61 +4884,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 111,
-        "char": "\t "
+        "char": "\t\t\t\t   "
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispString",
+        "linkedGroup": "Constant",
         "row": 111,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 111,
-        "char": "parse-commands"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 111,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 111,
-        "char": "content"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 111,
-        "char": " "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 111,
-        "char": ":junk-allowed"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 111,
-        "char": " "
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 111,
-        "char": "t"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 111,
-        "char": ")\n"
+        "char": "&quot;Too many commands found in &#39;~a&#39;.~%&quot;\n"
     },
     {
         "group": "LineNr",
@@ -4508,10 +4898,22 @@ module.exports = [
         "char": "112"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 112,
-        "char": "\n"
+        "char": "\t\t\t\t   "
+    },
+    {
+        "group": "lispString",
+        "linkedGroup": "Constant",
+        "row": 112,
+        "char": "&quot;To use inline data, use a single command.&quot;"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 112,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -4522,13 +4924,19 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 113,
-        "char": "       "
+        "char": "\t\t      "
     },
     {
-        "group": "lispComment",
-        "linkedGroup": "Comment",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 113,
-        "char": ";; INLINE is only allowed where we have a single command in the file\n"
+        "char": "filename"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 113,
+        "char": "))\n"
     },
     {
         "group": "LineNr",
@@ -4536,34 +4944,10 @@ module.exports = [
         "char": "114"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 114,
-        "char": "       "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 114,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 114,
-        "char": "if"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 114,
-        "char": " "
-    },
-    {
-        "group": "lispEscapeSpecial",
-        "linkedGroup": "Type",
-        "row": 114,
-        "char": "*data-expected-inline*\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -4574,19 +4958,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 115,
-        "char": "\t   "
+        "char": "\t     "
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispComment",
+        "linkedGroup": "Comment",
         "row": 115,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 115,
-        "char": "progn\n"
+        "char": ";; now we should have a single command and inline data after that\n"
     },
     {
         "group": "LineNr",
@@ -4600,64 +4978,10 @@ module.exports = [
         "char": "\t     "
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispComment",
+        "linkedGroup": "Comment",
         "row": 116,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 116,
-        "char": "when"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 116,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 116,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 116,
-        "char": "&#61;"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 116,
-        "char": " "
-    },
-    {
-        "group": "lispNumber",
-        "linkedGroup": "Constant",
-        "row": 116,
-        "char": "0"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 116,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 116,
-        "char": "end-commands-position"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 116,
-        "char": ")\n"
+        "char": ";; replace the (:inline nil) found in the first (and only) command\n"
     },
     {
         "group": "LineNr",
@@ -4668,13 +4992,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 117,
-        "char": "\t       "
+        "char": "\t     "
     },
     {
         "group": "lispComment",
         "linkedGroup": "Comment",
         "row": 117,
-        "char": ";; didn&#39;t find any command, leave error reporting to esrap\n"
+        "char": ";; with a (:inline position) instead\n"
     },
     {
         "group": "LineNr",
@@ -4685,7 +5009,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 118,
-        "char": "\t       "
+        "char": "             "
     },
     {
         "group": "lispParen",
@@ -4694,10 +5018,10 @@ module.exports = [
         "char": "("
     },
     {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
+        "group": "lispDecl",
+        "linkedGroup": "Statement",
         "row": 118,
-        "char": "parse-commands"
+        "char": "let"
     },
     {
         "group": "lispList",
@@ -4706,16 +5030,16 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 118,
-        "char": "content"
-    },
-    {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 118,
-        "char": "))\n"
+        "char": "(("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 118,
+        "char": "command\n"
     },
     {
         "group": "LineNr",
@@ -4723,10 +5047,64 @@ module.exports = [
         "char": "119"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 119,
-        "char": "\n"
+        "char": "                    "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 119,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 119,
+        "char": "parse-commands"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 119,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 119,
+        "char": "content"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 119,
+        "char": " "
+    },
+    {
+        "group": "lispKey",
+        "linkedGroup": "Type",
+        "row": 119,
+        "char": ":end"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 119,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 119,
+        "char": "end-commands-position"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 119,
+        "char": ")))\n"
     },
     {
         "group": "LineNr",
@@ -4737,7 +5115,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 120,
-        "char": "\t     "
+        "char": "               "
     },
     {
         "group": "lispParen",
@@ -4749,37 +5127,7 @@ module.exports = [
         "group": "lispFunc",
         "linkedGroup": "Statement",
         "row": 120,
-        "char": "when"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 120,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 120,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 120,
-        "char": "and"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 120,
-        "char": " "
-    },
-    {
-        "group": "lispEscapeSpecial",
-        "linkedGroup": "Type",
-        "row": 120,
-        "char": "*data-expected-inline*\n"
+        "char": "list\n"
     },
     {
         "group": "LineNr",
@@ -4790,7 +5138,25 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 121,
-        "char": "\t\t\t"
+        "char": "\t      "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 121,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 121,
+        "char": "inject-inline-data-position"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 121,
+        "char": " "
     },
     {
         "group": "lispParen",
@@ -4802,7 +5168,7 @@ module.exports = [
         "group": "lispFunc",
         "linkedGroup": "Statement",
         "row": 121,
-        "char": "null"
+        "char": "first"
     },
     {
         "group": "lispList",
@@ -4814,13 +5180,13 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 121,
-        "char": "end-commands-position"
+        "char": "command"
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 121,
-        "char": "))\n"
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -4831,7 +5197,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 122,
-        "char": "\t       "
+        "char": "                                           "
     },
     {
         "group": "lispParen",
@@ -4843,19 +5209,7 @@ module.exports = [
         "group": "lispFunc",
         "linkedGroup": "Statement",
         "row": 122,
-        "char": "error"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 122,
-        "char": " "
-    },
-    {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 122,
-        "char": "&quot;Inline data not found in &#39;~a&#39;.&quot;"
+        "char": "cons"
     },
     {
         "group": "lispList",
@@ -4867,13 +5221,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 122,
-        "char": "filename"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 122,
-        "char": "))\n"
+        "char": "filename\n"
     },
     {
         "group": "LineNr",
@@ -4881,10 +5229,22 @@ module.exports = [
         "char": "123"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 123,
-        "char": "\n"
+        "char": "                                                 "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 123,
+        "char": "end-commands-position"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 123,
+        "char": ")))))\n"
     },
     {
         "group": "LineNr",
@@ -4892,136 +5252,10 @@ module.exports = [
         "char": "124"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 124,
-        "char": "\t     "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 124,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 124,
-        "char": "when"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 124,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 124,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 124,
-        "char": "and"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 124,
-        "char": " "
-    },
-    {
-        "group": "lispEscapeSpecial",
-        "linkedGroup": "Type",
-        "row": 124,
-        "char": "*data-expected-inline*"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 124,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 124,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 124,
-        "char": "not"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 124,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 124,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 124,
-        "char": "&#61;"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 124,
-        "char": " "
-    },
-    {
-        "group": "lispNumber",
-        "linkedGroup": "Constant",
-        "row": 124,
-        "char": "1"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 124,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 124,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 124,
-        "char": "length"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 124,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 124,
-        "char": "commands"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 124,
-        "char": "))))\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -5032,55 +5266,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 125,
-        "char": "\t       "
+        "char": "\t   "
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispComment",
+        "linkedGroup": "Comment",
         "row": 125,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 125,
-        "char": "error"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 125,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 125,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 125,
-        "char": "concatenate"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 125,
-        "char": " "
-    },
-    {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
-        "row": 125,
-        "char": "&#39;"
-    },
-    {
-        "group": "lispAtom",
-        "linkedGroup": "Identifier",
-        "row": 125,
-        "char": "string\n"
+        "char": ";; There was no INLINE magic found in the file, reparse it so that\n"
     },
     {
         "group": "LineNr",
@@ -5091,13 +5283,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 126,
-        "char": "\t\t\t\t   "
+        "char": "\t   "
     },
     {
-        "group": "lispString",
-        "linkedGroup": "Constant",
+        "group": "lispComment",
+        "linkedGroup": "Comment",
         "row": 126,
-        "char": "&quot;Too many commands found in &#39;~a&#39;.~%&quot;\n"
+        "char": ";; normal error processing happen\n"
     },
     {
         "group": "LineNr",
@@ -5108,19 +5300,37 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 127,
-        "char": "\t\t\t\t   "
-    },
-    {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 127,
-        "char": "&quot;To use inline data, use a single command.&quot;"
+        "char": "\t   "
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 127,
-        "char": ")\n"
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 127,
+        "char": "parse-commands"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 127,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 127,
+        "char": "content"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 127,
+        "char": "))))))\n"
     },
     {
         "group": "LineNr",
@@ -5128,22 +5338,10 @@ module.exports = [
         "char": "128"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 128,
-        "char": "\t\t      "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 128,
-        "char": "filename"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 128,
-        "char": "))\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -5162,16 +5360,64 @@ module.exports = [
         "char": "130"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 130,
-        "char": "\t     "
+        "char": "("
     },
     {
-        "group": "lispComment",
-        "linkedGroup": "Comment",
+        "group": "lispDecl",
+        "linkedGroup": "Statement",
         "row": 130,
-        "char": ";; now we should have a single command and inline data after that\n"
+        "char": "defun"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 130,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 130,
+        "char": "parse-source-string-for-type"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 130,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 130,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 130,
+        "char": "type"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 130,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 130,
+        "char": "source-string"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 130,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -5182,13 +5428,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 131,
-        "char": "\t     "
+        "char": "  "
     },
     {
-        "group": "lispComment",
-        "linkedGroup": "Comment",
+        "group": "lispString",
+        "linkedGroup": "Constant",
         "row": 131,
-        "char": ";; replace the (:inline nil) found in the first (and only) command\n"
+        "char": "&quot;use the parse rules as per xxx-source rules&quot;\n"
     },
     {
         "group": "LineNr",
@@ -5199,13 +5445,85 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 132,
-        "char": "\t     "
+        "char": "  "
     },
     {
-        "group": "lispComment",
-        "linkedGroup": "Comment",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 132,
-        "char": ";; with a (:inline position) instead\n"
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 132,
+        "char": "parse"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 132,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 132,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 132,
+        "char": "getf"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 132,
+        "char": " "
+    },
+    {
+        "group": "lispEscapeSpecial",
+        "linkedGroup": "Type",
+        "row": 132,
+        "char": "*parse-rule-for-source-types*"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 132,
+        "char": " "
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 132,
+        "char": "type"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 132,
+        "char": ")"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 132,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 132,
+        "char": "source-string"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 132,
+        "char": "))\n"
     },
     {
         "group": "LineNr",
@@ -5213,40 +5531,10 @@ module.exports = [
         "char": "133"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 133,
-        "char": "             "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 133,
-        "char": "("
-    },
-    {
-        "group": "lispDecl",
-        "linkedGroup": "Statement",
-        "row": 133,
-        "char": "let"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 133,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 133,
-        "char": "(("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 133,
-        "char": "command\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -5254,12 +5542,6 @@ module.exports = [
         "char": "134"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 134,
-        "char": "                    "
-    },
-    {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 134,
@@ -5269,7 +5551,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 134,
-        "char": "parse-commands"
+        "char": "defrule"
     },
     {
         "group": "lispList",
@@ -5281,37 +5563,37 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 134,
-        "char": "content"
+        "char": "source-uri"
     },
     {
         "group": "lispList",
         "linkedGroup": "lispList",
         "row": 134,
         "char": " "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 134,
-        "char": ":end"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 134,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 134,
-        "char": "end-commands-position"
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 134,
-        "char": ")))\n"
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 134,
+        "char": "or"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 134,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 134,
+        "char": "csv-uri\n"
     },
     {
         "group": "LineNr",
@@ -5322,19 +5604,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 135,
-        "char": "               "
+        "char": "                        "
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 135,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 135,
-        "char": "list\n"
+        "char": "fixed-uri\n"
     },
     {
         "group": "LineNr",
@@ -5345,55 +5621,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 136,
-        "char": "\t      "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 136,
-        "char": "("
+        "char": "                        "
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 136,
-        "char": "inject-inline-data-position"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 136,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 136,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 136,
-        "char": "first"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 136,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 136,
-        "char": "command"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 136,
-        "char": ")\n"
+        "char": "mssql-uri\n"
     },
     {
         "group": "LineNr",
@@ -5404,31 +5638,19 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 137,
-        "char": "                                           "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 137,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 137,
-        "char": "cons"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 137,
-        "char": " "
+        "char": "                        "
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 137,
-        "char": "filename\n"
+        "char": "filename-or-http-uri"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 137,
+        "char": "))\n"
     },
     {
         "group": "LineNr",
@@ -5436,22 +5658,10 @@ module.exports = [
         "char": "138"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 138,
-        "char": "                                                 "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 138,
-        "char": "end-commands-position"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 138,
-        "char": ")))))\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -5459,10 +5669,52 @@ module.exports = [
         "char": "139"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 139,
-        "char": "\n"
+        "char": "("
+    },
+    {
+        "group": "lispDecl",
+        "linkedGroup": "Statement",
+        "row": 139,
+        "char": "defun"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 139,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 139,
+        "char": "parse-source-string"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 139,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 139,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 139,
+        "char": "source-string"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 139,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -5473,13 +5725,91 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 140,
-        "char": "\t   "
+        "char": "  "
     },
     {
-        "group": "lispComment",
-        "linkedGroup": "Comment",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 140,
-        "char": ";; There was no INLINE magic found in the file, reparse it so that\n"
+        "char": "("
+    },
+    {
+        "group": "lispDecl",
+        "linkedGroup": "Statement",
+        "row": 140,
+        "char": "let"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 140,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 140,
+        "char": "(("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 140,
+        "char": "source"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 140,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 140,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 140,
+        "char": "parse"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 140,
+        "char": " "
+    },
+    {
+        "group": "lispAtomMark",
+        "linkedGroup": "Special",
+        "row": 140,
+        "char": "&#39;"
+    },
+    {
+        "group": "lispAtom",
+        "linkedGroup": "Identifier",
+        "row": 140,
+        "char": "source-uri"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 140,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 140,
+        "char": "source-string"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 140,
+        "char": ")))\n"
     },
     {
         "group": "LineNr",
@@ -5490,13 +5820,73 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 141,
-        "char": "\t   "
+        "char": "    "
     },
     {
-        "group": "lispComment",
-        "linkedGroup": "Comment",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 141,
-        "char": ";; normal error processing happen\n"
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 141,
+        "char": "cond"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 141,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 141,
+        "char": "(("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 141,
+        "char": "typep"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 141,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 141,
+        "char": "source"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 141,
+        "char": " "
+    },
+    {
+        "group": "lispAtomMark",
+        "linkedGroup": "Special",
+        "row": 141,
+        "char": "&#39;"
+    },
+    {
+        "group": "lispAtom",
+        "linkedGroup": "Identifier",
+        "row": 141,
+        "char": "connection"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 141,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -5507,37 +5897,19 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 142,
-        "char": "\t   "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 142,
-        "char": "("
+        "char": "           "
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 142,
-        "char": "parse-commands"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 142,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 142,
-        "char": "content"
+        "char": "source"
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 142,
-        "char": "))))))\n"
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -5556,10 +5928,22 @@ module.exports = [
         "char": "144"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 144,
-        "char": "\f\n"
+        "char": "          "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 144,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 144,
+        "char": "t\n"
     },
     {
         "group": "LineNr",
@@ -5567,10 +5951,70 @@ module.exports = [
         "char": "145"
     },
     {
-        "group": "lispComment",
-        "linkedGroup": "Comment",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 145,
-        "char": ";;;\n"
+        "char": "           "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 145,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 145,
+        "char": "destructuring-bind"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 145,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 145,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 145,
+        "char": "kind"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 145,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 145,
+        "char": "url"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 145,
+        "char": ")"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 145,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 145,
+        "char": "source\n"
     },
     {
         "group": "LineNr",
@@ -5578,10 +6022,40 @@ module.exports = [
         "char": "146"
     },
     {
-        "group": "lispComment",
-        "linkedGroup": "Comment",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 146,
-        "char": ";;; Parse an URI without knowing before hand what kind of uri it is.\n"
+        "char": "             "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 146,
+        "char": "("
+    },
+    {
+        "group": "lispDecl",
+        "linkedGroup": "Statement",
+        "row": 146,
+        "char": "let"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 146,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 146,
+        "char": "(("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 146,
+        "char": "type\n"
     },
     {
         "group": "LineNr",
@@ -5589,15 +6063,45 @@ module.exports = [
         "char": "147"
     },
     {
-        "group": "lispComment",
-        "linkedGroup": "Comment",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 147,
-        "char": ";;;\n"
+        "char": "                    "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 147,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 147,
+        "char": "case"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 147,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 147,
+        "char": "kind\n"
     },
     {
         "group": "LineNr",
         "row": 148,
         "char": "148"
+    },
+    {
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
+        "row": 148,
+        "char": "                      "
     },
     {
         "group": "lispParen",
@@ -5606,10 +6110,10 @@ module.exports = [
         "char": "("
     },
     {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 148,
-        "char": "defvar"
+        "char": ":filename"
     },
     {
         "group": "lispList",
@@ -5618,10 +6122,34 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "lispEscapeSpecial",
-        "linkedGroup": "Type",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 148,
-        "char": "*data-source-filename-extensions*\n"
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 148,
+        "char": "parse-filename-for-source-type"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 148,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 148,
+        "char": "url"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 148,
+        "char": "))\n"
     },
     {
         "group": "LineNr",
@@ -5632,79 +6160,37 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 149,
-        "char": "  "
+        "char": "                      "
     },
     {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
-        "row": 149,
-        "char": "&#39;"
-    },
-    {
-        "group": "Special",
-        "linkedGroup": "Special",
-        "row": 149,
-        "char": "(("
-    },
-    {
-        "group": "lispAtomList",
-        "linkedGroup": "lispAtomList",
-        "row": 149,
-        "char": ":csv     . "
-    },
-    {
-        "group": "Special",
+        "group": "lispParen",
         "linkedGroup": "Special",
         "row": 149,
         "char": "("
     },
     {
-        "group": "lispString",
-        "linkedGroup": "Constant",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 149,
-        "char": "&quot;csv&quot;"
+        "char": ":http"
     },
     {
-        "group": "lispAtomList",
-        "linkedGroup": "lispAtomList",
+        "group": "lispList",
+        "linkedGroup": "lispList",
         "row": 149,
-        "char": " "
+        "char": "     "
     },
     {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 149,
-        "char": "&quot;tsv&quot;"
-    },
-    {
-        "group": "lispAtomList",
-        "linkedGroup": "lispAtomList",
-        "row": 149,
-        "char": " "
-    },
-    {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 149,
-        "char": "&quot;txt&quot;"
-    },
-    {
-        "group": "lispAtomList",
-        "linkedGroup": "lispAtomList",
-        "row": 149,
-        "char": " "
-    },
-    {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 149,
-        "char": "&quot;text&quot;"
-    },
-    {
-        "group": "Special",
+        "group": "lispParen",
         "linkedGroup": "Special",
         "row": 149,
-        "char": "))\n"
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 149,
+        "char": "parse-filename-for-source-type\n"
     },
     {
         "group": "LineNr",
@@ -5715,61 +6201,55 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 150,
-        "char": "    "
+        "char": "                                  "
     },
     {
-        "group": "Special",
+        "group": "lispParen",
         "linkedGroup": "Special",
         "row": 150,
         "char": "("
     },
     {
-        "group": "lispAtomList",
-        "linkedGroup": "lispAtomList",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 150,
-        "char": ":copy    . "
+        "char": "puri:uri-path"
     },
     {
-        "group": "Special",
-        "linkedGroup": "Special",
-        "row": 150,
-        "char": "("
-    },
-    {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 150,
-        "char": "&quot;copy&quot;"
-    },
-    {
-        "group": "lispAtomList",
-        "linkedGroup": "lispAtomList",
+        "group": "lispList",
+        "linkedGroup": "lispList",
         "row": 150,
         "char": " "
     },
     {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 150,
-        "char": "&quot;dat&quot;"
-    },
-    {
-        "group": "Special",
+        "group": "lispParen",
         "linkedGroup": "Special",
         "row": 150,
-        "char": "))"
+        "char": "("
     },
     {
-        "group": "lispAtomList",
-        "linkedGroup": "lispAtomList",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 150,
-        "char": "         "
+        "char": "puri:parse-uri"
     },
     {
-        "group": "lispComment",
-        "linkedGroup": "Comment",
+        "group": "lispList",
+        "linkedGroup": "lispList",
         "row": 150,
-        "char": "; reject data files are .dat\n"
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 150,
+        "char": "url"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 150,
+        "char": ")))))))\n"
     },
     {
         "group": "LineNr",
@@ -5780,61 +6260,31 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 151,
-        "char": "    "
+        "char": "               "
     },
     {
-        "group": "Special",
+        "group": "lispParen",
         "linkedGroup": "Special",
         "row": 151,
         "char": "("
     },
     {
-        "group": "lispAtomList",
-        "linkedGroup": "lispAtomList",
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
         "row": 151,
-        "char": ":sqlite  . "
+        "char": "when"
     },
     {
-        "group": "Special",
-        "linkedGroup": "Special",
-        "row": 151,
-        "char": "("
-    },
-    {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 151,
-        "char": "&quot;sqlite&quot;"
-    },
-    {
-        "group": "lispAtomList",
-        "linkedGroup": "lispAtomList",
+        "group": "lispList",
+        "linkedGroup": "lispList",
         "row": 151,
         "char": " "
     },
     {
-        "group": "lispString",
-        "linkedGroup": "Constant",
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
         "row": 151,
-        "char": "&quot;db&quot;"
-    },
-    {
-        "group": "lispAtomList",
-        "linkedGroup": "lispAtomList",
-        "row": 151,
-        "char": " "
-    },
-    {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 151,
-        "char": "&quot;sqlite3&quot;"
-    },
-    {
-        "group": "Special",
-        "linkedGroup": "Special",
-        "row": 151,
-        "char": "))\n"
+        "char": "type\n"
     },
     {
         "group": "LineNr",
@@ -5845,49 +6295,49 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 152,
-        "char": "    "
+        "char": "                 "
     },
     {
-        "group": "Special",
+        "group": "lispParen",
         "linkedGroup": "Special",
         "row": 152,
         "char": "("
     },
     {
-        "group": "lispAtomList",
-        "linkedGroup": "lispAtomList",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 152,
-        "char": ":dbf     . "
+        "char": "parse-source-string-for-type"
     },
     {
-        "group": "Special",
-        "linkedGroup": "Special",
-        "row": 152,
-        "char": "("
-    },
-    {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 152,
-        "char": "&quot;db3&quot;"
-    },
-    {
-        "group": "lispAtomList",
-        "linkedGroup": "lispAtomList",
+        "group": "lispList",
+        "linkedGroup": "lispList",
         "row": 152,
         "char": " "
     },
     {
-        "group": "lispString",
-        "linkedGroup": "Constant",
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
         "row": 152,
-        "char": "&quot;dbf&quot;"
+        "char": "type"
     },
     {
-        "group": "Special",
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 152,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 152,
+        "char": "source-string"
+    },
+    {
+        "group": "lispParen",
         "linkedGroup": "Special",
         "row": 152,
-        "char": "))\n"
+        "char": "))))))))\n"
     },
     {
         "group": "LineNr",
@@ -5895,46 +6345,10 @@ module.exports = [
         "char": "153"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 153,
-        "char": "    "
-    },
-    {
-        "group": "Special",
-        "linkedGroup": "Special",
-        "row": 153,
-        "char": "("
-    },
-    {
-        "group": "lispAtomList",
-        "linkedGroup": "lispAtomList",
-        "row": 153,
-        "char": ":ixf     . "
-    },
-    {
-        "group": "Special",
-        "linkedGroup": "Special",
-        "row": 153,
-        "char": "("
-    },
-    {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 153,
-        "char": "&quot;ixf&quot;"
-    },
-    {
-        "group": "Special",
-        "linkedGroup": "Special",
-        "row": 153,
-        "char": ")))"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 153,
-        "char": ")\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -5942,10 +6356,52 @@ module.exports = [
         "char": "154"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 154,
-        "char": "\n"
+        "char": "("
+    },
+    {
+        "group": "lispDecl",
+        "linkedGroup": "Statement",
+        "row": 154,
+        "char": "defun"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 154,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 154,
+        "char": "parse-target-string"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 154,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 154,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 154,
+        "char": "target-string"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 154,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -5953,34 +6409,10 @@ module.exports = [
         "char": "155"
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 155,
-        "char": "("
-    },
-    {
-        "group": "lispDecl",
-        "linkedGroup": "Statement",
-        "row": 155,
-        "char": "defun"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 155,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 155,
-        "char": "parse-filename-for-source-type"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 155,
-        "char": " "
+        "char": "  "
     },
     {
         "group": "lispParen",
@@ -5992,13 +6424,43 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 155,
-        "char": "filename"
+        "char": "parse"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 155,
+        "char": " "
+    },
+    {
+        "group": "lispAtomMark",
+        "linkedGroup": "Special",
+        "row": 155,
+        "char": "&#39;"
+    },
+    {
+        "group": "lispAtom",
+        "linkedGroup": "Identifier",
+        "row": 155,
+        "char": "pgsql-uri"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 155,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 155,
+        "char": "target-string"
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 155,
-        "char": ")\n"
+        "char": "))\n"
     },
     {
         "group": "LineNr",
@@ -6006,16 +6468,10 @@ module.exports = [
         "char": "156"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 156,
-        "char": "  "
-    },
-    {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 156,
-        "char": "&quot;Given just an existing filename, decide what data source might be found\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -6023,10 +6479,10 @@ module.exports = [
         "char": "157"
     },
     {
-        "group": "lispString",
-        "linkedGroup": "Constant",
+        "group": "lispComment",
+        "linkedGroup": "Comment",
         "row": 157,
-        "char": "   inside...&quot;\n"
+        "char": ";;;\n"
     },
     {
         "group": "LineNr",
@@ -6034,82 +6490,10 @@ module.exports = [
         "char": "158"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "lispComment",
+        "linkedGroup": "Comment",
         "row": 158,
-        "char": "  "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 158,
-        "char": "("
-    },
-    {
-        "group": "lispDecl",
-        "linkedGroup": "Statement",
-        "row": 158,
-        "char": "multiple-value-bind"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 158,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 158,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 158,
-        "char": "abs"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 158,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 158,
-        "char": "paths"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 158,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 158,
-        "char": "filename"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 158,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 158,
-        "char": "no-path-p"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 158,
-        "char": ")\n"
+        "char": ";;; Command line accumulative options parser\n"
     },
     {
         "group": "LineNr",
@@ -6117,22 +6501,10 @@ module.exports = [
         "char": "159"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "lispComment",
+        "linkedGroup": "Comment",
         "row": 159,
-        "char": "      "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 159,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 159,
-        "char": "uiop:split-unix-namestring-directory-components\n"
+        "char": ";;;\n"
     },
     {
         "group": "LineNr",
@@ -6140,22 +6512,16 @@ module.exports = [
         "char": "160"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 160,
-        "char": "       "
-    },
-    {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 160,
         "char": "("
     },
     {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
+        "group": "lispDecl",
+        "linkedGroup": "Statement",
         "row": 160,
-        "char": "uiop:native-namestring"
+        "char": "defun"
     },
     {
         "group": "lispList",
@@ -6167,13 +6533,31 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 160,
-        "char": "filename"
+        "char": "parse-cli-gucs"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 160,
+        "char": " "
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 160,
-        "char": "))\n"
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 160,
+        "char": "gucs"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 160,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -6184,79 +6568,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 161,
-        "char": "    "
+        "char": "  "
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispString",
+        "linkedGroup": "Constant",
         "row": 161,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 161,
-        "char": "declare"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 161,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 161,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 161,
-        "char": "ignore"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 161,
-        "char": " "
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 161,
-        "char": "abs"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 161,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 161,
-        "char": "paths"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 161,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 161,
-        "char": "no-path-p"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 161,
-        "char": "))\n"
+        "char": "&quot;Parse PostgreSQL GUCs as per the SET clause when we get them from the CLI.&quot;\n"
     },
     {
         "group": "LineNr",
@@ -6267,43 +6585,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 162,
-        "char": "    "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 162,
-        "char": "("
-    },
-    {
-        "group": "lispDecl",
-        "linkedGroup": "Statement",
-        "row": 162,
-        "char": "let"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 162,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 162,
-        "char": "(("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 162,
-        "char": "dotted-parts"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 162,
-        "char": " "
+        "char": "  "
     },
     {
         "group": "lispParen",
@@ -6315,7 +6597,7 @@ module.exports = [
         "group": "lispFunc",
         "linkedGroup": "Statement",
         "row": 162,
-        "char": "reverse"
+        "char": "loop"
     },
     {
         "group": "lispList",
@@ -6324,28 +6606,10 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 162,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 162,
-        "char": "sq:split-sequence"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 162,
-        "char": " "
-    },
-    {
-        "group": "lispEscapeSpecial",
+        "group": "lispKey",
         "linkedGroup": "Type",
         "row": 162,
-        "char": "#\\."
+        "char": ":for"
     },
     {
         "group": "lispList",
@@ -6357,13 +6621,31 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 162,
-        "char": "filename"
+        "char": "guc"
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispList",
+        "linkedGroup": "lispList",
         "row": 162,
-        "char": "))))\n"
+        "char": " "
+    },
+    {
+        "group": "lispKey",
+        "linkedGroup": "Type",
+        "row": 162,
+        "char": ":in"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 162,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 162,
+        "char": "gucs\n"
     },
     {
         "group": "LineNr",
@@ -6374,19 +6656,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 163,
-        "char": "      "
+        "char": "     "
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispKey",
+        "linkedGroup": "Type",
         "row": 163,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 163,
-        "char": "when"
+        "char": ":collect"
     },
     {
         "group": "lispList",
@@ -6401,10 +6677,10 @@ module.exports = [
         "char": "("
     },
     {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 163,
-        "char": "&lt;&#61;"
+        "char": "parse"
     },
     {
         "group": "lispList",
@@ -6413,28 +6689,16 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "lispNumber",
-        "linkedGroup": "Constant",
-        "row": 163,
-        "char": "2"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 163,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
+        "group": "lispAtomMark",
         "linkedGroup": "Special",
         "row": 163,
-        "char": "("
+        "char": "&#39;"
     },
     {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
+        "group": "lispAtom",
+        "linkedGroup": "Identifier",
         "row": 163,
-        "char": "length"
+        "char": "generic-option"
     },
     {
         "group": "lispList",
@@ -6446,13 +6710,13 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 163,
-        "char": "dotted-parts"
+        "char": "guc"
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 163,
-        "char": "))\n"
+        "char": ")))\n"
     },
     {
         "group": "LineNr",
@@ -6460,82 +6724,10 @@ module.exports = [
         "char": "164"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 164,
-        "char": "        "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 164,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 164,
-        "char": "destructuring-bind"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 164,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 164,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 164,
-        "char": "ext"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 164,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 164,
-        "char": "name-or-ext"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 164,
-        "char": " "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 164,
-        "char": "&amp;rest"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 164,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 164,
-        "char": "parts"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 164,
-        "char": ")\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -6543,16 +6735,112 @@ module.exports = [
         "char": "165"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 165,
-        "char": "            "
+        "char": "("
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 165,
-        "char": "dotted-parts\n"
+        "char": "defrule"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 165,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 165,
+        "char": "dbf-type-name"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 165,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 165,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 165,
+        "char": "or"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 165,
+        "char": " "
+    },
+    {
+        "group": "lispString",
+        "linkedGroup": "Constant",
+        "row": 165,
+        "char": "&quot;dbf&quot;"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 165,
+        "char": " "
+    },
+    {
+        "group": "lispString",
+        "linkedGroup": "Constant",
+        "row": 165,
+        "char": "&quot;db3&quot;"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 165,
+        "char": ")"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 165,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 165,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 165,
+        "char": ":constant"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 165,
+        "char": " "
+    },
+    {
+        "group": "lispString",
+        "linkedGroup": "Constant",
+        "row": 165,
+        "char": "&quot;dbf&quot;"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 165,
+        "char": "))\n"
     },
     {
         "group": "LineNr",
@@ -6560,40 +6848,16 @@ module.exports = [
         "char": "166"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 166,
-        "char": "          "
-    },
-    {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 166,
         "char": "("
     },
     {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 166,
-        "char": "declare"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 166,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 166,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 166,
-        "char": "ignore"
+        "char": "defrule"
     },
     {
         "group": "lispList",
@@ -6605,7 +6869,85 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 166,
-        "char": "parts"
+        "char": "sqlite-type-name"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 166,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 166,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 166,
+        "char": "or"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 166,
+        "char": " "
+    },
+    {
+        "group": "lispString",
+        "linkedGroup": "Constant",
+        "row": 166,
+        "char": "&quot;sqlite3&quot;"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 166,
+        "char": " "
+    },
+    {
+        "group": "lispString",
+        "linkedGroup": "Constant",
+        "row": 166,
+        "char": "&quot;sqlite&quot;"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 166,
+        "char": ")"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 166,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 166,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 166,
+        "char": ":constant"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 166,
+        "char": " "
+    },
+    {
+        "group": "lispString",
+        "linkedGroup": "Constant",
+        "row": 166,
+        "char": "&quot;sqlite&quot;"
     },
     {
         "group": "lispParen",
@@ -6619,82 +6961,10 @@ module.exports = [
         "char": "167"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 167,
-        "char": "          "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 167,
-        "char": "if"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 167,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 167,
-        "char": "string-equal"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 167,
-        "char": " "
-    },
-    {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 167,
-        "char": "&quot;tar&quot;"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 167,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 167,
-        "char": "name-or-ext"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 167,
-        "char": ")"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 167,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 167,
-        "char": ":archive\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -6702,70 +6972,46 @@ module.exports = [
         "char": "168"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 168,
-        "char": "              "
-    },
-    {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 168,
         "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 168,
-        "char": "loop"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 168,
-        "char": " "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 168,
-        "char": ":for"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 168,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 168,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 168,
-        "char": "type"
-    },
-    {
-        "group": "lispConcat",
-        "linkedGroup": "Statement",
-        "row": 168,
-        "char": " . "
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 168,
-        "char": "extensions"
+        "char": "defrule"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 168,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 168,
+        "char": "cli-type"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 168,
+        "char": " "
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 168,
-        "char": ")"
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 168,
+        "char": "or"
     },
     {
         "group": "lispList",
@@ -6774,22 +7020,10 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "lispKey",
-        "linkedGroup": "Type",
+        "group": "lispString",
+        "linkedGroup": "Constant",
         "row": 168,
-        "char": ":in"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 168,
-        "char": " "
-    },
-    {
-        "group": "lispEscapeSpecial",
-        "linkedGroup": "Type",
-        "row": 168,
-        "char": "*data-source-filename-extensions*\n"
+        "char": "&quot;csv&quot;\n"
     },
     {
         "group": "LineNr",
@@ -6800,85 +7034,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 169,
-        "char": "                 "
+        "char": "                      "
     },
     {
-        "group": "lispKey",
-        "linkedGroup": "Type",
+        "group": "lispString",
+        "linkedGroup": "Constant",
         "row": 169,
-        "char": ":when"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 169,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 169,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 169,
-        "char": "member"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 169,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 169,
-        "char": "ext"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 169,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 169,
-        "char": "extensions"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 169,
-        "char": " "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 169,
-        "char": ":test"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 169,
-        "char": " "
-    },
-    {
-        "group": "lispEscapeSpecial",
-        "linkedGroup": "Type",
-        "row": 169,
-        "char": "#&#39;string-equal"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 169,
-        "char": ")\n"
+        "char": "&quot;fixed&quot;\n"
     },
     {
         "group": "LineNr",
@@ -6889,31 +7051,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 170,
-        "char": "                 "
+        "char": "                      "
     },
     {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
+        "group": "lispString",
+        "linkedGroup": "Constant",
         "row": 170,
-        "char": ":return"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 170,
-        "char": " "
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 170,
-        "char": "type"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 170,
-        "char": ")))))))\n"
+        "char": "&quot;copy&quot;\n"
     },
     {
         "group": "LineNr",
@@ -6921,10 +7065,16 @@ module.exports = [
         "char": "171"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 171,
-        "char": "\n"
+        "char": "                      "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 171,
+        "char": "dbf-type-name\n"
     },
     {
         "group": "LineNr",
@@ -6932,28 +7082,16 @@ module.exports = [
         "char": "172"
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 172,
-        "char": "("
+        "char": "                      "
     },
     {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 172,
-        "char": "defvar"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 172,
-        "char": " "
-    },
-    {
-        "group": "lispEscapeSpecial",
-        "linkedGroup": "Type",
-        "row": 172,
-        "char": "*parse-rule-for-source-types*\n"
+        "char": "sqlite-type-name\n"
     },
     {
         "group": "LineNr",
@@ -6964,25 +7102,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 173,
-        "char": "  "
+        "char": "                      "
     },
     {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
+        "group": "lispString",
+        "linkedGroup": "Constant",
         "row": 173,
-        "char": "&#39;"
-    },
-    {
-        "group": "Special",
-        "linkedGroup": "Special",
-        "row": 173,
-        "char": "("
-    },
-    {
-        "group": "lispAtomList",
-        "linkedGroup": "lispAtomList",
-        "row": 173,
-        "char": ":csv     csv-file-source\n"
+        "char": "&quot;ixf&quot;\n"
     },
     {
         "group": "LineNr",
@@ -6993,13 +7119,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 174,
-        "char": "    "
+        "char": "                      "
     },
     {
-        "group": "lispAtomList",
-        "linkedGroup": "lispAtomList",
+        "group": "lispString",
+        "linkedGroup": "Constant",
         "row": 174,
-        "char": ":fixed   fixed-file-source\n"
+        "char": "&quot;mysql&quot;\n"
     },
     {
         "group": "LineNr",
@@ -7010,13 +7136,19 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 175,
-        "char": "    "
+        "char": "                      "
     },
     {
-        "group": "lispAtomList",
-        "linkedGroup": "lispAtomList",
+        "group": "lispString",
+        "linkedGroup": "Constant",
         "row": 175,
-        "char": ":copy    copy-file-source\n"
+        "char": "&quot;mssql&quot;"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 175,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -7027,13 +7159,37 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 176,
-        "char": "    "
+        "char": "  "
     },
     {
-        "group": "lispAtomList",
-        "linkedGroup": "lispAtomList",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 176,
-        "char": ":dbf     dbf-file-source\n"
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 176,
+        "char": ":text"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 176,
+        "char": " "
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 176,
+        "char": "t"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 176,
+        "char": "))\n"
     },
     {
         "group": "LineNr",
@@ -7041,16 +7197,10 @@ module.exports = [
         "char": "177"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 177,
-        "char": "    "
-    },
-    {
-        "group": "lispAtomList",
-        "linkedGroup": "lispAtomList",
-        "row": 177,
-        "char": ":ixf     ixf-file-source\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -7058,16 +7208,52 @@ module.exports = [
         "char": "178"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 178,
-        "char": "    "
+        "char": "("
     },
     {
-        "group": "lispAtomList",
-        "linkedGroup": "lispAtomList",
+        "group": "lispDecl",
+        "linkedGroup": "Statement",
         "row": 178,
-        "char": ":sqlite  sqlite-uri\n"
+        "char": "defun"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 178,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 178,
+        "char": "parse-cli-type"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 178,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 178,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 178,
+        "char": "type"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 178,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -7078,13 +7264,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 179,
-        "char": "    "
+        "char": "  "
     },
     {
-        "group": "lispAtomList",
-        "linkedGroup": "lispAtomList",
+        "group": "lispString",
+        "linkedGroup": "Constant",
         "row": 179,
-        "char": ":pgsql   pgsql-uri\n"
+        "char": "&quot;Parse the --type option&quot;\n"
     },
     {
         "group": "LineNr",
@@ -7095,13 +7281,31 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 180,
-        "char": "    "
+        "char": "  "
     },
     {
-        "group": "lispAtomList",
-        "linkedGroup": "lispAtomList",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 180,
-        "char": ":mysql   mysql-uri\n"
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 180,
+        "char": "when"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 180,
+        "char": " "
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 180,
+        "char": "type\n"
     },
     {
         "group": "LineNr",
@@ -7115,16 +7319,124 @@ module.exports = [
         "char": "    "
     },
     {
-        "group": "lispAtomList",
-        "linkedGroup": "lispAtomList",
-        "row": 181,
-        "char": ":mssql   mssql-uri"
-    },
-    {
-        "group": "Special",
+        "group": "lispParen",
         "linkedGroup": "Special",
         "row": 181,
-        "char": ")\n"
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 181,
+        "char": "intern"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 181,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 181,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 181,
+        "char": "string-upcase"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 181,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 181,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 181,
+        "char": "parse"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 181,
+        "char": " "
+    },
+    {
+        "group": "lispAtomMark",
+        "linkedGroup": "Special",
+        "row": 181,
+        "char": "&#39;"
+    },
+    {
+        "group": "lispAtom",
+        "linkedGroup": "Identifier",
+        "row": 181,
+        "char": "cli-type"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 181,
+        "char": " "
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 181,
+        "char": "type"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 181,
+        "char": "))"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 181,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 181,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 181,
+        "char": "find-package"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 181,
+        "char": " "
+    },
+    {
+        "group": "lispString",
+        "linkedGroup": "Constant",
+        "row": 181,
+        "char": "&quot;KEYWORD&quot;"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 181,
+        "char": "))))\n"
     },
     {
         "group": "LineNr",
@@ -7132,22 +7444,10 @@ module.exports = [
         "char": "182"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 182,
-        "char": "  "
-    },
-    {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 182,
-        "char": "&quot;A plist to associate source type and its source parsing rule.&quot;"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 182,
-        "char": ")\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -7155,10 +7455,52 @@ module.exports = [
         "char": "183"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 183,
-        "char": "\n"
+        "char": "("
+    },
+    {
+        "group": "lispDecl",
+        "linkedGroup": "Statement",
+        "row": 183,
+        "char": "defun"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 183,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 183,
+        "char": "parse-cli-encoding"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 183,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 183,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 183,
+        "char": "encoding"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 183,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -7166,64 +7508,16 @@ module.exports = [
         "char": "184"
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 184,
-        "char": "("
+        "char": "  "
     },
     {
-        "group": "lispDecl",
-        "linkedGroup": "Statement",
+        "group": "lispString",
+        "linkedGroup": "Constant",
         "row": 184,
-        "char": "defun"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 184,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 184,
-        "char": "parse-source-string-for-type"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 184,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 184,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 184,
-        "char": "type"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 184,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 184,
-        "char": "source-string"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 184,
-        "char": ")\n"
+        "char": "&quot;Parse the --encoding option&quot;\n"
     },
     {
         "group": "LineNr",
@@ -7237,10 +7531,28 @@ module.exports = [
         "char": "  "
     },
     {
-        "group": "lispString",
-        "linkedGroup": "Constant",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 185,
-        "char": "&quot;use the parse rules as per xxx-source rules&quot;\n"
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 185,
+        "char": "if"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 185,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 185,
+        "char": "encoding\n"
     },
     {
         "group": "LineNr",
@@ -7251,7 +7563,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 186,
-        "char": "  "
+        "char": "      "
     },
     {
         "group": "lispParen",
@@ -7263,7 +7575,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 186,
-        "char": "parse"
+        "char": "make-external-format"
     },
     {
         "group": "lispList",
@@ -7278,40 +7590,10 @@ module.exports = [
         "char": "("
     },
     {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 186,
-        "char": "getf"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 186,
-        "char": " "
-    },
-    {
-        "group": "lispEscapeSpecial",
-        "linkedGroup": "Type",
-        "row": 186,
-        "char": "*parse-rule-for-source-types*"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 186,
-        "char": " "
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 186,
-        "char": "type"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 186,
-        "char": ")"
+        "char": "find-encoding-by-name-or-alias"
     },
     {
         "group": "lispList",
@@ -7323,7 +7605,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 186,
-        "char": "source-string"
+        "char": "encoding"
     },
     {
         "group": "lispParen",
@@ -7337,10 +7619,22 @@ module.exports = [
         "char": "187"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 187,
-        "char": "\n"
+        "char": "      "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 187,
+        "char": ":utf-8"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 187,
+        "char": "))\n"
     },
     {
         "group": "LineNr",
@@ -7348,58 +7642,10 @@ module.exports = [
         "char": "188"
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 188,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 188,
-        "char": "defrule"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 188,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 188,
-        "char": "source-uri"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 188,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 188,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 188,
-        "char": "or"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 188,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 188,
-        "char": "csv-uri\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -7407,16 +7653,64 @@ module.exports = [
         "char": "189"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 189,
-        "char": "                        "
+        "char": "("
+    },
+    {
+        "group": "lispDecl",
+        "linkedGroup": "Statement",
+        "row": 189,
+        "char": "defun"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 189,
+        "char": " "
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 189,
-        "char": "fixed-uri\n"
+        "char": "parse-cli-fields"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 189,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 189,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 189,
+        "char": "type"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 189,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 189,
+        "char": "fields"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 189,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -7427,13 +7721,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 190,
-        "char": "                        "
+        "char": "  "
     },
     {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
+        "group": "lispString",
+        "linkedGroup": "Constant",
         "row": 190,
-        "char": "copy-uri\n"
+        "char": "&quot;Parse the --fields option.&quot;\n"
     },
     {
         "group": "LineNr",
@@ -7444,13 +7738,67 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 191,
-        "char": "                        "
+        "char": "  "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 191,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 191,
+        "char": "loop"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 191,
+        "char": " "
+    },
+    {
+        "group": "lispKey",
+        "linkedGroup": "Type",
+        "row": 191,
+        "char": ":for"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 191,
+        "char": " "
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 191,
-        "char": "dbf-uri\n"
+        "char": "field"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 191,
+        "char": " "
+    },
+    {
+        "group": "lispKey",
+        "linkedGroup": "Type",
+        "row": 191,
+        "char": ":in"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 191,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 191,
+        "char": "fields\n"
     },
     {
         "group": "LineNr",
@@ -7461,13 +7809,61 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 192,
-        "char": "                        "
+        "char": "     "
+    },
+    {
+        "group": "lispKey",
+        "linkedGroup": "Type",
+        "row": 192,
+        "char": ":append"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 192,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 192,
+        "char": "("
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 192,
-        "char": "ixf-uri\n"
+        "char": "parse"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 192,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 192,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 192,
+        "char": "case"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 192,
+        "char": " "
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 192,
+        "char": "type\n"
     },
     {
         "group": "LineNr",
@@ -7478,13 +7874,43 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 193,
-        "char": "                        "
+        "char": "                      "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 193,
+        "char": "("
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 193,
-        "char": "sqlite-db-uri\n"
+        "char": ":csv"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 193,
+        "char": "   "
+    },
+    {
+        "group": "lispAtomMark",
+        "linkedGroup": "Special",
+        "row": 193,
+        "char": "&#39;"
+    },
+    {
+        "group": "lispAtom",
+        "linkedGroup": "Identifier",
+        "row": 193,
+        "char": "csv-source-fields"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 193,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -7495,13 +7921,43 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 194,
-        "char": "                        "
+        "char": "                      "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 194,
+        "char": "("
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 194,
-        "char": "pgsql-uri\n"
+        "char": ":fixed"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 194,
+        "char": " "
+    },
+    {
+        "group": "lispAtomMark",
+        "linkedGroup": "Special",
+        "row": 194,
+        "char": "&#39;"
+    },
+    {
+        "group": "lispAtom",
+        "linkedGroup": "Identifier",
+        "row": 194,
+        "char": "fixed-source-fields"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 194,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -7512,13 +7968,43 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 195,
-        "char": "                        "
+        "char": "                      "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 195,
+        "char": "("
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 195,
-        "char": "mysql-uri\n"
+        "char": ":copy"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 195,
+        "char": "  "
+    },
+    {
+        "group": "lispAtomMark",
+        "linkedGroup": "Special",
+        "row": 195,
+        "char": "&#39;"
+    },
+    {
+        "group": "lispAtom",
+        "linkedGroup": "Identifier",
+        "row": 195,
+        "char": "copy-source-fields"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 195,
+        "char": "))\n"
     },
     {
         "group": "LineNr",
@@ -7529,13 +8015,19 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 196,
-        "char": "                        "
+        "char": "                    "
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 196,
-        "char": "mssql-uri\n"
+        "char": "field"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 196,
+        "char": ")))\n"
     },
     {
         "group": "LineNr",
@@ -7543,22 +8035,10 @@ module.exports = [
         "char": "197"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 197,
-        "char": "                        "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 197,
-        "char": "filename-or-http-uri"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 197,
-        "char": "))\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -7566,10 +8046,64 @@ module.exports = [
         "char": "198"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 198,
-        "char": "\n"
+        "char": "("
+    },
+    {
+        "group": "lispDecl",
+        "linkedGroup": "Statement",
+        "row": 198,
+        "char": "defun"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 198,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 198,
+        "char": "parse-cli-options"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 198,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 198,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 198,
+        "char": "type"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 198,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 198,
+        "char": "options"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 198,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -7577,52 +8111,16 @@ module.exports = [
         "char": "199"
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 199,
-        "char": "("
+        "char": "  "
     },
     {
-        "group": "lispDecl",
-        "linkedGroup": "Statement",
+        "group": "lispString",
+        "linkedGroup": "Constant",
         "row": 199,
-        "char": "defun"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 199,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 199,
-        "char": "parse-source-string"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 199,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 199,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 199,
-        "char": "source-string"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 199,
-        "char": ")\n"
+        "char": "&quot;Parse options as per the WITH clause when we get them from the CLI.&quot;\n"
     },
     {
         "group": "LineNr",
@@ -7642,82 +8140,10 @@ module.exports = [
         "char": "("
     },
     {
-        "group": "lispDecl",
-        "linkedGroup": "Statement",
-        "row": 200,
-        "char": "let"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 200,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 200,
-        "char": "(("
-    },
-    {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 200,
-        "char": "source"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 200,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 200,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 200,
-        "char": "parse"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 200,
-        "char": " "
-    },
-    {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
-        "row": 200,
-        "char": "&#39;"
-    },
-    {
-        "group": "lispAtom",
-        "linkedGroup": "Identifier",
-        "row": 200,
-        "char": "source-uri"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 200,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 200,
-        "char": "source-string"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 200,
-        "char": ")))\n"
+        "char": "alexandria:alist-plist\n"
     },
     {
         "group": "LineNr",
@@ -7728,7 +8154,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 201,
-        "char": "    "
+        "char": "   "
     },
     {
         "group": "lispParen",
@@ -7740,7 +8166,7 @@ module.exports = [
         "group": "lispFunc",
         "linkedGroup": "Statement",
         "row": 201,
-        "char": "cond"
+        "char": "loop"
     },
     {
         "group": "lispList",
@@ -7749,16 +8175,10 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispKey",
+        "linkedGroup": "Type",
         "row": 201,
-        "char": "(("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 201,
-        "char": "typep"
+        "char": ":for"
     },
     {
         "group": "lispList",
@@ -7770,7 +8190,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 201,
-        "char": "source"
+        "char": "option"
     },
     {
         "group": "lispList",
@@ -7779,22 +8199,22 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
+        "group": "lispKey",
+        "linkedGroup": "Type",
         "row": 201,
-        "char": "&#39;"
+        "char": ":in"
     },
     {
-        "group": "lispAtom",
-        "linkedGroup": "Identifier",
+        "group": "lispList",
+        "linkedGroup": "lispList",
         "row": 201,
-        "char": "connection"
+        "char": " "
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 201,
-        "char": ")\n"
+        "char": "options\n"
     },
     {
         "group": "LineNr",
@@ -7805,19 +8225,61 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 202,
-        "char": "           "
+        "char": "      "
     },
     {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
+        "group": "lispKey",
+        "linkedGroup": "Type",
         "row": 202,
-        "char": "source"
+        "char": ":collect"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 202,
+        "char": " "
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 202,
-        "char": ")\n"
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 202,
+        "char": "parse"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 202,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 202,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 202,
+        "char": "ecase"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 202,
+        "char": " "
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 202,
+        "char": "type\n"
     },
     {
         "group": "LineNr",
@@ -7825,10 +8287,46 @@ module.exports = [
         "char": "203"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 203,
-        "char": "\n"
+        "char": "                        "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 203,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 203,
+        "char": ":csv"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 203,
+        "char": "    "
+    },
+    {
+        "group": "lispAtomMark",
+        "linkedGroup": "Special",
+        "row": 203,
+        "char": "&#39;"
+    },
+    {
+        "group": "lispAtom",
+        "linkedGroup": "Identifier",
+        "row": 203,
+        "char": "csv-option"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 203,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -7839,7 +8337,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 204,
-        "char": "          "
+        "char": "                        "
     },
     {
         "group": "lispParen",
@@ -7848,10 +8346,34 @@ module.exports = [
         "char": "("
     },
     {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 204,
-        "char": "t\n"
+        "char": ":fixed"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 204,
+        "char": "  "
+    },
+    {
+        "group": "lispAtomMark",
+        "linkedGroup": "Special",
+        "row": 204,
+        "char": "&#39;"
+    },
+    {
+        "group": "lispAtom",
+        "linkedGroup": "Identifier",
+        "row": 204,
+        "char": "fixed-option"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 204,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -7862,25 +8384,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 205,
-        "char": "           "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 205,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 205,
-        "char": "destructuring-bind"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 205,
-        "char": " "
+        "char": "                        "
     },
     {
         "group": "lispParen",
@@ -7892,37 +8396,31 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 205,
-        "char": "kind"
+        "char": ":copy"
     },
     {
         "group": "lispList",
         "linkedGroup": "lispList",
         "row": 205,
-        "char": " "
+        "char": "   "
     },
     {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
+        "group": "lispAtomMark",
+        "linkedGroup": "Special",
         "row": 205,
-        "char": "url"
+        "char": "&#39;"
+    },
+    {
+        "group": "lispAtom",
+        "linkedGroup": "Identifier",
+        "row": 205,
+        "char": "copy-option"
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 205,
-        "char": ")"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 205,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 205,
-        "char": "source\n"
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -7933,7 +8431,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 206,
-        "char": "             "
+        "char": "                        "
     },
     {
         "group": "lispParen",
@@ -7942,28 +8440,34 @@ module.exports = [
         "char": "("
     },
     {
-        "group": "lispDecl",
-        "linkedGroup": "Statement",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 206,
-        "char": "let"
+        "char": ":dbf"
     },
     {
         "group": "lispList",
         "linkedGroup": "lispList",
         "row": 206,
-        "char": " "
+        "char": "    "
+    },
+    {
+        "group": "lispAtomMark",
+        "linkedGroup": "Special",
+        "row": 206,
+        "char": "&#39;"
+    },
+    {
+        "group": "lispAtom",
+        "linkedGroup": "Identifier",
+        "row": 206,
+        "char": "dbf-option"
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 206,
-        "char": "(("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 206,
-        "char": "type\n"
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -7974,7 +8478,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 207,
-        "char": "                    "
+        "char": "                        "
     },
     {
         "group": "lispParen",
@@ -7983,22 +8487,34 @@ module.exports = [
         "char": "("
     },
     {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 207,
-        "char": "case"
+        "char": ":ixf"
     },
     {
         "group": "lispList",
         "linkedGroup": "lispList",
         "row": 207,
-        "char": " "
+        "char": "    "
     },
     {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
+        "group": "lispAtomMark",
+        "linkedGroup": "Special",
         "row": 207,
-        "char": "kind\n"
+        "char": "&#39;"
+    },
+    {
+        "group": "lispAtom",
+        "linkedGroup": "Identifier",
+        "row": 207,
+        "char": "ixf-option"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 207,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -8009,7 +8525,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 208,
-        "char": "                      "
+        "char": "                        "
     },
     {
         "group": "lispParen",
@@ -8021,7 +8537,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 208,
-        "char": ":filename"
+        "char": ":sqlite"
     },
     {
         "group": "lispList",
@@ -8030,34 +8546,22 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "lispParen",
+        "group": "lispAtomMark",
         "linkedGroup": "Special",
         "row": 208,
-        "char": "("
+        "char": "&#39;"
     },
     {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
+        "group": "lispAtom",
+        "linkedGroup": "Identifier",
         "row": 208,
-        "char": "parse-filename-for-source-type"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 208,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 208,
-        "char": "url"
+        "char": "sqlite-option"
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 208,
-        "char": "))\n"
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -8068,7 +8572,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 209,
-        "char": "                      "
+        "char": "                        "
     },
     {
         "group": "lispParen",
@@ -8080,25 +8584,31 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 209,
-        "char": ":http"
+        "char": ":pgsql"
     },
     {
         "group": "lispList",
         "linkedGroup": "lispList",
         "row": 209,
-        "char": "     "
+        "char": "  "
+    },
+    {
+        "group": "lispAtomMark",
+        "linkedGroup": "Special",
+        "row": 209,
+        "char": "&#39;"
+    },
+    {
+        "group": "lispAtom",
+        "linkedGroup": "Identifier",
+        "row": 209,
+        "char": "pgsql-option"
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 209,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 209,
-        "char": "parse-filename-for-source-type\n"
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -8109,7 +8619,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 210,
-        "char": "                                  "
+        "char": "                        "
     },
     {
         "group": "lispParen",
@@ -8121,43 +8631,31 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 210,
-        "char": "puri:uri-path"
+        "char": ":mysql"
     },
     {
         "group": "lispList",
         "linkedGroup": "lispList",
         "row": 210,
-        "char": " "
+        "char": "  "
+    },
+    {
+        "group": "lispAtomMark",
+        "linkedGroup": "Special",
+        "row": 210,
+        "char": "&#39;"
+    },
+    {
+        "group": "lispAtom",
+        "linkedGroup": "Identifier",
+        "row": 210,
+        "char": "mysql-option"
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 210,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 210,
-        "char": "puri:parse-uri"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 210,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 210,
-        "char": "url"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 210,
-        "char": ")))))))\n"
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -8168,7 +8666,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 211,
-        "char": "               "
+        "char": "                        "
     },
     {
         "group": "lispParen",
@@ -8177,22 +8675,34 @@ module.exports = [
         "char": "("
     },
     {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 211,
-        "char": "when"
+        "char": ":mssql"
     },
     {
         "group": "lispList",
         "linkedGroup": "lispList",
         "row": 211,
-        "char": " "
+        "char": "  "
     },
     {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
+        "group": "lispAtomMark",
+        "linkedGroup": "Special",
         "row": 211,
-        "char": "type\n"
+        "char": "&#39;"
+    },
+    {
+        "group": "lispAtom",
+        "linkedGroup": "Identifier",
+        "row": 211,
+        "char": "mssql-option"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 211,
+        "char": "))\n"
     },
     {
         "group": "LineNr",
@@ -8203,49 +8713,19 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 212,
-        "char": "                 "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 212,
-        "char": "("
+        "char": "                      "
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 212,
-        "char": "parse-source-string-for-type"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 212,
-        "char": " "
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 212,
-        "char": "type"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 212,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 212,
-        "char": "source-string"
+        "char": "option"
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 212,
-        "char": "))))))))\n"
+        "char": "))))\n"
     },
     {
         "group": "LineNr",
@@ -8285,7 +8765,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 214,
-        "char": "parse-target-string"
+        "char": "parse-cli-casts"
     },
     {
         "group": "lispList",
@@ -8303,7 +8783,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 214,
-        "char": "target-string"
+        "char": "casts"
     },
     {
         "group": "lispParen",
@@ -8323,52 +8803,10 @@ module.exports = [
         "char": "  "
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispString",
+        "linkedGroup": "Constant",
         "row": 215,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 215,
-        "char": "parse"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 215,
-        "char": " "
-    },
-    {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
-        "row": 215,
-        "char": "&#39;"
-    },
-    {
-        "group": "lispAtom",
-        "linkedGroup": "Identifier",
-        "row": 215,
-        "char": "pgsql-uri"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 215,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 215,
-        "char": "target-string"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 215,
-        "char": "))\n"
+        "char": "&quot;Parse additional CAST rules when we get them from the CLI.&quot;\n"
     },
     {
         "group": "LineNr",
@@ -8376,10 +8814,70 @@ module.exports = [
         "char": "216"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 216,
-        "char": "\n"
+        "char": "  "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 216,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 216,
+        "char": "loop"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 216,
+        "char": " "
+    },
+    {
+        "group": "lispKey",
+        "linkedGroup": "Type",
+        "row": 216,
+        "char": ":for"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 216,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 216,
+        "char": "cast"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 216,
+        "char": " "
+    },
+    {
+        "group": "lispKey",
+        "linkedGroup": "Type",
+        "row": 216,
+        "char": ":in"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 216,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 216,
+        "char": "casts\n"
     },
     {
         "group": "LineNr",
@@ -8387,10 +8885,70 @@ module.exports = [
         "char": "217"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 217,
-        "char": "\f\n"
+        "char": "     "
+    },
+    {
+        "group": "lispKey",
+        "linkedGroup": "Type",
+        "row": 217,
+        "char": ":collect"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 217,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 217,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 217,
+        "char": "parse"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 217,
+        "char": " "
+    },
+    {
+        "group": "lispAtomMark",
+        "linkedGroup": "Special",
+        "row": 217,
+        "char": "&#39;"
+    },
+    {
+        "group": "lispAtom",
+        "linkedGroup": "Identifier",
+        "row": 217,
+        "char": "cast-rule"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 217,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 217,
+        "char": "cast"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 217,
+        "char": ")))\n"
     },
     {
         "group": "LineNr",
@@ -8398,10 +8956,10 @@ module.exports = [
         "char": "218"
     },
     {
-        "group": "lispComment",
-        "linkedGroup": "Comment",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 218,
-        "char": ";;;\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -8409,10 +8967,52 @@ module.exports = [
         "char": "219"
     },
     {
-        "group": "lispComment",
-        "linkedGroup": "Comment",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 219,
-        "char": ";;; Command line accumulative options parser\n"
+        "char": "("
+    },
+    {
+        "group": "lispDecl",
+        "linkedGroup": "Statement",
+        "row": 219,
+        "char": "defun"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 219,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 219,
+        "char": "parse-sql-file"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 219,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 219,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 219,
+        "char": "filename"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 219,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -8420,10 +9020,16 @@ module.exports = [
         "char": "220"
     },
     {
-        "group": "lispComment",
-        "linkedGroup": "Comment",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 220,
-        "char": ";;;\n"
+        "char": "  "
+    },
+    {
+        "group": "lispString",
+        "linkedGroup": "Constant",
+        "row": 220,
+        "char": "&quot;Parse FILENAME for SQL statements&quot;\n"
     },
     {
         "group": "LineNr",
@@ -8431,16 +9037,22 @@ module.exports = [
         "char": "221"
     },
     {
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
+        "row": 221,
+        "char": "  "
+    },
+    {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 221,
         "char": "("
     },
     {
-        "group": "lispDecl",
+        "group": "lispFunc",
         "linkedGroup": "Statement",
         "row": 221,
-        "char": "defun"
+        "char": "when"
     },
     {
         "group": "lispList",
@@ -8452,31 +9064,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 221,
-        "char": "parse-cli-gucs"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 221,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 221,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 221,
-        "char": "gucs"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 221,
-        "char": ")\n"
+        "char": "filename\n"
     },
     {
         "group": "LineNr",
@@ -8487,13 +9075,61 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 222,
-        "char": "  "
+        "char": "    "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 222,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 222,
+        "char": "log-message"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 222,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 222,
+        "char": ":notice"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 222,
+        "char": " "
     },
     {
         "group": "lispString",
         "linkedGroup": "Constant",
         "row": 222,
-        "char": "&quot;Parse PostgreSQL GUCs as per the SET clause when we get them from the CLI.&quot;\n"
+        "char": "&quot;reading SQL queries from ~s&quot;"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 222,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 222,
+        "char": "filename"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 222,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -8504,7 +9140,25 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 223,
-        "char": "  "
+        "char": "    "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 223,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 223,
+        "char": "pgloader.sql:read-queries"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 223,
+        "char": " "
     },
     {
         "group": "lispParen",
@@ -8516,19 +9170,7 @@ module.exports = [
         "group": "lispFunc",
         "linkedGroup": "Statement",
         "row": 223,
-        "char": "loop"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 223,
-        "char": " "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 223,
-        "char": ":for"
+        "char": "probe-file"
     },
     {
         "group": "lispList",
@@ -8540,31 +9182,13 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 223,
-        "char": "guc"
+        "char": "filename"
     },
     {
-        "group": "lispList",
-        "linkedGroup": "lispList",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 223,
-        "char": " "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 223,
-        "char": ":in"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 223,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 223,
-        "char": "gucs\n"
+        "char": "))))\n"
     },
     {
         "group": "LineNr",
@@ -8572,70 +9196,10 @@ module.exports = [
         "char": "224"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 224,
-        "char": "     "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 224,
-        "char": ":collect"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 224,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 224,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 224,
-        "char": "parse"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 224,
-        "char": " "
-    },
-    {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
-        "row": 224,
-        "char": "&#39;"
-    },
-    {
-        "group": "lispAtom",
-        "linkedGroup": "Identifier",
-        "row": 224,
-        "char": "generic-option"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 224,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 224,
-        "char": "guc"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 224,
-        "char": ")))\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -8654,112 +9218,10 @@ module.exports = [
         "char": "226"
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispComment",
+        "linkedGroup": "Comment",
         "row": 226,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 226,
-        "char": "defrule"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 226,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 226,
-        "char": "dbf-type-name"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 226,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 226,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 226,
-        "char": "or"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 226,
-        "char": " "
-    },
-    {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 226,
-        "char": "&quot;dbf&quot;"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 226,
-        "char": " "
-    },
-    {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 226,
-        "char": "&quot;db3&quot;"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 226,
-        "char": ")"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 226,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 226,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 226,
-        "char": ":constant"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 226,
-        "char": " "
-    },
-    {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 226,
-        "char": "&quot;dbf&quot;"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 226,
-        "char": "))\n"
+        "char": ";;;\n"
     },
     {
         "group": "LineNr",
@@ -8767,112 +9229,10 @@ module.exports = [
         "char": "227"
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispComment",
+        "linkedGroup": "Comment",
         "row": 227,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 227,
-        "char": "defrule"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 227,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 227,
-        "char": "sqlite-type-name"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 227,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 227,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 227,
-        "char": "or"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 227,
-        "char": " "
-    },
-    {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 227,
-        "char": "&quot;sqlite3&quot;"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 227,
-        "char": " "
-    },
-    {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 227,
-        "char": "&quot;sqlite&quot;"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 227,
-        "char": ")"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 227,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 227,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 227,
-        "char": ":constant"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 227,
-        "char": " "
-    },
-    {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 227,
-        "char": "&quot;sqlite&quot;"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 227,
-        "char": "))\n"
+        "char": ";;; Helper for regression testing\n"
     },
     {
         "group": "LineNr",
@@ -8880,10 +9240,10 @@ module.exports = [
         "char": "228"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispComment",
+        "linkedGroup": "Comment",
         "row": 228,
-        "char": "\n"
+        "char": ";;;\n"
     },
     {
         "group": "LineNr",
@@ -8912,7 +9272,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 229,
-        "char": "cli-type"
+        "char": "pg-db-uri-from-command"
     },
     {
         "group": "lispList",
@@ -8939,10 +9299,10 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "lispString",
-        "linkedGroup": "Constant",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 229,
-        "char": "&quot;csv&quot;\n"
+        "char": "pg-db-uri-from-files\n"
     },
     {
         "group": "LineNr",
@@ -8953,13 +9313,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 230,
-        "char": "                      "
+        "char": "                                    "
     },
     {
-        "group": "lispString",
-        "linkedGroup": "Constant",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 230,
-        "char": "&quot;fixed&quot;\n"
+        "char": "pg-db-uri-from-source-target\n"
     },
     {
         "group": "LineNr",
@@ -8970,13 +9330,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 231,
-        "char": "                      "
+        "char": "                                    "
     },
     {
-        "group": "lispString",
-        "linkedGroup": "Constant",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 231,
-        "char": "&quot;copy&quot;\n"
+        "char": "pg-db-uri-from-source-table-target\n"
     },
     {
         "group": "LineNr",
@@ -8987,13 +9347,19 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 232,
-        "char": "                      "
+        "char": "                                    "
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 232,
-        "char": "dbf-type-name\n"
+        "char": "pg-db-uri-from-source-and-encoding"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 232,
+        "char": "))\n"
     },
     {
         "group": "LineNr",
@@ -9001,16 +9367,10 @@ module.exports = [
         "char": "233"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 233,
-        "char": "                      "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 233,
-        "char": "sqlite-type-name\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -9018,16 +9378,58 @@ module.exports = [
         "char": "234"
     },
     {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 234,
-        "char": "                      "
+        "char": "("
     },
     {
-        "group": "lispString",
-        "linkedGroup": "Constant",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 234,
-        "char": "&quot;ixf&quot;\n"
+        "char": "defrule"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 234,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 234,
+        "char": "pg-db-uri-from-files"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 234,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 234,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 234,
+        "char": "or"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 234,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 234,
+        "char": "load-csv-file-command\n"
     },
     {
         "group": "LineNr",
@@ -9038,13 +9440,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 235,
-        "char": "                      "
+        "char": "                                  "
     },
     {
-        "group": "lispString",
-        "linkedGroup": "Constant",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 235,
-        "char": "&quot;mysql&quot;\n"
+        "char": "load-copy-file-command\n"
     },
     {
         "group": "LineNr",
@@ -9055,13 +9457,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 236,
-        "char": "                      "
+        "char": "                                  "
     },
     {
-        "group": "lispString",
-        "linkedGroup": "Constant",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 236,
-        "char": "&quot;mssql&quot;"
+        "char": "load-fixed-cols-file-command"
     },
     {
         "group": "lispParen",
@@ -9090,7 +9492,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 237,
-        "char": ":text"
+        "char": ":lambda"
     },
     {
         "group": "lispList",
@@ -9099,16 +9501,22 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 237,
-        "char": "t"
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 237,
+        "char": "command"
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 237,
-        "char": "))\n"
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -9116,10 +9524,100 @@ module.exports = [
         "char": "238"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 238,
-        "char": "\n"
+        "char": "    "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 238,
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 238,
+        "char": "destructuring-bind"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 238,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 238,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 238,
+        "char": "source"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 238,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 238,
+        "char": "encoding"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 238,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 238,
+        "char": "fields"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 238,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 238,
+        "char": "pg-db-uri"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 238,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 238,
+        "char": "table-name"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 238,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 238,
+        "char": "columns\n"
     },
     {
         "group": "LineNr",
@@ -9127,16 +9625,16 @@ module.exports = [
         "char": "239"
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 239,
-        "char": "("
+        "char": "                                "
     },
     {
-        "group": "lispDecl",
-        "linkedGroup": "Statement",
+        "group": "lispKey",
+        "linkedGroup": "Type",
         "row": 239,
-        "char": "defun"
+        "char": "&amp;key"
     },
     {
         "group": "lispList",
@@ -9148,7 +9646,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 239,
-        "char": "parse-cli-type"
+        "char": "gucs"
     },
     {
         "group": "lispList",
@@ -9157,16 +9655,10 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "lispParen",
-        "linkedGroup": "Special",
+        "group": "lispKey",
+        "linkedGroup": "Type",
         "row": 239,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 239,
-        "char": "type"
+        "char": "&amp;allow-other-keys"
     },
     {
         "group": "lispParen",
@@ -9183,13 +9675,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 240,
-        "char": "  "
+        "char": "        "
     },
     {
-        "group": "lispString",
-        "linkedGroup": "Constant",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 240,
-        "char": "&quot;Parse the --type option&quot;\n"
+        "char": "command\n"
     },
     {
         "group": "LineNr",
@@ -9200,7 +9692,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 241,
-        "char": "  "
+        "char": "      "
     },
     {
         "group": "lispParen",
@@ -9212,7 +9704,7 @@ module.exports = [
         "group": "lispFunc",
         "linkedGroup": "Statement",
         "row": 241,
-        "char": "when"
+        "char": "declare"
     },
     {
         "group": "lispList",
@@ -9221,10 +9713,70 @@ module.exports = [
         "char": " "
     },
     {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 241,
+        "char": "("
+    },
+    {
         "group": "lispFunc",
         "linkedGroup": "Statement",
         "row": 241,
-        "char": "type\n"
+        "char": "ignore"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 241,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 241,
+        "char": "source"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 241,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 241,
+        "char": "encoding"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 241,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 241,
+        "char": "fields"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 241,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 241,
+        "char": "columns"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 241,
+        "char": "))\n"
     },
     {
         "group": "LineNr",
@@ -9235,7 +9787,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 242,
-        "char": "    "
+        "char": "      "
     },
     {
         "group": "lispParen",
@@ -9247,43 +9799,19 @@ module.exports = [
         "group": "lispFunc",
         "linkedGroup": "Statement",
         "row": 242,
-        "char": "intern"
+        "char": "list"
     },
     {
         "group": "lispList",
         "linkedGroup": "lispList",
         "row": 242,
         "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 242,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 242,
-        "char": "string-upcase"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 242,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 242,
-        "char": "("
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 242,
-        "char": "parse"
+        "char": "pg-db-uri"
     },
     {
         "group": "lispList",
@@ -9292,16 +9820,10 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 242,
-        "char": "&#39;"
-    },
-    {
-        "group": "lispAtom",
-        "linkedGroup": "Identifier",
-        "row": 242,
-        "char": "cli-type"
+        "char": "table-name"
     },
     {
         "group": "lispList",
@@ -9310,46 +9832,10 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 242,
-        "char": "type"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 242,
-        "char": "))"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 242,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 242,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 242,
-        "char": "find-package"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 242,
-        "char": " "
-    },
-    {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 242,
-        "char": "&quot;KEYWORD&quot;"
+        "char": "gucs"
     },
     {
         "group": "lispParen",
@@ -9380,10 +9866,10 @@ module.exports = [
         "char": "("
     },
     {
-        "group": "lispDecl",
-        "linkedGroup": "Statement",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 244,
-        "char": "defun"
+        "char": "defrule"
     },
     {
         "group": "lispList",
@@ -9395,7 +9881,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 244,
-        "char": "parse-cli-encoding"
+        "char": "pg-db-uri-from-source-target"
     },
     {
         "group": "lispList",
@@ -9410,16 +9896,22 @@ module.exports = [
         "char": "("
     },
     {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 244,
+        "char": "or"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 244,
+        "char": " "
+    },
+    {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 244,
-        "char": "encoding"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 244,
-        "char": ")\n"
+        "char": "load-sqlite-command\n"
     },
     {
         "group": "LineNr",
@@ -9430,13 +9922,13 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 245,
-        "char": "  "
+        "char": "                                          "
     },
     {
-        "group": "lispString",
-        "linkedGroup": "Constant",
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
         "row": 245,
-        "char": "&quot;Parse the --encoding option&quot;\n"
+        "char": "load-mysql-command\n"
     },
     {
         "group": "LineNr",
@@ -9447,31 +9939,19 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 246,
-        "char": "  "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 246,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 246,
-        "char": "if"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 246,
-        "char": " "
+        "char": "                                          "
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 246,
-        "char": "encoding\n"
+        "char": "load-mssql-command"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 246,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -9482,7 +9962,7 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 247,
-        "char": "      "
+        "char": "  "
     },
     {
         "group": "lispParen",
@@ -9494,7 +9974,7 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 247,
-        "char": "make-external-format"
+        "char": ":lambda"
     },
     {
         "group": "lispList",
@@ -9512,25 +9992,13 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 247,
-        "char": "find-encoding-by-name-or-alias"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 247,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 247,
-        "char": "encoding"
+        "char": "command"
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 247,
-        "char": "))\n"
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -9541,19 +10009,91 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 248,
-        "char": "      "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 248,
-        "char": ":utf-8"
+        "char": "    "
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 248,
-        "char": "))\n"
+        "char": "("
+    },
+    {
+        "group": "lispFunc",
+        "linkedGroup": "Statement",
+        "row": 248,
+        "char": "destructuring-bind"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 248,
+        "char": " "
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 248,
+        "char": "("
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 248,
+        "char": "source"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 248,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 248,
+        "char": "pg-db-uri"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 248,
+        "char": " "
+    },
+    {
+        "group": "lispKey",
+        "linkedGroup": "Type",
+        "row": 248,
+        "char": "&amp;key"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 248,
+        "char": " "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 248,
+        "char": "gucs"
+    },
+    {
+        "group": "lispList",
+        "linkedGroup": "lispList",
+        "row": 248,
+        "char": " "
+    },
+    {
+        "group": "lispKey",
+        "linkedGroup": "Type",
+        "row": 248,
+        "char": "&amp;allow-other-keys"
+    },
+    {
+        "group": "lispParen",
+        "linkedGroup": "Special",
+        "row": 248,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -9561,15 +10101,27 @@ module.exports = [
         "char": "249"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
         "row": 249,
-        "char": "\n"
+        "char": "        "
+    },
+    {
+        "group": "lispSymbol",
+        "linkedGroup": "lispSymbol",
+        "row": 249,
+        "char": "command\n"
     },
     {
         "group": "LineNr",
         "row": 250,
         "char": "250"
+    },
+    {
+        "group": "lispLeadWhite",
+        "linkedGroup": "lispLeadWhite",
+        "row": 250,
+        "char": "      "
     },
     {
         "group": "lispParen",
@@ -9578,22 +10130,10 @@ module.exports = [
         "char": "("
     },
     {
-        "group": "lispDecl",
+        "group": "lispFunc",
         "linkedGroup": "Statement",
         "row": 250,
-        "char": "defun"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 250,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 250,
-        "char": "parse-cli-fields"
+        "char": "declare"
     },
     {
         "group": "lispList",
@@ -9611,7 +10151,7 @@ module.exports = [
         "group": "lispFunc",
         "linkedGroup": "Statement",
         "row": 250,
-        "char": "type"
+        "char": "ignore"
     },
     {
         "group": "lispList",
@@ -9623,13 +10163,13 @@ module.exports = [
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
         "row": 250,
-        "char": "fields"
+        "char": "source"
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
         "row": 250,
-        "char": ")\n"
+        "char": "))\n"
     },
     {
         "group": "LineNr",
@@ -9640,3542 +10180,60 @@ module.exports = [
         "group": "lispLeadWhite",
         "linkedGroup": "lispLeadWhite",
         "row": 251,
-        "char": "  "
+        "char": "      "
     },
     {
-        "group": "lispString",
-        "linkedGroup": "Constant",
+        "group": "lispParen",
+        "linkedGroup": "Special",
         "row": 251,
-        "char": "&quot;Parse the --fields option.&quot;\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 252,
-        "char": "252"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 252,
-        "char": "  "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 252,
         "char": "("
     },
     {
         "group": "lispFunc",
         "linkedGroup": "Statement",
-        "row": 252,
-        "char": "loop"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 252,
-        "char": " "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 252,
-        "char": ":for"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 252,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 252,
-        "char": "field"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 252,
-        "char": " "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 252,
-        "char": ":in"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 252,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 252,
-        "char": "fields\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 253,
-        "char": "253"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 253,
-        "char": "     "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 253,
-        "char": ":append"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 253,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 253,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 253,
-        "char": "parse"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 253,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 253,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 253,
-        "char": "case"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 253,
-        "char": " "
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 253,
-        "char": "type\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 254,
-        "char": "254"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 254,
-        "char": "                      "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 254,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 254,
-        "char": ":csv"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 254,
-        "char": "   "
-    },
-    {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
-        "row": 254,
-        "char": "&#39;"
-    },
-    {
-        "group": "lispAtom",
-        "linkedGroup": "Identifier",
-        "row": 254,
-        "char": "csv-source-fields"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 254,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 255,
-        "char": "255"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 255,
-        "char": "                      "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 255,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 255,
-        "char": ":fixed"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 255,
-        "char": " "
-    },
-    {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
-        "row": 255,
-        "char": "&#39;"
-    },
-    {
-        "group": "lispAtom",
-        "linkedGroup": "Identifier",
-        "row": 255,
-        "char": "fixed-source-fields"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 255,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 256,
-        "char": "256"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 256,
-        "char": "                      "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 256,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 256,
-        "char": ":copy"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 256,
-        "char": "  "
-    },
-    {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
-        "row": 256,
-        "char": "&#39;"
-    },
-    {
-        "group": "lispAtom",
-        "linkedGroup": "Identifier",
-        "row": 256,
-        "char": "copy-source-fields"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 256,
-        "char": "))\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 257,
-        "char": "257"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 257,
-        "char": "                    "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 257,
-        "char": "field"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 257,
-        "char": ")))\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 258,
-        "char": "258"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 258,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 259,
-        "char": "259"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 259,
-        "char": "("
-    },
-    {
-        "group": "lispDecl",
-        "linkedGroup": "Statement",
-        "row": 259,
-        "char": "defun"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 259,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 259,
-        "char": "parse-cli-options"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 259,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 259,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 259,
-        "char": "type"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 259,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 259,
-        "char": "options"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 259,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 260,
-        "char": "260"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 260,
-        "char": "  "
-    },
-    {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 260,
-        "char": "&quot;Parse options as per the WITH clause when we get them from the CLI.&quot;\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 261,
-        "char": "261"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 261,
-        "char": "  "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 261,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 261,
-        "char": "alexandria:alist-plist\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 262,
-        "char": "262"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 262,
-        "char": "   "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 262,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 262,
-        "char": "loop"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 262,
-        "char": " "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 262,
-        "char": ":for"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 262,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 262,
-        "char": "option"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 262,
-        "char": " "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 262,
-        "char": ":in"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 262,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 262,
-        "char": "options\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 263,
-        "char": "263"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 263,
-        "char": "      "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 263,
-        "char": ":collect"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 263,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 263,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 263,
-        "char": "parse"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 263,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 263,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 263,
-        "char": "ecase"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 263,
-        "char": " "
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 263,
-        "char": "type\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 264,
-        "char": "264"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 264,
-        "char": "                        "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 264,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 264,
-        "char": ":csv"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 264,
-        "char": "    "
-    },
-    {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
-        "row": 264,
-        "char": "&#39;"
-    },
-    {
-        "group": "lispAtom",
-        "linkedGroup": "Identifier",
-        "row": 264,
-        "char": "csv-option"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 264,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 265,
-        "char": "265"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 265,
-        "char": "                        "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 265,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 265,
-        "char": ":fixed"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 265,
-        "char": "  "
-    },
-    {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
-        "row": 265,
-        "char": "&#39;"
-    },
-    {
-        "group": "lispAtom",
-        "linkedGroup": "Identifier",
-        "row": 265,
-        "char": "fixed-option"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 265,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 266,
-        "char": "266"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 266,
-        "char": "                        "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 266,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 266,
-        "char": ":copy"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 266,
-        "char": "   "
-    },
-    {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
-        "row": 266,
-        "char": "&#39;"
-    },
-    {
-        "group": "lispAtom",
-        "linkedGroup": "Identifier",
-        "row": 266,
-        "char": "copy-option"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 266,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 267,
-        "char": "267"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 267,
-        "char": "                        "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 267,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 267,
-        "char": ":dbf"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 267,
-        "char": "    "
-    },
-    {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
-        "row": 267,
-        "char": "&#39;"
-    },
-    {
-        "group": "lispAtom",
-        "linkedGroup": "Identifier",
-        "row": 267,
-        "char": "dbf-option"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 267,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 268,
-        "char": "268"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 268,
-        "char": "                        "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 268,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 268,
-        "char": ":ixf"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 268,
-        "char": "    "
-    },
-    {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
-        "row": 268,
-        "char": "&#39;"
-    },
-    {
-        "group": "lispAtom",
-        "linkedGroup": "Identifier",
-        "row": 268,
-        "char": "ixf-option"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 268,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 269,
-        "char": "269"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 269,
-        "char": "                        "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 269,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 269,
-        "char": ":sqlite"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 269,
-        "char": " "
-    },
-    {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
-        "row": 269,
-        "char": "&#39;"
-    },
-    {
-        "group": "lispAtom",
-        "linkedGroup": "Identifier",
-        "row": 269,
-        "char": "sqlite-option"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 269,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 270,
-        "char": "270"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 270,
-        "char": "                        "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 270,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 270,
-        "char": ":pgsql"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 270,
-        "char": "  "
-    },
-    {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
-        "row": 270,
-        "char": "&#39;"
-    },
-    {
-        "group": "lispAtom",
-        "linkedGroup": "Identifier",
-        "row": 270,
-        "char": "pgsql-option"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 270,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 271,
-        "char": "271"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 271,
-        "char": "                        "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 271,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 271,
-        "char": ":mysql"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 271,
-        "char": "  "
-    },
-    {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
-        "row": 271,
-        "char": "&#39;"
-    },
-    {
-        "group": "lispAtom",
-        "linkedGroup": "Identifier",
-        "row": 271,
-        "char": "mysql-option"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 271,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 272,
-        "char": "272"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 272,
-        "char": "                        "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 272,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 272,
-        "char": ":mssql"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 272,
-        "char": "  "
-    },
-    {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
-        "row": 272,
-        "char": "&#39;"
-    },
-    {
-        "group": "lispAtom",
-        "linkedGroup": "Identifier",
-        "row": 272,
-        "char": "mssql-option"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 272,
-        "char": "))\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 273,
-        "char": "273"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 273,
-        "char": "                      "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 273,
-        "char": "option"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 273,
-        "char": "))))\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 274,
-        "char": "274"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 274,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 275,
-        "char": "275"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 275,
-        "char": "("
-    },
-    {
-        "group": "lispDecl",
-        "linkedGroup": "Statement",
-        "row": 275,
-        "char": "defun"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 275,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 275,
-        "char": "parse-cli-casts"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 275,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 275,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 275,
-        "char": "casts"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 275,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 276,
-        "char": "276"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 276,
-        "char": "  "
-    },
-    {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 276,
-        "char": "&quot;Parse additional CAST rules when we get them from the CLI.&quot;\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 277,
-        "char": "277"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 277,
-        "char": "  "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 277,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 277,
-        "char": "loop"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 277,
-        "char": " "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 277,
-        "char": ":for"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 277,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 277,
-        "char": "cast"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 277,
-        "char": " "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 277,
-        "char": ":in"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 277,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 277,
-        "char": "casts\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 278,
-        "char": "278"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 278,
-        "char": "     "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 278,
-        "char": ":collect"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 278,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 278,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 278,
-        "char": "parse"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 278,
-        "char": " "
-    },
-    {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
-        "row": 278,
-        "char": "&#39;"
-    },
-    {
-        "group": "lispAtom",
-        "linkedGroup": "Identifier",
-        "row": 278,
-        "char": "cast-rule"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 278,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 278,
-        "char": "cast"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 278,
-        "char": ")))\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 279,
-        "char": "279"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 279,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 280,
-        "char": "280"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 280,
-        "char": "("
-    },
-    {
-        "group": "lispDecl",
-        "linkedGroup": "Statement",
-        "row": 280,
-        "char": "defun"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 280,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 280,
-        "char": "parse-sql-file"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 280,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 280,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 280,
-        "char": "filename"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 280,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 281,
-        "char": "281"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 281,
-        "char": "  "
-    },
-    {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 281,
-        "char": "&quot;Parse FILENAME for SQL statements&quot;\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 282,
-        "char": "282"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 282,
-        "char": "  "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 282,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 282,
-        "char": "when"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 282,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 282,
-        "char": "filename\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 283,
-        "char": "283"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 283,
-        "char": "    "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 283,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 283,
-        "char": "log-message"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 283,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 283,
-        "char": ":notice"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 283,
-        "char": " "
-    },
-    {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 283,
-        "char": "&quot;reading SQL queries from ~s&quot;"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 283,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 283,
-        "char": "filename"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 283,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 284,
-        "char": "284"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 284,
-        "char": "    "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 284,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 284,
-        "char": "pgloader.sql:read-queries"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 284,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 284,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 284,
-        "char": "probe-file"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 284,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 284,
-        "char": "filename"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 284,
-        "char": "))))\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 285,
-        "char": "285"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 285,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 286,
-        "char": "286"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 286,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 287,
-        "char": "287"
-    },
-    {
-        "group": "lispComment",
-        "linkedGroup": "Comment",
-        "row": 287,
-        "char": ";;;\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 288,
-        "char": "288"
-    },
-    {
-        "group": "lispComment",
-        "linkedGroup": "Comment",
-        "row": 288,
-        "char": ";;; Helper for regression testing\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 289,
-        "char": "289"
-    },
-    {
-        "group": "lispComment",
-        "linkedGroup": "Comment",
-        "row": 289,
-        "char": ";;;\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 290,
-        "char": "290"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 290,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 290,
-        "char": "defrule"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 290,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 290,
-        "char": "pg-db-uri-from-command"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 290,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 290,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 290,
-        "char": "or"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 290,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 290,
-        "char": "pg-db-uri-from-files\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 291,
-        "char": "291"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 291,
-        "char": "                                    "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 291,
-        "char": "pg-db-uri-from-source-target\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 292,
-        "char": "292"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 292,
-        "char": "                                    "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 292,
-        "char": "pg-db-uri-from-source-table-target\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 293,
-        "char": "293"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 293,
-        "char": "                                    "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 293,
-        "char": "pg-db-uri-from-source-and-encoding"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 293,
-        "char": "))\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 294,
-        "char": "294"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 294,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 295,
-        "char": "295"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 295,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 295,
-        "char": "defrule"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 295,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 295,
-        "char": "pg-db-uri-from-files"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 295,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 295,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 295,
-        "char": "or"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 295,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 295,
-        "char": "load-csv-file-command\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 296,
-        "char": "296"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 296,
-        "char": "                                  "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 296,
-        "char": "load-copy-file-command\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 297,
-        "char": "297"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 297,
-        "char": "                                  "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 297,
-        "char": "load-fixed-cols-file-command"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 297,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 298,
-        "char": "298"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 298,
-        "char": "  "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 298,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 298,
-        "char": ":lambda"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 298,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 298,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 298,
-        "char": "command"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 298,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 299,
-        "char": "299"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 299,
-        "char": "    "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 299,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 299,
-        "char": "destructuring-bind"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 299,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 299,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 299,
-        "char": "source"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 299,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 299,
-        "char": "encoding"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 299,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 299,
-        "char": "fields"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 299,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 299,
-        "char": "pg-db-uri"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 299,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 299,
-        "char": "table-name"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 299,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 299,
-        "char": "columns\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 300,
-        "char": "300"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 300,
-        "char": "                                "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 300,
-        "char": "&amp;key"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 300,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 300,
-        "char": "gucs"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 300,
-        "char": " "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 300,
-        "char": "&amp;allow-other-keys"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 300,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 301,
-        "char": "301"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 301,
-        "char": "        "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 301,
-        "char": "command\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 302,
-        "char": "302"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 302,
-        "char": "      "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 302,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 302,
-        "char": "declare"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 302,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 302,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 302,
-        "char": "ignore"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 302,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 302,
-        "char": "source"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 302,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 302,
-        "char": "encoding"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 302,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 302,
-        "char": "fields"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 302,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 302,
-        "char": "columns"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 302,
-        "char": "))\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 303,
-        "char": "303"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 303,
-        "char": "      "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 303,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 303,
+        "row": 251,
         "char": "list"
     },
     {
         "group": "lispList",
         "linkedGroup": "lispList",
-        "row": 303,
+        "row": 251,
         "char": " "
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
-        "row": 303,
+        "row": 251,
         "char": "pg-db-uri"
     },
     {
         "group": "lispList",
         "linkedGroup": "lispList",
-        "row": 303,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 303,
-        "char": "table-name"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 303,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 303,
-        "char": "gucs"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 303,
-        "char": "))))\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 304,
-        "char": "304"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 304,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 305,
-        "char": "305"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 305,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 305,
-        "char": "defrule"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 305,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 305,
-        "char": "pg-db-uri-from-source-target"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 305,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 305,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 305,
-        "char": "or"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 305,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 305,
-        "char": "load-sqlite-command\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 306,
-        "char": "306"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 306,
-        "char": "                                          "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 306,
-        "char": "load-mysql-command\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 307,
-        "char": "307"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 307,
-        "char": "                                          "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 307,
-        "char": "load-mssql-command"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 307,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 308,
-        "char": "308"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 308,
-        "char": "  "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 308,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 308,
-        "char": ":lambda"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 308,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 308,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 308,
-        "char": "command"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 308,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 309,
-        "char": "309"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 309,
-        "char": "    "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 309,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 309,
-        "char": "destructuring-bind"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 309,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 309,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 309,
-        "char": "source"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 309,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 309,
-        "char": "pg-db-uri"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 309,
-        "char": " "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 309,
-        "char": "&amp;key"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 309,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 309,
-        "char": "gucs"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 309,
-        "char": " "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 309,
-        "char": "&amp;allow-other-keys"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 309,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 310,
-        "char": "310"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 310,
-        "char": "        "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 310,
-        "char": "command\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 311,
-        "char": "311"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 311,
-        "char": "      "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 311,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 311,
-        "char": "declare"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 311,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 311,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 311,
-        "char": "ignore"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 311,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 311,
-        "char": "source"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 311,
-        "char": "))\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 312,
-        "char": "312"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 312,
-        "char": "      "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 312,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 312,
-        "char": "list"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 312,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 312,
-        "char": "pg-db-uri"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 312,
+        "row": 251,
         "char": " "
     },
     {
         "group": "lispFunc",
         "linkedGroup": "Statement",
-        "row": 312,
+        "row": 251,
         "char": "nil"
     },
     {
         "group": "lispList",
         "linkedGroup": "lispList",
-        "row": 312,
+        "row": 251,
         "char": " "
     },
     {
         "group": "lispSymbol",
         "linkedGroup": "lispSymbol",
-        "row": 312,
+        "row": 251,
         "char": "gucs"
     },
     {
         "group": "lispParen",
         "linkedGroup": "Special",
-        "row": 312,
-        "char": "))))\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 313,
-        "char": "313"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 313,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 314,
-        "char": "314"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 314,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 314,
-        "char": "defrule"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 314,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 314,
-        "char": "pg-db-uri-from-source-table-target"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 314,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 314,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 314,
-        "char": "or"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 314,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 314,
-        "char": "load-ixf-command"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 314,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 315,
-        "char": "315"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 315,
-        "char": "  "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 315,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 315,
-        "char": ":lambda"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 315,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 315,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 315,
-        "char": "command"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 315,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 316,
-        "char": "316"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 316,
-        "char": "    "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 316,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 316,
-        "char": "destructuring-bind"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 316,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 316,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 316,
-        "char": "source"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 316,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 316,
-        "char": "pg-db-uri"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 316,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 316,
-        "char": "table-name"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 316,
-        "char": " "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 316,
-        "char": "&amp;key"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 316,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 316,
-        "char": "gucs"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 316,
-        "char": " "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 316,
-        "char": "&amp;allow-other-keys"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 316,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 317,
-        "char": "317"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 317,
-        "char": "        "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 317,
-        "char": "command\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 318,
-        "char": "318"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 318,
-        "char": "      "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 318,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 318,
-        "char": "declare"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 318,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 318,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 318,
-        "char": "ignore"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 318,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 318,
-        "char": "source"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 318,
-        "char": "))\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 319,
-        "char": "319"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 319,
-        "char": "      "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 319,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 319,
-        "char": "list"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 319,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 319,
-        "char": "pg-db-uri"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 319,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 319,
-        "char": "table-name"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 319,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 319,
-        "char": "gucs"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 319,
-        "char": "))))\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 320,
-        "char": "320"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 320,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 321,
-        "char": "321"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 321,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 321,
-        "char": "defrule"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 321,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 321,
-        "char": "pg-db-uri-from-source-and-encoding"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 321,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 321,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 321,
-        "char": "or"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 321,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 321,
-        "char": "load-dbf-command"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 321,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 322,
-        "char": "322"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 322,
-        "char": "  "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 322,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 322,
-        "char": ":lambda"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 322,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 322,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 322,
-        "char": "command"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 322,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 323,
-        "char": "323"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 323,
-        "char": "    "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 323,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 323,
-        "char": "destructuring-bind"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 323,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 323,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 323,
-        "char": "source"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 323,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 323,
-        "char": "encoding"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 323,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 323,
-        "char": "pg-db-uri"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 323,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 323,
-        "char": "table-name\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 324,
-        "char": "324"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 324,
-        "char": "                                "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 324,
-        "char": "&amp;key"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 324,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 324,
-        "char": "gucs"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 324,
-        "char": " "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 324,
-        "char": "&amp;allow-other-keys"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 324,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 325,
-        "char": "325"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 325,
-        "char": "        "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 325,
-        "char": "command\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 326,
-        "char": "326"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 326,
-        "char": "      "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 326,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 326,
-        "char": "declare"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 326,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 326,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 326,
-        "char": "ignore"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 326,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 326,
-        "char": "source"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 326,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 326,
-        "char": "encoding"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 326,
-        "char": "))\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 327,
-        "char": "327"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 327,
-        "char": "      "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 327,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 327,
-        "char": "list"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 327,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 327,
-        "char": "pg-db-uri"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 327,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 327,
-        "char": "table-name"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 327,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 327,
-        "char": "gucs"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 327,
-        "char": "))))\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 328,
-        "char": "328"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 328,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 329,
-        "char": "329"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 329,
-        "char": "("
-    },
-    {
-        "group": "lispDecl",
-        "linkedGroup": "Statement",
-        "row": 329,
-        "char": "defun"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 329,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 329,
-        "char": "parse-target-pg-db-uri"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 329,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 329,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 329,
-        "char": "command-file"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 329,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 330,
-        "char": "330"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 330,
-        "char": "  "
-    },
-    {
-        "group": "lispString",
-        "linkedGroup": "Constant",
-        "row": 330,
-        "char": "&quot;Partially parse COMMAND-FILE and return its target connection string.&quot;\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 331,
-        "char": "331"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 331,
-        "char": "  "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 331,
-        "char": "("
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 331,
-        "char": "let*"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 331,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 331,
-        "char": "(("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 331,
-        "char": "content"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 331,
-        "char": " "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 331,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 331,
-        "char": "read-file-into-string"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 331,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 331,
-        "char": "command-file"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 331,
-        "char": ")))\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 332,
-        "char": "332"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 332,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 333,
-        "char": "333"
-    },
-    {
-        "group": "lispLeadWhite",
-        "linkedGroup": "lispLeadWhite",
-        "row": 333,
-        "char": "    "
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 333,
-        "char": "("
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 333,
-        "char": "parse"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 333,
-        "char": " "
-    },
-    {
-        "group": "lispAtomMark",
-        "linkedGroup": "Special",
-        "row": 333,
-        "char": "&#39;"
-    },
-    {
-        "group": "lispAtom",
-        "linkedGroup": "Identifier",
-        "row": 333,
-        "char": "pg-db-uri-from-command"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 333,
-        "char": " "
-    },
-    {
-        "group": "lispSymbol",
-        "linkedGroup": "lispSymbol",
-        "row": 333,
-        "char": "content"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 333,
-        "char": " "
-    },
-    {
-        "group": "lispKey",
-        "linkedGroup": "Type",
-        "row": 333,
-        "char": ":junk-allowed"
-    },
-    {
-        "group": "lispList",
-        "linkedGroup": "lispList",
-        "row": 333,
-        "char": " "
-    },
-    {
-        "group": "lispFunc",
-        "linkedGroup": "Statement",
-        "row": 333,
-        "char": "t"
-    },
-    {
-        "group": "lispParen",
-        "linkedGroup": "Special",
-        "row": 333,
-        "char": ")))"
+        "row": 251,
+        "char": "))))"
     }
 ]

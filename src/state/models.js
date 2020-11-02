@@ -41,30 +41,41 @@ function PickerModel() {
 }
 
 async function ThemeModel() {
+  const languages = [
+    'javascript',
+    'typescript',
+    'html',
+    'css',
+    'markdown',
+    'bash',
+    'c',
+    'cpp',
+    'go',
+    'lisp',
+    'lua',
+    'rust',
+    'ruby',
+    'perl',
+    'haskell',
+    'clojure',
+    'erlang',
+    'json',
+    'yaml',
+    'toml',
+    'make',
+    'vim',
+  ];
+
   const groups = {
+    ...languages.reduce((acc, curr) => ({ ...acc, [curr]: false }), {}),
+
     misc: true,
     major: true,
     minor: true,
+    javascript: true,
   };
 
-  const languages = {
-    javascript: false,
-    typescript: false,
-    json: false,
-    yaml: false,
-    html: false,
-    css: false,
-    markdown: false,
-    bash: false,
-    c: false,
-    cpp: false,
-    go: false,
-    lisp: false,
-    lua: false,
-    rust: false,
-    ruby: false,
-    perl: false,
-  };
+  const now = new Date().getTime();
 
   return {
     name: 'Untitled',
@@ -72,33 +83,28 @@ async function ThemeModel() {
     version: 'v1',
     editor: 'vim',
     editorTheme: 'dark',
-    exportOptions: {
-      gui: true,
-      term: true,
-    },
+
     groups,
-    languages,
+
     fontSettings: {
-      lineHeight: '16',
+      lineHeight: '14',
       fontSize: '12',
       fontFamily: 'monospace',
     },
-    keywords: keywords.keywords.reduce((o, name) => {
-      const language = keywords.keywordLanguages[name];
-      let langActive;
+    fileHandle: null,
+    created: now,
+    updated: now,
 
-      if (Object.keys(groups).includes(language)) {
-        langActive = groups[language];
-      } else {
-        langActive = languages[language];
-      }
+    descriptions: keywords.descriptions,
+    keywords: keywords.keywords.reduce((o, name) => {
+      const language = keywords.keywordGroups[name];
 
       return {
         ...o,
         [name]: KeywordTemplate({
           name,
-          active: langActive,
-          enabled: langActive,
+          active: groups[language],
+          enabled: groups[language],
         }),
       };
     }, {}),
@@ -110,18 +116,17 @@ async function ThemeModel() {
       await import('../templates/javascript/javascript.example.txt')
     ).default,
     language: 'javascript',
-    refs: keywords.refs,
+    groupKeywords: keywords.groupKeywords,
     keywordLinks: keywords.keywordLinks,
-    inverseKeywordLinks: keywords.inverseKeywordLinks,
-    keywordLanguages: keywords.keywordLanguages,
+    // inverseKeywordLinks: keywords.inverseKeywordLinks, // TODO: Remove this, it's not needed anymore
+    keywordGroups: keywords.keywordGroups,
+    languages,
     languageExtensions: {
       javascript: 'javaScript',
       typescript: 'typescript',
       css: 'css',
       html: 'html',
       markdown: 'markdown',
-      json: 'json',
-      yaml: 'yaml',
       bash: 'sh',
       rust: 'rust',
       ruby: 'ruby',
@@ -131,6 +136,14 @@ async function ThemeModel() {
       lisp: 'lisp',
       lua: 'lua',
       perl: 'pl',
+      haskell: 'hs',
+      clojure: 'clj',
+      erlang: 'erl',
+      json: 'json',
+      yaml: 'yaml',
+      toml: 'toml',
+      make: 'mak',
+      vim: 'vim',
     },
   };
 }
@@ -140,7 +153,7 @@ function PaletteModel() {
 
   const defaultPalette = {
     name: 'Untitled',
-    colors: ['#BE6E46', '#CDE7B0', '#A3BFA8', '#7286A0', '#59594A'],
+    colors: ['#000000', '#ffffff', '#A3BFA8'],
     type: 'default',
 
     selectedColor: null,
@@ -185,7 +198,7 @@ function KeywordTemplate({ name = '', active = true, enabled = true } = {}) {
     enabled, // To temporarily enable / disable a keyword and have its linked counterpart take predence
   };
 
-  return keyword;
+  return cloneDeep(keyword);
 }
 
 export { AppModel, ThemeModel, PickerModel, PaletteModel, KeywordTemplate };

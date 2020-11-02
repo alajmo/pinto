@@ -4,23 +4,10 @@ import { mitt } from 'lib/event.js';
 
 export { FullscreenPreviewView, FullscreenPreviewTemplate };
 
-function updateTemplate(element, keyword, value) {
-  const elements = element.getElementsByClassName(keyword);
-
-  for (let e of elements) {
-    e.style.color = value.foregroundColor;
-    e.style.backgroundColor = value.backgroundColor;
-    e.style.fontWeight = value.bold ? 'bold' : 'normal';
-    e.style.fontStyle = value.italic ? 'italic' : 'normal';
-    const underline = value.underline ? 'underline ' : '';
-    const strikethrough = value.lineThrough ? 'line-through' : '';
-    e.style.textDecoration = `${underline}${strikethrough}`;
-  }
-}
-
-function FullscreenPreviewTemplate({ state, Store }) {
+function FullscreenPreviewTemplate({ state, Store, templateRenderer }) {
   return {
     state,
+    templateRenderer,
 
     props: {
       close() {
@@ -32,10 +19,7 @@ function FullscreenPreviewTemplate({ state, Store }) {
 }
 
 function FullscreenPreviewView({ state, props }) {
-  const themeElement = html.node`
-      <div class="language-preview"></div>
-  `;
-  themeElement.innerHTML = state.theme.template;
+  const el = document.getElementById('code').cloneNode(true);
 
   const { fontFamily, fontSize, lineHeight } = state.theme.fontSettings;
   const { backgroundColor } = state.theme.keywords.Normal;
@@ -45,18 +29,16 @@ function FullscreenPreviewView({ state, props }) {
       <div class="close" onclick="${props.close}">
         <i class="fas fa-times actionable" tabindex="0"></i>
       </div>
+
       <div
+        id="code"
         class="code"
         style="background: ${backgroundColor}; font-family: ${fontFamily}; font-size: ${fontSize}px; line-height: ${lineHeight}px"
       >
-        ${themeElement}
+        ${el}
       </div>
     </div>
   `;
-
-  Object.entries(state.theme.keywords).forEach(keyword =>
-    updateTemplate(element, ...keyword),
-  );
 
   return element;
 }

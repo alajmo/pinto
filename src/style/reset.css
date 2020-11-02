@@ -149,6 +149,11 @@ input:focus {
   outline: 0;
 }
 
+/* Remove the stupid outer glow in Webkit */
+textarea:focus {
+  outline: 0;
+}
+
 /* Box Sizing Reset
 -----------------------------------------------*/
 

@@ -75,6 +75,9 @@
 
       & .keyword-enable-status {
         margin-left: 20px;
+        & > *:not(:last-child) {
+          margin-right: calc(var(--margin) * 2);
+        }
       }
 
       &:hover {

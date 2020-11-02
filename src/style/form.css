@@ -41,6 +41,26 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    &.left {
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: calc(var(--margin) * 6);
+
+      & > *:not(:last-child) {
+        margin-right: calc(var(--margin) * 4);
+      }
+    }
+
+    &.center {
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: calc(var(--margin) * 6);
+
+      & > *:not(:last-child) {
+        margin-right: calc(var(--margin) * 8);
+      }
+    }
   }
 
   & .column {

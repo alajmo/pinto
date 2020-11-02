@@ -62,15 +62,6 @@ function PaletteFormTemplate({ state, Store }) {
           palettes: () => ({ state, Store }),
         };
       },
-
-      addPalette(e) {
-        e.preventDefault();
-        e.stopPropagation();
-
-        Store.dispatch('palette', 'addPalette');
-
-        mitt.emit('RENDER');
-      },
     },
   };
 }
@@ -84,20 +75,25 @@ function PaletteFormView({ state, Store, props }) {
 
       ${compose2(Card)(props => ({
         ...props,
-        mainContent: () => html` ${PalettePickerView(props.colorPicker())} `,
+        mainContent: () =>
+          html`
+            ${PalettePickerView(props.colorPicker())}
+          `,
       }))(props.colorPicker)({ state, Store })}
-
       ${compose2(Card)(props => ({
         ...props,
         topLeftContet: () => html`
           <i
+            title="Add palette"
             onclick="${props.addPalette.onclick}"
             class="fas fa-plus actionable"
           ></i>
         `,
-        mainContent: () => html` ${Palettes(props.palettes())} `,
+        mainContent: () =>
+          html`
+            ${Palettes(props.palettes())}
+          `,
       }))(props.palettes)({ state, Store })}
-
     </div>
   `;
 }

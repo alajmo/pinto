@@ -96,7 +96,6 @@ function PaletteTemplate({ palette, Store }) {
         const state = Store.getState();
         const hex = state.picker.hex;
 
-        console.log(palette);
         Store.dispatch('palette', 'setNormalMode', [palette.i]);
         Store.dispatch('palette', 'addColor', { i: [palette.i], color: hex });
         Store.dispatch('palette', 'selectColor', {
@@ -147,6 +146,7 @@ function PaletteView({ props }) {
             : html`
                 <div class="palette-button">
                   <i
+                    title="Add new color"
                     onclick="${props.addColor}"
                     class="fas fa-xs fa-plus-circle actionable"
                   ></i>
@@ -161,6 +161,7 @@ function PaletteView({ props }) {
                 >
                   <i
                     onclick="${props.toggleRemoveMode}"
+                    title="Toggle remove mode"
                     class="fas fa-xs fa-minus-circle actionable"
                   ></i>
                 </div>
@@ -168,6 +169,7 @@ function PaletteView({ props }) {
 
           <div class="palette-button">
             <i
+              title="Delete palette"
               onclick=${props.removePalette}
               class="fas fa-xs fa-trash actionable"
             ></i>

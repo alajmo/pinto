@@ -285,7 +285,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 18,
-        "char": "\n"
+        "char": "      "
+    },
+    {
+        "group": "cStructure",
+        "linkedGroup": "Type",
+        "row": 18,
+        "char": "struct"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 18,
+        "char": " LeakyStreamInternals {\n"
     },
     {
         "group": "LineNr",
@@ -296,13 +308,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 19,
-        "char": "      "
+        "char": "        LeakyStreamInternals() &#61; "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cLabel",
+        "linkedGroup": "Statement",
         "row": 19,
-        "char": "// Internal implementation that leaks the stream. It&#39;s not intended to be used\n"
+        "char": "default"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 19,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -313,13 +331,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 20,
-        "char": "      "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 20,
-        "char": "// outside of this file.\n"
+        "char": "        C10_DISABLE_COPY_AND_ASSIGN(LeakyStreamInternals);\n"
     },
     {
         "group": "LineNr",
@@ -330,19 +342,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 21,
-        "char": "      "
-    },
-    {
-        "group": "cStructure",
-        "linkedGroup": "Type",
-        "row": 21,
-        "char": "struct"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 21,
-        "char": " LeakyStreamInternals {\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -353,19 +353,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 22,
-        "char": "        LeakyStreamInternals() &#61; "
-    },
-    {
-        "group": "cLabel",
-        "linkedGroup": "Statement",
-        "row": 22,
-        "char": "default"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 22,
-        "char": ";\n"
+        "char": "        ~LeakyStreamInternals() {\n"
     },
     {
         "group": "LineNr",
@@ -376,7 +364,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 23,
-        "char": "        C10_DISABLE_COPY_AND_ASSIGN(LeakyStreamInternals);\n"
+        "char": "        }\n"
     },
     {
         "group": "LineNr",
@@ -398,7 +386,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 25,
-        "char": "        ~LeakyStreamInternals() {\n"
+        "char": "        DeviceIndex device_index &#61; -"
+    },
+    {
+        "group": "cppNumber",
+        "linkedGroup": "Constant",
+        "row": 25,
+        "char": "1"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 25,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -409,13 +409,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 26,
-        "char": "          "
+        "char": "        "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cType",
+        "linkedGroup": "Type",
         "row": 26,
-        "char": "// NB: this code is invoked only in the destruction of global variables\n"
+        "char": "int32_t"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 26,
+        "char": " stream_id &#61; -"
+    },
+    {
+        "group": "cppNumber",
+        "linkedGroup": "Constant",
+        "row": 26,
+        "char": "1"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 26,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -426,13 +444,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 27,
-        "char": "          "
+        "char": "        cudaStream_t stream &#61; "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cppConstant",
+        "linkedGroup": "Constant",
         "row": 27,
-        "char": "// (since we never shrink the corresponding vectors). At this point the CUDA\n"
+        "char": "nullptr"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 27,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -443,13 +467,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 28,
-        "char": "          "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 28,
-        "char": "// runtime might be already destroyed and invoking cudaStreamDestroy leads\n"
+        "char": "      };\n"
     },
     {
         "group": "LineNr",
@@ -460,13 +478,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 29,
-        "char": "          "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 29,
-        "char": "// to a crash. It&#39;s likely an issue in CUDA, but to be safe - let&#39;s just\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -477,13 +489,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 30,
-        "char": "          "
+        "char": "      "
     },
     {
         "group": "cCommentL",
         "linkedGroup": "Comment",
         "row": 30,
-        "char": "// &quot;forget&quot; the destruction.\n"
+        "char": "// Global stream state and constants\n"
     },
     {
         "group": "LineNr",
@@ -494,7 +506,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 31,
-        "char": "\n"
+        "char": "      "
+    },
+    {
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
+        "row": 31,
+        "char": "static"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 31,
+        "char": " DeviceIndex num_gpus &#61; -"
+    },
+    {
+        "group": "cppNumber",
+        "linkedGroup": "Constant",
+        "row": 31,
+        "char": "1"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 31,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -505,13 +541,55 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 32,
-        "char": "          "
+        "char": "      "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
         "row": 32,
-        "char": "// if (stream) cudaStreamDestroy(stream);\n"
+        "char": "static"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 32,
+        "char": " "
+    },
+    {
+        "group": "cppStorageClass",
+        "linkedGroup": "Type",
+        "row": 32,
+        "char": "constexpr"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 32,
+        "char": " "
+    },
+    {
+        "group": "cType",
+        "linkedGroup": "Type",
+        "row": 32,
+        "char": "int"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 32,
+        "char": " kStreamsPerPoolBits &#61; "
+    },
+    {
+        "group": "cppNumber",
+        "linkedGroup": "Constant",
+        "row": 32,
+        "char": "5"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 32,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -522,7 +600,55 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 33,
-        "char": "        }\n"
+        "char": "      "
+    },
+    {
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
+        "row": 33,
+        "char": "static"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 33,
+        "char": " "
+    },
+    {
+        "group": "cppStorageClass",
+        "linkedGroup": "Type",
+        "row": 33,
+        "char": "constexpr"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 33,
+        "char": " "
+    },
+    {
+        "group": "cType",
+        "linkedGroup": "Type",
+        "row": 33,
+        "char": "int"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 33,
+        "char": " kStreamsPerPool &#61; "
+    },
+    {
+        "group": "cppNumber",
+        "linkedGroup": "Constant",
+        "row": 33,
+        "char": "1"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 33,
+        "char": " &lt;&lt; kStreamsPerPoolBits;\n"
     },
     {
         "group": "LineNr",
@@ -533,7 +659,55 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 34,
-        "char": "\n"
+        "char": "      "
+    },
+    {
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
+        "row": 34,
+        "char": "static"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 34,
+        "char": " "
+    },
+    {
+        "group": "cppStorageClass",
+        "linkedGroup": "Type",
+        "row": 34,
+        "char": "constexpr"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 34,
+        "char": " "
+    },
+    {
+        "group": "cType",
+        "linkedGroup": "Type",
+        "row": 34,
+        "char": "unsigned"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 34,
+        "char": " "
+    },
+    {
+        "group": "cType",
+        "linkedGroup": "Type",
+        "row": 34,
+        "char": "int"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 34,
+        "char": " kDefaultFlags &#61; cudaStreamNonBlocking;\n"
     },
     {
         "group": "LineNr",
@@ -544,19 +718,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 35,
-        "char": "        DeviceIndex device_index &#61; -"
-    },
-    {
-        "group": "cppNumber",
-        "linkedGroup": "Constant",
-        "row": 35,
-        "char": "1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 35,
-        "char": ";\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -567,31 +729,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 36,
-        "char": "        "
+        "char": "      "
     },
     {
-        "group": "cType",
-        "linkedGroup": "Type",
+        "group": "cCommentL",
+        "linkedGroup": "Comment",
         "row": 36,
-        "char": "int32_t"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 36,
-        "char": " stream_id &#61; -"
-    },
-    {
-        "group": "cppNumber",
-        "linkedGroup": "Constant",
-        "row": 36,
-        "char": "1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 36,
-        "char": ";\n"
+        "char": "// Note: stream priority is not supported by HIP\n"
     },
     {
         "group": "LineNr",
@@ -602,19 +746,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 37,
-        "char": "        cudaStream_t stream &#61; "
+        "char": "      "
     },
     {
-        "group": "cppConstant",
-        "linkedGroup": "Constant",
+        "group": "cCommentL",
+        "linkedGroup": "Comment",
         "row": 37,
-        "char": "nullptr"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 37,
-        "char": ";\n"
+        "char": "// Note: lower numbers are higher priorities, zero is default priority\n"
     },
     {
         "group": "LineNr",
@@ -622,10 +760,10 @@ module.exports = [
         "char": "38"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "cPreCondit",
+        "linkedGroup": "PreProc",
         "row": 38,
-        "char": "      };\n"
+        "char": "#ifndef __HIP_PLATFORM_HCC__\n"
     },
     {
         "group": "LineNr",
@@ -636,7 +774,43 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 39,
-        "char": "\n"
+        "char": "      "
+    },
+    {
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
+        "row": 39,
+        "char": "static"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 39,
+        "char": " "
+    },
+    {
+        "group": "cType",
+        "linkedGroup": "Type",
+        "row": 39,
+        "char": "int"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 39,
+        "char": " kHighPriority &#61; -"
+    },
+    {
+        "group": "cppNumber",
+        "linkedGroup": "Constant",
+        "row": 39,
+        "char": "1"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 39,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -650,10 +824,40 @@ module.exports = [
         "char": "      "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
         "row": 40,
-        "char": "// Global stream state and constants\n"
+        "char": "static"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 40,
+        "char": " "
+    },
+    {
+        "group": "cType",
+        "linkedGroup": "Type",
+        "row": 40,
+        "char": "int"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 40,
+        "char": " kLowPriority &#61; "
+    },
+    {
+        "group": "cNumber",
+        "linkedGroup": "Constant",
+        "row": 40,
+        "char": "0"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 40,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -661,34 +865,22 @@ module.exports = [
         "char": "41"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "cPreConditMatch",
+        "linkedGroup": "PreProc",
         "row": 41,
-        "char": "      "
-    },
-    {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
-        "row": 41,
-        "char": "static"
+        "char": "#endif"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 41,
-        "char": " DeviceIndex num_gpus &#61; -"
+        "char": " "
     },
     {
-        "group": "cppNumber",
-        "linkedGroup": "Constant",
+        "group": "cCommentL",
+        "linkedGroup": "Comment",
         "row": 41,
-        "char": "1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 41,
-        "char": ";\n"
+        "char": "// __HIP_PLATFORM_HCC__\n"
     },
     {
         "group": "LineNr",
@@ -699,55 +891,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 42,
-        "char": "      "
-    },
-    {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
-        "row": 42,
-        "char": "static"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 42,
-        "char": " "
-    },
-    {
-        "group": "cppStorageClass",
-        "linkedGroup": "Type",
-        "row": 42,
-        "char": "constexpr"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 42,
-        "char": " "
-    },
-    {
-        "group": "cType",
-        "linkedGroup": "Type",
-        "row": 42,
-        "char": "int"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 42,
-        "char": " kStreamsPerPoolBits &#61; "
-    },
-    {
-        "group": "cppNumber",
-        "linkedGroup": "Constant",
-        "row": 42,
-        "char": "5"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 42,
-        "char": ";\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -761,52 +905,10 @@ module.exports = [
         "char": "      "
     },
     {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
+        "group": "cCommentL",
+        "linkedGroup": "Comment",
         "row": 43,
-        "char": "static"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 43,
-        "char": " "
-    },
-    {
-        "group": "cppStorageClass",
-        "linkedGroup": "Type",
-        "row": 43,
-        "char": "constexpr"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 43,
-        "char": " "
-    },
-    {
-        "group": "cType",
-        "linkedGroup": "Type",
-        "row": 43,
-        "char": "int"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 43,
-        "char": " kStreamsPerPool &#61; "
-    },
-    {
-        "group": "cppNumber",
-        "linkedGroup": "Constant",
-        "row": 43,
-        "char": "1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 43,
-        "char": " &lt;&lt; kStreamsPerPoolBits;\n"
+        "char": "// Default streams\n"
     },
     {
         "group": "LineNr",
@@ -829,43 +931,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 44,
-        "char": " "
-    },
-    {
-        "group": "cppStorageClass",
-        "linkedGroup": "Type",
-        "row": 44,
-        "char": "constexpr"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 44,
-        "char": " "
-    },
-    {
-        "group": "cType",
-        "linkedGroup": "Type",
-        "row": 44,
-        "char": "unsigned"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 44,
-        "char": " "
-    },
-    {
-        "group": "cType",
-        "linkedGroup": "Type",
-        "row": 44,
-        "char": "int"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 44,
-        "char": " kDefaultFlags &#61; cudaStreamNonBlocking;\n"
+        "char": " std::once_flag init_flag;\n"
     },
     {
         "group": "LineNr",
@@ -876,7 +942,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 45,
-        "char": "\n"
+        "char": "      "
+    },
+    {
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
+        "row": 45,
+        "char": "static"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 45,
+        "char": " LeakyStreamInternals default_streams[C10_COMPILE_TIME_MAX_GPUS];\n"
     },
     {
         "group": "LineNr",
@@ -887,13 +965,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 46,
-        "char": "      "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 46,
-        "char": "// Note: stream priority is not supported by HIP\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -907,10 +979,16 @@ module.exports = [
         "char": "      "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
         "row": 47,
-        "char": "// Note: lower numbers are higher priorities, zero is default priority\n"
+        "char": "static"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 47,
+        "char": " std::once_flag device_flags[C10_COMPILE_TIME_MAX_GPUS];\n"
     },
     {
         "group": "LineNr",
@@ -918,10 +996,34 @@ module.exports = [
         "char": "48"
     },
     {
-        "group": "cPreCondit",
-        "linkedGroup": "PreProc",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 48,
-        "char": "#ifndef __HIP_PLATFORM_HCC__\n"
+        "char": "      "
+    },
+    {
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
+        "row": 48,
+        "char": "static"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 48,
+        "char": " std::atomic&lt;"
+    },
+    {
+        "group": "cType",
+        "linkedGroup": "Type",
+        "row": 48,
+        "char": "uint32_t"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 48,
+        "char": "&gt; low_priority_counters[C10_COMPILE_TIME_MAX_GPUS];\n"
     },
     {
         "group": "LineNr",
@@ -944,31 +1046,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 49,
-        "char": " "
+        "char": " std::atomic&lt;"
     },
     {
         "group": "cType",
         "linkedGroup": "Type",
         "row": 49,
-        "char": "int"
+        "char": "uint32_t"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 49,
-        "char": " kHighPriority &#61; -"
-    },
-    {
-        "group": "cppNumber",
-        "linkedGroup": "Constant",
-        "row": 49,
-        "char": "1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 49,
-        "char": ";\n"
+        "char": "&gt; high_priority_counters[C10_COMPILE_TIME_MAX_GPUS];\n"
     },
     {
         "group": "LineNr",
@@ -991,31 +1081,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 50,
-        "char": " "
-    },
-    {
-        "group": "cType",
-        "linkedGroup": "Type",
-        "row": 50,
-        "char": "int"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 50,
-        "char": " kLowPriority &#61; "
-    },
-    {
-        "group": "cNumber",
-        "linkedGroup": "Constant",
-        "row": 50,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 50,
-        "char": ";\n"
+        "char": " std::array&lt;LeakyStreamInternals, kStreamsPerPool&gt;\n"
     },
     {
         "group": "LineNr",
@@ -1023,22 +1089,10 @@ module.exports = [
         "char": "51"
     },
     {
-        "group": "cPreConditMatch",
-        "linkedGroup": "PreProc",
-        "row": 51,
-        "char": "#endif"
-    },
-    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 51,
-        "char": " "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 51,
-        "char": "// __HIP_PLATFORM_HCC__\n"
+        "char": "        low_priority_streams[C10_COMPILE_TIME_MAX_GPUS];\n"
     },
     {
         "group": "LineNr",
@@ -1049,7 +1103,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 52,
-        "char": "\n"
+        "char": "      "
+    },
+    {
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
+        "row": 52,
+        "char": "static"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 52,
+        "char": " std::array&lt;LeakyStreamInternals, kStreamsPerPool&gt;\n"
     },
     {
         "group": "LineNr",
@@ -1060,13 +1126,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 53,
-        "char": "      "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 53,
-        "char": "// Default streams\n"
+        "char": "        high_priority_streams[C10_COMPILE_TIME_MAX_GPUS];\n"
     },
     {
         "group": "LineNr",
@@ -1077,19 +1137,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 54,
-        "char": "      "
-    },
-    {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
-        "row": 54,
-        "char": "static"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 54,
-        "char": " std::once_flag init_flag;\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1103,16 +1151,40 @@ module.exports = [
         "char": "      "
     },
     {
-        "group": "cStorageClass",
+        "group": "cStructure",
         "linkedGroup": "Type",
         "row": 55,
-        "char": "static"
+        "char": "enum"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 55,
-        "char": " LeakyStreamInternals default_streams[C10_COMPILE_TIME_MAX_GPUS];\n"
+        "char": " "
+    },
+    {
+        "group": "cppStructure",
+        "linkedGroup": "Type",
+        "row": 55,
+        "char": "class"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 55,
+        "char": " StreamIdType : "
+    },
+    {
+        "group": "cType",
+        "linkedGroup": "Type",
+        "row": 55,
+        "char": "uint8_t"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 55,
+        "char": " {\n"
     },
     {
         "group": "LineNr",
@@ -1123,7 +1195,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 56,
-        "char": "\n"
+        "char": "        DEFAULT &#61; "
+    },
+    {
+        "group": "cppNumber",
+        "linkedGroup": "Constant",
+        "row": 56,
+        "char": "0x0"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 56,
+        "char": ",\n"
     },
     {
         "group": "LineNr",
@@ -1134,13 +1218,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 57,
-        "char": "      "
+        "char": "        LOW &#61; "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cppNumber",
+        "linkedGroup": "Constant",
         "row": 57,
-        "char": "// Non-default streams\n"
+        "char": "0x1"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 57,
+        "char": ",\n"
     },
     {
         "group": "LineNr",
@@ -1151,13 +1241,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 58,
-        "char": "      "
+        "char": "        HIGH &#61; "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cppNumber",
+        "linkedGroup": "Constant",
         "row": 58,
-        "char": "// Note: the number of CUDA devices is determined at run time,\n"
+        "char": "0x2"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 58,
+        "char": ",\n"
     },
     {
         "group": "LineNr",
@@ -1168,13 +1264,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 59,
-        "char": "      "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 59,
-        "char": "// and the low and high priority pools are lazily initialized\n"
+        "char": "      };\n"
     },
     {
         "group": "LineNr",
@@ -1185,13 +1275,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 60,
-        "char": "      "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 60,
-        "char": "// when the first stream is requested for a device.\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1202,13 +1286,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 61,
-        "char": "      "
+        "char": "      std::ostream&amp; "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cppOperator",
+        "linkedGroup": "Statement",
         "row": 61,
-        "char": "// The device flags track the initialization of each device, while\n"
+        "char": "operator"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 61,
+        "char": "&lt;&lt;(std::ostream&amp; stream, StreamIdType s) {\n"
     },
     {
         "group": "LineNr",
@@ -1219,13 +1309,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 62,
-        "char": "      "
+        "char": "        "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cConditional",
+        "linkedGroup": "Statement",
         "row": 62,
-        "char": "// the low and high priority counters track, for each device, the next stream\n"
+        "char": "switch"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 62,
+        "char": " (s) {\n"
     },
     {
         "group": "LineNr",
@@ -1236,13 +1332,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 63,
-        "char": "      "
+        "char": "          "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cLabel",
+        "linkedGroup": "Statement",
         "row": 63,
-        "char": "// in the pool to be returned when a stream is requested (round-robin fashion\n"
+        "char": "case"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 63,
+        "char": " StreamIdType::DEFAULT:\n"
     },
     {
         "group": "LineNr",
@@ -1253,13 +1355,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 64,
-        "char": "      "
+        "char": "            stream &lt;&lt; "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cCppString",
+        "linkedGroup": "Constant",
         "row": 64,
-        "char": "// , see the note in CUDAStream.h).\n"
+        "char": "&quot;DEFAULT&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 64,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -1270,13 +1378,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 65,
-        "char": "      "
+        "char": "            "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cStatement",
+        "linkedGroup": "Statement",
         "row": 65,
-        "char": "//\n"
+        "char": "break"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 65,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -1287,13 +1401,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 66,
-        "char": "      "
+        "char": "          "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cLabel",
+        "linkedGroup": "Statement",
         "row": 66,
-        "char": "// unique_ptr&lt;T[]&gt; is used instead of vector&lt;T&gt; because T might be non-moveable\n"
+        "char": "case"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 66,
+        "char": " StreamIdType::LOW:\n"
     },
     {
         "group": "LineNr",
@@ -1304,13 +1424,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 67,
-        "char": "      "
+        "char": "            stream &lt;&lt; "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cCppString",
+        "linkedGroup": "Constant",
         "row": 67,
-        "char": "// and non-copyable.\n"
+        "char": "&quot;LOW&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 67,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -1321,19 +1447,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 68,
-        "char": "      "
+        "char": "            "
     },
     {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
+        "group": "cStatement",
+        "linkedGroup": "Statement",
         "row": 68,
-        "char": "static"
+        "char": "break"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 68,
-        "char": " std::once_flag device_flags[C10_COMPILE_TIME_MAX_GPUS];\n"
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -1344,31 +1470,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 69,
-        "char": "      "
+        "char": "          "
     },
     {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
+        "group": "cLabel",
+        "linkedGroup": "Statement",
         "row": 69,
-        "char": "static"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 69,
-        "char": " std::atomic&lt;"
-    },
-    {
-        "group": "cType",
-        "linkedGroup": "Type",
-        "row": 69,
-        "char": "uint32_t"
+        "char": "case"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 69,
-        "char": "&gt; low_priority_counters[C10_COMPILE_TIME_MAX_GPUS];\n"
+        "char": " StreamIdType::HIGH:\n"
     },
     {
         "group": "LineNr",
@@ -1379,31 +1493,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 70,
-        "char": "      "
+        "char": "            stream &lt;&lt; "
     },
     {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
+        "group": "cCppString",
+        "linkedGroup": "Constant",
         "row": 70,
-        "char": "static"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 70,
-        "char": " std::atomic&lt;"
-    },
-    {
-        "group": "cType",
-        "linkedGroup": "Type",
-        "row": 70,
-        "char": "uint32_t"
+        "char": "&quot;HIGH&quot;"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 70,
-        "char": "&gt; high_priority_counters[C10_COMPILE_TIME_MAX_GPUS];\n"
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -1414,19 +1516,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 71,
-        "char": "      "
+        "char": "            "
     },
     {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
+        "group": "cStatement",
+        "linkedGroup": "Statement",
         "row": 71,
-        "char": "static"
+        "char": "break"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 71,
-        "char": " std::array&lt;LeakyStreamInternals, kStreamsPerPool&gt;\n"
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -1437,7 +1539,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 72,
-        "char": "        low_priority_streams[C10_COMPILE_TIME_MAX_GPUS];\n"
+        "char": "          "
+    },
+    {
+        "group": "cLabel",
+        "linkedGroup": "Statement",
+        "row": 72,
+        "char": "default"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 72,
+        "char": ":\n"
     },
     {
         "group": "LineNr",
@@ -1448,19 +1562,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 73,
-        "char": "      "
+        "char": "            stream &lt;&lt; "
     },
     {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
+        "group": "cppCast",
+        "linkedGroup": "Statement",
         "row": 73,
-        "char": "static"
+        "char": "static_cast"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 73,
-        "char": " std::array&lt;LeakyStreamInternals, kStreamsPerPool&gt;\n"
+        "char": "&lt;"
+    },
+    {
+        "group": "cType",
+        "linkedGroup": "Type",
+        "row": 73,
+        "char": "uint8_t"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 73,
+        "char": "&gt;(s);\n"
     },
     {
         "group": "LineNr",
@@ -1471,7 +1597,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 74,
-        "char": "        high_priority_streams[C10_COMPILE_TIME_MAX_GPUS];\n"
+        "char": "            "
+    },
+    {
+        "group": "cStatement",
+        "linkedGroup": "Statement",
+        "row": 74,
+        "char": "break"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 74,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -1482,7 +1620,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 75,
-        "char": "\n"
+        "char": "        }\n"
     },
     {
         "group": "LineNr",
@@ -1493,13 +1631,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 76,
-        "char": "      "
+        "char": "        "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cStatement",
+        "linkedGroup": "Statement",
         "row": 76,
-        "char": "// Note [StreamId assignment]\n"
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 76,
+        "char": " stream;\n"
     },
     {
         "group": "LineNr",
@@ -1510,13 +1654,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 77,
-        "char": "      "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 77,
-        "char": "// ~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+        "char": "      }\n"
     },
     {
         "group": "LineNr",
@@ -1527,13 +1665,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 78,
-        "char": "      "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 78,
-        "char": "// How do we assign stream IDs?\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1547,10 +1679,28 @@ module.exports = [
         "char": "      "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
         "row": 79,
-        "char": "//\n"
+        "char": "static"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 79,
+        "char": " "
+    },
+    {
+        "group": "cppModifier",
+        "linkedGroup": "Type",
+        "row": 79,
+        "char": "inline"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 79,
+        "char": " StreamIdType streamIdType(StreamId s) {\n"
     },
     {
         "group": "LineNr",
@@ -1561,13 +1711,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 80,
-        "char": "      "
+        "char": "        "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cStatement",
+        "linkedGroup": "Statement",
         "row": 80,
-        "char": "// -- 25 bits -- -- 2 bits --  -- 5 bits -----\n"
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 80,
+        "char": " "
+    },
+    {
+        "group": "cppCast",
+        "linkedGroup": "Statement",
+        "row": 80,
+        "char": "static_cast"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 80,
+        "char": "&lt;StreamIdType&gt;(s &gt;&gt; kStreamsPerPoolBits);\n"
     },
     {
         "group": "LineNr",
@@ -1578,13 +1746,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 81,
-        "char": "      "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 81,
-        "char": "// zeros         StreamIdType  stream id index\n"
+        "char": "      }\n"
     },
     {
         "group": "LineNr",
@@ -1595,13 +1757,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 82,
-        "char": "      "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 82,
-        "char": "//\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1615,10 +1771,40 @@ module.exports = [
         "char": "      "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
         "row": 83,
-        "char": "// Where StreamIdType:\n"
+        "char": "static"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 83,
+        "char": " "
+    },
+    {
+        "group": "cppModifier",
+        "linkedGroup": "Type",
+        "row": 83,
+        "char": "inline"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 83,
+        "char": " "
+    },
+    {
+        "group": "cType",
+        "linkedGroup": "Type",
+        "row": 83,
+        "char": "size_t"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 83,
+        "char": " streamIdIndex(StreamId s) {\n"
     },
     {
         "group": "LineNr",
@@ -1629,13 +1815,67 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 84,
-        "char": "      "
+        "char": "        "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cStatement",
+        "linkedGroup": "Statement",
         "row": 84,
-        "char": "//  00 &#61; default stream\n"
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 84,
+        "char": " "
+    },
+    {
+        "group": "cppCast",
+        "linkedGroup": "Statement",
+        "row": 84,
+        "char": "static_cast"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 84,
+        "char": "&lt;"
+    },
+    {
+        "group": "cType",
+        "linkedGroup": "Type",
+        "row": 84,
+        "char": "size_t"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 84,
+        "char": "&gt;(s &amp; (("
+    },
+    {
+        "group": "cppNumber",
+        "linkedGroup": "Constant",
+        "row": 84,
+        "char": "1"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 84,
+        "char": " &lt;&lt; kStreamsPerPoolBits) - "
+    },
+    {
+        "group": "cppNumber",
+        "linkedGroup": "Constant",
+        "row": 84,
+        "char": "1"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 84,
+        "char": "));\n"
     },
     {
         "group": "LineNr",
@@ -1646,13 +1886,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 85,
-        "char": "      "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 85,
-        "char": "//  01 &#61; low priority stream\n"
+        "char": "      }\n"
     },
     {
         "group": "LineNr",
@@ -1663,13 +1897,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 86,
-        "char": "      "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 86,
-        "char": "//  10 &#61; high priority stream\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1680,13 +1908,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 87,
-        "char": "      "
+        "char": "      StreamId makeStreamId(StreamIdType st, "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cType",
+        "linkedGroup": "Type",
         "row": 87,
-        "char": "//\n"
+        "char": "size_t"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 87,
+        "char": " si) {\n"
     },
     {
         "group": "LineNr",
@@ -1697,13 +1931,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 88,
-        "char": "      "
+        "char": "        "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cStatement",
+        "linkedGroup": "Statement",
         "row": 88,
-        "char": "// This is not really for efficiency; it&#39;s just easier to write the code\n"
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 88,
+        "char": " ("
+    },
+    {
+        "group": "cppCast",
+        "linkedGroup": "Statement",
+        "row": 88,
+        "char": "static_cast"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 88,
+        "char": "&lt;StreamId&gt;(st) &lt;&lt; kStreamsPerPoolBits) |\n"
     },
     {
         "group": "LineNr",
@@ -1714,13 +1966,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 89,
-        "char": "      "
+        "char": "          "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cppCast",
+        "linkedGroup": "Statement",
         "row": 89,
-        "char": "// to extract the index if we do this with bitmasks :)\n"
+        "char": "static_cast"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 89,
+        "char": "&lt;StreamId&gt;(si);\n"
     },
     {
         "group": "LineNr",
@@ -1731,13 +1989,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 90,
-        "char": "      "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 90,
-        "char": "//\n"
+        "char": "      }\n"
     },
     {
         "group": "LineNr",
@@ -1748,13 +2000,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 91,
-        "char": "      "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 91,
-        "char": "// We are obligated to treat the stream ID 0 as the default stream, per the\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1768,10 +2014,40 @@ module.exports = [
         "char": "      "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cppStructure",
+        "linkedGroup": "Type",
         "row": 92,
-        "char": "// invariant specified in c10::Stream.  However, all other numbers are entirely\n"
+        "char": "template"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 92,
+        "char": " &lt;"
+    },
+    {
+        "group": "cppStructure",
+        "linkedGroup": "Type",
+        "row": 92,
+        "char": "typename"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 92,
+        "char": " T, "
+    },
+    {
+        "group": "cppStructure",
+        "linkedGroup": "Type",
+        "row": 92,
+        "char": "typename"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 92,
+        "char": " A&gt;\n"
     },
     {
         "group": "LineNr",
@@ -1782,13 +2058,55 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 93,
-        "char": "      "
+        "char": "        "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
         "row": 93,
-        "char": "// an internal implementation detail, we reserve the right to renumber streams\n"
+        "char": "static"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 93,
+        "char": " "
+    },
+    {
+        "group": "cppType",
+        "linkedGroup": "Type",
+        "row": 93,
+        "char": "bool"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 93,
+        "char": " pointer_within("
+    },
+    {
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
+        "row": 93,
+        "char": "const"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 93,
+        "char": " T* ptr, "
+    },
+    {
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
+        "row": 93,
+        "char": "const"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 93,
+        "char": " A&amp; arr) {\n"
     },
     {
         "group": "LineNr",
@@ -1799,13 +2117,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 94,
-        "char": "      "
+        "char": "          "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cStatement",
+        "linkedGroup": "Statement",
         "row": 94,
-        "char": "// however we like.\n"
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 94,
+        "char": " std::greater_equal&lt;"
+    },
+    {
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
+        "row": 94,
+        "char": "const"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 94,
+        "char": " T*&gt;()(ptr, arr.data()) &amp;&amp;\n"
     },
     {
         "group": "LineNr",
@@ -1816,13 +2152,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 95,
-        "char": "      "
+        "char": "            std::less&lt;"
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
         "row": 95,
-        "char": "//\n"
+        "char": "const"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 95,
+        "char": " T*&gt;()(ptr, arr.data() + arr.size());\n"
     },
     {
         "group": "LineNr",
@@ -1833,13 +2175,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 96,
-        "char": "      "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 96,
-        "char": "// Note that it is really important that the MSB is zero; StreamId is a\n"
+        "char": "        }\n"
     },
     {
         "group": "LineNr",
@@ -1850,13 +2186,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 97,
-        "char": "      "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 97,
-        "char": "// *signed* integer, and unsigned to signed conversion outside of the\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1870,10 +2200,28 @@ module.exports = [
         "char": "      "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
         "row": 98,
-        "char": "// bounds of signed integer representation is undefined behavior.  You\n"
+        "char": "static"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 98,
+        "char": " StreamId CUDAStream_getStreamId("
+    },
+    {
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
+        "row": 98,
+        "char": "const"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 98,
+        "char": " LeakyStreamInternals* ptr) {\n"
     },
     {
         "group": "LineNr",
@@ -1884,13 +2232,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 99,
-        "char": "      "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 99,
-        "char": "// could work around this with something like\n"
+        "char": "        DeviceIndex device_index &#61; ptr-&gt;device_index;\n"
     },
     {
         "group": "LineNr",
@@ -1901,13 +2243,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 100,
-        "char": "      "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 100,
-        "char": "// https://stackoverflow.com/questions/13150449/efficient-unsigned-to-signed-cast-avoiding-implementation-defined-behavior\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1918,13 +2254,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 101,
-        "char": "      "
+        "char": "        "
     },
     {
         "group": "cCommentL",
         "linkedGroup": "Comment",
         "row": 101,
-        "char": "// but it seems a bit overkill for this.\n"
+        "char": "// Check if it&#39;s the default stream\n"
     },
     {
         "group": "LineNr",
@@ -1935,7 +2271,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 102,
-        "char": "\n"
+        "char": "        "
+    },
+    {
+        "group": "cConditional",
+        "linkedGroup": "Statement",
+        "row": 102,
+        "char": "if"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 102,
+        "char": " (ptr &#61;&#61; &amp;default_streams[device_index]) {\n"
     },
     {
         "group": "LineNr",
@@ -1946,43 +2294,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 103,
-        "char": "      "
+        "char": "          "
     },
     {
-        "group": "cStructure",
-        "linkedGroup": "Type",
+        "group": "cStatement",
+        "linkedGroup": "Statement",
         "row": 103,
-        "char": "enum"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 103,
-        "char": " "
-    },
-    {
-        "group": "cppStructure",
-        "linkedGroup": "Type",
-        "row": 103,
-        "char": "class"
+        "char": "return"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 103,
-        "char": " StreamIdType : "
+        "char": " makeStreamId(StreamIdType::DEFAULT, "
     },
     {
-        "group": "cType",
-        "linkedGroup": "Type",
+        "group": "cNumber",
+        "linkedGroup": "Constant",
         "row": 103,
-        "char": "uint8_t"
+        "char": "0"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 103,
-        "char": " {\n"
+        "char": ");\n"
     },
     {
         "group": "LineNr",
@@ -1993,19 +2329,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 104,
-        "char": "        DEFAULT &#61; "
-    },
-    {
-        "group": "cppNumber",
-        "linkedGroup": "Constant",
-        "row": 104,
-        "char": "0x0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 104,
-        "char": ",\n"
+        "char": "        }\n"
     },
     {
         "group": "LineNr",
@@ -2016,19 +2340,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 105,
-        "char": "        LOW &#61; "
-    },
-    {
-        "group": "cppNumber",
-        "linkedGroup": "Constant",
-        "row": 105,
-        "char": "0x1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 105,
-        "char": ",\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -2039,19 +2351,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 106,
-        "char": "        HIGH &#61; "
+        "char": "        "
     },
     {
-        "group": "cppNumber",
-        "linkedGroup": "Constant",
+        "group": "cConditional",
+        "linkedGroup": "Statement",
         "row": 106,
-        "char": "0x2"
+        "char": "if"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 106,
-        "char": ",\n"
+        "char": " (pointer_within&lt;LeakyStreamInternals&gt;(\n"
     },
     {
         "group": "LineNr",
@@ -2062,7 +2374,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 107,
-        "char": "      };\n"
+        "char": "              ptr, low_priority_streams[device_index])) {\n"
     },
     {
         "group": "LineNr",
@@ -2073,7 +2385,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 108,
-        "char": "\n"
+        "char": "          "
+    },
+    {
+        "group": "cStatement",
+        "linkedGroup": "Statement",
+        "row": 108,
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 108,
+        "char": " makeStreamId(\n"
     },
     {
         "group": "LineNr",
@@ -2084,19 +2408,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 109,
-        "char": "      std::ostream&amp; "
-    },
-    {
-        "group": "cppOperator",
-        "linkedGroup": "Statement",
-        "row": 109,
-        "char": "operator"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 109,
-        "char": "&lt;&lt;(std::ostream&amp; stream, StreamIdType s) {\n"
+        "char": "              StreamIdType::LOW, ptr - low_priority_streams[device_index].data());\n"
     },
     {
         "group": "LineNr",
@@ -2107,19 +2419,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 110,
-        "char": "        "
-    },
-    {
-        "group": "cConditional",
-        "linkedGroup": "Statement",
-        "row": 110,
-        "char": "switch"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 110,
-        "char": " (s) {\n"
+        "char": "        }\n"
     },
     {
         "group": "LineNr",
@@ -2130,19 +2430,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 111,
-        "char": "          "
-    },
-    {
-        "group": "cLabel",
-        "linkedGroup": "Statement",
-        "row": 111,
-        "char": "case"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 111,
-        "char": " StreamIdType::DEFAULT:\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -2153,19 +2441,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 112,
-        "char": "            stream &lt;&lt; "
+        "char": "        "
     },
     {
-        "group": "cCppString",
-        "linkedGroup": "Constant",
+        "group": "cCommentL",
+        "linkedGroup": "Comment",
         "row": 112,
-        "char": "&quot;DEFAULT&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 112,
-        "char": ";\n"
+        "char": "// Check if it&#39;s a high priority stream\n"
     },
     {
         "group": "LineNr",
@@ -2176,19 +2458,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 113,
-        "char": "            "
+        "char": "        "
     },
     {
-        "group": "cStatement",
+        "group": "cConditional",
         "linkedGroup": "Statement",
         "row": 113,
-        "char": "break"
+        "char": "if"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 113,
-        "char": ";\n"
+        "char": " (pointer_within&lt;LeakyStreamInternals&gt;(\n"
     },
     {
         "group": "LineNr",
@@ -2199,19 +2481,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 114,
-        "char": "          "
-    },
-    {
-        "group": "cLabel",
-        "linkedGroup": "Statement",
-        "row": 114,
-        "char": "case"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 114,
-        "char": " StreamIdType::LOW:\n"
+        "char": "              ptr, high_priority_streams[device_index])) {\n"
     },
     {
         "group": "LineNr",
@@ -2222,19 +2492,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 115,
-        "char": "            stream &lt;&lt; "
+        "char": "          "
     },
     {
-        "group": "cCppString",
-        "linkedGroup": "Constant",
+        "group": "cStatement",
+        "linkedGroup": "Statement",
         "row": 115,
-        "char": "&quot;LOW&quot;"
+        "char": "return"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 115,
-        "char": ";\n"
+        "char": " makeStreamId(\n"
     },
     {
         "group": "LineNr",
@@ -2245,19 +2515,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 116,
-        "char": "            "
-    },
-    {
-        "group": "cStatement",
-        "linkedGroup": "Statement",
-        "row": 116,
-        "char": "break"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 116,
-        "char": ";\n"
+        "char": "              StreamIdType::HIGH, ptr - high_priority_streams[device_index].data());\n"
     },
     {
         "group": "LineNr",
@@ -2268,19 +2526,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 117,
-        "char": "          "
-    },
-    {
-        "group": "cLabel",
-        "linkedGroup": "Statement",
-        "row": 117,
-        "char": "case"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 117,
-        "char": " StreamIdType::HIGH:\n"
+        "char": "        }\n"
     },
     {
         "group": "LineNr",
@@ -2291,19 +2537,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 118,
-        "char": "            stream &lt;&lt; "
-    },
-    {
-        "group": "cCppString",
-        "linkedGroup": "Constant",
-        "row": 118,
-        "char": "&quot;HIGH&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 118,
-        "char": ";\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -2314,19 +2548,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 119,
-        "char": "            "
-    },
-    {
-        "group": "cStatement",
-        "linkedGroup": "Statement",
-        "row": 119,
-        "char": "break"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 119,
-        "char": ";\n"
+        "char": "        AT_ASSERTM(\n"
     },
     {
         "group": "LineNr",
@@ -2337,19 +2559,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 120,
-        "char": "          "
+        "char": "            "
     },
     {
-        "group": "cLabel",
-        "linkedGroup": "Statement",
+        "group": "cNumber",
+        "linkedGroup": "Constant",
         "row": 120,
-        "char": "default"
+        "char": "0"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 120,
-        "char": ":\n"
+        "char": ",\n"
     },
     {
         "group": "LineNr",
@@ -2360,31 +2582,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 121,
-        "char": "            stream &lt;&lt; "
+        "char": "            "
     },
     {
-        "group": "cppCast",
-        "linkedGroup": "Statement",
+        "group": "cString",
+        "linkedGroup": "Constant",
         "row": 121,
-        "char": "static_cast"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 121,
-        "char": "&lt;"
-    },
-    {
-        "group": "cType",
-        "linkedGroup": "Type",
-        "row": 121,
-        "char": "uint8_t"
+        "char": "&quot;Could not compute stream ID for &quot;"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 121,
-        "char": "&gt;(s);\n"
+        "char": ",\n"
     },
     {
         "group": "LineNr",
@@ -2395,19 +2605,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 122,
-        "char": "            "
-    },
-    {
-        "group": "cStatement",
-        "linkedGroup": "Statement",
-        "row": 122,
-        "char": "break"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 122,
-        "char": ";\n"
+        "char": "            ptr,\n"
     },
     {
         "group": "LineNr",
@@ -2418,7 +2616,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 123,
-        "char": "        }\n"
+        "char": "            "
+    },
+    {
+        "group": "cString",
+        "linkedGroup": "Constant",
+        "row": 123,
+        "char": "&quot; on device &quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 123,
+        "char": ",\n"
     },
     {
         "group": "LineNr",
@@ -2429,19 +2639,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 124,
-        "char": "        "
-    },
-    {
-        "group": "cStatement",
-        "linkedGroup": "Statement",
-        "row": 124,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 124,
-        "char": " stream;\n"
+        "char": "            device_index,\n"
     },
     {
         "group": "LineNr",
@@ -2452,7 +2650,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 125,
-        "char": "      }\n"
+        "char": "            "
+    },
+    {
+        "group": "cString",
+        "linkedGroup": "Constant",
+        "row": 125,
+        "char": "&quot; (something has gone horribly wrong!)&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 125,
+        "char": ");\n"
     },
     {
         "group": "LineNr",
@@ -2463,7 +2673,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 126,
-        "char": "\n"
+        "char": "      }\n"
     },
     {
         "group": "LineNr",
@@ -2474,13 +2684,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 127,
-        "char": "      "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 127,
-        "char": "// StreamId is 32-bit, so we can just rely on regular promotion rules.\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -2497,7 +2701,7 @@ module.exports = [
         "group": "cCommentL",
         "linkedGroup": "Comment",
         "row": 128,
-        "char": "// We rely on streamIdIndex and streamIdType being non-negative;\n"
+        "char": "// Thread-local current streams\n"
     },
     {
         "group": "LineNr",
@@ -2511,10 +2715,40 @@ module.exports = [
         "char": "      "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
         "row": 129,
-        "char": "// see Note [Hazard when concatenating signed integers]\n"
+        "char": "static"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 129,
+        "char": " "
+    },
+    {
+        "group": "cppStorageClass",
+        "linkedGroup": "Type",
+        "row": 129,
+        "char": "thread_local"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 129,
+        "char": " LeakyStreamInternals** current_streams &#61; "
+    },
+    {
+        "group": "cppConstant",
+        "linkedGroup": "Constant",
+        "row": 129,
+        "char": "nullptr"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 129,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -2551,16 +2785,16 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "cppModifier",
+        "group": "cType",
         "linkedGroup": "Type",
         "row": 131,
-        "char": "inline"
+        "char": "void"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 131,
-        "char": " StreamIdType streamIdType(StreamId s) {\n"
+        "char": " initGlobalStreamState() {\n"
     },
     {
         "group": "LineNr",
@@ -2571,31 +2805,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 132,
-        "char": "        "
-    },
-    {
-        "group": "cStatement",
-        "linkedGroup": "Statement",
-        "row": 132,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 132,
-        "char": " "
-    },
-    {
-        "group": "cppCast",
-        "linkedGroup": "Statement",
-        "row": 132,
-        "char": "static_cast"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 132,
-        "char": "&lt;StreamIdType&gt;(s &gt;&gt; kStreamsPerPoolBits);\n"
+        "char": "        num_gpus &#61; device_count();\n"
     },
     {
         "group": "LineNr",
@@ -2606,7 +2816,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 133,
-        "char": "      }\n"
+        "char": "        "
+    },
+    {
+        "group": "cCommentL",
+        "linkedGroup": "Comment",
+        "row": 133,
+        "char": "// Check if the number of GPUs matches the expected compile-time max number\n"
     },
     {
         "group": "LineNr",
@@ -2617,7 +2833,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 134,
-        "char": "\n"
+        "char": "        "
+    },
+    {
+        "group": "cCommentL",
+        "linkedGroup": "Comment",
+        "row": 134,
+        "char": "// of GPUs.\n"
     },
     {
         "group": "LineNr",
@@ -2628,43 +2850,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 135,
-        "char": "      "
-    },
-    {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
-        "row": 135,
-        "char": "static"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 135,
-        "char": " "
-    },
-    {
-        "group": "cppModifier",
-        "linkedGroup": "Type",
-        "row": 135,
-        "char": "inline"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 135,
-        "char": " "
-    },
-    {
-        "group": "cType",
-        "linkedGroup": "Type",
-        "row": 135,
-        "char": "size_t"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 135,
-        "char": " streamIdIndex(StreamId s) {\n"
+        "char": "        AT_ASSERTM(\n"
     },
     {
         "group": "LineNr",
@@ -2675,67 +2861,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 136,
-        "char": "        "
-    },
-    {
-        "group": "cStatement",
-        "linkedGroup": "Statement",
-        "row": 136,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 136,
-        "char": " "
-    },
-    {
-        "group": "cppCast",
-        "linkedGroup": "Statement",
-        "row": 136,
-        "char": "static_cast"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 136,
-        "char": "&lt;"
-    },
-    {
-        "group": "cType",
-        "linkedGroup": "Type",
-        "row": 136,
-        "char": "size_t"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 136,
-        "char": "&gt;(s &amp; (("
-    },
-    {
-        "group": "cppNumber",
-        "linkedGroup": "Constant",
-        "row": 136,
-        "char": "1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 136,
-        "char": " &lt;&lt; kStreamsPerPoolBits) - "
-    },
-    {
-        "group": "cppNumber",
-        "linkedGroup": "Constant",
-        "row": 136,
-        "char": "1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 136,
-        "char": "));\n"
+        "char": "            num_gpus &lt;&#61; C10_COMPILE_TIME_MAX_GPUS,\n"
     },
     {
         "group": "LineNr",
@@ -2746,7 +2872,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 137,
-        "char": "      }\n"
+        "char": "            "
+    },
+    {
+        "group": "cString",
+        "linkedGroup": "Constant",
+        "row": 137,
+        "char": "&quot;Number of CUDA devices on the machine is larger than the compiled &quot;\n"
     },
     {
         "group": "LineNr",
@@ -2757,7 +2889,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 138,
-        "char": "\n"
+        "char": "            "
+    },
+    {
+        "group": "cString",
+        "linkedGroup": "Constant",
+        "row": 138,
+        "char": "&quot;max number of gpus expected (&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 138,
+        "char": ",\n"
     },
     {
         "group": "LineNr",
@@ -2768,19 +2912,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 139,
-        "char": "      StreamId makeStreamId(StreamIdType st, "
-    },
-    {
-        "group": "cType",
-        "linkedGroup": "Type",
-        "row": 139,
-        "char": "size_t"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 139,
-        "char": " si) {\n"
+        "char": "            C10_COMPILE_TIME_MAX_GPUS,\n"
     },
     {
         "group": "LineNr",
@@ -2791,31 +2923,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 140,
-        "char": "        "
+        "char": "            "
     },
     {
-        "group": "cStatement",
-        "linkedGroup": "Statement",
+        "group": "cString",
+        "linkedGroup": "Constant",
         "row": 140,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 140,
-        "char": " ("
-    },
-    {
-        "group": "cppCast",
-        "linkedGroup": "Statement",
-        "row": 140,
-        "char": "static_cast"
+        "char": "&quot;). Increase that and recompile.&quot;"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 140,
-        "char": "&lt;StreamId&gt;(st) &lt;&lt; kStreamsPerPoolBits) |\n"
+        "char": ");\n"
     },
     {
         "group": "LineNr",
@@ -2826,19 +2946,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 141,
-        "char": "          "
-    },
-    {
-        "group": "cppCast",
-        "linkedGroup": "Statement",
-        "row": 141,
-        "char": "static_cast"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 141,
-        "char": "&lt;StreamId&gt;(si);\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -2849,7 +2957,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 142,
-        "char": "      }\n"
+        "char": "        "
+    },
+    {
+        "group": "cCommentL",
+        "linkedGroup": "Comment",
+        "row": 142,
+        "char": "// Initializes default streams\n"
     },
     {
         "group": "LineNr",
@@ -2860,7 +2974,55 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 143,
-        "char": "\n"
+        "char": "        "
+    },
+    {
+        "group": "cRepeat",
+        "linkedGroup": "Statement",
+        "row": 143,
+        "char": "for"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 143,
+        "char": " ("
+    },
+    {
+        "group": "cppType",
+        "linkedGroup": "Type",
+        "row": 143,
+        "char": "auto"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 143,
+        "char": " i &#61; "
+    },
+    {
+        "group": "cppStorageClass",
+        "linkedGroup": "Type",
+        "row": 143,
+        "char": "decltype"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 143,
+        "char": "(num_gpus){"
+    },
+    {
+        "group": "cNumber",
+        "linkedGroup": "Constant",
+        "row": 143,
+        "char": "0"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 143,
+        "char": "}; i &lt; num_gpus; ++i) {\n"
     },
     {
         "group": "LineNr",
@@ -2871,43 +3033,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 144,
-        "char": "      "
-    },
-    {
-        "group": "cppStructure",
-        "linkedGroup": "Type",
-        "row": 144,
-        "char": "template"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 144,
-        "char": " &lt;"
-    },
-    {
-        "group": "cppStructure",
-        "linkedGroup": "Type",
-        "row": 144,
-        "char": "typename"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 144,
-        "char": " T, "
-    },
-    {
-        "group": "cppStructure",
-        "linkedGroup": "Type",
-        "row": 144,
-        "char": "typename"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 144,
-        "char": " A&gt;\n"
+        "char": "          default_streams[i].device_index &#61; i;\n"
     },
     {
         "group": "LineNr",
@@ -2918,55 +3044,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 145,
-        "char": "        "
+        "char": "          low_priority_counters[i] &#61; "
     },
     {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
+        "group": "cNumber",
+        "linkedGroup": "Constant",
         "row": 145,
-        "char": "static"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 145,
-        "char": " "
-    },
-    {
-        "group": "cppType",
-        "linkedGroup": "Type",
-        "row": 145,
-        "char": "bool"
+        "char": "0"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 145,
-        "char": " pointer_within("
-    },
-    {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
-        "row": 145,
-        "char": "const"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 145,
-        "char": " T* ptr, "
-    },
-    {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
-        "row": 145,
-        "char": "const"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 145,
-        "char": " A&amp; arr) {\n"
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -2977,31 +3067,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 146,
-        "char": "          "
+        "char": "          high_priority_counters[i] &#61; "
     },
     {
-        "group": "cStatement",
-        "linkedGroup": "Statement",
+        "group": "cNumber",
+        "linkedGroup": "Constant",
         "row": 146,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 146,
-        "char": " std::greater_equal&lt;"
-    },
-    {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
-        "row": 146,
-        "char": "const"
+        "char": "0"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 146,
-        "char": " T*&gt;()(ptr, arr.data()) &amp;&amp;\n"
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -3012,19 +3090,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 147,
-        "char": "            std::less&lt;"
-    },
-    {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
-        "row": 147,
-        "char": "const"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 147,
-        "char": " T*&gt;()(ptr, arr.data() + arr.size());\n"
+        "char": "        }\n"
     },
     {
         "group": "LineNr",
@@ -3035,7 +3101,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 148,
-        "char": "        }\n"
+        "char": "      }\n"
     },
     {
         "group": "LineNr",
@@ -3060,28 +3126,10 @@ module.exports = [
         "char": "      "
     },
     {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
+        "group": "cCommentL",
+        "linkedGroup": "Comment",
         "row": 150,
-        "char": "static"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 150,
-        "char": " StreamId CUDAStream_getStreamId("
-    },
-    {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
-        "row": 150,
-        "char": "const"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 150,
-        "char": " LeakyStreamInternals* ptr) {\n"
+        "char": "// Init front-end to ensure initialization only occurs once\n"
     },
     {
         "group": "LineNr",
@@ -3092,13 +3140,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 151,
-        "char": "        "
+        "char": "      "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
         "row": 151,
-        "char": "// Hypothetically, we could store the stream ID in the stream.  But that\n"
+        "char": "static"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 151,
+        "char": " "
+    },
+    {
+        "group": "cType",
+        "linkedGroup": "Type",
+        "row": 151,
+        "char": "void"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 151,
+        "char": " initCUDAStreamsOnce() {\n"
     },
     {
         "group": "LineNr",
@@ -3115,7 +3181,7 @@ module.exports = [
         "group": "cCommentL",
         "linkedGroup": "Comment",
         "row": 152,
-        "char": "// introduces a degree of freedom which could lead to bugs (where we\n"
+        "char": "// Inits default streams (once, globally)\n"
     },
     {
         "group": "LineNr",
@@ -3126,13 +3192,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 153,
-        "char": "        "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 153,
-        "char": "// misnumber streams in the pool, or overwrite the number).  Better\n"
+        "char": "        std::call_once(init_flag, initGlobalStreamState);\n"
     },
     {
         "group": "LineNr",
@@ -3143,13 +3203,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 154,
-        "char": "        "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 154,
-        "char": "// to just compute it based on the metric that actually matters,\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -3163,10 +3217,16 @@ module.exports = [
         "char": "        "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cConditional",
+        "linkedGroup": "Statement",
         "row": 155,
-        "char": "// which is how we map IDs back into the vectors.\n"
+        "char": "if"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 155,
+        "char": " (current_streams) {\n"
     },
     {
         "group": "LineNr",
@@ -3177,7 +3237,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 156,
-        "char": "\n"
+        "char": "          "
+    },
+    {
+        "group": "cStatement",
+        "linkedGroup": "Statement",
+        "row": 156,
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 156,
+        "char": ";\n"
     },
     {
         "group": "LineNr",
@@ -3188,7 +3260,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 157,
-        "char": "        DeviceIndex device_index &#61; ptr-&gt;device_index;\n"
+        "char": "        }\n"
     },
     {
         "group": "LineNr",
@@ -3216,7 +3288,7 @@ module.exports = [
         "group": "cCommentL",
         "linkedGroup": "Comment",
         "row": 159,
-        "char": "// Check if it&#39;s the default stream\n"
+        "char": "// Inits current streams (thread local) to default streams\n"
     },
     {
         "group": "LineNr",
@@ -3227,19 +3299,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 160,
-        "char": "        "
-    },
-    {
-        "group": "cConditional",
-        "linkedGroup": "Statement",
-        "row": 160,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 160,
-        "char": " (ptr &#61;&#61; &amp;default_streams[device_index]) {\n"
+        "char": "        current_streams &#61;\n"
     },
     {
         "group": "LineNr",
@@ -3250,31 +3310,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 161,
-        "char": "          "
+        "char": "          (LeakyStreamInternals**)malloc(num_gpus * "
     },
     {
-        "group": "cStatement",
+        "group": "cOperator",
         "linkedGroup": "Statement",
         "row": 161,
-        "char": "return"
+        "char": "sizeof"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 161,
-        "char": " makeStreamId(StreamIdType::DEFAULT, "
-    },
-    {
-        "group": "cNumber",
-        "linkedGroup": "Constant",
-        "row": 161,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 161,
-        "char": ");\n"
+        "char": "(LeakyStreamInternals*));\n"
     },
     {
         "group": "LineNr",
@@ -3285,7 +3333,55 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 162,
-        "char": "        }\n"
+        "char": "        "
+    },
+    {
+        "group": "cRepeat",
+        "linkedGroup": "Statement",
+        "row": 162,
+        "char": "for"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 162,
+        "char": " ("
+    },
+    {
+        "group": "cppType",
+        "linkedGroup": "Type",
+        "row": 162,
+        "char": "auto"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 162,
+        "char": " i &#61; "
+    },
+    {
+        "group": "cppStorageClass",
+        "linkedGroup": "Type",
+        "row": 162,
+        "char": "decltype"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 162,
+        "char": "(num_gpus){"
+    },
+    {
+        "group": "cNumber",
+        "linkedGroup": "Constant",
+        "row": 162,
+        "char": "0"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 162,
+        "char": "}; i &lt; num_gpus; ++i) {\n"
     },
     {
         "group": "LineNr",
@@ -3296,7 +3392,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 163,
-        "char": "\n"
+        "char": "          current_streams[i] &#61; &amp;default_streams[i];\n"
     },
     {
         "group": "LineNr",
@@ -3307,13 +3403,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 164,
-        "char": "        "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 164,
-        "char": "// Check if it&#39;s a low priority stream\n"
+        "char": "        }\n"
     },
     {
         "group": "LineNr",
@@ -3324,13 +3414,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 165,
-        "char": "        "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 165,
-        "char": "// NB: Because ptr may not necessarily lie within the array, we must use\n"
+        "char": "      }\n"
     },
     {
         "group": "LineNr",
@@ -3341,13 +3425,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 166,
-        "char": "        "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 166,
-        "char": "// std::less and similar templates to avoid UB that arises when\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -3358,13 +3436,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 167,
-        "char": "        "
+        "char": "      "
     },
     {
         "group": "cCommentL",
         "linkedGroup": "Comment",
         "row": 167,
-        "char": "// doing an operator&lt; comparison.\n"
+        "char": "// Helper to verify the GPU index is valid\n"
     },
     {
         "group": "LineNr",
@@ -3375,19 +3453,43 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 168,
-        "char": "        "
+        "char": "      "
     },
     {
-        "group": "cConditional",
-        "linkedGroup": "Statement",
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
         "row": 168,
-        "char": "if"
+        "char": "static"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 168,
-        "char": " (pointer_within&lt;LeakyStreamInternals&gt;(\n"
+        "char": " "
+    },
+    {
+        "group": "cppModifier",
+        "linkedGroup": "Type",
+        "row": 168,
+        "char": "inline"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 168,
+        "char": " "
+    },
+    {
+        "group": "cType",
+        "linkedGroup": "Type",
+        "row": 168,
+        "char": "void"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 168,
+        "char": " check_gpu(DeviceIndex device_index) {\n"
     },
     {
         "group": "LineNr",
@@ -3398,7 +3500,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 169,
-        "char": "              ptr, low_priority_streams[device_index])) {\n"
+        "char": "        AT_ASSERT(device_index &gt;&#61; "
+    },
+    {
+        "group": "cNumber",
+        "linkedGroup": "Constant",
+        "row": 169,
+        "char": "0"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 169,
+        "char": " &amp;&amp; device_index &lt; num_gpus);\n"
     },
     {
         "group": "LineNr",
@@ -3409,19 +3523,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 170,
-        "char": "          "
-    },
-    {
-        "group": "cStatement",
-        "linkedGroup": "Statement",
-        "row": 170,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 170,
-        "char": " makeStreamId(\n"
+        "char": "      }\n"
     },
     {
         "group": "LineNr",
@@ -3432,7 +3534,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 171,
-        "char": "              StreamIdType::LOW, ptr - low_priority_streams[device_index].data());\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -3443,7 +3545,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 172,
-        "char": "        }\n"
+        "char": "      "
+    },
+    {
+        "group": "cCommentL",
+        "linkedGroup": "Comment",
+        "row": 172,
+        "char": "// Helper to determine the index of the stream to return\n"
     },
     {
         "group": "LineNr",
@@ -3454,7 +3562,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 173,
-        "char": "\n"
+        "char": "      "
+    },
+    {
+        "group": "cCommentL",
+        "linkedGroup": "Comment",
+        "row": 173,
+        "char": "// Note: Streams are returned round-robin (see note in CUDAStream.h)\n"
     },
     {
         "group": "LineNr",
@@ -3465,13 +3579,43 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 174,
-        "char": "        "
+        "char": "      "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
         "row": 174,
-        "char": "// Check if it&#39;s a high priority stream\n"
+        "char": "static"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 174,
+        "char": " "
+    },
+    {
+        "group": "cType",
+        "linkedGroup": "Type",
+        "row": 174,
+        "char": "uint32_t"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 174,
+        "char": " get_idx(std::atomic&lt;"
+    },
+    {
+        "group": "cType",
+        "linkedGroup": "Type",
+        "row": 174,
+        "char": "uint32_t"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 174,
+        "char": "&gt;&amp; counter) {\n"
     },
     {
         "group": "LineNr",
@@ -3485,16 +3629,16 @@ module.exports = [
         "char": "        "
     },
     {
-        "group": "cConditional",
-        "linkedGroup": "Statement",
+        "group": "cppType",
+        "linkedGroup": "Type",
         "row": 175,
-        "char": "if"
+        "char": "auto"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 175,
-        "char": " (pointer_within&lt;LeakyStreamInternals&gt;(\n"
+        "char": " raw_idx &#61; counter++;\n"
     },
     {
         "group": "LineNr",
@@ -3505,7 +3649,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 176,
-        "char": "              ptr, high_priority_streams[device_index])) {\n"
+        "char": "        "
+    },
+    {
+        "group": "cStatement",
+        "linkedGroup": "Statement",
+        "row": 176,
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 176,
+        "char": " raw_idx % kStreamsPerPool;\n"
     },
     {
         "group": "LineNr",
@@ -3516,19 +3672,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 177,
-        "char": "          "
-    },
-    {
-        "group": "cStatement",
-        "linkedGroup": "Statement",
-        "row": 177,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 177,
-        "char": " makeStreamId(\n"
+        "char": "      }\n"
     },
     {
         "group": "LineNr",
@@ -3539,7 +3683,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 178,
-        "char": "              StreamIdType::HIGH, ptr - high_priority_streams[device_index].data());\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -3550,7 +3694,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 179,
-        "char": "        }\n"
+        "char": "      "
+    },
+    {
+        "group": "cCommentL",
+        "linkedGroup": "Comment",
+        "row": 179,
+        "char": "// See Note [StreamId assignment]\n"
     },
     {
         "group": "LineNr",
@@ -3561,7 +3711,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 180,
-        "char": "\n"
+        "char": "      LeakyStreamInternals* CUDAStream_internals(CUDAStream s) {\n"
     },
     {
         "group": "LineNr",
@@ -3572,7 +3722,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 181,
-        "char": "        AT_ASSERTM(\n"
+        "char": "        c10::DeviceIndex device_index &#61; s.device_index();\n"
     },
     {
         "group": "LineNr",
@@ -3583,19 +3733,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 182,
-        "char": "            "
-    },
-    {
-        "group": "cNumber",
-        "linkedGroup": "Constant",
-        "row": 182,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 182,
-        "char": ",\n"
+        "char": "        StreamIdType st &#61; streamIdType(s.unwrap().id());\n"
     },
     {
         "group": "LineNr",
@@ -3606,19 +3744,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 183,
-        "char": "            "
+        "char": "        "
     },
     {
-        "group": "cString",
-        "linkedGroup": "Constant",
+        "group": "cType",
+        "linkedGroup": "Type",
         "row": 183,
-        "char": "&quot;Could not compute stream ID for &quot;"
+        "char": "size_t"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 183,
-        "char": ",\n"
+        "char": " si &#61; streamIdIndex(s.unwrap().id());\n"
     },
     {
         "group": "LineNr",
@@ -3629,7 +3767,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 184,
-        "char": "            ptr,\n"
+        "char": "        "
+    },
+    {
+        "group": "cConditional",
+        "linkedGroup": "Statement",
+        "row": 184,
+        "char": "switch"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 184,
+        "char": " (st) {\n"
     },
     {
         "group": "LineNr",
@@ -3640,19 +3790,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 185,
-        "char": "            "
+        "char": "          "
     },
     {
-        "group": "cString",
-        "linkedGroup": "Constant",
+        "group": "cLabel",
+        "linkedGroup": "Statement",
         "row": 185,
-        "char": "&quot; on device &quot;"
+        "char": "case"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 185,
-        "char": ",\n"
+        "char": " StreamIdType::DEFAULT:\n"
     },
     {
         "group": "LineNr",
@@ -3663,7 +3813,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 186,
-        "char": "            device_index,\n"
+        "char": "            AT_ASSERTM(\n"
     },
     {
         "group": "LineNr",
@@ -3674,19 +3824,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 187,
-        "char": "            "
+        "char": "                si &#61;&#61; "
     },
     {
-        "group": "cString",
+        "group": "cNumber",
         "linkedGroup": "Constant",
         "row": 187,
-        "char": "&quot; (something has gone horribly wrong!)&quot;"
+        "char": "0"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 187,
-        "char": ");\n"
+        "char": ",\n"
     },
     {
         "group": "LineNr",
@@ -3697,7 +3847,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 188,
-        "char": "      }\n"
+        "char": "                "
+    },
+    {
+        "group": "cString",
+        "linkedGroup": "Constant",
+        "row": 188,
+        "char": "&quot;Unrecognized stream &quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 188,
+        "char": ",\n"
     },
     {
         "group": "LineNr",
@@ -3708,7 +3870,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 189,
-        "char": "\n"
+        "char": "                s.unwrap(),\n"
     },
     {
         "group": "LineNr",
@@ -3719,13 +3881,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 190,
-        "char": "      "
+        "char": "                "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cString",
+        "linkedGroup": "Constant",
         "row": 190,
-        "char": "// Thread-local current streams\n"
+        "char": "&quot; (I think this should be the default stream, but I got a non-zero index &quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 190,
+        "char": ",\n"
     },
     {
         "group": "LineNr",
@@ -3736,43 +3904,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 191,
-        "char": "      "
-    },
-    {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
-        "row": 191,
-        "char": "static"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 191,
-        "char": " "
-    },
-    {
-        "group": "cppStorageClass",
-        "linkedGroup": "Type",
-        "row": 191,
-        "char": "thread_local"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 191,
-        "char": " LeakyStreamInternals** current_streams &#61; "
-    },
-    {
-        "group": "cppConstant",
-        "linkedGroup": "Constant",
-        "row": 191,
-        "char": "nullptr"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 191,
-        "char": ";\n"
+        "char": "                si,\n"
     },
     {
         "group": "LineNr",
@@ -3783,7 +3915,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 192,
-        "char": "\n"
+        "char": "                "
+    },
+    {
+        "group": "cString",
+        "linkedGroup": "Constant",
+        "row": 192,
+        "char": "&quot;).&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 192,
+        "char": ",\n"
     },
     {
         "group": "LineNr",
@@ -3794,13 +3938,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 193,
-        "char": "      "
+        "char": "                "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cString",
+        "linkedGroup": "Constant",
         "row": 193,
-        "char": "// Populates global values and creates a default stream for each device.\n"
+        "char": "&quot; Did you manufacture the StreamId yourself?  Don&#39;t do that; use the&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 193,
+        "char": ",\n"
     },
     {
         "group": "LineNr",
@@ -3811,13 +3961,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 194,
-        "char": "      "
+        "char": "                "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cString",
+        "linkedGroup": "Constant",
         "row": 194,
-        "char": "// Note: the default stream on each device is signified by a nullptr,\n"
+        "char": "&quot; official API like c10::cuda::getStreamFromPool() to get a new stream.&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 194,
+        "char": ");\n"
     },
     {
         "group": "LineNr",
@@ -3828,13 +3984,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 195,
-        "char": "      "
+        "char": "            "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cStatement",
+        "linkedGroup": "Statement",
         "row": 195,
-        "char": "// and so is not created as usual.\n"
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 195,
+        "char": " &amp;default_streams[device_index];\n"
     },
     {
         "group": "LineNr",
@@ -3845,13 +4007,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 196,
-        "char": "      "
+        "char": "          "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cLabel",
+        "linkedGroup": "Statement",
         "row": 196,
-        "char": "// In particular, we don&#39;t need to switch devices when creating the\n"
+        "char": "case"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 196,
+        "char": " StreamIdType::LOW:\n"
     },
     {
         "group": "LineNr",
@@ -3862,13 +4030,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 197,
-        "char": "      "
+        "char": "            "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cStatement",
+        "linkedGroup": "Statement",
         "row": 197,
-        "char": "// streams.\n"
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 197,
+        "char": " &amp;low_priority_streams[device_index][si];\n"
     },
     {
         "group": "LineNr",
@@ -3879,13 +4053,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 198,
-        "char": "      "
+        "char": "          "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cLabel",
+        "linkedGroup": "Statement",
         "row": 198,
-        "char": "// Warning: this function must only be called once!\n"
+        "char": "case"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 198,
+        "char": " StreamIdType::HIGH:\n"
     },
     {
         "group": "LineNr",
@@ -3896,31 +4076,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 199,
-        "char": "      "
+        "char": "            "
     },
     {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
+        "group": "cStatement",
+        "linkedGroup": "Statement",
         "row": 199,
-        "char": "static"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 199,
-        "char": " "
-    },
-    {
-        "group": "cType",
-        "linkedGroup": "Type",
-        "row": 199,
-        "char": "void"
+        "char": "return"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 199,
-        "char": " initGlobalStreamState() {\n"
+        "char": " &amp;high_priority_streams[device_index][si];\n"
     },
     {
         "group": "LineNr",
@@ -3931,7 +4099,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 200,
-        "char": "        num_gpus &#61; device_count();\n"
+        "char": "          "
+    },
+    {
+        "group": "cLabel",
+        "linkedGroup": "Statement",
+        "row": 200,
+        "char": "default"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 200,
+        "char": ":\n"
     },
     {
         "group": "LineNr",
@@ -3942,13 +4122,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 201,
-        "char": "        "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 201,
-        "char": "// Check if the number of GPUs matches the expected compile-time max number\n"
+        "char": "            AT_ASSERTM(\n"
     },
     {
         "group": "LineNr",
@@ -3959,13 +4133,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 202,
-        "char": "        "
+        "char": "                "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cNumber",
+        "linkedGroup": "Constant",
         "row": 202,
-        "char": "// of GPUs.\n"
+        "char": "0"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 202,
+        "char": ",\n"
     },
     {
         "group": "LineNr",
@@ -3976,7 +4156,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 203,
-        "char": "        AT_ASSERTM(\n"
+        "char": "                "
+    },
+    {
+        "group": "cString",
+        "linkedGroup": "Constant",
+        "row": 203,
+        "char": "&quot;Unrecognized stream &quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 203,
+        "char": ",\n"
     },
     {
         "group": "LineNr",
@@ -3987,7 +4179,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 204,
-        "char": "            num_gpus &lt;&#61; C10_COMPILE_TIME_MAX_GPUS,\n"
+        "char": "                s.unwrap(),\n"
     },
     {
         "group": "LineNr",
@@ -3998,13 +4190,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 205,
-        "char": "            "
+        "char": "                "
     },
     {
         "group": "cString",
         "linkedGroup": "Constant",
         "row": 205,
-        "char": "&quot;Number of CUDA devices on the machine is larger than the compiled &quot;\n"
+        "char": "&quot; (I didn&#39;t recognize the stream type, &quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 205,
+        "char": ",\n"
     },
     {
         "group": "LineNr",
@@ -4015,19 +4213,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 206,
-        "char": "            "
-    },
-    {
-        "group": "cString",
-        "linkedGroup": "Constant",
-        "row": 206,
-        "char": "&quot;max number of gpus expected (&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 206,
-        "char": ",\n"
+        "char": "                st,\n"
     },
     {
         "group": "LineNr",
@@ -4038,7 +4224,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 207,
-        "char": "            C10_COMPILE_TIME_MAX_GPUS,\n"
+        "char": "                "
+    },
+    {
+        "group": "cString",
+        "linkedGroup": "Constant",
+        "row": 207,
+        "char": "&quot;)&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 207,
+        "char": ");\n"
     },
     {
         "group": "LineNr",
@@ -4049,19 +4247,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 208,
-        "char": "            "
-    },
-    {
-        "group": "cString",
-        "linkedGroup": "Constant",
-        "row": 208,
-        "char": "&quot;). Increase that and recompile.&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 208,
-        "char": ");\n"
+        "char": "        }\n"
     },
     {
         "group": "LineNr",
@@ -4072,7 +4258,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 209,
-        "char": "\n"
+        "char": "      }\n"
     },
     {
         "group": "LineNr",
@@ -4083,13 +4269,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 210,
-        "char": "        "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 210,
-        "char": "// Initializes default streams\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -4100,55 +4280,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 211,
-        "char": "        "
+        "char": "      CUDAStream CUDAStream_fromInternals("
     },
     {
-        "group": "cRepeat",
-        "linkedGroup": "Statement",
-        "row": 211,
-        "char": "for"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 211,
-        "char": " ("
-    },
-    {
-        "group": "cppType",
+        "group": "cStorageClass",
         "linkedGroup": "Type",
         "row": 211,
-        "char": "auto"
+        "char": "const"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 211,
-        "char": " i &#61; "
-    },
-    {
-        "group": "cppStorageClass",
-        "linkedGroup": "Type",
-        "row": 211,
-        "char": "decltype"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 211,
-        "char": "(num_gpus){"
-    },
-    {
-        "group": "cNumber",
-        "linkedGroup": "Constant",
-        "row": 211,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 211,
-        "char": "}; i &lt; num_gpus; ++i) {\n"
+        "char": " LeakyStreamInternals* ptr) {\n"
     },
     {
         "group": "LineNr",
@@ -4159,7 +4303,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 212,
-        "char": "          default_streams[i].device_index &#61; i;\n"
+        "char": "        "
+    },
+    {
+        "group": "cStatement",
+        "linkedGroup": "Statement",
+        "row": 212,
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 212,
+        "char": " CUDAStream(\n"
     },
     {
         "group": "LineNr",
@@ -4170,19 +4326,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 213,
-        "char": "          low_priority_counters[i] &#61; "
-    },
-    {
-        "group": "cNumber",
-        "linkedGroup": "Constant",
-        "row": 213,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 213,
-        "char": ";\n"
+        "char": "            CUDAStream::UNCHECKED,\n"
     },
     {
         "group": "LineNr",
@@ -4193,19 +4337,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 214,
-        "char": "          high_priority_counters[i] &#61; "
-    },
-    {
-        "group": "cNumber",
-        "linkedGroup": "Constant",
-        "row": 214,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 214,
-        "char": ";\n"
+        "char": "            Stream(\n"
     },
     {
         "group": "LineNr",
@@ -4216,7 +4348,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 215,
-        "char": "        }\n"
+        "char": "              Stream::UNSAFE,\n"
     },
     {
         "group": "LineNr",
@@ -4227,7 +4359,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 216,
-        "char": "      }\n"
+        "char": "              c10::Device(DeviceType::CUDA, ptr-&gt;device_index),\n"
     },
     {
         "group": "LineNr",
@@ -4238,7 +4370,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 217,
-        "char": "\n"
+        "char": "              CUDAStream_getStreamId(ptr)));\n"
     },
     {
         "group": "LineNr",
@@ -4249,13 +4381,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 218,
-        "char": "      "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 218,
-        "char": "// Creates the low and high priority stream pools for the specified device\n"
+        "char": "      }\n"
     },
     {
         "group": "LineNr",
@@ -4266,13 +4392,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 219,
-        "char": "      "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 219,
-        "char": "// Warning: only call once per device!\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -4283,31 +4403,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 220,
-        "char": "      "
+        "char": "    } "
     },
     {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
+        "group": "cCommentL",
+        "linkedGroup": "Comment",
         "row": 220,
-        "char": "static"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 220,
-        "char": " "
-    },
-    {
-        "group": "cType",
-        "linkedGroup": "Type",
-        "row": 220,
-        "char": "void"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 220,
-        "char": " initDeviceStreamState(DeviceIndex device_index) {\n"
+        "char": "// anonymous namespace\n"
     },
     {
         "group": "LineNr",
@@ -4318,13 +4420,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 221,
-        "char": "        "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 221,
-        "char": "// Switches to the requested device so streams are properly associated\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -4335,13 +4431,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 222,
-        "char": "        "
+        "char": "    cudaStream_t CUDAStream::stream() "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
         "row": 222,
-        "char": "// with it.\n"
+        "char": "const"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 222,
+        "char": " {\n"
     },
     {
         "group": "LineNr",
@@ -4352,7 +4454,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 223,
-        "char": "        CUDAGuard device_guard{device_index};\n"
+        "char": "      "
+    },
+    {
+        "group": "cppType",
+        "linkedGroup": "Type",
+        "row": 223,
+        "char": "auto"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 223,
+        "char": " ptr &#61; CUDAStream_internals(*"
+    },
+    {
+        "group": "cppStatement",
+        "linkedGroup": "Statement",
+        "row": 223,
+        "char": "this"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 223,
+        "char": ");\n"
     },
     {
         "group": "LineNr",
@@ -4363,7 +4489,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 224,
-        "char": "\n"
+        "char": "      AT_ASSERT(ptr);\n"
     },
     {
         "group": "LineNr",
@@ -4374,55 +4500,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 225,
-        "char": "        "
+        "char": "      "
     },
     {
-        "group": "cRepeat",
+        "group": "cStatement",
         "linkedGroup": "Statement",
         "row": 225,
-        "char": "for"
+        "char": "return"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 225,
-        "char": " ("
-    },
-    {
-        "group": "cppType",
-        "linkedGroup": "Type",
-        "row": 225,
-        "char": "auto"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 225,
-        "char": " i &#61; "
-    },
-    {
-        "group": "cppStorageClass",
-        "linkedGroup": "Type",
-        "row": 225,
-        "char": "decltype"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 225,
-        "char": "(kStreamsPerPool){"
-    },
-    {
-        "group": "cNumber",
-        "linkedGroup": "Constant",
-        "row": 225,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 225,
-        "char": "}; i &lt; kStreamsPerPool; ++i) {\n"
+        "char": " ptr-&gt;stream;\n"
     },
     {
         "group": "LineNr",
@@ -4433,19 +4523,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 226,
-        "char": "          "
-    },
-    {
-        "group": "cppType",
-        "linkedGroup": "Type",
-        "row": 226,
-        "char": "auto"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 226,
-        "char": "&amp; lowpri_stream &#61; low_priority_streams[device_index][i];\n"
+        "char": "    }\n"
     },
     {
         "group": "LineNr",
@@ -4456,19 +4534,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 227,
-        "char": "          "
-    },
-    {
-        "group": "cppType",
-        "linkedGroup": "Type",
-        "row": 227,
-        "char": "auto"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 227,
-        "char": "&amp; hipri_stream &#61; high_priority_streams[device_index][i];\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -4479,7 +4545,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 228,
-        "char": "\n"
+        "char": "    "
+    },
+    {
+        "group": "cCommentL",
+        "linkedGroup": "Comment",
+        "row": 228,
+        "char": "// Returns a stream from the requested pool\n"
     },
     {
         "group": "LineNr",
@@ -4490,7 +4562,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 229,
-        "char": "          lowpri_stream.device_index &#61; device_index;\n"
+        "char": "    CUDAStream getStreamFromPool(\n"
     },
     {
         "group": "LineNr",
@@ -4501,7 +4573,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 230,
-        "char": "          hipri_stream.device_index &#61; device_index;\n"
+        "char": "        "
+    },
+    {
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
+        "row": 230,
+        "char": "const"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 230,
+        "char": " "
+    },
+    {
+        "group": "cppType",
+        "linkedGroup": "Type",
+        "row": 230,
+        "char": "bool"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 230,
+        "char": " isHighPriority,\n"
     },
     {
         "group": "LineNr",
@@ -4512,7 +4608,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 231,
-        "char": "\n"
+        "char": "        DeviceIndex device_index) {\n"
     },
     {
         "group": "LineNr",
@@ -4520,10 +4616,10 @@ module.exports = [
         "char": "232"
     },
     {
-        "group": "cPreCondit",
-        "linkedGroup": "PreProc",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 232,
-        "char": "#ifndef __HIP_PLATFORM_HCC__\n"
+        "char": "      initCUDAStreamsOnce();\n"
     },
     {
         "group": "LineNr",
@@ -4534,7 +4630,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 233,
-        "char": "          C10_CUDA_CHECK(cudaStreamCreateWithPriority(\n"
+        "char": "      "
+    },
+    {
+        "group": "cConditional",
+        "linkedGroup": "Statement",
+        "row": 233,
+        "char": "if"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 233,
+        "char": " (device_index &#61;&#61; -"
+    },
+    {
+        "group": "cppNumber",
+        "linkedGroup": "Constant",
+        "row": 233,
+        "char": "1"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 233,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -4545,7 +4665,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 234,
-        "char": "                &amp;lowpri_stream.stream, kDefaultFlags, kLowPriority));\n"
+        "char": "        device_index &#61; current_device();\n"
     },
     {
         "group": "LineNr",
@@ -4556,7 +4676,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 235,
-        "char": "          C10_CUDA_CHECK(cudaStreamCreateWithPriority(\n"
+        "char": "      check_gpu(device_index);\n"
     },
     {
         "group": "LineNr",
@@ -4567,7 +4687,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 236,
-        "char": "                &amp;hipri_stream.stream, kDefaultFlags, kHighPriority));\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -4575,10 +4695,16 @@ module.exports = [
         "char": "237"
     },
     {
-        "group": "cPreConditMatch",
-        "linkedGroup": "PreProc",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 237,
-        "char": "#else\n"
+        "char": "      "
+    },
+    {
+        "group": "cCommentL",
+        "linkedGroup": "Comment",
+        "row": 237,
+        "char": "// Initializes the stream pools (once)\n"
     },
     {
         "group": "LineNr",
@@ -4589,7 +4715,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 238,
-        "char": "          C10_CUDA_CHECK(\n"
+        "char": "      std::call_once(\n"
     },
     {
         "group": "LineNr",
@@ -4600,7 +4726,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 239,
-        "char": "              cudaStreamCreateWithFlags(&amp;lowpri_stream.stream, kDefaultFlags));\n"
+        "char": "          device_flags[device_index], initDeviceStreamState, device_index);\n"
     },
     {
         "group": "LineNr",
@@ -4611,7 +4737,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 240,
-        "char": "          C10_CUDA_CHECK(\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -4622,7 +4748,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 241,
-        "char": "              cudaStreamCreateWithFlags(&amp;hipri_stream.stream, kDefaultFlags));\n"
+        "char": "      "
+    },
+    {
+        "group": "cConditional",
+        "linkedGroup": "Statement",
+        "row": 241,
+        "char": "if"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 241,
+        "char": " (isHighPriority) {\n"
     },
     {
         "group": "LineNr",
@@ -4630,10 +4768,16 @@ module.exports = [
         "char": "242"
     },
     {
-        "group": "cPreConditMatch",
-        "linkedGroup": "PreProc",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 242,
-        "char": "#endif"
+        "char": "        "
+    },
+    {
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
+        "row": 242,
+        "char": "const"
     },
     {
         "group": "Normal",
@@ -4642,10 +4786,16 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cppType",
+        "linkedGroup": "Type",
         "row": 242,
-        "char": "// __HIP_PLATFORM_HCC__\n"
+        "char": "auto"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 242,
+        "char": " idx &#61; get_idx(high_priority_counters[device_index]);\n"
     },
     {
         "group": "LineNr",
@@ -4656,7 +4806,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 243,
-        "char": "        }\n"
+        "char": "        "
+    },
+    {
+        "group": "cStatement",
+        "linkedGroup": "Statement",
+        "row": 243,
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 243,
+        "char": " CUDAStream_fromInternals(&amp;high_priority_streams[device_index][idx]);\n"
     },
     {
         "group": "LineNr",
@@ -4692,10 +4854,28 @@ module.exports = [
         "char": "      "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
         "row": 246,
-        "char": "// Init front-end to ensure initialization only occurs once\n"
+        "char": "const"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 246,
+        "char": " "
+    },
+    {
+        "group": "cppType",
+        "linkedGroup": "Type",
+        "row": 246,
+        "char": "auto"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 246,
+        "char": " idx &#61; get_idx(low_priority_counters[device_index]);\n"
     },
     {
         "group": "LineNr",
@@ -4709,28 +4889,16 @@ module.exports = [
         "char": "      "
     },
     {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
+        "group": "cStatement",
+        "linkedGroup": "Statement",
         "row": 247,
-        "char": "static"
+        "char": "return"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 247,
-        "char": " "
-    },
-    {
-        "group": "cType",
-        "linkedGroup": "Type",
-        "row": 247,
-        "char": "void"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 247,
-        "char": " initCUDAStreamsOnce() {\n"
+        "char": " CUDAStream_fromInternals(&amp;low_priority_streams[device_index][idx]);\n"
     },
     {
         "group": "LineNr",
@@ -4741,13 +4909,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 248,
-        "char": "        "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 248,
-        "char": "// Inits default streams (once, globally)\n"
+        "char": "    }\n"
     },
     {
         "group": "LineNr",
@@ -4758,7 +4920,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 249,
-        "char": "        std::call_once(init_flag, initGlobalStreamState);\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -4769,7 +4931,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 250,
-        "char": "\n"
+        "char": "    CUDAStream getDefaultCUDAStream(DeviceIndex device_index) {\n"
     },
     {
         "group": "LineNr",
@@ -4780,19 +4942,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 251,
-        "char": "        "
-    },
-    {
-        "group": "cConditional",
-        "linkedGroup": "Statement",
-        "row": 251,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 251,
-        "char": " (current_streams) {\n"
+        "char": "      initCUDAStreamsOnce();\n"
     },
     {
         "group": "LineNr",
@@ -4803,19 +4953,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 252,
-        "char": "          "
+        "char": "      "
     },
     {
-        "group": "cStatement",
+        "group": "cConditional",
         "linkedGroup": "Statement",
         "row": 252,
-        "char": "return"
+        "char": "if"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 252,
-        "char": ";\n"
+        "char": " (device_index &#61;&#61; -"
+    },
+    {
+        "group": "cppNumber",
+        "linkedGroup": "Constant",
+        "row": 252,
+        "char": "1"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 252,
+        "char": ") {\n"
     },
     {
         "group": "LineNr",
@@ -4826,7 +4988,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 253,
-        "char": "        }\n"
+        "char": "        device_index &#61; current_device();\n"
     },
     {
         "group": "LineNr",
@@ -4837,7 +4999,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 254,
-        "char": "\n"
+        "char": "      }\n"
     },
     {
         "group": "LineNr",
@@ -4848,13 +5010,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 255,
-        "char": "        "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 255,
-        "char": "// Inits current streams (thread local) to default streams\n"
+        "char": "      check_gpu(device_index);\n"
     },
     {
         "group": "LineNr",
@@ -4865,7 +5021,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 256,
-        "char": "        current_streams &#61;\n"
+        "char": "      "
+    },
+    {
+        "group": "cStatement",
+        "linkedGroup": "Statement",
+        "row": 256,
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 256,
+        "char": " CUDAStream_fromInternals(&amp;default_streams[device_index]);\n"
     },
     {
         "group": "LineNr",
@@ -4876,19 +5044,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 257,
-        "char": "          (LeakyStreamInternals**)malloc(num_gpus * "
-    },
-    {
-        "group": "cOperator",
-        "linkedGroup": "Statement",
-        "row": 257,
-        "char": "sizeof"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 257,
-        "char": "(LeakyStreamInternals*));\n"
+        "char": "    }\n"
     },
     {
         "group": "LineNr",
@@ -4899,55 +5055,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 258,
-        "char": "        "
-    },
-    {
-        "group": "cRepeat",
-        "linkedGroup": "Statement",
-        "row": 258,
-        "char": "for"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 258,
-        "char": " ("
-    },
-    {
-        "group": "cppType",
-        "linkedGroup": "Type",
-        "row": 258,
-        "char": "auto"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 258,
-        "char": " i &#61; "
-    },
-    {
-        "group": "cppStorageClass",
-        "linkedGroup": "Type",
-        "row": 258,
-        "char": "decltype"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 258,
-        "char": "(num_gpus){"
-    },
-    {
-        "group": "cNumber",
-        "linkedGroup": "Constant",
-        "row": 258,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 258,
-        "char": "}; i &lt; num_gpus; ++i) {\n"
+        "char": "    CUDAStream getCurrentCUDAStream(DeviceIndex device_index) {\n"
     },
     {
         "group": "LineNr",
@@ -4958,7 +5066,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 259,
-        "char": "          current_streams[i] &#61; &amp;default_streams[i];\n"
+        "char": "      initCUDAStreamsOnce();\n"
     },
     {
         "group": "LineNr",
@@ -4969,7 +5077,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 260,
-        "char": "        }\n"
+        "char": "      "
+    },
+    {
+        "group": "cConditional",
+        "linkedGroup": "Statement",
+        "row": 260,
+        "char": "if"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 260,
+        "char": " (device_index &#61;&#61; -"
+    },
+    {
+        "group": "cppNumber",
+        "linkedGroup": "Constant",
+        "row": 260,
+        "char": "1"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 260,
+        "char": ") {\n"
     },
     {
         "group": "LineNr",
@@ -4980,7 +5112,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 261,
-        "char": "      }\n"
+        "char": "        device_index &#61; current_device();\n"
     },
     {
         "group": "LineNr",
@@ -4991,7 +5123,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 262,
-        "char": "\n"
+        "char": "      }\n"
     },
     {
         "group": "LineNr",
@@ -5002,13 +5134,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 263,
-        "char": "      "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 263,
-        "char": "// Helper to verify the GPU index is valid\n"
+        "char": "      check_gpu(device_index);\n"
     },
     {
         "group": "LineNr",
@@ -5022,40 +5148,16 @@ module.exports = [
         "char": "      "
     },
     {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
+        "group": "cStatement",
+        "linkedGroup": "Statement",
         "row": 264,
-        "char": "static"
+        "char": "return"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 264,
-        "char": " "
-    },
-    {
-        "group": "cppModifier",
-        "linkedGroup": "Type",
-        "row": 264,
-        "char": "inline"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 264,
-        "char": " "
-    },
-    {
-        "group": "cType",
-        "linkedGroup": "Type",
-        "row": 264,
-        "char": "void"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 264,
-        "char": " check_gpu(DeviceIndex device_index) {\n"
+        "char": " CUDAStream_fromInternals(current_streams[device_index]);\n"
     },
     {
         "group": "LineNr",
@@ -5066,19 +5168,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 265,
-        "char": "        AT_ASSERT(device_index &gt;&#61; "
-    },
-    {
-        "group": "cNumber",
-        "linkedGroup": "Constant",
-        "row": 265,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 265,
-        "char": " &amp;&amp; device_index &lt; num_gpus);\n"
+        "char": "    }\n"
     },
     {
         "group": "LineNr",
@@ -5089,7 +5179,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 266,
-        "char": "      }\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -5100,7 +5190,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 267,
-        "char": "\n"
+        "char": "    "
+    },
+    {
+        "group": "cType",
+        "linkedGroup": "Type",
+        "row": 267,
+        "char": "void"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 267,
+        "char": " setCurrentCUDAStream(CUDAStream stream) {\n"
     },
     {
         "group": "LineNr",
@@ -5111,13 +5213,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 268,
-        "char": "      "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 268,
-        "char": "// Helper to determine the index of the stream to return\n"
+        "char": "      initCUDAStreamsOnce();\n"
     },
     {
         "group": "LineNr",
@@ -5131,10 +5227,16 @@ module.exports = [
         "char": "      "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cppType",
+        "linkedGroup": "Type",
         "row": 269,
-        "char": "// Note: Streams are returned round-robin (see note in CUDAStream.h)\n"
+        "char": "auto"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 269,
+        "char": " ptr &#61; CUDAStream_internals(stream);\n"
     },
     {
         "group": "LineNr",
@@ -5145,43 +5247,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 270,
-        "char": "      "
-    },
-    {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
-        "row": 270,
-        "char": "static"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 270,
-        "char": " "
-    },
-    {
-        "group": "cType",
-        "linkedGroup": "Type",
-        "row": 270,
-        "char": "uint32_t"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 270,
-        "char": " get_idx(std::atomic&lt;"
-    },
-    {
-        "group": "cType",
-        "linkedGroup": "Type",
-        "row": 270,
-        "char": "uint32_t"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 270,
-        "char": "&gt;&amp; counter) {\n"
+        "char": "      AT_ASSERT(ptr);\n"
     },
     {
         "group": "LineNr",
@@ -5192,19 +5258,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 271,
-        "char": "        "
-    },
-    {
-        "group": "cppType",
-        "linkedGroup": "Type",
-        "row": 271,
-        "char": "auto"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 271,
-        "char": " raw_idx &#61; counter++;\n"
+        "char": "      current_streams[ptr-&gt;device_index] &#61; ptr;\n"
     },
     {
         "group": "LineNr",
@@ -5215,19 +5269,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 272,
-        "char": "        "
-    },
-    {
-        "group": "cStatement",
-        "linkedGroup": "Statement",
-        "row": 272,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 272,
-        "char": " raw_idx % kStreamsPerPool;\n"
+        "char": "    }\n"
     },
     {
         "group": "LineNr",
@@ -5238,7 +5280,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 273,
-        "char": "      }\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -5249,7 +5291,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 274,
-        "char": "\n"
+        "char": "    std::ostream&amp; "
+    },
+    {
+        "group": "cppOperator",
+        "linkedGroup": "Statement",
+        "row": 274,
+        "char": "operator"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 274,
+        "char": "&lt;&lt;(std::ostream&amp; stream, "
+    },
+    {
+        "group": "cStorageClass",
+        "linkedGroup": "Type",
+        "row": 274,
+        "char": "const"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 274,
+        "char": " CUDAStream&amp; s) {\n"
     },
     {
         "group": "LineNr",
@@ -5263,10 +5329,16 @@ module.exports = [
         "char": "      "
     },
     {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
+        "group": "cStatement",
+        "linkedGroup": "Statement",
         "row": 275,
-        "char": "// See Note [StreamId assignment]\n"
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 275,
+        "char": " stream &lt;&lt; s.unwrap();\n"
     },
     {
         "group": "LineNr",
@@ -5277,7 +5349,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 276,
-        "char": "      LeakyStreamInternals* CUDAStream_internals(CUDAStream s) {\n"
+        "char": "    }\n"
     },
     {
         "group": "LineNr",
@@ -5288,7 +5360,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 277,
-        "char": "        c10::DeviceIndex device_index &#61; s.device_index();\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -5299,7 +5371,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 278,
-        "char": "        StreamIdType st &#61; streamIdType(s.unwrap().id());\n"
+        "char": "  } "
+    },
+    {
+        "group": "cCommentL",
+        "linkedGroup": "Comment",
+        "row": 278,
+        "char": "// namespace cuda\n"
     },
     {
         "group": "LineNr",
@@ -5310,1690 +5388,12 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 279,
-        "char": "        "
-    },
-    {
-        "group": "cType",
-        "linkedGroup": "Type",
-        "row": 279,
-        "char": "size_t"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 279,
-        "char": " si &#61; streamIdIndex(s.unwrap().id());\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 280,
-        "char": "280"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 280,
-        "char": "        "
-    },
-    {
-        "group": "cConditional",
-        "linkedGroup": "Statement",
-        "row": 280,
-        "char": "switch"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 280,
-        "char": " (st) {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 281,
-        "char": "281"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 281,
-        "char": "          "
-    },
-    {
-        "group": "cLabel",
-        "linkedGroup": "Statement",
-        "row": 281,
-        "char": "case"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 281,
-        "char": " StreamIdType::DEFAULT:\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 282,
-        "char": "282"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 282,
-        "char": "            AT_ASSERTM(\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 283,
-        "char": "283"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 283,
-        "char": "                si &#61;&#61; "
-    },
-    {
-        "group": "cNumber",
-        "linkedGroup": "Constant",
-        "row": 283,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 283,
-        "char": ",\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 284,
-        "char": "284"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 284,
-        "char": "                "
-    },
-    {
-        "group": "cString",
-        "linkedGroup": "Constant",
-        "row": 284,
-        "char": "&quot;Unrecognized stream &quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 284,
-        "char": ",\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 285,
-        "char": "285"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 285,
-        "char": "                s.unwrap(),\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 286,
-        "char": "286"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 286,
-        "char": "                "
-    },
-    {
-        "group": "cString",
-        "linkedGroup": "Constant",
-        "row": 286,
-        "char": "&quot; (I think this should be the default stream, but I got a non-zero index &quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 286,
-        "char": ",\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 287,
-        "char": "287"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 287,
-        "char": "                si,\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 288,
-        "char": "288"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 288,
-        "char": "                "
-    },
-    {
-        "group": "cString",
-        "linkedGroup": "Constant",
-        "row": 288,
-        "char": "&quot;).&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 288,
-        "char": ",\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 289,
-        "char": "289"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 289,
-        "char": "                "
-    },
-    {
-        "group": "cString",
-        "linkedGroup": "Constant",
-        "row": 289,
-        "char": "&quot; Did you manufacture the StreamId yourself?  Don&#39;t do that; use the&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 289,
-        "char": ",\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 290,
-        "char": "290"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 290,
-        "char": "                "
-    },
-    {
-        "group": "cString",
-        "linkedGroup": "Constant",
-        "row": 290,
-        "char": "&quot; official API like c10::cuda::getStreamFromPool() to get a new stream.&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 290,
-        "char": ");\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 291,
-        "char": "291"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 291,
-        "char": "            "
-    },
-    {
-        "group": "cStatement",
-        "linkedGroup": "Statement",
-        "row": 291,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 291,
-        "char": " &amp;default_streams[device_index];\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 292,
-        "char": "292"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 292,
-        "char": "          "
-    },
-    {
-        "group": "cLabel",
-        "linkedGroup": "Statement",
-        "row": 292,
-        "char": "case"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 292,
-        "char": " StreamIdType::LOW:\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 293,
-        "char": "293"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 293,
-        "char": "            "
-    },
-    {
-        "group": "cStatement",
-        "linkedGroup": "Statement",
-        "row": 293,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 293,
-        "char": " &amp;low_priority_streams[device_index][si];\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 294,
-        "char": "294"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 294,
-        "char": "          "
-    },
-    {
-        "group": "cLabel",
-        "linkedGroup": "Statement",
-        "row": 294,
-        "char": "case"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 294,
-        "char": " StreamIdType::HIGH:\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 295,
-        "char": "295"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 295,
-        "char": "            "
-    },
-    {
-        "group": "cStatement",
-        "linkedGroup": "Statement",
-        "row": 295,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 295,
-        "char": " &amp;high_priority_streams[device_index][si];\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 296,
-        "char": "296"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 296,
-        "char": "          "
-    },
-    {
-        "group": "cLabel",
-        "linkedGroup": "Statement",
-        "row": 296,
-        "char": "default"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 296,
-        "char": ":\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 297,
-        "char": "297"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 297,
-        "char": "            AT_ASSERTM(\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 298,
-        "char": "298"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 298,
-        "char": "                "
-    },
-    {
-        "group": "cNumber",
-        "linkedGroup": "Constant",
-        "row": 298,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 298,
-        "char": ",\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 299,
-        "char": "299"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 299,
-        "char": "                "
-    },
-    {
-        "group": "cString",
-        "linkedGroup": "Constant",
-        "row": 299,
-        "char": "&quot;Unrecognized stream &quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 299,
-        "char": ",\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 300,
-        "char": "300"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 300,
-        "char": "                s.unwrap(),\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 301,
-        "char": "301"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 301,
-        "char": "                "
-    },
-    {
-        "group": "cString",
-        "linkedGroup": "Constant",
-        "row": 301,
-        "char": "&quot; (I didn&#39;t recognize the stream type, &quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 301,
-        "char": ",\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 302,
-        "char": "302"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 302,
-        "char": "                st,\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 303,
-        "char": "303"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 303,
-        "char": "                "
-    },
-    {
-        "group": "cString",
-        "linkedGroup": "Constant",
-        "row": 303,
-        "char": "&quot;)&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 303,
-        "char": ");\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 304,
-        "char": "304"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 304,
-        "char": "        }\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 305,
-        "char": "305"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 305,
-        "char": "      }\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 306,
-        "char": "306"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 306,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 307,
-        "char": "307"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 307,
-        "char": "      CUDAStream CUDAStream_fromInternals("
-    },
-    {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
-        "row": 307,
-        "char": "const"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 307,
-        "char": " LeakyStreamInternals* ptr) {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 308,
-        "char": "308"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 308,
-        "char": "        "
-    },
-    {
-        "group": "cStatement",
-        "linkedGroup": "Statement",
-        "row": 308,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 308,
-        "char": " CUDAStream(\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 309,
-        "char": "309"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 309,
-        "char": "            CUDAStream::UNCHECKED,\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 310,
-        "char": "310"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 310,
-        "char": "            Stream(\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 311,
-        "char": "311"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 311,
-        "char": "              Stream::UNSAFE,\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 312,
-        "char": "312"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 312,
-        "char": "              c10::Device(DeviceType::CUDA, ptr-&gt;device_index),\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 313,
-        "char": "313"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 313,
-        "char": "              CUDAStream_getStreamId(ptr)));\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 314,
-        "char": "314"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 314,
-        "char": "      }\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 315,
-        "char": "315"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 315,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 316,
-        "char": "316"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 316,
-        "char": "    } "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 316,
-        "char": "// anonymous namespace\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 317,
-        "char": "317"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 317,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 318,
-        "char": "318"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 318,
-        "char": "    cudaStream_t CUDAStream::stream() "
-    },
-    {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
-        "row": 318,
-        "char": "const"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 318,
-        "char": " {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 319,
-        "char": "319"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 319,
-        "char": "      "
-    },
-    {
-        "group": "cppType",
-        "linkedGroup": "Type",
-        "row": 319,
-        "char": "auto"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 319,
-        "char": " ptr &#61; CUDAStream_internals(*"
-    },
-    {
-        "group": "cppStatement",
-        "linkedGroup": "Statement",
-        "row": 319,
-        "char": "this"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 319,
-        "char": ");\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 320,
-        "char": "320"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 320,
-        "char": "      AT_ASSERT(ptr);\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 321,
-        "char": "321"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 321,
-        "char": "      "
-    },
-    {
-        "group": "cStatement",
-        "linkedGroup": "Statement",
-        "row": 321,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 321,
-        "char": " ptr-&gt;stream;\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 322,
-        "char": "322"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 322,
-        "char": "    }\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 323,
-        "char": "323"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 323,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 324,
-        "char": "324"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 324,
-        "char": "    "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 324,
-        "char": "// Returns a stream from the requested pool\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 325,
-        "char": "325"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 325,
-        "char": "    "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 325,
-        "char": "// Note: when called the first time on a device, this will create the\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 326,
-        "char": "326"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 326,
-        "char": "    "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 326,
-        "char": "// stream pools for that device.\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 327,
-        "char": "327"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 327,
-        "char": "    CUDAStream getStreamFromPool(\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 328,
-        "char": "328"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 328,
-        "char": "        "
-    },
-    {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
-        "row": 328,
-        "char": "const"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 328,
-        "char": " "
-    },
-    {
-        "group": "cppType",
-        "linkedGroup": "Type",
-        "row": 328,
-        "char": "bool"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 328,
-        "char": " isHighPriority,\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 329,
-        "char": "329"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 329,
-        "char": "        DeviceIndex device_index) {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 330,
-        "char": "330"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 330,
-        "char": "      initCUDAStreamsOnce();\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 331,
-        "char": "331"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 331,
-        "char": "      "
-    },
-    {
-        "group": "cConditional",
-        "linkedGroup": "Statement",
-        "row": 331,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 331,
-        "char": " (device_index &#61;&#61; -"
-    },
-    {
-        "group": "cppNumber",
-        "linkedGroup": "Constant",
-        "row": 331,
-        "char": "1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 331,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 332,
-        "char": "332"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 332,
-        "char": "        device_index &#61; current_device();\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 333,
-        "char": "333"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 333,
-        "char": "      check_gpu(device_index);\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 334,
-        "char": "334"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 334,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 335,
-        "char": "335"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 335,
-        "char": "      "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 335,
-        "char": "// Initializes the stream pools (once)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 336,
-        "char": "336"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 336,
-        "char": "      std::call_once(\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 337,
-        "char": "337"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 337,
-        "char": "          device_flags[device_index], initDeviceStreamState, device_index);\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 338,
-        "char": "338"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 338,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 339,
-        "char": "339"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 339,
-        "char": "      "
-    },
-    {
-        "group": "cConditional",
-        "linkedGroup": "Statement",
-        "row": 339,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 339,
-        "char": " (isHighPriority) {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 340,
-        "char": "340"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 340,
-        "char": "        "
-    },
-    {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
-        "row": 340,
-        "char": "const"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 340,
-        "char": " "
-    },
-    {
-        "group": "cppType",
-        "linkedGroup": "Type",
-        "row": 340,
-        "char": "auto"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 340,
-        "char": " idx &#61; get_idx(high_priority_counters[device_index]);\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 341,
-        "char": "341"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 341,
-        "char": "        "
-    },
-    {
-        "group": "cStatement",
-        "linkedGroup": "Statement",
-        "row": 341,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 341,
-        "char": " CUDAStream_fromInternals(&amp;high_priority_streams[device_index][idx]);\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 342,
-        "char": "342"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 342,
-        "char": "      }\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 343,
-        "char": "343"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 343,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 344,
-        "char": "344"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 344,
-        "char": "      "
-    },
-    {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
-        "row": 344,
-        "char": "const"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 344,
-        "char": " "
-    },
-    {
-        "group": "cppType",
-        "linkedGroup": "Type",
-        "row": 344,
-        "char": "auto"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 344,
-        "char": " idx &#61; get_idx(low_priority_counters[device_index]);\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 345,
-        "char": "345"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 345,
-        "char": "      "
-    },
-    {
-        "group": "cStatement",
-        "linkedGroup": "Statement",
-        "row": 345,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 345,
-        "char": " CUDAStream_fromInternals(&amp;low_priority_streams[device_index][idx]);\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 346,
-        "char": "346"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 346,
-        "char": "    }\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 347,
-        "char": "347"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 347,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 348,
-        "char": "348"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 348,
-        "char": "    CUDAStream getDefaultCUDAStream(DeviceIndex device_index) {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 349,
-        "char": "349"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 349,
-        "char": "      initCUDAStreamsOnce();\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 350,
-        "char": "350"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 350,
-        "char": "      "
-    },
-    {
-        "group": "cConditional",
-        "linkedGroup": "Statement",
-        "row": 350,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 350,
-        "char": " (device_index &#61;&#61; -"
-    },
-    {
-        "group": "cppNumber",
-        "linkedGroup": "Constant",
-        "row": 350,
-        "char": "1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 350,
-        "char": ") {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 351,
-        "char": "351"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 351,
-        "char": "        device_index &#61; current_device();\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 352,
-        "char": "352"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 352,
-        "char": "      }\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 353,
-        "char": "353"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 353,
-        "char": "      check_gpu(device_index);\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 354,
-        "char": "354"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 354,
-        "char": "      "
-    },
-    {
-        "group": "cStatement",
-        "linkedGroup": "Statement",
-        "row": 354,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 354,
-        "char": " CUDAStream_fromInternals(&amp;default_streams[device_index]);\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 355,
-        "char": "355"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 355,
-        "char": "    }\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 356,
-        "char": "356"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 356,
-        "char": "    CUDAStream getCurrentCUDAStream(DeviceIndex device_index) {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 357,
-        "char": "357"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 357,
-        "char": "      initCUDAStreamsOnce();\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 358,
-        "char": "358"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 358,
-        "char": "      "
-    },
-    {
-        "group": "cConditional",
-        "linkedGroup": "Statement",
-        "row": 358,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 358,
-        "char": " (device_index &#61;&#61; -"
-    },
-    {
-        "group": "cppNumber",
-        "linkedGroup": "Constant",
-        "row": 358,
-        "char": "1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 358,
-        "char": ") {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 359,
-        "char": "359"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 359,
-        "char": "        device_index &#61; current_device();\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 360,
-        "char": "360"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 360,
-        "char": "      }\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 361,
-        "char": "361"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 361,
-        "char": "      check_gpu(device_index);\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 362,
-        "char": "362"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 362,
-        "char": "      "
-    },
-    {
-        "group": "cStatement",
-        "linkedGroup": "Statement",
-        "row": 362,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 362,
-        "char": " CUDAStream_fromInternals(current_streams[device_index]);\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 363,
-        "char": "363"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 363,
-        "char": "    }\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 364,
-        "char": "364"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 364,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 365,
-        "char": "365"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 365,
-        "char": "    "
-    },
-    {
-        "group": "cType",
-        "linkedGroup": "Type",
-        "row": 365,
-        "char": "void"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 365,
-        "char": " setCurrentCUDAStream(CUDAStream stream) {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 366,
-        "char": "366"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 366,
-        "char": "      initCUDAStreamsOnce();\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 367,
-        "char": "367"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 367,
-        "char": "      "
-    },
-    {
-        "group": "cppType",
-        "linkedGroup": "Type",
-        "row": 367,
-        "char": "auto"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 367,
-        "char": " ptr &#61; CUDAStream_internals(stream);\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 368,
-        "char": "368"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 368,
-        "char": "      AT_ASSERT(ptr);\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 369,
-        "char": "369"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 369,
-        "char": "      current_streams[ptr-&gt;device_index] &#61; ptr;\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 370,
-        "char": "370"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 370,
-        "char": "    }\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 371,
-        "char": "371"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 371,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 372,
-        "char": "372"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 372,
-        "char": "    std::ostream&amp; "
-    },
-    {
-        "group": "cppOperator",
-        "linkedGroup": "Statement",
-        "row": 372,
-        "char": "operator"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 372,
-        "char": "&lt;&lt;(std::ostream&amp; stream, "
-    },
-    {
-        "group": "cStorageClass",
-        "linkedGroup": "Type",
-        "row": 372,
-        "char": "const"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 372,
-        "char": " CUDAStream&amp; s) {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 373,
-        "char": "373"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 373,
-        "char": "      "
-    },
-    {
-        "group": "cStatement",
-        "linkedGroup": "Statement",
-        "row": 373,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 373,
-        "char": " stream &lt;&lt; s.unwrap();\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 374,
-        "char": "374"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 374,
-        "char": "    }\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 375,
-        "char": "375"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 375,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 376,
-        "char": "376"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 376,
-        "char": "  } "
-    },
-    {
-        "group": "cCommentL",
-        "linkedGroup": "Comment",
-        "row": 376,
-        "char": "// namespace cuda\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 377,
-        "char": "377"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 377,
         "char": "} "
     },
     {
         "group": "cCommentL",
         "linkedGroup": "Comment",
-        "row": 377,
+        "row": 279,
         "char": "// namespace c10"
     }
 ]

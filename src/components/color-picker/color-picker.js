@@ -36,6 +36,7 @@ function ColorPickerTemplate({ state, Store }) {
         value: keyword['foregroundColor'],
         name: 'foregroundColor',
         label: 'Foreground',
+        title: 'Select foreground color',
         selected: state.app.selectedInput === 'foregroundColor',
         enabled: keyword['foregroundColor'] !== null,
 
@@ -49,13 +50,22 @@ function ColorPickerTemplate({ state, Store }) {
           if (selected && enabled) {
             Store.dispatch('app', 'selectColorInput', null);
             Store.dispatch('app', 'setShowColorPicker', false);
-            Store.dispatch('theme', 'setForegroundColor', { keyword: selectedKeyword, color: null });
+            Store.dispatch('theme', 'setForegroundColor', {
+              keyword: selectedKeyword,
+              color: null,
+            });
           } else if (!selected && !enabled) {
             Store.dispatch('app', 'selectColorInput', 'foregroundColor');
             Store.dispatch('app', 'setShowColorPicker', true);
-            Store.dispatch('theme', 'setForegroundColor', { keyword: selectedKeyword, color: state.picker.hex });
+            Store.dispatch('theme', 'setForegroundColor', {
+              keyword: selectedKeyword,
+              color: state.picker.hex,
+            });
           } else if (!selected && enabled) {
-            Store.dispatch('theme', 'setForegroundColor', { keyword: selectedKeyword, color: null });
+            Store.dispatch('theme', 'setForegroundColor', {
+              keyword: selectedKeyword,
+              color: null,
+            });
           }
 
           mitt.emit('RENDER');
@@ -78,6 +88,7 @@ function ColorPickerTemplate({ state, Store }) {
         value: keyword['backgroundColor'],
         name: 'backgroundColor',
         label: 'Background',
+        title: 'Select background color',
         selected: state.app.selectedInput === 'backgroundColor',
 
         enabled: keyword['backgroundColor'] !== null,
@@ -91,13 +102,22 @@ function ColorPickerTemplate({ state, Store }) {
           if (selected && enabled) {
             Store.dispatch('app', 'selectColorInput', null);
             Store.dispatch('app', 'setShowColorPicker', false);
-            Store.dispatch('theme', 'setBackgroundColor', { keyword: selectedKeyword, color: null });
+            Store.dispatch('theme', 'setBackgroundColor', {
+              keyword: selectedKeyword,
+              color: null,
+            });
           } else if (!selected && !enabled) {
             Store.dispatch('app', 'selectColorInput', 'backgroundColor');
             Store.dispatch('app', 'setShowColorPicker', true);
-            Store.dispatch('theme', 'setBackgroundColor', { keyword: selectedKeyword, color: state.picker.hex });
+            Store.dispatch('theme', 'setBackgroundColor', {
+              keyword: selectedKeyword,
+              color: state.picker.hex,
+            });
           } else if (!selected && enabled) {
-            Store.dispatch('theme', 'setBackgroundColor', { keyword: selectedKeyword, color: null });
+            Store.dispatch('theme', 'setBackgroundColor', {
+              keyword: selectedKeyword,
+              color: null,
+            });
           }
           mitt.emit('RENDER');
         },
@@ -118,6 +138,7 @@ function ColorPickerTemplate({ state, Store }) {
       boldCheckbox: {
         label: 'Bold',
         name: 'bold',
+        title: keyword['bold'] ? 'Disable bold' : 'Enable bold',
         value: keyword['bold'],
         onclick: e => {
           Store.dispatch('theme', 'toggleTextDecoration', {
@@ -133,6 +154,7 @@ function ColorPickerTemplate({ state, Store }) {
       italicCheckbox: {
         label: 'Italic',
         name: 'italic',
+        title: keyword['italic'] ? 'Disable italic' : 'Enable italic',
         value: keyword['italic'],
         onclick: e => {
           Store.dispatch('theme', 'toggleTextDecoration', {
@@ -148,6 +170,7 @@ function ColorPickerTemplate({ state, Store }) {
       underlineCheckbox: {
         label: 'Underline',
         name: 'underline',
+        title: keyword['underline'] ? 'Disable underline' : 'Enable underline',
         value: keyword['underline'],
         onclick: e => {
           Store.dispatch('theme', 'toggleTextDecoration', {
@@ -163,6 +186,7 @@ function ColorPickerTemplate({ state, Store }) {
       strikethroughCheckbox: {
         label: 'Strikethrough',
         name: 'lineThrough',
+        title: keyword['lineThrough'] ? 'Disable strikethrough' : 'Enable strikethrough',
         value: keyword['lineThrough'],
         onclick: e => {
           Store.dispatch('theme', 'toggleTextDecoration', {
@@ -193,6 +217,7 @@ function ColorPickerView({ state, Store, props }) {
           <div class="text-decorations">
             <div
               onclick="${props.boldCheckbox.onclick}"
+              title="${props.boldCheckbox.title}"
               data-checked="${props.boldCheckbox.value}"
               class="raised-btn keyword-buttons__icon"
             >
@@ -201,6 +226,7 @@ function ColorPickerView({ state, Store, props }) {
 
             <div
               onclick="${props.italicCheckbox.onclick}"
+              title="${props.italicCheckbox.title}"
               data-checked="${props.italicCheckbox.value}"
               class="raised-btn keyword-buttons__icon"
             >
@@ -209,6 +235,7 @@ function ColorPickerView({ state, Store, props }) {
 
             <div
               onclick="${props.underlineCheckbox.onclick}"
+              title="${props.underlineCheckbox.title}"
               data-checked="${props.underlineCheckbox.value}"
               class="raised-btn keyword-buttons__icon"
             >
@@ -217,6 +244,7 @@ function ColorPickerView({ state, Store, props }) {
 
             <div
               onclick="${props.strikethroughCheckbox.onclick}"
+              title="${props.strikethroughCheckbox.title}"
               data-checked="${props.strikethroughCheckbox.value}"
               class="raised-btn keyword-buttons__icon"
             >
@@ -230,6 +258,7 @@ function ColorPickerView({ state, Store, props }) {
             data-selected="${props.foregroundColor.selected}"
             data-enabled="${props.foregroundColor.enabled}"
             onclick=${props.foregroundColor.select}
+            title="${props.foregroundColor.title}"
             class="tab"
           >
             <div class="tab-text">
@@ -239,6 +268,9 @@ function ColorPickerView({ state, Store, props }) {
             ${ToggleEnable({
               enabled: props.foregroundColor.enabled,
               toggle: props.foregroundColor.onToggleEnable,
+              title: props.foregroundColor.enabled
+                ? 'Disable foreground color, equivalent to NONE in vim'
+                : 'Enable foreground color',
             })}
           </div>
 
@@ -246,6 +278,7 @@ function ColorPickerView({ state, Store, props }) {
             data-selected="${props.backgroundColor.selected}"
             data-enabled="${props.backgroundColor.enabled}"
             onclick=${props.backgroundColor.select}
+            title="${props.backgroundColor.title}"
             class="tab"
           >
             <div class="tab-text">
@@ -255,6 +288,9 @@ function ColorPickerView({ state, Store, props }) {
             ${ToggleEnable({
               enabled: props.backgroundColor.enabled,
               toggle: props.backgroundColor.onToggleEnable,
+              title: props.backgroundColor.enabled
+                ? 'Disable background color, equivalent to NONE in vim'
+                : 'Enable background color',
             })}
           </div>
         </div>
@@ -273,12 +309,12 @@ function ColorPickerView({ state, Store, props }) {
   `;
 }
 
-function ToggleEnable({ enabled, toggle }) {
+function ToggleEnable({ enabled, toggle, title = '' }) {
   return html`
     ${enabled
       ? html`
           <i
-            title="Disable color"
+            title="${title}"
             onclick="${toggle}"
             class="far fa-check-square"
           ></i>

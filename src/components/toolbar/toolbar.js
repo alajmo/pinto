@@ -6,13 +6,35 @@ import { GrowInput } from 'components/grow-input/grow-input.js';
 export { ToolbarView, ToolbarTemplate };
 
 function ToolbarTemplate({ state, Store }) {
+  const fileSystemEnabled = window.showSaveFilePicker !== undefined;
+
   return {
     state,
     Store,
     props: {
-      saveTheme() {
-        Store.dispatch('app', 'saveTheme');
+      fileSystemEnabled,
+
+      async saveTheme() {
+        await Store.dispatch('app', 'saveTheme');
         mitt.emit('RENDER');
+      },
+
+      async saveAs() {
+        if (fileSystemEnabled) {
+          await Store.dispatch('theme', 'createFileHandle');
+        }
+        mitt.emit('RENDER');
+      },
+
+      removeFileSync() {
+        const removeFileHandle = confirm(
+          'Are you sure you want to stop syncing to file? The file will not be deleted.',
+        );
+
+        if (removeFileHandle) {
+          Store.dispatch('theme', 'deleteFileHandle');
+          mitt.emit('RENDER');
+        }
       },
 
       createTheme() {
@@ -60,7 +82,6 @@ function ToolbarTemplate({ state, Store }) {
 }
 
 function ToolbarView({ state, props }) {
-  // console.log(state.app.changesSaved);
   return html`
     <div class="toolbar">
       <div class="left-items">
@@ -77,13 +98,64 @@ function ToolbarView({ state, props }) {
         ${state.app.changesSaved === true
           ? html.node`<div class="info-message">All changes saved</div>`
           : null}
+        ${state.theme.fileHandle
+          ? html.node`
+            <div class="saved-file">
+              <div class="saved-file_filename">
+                ${state.theme.fileHandle.name}
+              </div>
 
-        <div class="option" onclick="${props.saveTheme}">Save</div>
+              <div>
+                <i title="Remove file" class="fas fa-minus-circle actionable" onclick="${props.removeFileSync}"></i>
+              </div>
+            </div>
+          `
+          : null}
 
-        <div class="option" onclick="${props.createTheme}">Create</div>
-        <div class="option" onclick="${props.openTheme}">Open</div>
-        <div class="option" onclick="${props.exportModal}">Export</div>
-        <div class="option" onclick="${props.openHelp}">Help</div>
+        <button
+          class="text menu-btn"
+          title="Save theme (Ctrl + S)"
+          onclick="${props.saveTheme}"
+        >
+          Save
+        </button>
+
+        <button
+          class="text menu-btn"
+          disabled="${!props.fileSystemEnabled}"
+          title="${props.fileSystemEnabled
+            ? 'Save changes to file (Ctrl + Shift + S)'
+            : 'File System Access API is not enabled for this browser.'}"
+          onclick="${props.saveAs}"
+        >
+          Save As
+        </button>
+
+        <button
+          title="Create new theme (Shift + N)"
+          class="text menu-btn"
+          onclick="${props.createTheme}"
+        >
+          New
+        </button>
+
+        <button
+          title="Open theme (Shift + O)"
+          class="text menu-btn"
+          onclick="${props.openTheme}"
+        >
+          Open
+        </button>
+
+        <button
+          title="Open theme (Shift + E)"
+          class="text menu-btn"
+          onclick="${props.exportModal}"
+        >
+          Export
+        </button>
+
+        <button class="text menu-btn" onclick="${props.openHelp}">Help</button>
       </div>
     </div>
   `;

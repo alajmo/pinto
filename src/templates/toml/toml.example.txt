@@ -1,0 +1,48 @@
+apiVersion = "apps/v1"
+kind = "StatefulSet"
+
+[metadata]
+name = "web"
+
+[spec]
+serviceName = "nginx"
+replicas = 3
+
+[spec.selector.matchLabels]
+app = "nginx"
+
+[spec.template.metadata.labels]
+app = "nginx"
+
+[spec.template.spec]
+terminationGracePeriodSeconds = 10
+
+  [[spec.template.spec.containers]]
+  name = "nginx"
+  image = "k8s.gcr.io/nginx-slim:0.8"
+
+    [[spec.template.spec.containers.ports]]
+    containerPort = 80
+    name = "web"
+
+    [[spec.template.spec.containers.volumeMounts]]
+    name = "www"
+    mountPath = "/usr/share/nginx/html"
+
+    [[spec.template.spec.containers.env]]
+    name = "ENV"
+    value = """
+'Multiline string'
+'Development'
+"""
+
+  [[spec.volumeClaimTemplates]]
+[spec.volumeClaimTemplates.metadata]
+name = "www"
+
+[spec.volumeClaimTemplates.spec]
+accessModes = [ "ReadWriteOnce" ]
+storageClassName = "my-storage-class"
+
+[spec.volumeClaimTemplates.spec.resources.requests]
+storage = "1Gi"

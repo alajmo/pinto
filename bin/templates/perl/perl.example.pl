@@ -31,15 +31,6 @@ my %Events;
 		return $self;
 	}
 
-	sub header {
-		my ($self, $w, $h) = @_;
-		$self->{svg} .= <<SVG;
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" width="$w" height="$h" onload="init(evt)" viewBox="0 0 $w $h" xmlns="http://www.w3.org/2000/svg" >
-SVG
-	}
-
 	sub include {
 		my ($self, $content) = @_;
 		$self->{svg} .= $content;
@@ -48,23 +39,6 @@ SVG
 	sub colorAllocate {
 		my ($self, $r, $g, $b) = @_;
 		return "rgb($r,$g,$b)";
-	}
-
-	sub filledRectangle {
-		my ($self, $x1, $y1, $x2, $y2, $fill, $extra) = @_;
-		$x1 = sprintf "%0.1f", $x1;
-		$x2 = sprintf "%0.1f", $x2;
-		my $w = sprintf "%0.1f", $x2 - $x1;
-		my $h = sprintf "%0.1f", $y2 - $y1;
-		$extra = defined $extra ? $extra : "";
-		$self->{svg} .= qq/<rect x="$x1" y="$y1" width="$w" height="$h" fill="$fill" $extra \/>\n/;
-	}
-
-	sub stringTTF {
-		my ($self, $color, $font, $size, $angle, $x, $y, $str, $loc, $extra) = @_;
-		$loc = defined $loc ? $loc : "left";
-		$extra = defined $extra ? $extra : "";
-		$self->{svg} .= qq/<text text-anchor="$loc" x="$x" y="$y" font-size="$size" font-family="$font" fill="$color" $extra >$str<\/text>\n/;
 	}
 
 	sub svg {
@@ -178,9 +152,6 @@ my ($white, $black, $vvdgrey, $vdgrey) = (
 	$im->colorAllocate(40, 40, 40),
 	$im->colorAllocate(160, 160, 160),
     );
-$im->stringTTF($black, $fonttype, $fontsize + 5, 0.0, int($imagewidth / 2), $fontsize * 2, "Flame Graph", "middle");
-$im->stringTTF($black, $fonttype, $fontsize, 0.0, $xpad, $imageheight - ($ypad2 / 2), 'Function:');
-$im->stringTTF($black, $fonttype, $fontsize, 0.0, $xpad + 60, $imageheight - ($ypad2 / 2), " ", "", 'id="details"');
 
 # Draw frames
 foreach my $id (keys %Node) {
@@ -205,16 +176,6 @@ foreach my $id (keys %Node) {
 		$info = "$func ($samples ms, $pct%)";
 	}
 	my $color = $cpu ? "hot" : "cold";
-	$im->filledRectangle($x1, $y1, $x2, $y2, color($color), 'rx="2" ry="2" onmouseover="s(' . "'$info'" . ')" onmouseout="c()"');
-
-	if ($width > 50) {
-		my $chars = int($width / (0.7 * $fontsize));
-		my $text = substr $func, 0, $chars;
-		$text .= ".." if $chars < length $func;
-		$im->stringTTF($black, $fonttype, $fontsize, 0.0, $x1 + 3, 3 + ($y1 + $y2) / 2, $text, "",
-		    'onmouseover="s(' . "'$info'" . ')" onmouseout="c()"');
-	}
 }
 
 print $im->svg;
-

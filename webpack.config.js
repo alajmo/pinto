@@ -2,6 +2,8 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const ENV = process.env.npm_lifecycle_event;
@@ -100,6 +102,10 @@ const config = {
 
     new MiniCssExtractPlugin({
       filename: 'main.[contenthash].css',
+    }),
+
+    new CopyPlugin({
+      patterns: [{ from: 'src/public', to: '' }],
     }),
   ],
 

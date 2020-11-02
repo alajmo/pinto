@@ -1,0 +1,67 @@
+<span title="LineNr "class="LineNr first-LineNr">1</span>  <span title="makeIdent "class="makeIdent">DIST_DIR </span><span title="Normal "class="Normal">?&#61; </span><span title="makeIdent "class="makeIdent">$(CURDIR)</span><span title="Normal "class="Normal">/dist
+</span><span title="LineNr "class="LineNr">2</span>  <span title="makeIdent "class="makeIdent">CHART_DIR </span><span title="Normal "class="Normal">?&#61; </span><span title="makeIdent "class="makeIdent">$(CURDIR)</span><span title="Normal "class="Normal">/traefik
+</span><span title="LineNr "class="LineNr">3</span>  <span title="makeIdent "class="makeIdent">TMPDIR </span><span title="Normal "class="Normal">?&#61; /tmp
+</span><span title="LineNr "class="LineNr">4</span>  <span title="makeIdent "class="makeIdent">HELM_REPO </span><span title="Normal "class="Normal">?&#61; </span><span title="makeIdent "class="makeIdent">$(CURDIR)</span><span title="Normal "class="Normal">/repo
+</span><span title="LineNr "class="LineNr">5</span>  <span title="makeIdent "class="makeIdent">LINT_USE_DOCKER </span><span title="Normal "class="Normal">?&#61; true
+</span><span title="LineNr "class="LineNr">6</span>  <span title="makeIdent "class="makeIdent">LINT_CMD </span><span title="Normal "class="Normal">?&#61; ct lint --config&#61;lint/ct.yaml
+</span><span title="LineNr "class="LineNr">7</span>  <span title="makeIdent "class="makeIdent">PROJECT </span><span title="Normal "class="Normal">?&#61; github.com/traefik/traefik-helm-chart
+</span><span title="LineNr "class="LineNr">8</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">9</span>  <span title="makeComment "class="makeComment"># Default Target: run all
+</span><span title="LineNr "class="LineNr">10</span>  <span title="makeTarget "class="makeTarget">all:</span><span title="Normal "class="Normal"> clean test build deploy
+</span><span title="LineNr "class="LineNr">11</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">12</span>  <span title="makeTarget "class="makeTarget">test:</span><span title="Normal "class="Normal"> lint unit-test
+</span><span title="LineNr "class="LineNr">13</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">14</span>  <span title="makeComment "class="makeComment"># Execute Static Testing
+</span><span title="LineNr "class="LineNr">15</span>  <span title="makeTarget "class="makeTarget">lint:</span><span title="Normal "class="Normal"> lint-requirements
+</span><span title="LineNr "class="LineNr">16</span>  <span title="makeCommands "class="makeCommands">	echo </span><span title="makeDString "class="makeDString">&quot;&#61;&#61; Linting Chart...&quot;
+</span><span title="LineNr "class="LineNr">17</span>  <span title="makeCommands "class="makeCommands">	git fetch traefik master &gt;/dev/null 2&gt;&amp;1 || true
+</span><span title="LineNr "class="LineNr">18</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">19</span>  <span title="makeComment "class="makeComment"># Execute Unit Testing
+</span><span title="LineNr "class="LineNr">20</span>  <span title="makeTarget "class="makeTarget">unit-test:</span><span title="Normal "class="Normal"> helm-unittest
+</span><span title="LineNr "class="LineNr">21</span>  <span title="makeCommands "class="makeCommands">	echo </span><span title="makeDString "class="makeDString">&quot;&#61;&#61; Unit Testing Chart...&quot;
+</span><span title="LineNr "class="LineNr">22</span>  <span title="makeCommands "class="makeCommands">	helm unittest --color --update-snapshot ./traefik
+</span><span title="LineNr "class="LineNr">23</span>  <span title="makeCommands "class="makeCommands">	echo </span><span title="makeDString "class="makeDString">&quot;&#61;&#61; Unit Tests Finished...&quot;
+</span><span title="LineNr "class="LineNr">24</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">25</span>  <span title="makeComment "class="makeComment"># Generates an artifact containing the Helm Chart in the distribution directory
+</span><span title="LineNr "class="LineNr">26</span>  <span title="makeTarget "class="makeTarget">build:</span><span title="Normal "class="Normal"> global-requirements </span><span title="makeIdent "class="makeIdent">$(DIST_DIR)
+</span><span title="LineNr "class="LineNr">27</span>  <span title="makeCommands "class="makeCommands">	echo </span><span title="makeDString "class="makeDString">&quot;&#61;&#61; Building Chart...&quot;
+</span><span title="LineNr "class="LineNr">28</span>  <span title="makeCommands "class="makeCommands">	helm package </span><span title="makeIdent "class="makeIdent">$(CHART_DIR)</span><span title="makeCommands "class="makeCommands"> --destination&#61;</span><span title="makeIdent "class="makeIdent">$(DIST_DIR)
+</span><span title="LineNr "class="LineNr">29</span>  <span title="makeCommands "class="makeCommands">	echo </span><span title="makeDString "class="makeDString">&quot;&#61;&#61; Building Finished&quot;
+</span><span title="LineNr "class="LineNr">30</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">31</span>  <span title="makeComment "class="makeComment"># Prepare the Helm repository with the latest packaged charts
+</span><span title="LineNr "class="LineNr">32</span>  <span title="makeTarget "class="makeTarget">deploy:</span><span title="Normal "class="Normal"> global-requirements </span><span title="makeIdent "class="makeIdent">$(DIST_DIR)</span><span title="Normal "class="Normal"> </span><span title="makeIdent "class="makeIdent">$(HELM_REPO)
+</span><span title="LineNr "class="LineNr">33</span>  <span title="makeSpecial "class="makeSpecial">	@</span><span title="makeCommands "class="makeCommands">echo </span><span title="makeDString "class="makeDString">&quot;&#61;&#61; Deploying Chart...&quot;
+</span><span title="LineNr "class="LineNr">34</span>  <span title="makeSpecial "class="makeSpecial">	@</span><span title="makeCommands "class="makeCommands">rm -rf </span><span title="makeIdent "class="makeIdent">$(CURDIR)</span><span title="makeCommands "class="makeCommands">/gh-pages.zip
+</span><span title="LineNr "class="LineNr">35</span>  <span title="makeSpecial "class="makeSpecial">	@</span><span title="makeCommands "class="makeCommands">curl -sSLO https://</span><span title="makeIdent "class="makeIdent">$(PROJECT)</span><span title="makeCommands "class="makeCommands">/archive/gh-pages.zip
+</span><span title="LineNr "class="LineNr">36</span>  <span title="makeSpecial "class="makeSpecial">	@</span><span title="makeCommands "class="makeCommands">unzip -oj </span><span title="makeIdent "class="makeIdent">$(CURDIR)</span><span title="makeCommands "class="makeCommands">/gh-pages.zip -d </span><span title="makeIdent "class="makeIdent">$(HELM_REPO)</span><span title="makeCommands "class="makeCommands">/
+</span><span title="LineNr "class="LineNr">37</span>  <span title="makeSpecial "class="makeSpecial">	@</span><span title="makeCommands "class="makeCommands">cp </span><span title="makeIdent "class="makeIdent">$(DIST_DIR)</span><span title="makeCommands "class="makeCommands">/*tgz </span><span title="makeIdent "class="makeIdent">$(CURDIR)</span><span title="makeCommands "class="makeCommands">/artifacthub-repo.yml </span><span title="makeIdent "class="makeIdent">$(HELM_REPO)</span><span title="makeCommands "class="makeCommands">/
+</span><span title="LineNr "class="LineNr">38</span>  <span title="makeSpecial "class="makeSpecial">	@</span><span title="makeCommands "class="makeCommands">cp </span><span title="makeIdent "class="makeIdent">$(CURDIR)</span><span title="makeCommands "class="makeCommands">/README.md </span><span title="makeIdent "class="makeIdent">$(HELM_REPO)</span><span title="makeCommands "class="makeCommands">/index.md
+</span><span title="LineNr "class="LineNr">39</span>  <span title="makeSpecial "class="makeSpecial">	@</span><span title="makeCommands "class="makeCommands">echo </span><span title="makeDString "class="makeDString">&quot;&#61;&#61; Deploying Finished&quot;
+</span><span title="LineNr "class="LineNr">40</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">41</span>  <span title="makeComment "class="makeComment"># Cleanup leftovers and distribution dir
+</span><span title="LineNr "class="LineNr">42</span>  <span title="makeTarget "class="makeTarget">clean:
+</span><span title="LineNr "class="LineNr">43</span>  <span title="makeSpecial "class="makeSpecial">	@</span><span title="makeCommands "class="makeCommands">echo </span><span title="makeDString "class="makeDString">&quot;&#61;&#61; Cleaning...&quot;
+</span><span title="LineNr "class="LineNr">44</span>  <span title="makeSpecial "class="makeSpecial">	@</span><span title="makeCommands "class="makeCommands">rm -rf </span><span title="makeIdent "class="makeIdent">$(DIST_DIR)
+</span><span title="LineNr "class="LineNr">45</span>  <span title="makeSpecial "class="makeSpecial">	@</span><span title="makeCommands "class="makeCommands">rm -rf </span><span title="makeIdent "class="makeIdent">$(HELM_REPO)
+</span><span title="LineNr "class="LineNr">46</span>  <span title="makeSpecial "class="makeSpecial">	@</span><span title="makeCommands "class="makeCommands">echo </span><span title="makeDString "class="makeDString">&quot;&#61;&#61; Cleaning Finished&quot;
+</span><span title="LineNr "class="LineNr">47</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">48</span>  <span title="makeIdent "class="makeIdent">$(DIST_DIR)</span><span title="makeTarget "class="makeTarget">:
+</span><span title="LineNr "class="LineNr">49</span>  <span title="makeSpecial "class="makeSpecial">	@</span><span title="makeCommands "class="makeCommands">mkdir -p </span><span title="makeIdent "class="makeIdent">$(DIST_DIR)
+</span><span title="LineNr "class="LineNr">50</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">51</span>  <span title="makeComment "class="makeComment">## This directory is git-ignored for now,
+</span><span title="LineNr "class="LineNr">52</span>  <span title="makeComment "class="makeComment">## and should become a worktree on the branch gh-pages in the future
+</span><span title="LineNr "class="LineNr">53</span>  <span title="makeIdent "class="makeIdent">$(HELM_REPO)</span><span title="makeTarget "class="makeTarget">:
+</span><span title="LineNr "class="LineNr">54</span>  <span title="makeSpecial "class="makeSpecial">	@</span><span title="makeCommands "class="makeCommands">mkdir -p </span><span title="makeIdent "class="makeIdent">$(HELM_REPO)
+</span><span title="LineNr "class="LineNr">55</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">56</span>  <span title="makeTarget "class="makeTarget">global-requirements:
+</span><span title="LineNr "class="LineNr">57</span>  <span title="makeSpecial "class="makeSpecial">	@</span><span title="makeCommands "class="makeCommands">echo </span><span title="makeDString "class="makeDString">&quot;&#61;&#61; Checking global requirements...&quot;
+</span><span title="LineNr "class="LineNr">58</span>  <span title="makePreCondit "class="makePreCondit">ifeq</span><span title="Normal "class="Normal"> (</span><span title="makeIdent "class="makeIdent">$(LINT_USE_DOCKER)</span><span title="Normal "class="Normal">,true)
+</span><span title="LineNr "class="LineNr">59</span>  <span title="makeSpecial "class="makeSpecial">	@</span><span title="Normal "class="Normal">command -v docker &gt;/dev/null
+</span><span title="LineNr "class="LineNr">60</span>  <span title="makeSpecial "class="makeSpecial">	@</span><span title="Normal "class="Normal">docker info &gt;/dev/null
+</span><span title="LineNr "class="LineNr">61</span>  <span title="makePreCondit "class="makePreCondit">else
+</span><span title="LineNr "class="LineNr">62</span>  <span title="makeSpecial "class="makeSpecial">	@</span><span title="Normal "class="Normal">command -v helm &gt;/dev/null
+</span><span title="LineNr "class="LineNr">63</span>  <span title="makeSpecial "class="makeSpecial">	@</span><span title="Normal "class="Normal">command -v git &gt;/dev/null
+</span><span title="LineNr "class="LineNr">64</span>  <span title="makeSpecial "class="makeSpecial">	@</span><span title="Normal "class="Normal">echo </span><span title="makeDString "class="makeDString">&quot;&#61;&#61; Global requirements are met.&quot;
+</span><span title="LineNr "class="LineNr">65</span>  <span title="makePreCondit "class="makePreCondit">endif
+</span><span title="LineNr "class="LineNr">66</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr last-LineNr">67</span>  <span title="makeSpecTarget "class="makeSpecTarget">.PHONY:</span><span title="Normal "class="Normal"> all global-requirements lint-requirements helm-unittest lint build deploy clean</span>

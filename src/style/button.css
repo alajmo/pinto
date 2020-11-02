@@ -35,6 +35,16 @@ button.text {
   font-family: 'monospace', 'Helvetica Neue', 'Calibri Light', Roboto;
   font-size: var(--font-medium);
 
+  &.menu-btn {
+    text-transform: none;
+    font-weight: normal;
+
+    padding: calc(var(--padding) * 2);
+    cursor: pointer;
+    color: var(--inactive-color);
+    user-select: none;
+  }
+
   &:hover {
     color: var(--white);
   }
@@ -90,6 +100,11 @@ button.text {
       color: var(--warning-color);
       color: rgba(var(--warning-color), 0.7);
     }
+  }
+
+  &:disabled {
+    color: #979797;
+    opacity: 0.5;
   }
 }
 

@@ -13,16 +13,17 @@ export { SidebarView, SidebarTemplate };
 
 function SidebarTemplate({ state, Store }) {
   const { selectedOption, selectedKeyword, showSidebar } = state.app;
-  const enabledKeywordGroups = ['misc', 'major', 'minor'].concat(
-    Object.entries(state.theme.languages)
-      .filter(l => l[1])
-      .map(l => l[0]),
-  );
-  const keywords = enabledKeywordGroups.flatMap(g => state.theme.refs[g]);
+  const enabledKeywordGroups = Object.entries(state.theme.groups)
+    .filter(l => l[1])
+    .map(l => l[0]);
 
-  const languages = Object.entries(state.theme.languages)
-    .filter(language => language[1])
-    .map(language => language[0]);
+  const keywords = enabledKeywordGroups.flatMap(
+    g => state.theme.groupKeywords[g],
+  );
+
+  const groups = Object.entries(state.theme.groups)
+    .filter(group => group[1])
+    .map(group => group[0]);
 
   const selectedKeywords = state.app.selectedKeyword;
 
@@ -33,15 +34,15 @@ function SidebarTemplate({ state, Store }) {
   const allKeywordsSelected = activeKeywords.length === selectedKeywords.length;
   const allKeywordsEnabled = activeKeywords.every(k => k.enabled);
 
-  const groupSelectedKeywords = ['misc', 'major', 'minor']
-    .concat(Object.keys(state.theme.languages))
-    .reduce(
-      (prev, curr) => ({
-        [curr]: state.theme.refs[curr].every(k => selectedKeywords.includes(k)),
-        ...prev,
-      }),
-      {},
-    );
+  const groupSelectedKeywords = Object.keys(state.theme.groups).reduce(
+    (prev, curr) => ({
+      [curr]: state.theme.groupKeywords[curr].every(k =>
+        selectedKeywords.includes(k),
+      ),
+      ...prev,
+    }),
+    {},
+  );
 
   return {
     state,
@@ -56,20 +57,16 @@ function SidebarTemplate({ state, Store }) {
       keywords,
 
       allKeywordsMinimized: state.app.sidebar.allKeywordsMinimized,
-      minimizedLanguages: state.app.sidebar.minimizedLanguages,
+      minimizedGroups: state.app.sidebar.minimizedGroups,
 
       groupSelectedKeywords,
       allKeywordsSelected,
       allKeywordsEnabled,
 
       // Keyword References
-      miscKeywords: state.theme.refs.misc,
-      majorKeywords: state.theme.refs.major,
-      minorKeywords: state.theme.refs.minor,
-      refs: state.theme.refs,
+      groupKeywords: state.theme.groupKeywords,
 
-      languages,
-
+      groups,
       toggleSidebar() {
         Store.dispatch('app', 'toggleSidebar');
         mitt.emit('RENDER');
@@ -109,7 +106,7 @@ function SidebarTemplate({ state, Store }) {
       },
 
       toggleSelectAllGroupKeywords(groups) {
-        const groupKeywords = state.theme.refs[groups[0]];
+        const groupKeywords = state.theme.groupKeywords[groups[0]];
         const selectedKeywords = state.app.selectedKeyword;
 
         let keywords;
@@ -140,8 +137,6 @@ function SidebarTemplate({ state, Store }) {
       },
 
       selectKeyword(group, e) {
-        console.log('SIDEBAR');
-
         const clickedKeyword = e.target.getAttribute('data-name');
         if (clickedKeyword === null) {
           return;
@@ -171,12 +166,18 @@ function SidebarTemplate({ state, Store }) {
         Store.dispatch('app', 'selectKeyword', selectedKeywords);
         Store.dispatch('app', 'selectOption', 'keyword');
 
-        if (
-          group !== state.theme.language &&
-          !['major', 'minor', 'misc'].includes(group)
-        ) {
+        if (state.theme.languages.includes(group)) {
           Store.dispatch('theme', 'loadTemplate', group);
         }
+
+        mitt.emit('RENDER');
+      },
+
+      copyFromKeywordToKeyword(keyword) {
+        Store.dispatch('theme', 'copyFromKeywordToKeyword', {
+          keywordToCopyFrom: keyword,
+          keywordToCopyTo: selectedKeywords,
+        });
 
         mitt.emit('RENDER');
       },
@@ -230,6 +231,7 @@ function SidebarView({ Store, state, props }) {
 
         <ol class="list">
           <li
+            title="Go to settings (Shift + S)"
             onclick="${props.selectSettings}"
             data-name="settings"
             data-selected="${props.selectedOption === 'settings'}"
@@ -238,6 +240,7 @@ function SidebarView({ Store, state, props }) {
           </li>
 
           <li
+            title="Go to palette editor (Shift + P)"
             onclick="${props.selectPalette}"
             data-name="palette"
             data-selected="${props.selectedOption === 'palette'}"
@@ -265,138 +268,42 @@ function SidebarView({ Store, state, props }) {
           </div>
         </div>
 
-        ${state.theme.groups.misc
-          ? KeywordList({
-              Store,
-              props: {
-                title: 'Misc',
-                showEnableKeywordToggle: true,
-                allEnabled: props.refs.misc.every(
-                  k => props.keywordData[k].enabled,
-                ),
-                allSelected: props.groupSelectedKeywords.misc,
-                minimized: props.minimizedLanguages.misc,
-                selectedKeyword: props.selectedKeyword,
-                keywordData: props.keywordData,
-                keywords: props.miscKeywords,
-                selectKeyword: e => props.selectKeyword('misc', e),
-
-                toggleEnableKeyword: keyword => {
-                  props.toggleEnableKeyword([keyword]);
-                },
-                toggleEnableAll: () => {
-                  const allEnabled = props.refs.misc.every(
-                    k => props.keywordData[k].enabled,
-                  );
-                  props.toggleEnableKeyword(props.refs.misc, !allEnabled);
-                },
-                toggleSelectAll: () => {
-                  props.toggleSelectAllGroupKeywords(['misc']);
-                },
-                toggleDisplayAll: () => {
-                  props.toggleMinimizeKeywords(['misc']);
-                },
-              },
-            })
-          : null}
-        ${state.theme.groups.major
-          ? KeywordList({
-              Store,
-              props: {
-                title: 'Major',
-                showEnableKeywordToggle: true,
-                allEnabled: props.refs.major.every(
-                  k => props.keywordData[k].enabled,
-                ),
-                allSelected: props.groupSelectedKeywords.major,
-                minimized: props.minimizedLanguages.major,
-                keywordData: props.keywordData,
-                keywords: props.majorKeywords,
-                selectedKeyword: props.selectedKeyword,
-                selectKeyword: e => props.selectKeyword('major', e),
-
-                toggleEnableKeyword: keyword => {
-                  props.toggleEnableKeyword([keyword]);
-                },
-                toggleEnableAll: () => {
-                  const allEnabled = props.refs.major.every(
-                    k => props.keywordData[k].enabled,
-                  );
-                  props.toggleEnableKeyword(props.refs.major, !allEnabled);
-                },
-                toggleSelectAll: () => {
-                  props.toggleSelectAllGroupKeywords(['major']);
-                },
-                toggleDisplayAll: () => {
-                  props.toggleMinimizeKeywords(['major']);
-                },
-              },
-            })
-          : null}
-        ${state.theme.groups.minor
-          ? KeywordList({
-              Store,
-              props: {
-                title: 'Minor',
-                showEnableKeywordToggle: true,
-                allEnabled: props.refs.minor.every(
-                  k => props.keywordData[k].enabled,
-                ),
-                allSelected: props.groupSelectedKeywords.minor,
-                minimized: props.minimizedLanguages.minor,
-                keywordData: props.keywordData,
-                keywords: props.minorKeywords,
-                selectedKeyword: props.selectedKeyword,
-                selectKeyword: e => props.selectKeyword('minor', e),
-
-                toggleEnableKeyword: keyword => {
-                  props.toggleEnableKeyword([keyword]);
-                },
-                toggleEnableAll: () => {
-                  const allEnabled = props.refs.minor.every(
-                    k => props.keywordData[k].enabled,
-                  );
-                  props.toggleEnableKeyword(props.refs.minor, !allEnabled);
-                },
-                toggleSelectAll: () => {
-                  props.toggleSelectAllGroupKeywords(['minor']);
-                },
-                toggleDisplayAll: () => {
-                  props.toggleMinimizeKeywords(['minor']);
-                },
-              },
-            })
-          : null}
-        ${props.languages.map(language =>
+        ${props.groups.map(group =>
           KeywordList({
             Store,
             props: {
-              title: language,
+              title: group,
               showEnableKeywordToggle: true,
-              allEnabled: props.refs[language].every(
+              allEnabled: props.groupKeywords[group].every(
                 k => props.keywordData[k].enabled,
               ),
-              allSelected: props.groupSelectedKeywords[language],
-              minimized: props.minimizedLanguages[language],
+              allSelected: props.groupSelectedKeywords[group],
+              minimized: props.minimizedGroups[group],
               keywordData: props.keywordData,
-              keywords: props.refs[language],
+              keywords: props.groupKeywords[group],
               selectedKeyword: props.selectedKeyword,
-              selectKeyword: e => props.selectKeyword(language, e),
+              selectKeyword: e => props.selectKeyword(group, e),
+              descriptions: state.theme.descriptions,
+
+              copyFromKeywordToKeyword: props.copyFromKeywordToKeyword,
 
               toggleEnableKeyword: keyword => {
                 props.toggleEnableKeyword([keyword]);
               },
               toggleEnableAll: () => {
-                const allEnabled = props.refs[language].every(
+                const allEnabled = props.groupKeywords[group].every(
                   k => props.keywordData[k].enabled,
                 );
-                props.toggleEnableKeyword(props.refs[language], !allEnabled);
+                props.toggleEnableKeyword(
+                  props.groupKeywords[group],
+                  !allEnabled,
+                );
               },
               toggleSelectAll: () => {
-                props.toggleSelectAllGroupKeywords([language]);
+                props.toggleSelectAllGroupKeywords([group]);
               },
               toggleDisplayAll: () => {
-                props.toggleMinimizeKeywords([language]);
+                props.toggleMinimizeKeywords([group]);
               },
             },
           }),

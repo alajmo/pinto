@@ -1,17 +1,18 @@
 {
   "name": "pinto",
-  "version": "0.1.0",
-  "description": "pinto is a free and open-source editor used to create color themes",
+  "version": "0.3.0",
+  "description": "Create, view and edit Vim color themes",
   "main": "src/index.html",
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack --mode production",
+    "deploy": "webpack --mode production && netlify deploy --prod --dir dist",
     "lint": "eslint src",
     "lint-watch": "nodemon --exec npm run lint"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/samiralajmovic/pinto.git"
+    "url": "git+https://github.com/alajmo/pinto.git"
   },
   "contributors": [
     {
@@ -22,16 +23,16 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/samiralajmovic/pinto/issues"
+    "url": "https://github.com/alajmo/pinto/issues"
   },
-  "homepage": "https://github.com/samiralajmovic/pinto#readme",
+  "homepage": "https://github.com/alajmo/pinto#readme",
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@fortawesome/fontawesome-free": "^5.15.1",
     "file-saver": "^2.0.2",
+    "idb": "^5.0.7",
     "lighterhtml": "^4.1.1",
-    "lodash": "^4.17.20",
-    "nodemon": "^2.0.6"
+    "lodash": "^4.17.20"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
@@ -45,6 +46,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.3.1",
     "core-js": "^3.6.5",
     "css-loader": "^3.6.0",
     "cssnano": "^4.1.10",
@@ -62,6 +64,7 @@
     "style-loader": "^1.2.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "nodemon": "^2.0.6"
   }
 }

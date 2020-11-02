@@ -14,7 +14,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 1,
-        "char": " main\n"
+        "char": " btree\n"
     },
     {
         "group": "LineNr",
@@ -59,7 +59,7 @@ module.exports = [
         "group": "goString",
         "linkedGroup": "Constant",
         "row": 4,
-        "char": "&quot;bytes&quot;\n"
+        "char": "&quot;fmt&quot;\n"
     },
     {
         "group": "LineNr",
@@ -76,7 +76,7 @@ module.exports = [
         "group": "goString",
         "linkedGroup": "Constant",
         "row": 5,
-        "char": "&quot;fmt&quot;\n"
+        "char": "&quot;io&quot;\n"
     },
     {
         "group": "LineNr",
@@ -93,7 +93,7 @@ module.exports = [
         "group": "goString",
         "linkedGroup": "Constant",
         "row": 6,
-        "char": "&quot;net/url&quot;\n"
+        "char": "&quot;sort&quot;\n"
     },
     {
         "group": "LineNr",
@@ -110,7 +110,7 @@ module.exports = [
         "group": "goString",
         "linkedGroup": "Constant",
         "row": 7,
-        "char": "&quot;os&quot;\n"
+        "char": "&quot;strings&quot;\n"
     },
     {
         "group": "LineNr",
@@ -127,7 +127,7 @@ module.exports = [
         "group": "goString",
         "linkedGroup": "Constant",
         "row": 8,
-        "char": "&quot;strconv&quot;\n"
+        "char": "&quot;sync&quot;\n"
     },
     {
         "group": "LineNr",
@@ -138,13 +138,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 9,
-        "char": "\t"
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 9,
-        "char": "&quot;strings&quot;\n"
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -155,13 +149,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 10,
-        "char": "\t"
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 10,
-        "char": "&quot;time&quot;\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -169,10 +157,10 @@ module.exports = [
         "char": "11"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "goComment",
+        "linkedGroup": "Comment",
         "row": 11,
-        "char": "\n"
+        "char": "// Item represents a single object in the tree.\n"
     },
     {
         "group": "LineNr",
@@ -180,16 +168,28 @@ module.exports = [
         "char": "12"
     },
     {
+        "group": "goDeclaration",
+        "linkedGroup": "Statement",
+        "row": 12,
+        "char": "type"
+    },
+    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 12,
-        "char": "\t"
+        "char": " Item "
     },
     {
-        "group": "goString",
-        "linkedGroup": "Constant",
+        "group": "goDeclType",
+        "linkedGroup": "Statement",
         "row": 12,
-        "char": "&quot;github.com/cortexproject/cortex/pkg/util&quot;\n"
+        "char": "interface"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 12,
+        "char": " {\n"
     },
     {
         "group": "LineNr",
@@ -203,10 +203,10 @@ module.exports = [
         "char": "\t"
     },
     {
-        "group": "goString",
-        "linkedGroup": "Constant",
+        "group": "goComment",
+        "linkedGroup": "Comment",
         "row": 13,
-        "char": "&quot;github.com/cortexproject/cortex/pkg/util/flagext&quot;\n"
+        "char": "// Less tests whether the current item is less than the given argument.\n"
     },
     {
         "group": "LineNr",
@@ -220,10 +220,10 @@ module.exports = [
         "char": "\t"
     },
     {
-        "group": "goString",
-        "linkedGroup": "Constant",
+        "group": "goComment",
+        "linkedGroup": "Comment",
         "row": 14,
-        "char": "&quot;github.com/docker/docker/daemon/logger&quot;\n"
+        "char": "//\n"
     },
     {
         "group": "LineNr",
@@ -237,10 +237,10 @@ module.exports = [
         "char": "\t"
     },
     {
-        "group": "goString",
-        "linkedGroup": "Constant",
+        "group": "goComment",
+        "linkedGroup": "Comment",
         "row": 15,
-        "char": "&quot;github.com/docker/docker/daemon/logger/templates&quot;\n"
+        "char": "// This must provide a strict weak ordering.\n"
     },
     {
         "group": "LineNr",
@@ -254,10 +254,10 @@ module.exports = [
         "char": "\t"
     },
     {
-        "group": "goString",
-        "linkedGroup": "Constant",
+        "group": "goComment",
+        "linkedGroup": "Comment",
         "row": 16,
-        "char": "&quot;github.com/prometheus/common/model&quot;\n"
+        "char": "// If !a.Less(b) &amp;&amp; !b.Less(a), we treat this to mean a &#61;&#61; b (i.e. we can only\n"
     },
     {
         "group": "LineNr",
@@ -268,7 +268,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 17,
-        "char": "\n"
+        "char": "\t"
+    },
+    {
+        "group": "goComment",
+        "linkedGroup": "Comment",
+        "row": 17,
+        "char": "// hold one of either a or b in the tree).\n"
     },
     {
         "group": "LineNr",
@@ -279,13 +285,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 18,
-        "char": "\t"
+        "char": "\tLess(than Item) "
     },
     {
-        "group": "goString",
-        "linkedGroup": "Constant",
+        "group": "goType",
+        "linkedGroup": "Type",
         "row": 18,
-        "char": "&quot;github.com/grafana/loki/pkg/helpers&quot;\n"
+        "char": "bool\n"
     },
     {
         "group": "LineNr",
@@ -296,13 +302,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 19,
-        "char": "\t"
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 19,
-        "char": "&quot;github.com/grafana/loki/pkg/logentry/stages&quot;\n"
+        "char": "}\n"
     },
     {
         "group": "LineNr",
@@ -313,13 +313,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 20,
-        "char": "\t"
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 20,
-        "char": "&quot;github.com/grafana/loki/pkg/promtail/client&quot;\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -327,16 +321,16 @@ module.exports = [
         "char": "21"
     },
     {
+        "group": "goDeclaration",
+        "linkedGroup": "Statement",
+        "row": 21,
+        "char": "const"
+    },
+    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 21,
-        "char": "\t"
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 21,
-        "char": "&quot;github.com/grafana/loki/pkg/promtail/targets&quot;\n"
+        "char": " (\n"
     },
     {
         "group": "LineNr",
@@ -347,7 +341,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 22,
-        "char": ")\n"
+        "char": "\tDefaultFreeListSize &#61; "
+    },
+    {
+        "group": "goDecimalInt",
+        "linkedGroup": "Constant",
+        "row": 22,
+        "char": "32\n"
     },
     {
         "group": "LineNr",
@@ -358,7 +358,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 23,
-        "char": "\n"
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -366,16 +366,10 @@ module.exports = [
         "char": "24"
     },
     {
-        "group": "goDeclaration",
-        "linkedGroup": "Statement",
-        "row": 24,
-        "char": "const"
-    },
-    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 24,
-        "char": " (\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -383,16 +377,16 @@ module.exports = [
         "char": "25"
     },
     {
+        "group": "goDeclaration",
+        "linkedGroup": "Statement",
+        "row": 25,
+        "char": "var"
+    },
+    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 25,
-        "char": "\tdriverName &#61; "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 25,
-        "char": "&quot;loki&quot;\n"
+        "char": " (\n"
     },
     {
         "group": "LineNr",
@@ -403,7 +397,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 26,
-        "char": "\n"
+        "char": "\tnilItems    &#61; "
+    },
+    {
+        "group": "goBuiltins",
+        "linkedGroup": "Statement",
+        "row": 26,
+        "char": "make"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 26,
+        "char": "(items, "
+    },
+    {
+        "group": "goDecimalInt",
+        "linkedGroup": "Constant",
+        "row": 26,
+        "char": "16"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 26,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -414,13 +432,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 27,
-        "char": "\tcfgExternalLabelsKey &#61; "
+        "char": "\tnilChildren &#61; "
     },
     {
-        "group": "goString",
+        "group": "goBuiltins",
+        "linkedGroup": "Statement",
+        "row": 27,
+        "char": "make"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 27,
+        "char": "(children, "
+    },
+    {
+        "group": "goDecimalInt",
         "linkedGroup": "Constant",
         "row": 27,
-        "char": "&quot;loki-external-labels&quot;\n"
+        "char": "16"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 27,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -431,13 +467,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 28,
-        "char": "\tcfgURLKey            &#61; "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 28,
-        "char": "&quot;loki-url&quot;\n"
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -448,13 +478,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 29,
-        "char": "\tcfgTLSCAFileKey      &#61; "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 29,
-        "char": "&quot;loki-tls-ca-file&quot;\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -462,16 +486,16 @@ module.exports = [
         "char": "30"
     },
     {
+        "group": "goDeclaration",
+        "linkedGroup": "Statement",
+        "row": 30,
+        "char": "func"
+    },
+    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 30,
-        "char": "\tcfgTLSCertFileKey    &#61; "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 30,
-        "char": "&quot;loki-tls-cert-file&quot;\n"
+        "char": " (f *FreeList) newNode() (n *node) {\n"
     },
     {
         "group": "LineNr",
@@ -482,13 +506,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 31,
-        "char": "\tcfgTLSKeyFileKey     &#61; "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 31,
-        "char": "&quot;loki-tls-key-file&quot;\n"
+        "char": "\tf.mu.Lock()\n"
     },
     {
         "group": "LineNr",
@@ -499,13 +517,25 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 32,
-        "char": "\tcfgTLSServerNameKey  &#61; "
+        "char": "\tindex :&#61; "
     },
     {
-        "group": "goString",
+        "group": "goBuiltins",
+        "linkedGroup": "Statement",
+        "row": 32,
+        "char": "len"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 32,
+        "char": "(f.freelist) - "
+    },
+    {
+        "group": "goDecimalInt",
         "linkedGroup": "Constant",
         "row": 32,
-        "char": "&quot;loki-tls-server-name&quot;\n"
+        "char": "1\n"
     },
     {
         "group": "LineNr",
@@ -516,13 +546,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 33,
-        "char": "\tcfgTLSInsecure       &#61; "
+        "char": "\t"
     },
     {
-        "group": "goString",
+        "group": "goConditional",
+        "linkedGroup": "Statement",
+        "row": 33,
+        "char": "if"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 33,
+        "char": " index &lt; "
+    },
+    {
+        "group": "goDecimalInt",
         "linkedGroup": "Constant",
         "row": 33,
-        "char": "&quot;loki-tls-insecure-skip-verify&quot;\n"
+        "char": "0"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 33,
+        "char": " {\n"
     },
     {
         "group": "LineNr",
@@ -533,13 +581,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 34,
-        "char": "\tcfgProxyURLKey       &#61; "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 34,
-        "char": "&quot;loki-proxy-url&quot;\n"
+        "char": "\t\tf.mu.Unlock()\n"
     },
     {
         "group": "LineNr",
@@ -550,13 +592,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 35,
-        "char": "\tcfgTimeoutKey        &#61; "
+        "char": "\t\t"
     },
     {
-        "group": "goString",
-        "linkedGroup": "Constant",
+        "group": "goStatement",
+        "linkedGroup": "Statement",
         "row": 35,
-        "char": "&quot;loki-timeout&quot;\n"
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 35,
+        "char": " "
+    },
+    {
+        "group": "goBuiltins",
+        "linkedGroup": "Statement",
+        "row": 35,
+        "char": "new"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 35,
+        "char": "(node)\n"
     },
     {
         "group": "LineNr",
@@ -567,13 +627,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 36,
-        "char": "\tcfgBatchWaitKey      &#61; "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 36,
-        "char": "&quot;loki-batch-wait&quot;\n"
+        "char": "\t}\n"
     },
     {
         "group": "LineNr",
@@ -584,13 +638,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 37,
-        "char": "\tcfgBatchSizeKey      &#61; "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 37,
-        "char": "&quot;loki-batch-size&quot;\n"
+        "char": "\tn &#61; f.freelist[index]\n"
     },
     {
         "group": "LineNr",
@@ -601,13 +649,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 38,
-        "char": "\tcfgMinBackoffKey     &#61; "
+        "char": "\tf.freelist[index] &#61; "
     },
     {
-        "group": "goString",
-        "linkedGroup": "Constant",
+        "group": "goConstants",
+        "linkedGroup": "Statement",
         "row": 38,
-        "char": "&quot;loki-min-backoff&quot;\n"
+        "char": "nil\n"
     },
     {
         "group": "LineNr",
@@ -618,13 +666,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 39,
-        "char": "\tcfgMaxBackoffKey     &#61; "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 39,
-        "char": "&quot;loki-max-backoff&quot;\n"
+        "char": "\tf.freelist &#61; f.freelist[:index]\n"
     },
     {
         "group": "LineNr",
@@ -635,13 +677,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 40,
-        "char": "\tcfgMaxRetriesKey     &#61; "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 40,
-        "char": "&quot;loki-retries&quot;\n"
+        "char": "\tf.mu.Unlock()\n"
     },
     {
         "group": "LineNr",
@@ -652,13 +688,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 41,
-        "char": "\tcfgPipelineStagesKey &#61; "
+        "char": "\t"
     },
     {
-        "group": "goString",
-        "linkedGroup": "Constant",
+        "group": "goStatement",
+        "linkedGroup": "Statement",
         "row": 41,
-        "char": "&quot;loki-pipeline-stage-file&quot;\n"
+        "char": "return\n"
     },
     {
         "group": "LineNr",
@@ -669,13 +705,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 42,
-        "char": "\tcfgTenantIDKey       &#61; "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 42,
-        "char": "&quot;loki-tenant-id&quot;\n"
+        "char": "}\n"
     },
     {
         "group": "LineNr",
@@ -686,13 +716,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 43,
-        "char": "\tcfgNofile            &#61; "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 43,
-        "char": "&quot;no-file&quot;\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -700,16 +724,10 @@ module.exports = [
         "char": "44"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "goComment",
+        "linkedGroup": "Comment",
         "row": 44,
-        "char": "\tcfgKeepFile          &#61; "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 44,
-        "char": "&quot;keep-file&quot;\n"
+        "char": "// NewWithFreeList creates a new B-Tree that uses the given node free list.\n"
     },
     {
         "group": "LineNr",
@@ -717,10 +735,28 @@ module.exports = [
         "char": "45"
     },
     {
+        "group": "goDeclaration",
+        "linkedGroup": "Statement",
+        "row": 45,
+        "char": "func"
+    },
+    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 45,
-        "char": "\n"
+        "char": " NewWithFreeList(degree "
+    },
+    {
+        "group": "goSignedInts",
+        "linkedGroup": "Type",
+        "row": 45,
+        "char": "int"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 45,
+        "char": ", f *FreeList) *BTree {\n"
     },
     {
         "group": "LineNr",
@@ -731,13 +767,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 46,
-        "char": "\tswarmServiceLabelKey &#61; "
+        "char": "\t"
     },
     {
-        "group": "goString",
+        "group": "goConditional",
+        "linkedGroup": "Statement",
+        "row": 46,
+        "char": "if"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 46,
+        "char": " degree &lt;&#61; "
+    },
+    {
+        "group": "goDecimalInt",
         "linkedGroup": "Constant",
         "row": 46,
-        "char": "&quot;com.docker.swarm.service.name&quot;\n"
+        "char": "1"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 46,
+        "char": " {\n"
     },
     {
         "group": "LineNr",
@@ -748,13 +802,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 47,
-        "char": "\tswarmStackLabelKey   &#61; "
+        "char": "\t\t"
+    },
+    {
+        "group": "goBuiltins",
+        "linkedGroup": "Statement",
+        "row": 47,
+        "char": "panic"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 47,
+        "char": "("
     },
     {
         "group": "goString",
         "linkedGroup": "Constant",
         "row": 47,
-        "char": "&quot;com.docker.stack.namespace&quot;\n"
+        "char": "&quot;bad degree&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 47,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -765,7 +837,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 48,
-        "char": "\n"
+        "char": "\t}\n"
     },
     {
         "group": "LineNr",
@@ -776,13 +848,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 49,
-        "char": "\tswarmServiceLabelName &#61; "
+        "char": "\t"
     },
     {
-        "group": "goString",
-        "linkedGroup": "Constant",
+        "group": "goStatement",
+        "linkedGroup": "Statement",
         "row": 49,
-        "char": "&quot;swarm_service&quot;\n"
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 49,
+        "char": " &amp;BTree{\n"
     },
     {
         "group": "LineNr",
@@ -793,13 +871,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 50,
-        "char": "\tswarmStackLabelName   &#61; "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 50,
-        "char": "&quot;swarm_stack&quot;\n"
+        "char": "\t\tdegree: degree,\n"
     },
     {
         "group": "LineNr",
@@ -810,7 +882,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 51,
-        "char": "\n"
+        "char": "\t\tcow:    &amp;copyOnWriteContext{freelist: f},\n"
     },
     {
         "group": "LineNr",
@@ -821,13 +893,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 52,
-        "char": "\tcomposeServiceLabelKey &#61; "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 52,
-        "char": "&quot;com.docker.compose.service&quot;\n"
+        "char": "\t}\n"
     },
     {
         "group": "LineNr",
@@ -838,13 +904,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 53,
-        "char": "\tcomposeProjectLabelKey &#61; "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 53,
-        "char": "&quot;com.docker.compose.project&quot;\n"
+        "char": "}\n"
     },
     {
         "group": "LineNr",
@@ -863,16 +923,10 @@ module.exports = [
         "char": "55"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "goComment",
+        "linkedGroup": "Comment",
         "row": 55,
-        "char": "\tcomposeServiceLabelName &#61; "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 55,
-        "char": "&quot;compose_service&quot;\n"
+        "char": "// node is an internal node in a tree.\n"
     },
     {
         "group": "LineNr",
@@ -880,16 +934,10 @@ module.exports = [
         "char": "56"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "goComment",
+        "linkedGroup": "Comment",
         "row": 56,
-        "char": "\tcomposeProjectLabelName &#61; "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 56,
-        "char": "&quot;compose_project&quot;\n"
+        "char": "//\n"
     },
     {
         "group": "LineNr",
@@ -897,10 +945,10 @@ module.exports = [
         "char": "57"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "goComment",
+        "linkedGroup": "Comment",
         "row": 57,
-        "char": "\n"
+        "char": "// It must at all times maintain the invariant that either\n"
     },
     {
         "group": "LineNr",
@@ -908,16 +956,10 @@ module.exports = [
         "char": "58"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "goComment",
+        "linkedGroup": "Comment",
         "row": 58,
-        "char": "\tdefaultExternalLabels &#61; "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 58,
-        "char": "&quot;container_name&#61;{{.Name}}&quot;\n"
+        "char": "//   * len(children) &#61;&#61; 0, len(items) unconstrained\n"
     },
     {
         "group": "LineNr",
@@ -925,22 +967,10 @@ module.exports = [
         "char": "59"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "goComment",
+        "linkedGroup": "Comment",
         "row": 59,
-        "char": "\tdefaultHostLabelName  &#61; model.LabelName("
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 59,
-        "char": "&quot;host&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 59,
-        "char": ")\n"
+        "char": "//   * len(children) &#61;&#61; len(items) + 1\n"
     },
     {
         "group": "LineNr",
@@ -948,10 +978,28 @@ module.exports = [
         "char": "60"
     },
     {
+        "group": "goDeclaration",
+        "linkedGroup": "Statement",
+        "row": 60,
+        "char": "type"
+    },
+    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 60,
-        "char": ")\n"
+        "char": " node "
+    },
+    {
+        "group": "goDeclType",
+        "linkedGroup": "Statement",
+        "row": 60,
+        "char": "struct"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 60,
+        "char": " {\n"
     },
     {
         "group": "LineNr",
@@ -962,7 +1010,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 61,
-        "char": "\n"
+        "char": "\titems    items\n"
     },
     {
         "group": "LineNr",
@@ -970,16 +1018,10 @@ module.exports = [
         "char": "62"
     },
     {
-        "group": "goDeclaration",
-        "linkedGroup": "Statement",
-        "row": 62,
-        "char": "var"
-    },
-    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 62,
-        "char": " (\n"
+        "char": "\tchildren children\n"
     },
     {
         "group": "LineNr",
@@ -990,7 +1032,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 63,
-        "char": "\tdefaultClientConfig &#61; client.Config{\n"
+        "char": "\tcow      *copyOnWriteContext\n"
     },
     {
         "group": "LineNr",
@@ -1001,19 +1043,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 64,
-        "char": "\t\tBatchWait: "
-    },
-    {
-        "group": "goDecimalInt",
-        "linkedGroup": "Constant",
-        "row": 64,
-        "char": "1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 64,
-        "char": " * time.Second,\n"
+        "char": "}\n"
     },
     {
         "group": "LineNr",
@@ -1024,31 +1054,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 65,
-        "char": "\t\tBatchSize: "
-    },
-    {
-        "group": "goDecimalInt",
-        "linkedGroup": "Constant",
-        "row": 65,
-        "char": "100"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 65,
-        "char": " * "
-    },
-    {
-        "group": "goDecimalInt",
-        "linkedGroup": "Constant",
-        "row": 65,
-        "char": "1024"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 65,
-        "char": ",\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1056,10 +1062,16 @@ module.exports = [
         "char": "66"
     },
     {
+        "group": "goDeclaration",
+        "linkedGroup": "Statement",
+        "row": 66,
+        "char": "func"
+    },
+    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 66,
-        "char": "\t\tBackoffConfig: util.BackoffConfig{\n"
+        "char": " (n *node) mutableFor(cow *copyOnWriteContext) *node {\n"
     },
     {
         "group": "LineNr",
@@ -1070,19 +1082,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 67,
-        "char": "\t\t\tMinBackoff: "
+        "char": "\t"
     },
     {
-        "group": "goDecimalInt",
-        "linkedGroup": "Constant",
+        "group": "goConditional",
+        "linkedGroup": "Statement",
         "row": 67,
-        "char": "100"
+        "char": "if"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 67,
-        "char": " * time.Millisecond,\n"
+        "char": " n.cow &#61;&#61; cow {\n"
     },
     {
         "group": "LineNr",
@@ -1093,19 +1105,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 68,
-        "char": "\t\t\tMaxBackoff: "
+        "char": "\t\t"
     },
     {
-        "group": "goDecimalInt",
-        "linkedGroup": "Constant",
+        "group": "goStatement",
+        "linkedGroup": "Statement",
         "row": 68,
-        "char": "10"
+        "char": "return"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 68,
-        "char": " * time.Second,\n"
+        "char": " n\n"
     },
     {
         "group": "LineNr",
@@ -1116,19 +1128,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 69,
-        "char": "\t\t\tMaxRetries: "
-    },
-    {
-        "group": "goDecimalInt",
-        "linkedGroup": "Constant",
-        "row": 69,
-        "char": "10"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 69,
-        "char": ",\n"
+        "char": "\t}\n"
     },
     {
         "group": "LineNr",
@@ -1139,7 +1139,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 70,
-        "char": "\t\t},\n"
+        "char": "\tout :&#61; cow.newNode()\n"
     },
     {
         "group": "LineNr",
@@ -1150,19 +1150,43 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 71,
-        "char": "\t\tTimeout: "
+        "char": "\t"
     },
     {
-        "group": "goDecimalInt",
-        "linkedGroup": "Constant",
+        "group": "goConditional",
+        "linkedGroup": "Statement",
         "row": 71,
-        "char": "10"
+        "char": "if"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 71,
-        "char": " * time.Second,\n"
+        "char": " "
+    },
+    {
+        "group": "goBuiltins",
+        "linkedGroup": "Statement",
+        "row": 71,
+        "char": "cap"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 71,
+        "char": "(out.items) &gt;&#61; "
+    },
+    {
+        "group": "goBuiltins",
+        "linkedGroup": "Statement",
+        "row": 71,
+        "char": "len"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 71,
+        "char": "(n.items) {\n"
     },
     {
         "group": "LineNr",
@@ -1173,7 +1197,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 72,
-        "char": "\t}\n"
+        "char": "\t\tout.items &#61; out.items[:"
+    },
+    {
+        "group": "goBuiltins",
+        "linkedGroup": "Statement",
+        "row": 72,
+        "char": "len"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 72,
+        "char": "(n.items)]\n"
     },
     {
         "group": "LineNr",
@@ -1184,7 +1220,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 73,
-        "char": ")\n"
+        "char": "\t} "
+    },
+    {
+        "group": "goConditional",
+        "linkedGroup": "Statement",
+        "row": 73,
+        "char": "else"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 73,
+        "char": " {\n"
     },
     {
         "group": "LineNr",
@@ -1195,7 +1243,43 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 74,
-        "char": "\n"
+        "char": "\t\tout.items &#61; "
+    },
+    {
+        "group": "goBuiltins",
+        "linkedGroup": "Statement",
+        "row": 74,
+        "char": "make"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 74,
+        "char": "(items, "
+    },
+    {
+        "group": "goBuiltins",
+        "linkedGroup": "Statement",
+        "row": 74,
+        "char": "len"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 74,
+        "char": "(n.items), "
+    },
+    {
+        "group": "goBuiltins",
+        "linkedGroup": "Statement",
+        "row": 74,
+        "char": "cap"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 74,
+        "char": "(n.items))\n"
     },
     {
         "group": "LineNr",
@@ -1203,28 +1287,10 @@ module.exports = [
         "char": "75"
     },
     {
-        "group": "goDeclaration",
-        "linkedGroup": "Statement",
-        "row": 75,
-        "char": "type"
-    },
-    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 75,
-        "char": " config "
-    },
-    {
-        "group": "goDeclType",
-        "linkedGroup": "Statement",
-        "row": 75,
-        "char": "struct"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 75,
-        "char": " {\n"
+        "char": "\t}\n"
     },
     {
         "group": "LineNr",
@@ -1235,7 +1301,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 76,
-        "char": "\tlabels       model.LabelSet\n"
+        "char": "\t"
+    },
+    {
+        "group": "goBuiltins",
+        "linkedGroup": "Statement",
+        "row": 76,
+        "char": "copy"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 76,
+        "char": "(out.items, n.items)\n"
     },
     {
         "group": "LineNr",
@@ -1246,7 +1324,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 77,
-        "char": "\tclientConfig client.Config\n"
+        "char": "\t"
+    },
+    {
+        "group": "goComment",
+        "linkedGroup": "Comment",
+        "row": 77,
+        "char": "// Copy children\n"
     },
     {
         "group": "LineNr",
@@ -1257,7 +1341,43 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 78,
-        "char": "\tpipeline     PipelineConfig\n"
+        "char": "\t"
+    },
+    {
+        "group": "goConditional",
+        "linkedGroup": "Statement",
+        "row": 78,
+        "char": "if"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 78,
+        "char": " "
+    },
+    {
+        "group": "goBuiltins",
+        "linkedGroup": "Statement",
+        "row": 78,
+        "char": "cap"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 78,
+        "char": "(out.children) &gt;&#61; "
+    },
+    {
+        "group": "goBuiltins",
+        "linkedGroup": "Statement",
+        "row": 78,
+        "char": "len"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 78,
+        "char": "(n.children) {\n"
     },
     {
         "group": "LineNr",
@@ -1268,7 +1388,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 79,
-        "char": "}\n"
+        "char": "\t\tout.children &#61; out.children[:"
+    },
+    {
+        "group": "goBuiltins",
+        "linkedGroup": "Statement",
+        "row": 79,
+        "char": "len"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 79,
+        "char": "(n.children)]\n"
     },
     {
         "group": "LineNr",
@@ -1279,7 +1411,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 80,
-        "char": "\n"
+        "char": "\t} "
+    },
+    {
+        "group": "goConditional",
+        "linkedGroup": "Statement",
+        "row": 80,
+        "char": "else"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 80,
+        "char": " {\n"
     },
     {
         "group": "LineNr",
@@ -1287,28 +1431,46 @@ module.exports = [
         "char": "81"
     },
     {
-        "group": "goDeclaration",
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 81,
+        "char": "\t\tout.children &#61; "
+    },
+    {
+        "group": "goBuiltins",
         "linkedGroup": "Statement",
         "row": 81,
-        "char": "type"
+        "char": "make"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 81,
-        "char": " PipelineConfig "
+        "char": "(children, "
     },
     {
-        "group": "goDeclType",
+        "group": "goBuiltins",
         "linkedGroup": "Statement",
         "row": 81,
-        "char": "struct"
+        "char": "len"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 81,
-        "char": " {\n"
+        "char": "(n.children), "
+    },
+    {
+        "group": "goBuiltins",
+        "linkedGroup": "Statement",
+        "row": 81,
+        "char": "cap"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 81,
+        "char": "(n.children))\n"
     },
     {
         "group": "LineNr",
@@ -1319,13 +1481,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 82,
-        "char": "\tPipelineStages stages.PipelineStages "
-    },
-    {
-        "group": "goRawString",
-        "linkedGroup": "Constant",
-        "row": 82,
-        "char": "`yaml:&quot;pipeline_stages,omitempty&quot;`\n"
+        "char": "\t}\n"
     },
     {
         "group": "LineNr",
@@ -1336,7 +1492,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 83,
-        "char": "}\n"
+        "char": "\t"
+    },
+    {
+        "group": "goBuiltins",
+        "linkedGroup": "Statement",
+        "row": 83,
+        "char": "copy"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 83,
+        "char": "(out.children, n.children)\n"
     },
     {
         "group": "LineNr",
@@ -1347,7 +1515,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 84,
-        "char": "\n"
+        "char": "\t"
+    },
+    {
+        "group": "goStatement",
+        "linkedGroup": "Statement",
+        "row": 84,
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 84,
+        "char": " out\n"
     },
     {
         "group": "LineNr",
@@ -1355,28 +1535,10 @@ module.exports = [
         "char": "85"
     },
     {
-        "group": "goDeclaration",
-        "linkedGroup": "Statement",
-        "row": 85,
-        "char": "func"
-    },
-    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 85,
-        "char": " validateDriverOpt(loggerInfo logger.Info) "
-    },
-    {
-        "group": "goType",
-        "linkedGroup": "Type",
-        "row": 85,
-        "char": "error"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 85,
-        "char": " {\n"
+        "char": "}\n"
     },
     {
         "group": "LineNr",
@@ -1387,7 +1549,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 86,
-        "char": "\tconfig :&#61; loggerInfo.Config\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1395,10 +1557,28 @@ module.exports = [
         "char": "87"
     },
     {
+        "group": "goDeclaration",
+        "linkedGroup": "Statement",
+        "row": 87,
+        "char": "func"
+    },
+    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 87,
-        "char": "\n"
+        "char": " (n *node) mutableChild(i "
+    },
+    {
+        "group": "goSignedInts",
+        "linkedGroup": "Type",
+        "row": 87,
+        "char": "int"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 87,
+        "char": ") *node {\n"
     },
     {
         "group": "LineNr",
@@ -1409,31 +1589,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 88,
-        "char": "\t"
-    },
-    {
-        "group": "goRepeat",
-        "linkedGroup": "Statement",
-        "row": 88,
-        "char": "for"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 88,
-        "char": " opt :&#61; "
-    },
-    {
-        "group": "goRepeat",
-        "linkedGroup": "Statement",
-        "row": 88,
-        "char": "range"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 88,
-        "char": " config {\n"
+        "char": "\tc :&#61; n.children[i].mutableFor(n.cow)\n"
     },
     {
         "group": "LineNr",
@@ -1444,19 +1600,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 89,
-        "char": "\t\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 89,
-        "char": "switch"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 89,
-        "char": " opt {\n"
+        "char": "\tn.children[i] &#61; c\n"
     },
     {
         "group": "LineNr",
@@ -1467,19 +1611,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 90,
-        "char": "\t\t"
+        "char": "\t"
     },
     {
-        "group": "goLabel",
+        "group": "goStatement",
         "linkedGroup": "Statement",
         "row": 90,
-        "char": "case"
+        "char": "return"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 90,
-        "char": " cfgURLKey:\n"
+        "char": " c\n"
     },
     {
         "group": "LineNr",
@@ -1490,19 +1634,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 91,
-        "char": "\t\t"
-    },
-    {
-        "group": "goLabel",
-        "linkedGroup": "Statement",
-        "row": 91,
-        "char": "case"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 91,
-        "char": " cfgExternalLabelsKey:\n"
+        "char": "}\n"
     },
     {
         "group": "LineNr",
@@ -1513,19 +1645,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 92,
-        "char": "\t\t"
-    },
-    {
-        "group": "goLabel",
-        "linkedGroup": "Statement",
-        "row": 92,
-        "char": "case"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 92,
-        "char": " cfgTLSCAFileKey:\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1533,22 +1653,10 @@ module.exports = [
         "char": "93"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "goComment",
+        "linkedGroup": "Comment",
         "row": 93,
-        "char": "\t\t"
-    },
-    {
-        "group": "goLabel",
-        "linkedGroup": "Statement",
-        "row": 93,
-        "char": "case"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 93,
-        "char": " cfgTLSCertFileKey:\n"
+        "char": "// remove removes an item from the subtree rooted at this node.\n"
     },
     {
         "group": "LineNr",
@@ -1556,22 +1664,28 @@ module.exports = [
         "char": "94"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 94,
-        "char": "\t\t"
-    },
-    {
-        "group": "goLabel",
+        "group": "goDeclaration",
         "linkedGroup": "Statement",
         "row": 94,
-        "char": "case"
+        "char": "func"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 94,
-        "char": " cfgTLSKeyFileKey:\n"
+        "char": " (n *node) remove(item Item, minItems "
+    },
+    {
+        "group": "goSignedInts",
+        "linkedGroup": "Type",
+        "row": 94,
+        "char": "int"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 94,
+        "char": ", typ toRemove) Item {\n"
     },
     {
         "group": "LineNr",
@@ -1582,19 +1696,25 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 95,
-        "char": "\t\t"
+        "char": "\t"
     },
     {
-        "group": "goLabel",
+        "group": "goDeclaration",
         "linkedGroup": "Statement",
         "row": 95,
-        "char": "case"
+        "char": "var"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 95,
-        "char": " cfgTLSServerNameKey:\n"
+        "char": " i "
+    },
+    {
+        "group": "goSignedInts",
+        "linkedGroup": "Type",
+        "row": 95,
+        "char": "int\n"
     },
     {
         "group": "LineNr",
@@ -1605,19 +1725,25 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 96,
-        "char": "\t\t"
+        "char": "\t"
     },
     {
-        "group": "goLabel",
+        "group": "goDeclaration",
         "linkedGroup": "Statement",
         "row": 96,
-        "char": "case"
+        "char": "var"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 96,
-        "char": " cfgTLSInsecure:\n"
+        "char": " found "
+    },
+    {
+        "group": "goType",
+        "linkedGroup": "Type",
+        "row": 96,
+        "char": "bool\n"
     },
     {
         "group": "LineNr",
@@ -1628,19 +1754,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 97,
-        "char": "\t\t"
+        "char": "\t"
     },
     {
-        "group": "goLabel",
+        "group": "goConditional",
         "linkedGroup": "Statement",
         "row": 97,
-        "char": "case"
+        "char": "switch"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 97,
-        "char": " cfgTimeoutKey:\n"
+        "char": " typ {\n"
     },
     {
         "group": "LineNr",
@@ -1651,7 +1777,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 98,
-        "char": "\t\t"
+        "char": "\t"
     },
     {
         "group": "goLabel",
@@ -1663,7 +1789,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 98,
-        "char": " cfgProxyURLKey:\n"
+        "char": " removeMax:\n"
     },
     {
         "group": "LineNr",
@@ -1677,16 +1803,40 @@ module.exports = [
         "char": "\t\t"
     },
     {
-        "group": "goLabel",
+        "group": "goConditional",
         "linkedGroup": "Statement",
         "row": 99,
-        "char": "case"
+        "char": "if"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 99,
-        "char": " cfgBatchWaitKey:\n"
+        "char": " "
+    },
+    {
+        "group": "goBuiltins",
+        "linkedGroup": "Statement",
+        "row": 99,
+        "char": "len"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 99,
+        "char": "(n.children) &#61;&#61; "
+    },
+    {
+        "group": "goDecimalInt",
+        "linkedGroup": "Constant",
+        "row": 99,
+        "char": "0"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 99,
+        "char": " {\n"
     },
     {
         "group": "LineNr",
@@ -1697,19 +1847,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 100,
-        "char": "\t\t"
+        "char": "\t\t\t"
     },
     {
-        "group": "goLabel",
+        "group": "goStatement",
         "linkedGroup": "Statement",
         "row": 100,
-        "char": "case"
+        "char": "return"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 100,
-        "char": " cfgBatchSizeKey:\n"
+        "char": " n.items.pop()\n"
     },
     {
         "group": "LineNr",
@@ -1720,19 +1870,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 101,
-        "char": "\t\t"
-    },
-    {
-        "group": "goLabel",
-        "linkedGroup": "Statement",
-        "row": 101,
-        "char": "case"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 101,
-        "char": " cfgMinBackoffKey:\n"
+        "char": "\t\t}\n"
     },
     {
         "group": "LineNr",
@@ -1743,19 +1881,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 102,
-        "char": "\t\t"
+        "char": "\t\ti &#61; "
     },
     {
-        "group": "goLabel",
+        "group": "goBuiltins",
         "linkedGroup": "Statement",
         "row": 102,
-        "char": "case"
+        "char": "len"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 102,
-        "char": " cfgMaxBackoffKey:\n"
+        "char": "(n.items)\n"
     },
     {
         "group": "LineNr",
@@ -1766,7 +1904,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 103,
-        "char": "\t\t"
+        "char": "\t"
     },
     {
         "group": "goLabel",
@@ -1778,7 +1916,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 103,
-        "char": " cfgMaxRetriesKey:\n"
+        "char": " removeMin:\n"
     },
     {
         "group": "LineNr",
@@ -1792,16 +1930,40 @@ module.exports = [
         "char": "\t\t"
     },
     {
-        "group": "goLabel",
+        "group": "goConditional",
         "linkedGroup": "Statement",
         "row": 104,
-        "char": "case"
+        "char": "if"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 104,
-        "char": " cfgPipelineStagesKey:\n"
+        "char": " "
+    },
+    {
+        "group": "goBuiltins",
+        "linkedGroup": "Statement",
+        "row": 104,
+        "char": "len"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 104,
+        "char": "(n.children) &#61;&#61; "
+    },
+    {
+        "group": "goDecimalInt",
+        "linkedGroup": "Constant",
+        "row": 104,
+        "char": "0"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 104,
+        "char": " {\n"
     },
     {
         "group": "LineNr",
@@ -1812,19 +1974,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 105,
-        "char": "\t\t"
+        "char": "\t\t\t"
     },
     {
-        "group": "goLabel",
+        "group": "goStatement",
         "linkedGroup": "Statement",
         "row": 105,
-        "char": "case"
+        "char": "return"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 105,
-        "char": " cfgTenantIDKey:\n"
+        "char": " n.items.removeAt("
+    },
+    {
+        "group": "goDecimalInt",
+        "linkedGroup": "Constant",
+        "row": 105,
+        "char": "0"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 105,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -1835,19 +2009,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 106,
-        "char": "\t\t"
-    },
-    {
-        "group": "goLabel",
-        "linkedGroup": "Statement",
-        "row": 106,
-        "char": "case"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 106,
-        "char": " cfgNofile:\n"
+        "char": "\t\t}\n"
     },
     {
         "group": "LineNr",
@@ -1858,19 +2020,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 107,
-        "char": "\t\t"
+        "char": "\t\ti &#61; "
     },
     {
-        "group": "goLabel",
-        "linkedGroup": "Statement",
+        "group": "goDecimalInt",
+        "linkedGroup": "Constant",
         "row": 107,
-        "char": "case"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 107,
-        "char": " cfgKeepFile:\n"
+        "char": "0\n"
     },
     {
         "group": "LineNr",
@@ -1881,7 +2037,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 108,
-        "char": "\t\t"
+        "char": "\t"
     },
     {
         "group": "goLabel",
@@ -1893,19 +2049,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 108,
-        "char": " "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 108,
-        "char": "&quot;labels&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 108,
-        "char": ":\n"
+        "char": " removeItem:\n"
     },
     {
         "group": "LineNr",
@@ -1916,31 +2060,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 109,
-        "char": "\t\t"
-    },
-    {
-        "group": "goLabel",
-        "linkedGroup": "Statement",
-        "row": 109,
-        "char": "case"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 109,
-        "char": " "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 109,
-        "char": "&quot;env&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 109,
-        "char": ":\n"
+        "char": "\t\ti, found &#61; n.items.find(item)\n"
     },
     {
         "group": "LineNr",
@@ -1954,10 +2074,10 @@ module.exports = [
         "char": "\t\t"
     },
     {
-        "group": "goLabel",
+        "group": "goConditional",
         "linkedGroup": "Statement",
         "row": 110,
-        "char": "case"
+        "char": "if"
     },
     {
         "group": "Normal",
@@ -1966,16 +2086,28 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "goString",
-        "linkedGroup": "Constant",
+        "group": "goBuiltins",
+        "linkedGroup": "Statement",
         "row": 110,
-        "char": "&quot;env-regex&quot;"
+        "char": "len"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 110,
-        "char": ":\n"
+        "char": "(n.children) &#61;&#61; "
+    },
+    {
+        "group": "goDecimalInt",
+        "linkedGroup": "Constant",
+        "row": 110,
+        "char": "0"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 110,
+        "char": " {\n"
     },
     {
         "group": "LineNr",
@@ -1986,31 +2118,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 111,
-        "char": "\t\t"
+        "char": "\t\t\t"
     },
     {
-        "group": "goLabel",
+        "group": "goConditional",
         "linkedGroup": "Statement",
         "row": 111,
-        "char": "case"
+        "char": "if"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 111,
-        "char": " "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 111,
-        "char": "&quot;max-size&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 111,
-        "char": ":\n"
+        "char": " found {\n"
     },
     {
         "group": "LineNr",
@@ -2021,31 +2141,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 112,
-        "char": "\t\t"
+        "char": "\t\t\t\t"
     },
     {
-        "group": "goLabel",
+        "group": "goStatement",
         "linkedGroup": "Statement",
         "row": 112,
-        "char": "case"
+        "char": "return"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 112,
-        "char": " "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 112,
-        "char": "&quot;max-file&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 112,
-        "char": ":\n"
+        "char": " n.items.removeAt(i)\n"
     },
     {
         "group": "LineNr",
@@ -2056,19 +2164,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 113,
-        "char": "\t\t"
-    },
-    {
-        "group": "goLabel",
-        "linkedGroup": "Statement",
-        "row": 113,
-        "char": "default"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 113,
-        "char": ":\n"
+        "char": "\t\t\t}\n"
     },
     {
         "group": "LineNr",
@@ -2091,19 +2187,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 114,
-        "char": " fmt.Errorf("
+        "char": " "
     },
     {
-        "group": "goString",
-        "linkedGroup": "Constant",
+        "group": "goConstants",
+        "linkedGroup": "Statement",
         "row": 114,
-        "char": "&quot;%s: wrong log-opt: &#39;%s&#39; - %s&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 114,
-        "char": ", driverName, opt, loggerInfo.ContainerID)\n"
+        "char": "nil\n"
     },
     {
         "group": "LineNr",
@@ -2125,7 +2215,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 116,
-        "char": "\t}\n"
+        "char": "\t"
+    },
+    {
+        "group": "goLabel",
+        "linkedGroup": "Statement",
+        "row": 116,
+        "char": "default"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 116,
+        "char": ":\n"
     },
     {
         "group": "LineNr",
@@ -2136,7 +2238,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 117,
-        "char": "\t_, ok :&#61; config[cfgURLKey]\n"
+        "char": "\t\t"
+    },
+    {
+        "group": "goBuiltins",
+        "linkedGroup": "Statement",
+        "row": 117,
+        "char": "panic"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 117,
+        "char": "("
+    },
+    {
+        "group": "goString",
+        "linkedGroup": "Constant",
+        "row": 117,
+        "char": "&quot;invalid type&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 117,
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -2147,19 +2273,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 118,
-        "char": "\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 118,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 118,
-        "char": " !ok {\n"
+        "char": "\t}\n"
     },
     {
         "group": "LineNr",
@@ -2170,31 +2284,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 119,
-        "char": "\t\t"
+        "char": "\t"
     },
     {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
+        "group": "goComment",
+        "linkedGroup": "Comment",
         "row": 119,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 119,
-        "char": " fmt.Errorf("
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 119,
-        "char": "&quot;%s: %s is required in the config&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 119,
-        "char": ", driverName, cfgURLKey)\n"
+        "char": "// If we get to here, we have children.\n"
     },
     {
         "group": "LineNr",
@@ -2205,7 +2301,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 120,
-        "char": "\t}\n"
+        "char": "\t"
+    },
+    {
+        "group": "goConditional",
+        "linkedGroup": "Statement",
+        "row": 120,
+        "char": "if"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 120,
+        "char": " "
+    },
+    {
+        "group": "goBuiltins",
+        "linkedGroup": "Statement",
+        "row": 120,
+        "char": "len"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 120,
+        "char": "(n.children[i].items) &lt;&#61; minItems {\n"
     },
     {
         "group": "LineNr",
@@ -2216,7 +2336,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 121,
-        "char": "\n"
+        "char": "\t\t"
+    },
+    {
+        "group": "goStatement",
+        "linkedGroup": "Statement",
+        "row": 121,
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 121,
+        "char": " n.growChildAndRemove(i, item, minItems, typ)\n"
     },
     {
         "group": "LineNr",
@@ -2227,25 +2359,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 122,
-        "char": "\t"
-    },
-    {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
-        "row": 122,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 122,
-        "char": " "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 122,
-        "char": "nil\n"
+        "char": "\t}\n"
     },
     {
         "group": "LineNr",
@@ -2256,7 +2370,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 123,
-        "char": "}\n"
+        "char": "\tchild :&#61; n.mutableChild(i)\n"
     },
     {
         "group": "LineNr",
@@ -2267,7 +2381,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 124,
-        "char": "\n"
+        "char": "\t"
+    },
+    {
+        "group": "goComment",
+        "linkedGroup": "Comment",
+        "row": 124,
+        "char": "// Either we had enough items to begin with, or we&#39;ve done some\n"
     },
     {
         "group": "LineNr",
@@ -2275,28 +2395,16 @@ module.exports = [
         "char": "125"
     },
     {
-        "group": "goDeclaration",
-        "linkedGroup": "Statement",
-        "row": 125,
-        "char": "func"
-    },
-    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 125,
-        "char": " parseConfig(logCtx logger.Info) (*config, "
+        "char": "\t"
     },
     {
-        "group": "goType",
-        "linkedGroup": "Type",
+        "group": "goComment",
+        "linkedGroup": "Comment",
         "row": 125,
-        "char": "error"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 125,
-        "char": ") {\n"
+        "char": "// merging/stealing, because we&#39;ve got enough now and we&#39;re ready to return\n"
     },
     {
         "group": "LineNr",
@@ -2310,28 +2418,10 @@ module.exports = [
         "char": "\t"
     },
     {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
+        "group": "goComment",
+        "linkedGroup": "Comment",
         "row": 126,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 126,
-        "char": " err :&#61; validateDriverOpt(logCtx); err !&#61; "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 126,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 126,
-        "char": " {\n"
+        "char": "// stuff.\n"
     },
     {
         "group": "LineNr",
@@ -2342,31 +2432,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 127,
-        "char": "\t\t"
+        "char": "\t"
     },
     {
-        "group": "goStatement",
+        "group": "goConditional",
         "linkedGroup": "Statement",
         "row": 127,
-        "char": "return"
+        "char": "if"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 127,
-        "char": " "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 127,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 127,
-        "char": ", err\n"
+        "char": " found {\n"
     },
     {
         "group": "LineNr",
@@ -2377,7 +2455,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 128,
-        "char": "\t}\n"
+        "char": "\t\t"
+    },
+    {
+        "group": "goComment",
+        "linkedGroup": "Comment",
+        "row": 128,
+        "char": "// The item exists at index &#39;i&#39;, and the child we&#39;ve selected can give us a\n"
     },
     {
         "group": "LineNr",
@@ -2388,7 +2472,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 129,
-        "char": "\n"
+        "char": "\t\t"
+    },
+    {
+        "group": "goComment",
+        "linkedGroup": "Comment",
+        "row": 129,
+        "char": "// predecessor, since if we&#39;ve gotten here it&#39;s got &gt; minItems items in it.\n"
     },
     {
         "group": "LineNr",
@@ -2399,7 +2489,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 130,
-        "char": "\tclientConfig :&#61; defaultClientConfig\n"
+        "char": "\t\tout :&#61; n.items[i]\n"
     },
     {
         "group": "LineNr",
@@ -2410,7 +2500,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 131,
-        "char": "\tlabels :&#61; model.LabelSet{}\n"
+        "char": "\t\t"
+    },
+    {
+        "group": "goComment",
+        "linkedGroup": "Comment",
+        "row": 131,
+        "char": "// We use our special-case &#39;remove&#39; call with typ&#61;maxItem to pull the\n"
     },
     {
         "group": "LineNr",
@@ -2421,7 +2517,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 132,
-        "char": "\n"
+        "char": "\t\t"
+    },
+    {
+        "group": "goComment",
+        "linkedGroup": "Comment",
+        "row": 132,
+        "char": "// predecessor of item i (the rightmost leaf of our immediate left child)\n"
     },
     {
         "group": "LineNr",
@@ -2432,13 +2534,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 133,
-        "char": "\t"
+        "char": "\t\t"
     },
     {
         "group": "goComment",
         "linkedGroup": "Comment",
         "row": 133,
-        "char": "// parse URL\n"
+        "char": "// and set it into where we pulled the item from.\n"
     },
     {
         "group": "LineNr",
@@ -2449,7 +2551,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 134,
-        "char": "\trawURL, ok :&#61; logCtx.Config[cfgURLKey]\n"
+        "char": "\t\tn.items[i] &#61; child.remove("
+    },
+    {
+        "group": "goConstants",
+        "linkedGroup": "Statement",
+        "row": 134,
+        "char": "nil"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 134,
+        "char": ", minItems, removeMax)\n"
     },
     {
         "group": "LineNr",
@@ -2460,19 +2574,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 135,
-        "char": "\t"
+        "char": "\t\t"
     },
     {
-        "group": "goConditional",
+        "group": "goStatement",
         "linkedGroup": "Statement",
         "row": 135,
-        "char": "if"
+        "char": "return"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 135,
-        "char": " !ok {\n"
+        "char": " out\n"
     },
     {
         "group": "LineNr",
@@ -2483,43 +2597,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 136,
-        "char": "\t\t"
-    },
-    {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
-        "row": 136,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 136,
-        "char": " "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 136,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 136,
-        "char": ", fmt.Errorf("
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 136,
-        "char": "&quot;%s: option %s is required&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 136,
-        "char": ", driverName, cfgURLKey)\n"
+        "char": "\t}\n"
     },
     {
         "group": "LineNr",
@@ -2530,7 +2608,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 137,
-        "char": "\t}\n"
+        "char": "\t"
+    },
+    {
+        "group": "goComment",
+        "linkedGroup": "Comment",
+        "row": 137,
+        "char": "// Final recursive call.  Once we&#39;re here, we know that the item isn&#39;t in this\n"
     },
     {
         "group": "LineNr",
@@ -2541,7 +2625,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 138,
-        "char": "\turl, err :&#61; url.Parse(rawURL)\n"
+        "char": "\t"
+    },
+    {
+        "group": "goComment",
+        "linkedGroup": "Comment",
+        "row": 138,
+        "char": "// node and that the child is big enough to remove from.\n"
     },
     {
         "group": "LineNr",
@@ -2555,28 +2645,16 @@ module.exports = [
         "char": "\t"
     },
     {
-        "group": "goConditional",
+        "group": "goStatement",
         "linkedGroup": "Statement",
         "row": 139,
-        "char": "if"
+        "char": "return"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 139,
-        "char": " err !&#61; "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 139,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 139,
-        "char": " {\n"
+        "char": " child.remove(item, minItems, typ)\n"
     },
     {
         "group": "LineNr",
@@ -2587,43 +2665,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 140,
-        "char": "\t\t"
-    },
-    {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
-        "row": 140,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 140,
-        "char": " "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 140,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 140,
-        "char": ", fmt.Errorf("
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 140,
-        "char": "&quot;%s: option %s is invalid %s&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 140,
-        "char": ", driverName, cfgURLKey, err)\n"
+        "char": "}\n"
     },
     {
         "group": "LineNr",
@@ -2634,7 +2676,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 141,
-        "char": "\t}\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -2642,10 +2684,10 @@ module.exports = [
         "char": "142"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "goComment",
+        "linkedGroup": "Comment",
         "row": 142,
-        "char": "\tclientConfig.URL &#61; flagext.URLValue{URL: url}\n"
+        "char": "// Used for testing/debugging purposes.\n"
     },
     {
         "group": "LineNr",
@@ -2653,10 +2695,52 @@ module.exports = [
         "char": "143"
     },
     {
+        "group": "goDeclaration",
+        "linkedGroup": "Statement",
+        "row": 143,
+        "char": "func"
+    },
+    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 143,
-        "char": "\n"
+        "char": " (n *node) "
+    },
+    {
+        "group": "goBuiltins",
+        "linkedGroup": "Statement",
+        "row": 143,
+        "char": "print"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 143,
+        "char": "(w "
+    },
+    {
+        "group": "goExtraType",
+        "linkedGroup": "Type",
+        "row": 143,
+        "char": "io.Writer"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 143,
+        "char": ", level "
+    },
+    {
+        "group": "goSignedInts",
+        "linkedGroup": "Type",
+        "row": 143,
+        "char": "int"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 143,
+        "char": ") {\n"
     },
     {
         "group": "LineNr",
@@ -2667,13 +2751,43 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 144,
-        "char": "\t"
+        "char": "\tfmt.Fprintf(w, "
     },
     {
-        "group": "goComment",
-        "linkedGroup": "Comment",
+        "group": "goString",
+        "linkedGroup": "Constant",
         "row": 144,
-        "char": "// parse timeout\n"
+        "char": "&quot;%sNODE:%v"
+    },
+    {
+        "group": "goEscapeC",
+        "linkedGroup": "Special",
+        "row": 144,
+        "char": "\\n"
+    },
+    {
+        "group": "goString",
+        "linkedGroup": "Constant",
+        "row": 144,
+        "char": "&quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 144,
+        "char": ", strings.Repeat("
+    },
+    {
+        "group": "goString",
+        "linkedGroup": "Constant",
+        "row": 144,
+        "char": "&quot;  &quot;"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 144,
+        "char": ", level), n.items)\n"
     },
     {
         "group": "LineNr",
@@ -2687,40 +2801,28 @@ module.exports = [
         "char": "\t"
     },
     {
-        "group": "goConditional",
+        "group": "goRepeat",
         "linkedGroup": "Statement",
         "row": 145,
-        "char": "if"
+        "char": "for"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 145,
-        "char": " err :&#61; parseDuration(cfgTimeoutKey, logCtx, "
+        "char": " _, c :&#61; "
     },
     {
-        "group": "goType",
-        "linkedGroup": "Type",
-        "row": 145,
-        "char": "func"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 145,
-        "char": "(d time.Duration) { clientConfig.Timeout &#61; d }); err !&#61; "
-    },
-    {
-        "group": "goConstants",
+        "group": "goRepeat",
         "linkedGroup": "Statement",
         "row": 145,
-        "char": "nil"
+        "char": "range"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 145,
-        "char": " {\n"
+        "char": " n.children {\n"
     },
     {
         "group": "LineNr",
@@ -2731,31 +2833,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 146,
-        "char": "\t\t"
+        "char": "\t\tc."
     },
     {
-        "group": "goStatement",
+        "group": "goBuiltins",
         "linkedGroup": "Statement",
         "row": 146,
-        "char": "return"
+        "char": "print"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 146,
-        "char": " "
+        "char": "(w, level+"
     },
     {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
+        "group": "goDecimalInt",
+        "linkedGroup": "Constant",
         "row": 146,
-        "char": "nil"
+        "char": "1"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 146,
-        "char": ", err\n"
+        "char": ")\n"
     },
     {
         "group": "LineNr",
@@ -2777,7 +2879,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 148,
-        "char": "\n"
+        "char": "}\n"
     },
     {
         "group": "LineNr",
@@ -2788,13 +2890,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 149,
-        "char": "\t"
-    },
-    {
-        "group": "goComment",
-        "linkedGroup": "Comment",
-        "row": 149,
-        "char": "// parse batch wait and batch size\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -2802,46 +2898,10 @@ module.exports = [
         "char": "150"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "goComment",
+        "linkedGroup": "Comment",
         "row": 150,
-        "char": "\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 150,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 150,
-        "char": " err :&#61; parseDuration(cfgBatchWaitKey, logCtx, "
-    },
-    {
-        "group": "goType",
-        "linkedGroup": "Type",
-        "row": 150,
-        "char": "func"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 150,
-        "char": "(d time.Duration) { clientConfig.BatchWait &#61; d }); err !&#61; "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 150,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 150,
-        "char": " {\n"
+        "char": "// BTree is an implementation of a B-Tree.\n"
     },
     {
         "group": "LineNr",
@@ -2849,34 +2909,10 @@ module.exports = [
         "char": "151"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "goComment",
+        "linkedGroup": "Comment",
         "row": 151,
-        "char": "\t\t"
-    },
-    {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
-        "row": 151,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 151,
-        "char": " "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 151,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 151,
-        "char": ", err\n"
+        "char": "//\n"
     },
     {
         "group": "LineNr",
@@ -2884,10 +2920,10 @@ module.exports = [
         "char": "152"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "goComment",
+        "linkedGroup": "Comment",
         "row": 152,
-        "char": "\t}\n"
+        "char": "// BTree stores Item instances in an ordered structure, allowing easy insertion,\n"
     },
     {
         "group": "LineNr",
@@ -2895,58 +2931,10 @@ module.exports = [
         "char": "153"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "goComment",
+        "linkedGroup": "Comment",
         "row": 153,
-        "char": "\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 153,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 153,
-        "char": " err :&#61; parseInt(cfgBatchSizeKey, logCtx, "
-    },
-    {
-        "group": "goType",
-        "linkedGroup": "Type",
-        "row": 153,
-        "char": "func"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 153,
-        "char": "(i "
-    },
-    {
-        "group": "goSignedInts",
-        "linkedGroup": "Type",
-        "row": 153,
-        "char": "int"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 153,
-        "char": ") { clientConfig.BatchSize &#61; i }); err !&#61; "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 153,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 153,
-        "char": " {\n"
+        "char": "// removal, and iteration.\n"
     },
     {
         "group": "LineNr",
@@ -2954,34 +2942,10 @@ module.exports = [
         "char": "154"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "goComment",
+        "linkedGroup": "Comment",
         "row": 154,
-        "char": "\t\t"
-    },
-    {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
-        "row": 154,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 154,
-        "char": " "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 154,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 154,
-        "char": ", err\n"
+        "char": "//\n"
     },
     {
         "group": "LineNr",
@@ -2989,10 +2953,10 @@ module.exports = [
         "char": "155"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "goComment",
+        "linkedGroup": "Comment",
         "row": 155,
-        "char": "\t}\n"
+        "char": "// Write operations are not safe for concurrent mutation by multiple\n"
     },
     {
         "group": "LineNr",
@@ -3000,10 +2964,10 @@ module.exports = [
         "char": "156"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "goComment",
+        "linkedGroup": "Comment",
         "row": 156,
-        "char": "\n"
+        "char": "// goroutines, but Read operations are.\n"
     },
     {
         "group": "LineNr",
@@ -3011,16 +2975,28 @@ module.exports = [
         "char": "157"
     },
     {
+        "group": "goDeclaration",
+        "linkedGroup": "Statement",
+        "row": 157,
+        "char": "type"
+    },
+    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 157,
-        "char": "\t"
+        "char": " BTree "
     },
     {
-        "group": "goComment",
-        "linkedGroup": "Comment",
+        "group": "goDeclType",
+        "linkedGroup": "Statement",
         "row": 157,
-        "char": "// parse backoff\n"
+        "char": "struct"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 157,
+        "char": " {\n"
     },
     {
         "group": "LineNr",
@@ -3031,43 +3007,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 158,
-        "char": "\t"
+        "char": "\tdegree "
     },
     {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 158,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 158,
-        "char": " err :&#61; parseDuration(cfgMinBackoffKey, logCtx, "
-    },
-    {
-        "group": "goType",
+        "group": "goSignedInts",
         "linkedGroup": "Type",
         "row": 158,
-        "char": "func"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 158,
-        "char": "(d time.Duration) { clientConfig.BackoffConfig.MinBackoff &#61; d }); err !&#61; "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 158,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 158,
-        "char": " {\n"
+        "char": "int\n"
     },
     {
         "group": "LineNr",
@@ -3078,31 +3024,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 159,
-        "char": "\t\t"
+        "char": "\tlength "
     },
     {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
+        "group": "goSignedInts",
+        "linkedGroup": "Type",
         "row": 159,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 159,
-        "char": " "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 159,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 159,
-        "char": ", err\n"
+        "char": "int\n"
     },
     {
         "group": "LineNr",
@@ -3113,7 +3041,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 160,
-        "char": "\t}\n"
+        "char": "\troot   *node\n"
     },
     {
         "group": "LineNr",
@@ -3124,43 +3052,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 161,
-        "char": "\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 161,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 161,
-        "char": " err :&#61; parseDuration(cfgMaxBackoffKey, logCtx, "
-    },
-    {
-        "group": "goType",
-        "linkedGroup": "Type",
-        "row": 161,
-        "char": "func"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 161,
-        "char": "(d time.Duration) { clientConfig.BackoffConfig.MaxBackoff &#61; d }); err !&#61; "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 161,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 161,
-        "char": " {\n"
+        "char": "\tcow    *copyOnWriteContext\n"
     },
     {
         "group": "LineNr",
@@ -3171,31 +3063,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 162,
-        "char": "\t\t"
-    },
-    {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
-        "row": 162,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 162,
-        "char": " "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 162,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 162,
-        "char": ", err\n"
+        "char": "}\n"
     },
     {
         "group": "LineNr",
@@ -3206,7 +3074,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 163,
-        "char": "\t}\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -3214,58 +3082,10 @@ module.exports = [
         "char": "164"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "goComment",
+        "linkedGroup": "Comment",
         "row": 164,
-        "char": "\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 164,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 164,
-        "char": " err :&#61; parseInt(cfgMaxRetriesKey, logCtx, "
-    },
-    {
-        "group": "goType",
-        "linkedGroup": "Type",
-        "row": 164,
-        "char": "func"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 164,
-        "char": "(i "
-    },
-    {
-        "group": "goSignedInts",
-        "linkedGroup": "Type",
-        "row": 164,
-        "char": "int"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 164,
-        "char": ") { clientConfig.BackoffConfig.MaxRetries &#61; i }); err !&#61; "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 164,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 164,
-        "char": " {\n"
+        "char": "// Has returns true if the given key is in the tree.\n"
     },
     {
         "group": "LineNr",
@@ -3273,34 +3093,28 @@ module.exports = [
         "char": "165"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 165,
-        "char": "\t\t"
-    },
-    {
-        "group": "goStatement",
+        "group": "goDeclaration",
         "linkedGroup": "Statement",
         "row": 165,
-        "char": "return"
+        "char": "func"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 165,
-        "char": " "
+        "char": " (t *BTree) Has(key Item) "
     },
     {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
+        "group": "goType",
+        "linkedGroup": "Type",
         "row": 165,
-        "char": "nil"
+        "char": "bool"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 165,
-        "char": ", err\n"
+        "char": " {\n"
     },
     {
         "group": "LineNr",
@@ -3311,7 +3125,25 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 166,
-        "char": "\t}\n"
+        "char": "\t"
+    },
+    {
+        "group": "goStatement",
+        "linkedGroup": "Statement",
+        "row": 166,
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 166,
+        "char": " t.Get(key) !&#61; "
+    },
+    {
+        "group": "goConstants",
+        "linkedGroup": "Statement",
+        "row": 166,
+        "char": "nil\n"
     },
     {
         "group": "LineNr",
@@ -3322,7 +3154,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 167,
-        "char": "\n"
+        "char": "}\n"
     },
     {
         "group": "LineNr",
@@ -3333,13 +3165,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 168,
-        "char": "\t"
-    },
-    {
-        "group": "goComment",
-        "linkedGroup": "Comment",
-        "row": 168,
-        "char": "// parse http &amp; tls config\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -3347,22 +3173,10 @@ module.exports = [
         "char": "169"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "goComment",
+        "linkedGroup": "Comment",
         "row": 169,
-        "char": "\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 169,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 169,
-        "char": " tlsCAFile, ok :&#61; logCtx.Config[cfgTLSCAFileKey]; ok {\n"
+        "char": "// Len returns the number of items currently in the tree.\n"
     },
     {
         "group": "LineNr",
@@ -3370,10 +3184,28 @@ module.exports = [
         "char": "170"
     },
     {
+        "group": "goDeclaration",
+        "linkedGroup": "Statement",
+        "row": 170,
+        "char": "func"
+    },
+    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 170,
-        "char": "\t\tclientConfig.Client.TLSConfig.CAFile &#61; tlsCAFile\n"
+        "char": " (t *BTree) Len() "
+    },
+    {
+        "group": "goSignedInts",
+        "linkedGroup": "Type",
+        "row": 170,
+        "char": "int"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 170,
+        "char": " {\n"
     },
     {
         "group": "LineNr",
@@ -3384,7 +3216,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 171,
-        "char": "\t}\n"
+        "char": "\t"
+    },
+    {
+        "group": "goStatement",
+        "linkedGroup": "Statement",
+        "row": 171,
+        "char": "return"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 171,
+        "char": " t.length\n"
     },
     {
         "group": "LineNr",
@@ -3395,3450 +3239,6 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 172,
-        "char": "\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 172,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 172,
-        "char": " tlsCertFile, ok :&#61; logCtx.Config[cfgTLSCertFileKey]; ok {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 173,
-        "char": "173"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 173,
-        "char": "\t\tclientConfig.Client.TLSConfig.CertFile &#61; tlsCertFile\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 174,
-        "char": "174"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 174,
-        "char": "\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 175,
-        "char": "175"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 175,
-        "char": "\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 175,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 175,
-        "char": " tlsCertFile, ok :&#61; logCtx.Config[cfgTLSCertFileKey]; ok {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 176,
-        "char": "176"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 176,
-        "char": "\t\tclientConfig.Client.TLSConfig.CertFile &#61; tlsCertFile\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 177,
-        "char": "177"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 177,
-        "char": "\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 178,
-        "char": "178"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 178,
-        "char": "\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 178,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 178,
-        "char": " tlsKeyFile, ok :&#61; logCtx.Config[cfgTLSKeyFileKey]; ok {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 179,
-        "char": "179"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 179,
-        "char": "\t\tclientConfig.Client.TLSConfig.KeyFile &#61; tlsKeyFile\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 180,
-        "char": "180"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 180,
-        "char": "\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 181,
-        "char": "181"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 181,
-        "char": "\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 181,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 181,
-        "char": " tlsServerName, ok :&#61; logCtx.Config[cfgTLSServerNameKey]; ok {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 182,
-        "char": "182"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 182,
-        "char": "\t\tclientConfig.Client.TLSConfig.ServerName &#61; tlsServerName\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 183,
-        "char": "183"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 183,
-        "char": "\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 184,
-        "char": "184"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 184,
-        "char": "\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 184,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 184,
-        "char": " tlsInsecureSkipRaw, ok :&#61; logCtx.Config[cfgTLSInsecure]; ok {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 185,
-        "char": "185"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 185,
-        "char": "\t\ttlsInsecureSkip, err :&#61; strconv.ParseBool(tlsInsecureSkipRaw)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 186,
-        "char": "186"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 186,
-        "char": "\t\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 186,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 186,
-        "char": " err !&#61; "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 186,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 186,
-        "char": " {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 187,
-        "char": "187"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 187,
-        "char": "\t\t\t"
-    },
-    {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
-        "row": 187,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 187,
-        "char": " "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 187,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 187,
-        "char": ", fmt.Errorf("
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 187,
-        "char": "&quot;%s: invalid external labels: %s&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 187,
-        "char": ", driverName, tlsInsecureSkipRaw)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 188,
-        "char": "188"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 188,
-        "char": "\t\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 189,
-        "char": "189"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 189,
-        "char": "\t\tclientConfig.Client.TLSConfig.InsecureSkipVerify &#61; tlsInsecureSkip\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 190,
-        "char": "190"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 190,
-        "char": "\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 191,
-        "char": "191"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 191,
-        "char": "\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 191,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 191,
-        "char": " tlsProxyURL, ok :&#61; logCtx.Config[cfgProxyURLKey]; ok {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 192,
-        "char": "192"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 192,
-        "char": "\t\tproxyURL, err :&#61; url.Parse(tlsProxyURL)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 193,
-        "char": "193"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 193,
-        "char": "\t\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 193,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 193,
-        "char": " err !&#61; "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 193,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 193,
-        "char": " {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 194,
-        "char": "194"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 194,
-        "char": "\t\t\t"
-    },
-    {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
-        "row": 194,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 194,
-        "char": " "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 194,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 194,
-        "char": ", fmt.Errorf("
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 194,
-        "char": "&quot;%s: option %s is invalid %s&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 194,
-        "char": ", driverName, cfgProxyURLKey, err)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 195,
-        "char": "195"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 195,
-        "char": "\t\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 196,
-        "char": "196"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 196,
-        "char": "\t\tclientConfig.Client.ProxyURL.URL &#61; proxyURL\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 197,
-        "char": "197"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 197,
-        "char": "\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 198,
-        "char": "198"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 198,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 199,
-        "char": "199"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 199,
-        "char": "\t"
-    },
-    {
-        "group": "goComment",
-        "linkedGroup": "Comment",
-        "row": 199,
-        "char": "// parse tenant id\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 200,
-        "char": "200"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 200,
-        "char": "\ttenantID, ok :&#61; logCtx.Config[cfgTenantIDKey]\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 201,
-        "char": "201"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 201,
-        "char": "\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 201,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 201,
-        "char": " ok &amp;&amp; tenantID !&#61; "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 201,
-        "char": "&quot;&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 201,
-        "char": " {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 202,
-        "char": "202"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 202,
-        "char": "\t\tclientConfig.TenantID &#61; tenantID\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 203,
-        "char": "203"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 203,
-        "char": "\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 204,
-        "char": "204"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 204,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 205,
-        "char": "205"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 205,
-        "char": "\t"
-    },
-    {
-        "group": "goComment",
-        "linkedGroup": "Comment",
-        "row": 205,
-        "char": "// parse external labels\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 206,
-        "char": "206"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 206,
-        "char": "\textlbs, ok :&#61; logCtx.Config[cfgExternalLabelsKey]\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 207,
-        "char": "207"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 207,
-        "char": "\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 207,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 207,
-        "char": " !ok {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 208,
-        "char": "208"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 208,
-        "char": "\t\textlbs &#61; defaultExternalLabels\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 209,
-        "char": "209"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 209,
-        "char": "\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 210,
-        "char": "210"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 210,
-        "char": "\tlvs :&#61; strings.Split(extlbs, "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 210,
-        "char": "&quot;,&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 210,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 211,
-        "char": "211"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 211,
-        "char": "\t"
-    },
-    {
-        "group": "goRepeat",
-        "linkedGroup": "Statement",
-        "row": 211,
-        "char": "for"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 211,
-        "char": " _, lv :&#61; "
-    },
-    {
-        "group": "goRepeat",
-        "linkedGroup": "Statement",
-        "row": 211,
-        "char": "range"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 211,
-        "char": " lvs {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 212,
-        "char": "212"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 212,
-        "char": "\t\tlvparts :&#61; strings.Split(lv, "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 212,
-        "char": "&quot;&#61;&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 212,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 213,
-        "char": "213"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 213,
-        "char": "\t\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 213,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 213,
-        "char": " "
-    },
-    {
-        "group": "goBuiltins",
-        "linkedGroup": "Statement",
-        "row": 213,
-        "char": "len"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 213,
-        "char": "(lvparts) !&#61; "
-    },
-    {
-        "group": "goDecimalInt",
-        "linkedGroup": "Constant",
-        "row": 213,
-        "char": "2"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 213,
-        "char": " {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 214,
-        "char": "214"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 214,
-        "char": "\t\t\t"
-    },
-    {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
-        "row": 214,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 214,
-        "char": " "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 214,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 214,
-        "char": ", fmt.Errorf("
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 214,
-        "char": "&quot;%s: invalid external labels: %s&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 214,
-        "char": ", driverName, extlbs)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 215,
-        "char": "215"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 215,
-        "char": "\t\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 216,
-        "char": "216"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 216,
-        "char": "\t\tlabelName :&#61; model.LabelName(lvparts["
-    },
-    {
-        "group": "goDecimalInt",
-        "linkedGroup": "Constant",
-        "row": 216,
-        "char": "0"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 216,
-        "char": "])\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 217,
-        "char": "217"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 217,
-        "char": "\t\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 217,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 217,
-        "char": " !labelName.IsValid() {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 218,
-        "char": "218"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 218,
-        "char": "\t\t\t"
-    },
-    {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
-        "row": 218,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 218,
-        "char": " "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 218,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 218,
-        "char": ", fmt.Errorf("
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 218,
-        "char": "&quot;%s: invalid external label name: %s&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 218,
-        "char": ", driverName, labelName)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 219,
-        "char": "219"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 219,
-        "char": "\t\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 220,
-        "char": "220"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 220,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 221,
-        "char": "221"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 221,
-        "char": "\t\t"
-    },
-    {
-        "group": "goComment",
-        "linkedGroup": "Comment",
-        "row": 221,
-        "char": "// expand the value using docker template {{.Name}}.{{.ImageName}}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 222,
-        "char": "222"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 222,
-        "char": "\t\tvalue, err :&#61; expandLabelValue(logCtx, lvparts["
-    },
-    {
-        "group": "goDecimalInt",
-        "linkedGroup": "Constant",
-        "row": 222,
-        "char": "1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 222,
-        "char": "])\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 223,
-        "char": "223"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 223,
-        "char": "\t\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 223,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 223,
-        "char": " err !&#61; "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 223,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 223,
-        "char": " {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 224,
-        "char": "224"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 224,
-        "char": "\t\t\t"
-    },
-    {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
-        "row": 224,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 224,
-        "char": " "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 224,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 224,
-        "char": ", fmt.Errorf("
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 224,
-        "char": "&quot;%s: could not expand label value: %s err : %s&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 224,
-        "char": ", driverName, lvparts["
-    },
-    {
-        "group": "goDecimalInt",
-        "linkedGroup": "Constant",
-        "row": 224,
-        "char": "1"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 224,
-        "char": "], err)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 225,
-        "char": "225"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 225,
-        "char": "\t\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 226,
-        "char": "226"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 226,
-        "char": "\t\tlabelValue :&#61; model.LabelValue(value)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 227,
-        "char": "227"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 227,
-        "char": "\t\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 227,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 227,
-        "char": " !labelValue.IsValid() {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 228,
-        "char": "228"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 228,
-        "char": "\t\t\t"
-    },
-    {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
-        "row": 228,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 228,
-        "char": " "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 228,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 228,
-        "char": ", fmt.Errorf("
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 228,
-        "char": "&quot;%s: invalid external label value: %s&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 228,
-        "char": ", driverName, value)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 229,
-        "char": "229"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 229,
-        "char": "\t\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 230,
-        "char": "230"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 230,
-        "char": "\t\tlabels[labelName] &#61; labelValue\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 231,
-        "char": "231"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 231,
-        "char": "\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 232,
-        "char": "232"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 232,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 233,
-        "char": "233"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 233,
-        "char": "\t"
-    },
-    {
-        "group": "goComment",
-        "linkedGroup": "Comment",
-        "row": 233,
-        "char": "// other labels coming from docker labels or env selected by user labels, labels-regex, env, env-regex config.\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 234,
-        "char": "234"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 234,
-        "char": "\tattrs, err :&#61; logCtx.ExtraAttributes("
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 234,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 234,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 235,
-        "char": "235"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 235,
-        "char": "\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 235,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 235,
-        "char": " err !&#61; "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 235,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 235,
-        "char": " {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 236,
-        "char": "236"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 236,
-        "char": "\t\t"
-    },
-    {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
-        "row": 236,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 236,
-        "char": " "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 236,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 236,
-        "char": ", err\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 237,
-        "char": "237"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 237,
-        "char": "\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 238,
-        "char": "238"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 238,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 239,
-        "char": "239"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 239,
-        "char": "\t"
-    },
-    {
-        "group": "goComment",
-        "linkedGroup": "Comment",
-        "row": 239,
-        "char": "// parse docker swarms labels and adds them automatically to attrs\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 240,
-        "char": "240"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 240,
-        "char": "\tswarmService :&#61; logCtx.ContainerLabels[swarmServiceLabelKey]\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 241,
-        "char": "241"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 241,
-        "char": "\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 241,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 241,
-        "char": " swarmService !&#61; "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 241,
-        "char": "&quot;&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 241,
-        "char": " {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 242,
-        "char": "242"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 242,
-        "char": "\t\tattrs[swarmServiceLabelName] &#61; swarmService\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 243,
-        "char": "243"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 243,
-        "char": "\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 244,
-        "char": "244"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 244,
-        "char": "\tswarmStack :&#61; logCtx.ContainerLabels[swarmStackLabelKey]\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 245,
-        "char": "245"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 245,
-        "char": "\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 245,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 245,
-        "char": " swarmStack !&#61; "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 245,
-        "char": "&quot;&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 245,
-        "char": " {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 246,
-        "char": "246"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 246,
-        "char": "\t\tattrs[swarmStackLabelName] &#61; swarmStack\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 247,
-        "char": "247"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 247,
-        "char": "\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 248,
-        "char": "248"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 248,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 249,
-        "char": "249"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 249,
-        "char": "\t"
-    },
-    {
-        "group": "goComment",
-        "linkedGroup": "Comment",
-        "row": 249,
-        "char": "// parse docker compose labels and adds them automatically to attrs\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 250,
-        "char": "250"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 250,
-        "char": "\tcomposeService :&#61; logCtx.ContainerLabels[composeServiceLabelKey]\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 251,
-        "char": "251"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 251,
-        "char": "\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 251,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 251,
-        "char": " composeService !&#61; "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 251,
-        "char": "&quot;&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 251,
-        "char": " {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 252,
-        "char": "252"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 252,
-        "char": "\t\tattrs[composeServiceLabelName] &#61; composeService\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 253,
-        "char": "253"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 253,
-        "char": "\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 254,
-        "char": "254"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 254,
-        "char": "\tcomposeProject :&#61; logCtx.ContainerLabels[composeProjectLabelKey]\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 255,
-        "char": "255"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 255,
-        "char": "\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 255,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 255,
-        "char": " composeProject !&#61; "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 255,
-        "char": "&quot;&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 255,
-        "char": " {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 256,
-        "char": "256"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 256,
-        "char": "\t\tattrs[composeProjectLabelName] &#61; composeProject\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 257,
-        "char": "257"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 257,
-        "char": "\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 258,
-        "char": "258"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 258,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 259,
-        "char": "259"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 259,
-        "char": "\t"
-    },
-    {
-        "group": "goRepeat",
-        "linkedGroup": "Statement",
-        "row": 259,
-        "char": "for"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 259,
-        "char": " key, value :&#61; "
-    },
-    {
-        "group": "goRepeat",
-        "linkedGroup": "Statement",
-        "row": 259,
-        "char": "range"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 259,
-        "char": " attrs {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 260,
-        "char": "260"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 260,
-        "char": "\t\tlabelName :&#61; model.LabelName(key)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 261,
-        "char": "261"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 261,
-        "char": "\t\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 261,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 261,
-        "char": " !labelName.IsValid() {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 262,
-        "char": "262"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 262,
-        "char": "\t\t\t"
-    },
-    {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
-        "row": 262,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 262,
-        "char": " "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 262,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 262,
-        "char": ", fmt.Errorf("
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 262,
-        "char": "&quot;%s: invalid label name from attribute: %s&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 262,
-        "char": ", driverName, key)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 263,
-        "char": "263"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 263,
-        "char": "\t\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 264,
-        "char": "264"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 264,
-        "char": "\t\tlabelValue :&#61; model.LabelValue(value)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 265,
-        "char": "265"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 265,
-        "char": "\t\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 265,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 265,
-        "char": " !labelValue.IsValid() {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 266,
-        "char": "266"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 266,
-        "char": "\t\t\t"
-    },
-    {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
-        "row": 266,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 266,
-        "char": " "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 266,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 266,
-        "char": ", fmt.Errorf("
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 266,
-        "char": "&quot;%s: invalid label value from attribute: %s&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 266,
-        "char": ", driverName, value)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 267,
-        "char": "267"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 267,
-        "char": "\t\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 268,
-        "char": "268"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 268,
-        "char": "\t\tlabels[labelName] &#61; labelValue\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 269,
-        "char": "269"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 269,
-        "char": "\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 270,
-        "char": "270"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 270,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 271,
-        "char": "271"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 271,
-        "char": "\t"
-    },
-    {
-        "group": "goComment",
-        "linkedGroup": "Comment",
-        "row": 271,
-        "char": "// adds host label and filename\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 272,
-        "char": "272"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 272,
-        "char": "\thost, err :&#61; os.Hostname()\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 273,
-        "char": "273"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 273,
-        "char": "\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 273,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 273,
-        "char": " err &#61;&#61; "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 273,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 273,
-        "char": " {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 274,
-        "char": "274"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 274,
-        "char": "\t\tlabels[defaultHostLabelName] &#61; model.LabelValue(host)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 275,
-        "char": "275"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 275,
-        "char": "\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 276,
-        "char": "276"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 276,
-        "char": "\tlabels[targets.FilenameLabel] &#61; model.LabelValue(logCtx.LogPath)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 277,
-        "char": "277"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 277,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 278,
-        "char": "278"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 278,
-        "char": "\t"
-    },
-    {
-        "group": "goComment",
-        "linkedGroup": "Comment",
-        "row": 278,
-        "char": "// parse pipeline stages\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 279,
-        "char": "279"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 279,
-        "char": "\t"
-    },
-    {
-        "group": "goDeclaration",
-        "linkedGroup": "Statement",
-        "row": 279,
-        "char": "var"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 279,
-        "char": " pipeline PipelineConfig\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 280,
-        "char": "280"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 280,
-        "char": "\tpipelineFile, ok :&#61; logCtx.Config[cfgPipelineStagesKey]\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 281,
-        "char": "281"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 281,
-        "char": "\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 281,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 281,
-        "char": " ok {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 282,
-        "char": "282"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 282,
-        "char": "\t\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 282,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 282,
-        "char": " err :&#61; helpers.LoadConfig(pipelineFile, &amp;pipeline); err !&#61; "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 282,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 282,
-        "char": " {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 283,
-        "char": "283"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 283,
-        "char": "\t\t\t"
-    },
-    {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
-        "row": 283,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 283,
-        "char": " "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 283,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 283,
-        "char": ", fmt.Errorf("
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 283,
-        "char": "&quot;%s: error loading config file %s: %s&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 283,
-        "char": ", driverName, pipelineFile, err)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 284,
-        "char": "284"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 284,
-        "char": "\t\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 285,
-        "char": "285"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 285,
-        "char": "\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 286,
-        "char": "286"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 286,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 287,
-        "char": "287"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 287,
-        "char": "\t"
-    },
-    {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
-        "row": 287,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 287,
-        "char": " &amp;config{\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 288,
-        "char": "288"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 288,
-        "char": "\t\tlabels:       labels,\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 289,
-        "char": "289"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 289,
-        "char": "\t\tclientConfig: clientConfig,\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 290,
-        "char": "290"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 290,
-        "char": "\t\tpipeline:     pipeline,\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 291,
-        "char": "291"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 291,
-        "char": "\t}, "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 291,
-        "char": "nil\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 292,
-        "char": "292"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 292,
-        "char": "}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 293,
-        "char": "293"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 293,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 294,
-        "char": "294"
-    },
-    {
-        "group": "goDeclaration",
-        "linkedGroup": "Statement",
-        "row": 294,
-        "char": "func"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 294,
-        "char": " expandLabelValue(info logger.Info, defaultTemplate "
-    },
-    {
-        "group": "goType",
-        "linkedGroup": "Type",
-        "row": 294,
-        "char": "string"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 294,
-        "char": ") ("
-    },
-    {
-        "group": "goType",
-        "linkedGroup": "Type",
-        "row": 294,
-        "char": "string"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 294,
-        "char": ", "
-    },
-    {
-        "group": "goType",
-        "linkedGroup": "Type",
-        "row": 294,
-        "char": "error"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 294,
-        "char": ") {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 295,
-        "char": "295"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 295,
-        "char": "\ttmpl, err :&#61; templates.NewParse("
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 295,
-        "char": "&quot;label_value&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 295,
-        "char": ", defaultTemplate)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 296,
-        "char": "296"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 296,
-        "char": "\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 296,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 296,
-        "char": " err !&#61; "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 296,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 296,
-        "char": " {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 297,
-        "char": "297"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 297,
-        "char": "\t\t"
-    },
-    {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
-        "row": 297,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 297,
-        "char": " "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 297,
-        "char": "&quot;&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 297,
-        "char": ", err\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 298,
-        "char": "298"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 298,
-        "char": "\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 299,
-        "char": "299"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 299,
-        "char": "\tbuf :&#61; "
-    },
-    {
-        "group": "goBuiltins",
-        "linkedGroup": "Statement",
-        "row": 299,
-        "char": "new"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 299,
-        "char": "("
-    },
-    {
-        "group": "goExtraType",
-        "linkedGroup": "Type",
-        "row": 299,
-        "char": "bytes.Buffer"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 299,
-        "char": ")\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 300,
-        "char": "300"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 300,
-        "char": "\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 300,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 300,
-        "char": " err :&#61; tmpl.Execute(buf, &amp;info); err !&#61; "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 300,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 300,
-        "char": " {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 301,
-        "char": "301"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 301,
-        "char": "\t\t"
-    },
-    {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
-        "row": 301,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 301,
-        "char": " "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 301,
-        "char": "&quot;&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 301,
-        "char": ", err\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 302,
-        "char": "302"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 302,
-        "char": "\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 303,
-        "char": "303"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 303,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 304,
-        "char": "304"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 304,
-        "char": "\t"
-    },
-    {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
-        "row": 304,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 304,
-        "char": " buf.String(), "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 304,
-        "char": "nil\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 305,
-        "char": "305"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 305,
-        "char": "}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 306,
-        "char": "306"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 306,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 307,
-        "char": "307"
-    },
-    {
-        "group": "goDeclaration",
-        "linkedGroup": "Statement",
-        "row": 307,
-        "char": "func"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 307,
-        "char": " parseDuration(key "
-    },
-    {
-        "group": "goType",
-        "linkedGroup": "Type",
-        "row": 307,
-        "char": "string"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 307,
-        "char": ", logCtx logger.Info, set "
-    },
-    {
-        "group": "goType",
-        "linkedGroup": "Type",
-        "row": 307,
-        "char": "func"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 307,
-        "char": "(d time.Duration)) "
-    },
-    {
-        "group": "goType",
-        "linkedGroup": "Type",
-        "row": 307,
-        "char": "error"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 307,
-        "char": " {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 308,
-        "char": "308"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 308,
-        "char": "\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 308,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 308,
-        "char": " raw, ok :&#61; logCtx.Config[key]; ok {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 309,
-        "char": "309"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 309,
-        "char": "\t\tval, err :&#61; time.ParseDuration(raw)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 310,
-        "char": "310"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 310,
-        "char": "\t\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 310,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 310,
-        "char": " err !&#61; "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 310,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 310,
-        "char": " {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 311,
-        "char": "311"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 311,
-        "char": "\t\t\t"
-    },
-    {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
-        "row": 311,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 311,
-        "char": " fmt.Errorf("
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 311,
-        "char": "&quot;%s: invalid option %s format: %s&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 311,
-        "char": ", driverName, key, raw)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 312,
-        "char": "312"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 312,
-        "char": "\t\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 313,
-        "char": "313"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 313,
-        "char": "\t\tset(val)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 314,
-        "char": "314"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 314,
-        "char": "\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 315,
-        "char": "315"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 315,
-        "char": "\t"
-    },
-    {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
-        "row": 315,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 315,
-        "char": " "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 315,
-        "char": "nil\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 316,
-        "char": "316"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 316,
-        "char": "}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 317,
-        "char": "317"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 317,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 318,
-        "char": "318"
-    },
-    {
-        "group": "goDeclaration",
-        "linkedGroup": "Statement",
-        "row": 318,
-        "char": "func"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 318,
-        "char": " parseInt(key "
-    },
-    {
-        "group": "goType",
-        "linkedGroup": "Type",
-        "row": 318,
-        "char": "string"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 318,
-        "char": ", logCtx logger.Info, set "
-    },
-    {
-        "group": "goType",
-        "linkedGroup": "Type",
-        "row": 318,
-        "char": "func"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 318,
-        "char": "(i "
-    },
-    {
-        "group": "goSignedInts",
-        "linkedGroup": "Type",
-        "row": 318,
-        "char": "int"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 318,
-        "char": ")) "
-    },
-    {
-        "group": "goType",
-        "linkedGroup": "Type",
-        "row": 318,
-        "char": "error"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 318,
-        "char": " {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 319,
-        "char": "319"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 319,
-        "char": "\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 319,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 319,
-        "char": " raw, ok :&#61; logCtx.Config[key]; ok {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 320,
-        "char": "320"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 320,
-        "char": "\t\tval, err :&#61; strconv.Atoi(raw)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 321,
-        "char": "321"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 321,
-        "char": "\t\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 321,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 321,
-        "char": " err !&#61; "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 321,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 321,
-        "char": " {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 322,
-        "char": "322"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 322,
-        "char": "\t\t\t"
-    },
-    {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
-        "row": 322,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 322,
-        "char": " fmt.Errorf("
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 322,
-        "char": "&quot;%s: invalid option %s format: %s&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 322,
-        "char": ", driverName, key, raw)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 323,
-        "char": "323"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 323,
-        "char": "\t\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 324,
-        "char": "324"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 324,
-        "char": "\t\tset(val)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 325,
-        "char": "325"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 325,
-        "char": "\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 326,
-        "char": "326"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 326,
-        "char": "\t"
-    },
-    {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
-        "row": 326,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 326,
-        "char": " "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 326,
-        "char": "nil\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 327,
-        "char": "327"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 327,
-        "char": "}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 328,
-        "char": "328"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 328,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 329,
-        "char": "329"
-    },
-    {
-        "group": "goDeclaration",
-        "linkedGroup": "Statement",
-        "row": 329,
-        "char": "func"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 329,
-        "char": " parseBoolean(key "
-    },
-    {
-        "group": "goType",
-        "linkedGroup": "Type",
-        "row": 329,
-        "char": "string"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 329,
-        "char": ", logCtx logger.Info, defaultValue "
-    },
-    {
-        "group": "goType",
-        "linkedGroup": "Type",
-        "row": 329,
-        "char": "bool"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 329,
-        "char": ") ("
-    },
-    {
-        "group": "goType",
-        "linkedGroup": "Type",
-        "row": 329,
-        "char": "bool"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 329,
-        "char": ", "
-    },
-    {
-        "group": "goType",
-        "linkedGroup": "Type",
-        "row": 329,
-        "char": "error"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 329,
-        "char": ") {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 330,
-        "char": "330"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 330,
-        "char": "\tvalue, ok :&#61; logCtx.Config[key]\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 331,
-        "char": "331"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 331,
-        "char": "\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 331,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 331,
-        "char": " !ok || value &#61;&#61; "
-    },
-    {
-        "group": "goString",
-        "linkedGroup": "Constant",
-        "row": 331,
-        "char": "&quot;&quot;"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 331,
-        "char": " {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 332,
-        "char": "332"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 332,
-        "char": "\t\t"
-    },
-    {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
-        "row": 332,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 332,
-        "char": " defaultValue, "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 332,
-        "char": "nil\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 333,
-        "char": "333"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 333,
-        "char": "\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 334,
-        "char": "334"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 334,
-        "char": "\tb, err :&#61; strconv.ParseBool(value)\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 335,
-        "char": "335"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 335,
-        "char": "\t"
-    },
-    {
-        "group": "goConditional",
-        "linkedGroup": "Statement",
-        "row": 335,
-        "char": "if"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 335,
-        "char": " err !&#61; "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 335,
-        "char": "nil"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 335,
-        "char": " {\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 336,
-        "char": "336"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 336,
-        "char": "\t\t"
-    },
-    {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
-        "row": 336,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 336,
-        "char": " "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 336,
-        "char": "false"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 336,
-        "char": ", err\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 337,
-        "char": "337"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 337,
-        "char": "\t}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 338,
-        "char": "338"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 338,
-        "char": "\t"
-    },
-    {
-        "group": "goStatement",
-        "linkedGroup": "Statement",
-        "row": 338,
-        "char": "return"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 338,
-        "char": " b, "
-    },
-    {
-        "group": "goConstants",
-        "linkedGroup": "Statement",
-        "row": 338,
-        "char": "nil\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 339,
-        "char": "339"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 339,
-        "char": "}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 340,
-        "char": "340"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 340,
-        "char": ""
+        "char": "}"
     }
 ]

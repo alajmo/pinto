@@ -54,7 +54,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 3,
-        "char": " is a tool that helps you manage multiple repositories. It&#39;s helpful when you are working with microservices or multi-project system and libraries and want a central place for pulling all repositories and running commands over the different projects. You specify projects and commands in a yaml config and then run the commands over all or a subset of the projects.\n"
+        "char": " is a tool that helps you manage multiple repositories. It&#39;s helpful when\n"
     },
     {
         "group": "LineNr",
@@ -65,7 +65,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 4,
-        "char": "\n"
+        "char": "you are working with microservices or multi-project system and libraries and\n"
     },
     {
         "group": "LineNr",
@@ -73,16 +73,10 @@ module.exports = [
         "char": "5"
     },
     {
-        "group": "markdownHeadingDelimiter",
-        "linkedGroup": "Special",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 5,
-        "char": "##"
-    },
-    {
-        "group": "markdownH2",
-        "linkedGroup": "Title",
-        "row": 5,
-        "char": " Features\n"
+        "char": "want a central place for pulling all repositories and running commands over the\n"
     },
     {
         "group": "LineNr",
@@ -93,7 +87,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 6,
-        "char": "\n"
+        "char": "different projects. You specify projects and commands in a yaml config and then\n"
     },
     {
         "group": "LineNr",
@@ -101,16 +95,10 @@ module.exports = [
         "char": "7"
     },
     {
-        "group": "markdownListMarker",
-        "linkedGroup": "Statement",
-        "row": 7,
-        "char": "-"
-    },
-    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 7,
-        "char": " Clone multiple repositories in one command\n"
+        "char": "run the commands over all or a subset of the projects.\n"
     },
     {
         "group": "LineNr",
@@ -118,16 +106,10 @@ module.exports = [
         "char": "8"
     },
     {
-        "group": "markdownListMarker",
-        "linkedGroup": "Statement",
-        "row": 8,
-        "char": "-"
-    },
-    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 8,
-        "char": " Run commands over multiple projects\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -135,16 +117,16 @@ module.exports = [
         "char": "9"
     },
     {
-        "group": "markdownListMarker",
-        "linkedGroup": "Statement",
+        "group": "markdownHeadingDelimiter",
+        "linkedGroup": "Special",
         "row": 9,
-        "char": "-"
+        "char": "##"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "markdownH2",
+        "linkedGroup": "Title",
         "row": 9,
-        "char": " Declarative configuration\n"
+        "char": " Features\n"
     },
     {
         "group": "LineNr",
@@ -152,16 +134,10 @@ module.exports = [
         "char": "10"
     },
     {
-        "group": "markdownListMarker",
-        "linkedGroup": "Statement",
-        "row": 10,
-        "char": "-"
-    },
-    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 10,
-        "char": " Single binary\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -178,7 +154,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 11,
-        "char": " Supports auto-completion\n"
+        "char": " Clone multiple repositories in one command\n"
     },
     {
         "group": "LineNr",
@@ -186,10 +162,16 @@ module.exports = [
         "char": "12"
     },
     {
+        "group": "markdownListMarker",
+        "linkedGroup": "Statement",
+        "row": 12,
+        "char": "-"
+    },
+    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 12,
-        "char": "\n"
+        "char": " Run commands over multiple projects\n"
     },
     {
         "group": "LineNr",
@@ -197,16 +179,16 @@ module.exports = [
         "char": "13"
     },
     {
-        "group": "markdownHeadingDelimiter",
-        "linkedGroup": "Special",
+        "group": "markdownListMarker",
+        "linkedGroup": "Statement",
         "row": 13,
-        "char": "##"
+        "char": "-"
     },
     {
-        "group": "markdownH2",
-        "linkedGroup": "Title",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 13,
-        "char": " Install\n"
+        "char": " Declarative configuration\n"
     },
     {
         "group": "LineNr",
@@ -214,10 +196,16 @@ module.exports = [
         "char": "14"
     },
     {
+        "group": "markdownListMarker",
+        "linkedGroup": "Statement",
+        "row": 14,
+        "char": "-"
+    },
+    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 14,
-        "char": "\n"
+        "char": " Single binary - Supports auto-completion\n"
     },
     {
         "group": "LineNr",
@@ -225,28 +213,10 @@ module.exports = [
         "char": "15"
     },
     {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 15,
-        "char": "`"
-    },
-    {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
-        "row": 15,
-        "char": "mani"
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 15,
-        "char": "`"
-    },
-    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 15,
-        "char": " is available on Linux and Mac.\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -254,10 +224,16 @@ module.exports = [
         "char": "16"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "markdownHeadingDelimiter",
+        "linkedGroup": "Special",
         "row": 16,
-        "char": "\n"
+        "char": "##"
+    },
+    {
+        "group": "markdownH2",
+        "linkedGroup": "Title",
+        "row": 16,
+        "char": " Install\n"
     },
     {
         "group": "LineNr",
@@ -265,58 +241,10 @@ module.exports = [
         "char": "17"
     },
     {
-        "group": "markdownListMarker",
-        "linkedGroup": "Statement",
-        "row": 17,
-        "char": "-"
-    },
-    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 17,
-        "char": " Binaries are available as tarballs in the "
-    },
-    {
-        "group": "markdownLinkTextDelimiter",
-        "linkedGroup": "markdownLinkTextDelimiter",
-        "row": 17,
-        "char": "["
-    },
-    {
-        "group": "markdownLinkText",
-        "linkedGroup": "Underlined",
-        "row": 17,
-        "char": "release"
-    },
-    {
-        "group": "markdownLinkTextDelimiter",
-        "linkedGroup": "markdownLinkTextDelimiter",
-        "row": 17,
-        "char": "]"
-    },
-    {
-        "group": "markdownLinkDelimiter",
-        "linkedGroup": "markdownLinkDelimiter",
-        "row": 17,
-        "char": "("
-    },
-    {
-        "group": "markdownUrl",
-        "linkedGroup": "Constant",
-        "row": 17,
-        "char": "https://github.com/samiralajmovic/mani/releases"
-    },
-    {
-        "group": "markdownLinkDelimiter",
-        "linkedGroup": "markdownLinkDelimiter",
-        "row": 17,
-        "char": ")"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 17,
-        "char": " page.\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -324,16 +252,28 @@ module.exports = [
         "char": "18"
     },
     {
-        "group": "markdownListMarker",
-        "linkedGroup": "Statement",
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
         "row": 18,
-        "char": "-"
+        "char": "`"
+    },
+    {
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
+        "row": 18,
+        "char": "mani"
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 18,
+        "char": "`"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 18,
-        "char": " Build from source:\n"
+        "char": " is available on Linux and Mac.\n"
     },
     {
         "group": "LineNr",
@@ -341,16 +281,10 @@ module.exports = [
         "char": "19"
     },
     {
-        "group": "markdownOrderedListMarker",
-        "linkedGroup": "Statement",
-        "row": 19,
-        "char": "  1."
-    },
-    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 19,
-        "char": "  Clone the repo\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -358,16 +292,16 @@ module.exports = [
         "char": "20"
     },
     {
-        "group": "markdownOrderedListMarker",
+        "group": "markdownListMarker",
         "linkedGroup": "Statement",
         "row": 20,
-        "char": "  2."
+        "char": "-"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 20,
-        "char": "  Add the following command in your go.mod file\n"
+        "char": " Binaries are available as tarballs in the release page.\n"
     },
     {
         "group": "LineNr",
@@ -375,10 +309,16 @@ module.exports = [
         "char": "21"
     },
     {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
+        "group": "markdownListMarker",
+        "linkedGroup": "Statement",
         "row": 21,
-        "char": "      ```text\n"
+        "char": "-"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 21,
+        "char": " Build from source:\n"
     },
     {
         "group": "LineNr",
@@ -386,10 +326,16 @@ module.exports = [
         "char": "22"
     },
     {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
+        "group": "markdownOrderedListMarker",
+        "linkedGroup": "Statement",
         "row": 22,
-        "char": "      replace (\n"
+        "char": "  1."
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 22,
+        "char": "  Clone the repo\n"
     },
     {
         "group": "LineNr",
@@ -397,10 +343,16 @@ module.exports = [
         "char": "23"
     },
     {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
+        "group": "markdownOrderedListMarker",
+        "linkedGroup": "Statement",
         "row": 23,
-        "char": "        github.com/samiralajmovic/mani &#61;&gt; MY_MANI_CLONED_GIT_REPO\n"
+        "char": "  2."
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 23,
+        "char": "  Add the following command in your go.mod file\n"
     },
     {
         "group": "LineNr",
@@ -408,10 +360,10 @@ module.exports = [
         "char": "24"
     },
     {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
         "row": 24,
-        "char": "      )\n"
+        "char": "      ```text\n"
     },
     {
         "group": "LineNr",
@@ -419,10 +371,10 @@ module.exports = [
         "char": "25"
     },
     {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
         "row": 25,
-        "char": "      ```\n"
+        "char": "      replace (\n"
     },
     {
         "group": "LineNr",
@@ -430,16 +382,10 @@ module.exports = [
         "char": "26"
     },
     {
-        "group": "markdownOrderedListMarker",
-        "linkedGroup": "Statement",
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
         "row": 26,
-        "char": "  3."
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 26,
-        "char": "  Build and run the executable\n"
+        "char": "        github.com/alajmo/mani &#61;&gt; MY_MANI_CLONED_GIT_REPO\n"
     },
     {
         "group": "LineNr",
@@ -447,10 +393,10 @@ module.exports = [
         "char": "27"
     },
     {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
         "row": 27,
-        "char": "      ```shell\n"
+        "char": "      )\n"
     },
     {
         "group": "LineNr",
@@ -458,10 +404,10 @@ module.exports = [
         "char": "28"
     },
     {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
         "row": 28,
-        "char": "      go build\n"
+        "char": "      ```\n"
     },
     {
         "group": "LineNr",
@@ -469,10 +415,16 @@ module.exports = [
         "char": "29"
     },
     {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
+        "group": "markdownOrderedListMarker",
+        "linkedGroup": "Statement",
         "row": 29,
-        "char": "      ```\n"
+        "char": "  3."
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 29,
+        "char": "  Build and run the executable\n"
     },
     {
         "group": "LineNr",
@@ -480,10 +432,10 @@ module.exports = [
         "char": "30"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
         "row": 30,
-        "char": "\n"
+        "char": "      ```shell\n"
     },
     {
         "group": "LineNr",
@@ -491,16 +443,10 @@ module.exports = [
         "char": "31"
     },
     {
-        "group": "markdownHeadingDelimiter",
-        "linkedGroup": "Special",
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
         "row": 31,
-        "char": "###"
-    },
-    {
-        "group": "markdownH3",
-        "linkedGroup": "Title",
-        "row": 31,
-        "char": " Auto-completion\n"
+        "char": "      go build\n"
     },
     {
         "group": "LineNr",
@@ -508,10 +454,10 @@ module.exports = [
         "char": "32"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
         "row": 32,
-        "char": "\n"
+        "char": "      ```\n"
     },
     {
         "group": "LineNr",
@@ -519,16 +465,10 @@ module.exports = [
         "char": "33"
     },
     {
-        "group": "markdownHeadingDelimiter",
-        "linkedGroup": "Special",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 33,
-        "char": "####"
-    },
-    {
-        "group": "markdownH4",
-        "linkedGroup": "Title",
-        "row": 33,
-        "char": " Bash\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -536,10 +476,16 @@ module.exports = [
         "char": "34"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "markdownHeadingDelimiter",
+        "linkedGroup": "Special",
         "row": 34,
-        "char": "\n"
+        "char": "###"
+    },
+    {
+        "group": "markdownH3",
+        "linkedGroup": "Title",
+        "row": 34,
+        "char": " Auto-completion\n"
     },
     {
         "group": "LineNr",
@@ -550,49 +496,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 35,
-        "char": "Auto-complete requires "
-    },
-    {
-        "group": "markdownLinkTextDelimiter",
-        "linkedGroup": "markdownLinkTextDelimiter",
-        "row": 35,
-        "char": "["
-    },
-    {
-        "group": "markdownLinkText",
-        "linkedGroup": "Underlined",
-        "row": 35,
-        "char": "bash-completion"
-    },
-    {
-        "group": "markdownLinkTextDelimiter",
-        "linkedGroup": "markdownLinkTextDelimiter",
-        "row": 35,
-        "char": "]"
-    },
-    {
-        "group": "markdownLinkDelimiter",
-        "linkedGroup": "markdownLinkDelimiter",
-        "row": 35,
-        "char": "("
-    },
-    {
-        "group": "markdownUrl",
-        "linkedGroup": "Constant",
-        "row": 35,
-        "char": "https://github.com/scop/bash-completion#installation"
-    },
-    {
-        "group": "markdownLinkDelimiter",
-        "linkedGroup": "markdownLinkDelimiter",
-        "row": 35,
-        "char": ")"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 35,
-        "char": ".\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -600,10 +504,16 @@ module.exports = [
         "char": "36"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "markdownHeadingDelimiter",
+        "linkedGroup": "Special",
         "row": 36,
-        "char": "\n"
+        "char": "####"
+    },
+    {
+        "group": "markdownH4",
+        "linkedGroup": "Title",
+        "row": 36,
+        "char": " Bash\n"
     },
     {
         "group": "LineNr",
@@ -614,31 +524,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 37,
-        "char": "There&#39;s two ways to add "
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 37,
-        "char": "`"
-    },
-    {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
-        "row": 37,
-        "char": "mani"
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 37,
-        "char": "`"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 37,
-        "char": " auto-completion:\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -649,7 +535,37 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 38,
-        "char": "\n"
+        "char": "Auto-complete requires "
+    },
+    {
+        "group": "markdownLinkTextDelimiter",
+        "linkedGroup": "markdownLinkTextDelimiter",
+        "row": 38,
+        "char": "["
+    },
+    {
+        "group": "markdownLinkText",
+        "linkedGroup": "Underlined",
+        "row": 38,
+        "char": "bash-completion"
+    },
+    {
+        "group": "markdownLinkTextDelimiter",
+        "linkedGroup": "markdownLinkTextDelimiter",
+        "row": 38,
+        "char": "]"
+    },
+    {
+        "group": "markdownLinkDelimiter",
+        "linkedGroup": "markdownLinkDelimiter",
+        "row": 38,
+        "char": "("
+    },
+    {
+        "group": "markdownUrl",
+        "linkedGroup": "Constant",
+        "row": 38,
+        "char": "https://github.com/\n"
     },
     {
         "group": "LineNr",
@@ -657,40 +573,28 @@ module.exports = [
         "char": "39"
     },
     {
-        "group": "markdownListMarker",
-        "linkedGroup": "Statement",
+        "group": "markdownLink",
+        "linkedGroup": "markdownLink",
         "row": 39,
-        "char": "-"
+        "char": "    "
+    },
+    {
+        "group": "markdownUrl",
+        "linkedGroup": "Constant",
+        "row": 39,
+        "char": "scop/bash-completion#installation"
+    },
+    {
+        "group": "markdownLinkDelimiter",
+        "linkedGroup": "markdownLinkDelimiter",
+        "row": 39,
+        "char": ")"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 39,
-        "char": " Source the completion script in your "
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 39,
-        "char": "`"
-    },
-    {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
-        "row": 39,
-        "char": "~/.bashrc"
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 39,
-        "char": "`"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 39,
-        "char": " file:\n"
+        "char": ".\n"
     },
     {
         "group": "LineNr",
@@ -712,7 +616,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 41,
-        "char": "  "
+        "char": "There&#39;s two ways to add "
     },
     {
         "group": "markdownCodeDelimiter",
@@ -724,13 +628,19 @@ module.exports = [
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 41,
-        "char": "echo &#39;source &lt;(mani completion)&#39; &gt;&gt;~/.bashrc"
+        "char": "mani"
     },
     {
         "group": "markdownCodeDelimiter",
         "linkedGroup": "Special",
         "row": 41,
-        "char": "`\n"
+        "char": "`"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 41,
+        "char": " auto-completion:\n"
     },
     {
         "group": "LineNr",
@@ -749,10 +659,40 @@ module.exports = [
         "char": "43"
     },
     {
+        "group": "markdownListMarker",
+        "linkedGroup": "Statement",
+        "row": 43,
+        "char": "-"
+    },
+    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 43,
-        "char": "or\n"
+        "char": " Source the completion script in your "
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 43,
+        "char": "`"
+    },
+    {
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
+        "row": 43,
+        "char": "~/.bashrc"
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 43,
+        "char": "`"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 43,
+        "char": " file:\n"
     },
     {
         "group": "LineNr",
@@ -771,16 +711,10 @@ module.exports = [
         "char": "45"
     },
     {
-        "group": "markdownListMarker",
-        "linkedGroup": "Statement",
-        "row": 45,
-        "char": "-"
-    },
-    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 45,
-        "char": " Add the completion script to the "
+        "char": "  "
     },
     {
         "group": "markdownCodeDelimiter",
@@ -792,7 +726,7 @@ module.exports = [
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 45,
-        "char": "/etc/bash_completion.d directory:"
+        "char": "echo &#39;source &lt;(mani completion)&#39; &gt;&gt;~/.bashrc"
     },
     {
         "group": "markdownCodeDelimiter",
@@ -820,25 +754,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 47,
-        "char": "  "
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 47,
-        "char": "`"
-    },
-    {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
-        "row": 47,
-        "char": "mani completion &gt;/etc/bash_completion.d/mani"
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 47,
-        "char": "`\n"
+        "char": "or\n"
     },
     {
         "group": "LineNr",
@@ -857,16 +773,34 @@ module.exports = [
         "char": "49"
     },
     {
-        "group": "markdownHeadingDelimiter",
-        "linkedGroup": "Special",
+        "group": "markdownListMarker",
+        "linkedGroup": "Statement",
         "row": 49,
-        "char": "####"
+        "char": "-"
     },
     {
-        "group": "markdownH4",
-        "linkedGroup": "Title",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 49,
-        "char": " Zsh\n"
+        "char": " Add the completion script to the "
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 49,
+        "char": "`"
+    },
+    {
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
+        "row": 49,
+        "char": "/etc/bash_completion.d directory:"
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 49,
+        "char": "`\n"
     },
     {
         "group": "LineNr",
@@ -888,7 +822,25 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 51,
-        "char": "Coming.\n"
+        "char": "  "
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 51,
+        "char": "`"
+    },
+    {
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
+        "row": 51,
+        "char": "mani completion &gt;/etc/bash_completion.d/mani"
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 51,
+        "char": "`\n"
     },
     {
         "group": "LineNr",
@@ -910,13 +862,13 @@ module.exports = [
         "group": "markdownHeadingDelimiter",
         "linkedGroup": "Special",
         "row": 53,
-        "char": "##"
+        "char": "####"
     },
     {
-        "group": "markdownH2",
+        "group": "markdownH4",
         "linkedGroup": "Title",
         "row": 53,
-        "char": " Usage\n"
+        "char": " Zsh\n"
     },
     {
         "group": "LineNr",
@@ -938,49 +890,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 55,
-        "char": "Checkout the "
-    },
-    {
-        "group": "markdownLinkTextDelimiter",
-        "linkedGroup": "markdownLinkTextDelimiter",
-        "row": 55,
-        "char": "["
-    },
-    {
-        "group": "markdownLinkText",
-        "linkedGroup": "Underlined",
-        "row": 55,
-        "char": "example"
-    },
-    {
-        "group": "markdownLinkTextDelimiter",
-        "linkedGroup": "markdownLinkTextDelimiter",
-        "row": 55,
-        "char": "]"
-    },
-    {
-        "group": "markdownLinkDelimiter",
-        "linkedGroup": "markdownLinkDelimiter",
-        "row": 55,
-        "char": "("
-    },
-    {
-        "group": "markdownUrl",
-        "linkedGroup": "Constant",
-        "row": 55,
-        "char": "/example"
-    },
-    {
-        "group": "markdownLinkDelimiter",
-        "linkedGroup": "markdownLinkDelimiter",
-        "row": 55,
-        "char": ")"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 55,
-        "char": " directory to see how it can be used.\n"
+        "char": "Coming.\n"
     },
     {
         "group": "LineNr",
@@ -999,10 +909,16 @@ module.exports = [
         "char": "57"
     },
     {
-        "group": "markdownCodeDelimiter",
+        "group": "markdownHeadingDelimiter",
         "linkedGroup": "Special",
         "row": 57,
-        "char": "```\n"
+        "char": "##"
+    },
+    {
+        "group": "markdownH2",
+        "linkedGroup": "Title",
+        "row": 57,
+        "char": " Usage\n"
     },
     {
         "group": "LineNr",
@@ -1010,10 +926,10 @@ module.exports = [
         "char": "58"
     },
     {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 58,
-        "char": "mani is a tool used to manage multiple repositories\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1024,7 +940,49 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 59,
-        "char": "\n"
+        "char": "Checkout the "
+    },
+    {
+        "group": "markdownLinkTextDelimiter",
+        "linkedGroup": "markdownLinkTextDelimiter",
+        "row": 59,
+        "char": "["
+    },
+    {
+        "group": "markdownLinkText",
+        "linkedGroup": "Underlined",
+        "row": 59,
+        "char": "example"
+    },
+    {
+        "group": "markdownLinkTextDelimiter",
+        "linkedGroup": "markdownLinkTextDelimiter",
+        "row": 59,
+        "char": "]"
+    },
+    {
+        "group": "markdownLinkDelimiter",
+        "linkedGroup": "markdownLinkDelimiter",
+        "row": 59,
+        "char": "("
+    },
+    {
+        "group": "markdownUrl",
+        "linkedGroup": "Constant",
+        "row": 59,
+        "char": "/example"
+    },
+    {
+        "group": "markdownLinkDelimiter",
+        "linkedGroup": "markdownLinkDelimiter",
+        "row": 59,
+        "char": ")"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 59,
+        "char": " directory to see how it can be used.\n"
     },
     {
         "group": "LineNr",
@@ -1032,10 +990,10 @@ module.exports = [
         "char": "60"
     },
     {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 60,
-        "char": "Usage:\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1043,10 +1001,10 @@ module.exports = [
         "char": "61"
     },
     {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
         "row": 61,
-        "char": "  mani [command]\n"
+        "char": "```\n"
     },
     {
         "group": "LineNr",
@@ -1054,10 +1012,10 @@ module.exports = [
         "char": "62"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
         "row": 62,
-        "char": "\n"
+        "char": "mani is a tool used to manage multiple repositories\n"
     },
     {
         "group": "LineNr",
@@ -1065,10 +1023,10 @@ module.exports = [
         "char": "63"
     },
     {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 63,
-        "char": "Available Commands:\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1079,7 +1037,7 @@ module.exports = [
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 64,
-        "char": "  completion  Output shell completion code for bash\n"
+        "char": "Usage:\n"
     },
     {
         "group": "LineNr",
@@ -1090,7 +1048,7 @@ module.exports = [
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 65,
-        "char": "  exec        Execute arbitrary commands\n"
+        "char": "  mani [command]\n"
     },
     {
         "group": "LineNr",
@@ -1098,10 +1056,10 @@ module.exports = [
         "char": "66"
     },
     {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 66,
-        "char": "  help        Help about any command\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1112,7 +1070,7 @@ module.exports = [
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 67,
-        "char": "  info        Print configuration file path\n"
+        "char": "Available Commands:\n"
     },
     {
         "group": "LineNr",
@@ -1123,7 +1081,7 @@ module.exports = [
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 68,
-        "char": "  init        Initialize a mani repository\n"
+        "char": "  completion  Output shell completion code for bash\n"
     },
     {
         "group": "LineNr",
@@ -1134,7 +1092,7 @@ module.exports = [
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 69,
-        "char": "  list        List projects, commands and tags\n"
+        "char": "  exec        Execute arbitrary commands\n"
     },
     {
         "group": "LineNr",
@@ -1145,7 +1103,7 @@ module.exports = [
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 70,
-        "char": "  run         Run commands\n"
+        "char": "  help        Help about any command\n"
     },
     {
         "group": "LineNr",
@@ -1156,7 +1114,7 @@ module.exports = [
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 71,
-        "char": "  sync        Clone repositories and add to gitignore\n"
+        "char": "  info        Print configuration file path\n"
     },
     {
         "group": "LineNr",
@@ -1167,7 +1125,7 @@ module.exports = [
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 72,
-        "char": "  version     Print version/build info\n"
+        "char": "  init        Initialize a mani repository\n"
     },
     {
         "group": "LineNr",
@@ -1175,10 +1133,10 @@ module.exports = [
         "char": "73"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
         "row": 73,
-        "char": "\n"
+        "char": "  list        List projects, commands and tags\n"
     },
     {
         "group": "LineNr",
@@ -1189,7 +1147,7 @@ module.exports = [
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 74,
-        "char": "Flags:\n"
+        "char": "  run         Run commands\n"
     },
     {
         "group": "LineNr",
@@ -1200,7 +1158,7 @@ module.exports = [
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 75,
-        "char": "  -c, --config string   config file (by default it checks current and all parent directories for mani.yaml|yml)\n"
+        "char": "  sync        Clone repositories and add to gitignore\n"
     },
     {
         "group": "LineNr",
@@ -1211,7 +1169,7 @@ module.exports = [
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 76,
-        "char": "  -h, --help            help for mani\n"
+        "char": "  version     Print version/build info\n"
     },
     {
         "group": "LineNr",
@@ -1233,7 +1191,7 @@ module.exports = [
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 78,
-        "char": "Use &quot;mani [command] --help&quot; for more information about a command.\n"
+        "char": "Flags:\n"
     },
     {
         "group": "LineNr",
@@ -1241,10 +1199,10 @@ module.exports = [
         "char": "79"
     },
     {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
         "row": 79,
-        "char": "```\n"
+        "char": "  -c, --config string   config file\n"
     },
     {
         "group": "LineNr",
@@ -1252,10 +1210,10 @@ module.exports = [
         "char": "80"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
         "row": 80,
-        "char": "\n"
+        "char": "  -h, --help            help for mani\n"
     },
     {
         "group": "LineNr",
@@ -1263,16 +1221,10 @@ module.exports = [
         "char": "81"
     },
     {
-        "group": "markdownHeadingDelimiter",
-        "linkedGroup": "Special",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 81,
-        "char": "###"
-    },
-    {
-        "group": "markdownH3",
-        "linkedGroup": "Title",
-        "row": 81,
-        "char": " Create a New Mani Repository\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1280,10 +1232,10 @@ module.exports = [
         "char": "82"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
         "row": 82,
-        "char": "\n"
+        "char": "Use &quot;mani [command] --help&quot; for more information about a command.\n"
     },
     {
         "group": "LineNr",
@@ -1291,10 +1243,10 @@ module.exports = [
         "char": "83"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
         "row": 83,
-        "char": "Run the following command inside a directory to initialize a mani repo:\n"
+        "char": "```\n"
     },
     {
         "group": "LineNr",
@@ -1313,10 +1265,16 @@ module.exports = [
         "char": "85"
     },
     {
-        "group": "markdownCodeDelimiter",
+        "group": "markdownHeadingDelimiter",
         "linkedGroup": "Special",
         "row": 85,
-        "char": "```sh\n"
+        "char": "###"
+    },
+    {
+        "group": "markdownH3",
+        "linkedGroup": "Title",
+        "row": 85,
+        "char": " Create a New Mani Repository\n"
     },
     {
         "group": "LineNr",
@@ -1324,10 +1282,10 @@ module.exports = [
         "char": "86"
     },
     {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 86,
-        "char": "$ mani init\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1335,10 +1293,10 @@ module.exports = [
         "char": "87"
     },
     {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 87,
-        "char": "```\n"
+        "char": "Run the following command inside a directory to initialize a mani repo:\n"
     },
     {
         "group": "LineNr",
@@ -1357,10 +1315,10 @@ module.exports = [
         "char": "89"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
         "row": 89,
-        "char": "This will generate two files:\n"
+        "char": "```sh\n"
     },
     {
         "group": "LineNr",
@@ -1368,10 +1326,10 @@ module.exports = [
         "char": "90"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
         "row": 90,
-        "char": "\n"
+        "char": "$ mani init\n"
     },
     {
         "group": "LineNr",
@@ -1379,88 +1337,10 @@ module.exports = [
         "char": "91"
     },
     {
-        "group": "markdownListMarker",
-        "linkedGroup": "Statement",
-        "row": 91,
-        "char": "-"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 91,
-        "char": " "
-    },
-    {
         "group": "markdownCodeDelimiter",
         "linkedGroup": "Special",
         "row": 91,
-        "char": "`"
-    },
-    {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
-        "row": 91,
-        "char": "mani.yaml"
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 91,
-        "char": "`"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 91,
-        "char": ": contains projects and custom commands. Any sub-directory that has a "
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 91,
-        "char": "`"
-    },
-    {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
-        "row": 91,
-        "char": ".git"
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 91,
-        "char": "`"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 91,
-        "char": " inside it will be included (add flag "
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 91,
-        "char": "`"
-    },
-    {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
-        "row": 91,
-        "char": "--auto-discovery&#61;false"
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 91,
-        "char": "`"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 91,
-        "char": " to turn off this feature).\n"
+        "char": "```\n"
     },
     {
         "group": "LineNr",
@@ -1468,64 +1348,10 @@ module.exports = [
         "char": "92"
     },
     {
-        "group": "markdownListMarker",
-        "linkedGroup": "Statement",
-        "row": 92,
-        "char": "-"
-    },
-    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 92,
-        "char": " "
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 92,
-        "char": "`"
-    },
-    {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
-        "row": 92,
-        "char": ".gitignore"
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 92,
-        "char": "`"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 92,
-        "char": ": includes the projects specified in "
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 92,
-        "char": "`"
-    },
-    {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
-        "row": 92,
-        "char": "mani.yaml"
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 92,
-        "char": "`"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 92,
-        "char": " file.\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1536,7 +1362,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 93,
-        "char": "\n"
+        "char": "This will generate two files:\n"
     },
     {
         "group": "LineNr",
@@ -1547,79 +1373,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 94,
-        "char": "It can be helpful to initialize the "
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 94,
-        "char": "`"
-    },
-    {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
-        "row": 94,
-        "char": "mani"
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 94,
-        "char": "`"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 94,
-        "char": " repository as a git repository, so that your teammates can easily download the "
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 94,
-        "char": "`"
-    },
-    {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
-        "row": 94,
-        "char": "mani"
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 94,
-        "char": "`"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 94,
-        "char": " repository and run "
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 94,
-        "char": "`"
-    },
-    {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
-        "row": 94,
-        "char": "mani sync"
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 94,
-        "char": "`"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 94,
-        "char": " to clone all repositories and get the same project setup as you.\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1627,10 +1381,40 @@ module.exports = [
         "char": "95"
     },
     {
+        "group": "markdownListMarker",
+        "linkedGroup": "Statement",
+        "row": 95,
+        "char": "-"
+    },
+    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 95,
-        "char": "\n"
+        "char": " "
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 95,
+        "char": "`"
+    },
+    {
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
+        "row": 95,
+        "char": "mani.yaml"
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 95,
+        "char": "`"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 95,
+        "char": ": contains projects and custom commands. Any sub-directory that has a\n"
     },
     {
         "group": "LineNr",
@@ -1638,16 +1422,52 @@ module.exports = [
         "char": "96"
     },
     {
-        "group": "markdownHeadingDelimiter",
-        "linkedGroup": "Special",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 96,
-        "char": "###"
+        "char": "  "
     },
     {
-        "group": "markdownH3",
-        "linkedGroup": "Title",
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
         "row": 96,
-        "char": " Add New Project to Mani Repository\n"
+        "char": "`"
+    },
+    {
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
+        "row": 96,
+        "char": ".git"
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 96,
+        "char": "`"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 96,
+        "char": " inside it will be included (add flag "
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 96,
+        "char": "`"
+    },
+    {
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
+        "row": 96,
+        "char": "--auto-discovery&#61;false"
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 96,
+        "char": "`\n"
     },
     {
         "group": "LineNr",
@@ -1658,7 +1478,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 97,
-        "char": "\n"
+        "char": "   to turn off this feature).\n"
     },
     {
         "group": "LineNr",
@@ -1666,58 +1486,16 @@ module.exports = [
         "char": "98"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "markdownListMarker",
+        "linkedGroup": "Statement",
         "row": 98,
-        "char": "Add another project to "
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 98,
-        "char": "`"
-    },
-    {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
-        "row": 98,
-        "char": "mani.yaml"
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 98,
-        "char": "`"
+        "char": "-"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
         "row": 98,
-        "char": " and run "
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 98,
-        "char": "`"
-    },
-    {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
-        "row": 98,
-        "char": "mani sync"
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 98,
-        "char": "`"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 98,
-        "char": " to pull the repository and add it to the "
+        "char": " "
     },
     {
         "group": "markdownCodeDelimiter",
@@ -1741,7 +1519,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 98,
-        "char": ".\n"
+        "char": ": includes the projects specified in "
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 98,
+        "char": "`"
+    },
+    {
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
+        "row": 98,
+        "char": "mani.yaml"
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 98,
+        "char": "`"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 98,
+        "char": " file.\n"
     },
     {
         "group": "LineNr",
@@ -1760,16 +1562,34 @@ module.exports = [
         "char": "100"
     },
     {
-        "group": "markdownHeadingDelimiter",
-        "linkedGroup": "Special",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 100,
-        "char": "###"
+        "char": "It can be helpful to initialize the "
     },
     {
-        "group": "markdownH3",
-        "linkedGroup": "Title",
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
         "row": 100,
-        "char": " Run commands across multiple projects\n"
+        "char": "`"
+    },
+    {
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
+        "row": 100,
+        "char": "mani"
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 100,
+        "char": "`"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 100,
+        "char": " repository as a git repository,\n"
     },
     {
         "group": "LineNr",
@@ -1780,7 +1600,49 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 101,
-        "char": "\n"
+        "char": "   so that your teammates can easily download the "
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 101,
+        "char": "`"
+    },
+    {
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
+        "row": 101,
+        "char": "mani"
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 101,
+        "char": "`"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 101,
+        "char": " repository and run "
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 101,
+        "char": "`"
+    },
+    {
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
+        "row": 101,
+        "char": "mani sync"
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 101,
+        "char": "`\n"
     },
     {
         "group": "LineNr",
@@ -1788,10 +1650,10 @@ module.exports = [
         "char": "102"
     },
     {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 102,
-        "char": "```sh\n"
+        "char": "   to clone all repositories and get the same project setup as you.\n"
     },
     {
         "group": "LineNr",
@@ -1799,10 +1661,10 @@ module.exports = [
         "char": "103"
     },
     {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 103,
-        "char": "# Run arbitrary command\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1810,10 +1672,16 @@ module.exports = [
         "char": "104"
     },
     {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
+        "group": "markdownHeadingDelimiter",
+        "linkedGroup": "Special",
         "row": 104,
-        "char": "mani exec &#39;ls -alh&#39; --all-projects\n"
+        "char": "###"
+    },
+    {
+        "group": "markdownH3",
+        "linkedGroup": "Title",
+        "row": 104,
+        "char": " Add New Project to Mani Repository\n"
     },
     {
         "group": "LineNr",
@@ -1832,10 +1700,58 @@ module.exports = [
         "char": "106"
     },
     {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 106,
+        "char": "Add another project to "
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 106,
+        "char": "`"
+    },
+    {
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 106,
-        "char": "# Specify projects using tags flag\n"
+        "char": "mani.yaml"
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 106,
+        "char": "`"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 106,
+        "char": " and run "
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 106,
+        "char": "`"
+    },
+    {
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
+        "row": 106,
+        "char": "mani sync"
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 106,
+        "char": "`"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 106,
+        "char": " to pull the repository\n"
     },
     {
         "group": "LineNr",
@@ -1843,10 +1759,34 @@ module.exports = [
         "char": "107"
     },
     {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 107,
+        "char": "and add it to the "
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 107,
+        "char": "`"
+    },
+    {
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 107,
-        "char": "mani run list-files -t frontend\n"
+        "char": ".gitignore"
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 107,
+        "char": "`"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 107,
+        "char": ".\n"
     },
     {
         "group": "LineNr",
@@ -1865,10 +1805,16 @@ module.exports = [
         "char": "109"
     },
     {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
+        "group": "markdownHeadingDelimiter",
+        "linkedGroup": "Special",
         "row": 109,
-        "char": "# Specify project using project flag\n"
+        "char": "###"
+    },
+    {
+        "group": "markdownH3",
+        "linkedGroup": "Title",
+        "row": 109,
+        "char": " Add New Project to Mani Repository\n"
     },
     {
         "group": "LineNr",
@@ -1876,10 +1822,10 @@ module.exports = [
         "char": "110"
     },
     {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 110,
-        "char": "mani run list-files -p project-a\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1887,10 +1833,58 @@ module.exports = [
         "char": "111"
     },
     {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 111,
+        "char": "Add another project to "
+    },
+    {
         "group": "markdownCodeDelimiter",
         "linkedGroup": "Special",
         "row": 111,
-        "char": "```\n"
+        "char": "`"
+    },
+    {
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
+        "row": 111,
+        "char": "mani.yaml"
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 111,
+        "char": "`"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 111,
+        "char": " and run "
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 111,
+        "char": "`"
+    },
+    {
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
+        "row": 111,
+        "char": "mani sync"
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 111,
+        "char": "`"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 111,
+        "char": " to pull the repository \n"
     },
     {
         "group": "LineNr",
@@ -1901,7 +1895,31 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 112,
-        "char": "\n"
+        "char": "and add it to the "
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 112,
+        "char": "`"
+    },
+    {
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
+        "row": 112,
+        "char": ".gitignore"
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 112,
+        "char": "`"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 112,
+        "char": ".\n"
     },
     {
         "group": "LineNr",
@@ -1909,16 +1927,10 @@ module.exports = [
         "char": "113"
     },
     {
-        "group": "markdownHeadingDelimiter",
-        "linkedGroup": "Special",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 113,
-        "char": "##"
-    },
-    {
-        "group": "markdownH2",
-        "linkedGroup": "Title",
-        "row": 113,
-        "char": " Config Structure\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -1926,10 +1938,16 @@ module.exports = [
         "char": "114"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "markdownHeadingDelimiter",
+        "linkedGroup": "Special",
         "row": 114,
-        "char": "\n"
+        "char": "###"
+    },
+    {
+        "group": "markdownH3",
+        "linkedGroup": "Title",
+        "row": 114,
+        "char": " Run commands across multiple projects\n"
     },
     {
         "group": "LineNr",
@@ -1940,151 +1958,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 115,
-        "char": "The "
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 115,
-        "char": "`"
-    },
-    {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
-        "row": 115,
-        "char": "mani.yaml"
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 115,
-        "char": "`"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 115,
-        "char": " config is based on two concepts: "
-    },
-    {
-        "group": "markdownBoldDelimiter",
-        "linkedGroup": "htmlBold",
-        "row": 115,
-        "char": "**"
-    },
-    {
-        "group": "markdownBold",
-        "linkedGroup": "htmlBold",
-        "row": 115,
-        "char": "projects"
-    },
-    {
-        "group": "markdownBoldDelimiter",
-        "linkedGroup": "htmlBold",
-        "row": 115,
-        "char": "**"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 115,
-        "char": " and "
-    },
-    {
-        "group": "markdownBoldDelimiter",
-        "linkedGroup": "htmlBold",
-        "row": 115,
-        "char": "**"
-    },
-    {
-        "group": "markdownBold",
-        "linkedGroup": "htmlBold",
-        "row": 115,
-        "char": "commands"
-    },
-    {
-        "group": "markdownBoldDelimiter",
-        "linkedGroup": "htmlBold",
-        "row": 115,
-        "char": "**"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 115,
-        "char": ". "
-    },
-    {
-        "group": "markdownBoldDelimiter",
-        "linkedGroup": "htmlBold",
-        "row": 115,
-        "char": "**"
-    },
-    {
-        "group": "markdownBold",
-        "linkedGroup": "htmlBold",
-        "row": 115,
-        "char": "Projects"
-    },
-    {
-        "group": "markdownBoldDelimiter",
-        "linkedGroup": "htmlBold",
-        "row": 115,
-        "char": "**"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 115,
-        "char": " are simply directories, which may be git repositories, in which case they have an url attribute. "
-    },
-    {
-        "group": "markdownBoldDelimiter",
-        "linkedGroup": "htmlBold",
-        "row": 115,
-        "char": "**"
-    },
-    {
-        "group": "markdownBold",
-        "linkedGroup": "htmlBold",
-        "row": 115,
-        "char": "Commands"
-    },
-    {
-        "group": "markdownBoldDelimiter",
-        "linkedGroup": "htmlBold",
-        "row": 115,
-        "char": "**"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 115,
-        "char": " are arbitrary shell commands that you write and then run for selected "
-    },
-    {
-        "group": "markdownBoldDelimiter",
-        "linkedGroup": "htmlBold",
-        "row": 115,
-        "char": "**"
-    },
-    {
-        "group": "markdownBold",
-        "linkedGroup": "htmlBold",
-        "row": 115,
-        "char": "projects"
-    },
-    {
-        "group": "markdownBoldDelimiter",
-        "linkedGroup": "htmlBold",
-        "row": 115,
-        "char": "**"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 115,
-        "char": ".\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -2092,10 +1966,10 @@ module.exports = [
         "char": "116"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
         "row": 116,
-        "char": "\n"
+        "char": "```sh\n"
     },
     {
         "group": "LineNr",
@@ -2103,10 +1977,10 @@ module.exports = [
         "char": "117"
     },
     {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
         "row": 117,
-        "char": "```yaml\n"
+        "char": "# Run arbitrary command\n"
     },
     {
         "group": "LineNr",
@@ -2117,7 +1991,7 @@ module.exports = [
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 118,
-        "char": "projects:\n"
+        "char": "mani exec &#39;ls -alh&#39; --all-projects\n"
     },
     {
         "group": "LineNr",
@@ -2125,10 +1999,10 @@ module.exports = [
         "char": "119"
     },
     {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 119,
-        "char": "  - name: example\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -2139,7 +2013,7 @@ module.exports = [
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 120,
-        "char": "    path: .\n"
+        "char": "# Specify projects using tags flag\n"
     },
     {
         "group": "LineNr",
@@ -2147,10 +2021,10 @@ module.exports = [
         "char": "121"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
         "row": 121,
-        "char": "\n"
+        "char": "mani run list-files -t frontend\n"
     },
     {
         "group": "LineNr",
@@ -2158,10 +2032,10 @@ module.exports = [
         "char": "122"
     },
     {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 122,
-        "char": "  - name: pinto\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -2172,7 +2046,7 @@ module.exports = [
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 123,
-        "char": "    path: frontend/pinto\n"
+        "char": "# Specify project using project flag\n"
     },
     {
         "group": "LineNr",
@@ -2183,7 +2057,7 @@ module.exports = [
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 124,
-        "char": "    url: https://github.com/samiralajmovic/pinto\n"
+        "char": "mani run list-files -p project-a\n"
     },
     {
         "group": "LineNr",
@@ -2191,10 +2065,10 @@ module.exports = [
         "char": "125"
     },
     {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
         "row": 125,
-        "char": "    tags:\n"
+        "char": "```\n"
     },
     {
         "group": "LineNr",
@@ -2202,10 +2076,10 @@ module.exports = [
         "char": "126"
     },
     {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 126,
-        "char": "      - frontend\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -2213,10 +2087,16 @@ module.exports = [
         "char": "127"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "markdownHeadingDelimiter",
+        "linkedGroup": "Special",
         "row": 127,
-        "char": "\n"
+        "char": "##"
+    },
+    {
+        "group": "markdownH2",
+        "linkedGroup": "Title",
+        "row": 127,
+        "char": " Config Structure\n"
     },
     {
         "group": "LineNr",
@@ -2224,10 +2104,10 @@ module.exports = [
         "char": "128"
     },
     {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 128,
-        "char": "commands:\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -2235,10 +2115,82 @@ module.exports = [
         "char": "129"
     },
     {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 129,
+        "char": "The "
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 129,
+        "char": "`"
+    },
+    {
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 129,
-        "char": "  - name: multi\n"
+        "char": "mani.yaml"
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 129,
+        "char": "`"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 129,
+        "char": " config is based on two concepts: "
+    },
+    {
+        "group": "markdownBoldDelimiter",
+        "linkedGroup": "htmlBold",
+        "row": 129,
+        "char": "__"
+    },
+    {
+        "group": "markdownBold",
+        "linkedGroup": "htmlBold",
+        "row": 129,
+        "char": "projects"
+    },
+    {
+        "group": "markdownBoldDelimiter",
+        "linkedGroup": "htmlBold",
+        "row": 129,
+        "char": "__"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 129,
+        "char": " and "
+    },
+    {
+        "group": "markdownBoldDelimiter",
+        "linkedGroup": "htmlBold",
+        "row": 129,
+        "char": "__"
+    },
+    {
+        "group": "markdownBold",
+        "linkedGroup": "htmlBold",
+        "row": 129,
+        "char": "commands"
+    },
+    {
+        "group": "markdownBoldDelimiter",
+        "linkedGroup": "htmlBold",
+        "row": 129,
+        "char": "__"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 129,
+        "char": ". \n"
     },
     {
         "group": "LineNr",
@@ -2246,10 +2198,28 @@ module.exports = [
         "char": "130"
     },
     {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
+        "group": "markdownBoldDelimiter",
+        "linkedGroup": "htmlBold",
         "row": 130,
-        "char": "    command: | # multiline command\n"
+        "char": "__"
+    },
+    {
+        "group": "markdownBold",
+        "linkedGroup": "htmlBold",
+        "row": 130,
+        "char": "Projects"
+    },
+    {
+        "group": "markdownBoldDelimiter",
+        "linkedGroup": "htmlBold",
+        "row": 130,
+        "char": "__"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 130,
+        "char": " are simply directories, which may be git repositories, in which \n"
     },
     {
         "group": "LineNr",
@@ -2257,10 +2227,34 @@ module.exports = [
         "char": "131"
     },
     {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 131,
-        "char": "      echo &quot;1st line&quot;\n"
+        "char": "case they have an url attribute. "
+    },
+    {
+        "group": "markdownBoldDelimiter",
+        "linkedGroup": "htmlBold",
+        "row": 131,
+        "char": "__"
+    },
+    {
+        "group": "markdownBold",
+        "linkedGroup": "htmlBold",
+        "row": 131,
+        "char": "Commands"
+    },
+    {
+        "group": "markdownBoldDelimiter",
+        "linkedGroup": "htmlBold",
+        "row": 131,
+        "char": "__"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 131,
+        "char": " are arbitrary shell commands \n"
     },
     {
         "group": "LineNr",
@@ -2268,10 +2262,34 @@ module.exports = [
         "char": "132"
     },
     {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 132,
-        "char": "      echo &quot;2nd line&quot;\n"
+        "char": "that you write and then run for selected "
+    },
+    {
+        "group": "markdownBoldDelimiter",
+        "linkedGroup": "htmlBold",
+        "row": 132,
+        "char": "__"
+    },
+    {
+        "group": "markdownBold",
+        "linkedGroup": "htmlBold",
+        "row": 132,
+        "char": "projects"
+    },
+    {
+        "group": "markdownBoldDelimiter",
+        "linkedGroup": "htmlBold",
+        "row": 132,
+        "char": "__"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 132,
+        "char": ".\n"
     },
     {
         "group": "LineNr",
@@ -2290,10 +2308,10 @@ module.exports = [
         "char": "134"
     },
     {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
         "row": 134,
-        "char": "  - name: checkout\n"
+        "char": "```yaml\n"
     },
     {
         "group": "LineNr",
@@ -2304,7 +2322,7 @@ module.exports = [
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 135,
-        "char": "    args:\n"
+        "char": "projects:\n"
     },
     {
         "group": "LineNr",
@@ -2315,7 +2333,7 @@ module.exports = [
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 136,
-        "char": "      branch: master # default value, override with: mani run checkout -a branch&#61;development\n"
+        "char": "  - name: example\n"
     },
     {
         "group": "LineNr",
@@ -2326,7 +2344,7 @@ module.exports = [
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 137,
-        "char": "    command: git checkout $branch\n"
+        "char": "    path: .\n"
     },
     {
         "group": "LineNr",
@@ -2334,10 +2352,10 @@ module.exports = [
         "char": "138"
     },
     {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
+        "group": "Normal",
+        "linkedGroup": "",
         "row": 138,
-        "char": "```\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -2345,10 +2363,10 @@ module.exports = [
         "char": "139"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
         "row": 139,
-        "char": "\n"
+        "char": "  - name: idetheme\n"
     },
     {
         "group": "LineNr",
@@ -2356,16 +2374,10 @@ module.exports = [
         "char": "140"
     },
     {
-        "group": "markdownHeadingDelimiter",
-        "linkedGroup": "Special",
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
         "row": 140,
-        "char": "##"
-    },
-    {
-        "group": "markdownH2",
-        "linkedGroup": "Title",
-        "row": 140,
-        "char": " Roadmap\n"
+        "char": "    path: frontend/idetheme\n"
     },
     {
         "group": "LineNr",
@@ -2373,10 +2385,10 @@ module.exports = [
         "char": "141"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
         "row": 141,
-        "char": "\n"
+        "char": "    url: https://github.com/alajmo/idetheme\n"
     },
     {
         "group": "LineNr",
@@ -2384,28 +2396,10 @@ module.exports = [
         "char": "142"
     },
     {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 142,
-        "char": "`"
-    },
-    {
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 142,
-        "char": "mani"
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 142,
-        "char": "`"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 142,
-        "char": " is under active development and some of the things I aim to add/fix is:\n"
+        "char": "    tags:\n"
     },
     {
         "group": "LineNr",
@@ -2413,10 +2407,10 @@ module.exports = [
         "char": "143"
     },
     {
-        "group": "Normal",
-        "linkedGroup": "",
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
         "row": 143,
-        "char": "\n"
+        "char": "      - frontend\n"
     },
     {
         "group": "LineNr",
@@ -2424,16 +2418,10 @@ module.exports = [
         "char": "144"
     },
     {
-        "group": "markdownListMarker",
-        "linkedGroup": "Statement",
-        "row": 144,
-        "char": "-"
-    },
-    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 144,
-        "char": " [ ] Add CRUD methods for project to config via cli (user-input)\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -2441,16 +2429,10 @@ module.exports = [
         "char": "145"
     },
     {
-        "group": "markdownListMarker",
-        "linkedGroup": "Statement",
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
         "row": 145,
-        "char": "-"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 145,
-        "char": " [ ] Add CRUD methods for command to config via cli (user-input)\n"
+        "char": "commands:\n"
     },
     {
         "group": "LineNr",
@@ -2458,16 +2440,10 @@ module.exports = [
         "char": "146"
     },
     {
-        "group": "markdownListMarker",
-        "linkedGroup": "Statement",
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
         "row": 146,
-        "char": "-"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 146,
-        "char": " [ ] Add completion for zsh\n"
+        "char": "  - name: multi\n"
     },
     {
         "group": "LineNr",
@@ -2475,16 +2451,10 @@ module.exports = [
         "char": "147"
     },
     {
-        "group": "markdownListMarker",
-        "linkedGroup": "Statement",
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
         "row": 147,
-        "char": "-"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 147,
-        "char": " [ ] Add package to brew/snap/Ubuntu/Debian\n"
+        "char": "    command: | # multiline command\n"
     },
     {
         "group": "LineNr",
@@ -2492,16 +2462,10 @@ module.exports = [
         "char": "148"
     },
     {
-        "group": "markdownListMarker",
-        "linkedGroup": "Statement",
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
         "row": 148,
-        "char": "-"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 148,
-        "char": " [ ] Add Windows support\n"
+        "char": "      echo &quot;1st line&quot;\n"
     },
     {
         "group": "LineNr",
@@ -2509,40 +2473,10 @@ module.exports = [
         "char": "149"
     },
     {
-        "group": "markdownListMarker",
-        "linkedGroup": "Statement",
-        "row": 149,
-        "char": "-"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 149,
-        "char": " [ ] Add "
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 149,
-        "char": "`"
-    },
-    {
         "group": "markdownCode",
         "linkedGroup": "markdownCode",
         "row": 149,
-        "char": "--auto-discovery"
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 149,
-        "char": "`"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 149,
-        "char": " flag to sync sub-command\n"
+        "char": "      echo &quot;2nd line&quot;\n"
     },
     {
         "group": "LineNr",
@@ -2550,40 +2484,10 @@ module.exports = [
         "char": "150"
     },
     {
-        "group": "markdownListMarker",
-        "linkedGroup": "Statement",
-        "row": 150,
-        "char": "-"
-    },
-    {
         "group": "Normal",
         "linkedGroup": "",
         "row": 150,
-        "char": " [ ] Add property for global variables, as well as global variables that are sourced commands (like "
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 150,
-        "char": "`"
-    },
-    {
-        "group": "markdownCode",
-        "linkedGroup": "markdownCode",
-        "row": 150,
-        "char": "date"
-    },
-    {
-        "group": "markdownCodeDelimiter",
-        "linkedGroup": "Special",
-        "row": 150,
-        "char": "`"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 150,
-        "char": " command to return current date)\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -2591,16 +2495,10 @@ module.exports = [
         "char": "151"
     },
     {
-        "group": "markdownListMarker",
-        "linkedGroup": "Statement",
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
         "row": 151,
-        "char": "-"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 151,
-        "char": " [ ] Remove duplicate flag auto-completion (both and without &#61; showing)\n"
+        "char": "  - name: checkout\n"
     },
     {
         "group": "LineNr",
@@ -2608,15 +2506,281 @@ module.exports = [
         "char": "152"
     },
     {
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
+        "row": 152,
+        "char": "    args:\n"
+    },
+    {
+        "group": "LineNr",
+        "row": 153,
+        "char": "153"
+    },
+    {
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
+        "row": 153,
+        "char": "      branch: master # default value\n"
+    },
+    {
+        "group": "LineNr",
+        "row": 154,
+        "char": "154"
+    },
+    {
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
+        "row": 154,
+        "char": "    command: git checkout $branch\n"
+    },
+    {
+        "group": "LineNr",
+        "row": 155,
+        "char": "155"
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 155,
+        "char": "```\n"
+    },
+    {
+        "group": "LineNr",
+        "row": 156,
+        "char": "156"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 156,
+        "char": "\n"
+    },
+    {
+        "group": "LineNr",
+        "row": 157,
+        "char": "157"
+    },
+    {
+        "group": "markdownHeadingDelimiter",
+        "linkedGroup": "Special",
+        "row": 157,
+        "char": "##"
+    },
+    {
+        "group": "markdownH2",
+        "linkedGroup": "Title",
+        "row": 157,
+        "char": " Roadmap\n"
+    },
+    {
+        "group": "LineNr",
+        "row": 158,
+        "char": "158"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 158,
+        "char": "\n"
+    },
+    {
+        "group": "LineNr",
+        "row": 159,
+        "char": "159"
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 159,
+        "char": "`"
+    },
+    {
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
+        "row": 159,
+        "char": "mani"
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 159,
+        "char": "`"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 159,
+        "char": " is under active development and some of the things I aim to add/fix is:\n"
+    },
+    {
+        "group": "LineNr",
+        "row": 160,
+        "char": "160"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 160,
+        "char": "\n"
+    },
+    {
+        "group": "LineNr",
+        "row": 161,
+        "char": "161"
+    },
+    {
         "group": "markdownListMarker",
         "linkedGroup": "Statement",
-        "row": 152,
+        "row": 161,
         "char": "-"
     },
     {
         "group": "Normal",
         "linkedGroup": "",
-        "row": 152,
+        "row": 161,
+        "char": " [ ] Add CRUD methods for project to config via cli (user-input)\n"
+    },
+    {
+        "group": "LineNr",
+        "row": 162,
+        "char": "162"
+    },
+    {
+        "group": "markdownListMarker",
+        "linkedGroup": "Statement",
+        "row": 162,
+        "char": "-"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 162,
+        "char": " [ ] Add CRUD methods for command to config via cli (user-input)\n"
+    },
+    {
+        "group": "LineNr",
+        "row": 163,
+        "char": "163"
+    },
+    {
+        "group": "markdownListMarker",
+        "linkedGroup": "Statement",
+        "row": 163,
+        "char": "-"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 163,
+        "char": " [ ] Add completion for zsh\n"
+    },
+    {
+        "group": "LineNr",
+        "row": 164,
+        "char": "164"
+    },
+    {
+        "group": "markdownListMarker",
+        "linkedGroup": "Statement",
+        "row": 164,
+        "char": "-"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 164,
+        "char": " [ ] Add package to brew/snap/Ubuntu/Debian\n"
+    },
+    {
+        "group": "LineNr",
+        "row": 165,
+        "char": "165"
+    },
+    {
+        "group": "markdownListMarker",
+        "linkedGroup": "Statement",
+        "row": 165,
+        "char": "-"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 165,
+        "char": " [ ] Add Windows support\n"
+    },
+    {
+        "group": "LineNr",
+        "row": 166,
+        "char": "166"
+    },
+    {
+        "group": "markdownListMarker",
+        "linkedGroup": "Statement",
+        "row": 166,
+        "char": "-"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 166,
+        "char": " [ ] Add "
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 166,
+        "char": "`"
+    },
+    {
+        "group": "markdownCode",
+        "linkedGroup": "markdownCode",
+        "row": 166,
+        "char": "--auto-discovery"
+    },
+    {
+        "group": "markdownCodeDelimiter",
+        "linkedGroup": "Special",
+        "row": 166,
+        "char": "`"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 166,
+        "char": " flag to sync sub-command\n"
+    },
+    {
+        "group": "LineNr",
+        "row": 167,
+        "char": "167"
+    },
+    {
+        "group": "markdownListMarker",
+        "linkedGroup": "Statement",
+        "row": 167,
+        "char": "-"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 167,
+        "char": " [ ] Remove duplicate flag auto-completion (both and without &#61; showing)\n"
+    },
+    {
+        "group": "LineNr",
+        "row": 168,
+        "char": "168"
+    },
+    {
+        "group": "markdownListMarker",
+        "linkedGroup": "Statement",
+        "row": 168,
+        "char": "-"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 168,
         "char": " [ ] Add tests"
     }
 ]

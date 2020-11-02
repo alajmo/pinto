@@ -18,10 +18,10 @@ export function intersect(arrays) {
   }, arrays[0]);
 }
 
-export function getDefaultKeywords(refs) {
+export function getDefaultKeywords(groupKeywords) {
   const defaultKeywords = Array.from(
     new Set(
-      Object.entries(refs).reduce((prev, curr) => {
+      Object.entries(groupKeywords).reduce((prev, curr) => {
         return prev.concat(
           curr[1].filter(keyword => startsWithCapitalLetter(keyword)),
         );
@@ -32,12 +32,12 @@ export function getDefaultKeywords(refs) {
   return defaultKeywords;
 }
 
-export function getLanguageKeywords(languages, refs) {
+export function getLanguageKeywords(languages, groupKeywords) {
   return Object.entries(languages)
     .filter(l => l[1])
     .map(l => ({
       language: l[0],
-      keywords: refs[l[0]].filter(k => !startsWithCapitalLetter(k)),
+      keywords: groupKeywords[l[0]].filter(k => !startsWithCapitalLetter(k)),
     }));
 }
 
@@ -91,43 +91,62 @@ export function exportCode({
   name,
   editorTheme,
   keywords,
-  languages,
-  refs,
-  exportOptions,
+  groups,
+  groupKeywords,
 }) {
   return {
     name,
     editorTheme: editorTheme,
-    languages: Object.entries(languages)
+    groups: Object.entries(groups)
       .filter(language => language[1])
       .map(language => language[0]),
-    refs: refs,
+    groupKeywords: groupKeywords,
     keywordGroups: [
-      {
-        title: 'Default Keywords',
-        keywords: refs.misc.filter(k => keywords[k].enabled),
-        display: true,
-      },
-      {
-        title: 'Major Keywords',
-        keywords: refs.major.filter(k => keywords[k].enabled),
-        display: true,
-      },
-      {
-        title: 'Minor Keywords',
-        keywords: refs.minor.filter(k => keywords[k].enabled),
-        display: true,
-      },
-
-      ...Object.entries(languages).map(l => ({
+      ...Object.entries(groups).map(l => ({
         title: l[0],
-        keywords: refs[l[0]].filter(k => keywords[k].active),
+        keywords: groupKeywords[l[0]].filter(k => keywords[k].active),
         display: l[1],
       })),
     ],
     keywords,
-    exportOptions,
   };
+}
+
+export function validateCreateGroup({
+  keywords,
+  oldGroupName,
+  oldGroupKeywords,
+  groupName,
+  groupKeywords,
+}) {
+  if (groupName.length < 1) {
+    return 'Enter a group name.';
+  }
+
+  const updatedKeywords = groupKeywords.map(k => k.keyword);
+  if (
+    oldGroupKeywords[oldGroupName] && oldGroupKeywords[oldGroupName].includes('Normal') &&
+    !updatedKeywords.includes('Normal')
+  ) {
+    return 'Cannot modify or delete Normal keyword';
+  }
+
+  for (const keyword of groupKeywords) {
+    if (keyword.keyword.length < 1 && keyword.keyword !== 'Normal') {
+      return 'Non-empty keywords not allowed.';
+    }
+
+    if (
+      ![...keywords, ...groupKeywords.map(k => k.keyword)].includes(
+        keyword.linkedKeyword,
+      ) &&
+      keyword.keyword !== 'Normal'
+    ) {
+      return `Linked keyword '${keyword.linkedKeyword}' does not exist.`;
+    }
+  }
+
+  return null;
 }
 
 export const compose = f => g => x => f(g(x));

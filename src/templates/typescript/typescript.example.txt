@@ -211,7 +211,8 @@ export function newWindow(
       if (escaped) {
         const escapedData = session.shell.endsWith('cmd.exe')
           ? `"${data}"` // This is how cmd.exe does it
-          : `'${data.replace(/'/g, `'\\''`)}'`; // Inside a single-quoted string nothing is interpreted
+          : `'${data.replace(/'/g, `'\\''`)}'`; 
+          // Inside a single-quoted string nothing is interpreted
 
         session.write(escapedData);
       } else {

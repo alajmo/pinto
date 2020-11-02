@@ -49,15 +49,19 @@
       &:active {
         color: var(--focus-color);
       }
+
+      &:disabled {
+        color: var(--disabled-color);
+      }
     }
 
-    & .option:not(:last-child) {
+    & .text:not(:last-child) {
       margin-right: calc(var(--margin) * 5);
     }
   }
 }
 
-@media only screen and (max-width: 1366px) {
+@media only screen and (max-width: 1666px) {
   .right-items {
     position: fixed;
     right: 0;

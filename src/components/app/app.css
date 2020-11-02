@@ -103,7 +103,22 @@
   margin-right: calc(var(--margin) * 5);
 }
 
-@media only screen and (max-width: 1366px) {
+.saved-file {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #babdbc;
+  margin-right: calc(var(--margin) * 5);
+  font-style: italic;
+  font-weight: bold;
+  font-size: 0.85rem;
+
+  & *:not(:last-child) {
+    margin-right: calc(var(--margin) * 5);
+  }
+}
+
+@media only screen and (max-width: 1666px) {
   .app {
     & .app-content {
       display: flex;

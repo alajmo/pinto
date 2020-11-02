@@ -13,12 +13,8 @@ import { ToggleDisplay } from 'components/keyword-list/keyword-list.js';
 export { EditorSettingsView, EditorSettingsTemplate };
 
 function EditorSettingsTemplate({ state, Store }) {
-  const languages = [...Object.entries(state.theme.groups)].concat(
-    Object.entries(state.theme.languages),
-  );
-
-  const hasUncheckedLanguages =
-    languages.filter(l => l[1] === false).length > 0;
+  const groups = Object.entries(state.theme.groups);
+  const hasUncheckedGroups = groups.filter(l => l[1] === false).length > 0;
 
   return {
     state,
@@ -102,106 +98,120 @@ function EditorSettingsTemplate({ state, Store }) {
         }),
       }),
 
-      exportSettings: () => ({
-        title: 'Environment Support',
-        show: true,
-        toolbar: true,
-
-        termCheckbox: () => ({
-          label: 'Terminal',
-          name: 'term',
-          value: state.theme.exportOptions.term,
-          onclick: e => {
-            Store.dispatch('theme', 'toggleExportOption', 'term');
-            mitt.emit('RENDER');
-          },
-        }),
-
-        guiCheckbox: () => ({
-          label: 'GUI',
-          name: 'gui',
-          value: state.theme.exportOptions.gui,
-          onclick: e => {
-            Store.dispatch('theme', 'toggleExportOption', 'gui');
-            mitt.emit('RENDER');
-          },
-        }),
-      }),
-
-      languageSettings: () => ({
+      groupSettings: () => ({
         title: 'Keyword Groups',
         show: true,
         toolbar: true,
 
-        hasUncheckedLanguages,
+        hasUncheckedGroups,
 
-        toggleSelectAllLanguages() {
+        toggleSelectAllGroups() {
           Store.dispatch(
             'theme',
-            'toggleLanguage',
-            languages.map(language => ({
-              groupType: ['misc', 'major', 'minor'].includes(language[0])
-                ? 'groups'
-                : 'languages',
-
-              language: language[0],
-              enabled: hasUncheckedLanguages,
+            'toggleGroup',
+            groups.map(group => ({
+              group: group[0],
+              enabled: hasUncheckedGroups,
             })),
           );
 
           Store.dispatch('theme', 'toggleActivateKeywords', {
             keywords: Object.keys(state.theme.keywords),
-            value: hasUncheckedLanguages,
+            value: hasUncheckedGroups,
+          });
+
+          Store.dispatch('theme', 'toggleEnableKeywords', {
+            keywords: Object.keys(state.theme.keywords),
+            value: hasUncheckedGroups,
           });
 
           mitt.emit('RENDER');
         },
 
-        languages: languages.map(language => ({
-          label: language[0],
-          name: language[0],
-          value: language[1],
-          minimized: state.app.editorSettings.minimizedLanguages[language[0]],
+        addGroup: {
+          text: 'Add',
+
+          onclick(e) {
+            Store.dispatch('app', 'openModal', 'manage-group');
+            mitt.emit('RENDER');
+          },
+        },
+
+        editGroup(group) {
+          Store.dispatch('app', 'setManageGroupData', group);
+          Store.dispatch('app', 'openModal', 'manage-group');
+          mitt.emit('RENDER');
+        },
+
+        deleteGroup(group) {
+          if (confirm(`Are you sure you want to delete ${group.name}?`)) {
+            const containsNormalKeyword = state.theme.groupKeywords[
+              group.name
+            ].includes('Normal');
+
+            if (containsNormalKeyword) {
+              alert(
+                'This group contains the "Normal" keyword and cannot be deleted.',
+              );
+              return;
+            }
+
+            Store.dispatch('theme', 'deleteGroup', group.name);
+            mitt.emit('MODIFY_GROUP');
+            mitt.emit('RENDER');
+          }
+        },
+
+        groups: groups.map(group => ({
+          label: group[0],
+          name: group[0],
+          value: group[1],
+          title: `${group[1] ? 'Deactivate' : 'Activate'} ${group[0]}`,
+          minimized: state.app.editorSettings.minimizedGroups[group[0]],
 
           toggleMinimize: () => {
-            Store.dispatch('app', 'toggleMinimizeLanguage', [language[0]]);
+            Store.dispatch('app', 'toggleMinimizeGroup', [group[0]]);
             mitt.emit('RENDER');
           },
 
-          keywords: state.theme.refs[language[0]].map(
+          keywords: state.theme.groupKeywords[group[0]].map(
             k => state.theme.keywords[k],
           ),
 
           onclick: e => {
-            const groupType = ['misc', 'major', 'minor'].includes(language[0])
-              ? 'groups'
-              : 'languages';
+            const checked = e.target.checked;
 
-            Store.dispatch('theme', 'toggleLanguage', [
-              { groupType, language: e.target.name, enabled: e.target.checked },
+            Store.dispatch('theme', 'toggleGroup', [
+              { group: e.target.name, enabled: checked },
             ]);
             Store.dispatch('theme', 'toggleActivateKeywords', {
-              keywords: state.theme.refs[language[0]],
-              value: e.target.checked,
+              keywords: state.theme.groupKeywords[group[0]],
+              value: checked,
+            });
+
+            Store.dispatch('theme', 'toggleEnableKeywords', {
+              keywords: state.theme.groupKeywords[group[0]],
+              value: checked,
             });
 
             mitt.emit('RENDER');
           },
 
           toggleKeywordActiveStatus: keyword => {
+            Store.dispatch('theme', 'toggleEnableKeywords', {
+              keywords: [keyword.name],
+            });
+
             Store.dispatch('theme', 'toggleActivateKeywords', {
               keywords: [keyword.name],
             });
 
-            const someKeywordActive = state.theme.refs[language[0]].some(
+            const someKeywordActive = state.theme.groupKeywords[group[0]].some(
               k => state.theme.keywords[k].active,
             );
 
-            const groupType = ['misc', 'major', 'minor'].includes(language[0])
-              ? 'groups'
-              : 'languages';
-            Store.dispatch('theme', 'toggleLanguage', [
-              { groupType, language: language[0], enabled: someKeywordActive },
+            Store.dispatch('theme', 'toggleGroup', [
+              { group: group[0], enabled: someKeywordActive },
             ]);
 
             mitt.emit('RENDER');
@@ -218,6 +228,11 @@ function EditorSettingsTemplate({ state, Store }) {
         xtermColors: () => ({
           label: 'xterm 256 color palette',
           name: 'xtermColors',
+          title: `${
+            state.palette.palettes.some(p => p.type === 'xterm')
+              ? 'Hide'
+              : 'Show'
+          } xterm palette`,
           value: state.palette.palettes.some(p => p.type === 'xterm'),
           onclick: e => {
             Store.dispatch('palette', 'toggleXtermColors', {
@@ -265,46 +280,62 @@ function EditorSettingsView({ state, Store, props }) {
         }))(props.palette)({ state, Store })}
         ${compose2(Card)(props => ({
           ...props,
-          mainContent: () => html`
-            <p class="label-text">
-              Select one or more:
-            </p>
 
-            ${Checkbox(props.termCheckbox())} ${Checkbox(props.guiCheckbox())}
+          topLeftContet: () => html`
+            <i
+              title="Add keyword group"
+              onclick="${props.addGroup.onclick}"
+              class="fas fa-plus actionable"
+            ></i>
           `,
-        }))(props.exportSettings)({ state, Store })}
-        ${compose2(Card)(props => ({
-          ...props,
+
           mainContent: () => html`
             <p class="label-text">
-              Choose which languages/keywords you want to modify:
+              Choose which keywords you want to use:
             </p>
 
-            <button class="text" onclick="${props.toggleSelectAllLanguages}">
-              ${props.hasUncheckedLanguages ? 'Enable all' : 'Disable all'}
+            <button class="text" onclick="${props.toggleSelectAllGroups}">
+              ${props.hasUncheckedGroups ? 'Enable all' : 'Disable all'}
             </button>
 
-            ${props.languages.map(
-              language => html`
+            ${props.groups.map(
+              group => html`
                 <div class="language-status">
                   <div class="language-status--title">
-                    ${language} ${Checkbox(language)}
-                    ${ToggleDisplay({
-                      minimized: language.minimized,
-                      toggle: language.toggleMinimize,
-                    })}
+                    ${Checkbox(group)}
+
+                    <div class="right-buttons">
+                      <i
+                        title="Edit keywords"
+                        onclick="${() => props.editGroup(group)}"
+                        class="fas fa-edit actionable"
+                      ></i>
+
+                      <i
+                        title="Delete group"
+                        onclick="${() => props.deleteGroup(group)}"
+                        class="fas fa-trash actionable"
+                      ></i>
+
+                      ${ToggleDisplay({
+                        minimized: group.minimized,
+                        toggle: group.toggleMinimize,
+                      })}
+                    </div>
                   </div>
 
-                  ${!language.minimized
-                    ? language.keywords.map(
+                  ${!group.minimized
+                    ? group.keywords.map(
                         k => html`
                           <div class="language-status--keyword">
                             ${Checkbox({
                               name: k.name,
+                              title: `${k.active ? 'Deactivate' : 'Activate'} ${
+                                k.name
+                              }`,
                               label: k.name,
                               value: k.active,
-                              onclick: () =>
-                                language.toggleKeywordActiveStatus(k),
+                              onclick: () => group.toggleKeywordActiveStatus(k),
                             })}
                           </div>
                         `,
@@ -314,7 +345,7 @@ function EditorSettingsView({ state, Store, props }) {
               `,
             )}
           `,
-        }))(props.languageSettings)({ state, Store })}
+        }))(props.groupSettings)({ state, Store })}
       </div>
     </div>
   `;

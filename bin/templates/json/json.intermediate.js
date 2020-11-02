@@ -31,7 +31,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 2,
-        "char": "web-app"
+        "char": "default"
     },
     {
         "group": "jsonQuote",
@@ -52,10 +52,16 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "jsonBraces",
-        "linkedGroup": "Special",
+        "group": "jsonNull",
+        "linkedGroup": "Identifier",
         "row": 2,
-        "char": "{\n"
+        "char": "null"
+    },
+    {
+        "group": "jsonNoise",
+        "linkedGroup": "Noise",
+        "row": 2,
+        "char": ",\n"
     },
     {
         "group": "LineNr",
@@ -66,43 +72,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 3,
-        "char": "    "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 3,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 3,
-        "char": "servlet"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 3,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 3,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 3,
-        "char": " "
-    },
-    {
-        "group": "jsonBraces",
-        "linkedGroup": "Special",
-        "row": 3,
-        "char": "[\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -113,7 +83,37 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 4,
-        "char": "      "
+        "char": "  "
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 4,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonKeyword",
+        "linkedGroup": "Statement",
+        "row": 4,
+        "char": "web-app"
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 4,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonKeywordMatch",
+        "linkedGroup": "jsonKeywordMatch",
+        "row": 4,
+        "char": ":"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 4,
+        "char": " "
     },
     {
         "group": "jsonBraces",
@@ -130,7 +130,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 5,
-        "char": "        "
+        "char": "    "
     },
     {
         "group": "jsonQuote",
@@ -142,7 +142,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 5,
-        "char": "servlet-name"
+        "char": "servlet"
     },
     {
         "group": "jsonQuote",
@@ -163,28 +163,10 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
+        "group": "jsonBraces",
+        "linkedGroup": "Special",
         "row": 5,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 5,
-        "char": "cofaxCDS"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 5,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 5,
-        "char": ",\n"
+        "char": "[\n"
     },
     {
         "group": "LineNr",
@@ -195,61 +177,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 6,
-        "char": "        "
+        "char": "      "
     },
     {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
+        "group": "jsonBraces",
+        "linkedGroup": "Special",
         "row": 6,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 6,
-        "char": "servlet-class"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 6,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 6,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 6,
-        "char": " "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 6,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 6,
-        "char": "org.cofax.cds.CDSServlet"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 6,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 6,
-        "char": ",\n"
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -272,7 +206,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 7,
-        "char": "init-param"
+        "char": "servlet-name"
     },
     {
         "group": "jsonQuote",
@@ -293,10 +227,28 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "jsonBraces",
-        "linkedGroup": "Special",
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
         "row": 7,
-        "char": "{\n"
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonString",
+        "linkedGroup": "Constant",
+        "row": 7,
+        "char": "cofaxCDS"
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 7,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonNoise",
+        "linkedGroup": "Noise",
+        "row": 7,
+        "char": ",\n"
     },
     {
         "group": "LineNr",
@@ -307,7 +259,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 8,
-        "char": "          "
+        "char": "        "
     },
     {
         "group": "jsonQuote",
@@ -319,7 +271,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 8,
-        "char": "configGlossary:installationAt"
+        "char": "servlet-class"
     },
     {
         "group": "jsonQuote",
@@ -349,7 +301,7 @@ module.exports = [
         "group": "jsonString",
         "linkedGroup": "Constant",
         "row": 8,
-        "char": "Philadelphia, PA"
+        "char": "org.cofax.cds.CDSServlet"
     },
     {
         "group": "jsonQuote",
@@ -372,7 +324,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 9,
-        "char": "          "
+        "char": "        "
     },
     {
         "group": "jsonQuote",
@@ -384,7 +336,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 9,
-        "char": "configGlossary:adminEmail"
+        "char": "init-param"
     },
     {
         "group": "jsonQuote",
@@ -405,28 +357,10 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
+        "group": "jsonBraces",
+        "linkedGroup": "Special",
         "row": 9,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 9,
-        "char": "ksm@pobox.com"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 9,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 9,
-        "char": ",\n"
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -449,7 +383,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 10,
-        "char": "configGlossary:poweredBy"
+        "char": "configGlossary:installationAt"
     },
     {
         "group": "jsonQuote",
@@ -479,7 +413,7 @@ module.exports = [
         "group": "jsonString",
         "linkedGroup": "Constant",
         "row": 10,
-        "char": "Cofax"
+        "char": "Philadelphia, PA"
     },
     {
         "group": "jsonQuote",
@@ -514,7 +448,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 11,
-        "char": "configGlossary:poweredByIcon"
+        "char": "templateLoaderClass"
     },
     {
         "group": "jsonQuote",
@@ -544,7 +478,7 @@ module.exports = [
         "group": "jsonString",
         "linkedGroup": "Constant",
         "row": 11,
-        "char": "/images/cofax.gif"
+        "char": "org.cofax.FilesTemplateLoader"
     },
     {
         "group": "jsonQuote",
@@ -579,7 +513,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 12,
-        "char": "configGlossary:staticPath"
+        "char": "templatePath"
     },
     {
         "group": "jsonQuote",
@@ -609,7 +543,7 @@ module.exports = [
         "group": "jsonString",
         "linkedGroup": "Constant",
         "row": 12,
-        "char": "/content/static"
+        "char": "templates"
     },
     {
         "group": "jsonQuote",
@@ -644,7 +578,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 13,
-        "char": "templateProcessorClass"
+        "char": "templateOverridePath"
     },
     {
         "group": "jsonQuote",
@@ -662,25 +596,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 13,
-        "char": " "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 13,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 13,
-        "char": "org.cofax.WysiwygTemplate"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 13,
-        "char": "&quot;"
+        "char": " &quot;&quot;"
     },
     {
         "group": "jsonNoise",
@@ -709,7 +625,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 14,
-        "char": "templateLoaderClass"
+        "char": "defaultListTemplate"
     },
     {
         "group": "jsonQuote",
@@ -739,7 +655,7 @@ module.exports = [
         "group": "jsonString",
         "linkedGroup": "Constant",
         "row": 14,
-        "char": "org.cofax.FilesTemplateLoader"
+        "char": "listTemplate.htm"
     },
     {
         "group": "jsonQuote",
@@ -774,7 +690,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 15,
-        "char": "templatePath"
+        "char": "defaultFileTemplate"
     },
     {
         "group": "jsonQuote",
@@ -804,7 +720,7 @@ module.exports = [
         "group": "jsonString",
         "linkedGroup": "Constant",
         "row": 15,
-        "char": "templates"
+        "char": "articleTemplate.htm"
     },
     {
         "group": "jsonQuote",
@@ -839,7 +755,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 16,
-        "char": "templateOverridePath"
+        "char": "useJSP"
     },
     {
         "group": "jsonQuote",
@@ -857,7 +773,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 16,
-        "char": " &quot;&quot;"
+        "char": " "
+    },
+    {
+        "group": "jsonBoolean",
+        "linkedGroup": "Constant",
+        "row": 16,
+        "char": "false"
     },
     {
         "group": "jsonNoise",
@@ -886,7 +808,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 17,
-        "char": "defaultListTemplate"
+        "char": "dataStoreUrl"
     },
     {
         "group": "jsonQuote",
@@ -916,7 +838,7 @@ module.exports = [
         "group": "jsonString",
         "linkedGroup": "Constant",
         "row": 17,
-        "char": "listTemplate.htm"
+        "char": "jdbc:microsoft:sqlserver://LOCALHOST:1433;DatabaseName&#61;goon"
     },
     {
         "group": "jsonQuote",
@@ -951,7 +873,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 18,
-        "char": "defaultFileTemplate"
+        "char": "dataStoreUser"
     },
     {
         "group": "jsonQuote",
@@ -981,7 +903,7 @@ module.exports = [
         "group": "jsonString",
         "linkedGroup": "Constant",
         "row": 18,
-        "char": "articleTemplate.htm"
+        "char": "sa"
     },
     {
         "group": "jsonQuote",
@@ -1016,7 +938,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 19,
-        "char": "useJSP"
+        "char": "dataStoreInitConns"
     },
     {
         "group": "jsonQuote",
@@ -1037,10 +959,10 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "jsonBoolean",
+        "group": "jsonNumber",
         "linkedGroup": "Constant",
         "row": 19,
-        "char": "false"
+        "char": "10"
     },
     {
         "group": "jsonNoise",
@@ -1069,7 +991,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 20,
-        "char": "jspListTemplate"
+        "char": "dataStoreMaxConns"
     },
     {
         "group": "jsonQuote",
@@ -1090,22 +1012,10 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 20,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
+        "group": "jsonNumber",
         "linkedGroup": "Constant",
         "row": 20,
-        "char": "listTemplate.jsp"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 20,
-        "char": "&quot;"
+        "char": "100"
     },
     {
         "group": "jsonNoise",
@@ -1134,7 +1044,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 21,
-        "char": "jspFileTemplate"
+        "char": "dataStoreConnUsageLimit"
     },
     {
         "group": "jsonQuote",
@@ -1155,22 +1065,10 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 21,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
+        "group": "jsonNumber",
         "linkedGroup": "Constant",
         "row": 21,
-        "char": "articleTemplate.jsp"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 21,
-        "char": "&quot;"
+        "char": "100"
     },
     {
         "group": "jsonNoise",
@@ -1199,7 +1097,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 22,
-        "char": "cachePackageTagsTrack"
+        "char": "dataStoreLogLevel"
     },
     {
         "group": "jsonQuote",
@@ -1220,10 +1118,22 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "jsonNumber",
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 22,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonString",
         "linkedGroup": "Constant",
         "row": 22,
-        "char": "200"
+        "char": "debug"
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 22,
+        "char": "&quot;"
     },
     {
         "group": "jsonNoise",
@@ -1252,7 +1162,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 23,
-        "char": "cachePackageTagsStore"
+        "char": "maxUrlLength"
     },
     {
         "group": "jsonQuote",
@@ -1276,13 +1186,7 @@ module.exports = [
         "group": "jsonNumber",
         "linkedGroup": "Constant",
         "row": 23,
-        "char": "200"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 23,
-        "char": ",\n"
+        "char": "500\n"
     },
     {
         "group": "LineNr",
@@ -1293,49 +1197,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 24,
-        "char": "          "
+        "char": "        "
     },
     {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
+        "group": "jsonBraces",
+        "linkedGroup": "Special",
         "row": 24,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 24,
-        "char": "cachePackageTagsRefresh"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 24,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 24,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 24,
-        "char": " "
-    },
-    {
-        "group": "jsonNumber",
-        "linkedGroup": "Constant",
-        "row": 24,
-        "char": "60"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 24,
-        "char": ",\n"
+        "char": "}\n"
     },
     {
         "group": "LineNr",
@@ -1346,43 +1214,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 25,
-        "char": "          "
+        "char": "      "
     },
     {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
+        "group": "jsonBraces",
+        "linkedGroup": "Special",
         "row": 25,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 25,
-        "char": "cacheTemplatesTrack"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 25,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 25,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 25,
-        "char": " "
-    },
-    {
-        "group": "jsonNumber",
-        "linkedGroup": "Constant",
-        "row": 25,
-        "char": "100"
+        "char": "}"
     },
     {
         "group": "jsonNoise",
@@ -1399,49 +1237,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 26,
-        "char": "          "
+        "char": "      "
     },
     {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
+        "group": "jsonBraces",
+        "linkedGroup": "Special",
         "row": 26,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 26,
-        "char": "cacheTemplatesStore"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 26,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 26,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 26,
-        "char": " "
-    },
-    {
-        "group": "jsonNumber",
-        "linkedGroup": "Constant",
-        "row": 26,
-        "char": "50"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 26,
-        "char": ",\n"
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -1452,7 +1254,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 27,
-        "char": "          "
+        "char": "        "
     },
     {
         "group": "jsonQuote",
@@ -1464,7 +1266,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 27,
-        "char": "cacheTemplatesRefresh"
+        "char": "servlet-name"
     },
     {
         "group": "jsonQuote",
@@ -1485,10 +1287,22 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "jsonNumber",
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 27,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonString",
         "linkedGroup": "Constant",
         "row": 27,
-        "char": "15"
+        "char": "cofaxEmail"
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 27,
+        "char": "&quot;"
     },
     {
         "group": "jsonNoise",
@@ -1505,7 +1319,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 28,
-        "char": "          "
+        "char": "        "
     },
     {
         "group": "jsonQuote",
@@ -1517,7 +1331,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 28,
-        "char": "cachePagesTrack"
+        "char": "servlet-class"
     },
     {
         "group": "jsonQuote",
@@ -1538,10 +1352,22 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "jsonNumber",
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 28,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonString",
         "linkedGroup": "Constant",
         "row": 28,
-        "char": "200"
+        "char": "org.cofax.cds.EmailServlet"
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 28,
+        "char": "&quot;"
     },
     {
         "group": "jsonNoise",
@@ -1558,7 +1384,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 29,
-        "char": "          "
+        "char": "        "
     },
     {
         "group": "jsonQuote",
@@ -1570,7 +1396,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 29,
-        "char": "cachePagesStore"
+        "char": "init-param"
     },
     {
         "group": "jsonQuote",
@@ -1591,16 +1417,10 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "jsonNumber",
-        "linkedGroup": "Constant",
+        "group": "jsonBraces",
+        "linkedGroup": "Special",
         "row": 29,
-        "char": "100"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 29,
-        "char": ",\n"
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -1623,7 +1443,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 30,
-        "char": "cachePagesRefresh"
+        "char": "mailHost"
     },
     {
         "group": "jsonQuote",
@@ -1644,10 +1464,22 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "jsonNumber",
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 30,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonString",
         "linkedGroup": "Constant",
         "row": 30,
-        "char": "10"
+        "char": "mail1"
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 30,
+        "char": "&quot;"
     },
     {
         "group": "jsonNoise",
@@ -1676,7 +1508,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 31,
-        "char": "cachePagesDirtyRead"
+        "char": "mailHostOverride"
     },
     {
         "group": "jsonQuote",
@@ -1697,16 +1529,22 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "jsonNumber",
-        "linkedGroup": "Constant",
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
         "row": 31,
-        "char": "10"
+        "char": "&quot;"
     },
     {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
+        "group": "jsonString",
+        "linkedGroup": "Constant",
         "row": 31,
-        "char": ",\n"
+        "char": "mail2"
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 31,
+        "char": "&quot;\n"
     },
     {
         "group": "LineNr",
@@ -1717,61 +1555,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 32,
-        "char": "          "
+        "char": "        "
     },
     {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
+        "group": "jsonBraces",
+        "linkedGroup": "Special",
         "row": 32,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 32,
-        "char": "searchEngineListTemplate"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 32,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 32,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 32,
-        "char": " "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 32,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 32,
-        "char": "forSearchEnginesList.htm"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 32,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 32,
-        "char": ",\n"
+        "char": "}\n"
     },
     {
         "group": "LineNr",
@@ -1782,55 +1572,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 33,
-        "char": "          "
+        "char": "      "
     },
     {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
+        "group": "jsonBraces",
+        "linkedGroup": "Special",
         "row": 33,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 33,
-        "char": "searchEngineFileTemplate"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 33,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 33,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 33,
-        "char": " "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 33,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 33,
-        "char": "forSearchEngines.htm"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 33,
-        "char": "&quot;"
+        "char": "}"
     },
     {
         "group": "jsonNoise",
@@ -1847,61 +1595,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 34,
-        "char": "          "
+        "char": "      "
     },
     {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
+        "group": "jsonBraces",
+        "linkedGroup": "Special",
         "row": 34,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 34,
-        "char": "searchEngineRobotsDb"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 34,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 34,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 34,
-        "char": " "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 34,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 34,
-        "char": "WEB-INF/robots.db"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 34,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 34,
-        "char": ",\n"
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -1912,7 +1612,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 35,
-        "char": "          "
+        "char": "        "
     },
     {
         "group": "jsonQuote",
@@ -1924,7 +1624,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 35,
-        "char": "useDataStore"
+        "char": "servlet-name"
     },
     {
         "group": "jsonQuote",
@@ -1945,10 +1645,22 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "jsonBoolean",
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 35,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonString",
         "linkedGroup": "Constant",
         "row": 35,
-        "char": "true"
+        "char": "cofaxAdmin"
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 35,
+        "char": "&quot;"
     },
     {
         "group": "jsonNoise",
@@ -1965,7 +1677,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 36,
-        "char": "          "
+        "char": "        "
     },
     {
         "group": "jsonQuote",
@@ -1977,7 +1689,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 36,
-        "char": "dataStoreClass"
+        "char": "servlet-class"
     },
     {
         "group": "jsonQuote",
@@ -2007,19 +1719,13 @@ module.exports = [
         "group": "jsonString",
         "linkedGroup": "Constant",
         "row": 36,
-        "char": "org.cofax.SqlDataStore"
+        "char": "org.cofax.cds.AdminServlet"
     },
     {
         "group": "jsonQuote",
         "linkedGroup": "Quote",
         "row": 36,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 36,
-        "char": ",\n"
+        "char": "&quot;\n"
     },
     {
         "group": "LineNr",
@@ -2030,55 +1736,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 37,
-        "char": "          "
+        "char": "      "
     },
     {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
+        "group": "jsonBraces",
+        "linkedGroup": "Special",
         "row": 37,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 37,
-        "char": "redirectionClass"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 37,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 37,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 37,
-        "char": " "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 37,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 37,
-        "char": "org.cofax.SqlRedirection"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 37,
-        "char": "&quot;"
+        "char": "}"
     },
     {
         "group": "jsonNoise",
@@ -2095,61 +1759,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 38,
-        "char": "          "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 38,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 38,
-        "char": "dataStoreName"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 38,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 38,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 38,
-        "char": " "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 38,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 38,
-        "char": "cofax"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 38,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 38,
-        "char": ",\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -2160,61 +1770,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 39,
-        "char": "          "
+        "char": "      "
     },
     {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
+        "group": "jsonBraces",
+        "linkedGroup": "Special",
         "row": 39,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 39,
-        "char": "dataStoreDriver"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 39,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 39,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 39,
-        "char": " "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 39,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 39,
-        "char": "com.microsoft.jdbc.sqlserver.SQLServerDriver"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 39,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 39,
-        "char": ",\n"
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -2225,7 +1787,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 40,
-        "char": "          "
+        "char": "        "
     },
     {
         "group": "jsonQuote",
@@ -2237,7 +1799,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 40,
-        "char": "dataStoreUrl"
+        "char": "servlet-name"
     },
     {
         "group": "jsonQuote",
@@ -2267,7 +1829,7 @@ module.exports = [
         "group": "jsonString",
         "linkedGroup": "Constant",
         "row": 40,
-        "char": "jdbc:microsoft:sqlserver://LOCALHOST:1433;DatabaseName&#61;goon"
+        "char": "fileServlet"
     },
     {
         "group": "jsonQuote",
@@ -2290,7 +1852,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 41,
-        "char": "          "
+        "char": "        "
     },
     {
         "group": "jsonQuote",
@@ -2302,7 +1864,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 41,
-        "char": "dataStoreUser"
+        "char": "servlet-class"
     },
     {
         "group": "jsonQuote",
@@ -2332,19 +1894,13 @@ module.exports = [
         "group": "jsonString",
         "linkedGroup": "Constant",
         "row": 41,
-        "char": "sa"
+        "char": "org.cofax.cds.FileServlet"
     },
     {
         "group": "jsonQuote",
         "linkedGroup": "Quote",
         "row": 41,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 41,
-        "char": ",\n"
+        "char": "&quot;\n"
     },
     {
         "group": "LineNr",
@@ -2355,55 +1911,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 42,
-        "char": "          "
+        "char": "      "
     },
     {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
+        "group": "jsonBraces",
+        "linkedGroup": "Special",
         "row": 42,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 42,
-        "char": "dataStorePassword"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 42,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 42,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 42,
-        "char": " "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 42,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 42,
-        "char": "dataStoreTestQuery"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 42,
-        "char": "&quot;"
+        "char": "}"
     },
     {
         "group": "jsonNoise",
@@ -2420,61 +1934,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 43,
-        "char": "          "
+        "char": "      "
     },
     {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
+        "group": "jsonBraces",
+        "linkedGroup": "Special",
         "row": 43,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 43,
-        "char": "dataStoreTestQuery"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 43,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 43,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 43,
-        "char": " "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 43,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 43,
-        "char": "SET NOCOUNT ON;select test&#61;&#39;test&#39;;"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 43,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 43,
-        "char": ",\n"
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -2485,7 +1951,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 44,
-        "char": "          "
+        "char": "        "
     },
     {
         "group": "jsonQuote",
@@ -2497,7 +1963,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 44,
-        "char": "dataStoreLogFile"
+        "char": "servlet-name"
     },
     {
         "group": "jsonQuote",
@@ -2527,7 +1993,7 @@ module.exports = [
         "group": "jsonString",
         "linkedGroup": "Constant",
         "row": 44,
-        "char": "/usr/local/tomcat/logs/datastore.log"
+        "char": "cofaxTools"
     },
     {
         "group": "jsonQuote",
@@ -2550,7 +2016,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 45,
-        "char": "          "
+        "char": "        "
     },
     {
         "group": "jsonQuote",
@@ -2562,7 +2028,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 45,
-        "char": "dataStoreInitConns"
+        "char": "servlet-class"
     },
     {
         "group": "jsonQuote",
@@ -2583,10 +2049,22 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "jsonNumber",
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 45,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonString",
         "linkedGroup": "Constant",
         "row": 45,
-        "char": "10"
+        "char": "org.cofax.cms.CofaxToolsServlet"
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 45,
+        "char": "&quot;"
     },
     {
         "group": "jsonNoise",
@@ -2603,7 +2081,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 46,
-        "char": "          "
+        "char": "        "
     },
     {
         "group": "jsonQuote",
@@ -2615,7 +2093,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 46,
-        "char": "dataStoreMaxConns"
+        "char": "init-param"
     },
     {
         "group": "jsonQuote",
@@ -2636,16 +2114,10 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "jsonNumber",
-        "linkedGroup": "Constant",
+        "group": "jsonBraces",
+        "linkedGroup": "Special",
         "row": 46,
-        "char": "100"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 46,
-        "char": ",\n"
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -2668,7 +2140,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 47,
-        "char": "dataStoreConnUsageLimit"
+        "char": "templatePath"
     },
     {
         "group": "jsonQuote",
@@ -2689,10 +2161,22 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "jsonNumber",
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 47,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonString",
         "linkedGroup": "Constant",
         "row": 47,
-        "char": "100"
+        "char": "toolstemplates/"
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 47,
+        "char": "&quot;"
     },
     {
         "group": "jsonNoise",
@@ -2721,7 +2205,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 48,
-        "char": "dataStoreLogLevel"
+        "char": "log"
     },
     {
         "group": "jsonQuote",
@@ -2742,22 +2226,10 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 48,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
+        "group": "jsonNumber",
         "linkedGroup": "Constant",
         "row": 48,
-        "char": "debug"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 48,
-        "char": "&quot;"
+        "char": "1"
     },
     {
         "group": "jsonNoise",
@@ -2786,7 +2258,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 49,
-        "char": "maxUrlLength"
+        "char": "logLocation"
     },
     {
         "group": "jsonQuote",
@@ -2807,10 +2279,28 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "jsonNumber",
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 49,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonString",
         "linkedGroup": "Constant",
         "row": 49,
-        "char": "500\n"
+        "char": "/usr/local/tomcat/logs/CofaxTools.log"
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 49,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonNoise",
+        "linkedGroup": "Noise",
+        "row": 49,
+        "char": ",\n"
     },
     {
         "group": "LineNr",
@@ -2821,13 +2311,43 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 50,
-        "char": "        "
+        "char": "          "
     },
     {
-        "group": "jsonBraces",
-        "linkedGroup": "Special",
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
         "row": 50,
-        "char": "}\n"
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonKeyword",
+        "linkedGroup": "Statement",
+        "row": 50,
+        "char": "logMaxSize"
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 50,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonKeywordMatch",
+        "linkedGroup": "jsonKeywordMatch",
+        "row": 50,
+        "char": ":"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 50,
+        "char": " &quot;&quot;"
+    },
+    {
+        "group": "jsonNoise",
+        "linkedGroup": "Noise",
+        "row": 50,
+        "char": ",\n"
     },
     {
         "group": "LineNr",
@@ -2838,13 +2358,43 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 51,
-        "char": "      "
+        "char": "          "
     },
     {
-        "group": "jsonBraces",
-        "linkedGroup": "Special",
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
         "row": 51,
-        "char": "}"
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonKeyword",
+        "linkedGroup": "Statement",
+        "row": 51,
+        "char": "dataLog"
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 51,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonKeywordMatch",
+        "linkedGroup": "jsonKeywordMatch",
+        "row": 51,
+        "char": ":"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 51,
+        "char": " "
+    },
+    {
+        "group": "jsonNumber",
+        "linkedGroup": "Constant",
+        "row": 51,
+        "char": "1"
     },
     {
         "group": "jsonNoise",
@@ -2861,13 +2411,61 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 52,
-        "char": "      "
+        "char": "          "
     },
     {
-        "group": "jsonBraces",
-        "linkedGroup": "Special",
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
         "row": 52,
-        "char": "{\n"
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonKeyword",
+        "linkedGroup": "Statement",
+        "row": 52,
+        "char": "dataLogLocation"
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 52,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonKeywordMatch",
+        "linkedGroup": "jsonKeywordMatch",
+        "row": 52,
+        "char": ":"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 52,
+        "char": " "
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 52,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonString",
+        "linkedGroup": "Constant",
+        "row": 52,
+        "char": "/usr/local/tomcat/logs/dataLog.log"
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 52,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonNoise",
+        "linkedGroup": "Noise",
+        "row": 52,
+        "char": ",\n"
     },
     {
         "group": "LineNr",
@@ -2878,7 +2476,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 53,
-        "char": "        "
+        "char": "          "
     },
     {
         "group": "jsonQuote",
@@ -2890,7 +2488,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 53,
-        "char": "servlet-name"
+        "char": "dataLogMaxSize"
     },
     {
         "group": "jsonQuote",
@@ -2908,25 +2506,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 53,
-        "char": " "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 53,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 53,
-        "char": "cofaxEmail"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 53,
-        "char": "&quot;"
+        "char": " &quot;&quot;"
     },
     {
         "group": "jsonNoise",
@@ -2943,7 +2523,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 54,
-        "char": "        "
+        "char": "          "
     },
     {
         "group": "jsonQuote",
@@ -2955,7 +2535,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 54,
-        "char": "servlet-class"
+        "char": "fileTransferFolder"
     },
     {
         "group": "jsonQuote",
@@ -2985,7 +2565,7 @@ module.exports = [
         "group": "jsonString",
         "linkedGroup": "Constant",
         "row": 54,
-        "char": "org.cofax.cds.EmailServlet"
+        "char": "/usr/local/tomcat/webapps/content/fileTransferFolder"
     },
     {
         "group": "jsonQuote",
@@ -3008,7 +2588,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 55,
-        "char": "        "
+        "char": "          "
     },
     {
         "group": "jsonQuote",
@@ -3020,7 +2600,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 55,
-        "char": "init-param"
+        "char": "lookInContext"
     },
     {
         "group": "jsonQuote",
@@ -3041,10 +2621,16 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "jsonBraces",
-        "linkedGroup": "Special",
+        "group": "jsonNumber",
+        "linkedGroup": "Constant",
         "row": 55,
-        "char": "{\n"
+        "char": "1"
+    },
+    {
+        "group": "jsonNoise",
+        "linkedGroup": "Noise",
+        "row": 55,
+        "char": ",\n"
     },
     {
         "group": "LineNr",
@@ -3067,7 +2653,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 56,
-        "char": "mailHost"
+        "char": "adminGroupID"
     },
     {
         "group": "jsonQuote",
@@ -3088,22 +2674,10 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 56,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
+        "group": "jsonNumber",
         "linkedGroup": "Constant",
         "row": 56,
-        "char": "mail1"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 56,
-        "char": "&quot;"
+        "char": "4"
     },
     {
         "group": "jsonNoise",
@@ -3132,7 +2706,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 57,
-        "char": "mailHostOverride"
+        "char": "betaServer"
     },
     {
         "group": "jsonQuote",
@@ -3153,22 +2727,10 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 57,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
+        "group": "jsonBoolean",
         "linkedGroup": "Constant",
         "row": 57,
-        "char": "mail2"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 57,
-        "char": "&quot;\n"
+        "char": "true\n"
     },
     {
         "group": "LineNr",
@@ -3202,13 +2764,7 @@ module.exports = [
         "group": "jsonBraces",
         "linkedGroup": "Special",
         "row": 59,
-        "char": "}"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 59,
-        "char": ",\n"
+        "char": "}\n"
     },
     {
         "group": "LineNr",
@@ -3219,13 +2775,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 60,
-        "char": "      "
+        "char": "    ]"
     },
     {
-        "group": "jsonBraces",
-        "linkedGroup": "Special",
+        "group": "jsonNoise",
+        "linkedGroup": "Noise",
         "row": 60,
-        "char": "{\n"
+        "char": ",\n"
     },
     {
         "group": "LineNr",
@@ -3236,7 +2792,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 61,
-        "char": "        "
+        "char": "    "
     },
     {
         "group": "jsonQuote",
@@ -3248,7 +2804,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 61,
-        "char": "servlet-name"
+        "char": "servlet-mapping"
     },
     {
         "group": "jsonQuote",
@@ -3269,28 +2825,10 @@ module.exports = [
         "char": " "
     },
     {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
+        "group": "jsonBraces",
+        "linkedGroup": "Special",
         "row": 61,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 61,
-        "char": "cofaxAdmin"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 61,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 61,
-        "char": ",\n"
+        "char": "{\n"
     },
     {
         "group": "LineNr",
@@ -3301,7 +2839,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 62,
-        "char": "        "
+        "char": "      "
     },
     {
         "group": "jsonQuote",
@@ -3313,7 +2851,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 62,
-        "char": "servlet-class"
+        "char": "cofaxCDS"
     },
     {
         "group": "jsonQuote",
@@ -3343,13 +2881,19 @@ module.exports = [
         "group": "jsonString",
         "linkedGroup": "Constant",
         "row": 62,
-        "char": "org.cofax.cds.AdminServlet"
+        "char": "/"
     },
     {
         "group": "jsonQuote",
         "linkedGroup": "Quote",
         "row": 62,
-        "char": "&quot;\n"
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonNoise",
+        "linkedGroup": "Noise",
+        "row": 62,
+        "char": ",\n"
     },
     {
         "group": "LineNr",
@@ -3363,10 +2907,52 @@ module.exports = [
         "char": "      "
     },
     {
-        "group": "jsonBraces",
-        "linkedGroup": "Special",
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
         "row": 63,
-        "char": "}"
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonKeyword",
+        "linkedGroup": "Statement",
+        "row": 63,
+        "char": "cofaxEmail"
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 63,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonKeywordMatch",
+        "linkedGroup": "jsonKeywordMatch",
+        "row": 63,
+        "char": ":"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 63,
+        "char": " "
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 63,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonString",
+        "linkedGroup": "Constant",
+        "row": 63,
+        "char": "/cofaxutil/aemail/*"
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 63,
+        "char": "&quot;"
     },
     {
         "group": "jsonNoise",
@@ -3383,7 +2969,61 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 64,
-        "char": "\n"
+        "char": "      "
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 64,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonKeyword",
+        "linkedGroup": "Statement",
+        "row": 64,
+        "char": "cofaxAdmin"
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 64,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonKeywordMatch",
+        "linkedGroup": "jsonKeywordMatch",
+        "row": 64,
+        "char": ":"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 64,
+        "char": " "
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 64,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonString",
+        "linkedGroup": "Constant",
+        "row": 64,
+        "char": "/admin/*"
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 64,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonNoise",
+        "linkedGroup": "Noise",
+        "row": 64,
+        "char": ",\n"
     },
     {
         "group": "LineNr",
@@ -3397,10 +3037,58 @@ module.exports = [
         "char": "      "
     },
     {
-        "group": "jsonBraces",
-        "linkedGroup": "Special",
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
         "row": 65,
-        "char": "{\n"
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonKeyword",
+        "linkedGroup": "Statement",
+        "row": 65,
+        "char": "fileServlet"
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 65,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonKeywordMatch",
+        "linkedGroup": "jsonKeywordMatch",
+        "row": 65,
+        "char": ":"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 65,
+        "char": " "
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 65,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonString",
+        "linkedGroup": "Constant",
+        "row": 65,
+        "char": "/static/*"
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 65,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonNoise",
+        "linkedGroup": "Noise",
+        "row": 65,
+        "char": ",\n"
     },
     {
         "group": "LineNr",
@@ -3411,7 +3099,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 66,
-        "char": "        "
+        "char": "      "
     },
     {
         "group": "jsonQuote",
@@ -3423,7 +3111,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 66,
-        "char": "servlet-name"
+        "char": "cofaxTools"
     },
     {
         "group": "jsonQuote",
@@ -3453,19 +3141,13 @@ module.exports = [
         "group": "jsonString",
         "linkedGroup": "Constant",
         "row": 66,
-        "char": "fileServlet"
+        "char": "/tools/*"
     },
     {
         "group": "jsonQuote",
         "linkedGroup": "Quote",
         "row": 66,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 66,
-        "char": ",\n"
+        "char": "&quot;\n"
     },
     {
         "group": "LineNr",
@@ -3476,55 +3158,19 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 67,
-        "char": "        "
+        "char": "    "
     },
     {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
+        "group": "jsonBraces",
+        "linkedGroup": "Special",
         "row": 67,
-        "char": "&quot;"
+        "char": "}"
     },
     {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
+        "group": "jsonNoise",
+        "linkedGroup": "Noise",
         "row": 67,
-        "char": "servlet-class"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 67,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 67,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 67,
-        "char": " "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 67,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 67,
-        "char": "org.cofax.cds.FileServlet"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 67,
-        "char": "&quot;\n"
+        "char": ",\n"
     },
     {
         "group": "LineNr",
@@ -3535,19 +3181,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 68,
-        "char": "      "
-    },
-    {
-        "group": "jsonBraces",
-        "linkedGroup": "Special",
-        "row": 68,
-        "char": "}"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 68,
-        "char": ",\n"
+        "char": "\n"
     },
     {
         "group": "LineNr",
@@ -3558,7 +3192,37 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 69,
-        "char": "      "
+        "char": "    "
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 69,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonKeyword",
+        "linkedGroup": "Statement",
+        "row": 69,
+        "char": "taglib"
+    },
+    {
+        "group": "jsonQuote",
+        "linkedGroup": "Quote",
+        "row": 69,
+        "char": "&quot;"
+    },
+    {
+        "group": "jsonKeywordMatch",
+        "linkedGroup": "jsonKeywordMatch",
+        "row": 69,
+        "char": ":"
+    },
+    {
+        "group": "Normal",
+        "linkedGroup": "",
+        "row": 69,
+        "char": " "
     },
     {
         "group": "jsonBraces",
@@ -3575,7 +3239,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 70,
-        "char": "        "
+        "char": "      "
     },
     {
         "group": "jsonQuote",
@@ -3587,7 +3251,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 70,
-        "char": "servlet-name"
+        "char": "taglib-uri"
     },
     {
         "group": "jsonQuote",
@@ -3617,7 +3281,7 @@ module.exports = [
         "group": "jsonString",
         "linkedGroup": "Constant",
         "row": 70,
-        "char": "cofaxTools"
+        "char": "cofax.tld"
     },
     {
         "group": "jsonQuote",
@@ -3640,7 +3304,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 71,
-        "char": "        "
+        "char": "      "
     },
     {
         "group": "jsonQuote",
@@ -3652,7 +3316,7 @@ module.exports = [
         "group": "jsonKeyword",
         "linkedGroup": "Statement",
         "row": 71,
-        "char": "servlet-class"
+        "char": "taglib-location"
     },
     {
         "group": "jsonQuote",
@@ -3682,19 +3346,13 @@ module.exports = [
         "group": "jsonString",
         "linkedGroup": "Constant",
         "row": 71,
-        "char": "org.cofax.cms.CofaxToolsServlet"
+        "char": "/WEB-INF/tlds/cofax.tld"
     },
     {
         "group": "jsonQuote",
         "linkedGroup": "Quote",
         "row": 71,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 71,
-        "char": ",\n"
+        "char": "&quot;\n"
     },
     {
         "group": "LineNr",
@@ -3705,43 +3363,13 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 72,
-        "char": "        "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 72,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 72,
-        "char": "init-param"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 72,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 72,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 72,
-        "char": " "
+        "char": "    "
     },
     {
         "group": "jsonBraces",
         "linkedGroup": "Special",
         "row": 72,
-        "char": "{\n"
+        "char": "}\n"
     },
     {
         "group": "LineNr",
@@ -3752,61 +3380,7 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 73,
-        "char": "          "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 73,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 73,
-        "char": "templatePath"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 73,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 73,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 73,
-        "char": " "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 73,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 73,
-        "char": "toolstemplates/"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 73,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 73,
-        "char": ",\n"
+        "char": "  }\n"
     },
     {
         "group": "LineNr",
@@ -3817,1334 +3391,6 @@ module.exports = [
         "group": "Normal",
         "linkedGroup": "",
         "row": 74,
-        "char": "          "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 74,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 74,
-        "char": "log"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 74,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 74,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 74,
-        "char": " "
-    },
-    {
-        "group": "jsonNumber",
-        "linkedGroup": "Constant",
-        "row": 74,
-        "char": "1"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 74,
-        "char": ",\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 75,
-        "char": "75"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 75,
-        "char": "          "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 75,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 75,
-        "char": "logLocation"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 75,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 75,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 75,
-        "char": " "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 75,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 75,
-        "char": "/usr/local/tomcat/logs/CofaxTools.log"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 75,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 75,
-        "char": ",\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 76,
-        "char": "76"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 76,
-        "char": "          "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 76,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 76,
-        "char": "logMaxSize"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 76,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 76,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 76,
-        "char": " &quot;&quot;"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 76,
-        "char": ",\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 77,
-        "char": "77"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 77,
-        "char": "          "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 77,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 77,
-        "char": "dataLog"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 77,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 77,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 77,
-        "char": " "
-    },
-    {
-        "group": "jsonNumber",
-        "linkedGroup": "Constant",
-        "row": 77,
-        "char": "1"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 77,
-        "char": ",\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 78,
-        "char": "78"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 78,
-        "char": "          "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 78,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 78,
-        "char": "dataLogLocation"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 78,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 78,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 78,
-        "char": " "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 78,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 78,
-        "char": "/usr/local/tomcat/logs/dataLog.log"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 78,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 78,
-        "char": ",\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 79,
-        "char": "79"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 79,
-        "char": "          "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 79,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 79,
-        "char": "dataLogMaxSize"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 79,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 79,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 79,
-        "char": " &quot;&quot;"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 79,
-        "char": ",\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 80,
-        "char": "80"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 80,
-        "char": "          "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 80,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 80,
-        "char": "removePageCache"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 80,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 80,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 80,
-        "char": " "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 80,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 80,
-        "char": "/content/admin/remove?cache&#61;pages&amp;id&#61;"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 80,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 80,
-        "char": ",\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 81,
-        "char": "81"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 81,
-        "char": "          "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 81,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 81,
-        "char": "removeTemplateCache"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 81,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 81,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 81,
-        "char": " "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 81,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 81,
-        "char": "/content/admin/remove?cache&#61;templates&amp;id&#61;"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 81,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 81,
-        "char": ",\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 82,
-        "char": "82"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 82,
-        "char": "          "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 82,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 82,
-        "char": "fileTransferFolder"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 82,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 82,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 82,
-        "char": " "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 82,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 82,
-        "char": "/usr/local/tomcat/webapps/content/fileTransferFolder"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 82,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 82,
-        "char": ",\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 83,
-        "char": "83"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 83,
-        "char": "          "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 83,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 83,
-        "char": "lookInContext"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 83,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 83,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 83,
-        "char": " "
-    },
-    {
-        "group": "jsonNumber",
-        "linkedGroup": "Constant",
-        "row": 83,
-        "char": "1"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 83,
-        "char": ",\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 84,
-        "char": "84"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 84,
-        "char": "          "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 84,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 84,
-        "char": "adminGroupID"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 84,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 84,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 84,
-        "char": " "
-    },
-    {
-        "group": "jsonNumber",
-        "linkedGroup": "Constant",
-        "row": 84,
-        "char": "4"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 84,
-        "char": ",\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 85,
-        "char": "85"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 85,
-        "char": "          "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 85,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 85,
-        "char": "betaServer"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 85,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 85,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 85,
-        "char": " "
-    },
-    {
-        "group": "jsonBoolean",
-        "linkedGroup": "Constant",
-        "row": 85,
-        "char": "true\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 86,
-        "char": "86"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 86,
-        "char": "        "
-    },
-    {
-        "group": "jsonBraces",
-        "linkedGroup": "Special",
-        "row": 86,
-        "char": "}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 87,
-        "char": "87"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 87,
-        "char": "      "
-    },
-    {
-        "group": "jsonBraces",
-        "linkedGroup": "Special",
-        "row": 87,
-        "char": "}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 88,
-        "char": "88"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 88,
-        "char": "    ]"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 88,
-        "char": ",\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 89,
-        "char": "89"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 89,
-        "char": "    "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 89,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 89,
-        "char": "servlet-mapping"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 89,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 89,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 89,
-        "char": " "
-    },
-    {
-        "group": "jsonBraces",
-        "linkedGroup": "Special",
-        "row": 89,
-        "char": "{\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 90,
-        "char": "90"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 90,
-        "char": "      "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 90,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 90,
-        "char": "cofaxCDS"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 90,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 90,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 90,
-        "char": " "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 90,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 90,
-        "char": "/"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 90,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 90,
-        "char": ",\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 91,
-        "char": "91"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 91,
-        "char": "      "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 91,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 91,
-        "char": "cofaxEmail"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 91,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 91,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 91,
-        "char": " "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 91,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 91,
-        "char": "/cofaxutil/aemail/*"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 91,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 91,
-        "char": ",\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 92,
-        "char": "92"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 92,
-        "char": "      "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 92,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 92,
-        "char": "cofaxAdmin"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 92,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 92,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 92,
-        "char": " "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 92,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 92,
-        "char": "/admin/*"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 92,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 92,
-        "char": ",\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 93,
-        "char": "93"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 93,
-        "char": "      "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 93,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 93,
-        "char": "fileServlet"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 93,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 93,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 93,
-        "char": " "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 93,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 93,
-        "char": "/static/*"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 93,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 93,
-        "char": ",\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 94,
-        "char": "94"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 94,
-        "char": "      "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 94,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 94,
-        "char": "cofaxTools"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 94,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 94,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 94,
-        "char": " "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 94,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 94,
-        "char": "/tools/*"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 94,
-        "char": "&quot;\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 95,
-        "char": "95"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 95,
-        "char": "    "
-    },
-    {
-        "group": "jsonBraces",
-        "linkedGroup": "Special",
-        "row": 95,
-        "char": "}"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 95,
-        "char": ",\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 96,
-        "char": "96"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 96,
-        "char": "\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 97,
-        "char": "97"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 97,
-        "char": "    "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 97,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 97,
-        "char": "taglib"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 97,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 97,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 97,
-        "char": " "
-    },
-    {
-        "group": "jsonBraces",
-        "linkedGroup": "Special",
-        "row": 97,
-        "char": "{\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 98,
-        "char": "98"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 98,
-        "char": "      "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 98,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 98,
-        "char": "taglib-uri"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 98,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 98,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 98,
-        "char": " "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 98,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 98,
-        "char": "cofax.tld"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 98,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonNoise",
-        "linkedGroup": "Noise",
-        "row": 98,
-        "char": ",\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 99,
-        "char": "99"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 99,
-        "char": "      "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 99,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeyword",
-        "linkedGroup": "Statement",
-        "row": 99,
-        "char": "taglib-location"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 99,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonKeywordMatch",
-        "linkedGroup": "jsonKeywordMatch",
-        "row": 99,
-        "char": ":"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 99,
-        "char": " "
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 99,
-        "char": "&quot;"
-    },
-    {
-        "group": "jsonString",
-        "linkedGroup": "Constant",
-        "row": 99,
-        "char": "/WEB-INF/tlds/cofax.tld"
-    },
-    {
-        "group": "jsonQuote",
-        "linkedGroup": "Quote",
-        "row": 99,
-        "char": "&quot;\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 100,
-        "char": "100"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 100,
-        "char": "    "
-    },
-    {
-        "group": "jsonBraces",
-        "linkedGroup": "Special",
-        "row": 100,
-        "char": "}\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 101,
-        "char": "101"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 101,
-        "char": "  }\n"
-    },
-    {
-        "group": "LineNr",
-        "row": 102,
-        "char": "102"
-    },
-    {
-        "group": "Normal",
-        "linkedGroup": "",
-        "row": 102,
         "char": "}"
     }
 ]

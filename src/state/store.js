@@ -11,6 +11,8 @@ import {
   PaletteModel,
   KeywordTemplate,
 } from 'state/models.js';
+import { keywordToVim } from 'lib/json-to-editor.js';
+import { exportCode } from 'lib/util.js';
 import { mitt } from 'lib/event.js';
 import { range } from 'lib/util.js';
 
@@ -19,7 +21,7 @@ window.clearThemes = Theme.removeThemes;
 async function State({ themeModel, themes }) {
   const app = AppState({
     themes,
-    languages: themeModel.theme.languages,
+    groups: themeModel.theme.groups,
     keyword: KeywordTemplate(),
   });
   const picker = PickerState(themeModel.picker);
@@ -56,7 +58,9 @@ async function State({ themeModel, themes }) {
 }
 
 async function CreateStore() {
-  const themes = Theme.getThemes();
+  await Theme.init();
+
+  const themes = await Theme.getThemes();
   const themeModel = {
     picker: PickerModel(),
     palette: PaletteModel(),
@@ -78,18 +82,78 @@ async function CreateStore() {
   let focusableContent;
   let lastFocusableElement;
 
-
   // Save shortcut
-  window.addEventListener('keydown', (e) => {
+  window.addEventListener('keydown', async (e) => {
+    const { state } = store.get();
 
-    if (e.ctrlKey && e.code === 'KeyS') {
+    if (state.app.activeModal !== null) {
+      return;
+    }
+
+    if (e.ctrlKey && e.shiftKey && e.code === 'KeyS') {
       e.preventDefault();
       e.stopPropagation();
 
-      store.dispatch('app', 'saveTheme');
-      mitt.emit('RENDER');
+      if (window.showSaveFilePicker !== undefined) {
+        await store.dispatch('theme', 'createFileHandle');
+      }
 
-      return;
+      mitt.emit('RENDER');
+    } else if (e.ctrlKey && e.code === 'KeyS') {
+      e.preventDefault();
+      e.stopPropagation();
+
+      await store.dispatch('app', 'saveTheme');
+      mitt.emit('RENDER');
+    } else if (e.shiftKey && e.code === 'KeyN') {
+      e.preventDefault();
+      e.stopPropagation();
+
+      store.dispatch('app', 'openModal', 'new');
+      mitt.emit('RENDER');
+    } else if (e.shiftKey && e.code === 'KeyO') {
+      e.preventDefault();
+      e.stopPropagation();
+
+      store.dispatch('app', 'openModal', 'themes');
+      mitt.emit('RENDER');
+    } else if (e.shiftKey && e.code === 'KeyE') {
+      e.preventDefault();
+      e.stopPropagation();
+
+      store.dispatch('app', 'openModal', 'export');
+      mitt.emit('RENDER');
+    } else if (e.shiftKey && e.code === 'KeyF') {
+      e.preventDefault();
+      e.stopPropagation();
+
+      store.dispatch('app', 'toggleFullscreen');
+      mitt.emit('RENDER');
+    } else if (e.shiftKey && e.code === 'KeyV') {
+      e.preventDefault();
+      e.stopPropagation();
+
+      copyVimToClipboard(state);
+      mitt.emit('RENDER');
+    } else if (e.shiftKey && e.code === 'KeyK') {
+      e.preventDefault();
+      e.stopPropagation();
+
+      store.dispatch('app', 'selectKeyword', ['Normal']);
+      store.dispatch('app', 'selectOption', 'keyword');
+      mitt.emit('RENDER');
+    } else if (e.shiftKey && e.code === 'KeyP') {
+      e.preventDefault();
+      e.stopPropagation();
+
+      store.dispatch('app', 'selectOption', 'palette');
+      mitt.emit('RENDER');
+    } else if (e.shiftKey && e.code === 'KeyS') {
+      e.preventDefault();
+      e.stopPropagation();
+
+      store.dispatch('app', 'selectOption', 'settings');
+      mitt.emit('RENDER');
     }
   }, false);
 
@@ -98,9 +162,19 @@ async function CreateStore() {
     mitt.emit('RENDER');
   }
 
+  function handleFullscrenEscape(e) {
+    if (e.code === 'Escape') {
+      store.dispatch('app', 'toggleFullscreen');
+      mitt.emit('RENDER');
+    } else{
+      return;
+    }
+  }
+
   function handleModalKeydown(e) {
     if (e.code === 'Escape') {
       store.dispatch('app', 'openModal', null);
+      store.dispatch('app', 'resetGroupModal');
       mitt.emit('RENDER');
     } else if (e.shiftKey && e.code === 'Tab') {
       if (document.activeElement === firstFocusableElement) {
@@ -124,6 +198,13 @@ async function CreateStore() {
       appOverlayElement = appElement.querySelector('.app-overlay');
     },
 
+    [events.OPEN_FULLSCREEN_PREVIEW]: (showFullscreenPreview) => {
+      if (showFullscreenPreview) {
+        window.addEventListener('keydown', handleFullscrenEscape, false);
+      } else {
+        window.removeEventListener('keydown', handleFullscrenEscape, false);
+      }
+    },
 
     [events.OPEN_MODAL]: (openedModal) => {
       const { state } = store.get();
@@ -179,68 +260,68 @@ async function CreateStore() {
       Theme.importThemeJson(files);
     },
 
-    [events.EXPORT_THEMES_JSON]: () => {
-      Theme.exportThemesJson();
+    [events.EXPORT_THEMES_JSON]: async () => {
+      await Theme.exportThemesJson();
     },
 
-    [events.EXPORT_THEME_JSON]: ({ themeId }) => {
-      Theme.exportThemeJson(themeId);
+    [events.EXPORT_THEME_JSON]: async ({ themeId }) => {
+      await Theme.exportThemeJson(themeId);
     },
 
-    [events.EXPORT_THEME_VIM]: ({ theme }) => {
-      Theme.exportThemeVim(theme);
+    [events.EXPORT_THEME_VIM]: async ({ theme }) => {
+      await Theme.exportThemeVim(theme);
     },
 
-    [events.LOAD_THEME]: themeId => {
-      const { theme, palette } = Theme.getTheme(themeId);
+    [events.SAVE_THEME]: async () => {
+      let state = store.getState();
+      let themeId = state.theme.id;
+
+      if (themeId) {
+        store.dispatch('theme', 'updateDate', new Date().getTime());
+        state = store.getState();
+        await Theme.saveTheme(state.theme.id, state);
+      } else {
+        themeId = await Theme.createTheme(state);
+        store.dispatch('theme', 'updateThemeId', themeId);
+      }
+
+      const themes = await Theme.getThemes();
+      store.dispatch('app', 'syncThemes', themes);
+    },
+
+    [events.LOAD_THEME]: async themeId => {
+      const { theme, palette } = await Theme.getTheme(themeId);
 
       store.dispatch('theme', 'load', theme);
       store.dispatch('palette', 'load', palette.palettes);
+
+      const themes = await Theme.getThemes();
+      store.dispatch('app', 'syncThemes', themes);
 
       mitt.emit('LOAD_TEMPLATE');
     },
 
     [events.TOGGLE_COMPONENT]: () => {
       const state = store.getState();
-      if (state.theme.id) {
-        store.dispatch('app', 'saveTheme');
-      }
+      mitt.emit('UNSAVED_CHANGES');
     },
 
     [events.SET_FONT_FAMILY]: () => {
-      const state = store.getState();
-      if (state.theme.id) {
-        store.dispatch('app', 'saveTheme');
-      } else {
-        mitt.emit('UNSAVED_CHANGES');
-      }
+      mitt.emit('UNSAVED_CHANGES');
     },
 
     [events.SET_FONT_SIZE]: () => {
       const state = store.getState();
-      if (state.theme.id) {
-        store.dispatch('app', 'saveTheme');
-      } else {
-        mitt.emit('UNSAVED_CHANGES');
-      }
+      mitt.emit('UNSAVED_CHANGES');
     },
 
     [events.SET_LINE_HEIGHT]: () => {
-      const state = store.getState();
-      if (state.theme.id) {
-        store.dispatch('app', 'saveTheme');
-      } else {
-        mitt.emit('UNSAVED_CHANGES');
-      }
+      mitt.emit('UNSAVED_CHANGES');
     },
 
     [events.TOGGLE_TEXT_DECORATION]: () => {
       const state = store.getState();
-      if (state.theme.id) {
-        Theme.saveTheme(state.theme.id, state);
-      } else {
-        mitt.emit('UNSAVED_CHANGES');
-      }
+      mitt.emit('UNSAVED_CHANGES');
     },
 
     [events.SELECT_OPTION]: () => {
@@ -253,8 +334,6 @@ async function CreateStore() {
     },
 
     [events.SELECT_KEYWORD]: (keyword) => {
-      // console.log('SELECT_KEYWORD');
-
       const state = store.getState();
 
       store.dispatch('palette', 'unSelectColor', range(0, state.palette.palettes.length - 1));
@@ -350,11 +429,11 @@ async function CreateStore() {
       }
 
       saveChangesTimeout = setTimeout(() => {
-        Theme.saveTheme(state.theme.id, state);
+        store.dispatch('app', 'saveTheme');
       }, 5000);
     }
 
-    // TODO: Uncomment these
+    // TODO: Skip these in development mode
     promptUnsavedChangesOnExit();
   });
 
@@ -366,7 +445,7 @@ async function CreateStore() {
 
     mitt.emit('RENDER');
 
-    // TODO: Uncomment these
+    // TODO: Skip these in development mode
     dontPromptUnsavedChangesOnExit();
   });
 
@@ -384,6 +463,17 @@ function promptUnsavedChangesOnExit() {
 
 function dontPromptUnsavedChangesOnExit() {
   window.removeEventListener('beforeunload', tabClose);
+}
+
+function copyVimToClipboard(state) {
+  const text = keywordToVim(exportCode(state.theme));
+
+  navigator.clipboard.writeText(text).then(
+    () => {},
+    err => {
+      console.error('Could not copy to clipboard: ', err);
+    },
+  );
 }
 
 export const Store = CreateStore();

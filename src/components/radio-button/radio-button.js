@@ -6,6 +6,7 @@ export { RadioButton };
 function RadioButton({
   id,
   group,
+  title,
   value = false,
   label,
   onchange = () => {},
@@ -17,6 +18,7 @@ function RadioButton({
       <input
         type="radio"
         name="${group}"
+        title="${title}"
         id="${id}"
         checked="${value}"
         value="${value} "
@@ -25,7 +27,7 @@ function RadioButton({
         onclick="${onclick}"
       />
 
-      <label for="${id}">
+      <label title="${title}" for="${id}">
         ${label}
       </label>
     </div>
