@@ -73,7 +73,7 @@ function AboutView({ props }) {
 
             <li>
               Then from another terminal run
-              <code class="code-snippet">ls ~/.vim/colors/* | entr -c -r -s "vim --servername PINTO --remote-send ':colorscheme MY_COLOR_SCHEME_NAME<cr>'"</code>, and replace MY_COLOR_SCHEME_NAME with your color scheme name.
+              <code class="code-snippet">ls ~/.vim/colors/* | entr -c -r -s "vim --servername PINTO --remote-send ':colorscheme MY_COLOR_SCHEME_NAME &lt;cr&gt;'"</code>, and replace MY_COLOR_SCHEME_NAME with your color scheme name.
             </li>
           </ol>
 
