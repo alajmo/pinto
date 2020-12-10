@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack --mode production",
-    "deploy": "webpack --mode production && netlify deploy --prod --dir dist --site determined-euclid-624701",
+    "deploy": "webpack --mode production && netlify deploy --prod --dir dist",
     "lint": "eslint src",
     "lint-watch": "nodemon --exec npm run lint"
   },
