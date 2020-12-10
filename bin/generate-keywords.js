@@ -168,6 +168,8 @@ async function main() {
     haskell: './bin/templates/haskell/haskell.vim',
     clojure: './bin/templates/clojure/clojure.vim',
     erlang: './bin/templates/erlang/erlang.vim',
+    python: './bin/templates/python/python.vim',
+    php: './bin/templates/php/php.vim',
     json: './bin/templates/json/json.vim',
     yaml: './bin/templates/yaml/yaml.vim',
     toml: './bin/templates/toml/toml.vim',
