@@ -256,8 +256,10 @@ async function CreateStore() {
       mitt.emit('LOAD_TEMPLATE');
     },
 
-    [events.IMPORT_THEME_JSON]: ({ files }) => {
-      Theme.importThemeJson(files);
+    [events.IMPORT_THEME_JSON]: async ({ files }) => {
+      await Theme.importThemeJson(files);
+      await store.dispatch('app', 'syncThemes');
+      mitt.emit('RENDER');
     },
 
     [events.EXPORT_THEMES_JSON]: async () => {
@@ -410,11 +412,6 @@ async function CreateStore() {
       mitt.emit('UNSAVED_CHANGES');
       // mitt.emit('RENDER');
     },
-  });
-
-  mitt.on('SYNC', () => {
-    store.dispatch('app', 'syncThemes');
-    mitt.emit('RENDER');
   });
 
   mitt.on('UNSAVED_CHANGES', () => {

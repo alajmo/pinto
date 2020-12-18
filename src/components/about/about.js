@@ -216,7 +216,7 @@ function AboutView({ props }) {
           <p>
             Because the author wanted to experiment with a new way of building front-end applications (while creating a useful application in the meantime),
             and incidentally dug himself a hole too deep to dig himself out of it, time and energy-wise.
-            A rewrite is on the horizon.
+            A rewrite is on the (event) horizon.
           </p>
 
           <p>
@@ -279,12 +279,12 @@ function AboutView({ props }) {
           <ul>
             <li>
               <span class="bold">Version</span><br />
-              v0.3.0-beta
+              v0.3.1
             </li>
 
             <li>
               <span class="bold">Updated</span><br />
-              November 20, 2020
+              December 18, 2020
             </li>
 
             <li>

@@ -14,9 +14,10 @@ function ListThemeTemplate({ state, Store }) {
 
     props: {
       importBtn: () => ({
-        name: 'Upload',
-        onchange: e => {
-          Store.dispatch('theme', 'importThemeJson', e.target.files);
+        name: 'Import',
+        onchange: async e => {
+          await Store.dispatch('theme', 'importThemeJson', e.target.files);
+
           mitt.emit('RENDER');
         },
       }),
@@ -84,12 +85,8 @@ function ListThemeView({ state, props }) {
 
                   <div class="primary">
                     ${state.theme.id === theme.theme.id
-                      ? html`
-                          <span class="theme-opened">active</span>
-                        `
-                      : html`
-                          <span></span>
-                        `}
+                      ? html` <span class="theme-opened">active</span> `
+                      : html` <span></span> `}
                   </div>
 
                   <div class="control">

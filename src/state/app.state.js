@@ -200,10 +200,10 @@ function AppState({ themes = [], groups = [], keyword } = {}) {
       };
     },
 
-    async syncThemes(state, themes) {
+    async syncThemes(state) {
       const newState = { ...state };
 
-      newState.app.themes = themes;
+      newState.app.themes = await Theme.getThemes();
 
       return {
         trigger: [],

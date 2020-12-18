@@ -92,7 +92,7 @@ function CreateModel() {
     { themeName, theme, palette },
     { created, updated } = {},
   ) {
-    if (theme.fileHandle) {
+    if (theme.fileHandle && theme.fileHandle.kind === 'file') {
       const text = keywordToVim(exportCode(theme));
       const writable = await theme.fileHandle.createWritable();
       await writable.write(text);
@@ -199,23 +199,25 @@ function CreateModel() {
     saveAs(file, filename);
   }
 
-  function importThemeJson(files) {
-    const reader = new FileReader();
+  async function importThemeJson(files) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
 
-    reader.onload = async () => {
-      const data = JSON.parse(reader.result);
-      if (Array.isArray(data)) {
-        for (const theme of data) {
-          await saveTheme(theme.theme.id, theme);
+      reader.onload = async () => {
+        const data = JSON.parse(reader.result);
+        if (Array.isArray(data)) {
+          for (const theme of data) {
+            await saveTheme(theme.theme.id, theme);
+          }
+        } else {
+          await saveTheme(data.theme.id, data);
         }
-      } else {
-        await saveTheme(data.theme.id, data);
-      }
 
-      mitt.emit('SYNC');
-    };
+        resolve();
+      };
 
-    reader.readAsText(files[0], 'utf-8');
+      reader.readAsText(files[0], 'utf-8');
+    });
   }
 
   return Object.freeze({
