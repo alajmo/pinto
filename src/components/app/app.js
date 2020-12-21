@@ -17,10 +17,6 @@ import {
   PaletteFormTemplate,
 } from 'components/palette-form/palette-form.js';
 import {
-  FontSettingsView,
-  FontSettingsTemplate,
-} from 'components/font-settings/font-settings.js';
-import {
   EditorSettingsView,
   EditorSettingsTemplate,
 } from 'components/editor-settings/editor-settings.js';
@@ -77,7 +73,6 @@ function App(Store) {
 
   // Column 2
   const keywordElement = html.node`<div class="column-2"></div>`;
-  const fontElement = html.node`<div class="column-2"></div>`;
   const settingsElement = html.node`<div class="column-2"></div>`;
   const paletteElement = html.node`<div class="column-2"></div>`;
   const colorsElement = html.node`<div class="column-2"></div>`;
@@ -193,14 +188,12 @@ function App(Store) {
     let component;
 
     keywordElement.style.display = 'none';
-    fontElement.style.display = 'none';
     settingsElement.style.display = 'none';
     paletteElement.style.display = 'none';
     colorsElement.style.display = 'none';
 
     switch (state.app.selectedOption) {
       case 'keyword':
-        // render(fontElement, html`<div style="display: none"></div>`);
         render(settingsElement, html`<div style="display: none"></div>`);
         render(paletteElement, html`<div style="display: none"></div>`);
 
@@ -216,12 +209,9 @@ function App(Store) {
         keywordElement.style.display = 'block';
         render(keywordElement, component);
 
-        if (state.app.showColorPicker){
-          renderPicker(state);
-        }
+        renderPicker(state);
         break;
       case 'palette':
-        render(fontElement, html`<div style="display: none"></div>`);
         render(settingsElement, html`<div style="display: none"></div>`);
         render(keywordElement, html`<div style="display: none"></div>`);
         render(colorsElement, html`<div style="display: none"></div>`);
@@ -236,7 +226,6 @@ function App(Store) {
         renderPicker(state);
         break;
       case 'settings':
-        render(fontElement, html`<div style="display: none"></div>`);
         render(keywordElement, html`<div style="display: none"></div>`);
         render(paletteElement, html`<div style="display: none"></div>`);
         render(colorsElement, html`<div style="display: none"></div>`);
@@ -250,7 +239,6 @@ function App(Store) {
         render(settingsElement, component);
         break;
       case 'colors':
-        render(fontElement, html`<div style="display: none"></div>`);
         render(settingsElement, html`<div style="display: none"></div>`);
         render(keywordElement, html`<div style="display: none"></div>`);
         render(paletteElement, html`<div style="display: none"></div>`);
@@ -264,7 +252,6 @@ function App(Store) {
         render(colorsElement, component);
         break;
       case 'export':
-        render(fontElement, html`<div style="display: none"></div>`);
         render(settingsElement, html`<div style="display: none"></div>`);
         render(keywordElement, html`<div style="display: none"></div>`);
         render(colorsElement, html`<div style="display: none"></div>`);
@@ -275,14 +262,6 @@ function App(Store) {
         render(settingsElement, html`<div style="display: none"></div>`);
         render(paletteElement, html`<div style="display: none"></div>`);
         render(colorsElement, html`<div style="display: none"></div>`);
-
-        component = compose(FontSettingsView)(FontSettingsTemplate)({
-          state,
-          Store,
-        });
-
-        fontElement.style.display = 'block';
-        render(fontElement, component);
     }
   }
 
@@ -416,7 +395,6 @@ function App(Store) {
           ${sidebarElement}
 
           ${settingsElement}
-          ${fontElement}
           ${paletteElement}
           ${keywordElement}
           ${colorsElement}
