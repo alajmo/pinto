@@ -68,22 +68,3 @@ a {
   border-radius: 3px;
   padding: 1px 3px;
 }
-
-.app-loader {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1ch;
-
-  & > *:first-child {
-    margin-bottom: 16px;
-  }
-
-  & svg path,
-  & svg rect {
-    fill: #22adf6;
-  }
-}
