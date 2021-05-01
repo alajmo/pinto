@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add php template
 - Add python template
 - Add loading screen on app initialization
+- Fix initial rendering, freezes the spinner
 
 ## [0.1.0] - 2020-10-31
 

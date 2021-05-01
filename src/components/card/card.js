@@ -10,7 +10,6 @@ function Card({
   topLeftContet = () => {},
   topRightContent = () => {},
   mainContent = () => {},
-  bottomContent = () => {},
   toggle,
   show = true,
 }) {
@@ -53,12 +52,6 @@ function Card({
         style="display: ${show ? 'block' : 'none'}"
       >
         ${mainContent && mainContent()}
-      </div>
-
-      <div class="card-bottom-content">
-        ${false && bottomContent
-          ? bottomContent.map(item => html` ${item()} `)
-          : null}
       </div>
     </div>
   `;

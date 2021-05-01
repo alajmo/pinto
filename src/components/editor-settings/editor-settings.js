@@ -131,7 +131,7 @@ function EditorSettingsTemplate({ state, Store }) {
         addGroup: {
           text: 'Add',
 
-          onclick(e) {
+          onclick() {
             Store.dispatch('app', 'openModal', 'manage-group');
             mitt.emit('RENDER');
           },

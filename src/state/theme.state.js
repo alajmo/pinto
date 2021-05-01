@@ -1,6 +1,5 @@
 import { Enum } from 'lib/enum.js';
-import { cloneDeep } from 'lodash';
-import { Theme } from 'state/theme.js';
+import { cloneDeep } from 'lodash-es';
 import { KeywordTemplate } from 'state/models.js';
 
 export { ThemeState };
@@ -72,7 +71,7 @@ async function ThemeState(theme) {
       };
     },
 
-    exportThemesJson(state, theme) {
+    exportThemesJson(state) {
       return {
         trigger: [events.EXPORT_THEMES_JSON],
         state,

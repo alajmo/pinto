@@ -1,4 +1,4 @@
-import { openDB, deleteDB } from 'idb';
+import { openDB } from 'idb';
 import { saveAs } from 'file-saver';
 import { uuid } from 'lib/uuid.js';
 import { exportCode } from 'lib/util.js';
@@ -14,7 +14,7 @@ function CreateModel() {
       upgrade(db) {
         const themeStore = 'themes';
         if (!db.objectStoreNames.contains(themeStore)) {
-          const store = db.createObjectStore(themeStore, {
+          db.createObjectStore(themeStore, {
             keyPath: 'id',
           });
         }
@@ -202,6 +202,10 @@ function CreateModel() {
   async function importThemeJson(files) {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
+
+      reader.onerror = (err) => {
+        reject(err);
+      };
 
       reader.onload = async () => {
         const data = JSON.parse(reader.result);

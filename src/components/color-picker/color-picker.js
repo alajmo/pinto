@@ -140,7 +140,7 @@ function ColorPickerTemplate({ state, Store }) {
         name: 'bold',
         title: keyword['bold'] ? 'Disable bold' : 'Enable bold',
         value: keyword['bold'],
-        onclick: e => {
+        onclick: () => {
           Store.dispatch('theme', 'toggleTextDecoration', {
             keyword: selectedKeyword,
             attr: 'bold',
@@ -156,7 +156,7 @@ function ColorPickerTemplate({ state, Store }) {
         name: 'italic',
         title: keyword['italic'] ? 'Disable italic' : 'Enable italic',
         value: keyword['italic'],
-        onclick: e => {
+        onclick: () => {
           Store.dispatch('theme', 'toggleTextDecoration', {
             keyword: selectedKeyword,
             attr: 'italic',
@@ -172,7 +172,7 @@ function ColorPickerTemplate({ state, Store }) {
         name: 'underline',
         title: keyword['underline'] ? 'Disable underline' : 'Enable underline',
         value: keyword['underline'],
-        onclick: e => {
+        onclick: () => {
           Store.dispatch('theme', 'toggleTextDecoration', {
             keyword: selectedKeyword,
             attr: 'underline',
@@ -188,7 +188,7 @@ function ColorPickerTemplate({ state, Store }) {
         name: 'lineThrough',
         title: keyword['lineThrough'] ? 'Disable strikethrough' : 'Enable strikethrough',
         value: keyword['lineThrough'],
-        onclick: e => {
+        onclick: () => {
           Store.dispatch('theme', 'toggleTextDecoration', {
             keyword: selectedKeyword,
             attr: 'lineThrough',

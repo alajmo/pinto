@@ -6,7 +6,6 @@ export { GrowInput };
 function GrowInput({
   value,
   name,
-  onkeydown = () => {},
   onclick = () => {},
   onblur = () => {},
   readonly = false,

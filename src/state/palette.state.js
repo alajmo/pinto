@@ -1,4 +1,4 @@
-import { cloneDeep } from 'lodash';
+import { cloneDeep } from 'lodash-es';
 import { Enum } from 'lib/enum.js';
 
 export { PaletteState };

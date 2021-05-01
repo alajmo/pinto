@@ -132,21 +132,6 @@ templates.forEach(template => {
   keywords.keywords = Array.from(new Set(keywords.keywords.concat(uniqGroups)));
 });
 
-// TODO: Remove this, I'm pasting language keywords manually
-// const keywordsFilepath = path.join('src', 'state', 'keywords.model.js');
-// const keywordsFileContent = `
-// export const keywords = {
-//   misc: [],
-//
-//   default: ['Normal', 'Statement'],
-//
-//   groupKeywords: ${JSON.stringify(keywords.groupKeywords)},
-//   keywords: ${JSON.stringify(keywords.keywords)},
-// };
-// `;
-
-// fs.writeFileSync(keywordsFilepath, keywordsFileContent);
-
 function escapeChar(char) {
   let escape;
   switch (char) {

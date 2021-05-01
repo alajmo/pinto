@@ -184,6 +184,7 @@ function App(Store) {
   }
 
   function renderComponent(state, Store) {
+    // TODO: It's this that is slow
     let component;
 
     keywordElement.style.display = 'none';
@@ -196,7 +197,7 @@ function App(Store) {
         render(settingsElement, html`<div style="display: none"></div>`);
         render(paletteElement, html`<div style="display: none"></div>`);
 
-        if (state.app.showColorPicker){
+        if (state.app.showColorPicker) {
           render(colorsElement, html`<div style="display: none"></div>`);
         }
 

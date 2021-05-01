@@ -1,4 +1,4 @@
-import { cloneDeep } from 'lodash';
+import { cloneDeep } from 'lodash-es';
 import { keywords } from './keywords.model.js';
 import { hexToRgb, rgbToHsb } from 'lib/color.js';
 import { XTERM_COLORS } from 'lib/colors.js';
@@ -79,6 +79,16 @@ async function ThemeModel() {
 
   const now = new Date().getTime();
 
+  const keywordsData = {};
+  const ks = Object.values(keywords.keywords);
+  for (let i = 0; i < ks.length; i++) {
+    keywordsData[ks[i]] = KeywordTemplate({
+      name: ks[i],
+      active: groups[keywords.keywordGroups[name]],
+      enabled: groups[keywords.keywordGroups[name]],
+    });
+  }
+
   return {
     name: 'Untitled',
     id: null,
@@ -98,25 +108,11 @@ async function ThemeModel() {
     updated: now,
 
     descriptions: keywords.descriptions,
-    keywords: keywords.keywords.reduce((o, name) => {
-      const language = keywords.keywordGroups[name];
 
-      return {
-        ...o,
-        [name]: KeywordTemplate({
-          name,
-          active: groups[language],
-          enabled: groups[language],
-        }),
-      };
-    }, {}),
-
+    keywords: keywordsData,
     defaultThemeName: 'Untitled',
-    template: (await import('../templates/javascript/javascript.html.txt'))
-      .default,
-    templateTxt: (
-      await import('../templates/javascript/javascript.example.txt')
-    ).default,
+    template: (await import('templates/javascript/javascript.html.txt?raw')).default,
+    templateTxt: ( await import('templates/javascript/javascript.example.txt?raw')).default,
     language: 'javascript',
     groupKeywords: keywords.groupKeywords,
     keywordLinks: keywords.keywordLinks,

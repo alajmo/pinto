@@ -2,18 +2,17 @@ import './colors.css';
 
 import { html } from 'lighterhtml';
 
-import { compose2 } from 'lib/util.js';
 import { Card } from 'components/card/card.js';
 import {
+  compose2,
   getUniqueColors,
   getDefaultKeywords,
   getLanguageKeywords,
 } from 'lib/util.js';
-import { mitt } from 'lib/event.js';
 
 export { ColorsView, ColorsTemplate };
 
-function ColorsTemplate({ state, Store }) {
+function ColorsTemplate({ state, }) {
   return {
     state,
 

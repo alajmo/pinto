@@ -37,7 +37,7 @@ function ColorInputsTemplate({ state, Store }) {
           id: 'R',
           label: 'R',
           group: 'colors',
-          onchange: e => {
+          onchange: () => {
             Store.dispatch('picker', 'setSelectedColorAttribute', 'red');
             mitt.emit('RENDER');
           },
@@ -81,7 +81,7 @@ function ColorInputsTemplate({ state, Store }) {
           id: 'G',
           label: 'G',
           group: 'colors',
-          onchange: e => {
+          onchange: () => {
             Store.dispatch('picker', 'setSelectedColorAttribute', 'green');
             mitt.emit('RENDER');
           },
@@ -125,7 +125,7 @@ function ColorInputsTemplate({ state, Store }) {
           id: 'B',
           label: 'B',
           group: 'colors',
-          onchange: e => {
+          onchange: () => {
             Store.dispatch('picker', 'setSelectedColorAttribute', 'blue');
             mitt.emit('RENDER');
           },
@@ -169,7 +169,7 @@ function ColorInputsTemplate({ state, Store }) {
           id: 'H',
           label: 'H',
           group: 'colors',
-          onchange: e => {
+          onchange: () => {
             Store.dispatch('picker', 'setSelectedColorAttribute', 'hue');
             mitt.emit('RENDER');
           },
@@ -213,7 +213,7 @@ function ColorInputsTemplate({ state, Store }) {
           id: 'S',
           label: 'S',
           group: 'colors',
-          onchange: e => {
+          onchange: () => {
             Store.dispatch('picker', 'setSelectedColorAttribute', 'saturation');
             mitt.emit('RENDER');
           },
@@ -257,7 +257,7 @@ function ColorInputsTemplate({ state, Store }) {
           id: 'BRIGHTNESS',
           label: 'B',
           group: 'colors',
-          onchange: e => {
+          onchange: () => {
             Store.dispatch('picker', 'setSelectedColorAttribute', 'brightness');
             mitt.emit('RENDER');
           },

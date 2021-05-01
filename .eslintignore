@@ -1,2 +1,2 @@
-src/bin
-src/templates
+bin
+src/public/templates

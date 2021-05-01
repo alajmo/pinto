@@ -12,11 +12,12 @@ import {
   KeywordTemplate,
 } from 'state/models.js';
 import { keywordToVim } from 'lib/json-to-editor.js';
-import { exportCode } from 'lib/util.js';
+import { exportCode, range } from 'lib/util.js';
 import { mitt } from 'lib/event.js';
-import { range } from 'lib/util.js';
 
 window.clearThemes = Theme.removeThemes;
+
+export { CreateStore };
 
 async function State({ themeModel, themes }) {
   const app = AppState({
@@ -304,7 +305,6 @@ async function CreateStore() {
     },
 
     [events.TOGGLE_COMPONENT]: () => {
-      const state = store.getState();
       mitt.emit('UNSAVED_CHANGES');
     },
 
@@ -313,7 +313,6 @@ async function CreateStore() {
     },
 
     [events.SET_FONT_SIZE]: () => {
-      const state = store.getState();
       mitt.emit('UNSAVED_CHANGES');
     },
 
@@ -322,7 +321,6 @@ async function CreateStore() {
     },
 
     [events.TOGGLE_TEXT_DECORATION]: () => {
-      const state = store.getState();
       mitt.emit('UNSAVED_CHANGES');
     },
 
@@ -430,8 +428,9 @@ async function CreateStore() {
       }, 5000);
     }
 
-    // TODO: Skip these in development mode
-    promptUnsavedChangesOnExit();
+    if (import.meta.env.PROD) {
+      promptUnsavedChangesOnExit();
+    }
   });
 
   mitt.on('CHANGES_SAVED', () => {
@@ -442,9 +441,9 @@ async function CreateStore() {
 
     mitt.emit('RENDER');
 
-    // TODO: Skip these in development mode
-    dontPromptUnsavedChangesOnExit();
-  });
+    if (import.meta.env.PROD) {
+      dontPromptUnsavedChangesOnExit();
+  }});
 
   return store;
 }
@@ -472,5 +471,3 @@ function copyVimToClipboard(state) {
     },
   );
 }
-
-export const Store = CreateStore();

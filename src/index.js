@@ -3,19 +3,19 @@ import 'style/base.css';
 
 import { render } from 'lighterhtml';
 import { App } from 'components/app/app.js';
-import { Store } from 'state/store.js';
+import { CreateStore } from 'state/store.js';
 
 window.addEventListener('DOMContentLoaded', () => {
   main();
 });
 
-function main() {
+async function main() {
   init();
 
   async function init() {
-    const { element, onRenderComplete } = App(await Store);
+    const Store = await CreateStore();
+    const { element, onRenderComplete } = App(Store);
     render(document.body, element);
-
     onRenderComplete();
   }
 }
