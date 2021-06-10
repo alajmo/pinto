@@ -284,7 +284,7 @@ function AboutView({ props }) {
 
             <li>
               <span class="bold">Updated</span><br />
-              December 18, 2020
+              June 10, 2021
             </li>
 
             <li>
