@@ -5,6 +5,7 @@ export default defineConfig({
   root: 'src',
   build: {
     outDir: `${path.resolve(__dirname, 'dist')}/`,
+    emptyOutDir: true,
   },
 
   resolve: {

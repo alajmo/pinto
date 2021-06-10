@@ -279,7 +279,7 @@ function AboutView({ props }) {
           <ul>
             <li>
               <span class="bold">Version</span><br />
-              v0.3.3
+              v0.3.4
             </li>
 
             <li>
