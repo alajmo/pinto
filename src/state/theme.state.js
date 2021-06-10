@@ -104,12 +104,9 @@ async function ThemeState(theme) {
 
     async loadTemplate(state, language) {
       const newState = { ...state };
-      const template = (
-        await import(`../templates/${language}/${language}.html.txt`)
-      ).default;
-      const templateTxt = (
-        await import(`../templates/${language}/${language}.example.txt`)
-      ).default;
+
+      const template = (await import(`/templates/${language}/${language}.html.txt?raw`)).default;
+      const templateTxt = (await import(`/templates/${language}/${language}.example.txt?raw`)).default;
 
       newState.theme.language = language;
       newState.theme.template = template;

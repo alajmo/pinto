@@ -1,6 +1,6 @@
 {
   "name": "pinto",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Create, view and edit Vim color themes",
   "main": "src/index.html",
   "scripts": {

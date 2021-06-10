@@ -1,61 +1,21 @@
 import './app.css';
 
 import { render, html } from 'lighterhtml';
-import {
-  FullscreenPreviewView,
-  FullscreenPreviewTemplate,
-} from 'components/fullscreen-preview/fullscreen-preview.js';
+import { FullscreenPreviewView, FullscreenPreviewTemplate, } from 'components/fullscreen-preview/fullscreen-preview.js';
 import { ToolbarView, ToolbarTemplate } from 'components/toolbar/toolbar.js';
 import { SidebarView, SidebarTemplate } from 'components/sidebar/sidebar.js';
-import {
-  KeywordFormView,
-  KeywordFormTemplate,
-} from 'components/keyword-form/keyword-form.js';
-import {
-  PaletteFormView,
-  PaletteFormTemplate,
-} from 'components/palette-form/palette-form.js';
-import {
-  EditorSettingsView,
-  EditorSettingsTemplate,
-} from 'components/editor-settings/editor-settings.js';
-import {
-  ThemePreviewView,
-  ThemePreviewTemplate,
-} from 'components/theme-preview/theme-preview.js';
+import { KeywordFormView, KeywordFormTemplate, } from 'components/keyword-form/keyword-form.js';
+import { PaletteFormView, PaletteFormTemplate, } from 'components/palette-form/palette-form.js';
+import { EditorSettingsView, EditorSettingsTemplate, } from 'components/editor-settings/editor-settings.js';
+import { ThemePreviewView, ThemePreviewTemplate, } from 'components/theme-preview/theme-preview.js';
 import { ColorsView, ColorsTemplate } from 'components/colors/colors.js';
-import {
-  CreateThemeView,
-  CreateThemeTemplate,
-} from 'components/create-theme/create-theme.js';
-import {
-  ListThemeView,
-  ListThemeTemplate,
-} from 'components/list-theme/list-theme.js';
-import {
-  ExportModalView,
-  ExportModalTemplate,
-} from 'components/export-modal/export-modal.js';
-import {
-  ManageGroupsView,
-  ManageGroupsTemplate,
-} from 'components/manage-groups/manage-groups.js';
+import { CreateThemeView, CreateThemeTemplate, } from 'components/create-theme/create-theme.js';
+import { ListThemeView, ListThemeTemplate, } from 'components/list-theme/list-theme.js';
+import { ExportModalView, ExportModalTemplate, } from 'components/export-modal/export-modal.js';
+import { ManageGroupsView, ManageGroupsTemplate, } from 'components/manage-groups/manage-groups.js';
 import { AboutView, AboutTemplate } from 'components/about/about.js';
 import { compose } from 'lib/util.js';
-import {
-  redSquare,
-  redRightSquare,
-  greenSquare,
-  greenRightSquare,
-  blueSquare,
-  blueRightSquare,
-  hueSquare,
-  hueRightSquare,
-  saturationSquare,
-  saturationRightSquare,
-  brightnessSquare,
-  brightnessRightSquare,
-} from 'lib/color-canvas.js';
+import { redSquare, redRightSquare, greenSquare, greenRightSquare, blueSquare, blueRightSquare, hueSquare, hueRightSquare, saturationSquare, saturationRightSquare, brightnessSquare, brightnessRightSquare } from 'lib/color-canvas.js';
 import TemplateRenderer from 'lib/template-renderer.js';
 import { mitt } from 'lib/event.js';
 
