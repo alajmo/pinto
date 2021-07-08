@@ -1,15 +1,12 @@
-import { html } from 'lighterhtml';
 import './grow-input.css';
 
-export { GrowInput };
-
-function GrowInput({
+export default ({
   value,
   name,
   onclick = () => {},
   onblur = () => {},
   readonly = false,
-}) {
+}) => {
   const handleBlur = e => {
     e.target.scroll(0, 0);
     onblur(e);
@@ -33,19 +30,23 @@ function GrowInput({
     onclick(e);
   };
 
-  return html`
+  console.log('----------------------');
+  console.log(name);
+  console.log('----------------------');
+
+  return (
     <span
       class="input-grow"
-      contenteditable="${!readonly}"
+      contenteditable={!readonly}
       spellcheck="false"
       type="text"
-      name="${name}"
-      onkeydown="${handleKeyDown}"
-      onmousedown="${handleMousedown}"
-      onblur="${handleBlur}"
-      onpaste="${handlePaste}"
+      name={name}
+      onKeyDown={handleKeyDown}
+      onMouseDown={handleMousedown}
+      onBlur={handleBlur}
+      onPaste={handlePaste}
     >
-      ${value}
+      {value}
     </span>
-  `;
-}
+  );
+};

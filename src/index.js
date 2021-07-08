@@ -1,8 +1,8 @@
 import '@fortawesome/fontawesome-free/css/all.css';
 import 'style/base.css';
 
-import { render } from 'lighterhtml';
-import { App } from 'components/app/app.js';
+import { render } from 'solid-js/web';
+import { App } from 'components/app/app.jsx';
 import { CreateStore } from 'state/store.js';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -14,8 +14,10 @@ async function main() {
 
   async function init() {
     const Store = await CreateStore();
-    const { element, onRenderComplete } = App(Store);
-    render(document.body, element);
-    onRenderComplete();
+    const app = App(Store);
+
+    render(() => app, document.body);
+    const appLoader = document.getElementById('app-loader');
+    appLoader.remove();
   }
 }

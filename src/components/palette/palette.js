@@ -2,7 +2,7 @@ import { html } from 'lighterhtml';
 
 import './palette.css';
 import { mitt } from 'lib/event.js';
-import { GrowInput } from 'components/grow-input/grow-input.js';
+import GrowInput from 'components/grow-input/grow-input.jsx';
 
 export { PaletteView, PaletteTemplate };
 

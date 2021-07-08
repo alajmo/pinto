@@ -1,9 +1,9 @@
-import './app.css';
+import { render } from 'solid-js/web';
+import { createSignal, createState } from "solid-js";
 
-import { render, html } from 'lighterhtml';
 import { FullscreenPreviewView, FullscreenPreviewTemplate, } from 'components/fullscreen-preview/fullscreen-preview.js';
-import { ToolbarView, ToolbarTemplate } from 'components/toolbar/toolbar.js';
-import { SidebarView, SidebarTemplate } from 'components/sidebar/sidebar.js';
+import Toolbar from 'components/toolbar/toolbar.jsx';
+import Sidebar from 'components/sidebar/sidebar.jsx';
 import { KeywordFormView, KeywordFormTemplate, } from 'components/keyword-form/keyword-form.js';
 import { PaletteFormView, PaletteFormTemplate, } from 'components/palette-form/palette-form.js';
 import { EditorSettingsView, EditorSettingsTemplate, } from 'components/editor-settings/editor-settings.js';
@@ -15,36 +15,70 @@ import { ExportModalView, ExportModalTemplate, } from 'components/export-modal/e
 import { ManageGroupsView, ManageGroupsTemplate, } from 'components/manage-groups/manage-groups.js';
 import { AboutView, AboutTemplate } from 'components/about/about.js';
 import { compose } from 'lib/util.js';
-import { redSquare, redRightSquare, greenSquare, greenRightSquare, blueSquare, blueRightSquare, hueSquare, hueRightSquare, saturationSquare, saturationRightSquare, brightnessSquare, brightnessRightSquare } from 'lib/color-canvas.js';
+import * as square from 'lib/color-canvas.js';
 import TemplateRenderer from 'lib/template-renderer.js';
 import { mitt } from 'lib/event.js';
 
+import './app.css';
+
 export { App };
 
-function App(Store) {
-  const element = html.node`<div id="app" class="app"></div>`;
-
-  // Misc
-  const toolbarElement = html.node`<div></div>`;
-
-  // Column 1
-  const sidebarElement = html.node`<div class="column-1"></div>`;
-
-  // Column 2
-  const keywordElement = html.node`<div class="column-2"></div>`;
-  const settingsElement = html.node`<div class="column-2"></div>`;
-  const paletteElement = html.node`<div class="column-2"></div>`;
-  const colorsElement = html.node`<div class="column-2"></div>`;
-
-  // Column 3
-  const themePreviewElement = html.node`<div class="column-3"></div>`;
-  const exportThemePreviewElement = html.node`<div class="column-3"></div>`;
-
-  // Misc
-  const modalElement = html.node`<div></div>`;
-  const fullscreenPreviewElement = html.node`<div></div>`;
+function App(store) {
+  const { state: kaka } = store.get();
 
   const templateRenderer = TemplateRenderer();
+
+  const [state, setState] = createState({
+    app: kaka.app,
+    picker: kaka.picker,
+    theme: kaka.theme,
+  });
+
+  mitt.on('RENDER', options => {
+    // console.log('RENDER');
+
+    const kaka = store.getState();
+
+    setState({
+      app: {...kaka.app},
+      picker: kaka.picker,
+      theme: {...kaka.theme},
+    });
+
+    console.log('----------------------');
+    console.log(kaka.theme.name);
+    console.log(state.theme.name);
+    console.log('----------------------');
+
+    // renderers.forEach(fn => fn(state, Store, options));
+  });
+
+  const app = (
+    <div>
+      <div class="app-content">
+        <div class="row-1">
+          <div class="column">
+            <Toolbar store={store} state={state} />
+          </div>
+        </div>
+
+        <div class="row-2">
+          <Sidebar store={store} state={state} />
+        </div>
+        </div>
+    </div>
+  );
+
+  return app;
+
+
+
+
+
+
+
+
+
 
   main();
 
@@ -233,66 +267,66 @@ function App(Store) {
     let leftData, rightData;
     switch (state.picker.selectedColorAttribute) {
       case 'red':
-        leftData = redSquare({
+        leftData = square.redSquare({
           elementId: 'color-cube-2d',
           red: state.picker.red,
         });
-        rightData = redRightSquare({
+        rightData = square.redRightSquare({
           elementId: 'color-cube-1d',
           green: state.picker.green,
           blue: state.picker.blue,
         });
         break;
       case 'green':
-        leftData = greenSquare({
+        leftData = square.greenSquare({
           elementId: 'color-cube-2d',
           green: state.picker.green,
         });
-        rightData = greenRightSquare({
+        rightData = square.greenRightSquare({
           elementId: 'color-cube-1d',
           red: state.picker.red,
           blue: state.picker.blue,
         });
         break;
       case 'blue':
-        leftData = blueSquare({
+        leftData = square.blueSquare({
           elementId: 'color-cube-2d',
           blue: state.picker.blue,
         });
-        rightData = blueRightSquare({
+        rightData = square.blueRightSquare({
           elementId: 'color-cube-1d',
           red: state.picker.red,
           green: state.picker.green,
         });
         break;
       case 'hue':
-        leftData = hueSquare({
+        leftData = square.hueSquare({
           elementId: 'color-cube-2d',
           hue: state.picker.hue,
         });
-        rightData = hueRightSquare({
+        rightData = square.hueRightSquare({
           elementId: 'color-cube-1d',
           saturation: 100,
           brightness: 100,
         });
         break;
       case 'saturation':
-        leftData = saturationSquare({
+        leftData = square.saturationSquare({
           elementId: 'color-cube-2d',
           saturation: state.picker.saturation,
         });
-        rightData = saturationRightSquare({
+        rightData = square.saturationRightSquare({
           elementId: 'color-cube-1d',
           hue: state.picker.hue,
           brightness: state.picker.brightness,
         });
         break;
       case 'brightness':
-        leftData = brightnessSquare({
+        leftData = square.brightnessSquare({
           elementId: 'color-cube-2d',
           brightness: state.picker.brightness,
         });
-        rightData = brightnessRightSquare({
+        rightData = square.brightnessRightSquare({
           elementId: 'color-cube-1d',
           hue: state.picker.hue,
           saturation: state.picker.saturation,
