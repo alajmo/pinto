@@ -1,0 +1,172 @@
+<span title="LineNr "class="LineNr first-LineNr">1</span>  <span title="goDirective "class="goDirective">package</span><span title="Normal "class="Normal"> btree
+</span><span title="LineNr "class="LineNr">2</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">3</span>  <span title="goDirective "class="goDirective">import</span><span title="Normal "class="Normal"> (
+</span><span title="LineNr "class="LineNr">4</span>  <span title="Normal "class="Normal">	</span><span title="goString "class="goString">&quot;fmt&quot;
+</span><span title="LineNr "class="LineNr">5</span>  <span title="Normal "class="Normal">	</span><span title="goString "class="goString">&quot;io&quot;
+</span><span title="LineNr "class="LineNr">6</span>  <span title="Normal "class="Normal">	</span><span title="goString "class="goString">&quot;sort&quot;
+</span><span title="LineNr "class="LineNr">7</span>  <span title="Normal "class="Normal">	</span><span title="goString "class="goString">&quot;strings&quot;
+</span><span title="LineNr "class="LineNr">8</span>  <span title="Normal "class="Normal">	</span><span title="goString "class="goString">&quot;sync&quot;
+</span><span title="LineNr "class="LineNr">9</span>  <span title="Normal "class="Normal">)
+</span><span title="LineNr "class="LineNr">10</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">11</span>  <span title="goComment "class="goComment">// Item represents a single object in the tree.
+</span><span title="LineNr "class="LineNr">12</span>  <span title="goDeclaration "class="goDeclaration">type</span><span title="Normal "class="Normal"> Item </span><span title="goDeclType "class="goDeclType">interface</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">13</span>  <span title="Normal "class="Normal">	</span><span title="goComment "class="goComment">// Less tests whether the current item is less than the given argument.
+</span><span title="LineNr "class="LineNr">14</span>  <span title="Normal "class="Normal">	</span><span title="goComment "class="goComment">//
+</span><span title="LineNr "class="LineNr">15</span>  <span title="Normal "class="Normal">	</span><span title="goComment "class="goComment">// This must provide a strict weak ordering.
+</span><span title="LineNr "class="LineNr">16</span>  <span title="Normal "class="Normal">	</span><span title="goComment "class="goComment">// If !a.Less(b) &amp;&amp; !b.Less(a), we treat this to mean a &#61;&#61; b (i.e. we can only
+</span><span title="LineNr "class="LineNr">17</span>  <span title="Normal "class="Normal">	</span><span title="goComment "class="goComment">// hold one of either a or b in the tree).
+</span><span title="LineNr "class="LineNr">18</span>  <span title="Normal "class="Normal">	Less(than Item) </span><span title="goType "class="goType">bool
+</span><span title="LineNr "class="LineNr">19</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">20</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">21</span>  <span title="goDeclaration "class="goDeclaration">const</span><span title="Normal "class="Normal"> (
+</span><span title="LineNr "class="LineNr">22</span>  <span title="Normal "class="Normal">	DefaultFreeListSize &#61; </span><span title="goDecimalInt "class="goDecimalInt">32
+</span><span title="LineNr "class="LineNr">23</span>  <span title="Normal "class="Normal">)
+</span><span title="LineNr "class="LineNr">24</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">25</span>  <span title="goDeclaration "class="goDeclaration">var</span><span title="Normal "class="Normal"> (
+</span><span title="LineNr "class="LineNr">26</span>  <span title="Normal "class="Normal">	nilItems    &#61; </span><span title="goBuiltins "class="goBuiltins">make</span><span title="Normal "class="Normal">(items, </span><span title="goDecimalInt "class="goDecimalInt">16</span><span title="Normal "class="Normal">)
+</span><span title="LineNr "class="LineNr">27</span>  <span title="Normal "class="Normal">	nilChildren &#61; </span><span title="goBuiltins "class="goBuiltins">make</span><span title="Normal "class="Normal">(children, </span><span title="goDecimalInt "class="goDecimalInt">16</span><span title="Normal "class="Normal">)
+</span><span title="LineNr "class="LineNr">28</span>  <span title="Normal "class="Normal">)
+</span><span title="LineNr "class="LineNr">29</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">30</span>  <span title="goDeclaration "class="goDeclaration">func</span><span title="Normal "class="Normal"> (f *FreeList) newNode() (n *node) {
+</span><span title="LineNr "class="LineNr">31</span>  <span title="Normal "class="Normal">	f.mu.Lock()
+</span><span title="LineNr "class="LineNr">32</span>  <span title="Normal "class="Normal">	index :&#61; </span><span title="goBuiltins "class="goBuiltins">len</span><span title="Normal "class="Normal">(f.freelist) - </span><span title="goDecimalInt "class="goDecimalInt">1
+</span><span title="LineNr "class="LineNr">33</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> index &lt; </span><span title="goDecimalInt "class="goDecimalInt">0</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">34</span>  <span title="Normal "class="Normal">		f.mu.Unlock()
+</span><span title="LineNr "class="LineNr">35</span>  <span title="Normal "class="Normal">		</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> </span><span title="goBuiltins "class="goBuiltins">new</span><span title="Normal "class="Normal">(node)
+</span><span title="LineNr "class="LineNr">36</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">37</span>  <span title="Normal "class="Normal">	n &#61; f.freelist[index]
+</span><span title="LineNr "class="LineNr">38</span>  <span title="Normal "class="Normal">	f.freelist[index] &#61; </span><span title="goConstants "class="goConstants">nil
+</span><span title="LineNr "class="LineNr">39</span>  <span title="Normal "class="Normal">	f.freelist &#61; f.freelist[:index]
+</span><span title="LineNr "class="LineNr">40</span>  <span title="Normal "class="Normal">	f.mu.Unlock()
+</span><span title="LineNr "class="LineNr">41</span>  <span title="Normal "class="Normal">	</span><span title="goStatement "class="goStatement">return
+</span><span title="LineNr "class="LineNr">42</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">43</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">44</span>  <span title="goComment "class="goComment">// NewWithFreeList creates a new B-Tree that uses the given node free list.
+</span><span title="LineNr "class="LineNr">45</span>  <span title="goDeclaration "class="goDeclaration">func</span><span title="Normal "class="Normal"> NewWithFreeList(degree </span><span title="goSignedInts "class="goSignedInts">int</span><span title="Normal "class="Normal">, f *FreeList) *BTree {
+</span><span title="LineNr "class="LineNr">46</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> degree &lt;&#61; </span><span title="goDecimalInt "class="goDecimalInt">1</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">47</span>  <span title="Normal "class="Normal">		</span><span title="goBuiltins "class="goBuiltins">panic</span><span title="Normal "class="Normal">(</span><span title="goString "class="goString">&quot;bad degree&quot;</span><span title="Normal "class="Normal">)
+</span><span title="LineNr "class="LineNr">48</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">49</span>  <span title="Normal "class="Normal">	</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> &amp;BTree{
+</span><span title="LineNr "class="LineNr">50</span>  <span title="Normal "class="Normal">		degree: degree,
+</span><span title="LineNr "class="LineNr">51</span>  <span title="Normal "class="Normal">		cow:    &amp;copyOnWriteContext{freelist: f},
+</span><span title="LineNr "class="LineNr">52</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">53</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">54</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">55</span>  <span title="goComment "class="goComment">// node is an internal node in a tree.
+</span><span title="LineNr "class="LineNr">56</span>  <span title="goComment "class="goComment">//
+</span><span title="LineNr "class="LineNr">57</span>  <span title="goComment "class="goComment">// It must at all times maintain the invariant that either
+</span><span title="LineNr "class="LineNr">58</span>  <span title="goComment "class="goComment">//   * len(children) &#61;&#61; 0, len(items) unconstrained
+</span><span title="LineNr "class="LineNr">59</span>  <span title="goComment "class="goComment">//   * len(children) &#61;&#61; len(items) + 1
+</span><span title="LineNr "class="LineNr">60</span>  <span title="goDeclaration "class="goDeclaration">type</span><span title="Normal "class="Normal"> node </span><span title="goDeclType "class="goDeclType">struct</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">61</span>  <span title="Normal "class="Normal">	items    items
+</span><span title="LineNr "class="LineNr">62</span>  <span title="Normal "class="Normal">	children children
+</span><span title="LineNr "class="LineNr">63</span>  <span title="Normal "class="Normal">	cow      *copyOnWriteContext
+</span><span title="LineNr "class="LineNr">64</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">65</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">66</span>  <span title="goDeclaration "class="goDeclaration">func</span><span title="Normal "class="Normal"> (n *node) mutableFor(cow *copyOnWriteContext) *node {
+</span><span title="LineNr "class="LineNr">67</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> n.cow &#61;&#61; cow {
+</span><span title="LineNr "class="LineNr">68</span>  <span title="Normal "class="Normal">		</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> n
+</span><span title="LineNr "class="LineNr">69</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">70</span>  <span title="Normal "class="Normal">	out :&#61; cow.newNode()
+</span><span title="LineNr "class="LineNr">71</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> </span><span title="goBuiltins "class="goBuiltins">cap</span><span title="Normal "class="Normal">(out.items) &gt;&#61; </span><span title="goBuiltins "class="goBuiltins">len</span><span title="Normal "class="Normal">(n.items) {
+</span><span title="LineNr "class="LineNr">72</span>  <span title="Normal "class="Normal">		out.items &#61; out.items[:</span><span title="goBuiltins "class="goBuiltins">len</span><span title="Normal "class="Normal">(n.items)]
+</span><span title="LineNr "class="LineNr">73</span>  <span title="Normal "class="Normal">	} </span><span title="goConditional "class="goConditional">else</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">74</span>  <span title="Normal "class="Normal">		out.items &#61; </span><span title="goBuiltins "class="goBuiltins">make</span><span title="Normal "class="Normal">(items, </span><span title="goBuiltins "class="goBuiltins">len</span><span title="Normal "class="Normal">(n.items), </span><span title="goBuiltins "class="goBuiltins">cap</span><span title="Normal "class="Normal">(n.items))
+</span><span title="LineNr "class="LineNr">75</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">76</span>  <span title="Normal "class="Normal">	</span><span title="goBuiltins "class="goBuiltins">copy</span><span title="Normal "class="Normal">(out.items, n.items)
+</span><span title="LineNr "class="LineNr">77</span>  <span title="Normal "class="Normal">	</span><span title="goComment "class="goComment">// Copy children
+</span><span title="LineNr "class="LineNr">78</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> </span><span title="goBuiltins "class="goBuiltins">cap</span><span title="Normal "class="Normal">(out.children) &gt;&#61; </span><span title="goBuiltins "class="goBuiltins">len</span><span title="Normal "class="Normal">(n.children) {
+</span><span title="LineNr "class="LineNr">79</span>  <span title="Normal "class="Normal">		out.children &#61; out.children[:</span><span title="goBuiltins "class="goBuiltins">len</span><span title="Normal "class="Normal">(n.children)]
+</span><span title="LineNr "class="LineNr">80</span>  <span title="Normal "class="Normal">	} </span><span title="goConditional "class="goConditional">else</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">81</span>  <span title="Normal "class="Normal">		out.children &#61; </span><span title="goBuiltins "class="goBuiltins">make</span><span title="Normal "class="Normal">(children, </span><span title="goBuiltins "class="goBuiltins">len</span><span title="Normal "class="Normal">(n.children), </span><span title="goBuiltins "class="goBuiltins">cap</span><span title="Normal "class="Normal">(n.children))
+</span><span title="LineNr "class="LineNr">82</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">83</span>  <span title="Normal "class="Normal">	</span><span title="goBuiltins "class="goBuiltins">copy</span><span title="Normal "class="Normal">(out.children, n.children)
+</span><span title="LineNr "class="LineNr">84</span>  <span title="Normal "class="Normal">	</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> out
+</span><span title="LineNr "class="LineNr">85</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">86</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">87</span>  <span title="goDeclaration "class="goDeclaration">func</span><span title="Normal "class="Normal"> (n *node) mutableChild(i </span><span title="goSignedInts "class="goSignedInts">int</span><span title="Normal "class="Normal">) *node {
+</span><span title="LineNr "class="LineNr">88</span>  <span title="Normal "class="Normal">	c :&#61; n.children[i].mutableFor(n.cow)
+</span><span title="LineNr "class="LineNr">89</span>  <span title="Normal "class="Normal">	n.children[i] &#61; c
+</span><span title="LineNr "class="LineNr">90</span>  <span title="Normal "class="Normal">	</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> c
+</span><span title="LineNr "class="LineNr">91</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">92</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">93</span>  <span title="goComment "class="goComment">// remove removes an item from the subtree rooted at this node.
+</span><span title="LineNr "class="LineNr">94</span>  <span title="goDeclaration "class="goDeclaration">func</span><span title="Normal "class="Normal"> (n *node) remove(item Item, minItems </span><span title="goSignedInts "class="goSignedInts">int</span><span title="Normal "class="Normal">, typ toRemove) Item {
+</span><span title="LineNr "class="LineNr">95</span>  <span title="Normal "class="Normal">	</span><span title="goDeclaration "class="goDeclaration">var</span><span title="Normal "class="Normal"> i </span><span title="goSignedInts "class="goSignedInts">int
+</span><span title="LineNr "class="LineNr">96</span>  <span title="Normal "class="Normal">	</span><span title="goDeclaration "class="goDeclaration">var</span><span title="Normal "class="Normal"> found </span><span title="goType "class="goType">bool
+</span><span title="LineNr "class="LineNr">97</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">switch</span><span title="Normal "class="Normal"> typ {
+</span><span title="LineNr "class="LineNr">98</span>  <span title="Normal "class="Normal">	</span><span title="goLabel "class="goLabel">case</span><span title="Normal "class="Normal"> removeMax:
+</span><span title="LineNr "class="LineNr">99</span>  <span title="Normal "class="Normal">		</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> </span><span title="goBuiltins "class="goBuiltins">len</span><span title="Normal "class="Normal">(n.children) &#61;&#61; </span><span title="goDecimalInt "class="goDecimalInt">0</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">100</span>  <span title="Normal "class="Normal">			</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> n.items.pop()
+</span><span title="LineNr "class="LineNr">101</span>  <span title="Normal "class="Normal">		}
+</span><span title="LineNr "class="LineNr">102</span>  <span title="Normal "class="Normal">		i &#61; </span><span title="goBuiltins "class="goBuiltins">len</span><span title="Normal "class="Normal">(n.items)
+</span><span title="LineNr "class="LineNr">103</span>  <span title="Normal "class="Normal">	</span><span title="goLabel "class="goLabel">case</span><span title="Normal "class="Normal"> removeMin:
+</span><span title="LineNr "class="LineNr">104</span>  <span title="Normal "class="Normal">		</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> </span><span title="goBuiltins "class="goBuiltins">len</span><span title="Normal "class="Normal">(n.children) &#61;&#61; </span><span title="goDecimalInt "class="goDecimalInt">0</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">105</span>  <span title="Normal "class="Normal">			</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> n.items.removeAt(</span><span title="goDecimalInt "class="goDecimalInt">0</span><span title="Normal "class="Normal">)
+</span><span title="LineNr "class="LineNr">106</span>  <span title="Normal "class="Normal">		}
+</span><span title="LineNr "class="LineNr">107</span>  <span title="Normal "class="Normal">		i &#61; </span><span title="goDecimalInt "class="goDecimalInt">0
+</span><span title="LineNr "class="LineNr">108</span>  <span title="Normal "class="Normal">	</span><span title="goLabel "class="goLabel">case</span><span title="Normal "class="Normal"> removeItem:
+</span><span title="LineNr "class="LineNr">109</span>  <span title="Normal "class="Normal">		i, found &#61; n.items.find(item)
+</span><span title="LineNr "class="LineNr">110</span>  <span title="Normal "class="Normal">		</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> </span><span title="goBuiltins "class="goBuiltins">len</span><span title="Normal "class="Normal">(n.children) &#61;&#61; </span><span title="goDecimalInt "class="goDecimalInt">0</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">111</span>  <span title="Normal "class="Normal">			</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> found {
+</span><span title="LineNr "class="LineNr">112</span>  <span title="Normal "class="Normal">				</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> n.items.removeAt(i)
+</span><span title="LineNr "class="LineNr">113</span>  <span title="Normal "class="Normal">			}
+</span><span title="LineNr "class="LineNr">114</span>  <span title="Normal "class="Normal">			</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> </span><span title="goConstants "class="goConstants">nil
+</span><span title="LineNr "class="LineNr">115</span>  <span title="Normal "class="Normal">		}
+</span><span title="LineNr "class="LineNr">116</span>  <span title="Normal "class="Normal">	</span><span title="goLabel "class="goLabel">default</span><span title="Normal "class="Normal">:
+</span><span title="LineNr "class="LineNr">117</span>  <span title="Normal "class="Normal">		</span><span title="goBuiltins "class="goBuiltins">panic</span><span title="Normal "class="Normal">(</span><span title="goString "class="goString">&quot;invalid type&quot;</span><span title="Normal "class="Normal">)
+</span><span title="LineNr "class="LineNr">118</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">119</span>  <span title="Normal "class="Normal">	</span><span title="goComment "class="goComment">// If we get to here, we have children.
+</span><span title="LineNr "class="LineNr">120</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> </span><span title="goBuiltins "class="goBuiltins">len</span><span title="Normal "class="Normal">(n.children[i].items) &lt;&#61; minItems {
+</span><span title="LineNr "class="LineNr">121</span>  <span title="Normal "class="Normal">		</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> n.growChildAndRemove(i, item, minItems, typ)
+</span><span title="LineNr "class="LineNr">122</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">123</span>  <span title="Normal "class="Normal">	child :&#61; n.mutableChild(i)
+</span><span title="LineNr "class="LineNr">124</span>  <span title="Normal "class="Normal">	</span><span title="goComment "class="goComment">// Either we had enough items to begin with, or we&#39;ve done some
+</span><span title="LineNr "class="LineNr">125</span>  <span title="Normal "class="Normal">	</span><span title="goComment "class="goComment">// merging/stealing, because we&#39;ve got enough now and we&#39;re ready to return
+</span><span title="LineNr "class="LineNr">126</span>  <span title="Normal "class="Normal">	</span><span title="goComment "class="goComment">// stuff.
+</span><span title="LineNr "class="LineNr">127</span>  <span title="Normal "class="Normal">	</span><span title="goConditional "class="goConditional">if</span><span title="Normal "class="Normal"> found {
+</span><span title="LineNr "class="LineNr">128</span>  <span title="Normal "class="Normal">		</span><span title="goComment "class="goComment">// The item exists at index &#39;i&#39;, and the child we&#39;ve selected can give us a
+</span><span title="LineNr "class="LineNr">129</span>  <span title="Normal "class="Normal">		</span><span title="goComment "class="goComment">// predecessor, since if we&#39;ve gotten here it&#39;s got &gt; minItems items in it.
+</span><span title="LineNr "class="LineNr">130</span>  <span title="Normal "class="Normal">		out :&#61; n.items[i]
+</span><span title="LineNr "class="LineNr">131</span>  <span title="Normal "class="Normal">		</span><span title="goComment "class="goComment">// We use our special-case &#39;remove&#39; call with typ&#61;maxItem to pull the
+</span><span title="LineNr "class="LineNr">132</span>  <span title="Normal "class="Normal">		</span><span title="goComment "class="goComment">// predecessor of item i (the rightmost leaf of our immediate left child)
+</span><span title="LineNr "class="LineNr">133</span>  <span title="Normal "class="Normal">		</span><span title="goComment "class="goComment">// and set it into where we pulled the item from.
+</span><span title="LineNr "class="LineNr">134</span>  <span title="Normal "class="Normal">		n.items[i] &#61; child.remove(</span><span title="goConstants "class="goConstants">nil</span><span title="Normal "class="Normal">, minItems, removeMax)
+</span><span title="LineNr "class="LineNr">135</span>  <span title="Normal "class="Normal">		</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> out
+</span><span title="LineNr "class="LineNr">136</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">137</span>  <span title="Normal "class="Normal">	</span><span title="goComment "class="goComment">// Final recursive call.  Once we&#39;re here, we know that the item isn&#39;t in this
+</span><span title="LineNr "class="LineNr">138</span>  <span title="Normal "class="Normal">	</span><span title="goComment "class="goComment">// node and that the child is big enough to remove from.
+</span><span title="LineNr "class="LineNr">139</span>  <span title="Normal "class="Normal">	</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> child.remove(item, minItems, typ)
+</span><span title="LineNr "class="LineNr">140</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">141</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">142</span>  <span title="goComment "class="goComment">// Used for testing/debugging purposes.
+</span><span title="LineNr "class="LineNr">143</span>  <span title="goDeclaration "class="goDeclaration">func</span><span title="Normal "class="Normal"> (n *node) </span><span title="goBuiltins "class="goBuiltins">print</span><span title="Normal "class="Normal">(w </span><span title="goExtraType "class="goExtraType">io.Writer</span><span title="Normal "class="Normal">, level </span><span title="goSignedInts "class="goSignedInts">int</span><span title="Normal "class="Normal">) {
+</span><span title="LineNr "class="LineNr">144</span>  <span title="Normal "class="Normal">	fmt.Fprintf(w, </span><span title="goString "class="goString">&quot;%sNODE:%v</span><span title="goEscapeC "class="goEscapeC">\n</span><span title="goString "class="goString">&quot;</span><span title="Normal "class="Normal">, strings.Repeat(</span><span title="goString "class="goString">&quot;  &quot;</span><span title="Normal "class="Normal">, level), n.items)
+</span><span title="LineNr "class="LineNr">145</span>  <span title="Normal "class="Normal">	</span><span title="goRepeat "class="goRepeat">for</span><span title="Normal "class="Normal"> _, c :&#61; </span><span title="goRepeat "class="goRepeat">range</span><span title="Normal "class="Normal"> n.children {
+</span><span title="LineNr "class="LineNr">146</span>  <span title="Normal "class="Normal">		c.</span><span title="goBuiltins "class="goBuiltins">print</span><span title="Normal "class="Normal">(w, level+</span><span title="goDecimalInt "class="goDecimalInt">1</span><span title="Normal "class="Normal">)
+</span><span title="LineNr "class="LineNr">147</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">148</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">149</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">150</span>  <span title="goComment "class="goComment">// BTree is an implementation of a B-Tree.
+</span><span title="LineNr "class="LineNr">151</span>  <span title="goComment "class="goComment">//
+</span><span title="LineNr "class="LineNr">152</span>  <span title="goComment "class="goComment">// BTree stores Item instances in an ordered structure, allowing easy insertion,
+</span><span title="LineNr "class="LineNr">153</span>  <span title="goComment "class="goComment">// removal, and iteration.
+</span><span title="LineNr "class="LineNr">154</span>  <span title="goComment "class="goComment">//
+</span><span title="LineNr "class="LineNr">155</span>  <span title="goComment "class="goComment">// Write operations are not safe for concurrent mutation by multiple
+</span><span title="LineNr "class="LineNr">156</span>  <span title="goComment "class="goComment">// goroutines, but Read operations are.
+</span><span title="LineNr "class="LineNr">157</span>  <span title="goDeclaration "class="goDeclaration">type</span><span title="Normal "class="Normal"> BTree </span><span title="goDeclType "class="goDeclType">struct</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">158</span>  <span title="Normal "class="Normal">	degree </span><span title="goSignedInts "class="goSignedInts">int
+</span><span title="LineNr "class="LineNr">159</span>  <span title="Normal "class="Normal">	length </span><span title="goSignedInts "class="goSignedInts">int
+</span><span title="LineNr "class="LineNr">160</span>  <span title="Normal "class="Normal">	root   *node
+</span><span title="LineNr "class="LineNr">161</span>  <span title="Normal "class="Normal">	cow    *copyOnWriteContext
+</span><span title="LineNr "class="LineNr">162</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">163</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">164</span>  <span title="goComment "class="goComment">// Has returns true if the given key is in the tree.
+</span><span title="LineNr "class="LineNr">165</span>  <span title="goDeclaration "class="goDeclaration">func</span><span title="Normal "class="Normal"> (t *BTree) Has(key Item) </span><span title="goType "class="goType">bool</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">166</span>  <span title="Normal "class="Normal">	</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> t.Get(key) !&#61; </span><span title="goConstants "class="goConstants">nil
+</span><span title="LineNr "class="LineNr">167</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">168</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">169</span>  <span title="goComment "class="goComment">// Len returns the number of items currently in the tree.
+</span><span title="LineNr "class="LineNr">170</span>  <span title="goDeclaration "class="goDeclaration">func</span><span title="Normal "class="Normal"> (t *BTree) Len() </span><span title="goSignedInts "class="goSignedInts">int</span><span title="Normal "class="Normal"> {
+</span><span title="LineNr "class="LineNr">171</span>  <span title="Normal "class="Normal">	</span><span title="goStatement "class="goStatement">return</span><span title="Normal "class="Normal"> t.length
+</span><span title="LineNr "class="LineNr last-LineNr">172</span>  <span title="Normal "class="Normal">}</span>

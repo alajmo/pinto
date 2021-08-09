@@ -89,6 +89,12 @@ async function ThemeModel() {
     });
   }
 
+  const templateUrl = await fetch(`/templates/javascript/javascript.html.txt`);
+  const template = await templateUrl.text();
+
+  const templateTextUrl = await fetch(`/templates/javascript/javascript.example.txt`);
+  const templateTxt = await templateTextUrl.text();
+
   return {
     name: 'Untitled',
     id: null,
@@ -111,8 +117,8 @@ async function ThemeModel() {
 
     keywords: keywordsData,
     defaultThemeName: 'Untitled',
-    template: (await import('templates/javascript/javascript.html.txt?raw')).default,
-    templateTxt: ( await import('templates/javascript/javascript.example.txt?raw')).default,
+    template,
+    templateTxt,
     language: 'javascript',
     groupKeywords: keywords.groupKeywords,
     keywordLinks: keywords.keywordLinks,

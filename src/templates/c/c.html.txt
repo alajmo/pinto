@@ -1,0 +1,262 @@
+<span title="LineNr "class="LineNr first-LineNr">1</span>  <span title="cInclude "class="cInclude">#include </span><span title="cIncluded "class="cIncluded">&lt;linux/btree.h&gt;
+</span><span title="LineNr "class="LineNr">2</span>  <span title="cInclude "class="cInclude">#include </span><span title="cIncluded "class="cIncluded">&lt;linux/cache.h&gt;
+</span><span title="LineNr "class="LineNr">3</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">4</span>  <span title="cDefine "class="cDefine">#define MAX(a, b) ((a) &gt; (b) ? (a) : (b))
+</span><span title="LineNr "class="LineNr">5</span>  <span title="cDefine "class="cDefine">#define NODESIZE MAX(L1_CACHE_BYTES, </span><span title="cNumber "class="cNumber">128</span><span title="cDefine "class="cDefine">)
+</span><span title="LineNr "class="LineNr">6</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">7</span>  <span title="cStructure "class="cStructure">struct</span><span title="Normal "class="Normal"> btree_geo {
+</span><span title="LineNr "class="LineNr">8</span>  <span title="Normal "class="Normal">	</span><span title="cType "class="cType">int</span><span title="Normal "class="Normal"> keylen;
+</span><span title="LineNr "class="LineNr">9</span>  <span title="Normal "class="Normal">	</span><span title="cType "class="cType">int</span><span title="Normal "class="Normal"> no_pairs;
+</span><span title="LineNr "class="LineNr">10</span>  <span title="Normal "class="Normal">	</span><span title="cType "class="cType">int</span><span title="Normal "class="Normal"> no_longs;
+</span><span title="LineNr "class="LineNr">11</span>  <span title="Normal "class="Normal">};
+</span><span title="LineNr "class="LineNr">12</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">13</span>  <span title="cStructure "class="cStructure">struct</span><span title="Normal "class="Normal"> btree_geo btree_geo32 &#61; {
+</span><span title="LineNr "class="LineNr">14</span>  <span title="Normal "class="Normal">	.keylen &#61; </span><span title="cNumber "class="cNumber">1</span><span title="Normal "class="Normal">,
+</span><span title="LineNr "class="LineNr">15</span>  <span title="Normal "class="Normal">	.no_pairs &#61; NODESIZE / </span><span title="cOperator "class="cOperator">sizeof</span><span title="Normal "class="Normal">(</span><span title="cType "class="cType">long</span><span title="Normal "class="Normal">) / </span><span title="cNumber "class="cNumber">2</span><span title="Normal "class="Normal">,
+</span><span title="LineNr "class="LineNr">16</span>  <span title="Normal "class="Normal">	.no_longs &#61; NODESIZE / </span><span title="cOperator "class="cOperator">sizeof</span><span title="Normal "class="Normal">(</span><span title="cType "class="cType">long</span><span title="Normal "class="Normal">) / </span><span title="cNumber "class="cNumber">2</span><span title="Normal "class="Normal">,
+</span><span title="LineNr "class="LineNr">17</span>  <span title="Normal "class="Normal">};
+</span><span title="LineNr "class="LineNr">18</span>  <span title="Normal "class="Normal">EXPORT_SYMBOL_GPL(btree_geo32);
+</span><span title="LineNr "class="LineNr">19</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">20</span>  <span title="cDefine "class="cDefine">#define LONG_PER_U64 (</span><span title="cNumber "class="cNumber">64</span><span title="cDefine "class="cDefine"> / BITS_PER_LONG)
+</span><span title="LineNr "class="LineNr">21</span>  <span title="cStructure "class="cStructure">struct</span><span title="Normal "class="Normal"> btree_geo btree_geo64 &#61; {
+</span><span title="LineNr "class="LineNr">22</span>  <span title="Normal "class="Normal">	.keylen &#61; LONG_PER_U64,
+</span><span title="LineNr "class="LineNr">23</span>  <span title="Normal "class="Normal">	.no_pairs &#61; NODESIZE / </span><span title="cOperator "class="cOperator">sizeof</span><span title="Normal "class="Normal">(</span><span title="cType "class="cType">long</span><span title="Normal "class="Normal">) / (</span><span title="cNumber "class="cNumber">1</span><span title="Normal "class="Normal"> + LONG_PER_U64),
+</span><span title="LineNr "class="LineNr">24</span>  <span title="Normal "class="Normal">	.no_longs &#61; LONG_PER_U64 * (NODESIZE / </span><span title="cOperator "class="cOperator">sizeof</span><span title="Normal "class="Normal">(</span><span title="cType "class="cType">long</span><span title="Normal "class="Normal">) / (</span><span title="cNumber "class="cNumber">1</span><span title="Normal "class="Normal"> + LONG_PER_U64)),
+</span><span title="LineNr "class="LineNr">25</span>  <span title="Normal "class="Normal">};
+</span><span title="LineNr "class="LineNr">26</span>  <span title="Normal "class="Normal">EXPORT_SYMBOL_GPL(btree_geo64);
+</span><span title="LineNr "class="LineNr">27</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">28</span>  <span title="cStructure "class="cStructure">struct</span><span title="Normal "class="Normal"> btree_geo btree_geo128 &#61; {
+</span><span title="LineNr "class="LineNr">29</span>  <span title="Normal "class="Normal">	.keylen &#61; </span><span title="cNumber "class="cNumber">2</span><span title="Normal "class="Normal"> * LONG_PER_U64,
+</span><span title="LineNr "class="LineNr">30</span>  <span title="Normal "class="Normal">	.no_pairs &#61; NODESIZE / </span><span title="cOperator "class="cOperator">sizeof</span><span title="Normal "class="Normal">(</span><span title="cType "class="cType">long</span><span title="Normal "class="Normal">) / (</span><span title="cNumber "class="cNumber">1</span><span title="Normal "class="Normal"> + </span><span title="cNumber "class="cNumber">2</span><span title="Normal "class="Normal"> * LONG_PER_U64),
+</span><span title="LineNr "class="LineNr">31</span>  <span title="Normal "class="Normal">	.no_longs &#61; </span><span title="cNumber "class="cNumber">2</span><span title="Normal "class="Normal"> * LONG_PER_U64 * (NODESIZE / </span><span title="cOperator "class="cOperator">sizeof</span><span title="Normal "class="Normal">(</span><span title="cType "class="cType">long</span><span title="Normal "class="Normal">) / (</span><span title="cNumber "class="cNumber">1</span><span title="Normal "class="Normal"> + </span><span title="cNumber "class="cNumber">2</span><span title="Normal "class="Normal"> * LONG_PER_U64)),
+</span><span title="LineNr "class="LineNr">32</span>  <span title="Normal "class="Normal">};
+</span><span title="LineNr "class="LineNr">33</span>  <span title="Normal "class="Normal">EXPORT_SYMBOL_GPL(btree_geo128);
+</span><span title="LineNr "class="LineNr">34</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">35</span>  <span title="cDefine "class="cDefine">#define MAX_KEYLEN	(</span><span title="cNumber "class="cNumber">2</span><span title="cDefine "class="cDefine"> * LONG_PER_U64)
+</span><span title="LineNr "class="LineNr">36</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">37</span>  <span title="cStorageClass "class="cStorageClass">static</span><span title="Normal "class="Normal"> </span><span title="cStructure "class="cStructure">struct</span><span title="Normal "class="Normal"> kmem_cache *btree_cachep;
+</span><span title="LineNr "class="LineNr">38</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">39</span>  <span title="cType "class="cType">void</span><span title="Normal "class="Normal"> *btree_alloc(gfp_t gfp_mask, </span><span title="cType "class="cType">void</span><span title="Normal "class="Normal"> *pool_data)
+</span><span title="LineNr "class="LineNr">40</span>  <span title="Normal "class="Normal">{
+</span><span title="LineNr "class="LineNr">41</span>  <span title="Normal "class="Normal">	</span><span title="cStatement "class="cStatement">return</span><span title="Normal "class="Normal"> kmem_cache_alloc(btree_cachep, gfp_mask);
+</span><span title="LineNr "class="LineNr">42</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">43</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">44</span>  <span title="cCommentStart "class="cCommentStart">/*
+</span><span title="LineNr "class="LineNr">45</span>  <span title="cComment "class="cComment"> * Usually this function is quite similar to normal lookup.  But the key of
+</span><span title="LineNr "class="LineNr">46</span>  <span title="cComment "class="cComment"> * a parent node may be smaller than the smallest key of all its siblings.
+</span><span title="LineNr "class="LineNr">47</span>  <span title="cComment "class="cComment"> * In such a case we cannot just return NULL, as we have only proven that no
+</span><span title="LineNr "class="LineNr">48</span>  <span title="cComment "class="cComment"> * key smaller than __key, but larger than this parent key exists.
+</span><span title="LineNr "class="LineNr">49</span>  <span title="cComment "class="cComment"> * So we set __key to the parent key and retry.  We have to use the smallest
+</span><span title="LineNr "class="LineNr">50</span>  <span title="cComment "class="cComment"> * such parent key, which is the last parent key we encountered.
+</span><span title="LineNr "class="LineNr">51</span>  <span title="cComment "class="cComment"> </span><span title="cCommentStart "class="cCommentStart">*/
+</span><span title="LineNr "class="LineNr">52</span>  <span title="cType "class="cType">void</span><span title="Normal "class="Normal"> *btree_get_prev(</span><span title="cStructure "class="cStructure">struct</span><span title="Normal "class="Normal"> btree_head *head, </span><span title="cStructure "class="cStructure">struct</span><span title="Normal "class="Normal"> btree_geo *geo,
+</span><span title="LineNr "class="LineNr">53</span>  <span title="Normal "class="Normal">		     </span><span title="cType "class="cType">unsigned</span><span title="Normal "class="Normal"> </span><span title="cType "class="cType">long</span><span title="Normal "class="Normal"> *__key)
+</span><span title="LineNr "class="LineNr">54</span>  <span title="Normal "class="Normal">{
+</span><span title="LineNr "class="LineNr">55</span>  <span title="Normal "class="Normal">	</span><span title="cType "class="cType">int</span><span title="Normal "class="Normal"> i, height;
+</span><span title="LineNr "class="LineNr">56</span>  <span title="Normal "class="Normal">	</span><span title="cType "class="cType">unsigned</span><span title="Normal "class="Normal"> </span><span title="cType "class="cType">long</span><span title="Normal "class="Normal"> *node, *oldnode;
+</span><span title="LineNr "class="LineNr">57</span>  <span title="Normal "class="Normal">	</span><span title="cType "class="cType">unsigned</span><span title="Normal "class="Normal"> </span><span title="cType "class="cType">long</span><span title="Normal "class="Normal"> *retry_key &#61; </span><span title="cConstant "class="cConstant">NULL</span><span title="Normal "class="Normal">, key[MAX_KEYLEN];
+</span><span title="LineNr "class="LineNr">58</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">59</span>  <span title="Normal "class="Normal">	</span><span title="cConditional "class="cConditional">if</span><span title="Normal "class="Normal"> (keyzero(geo, __key))
+</span><span title="LineNr "class="LineNr">60</span>  <span title="Normal "class="Normal">		</span><span title="cStatement "class="cStatement">return</span><span title="Normal "class="Normal"> </span><span title="cConstant "class="cConstant">NULL</span><span title="Normal "class="Normal">;
+</span><span title="LineNr "class="LineNr">61</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">62</span>  <span title="Normal "class="Normal">	</span><span title="cConditional "class="cConditional">if</span><span title="Normal "class="Normal"> (head-&gt;height &#61;&#61; </span><span title="cNumber "class="cNumber">0</span><span title="Normal "class="Normal">)
+</span><span title="LineNr "class="LineNr">63</span>  <span title="Normal "class="Normal">		</span><span title="cStatement "class="cStatement">return</span><span title="Normal "class="Normal"> </span><span title="cConstant "class="cConstant">NULL</span><span title="Normal "class="Normal">;
+</span><span title="LineNr "class="LineNr">64</span>  <span title="Normal "class="Normal">	longcpy(key, __key, geo-&gt;keylen);
+</span><span title="LineNr "class="LineNr">65</span>  <span title="cUserLabel "class="cUserLabel">retry</span><span title="cUserCont "class="cUserCont">:
+</span><span title="LineNr "class="LineNr">66</span>  <span title="Normal "class="Normal">	dec_key(geo, key);
+</span><span title="LineNr "class="LineNr">67</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">68</span>  <span title="Normal "class="Normal">	node &#61; head-&gt;node;
+</span><span title="LineNr "class="LineNr">69</span>  <span title="Normal "class="Normal">	</span><span title="cRepeat "class="cRepeat">for</span><span title="Normal "class="Normal"> (height &#61; head-&gt;height ; height &gt; </span><span title="cNumber "class="cNumber">1</span><span title="Normal "class="Normal">; height--) {
+</span><span title="LineNr "class="LineNr">70</span>  <span title="Normal "class="Normal">		</span><span title="cRepeat "class="cRepeat">for</span><span title="Normal "class="Normal"> (i &#61; </span><span title="cNumber "class="cNumber">0</span><span title="Normal "class="Normal">; i &lt; geo-&gt;no_pairs; i++)
+</span><span title="LineNr "class="LineNr">71</span>  <span title="Normal "class="Normal">			</span><span title="cConditional "class="cConditional">if</span><span title="Normal "class="Normal"> (keycmp(geo, node, i, key) &lt;&#61; </span><span title="cNumber "class="cNumber">0</span><span title="Normal "class="Normal">)
+</span><span title="LineNr "class="LineNr">72</span>  <span title="Normal "class="Normal">				</span><span title="cStatement "class="cStatement">break</span><span title="Normal "class="Normal">;
+</span><span title="LineNr "class="LineNr">73</span>  <span title="Normal "class="Normal">		</span><span title="cConditional "class="cConditional">if</span><span title="Normal "class="Normal"> (i &#61;&#61; geo-&gt;no_pairs)
+</span><span title="LineNr "class="LineNr">74</span>  <span title="Normal "class="Normal">			</span><span title="cStatement "class="cStatement">goto</span><span title="Normal "class="Normal"> miss;
+</span><span title="LineNr "class="LineNr">75</span>  <span title="Normal "class="Normal">		oldnode &#61; node;
+</span><span title="LineNr "class="LineNr">76</span>  <span title="Normal "class="Normal">		node &#61; bval(geo, node, i);
+</span><span title="LineNr "class="LineNr">77</span>  <span title="Normal "class="Normal">		</span><span title="cConditional "class="cConditional">if</span><span title="Normal "class="Normal"> (!node)
+</span><span title="LineNr "class="LineNr">78</span>  <span title="Normal "class="Normal">			</span><span title="cStatement "class="cStatement">goto</span><span title="Normal "class="Normal"> miss;
+</span><span title="LineNr "class="LineNr">79</span>  <span title="Normal "class="Normal">		retry_key &#61; bkey(geo, oldnode, i);
+</span><span title="LineNr "class="LineNr">80</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">81</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">82</span>  <span title="Normal "class="Normal">	</span><span title="cConditional "class="cConditional">if</span><span title="Normal "class="Normal"> (!node)
+</span><span title="LineNr "class="LineNr">83</span>  <span title="Normal "class="Normal">		</span><span title="cStatement "class="cStatement">goto</span><span title="Normal "class="Normal"> miss;
+</span><span title="LineNr "class="LineNr">84</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">85</span>  <span title="Normal "class="Normal">	</span><span title="cRepeat "class="cRepeat">for</span><span title="Normal "class="Normal"> (i &#61; </span><span title="cNumber "class="cNumber">0</span><span title="Normal "class="Normal">; i &lt; geo-&gt;no_pairs; i++) {
+</span><span title="LineNr "class="LineNr">86</span>  <span title="Normal "class="Normal">		</span><span title="cConditional "class="cConditional">if</span><span title="Normal "class="Normal"> (keycmp(geo, node, i, key) &lt;&#61; </span><span title="cNumber "class="cNumber">0</span><span title="Normal "class="Normal">) {
+</span><span title="LineNr "class="LineNr">87</span>  <span title="Normal "class="Normal">			</span><span title="cConditional "class="cConditional">if</span><span title="Normal "class="Normal"> (bval(geo, node, i)) {
+</span><span title="LineNr "class="LineNr">88</span>  <span title="Normal "class="Normal">				longcpy(__key, bkey(geo, node, i), geo-&gt;keylen);
+</span><span title="LineNr "class="LineNr">89</span>  <span title="Normal "class="Normal">				</span><span title="cStatement "class="cStatement">return</span><span title="Normal "class="Normal"> bval(geo, node, i);
+</span><span title="LineNr "class="LineNr">90</span>  <span title="Normal "class="Normal">			} </span><span title="cConditional "class="cConditional">else
+</span><span title="LineNr "class="LineNr">91</span>  <span title="Normal "class="Normal">				</span><span title="cStatement "class="cStatement">goto</span><span title="Normal "class="Normal"> miss;
+</span><span title="LineNr "class="LineNr">92</span>  <span title="Normal "class="Normal">		}
+</span><span title="LineNr "class="LineNr">93</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">94</span>  <span title="cUserLabel "class="cUserLabel">miss</span><span title="cUserCont "class="cUserCont">:
+</span><span title="LineNr "class="LineNr">95</span>  <span title="Normal "class="Normal">	</span><span title="cConditional "class="cConditional">if</span><span title="Normal "class="Normal"> (retry_key) {
+</span><span title="LineNr "class="LineNr">96</span>  <span title="Normal "class="Normal">		longcpy(key, retry_key, geo-&gt;keylen);
+</span><span title="LineNr "class="LineNr">97</span>  <span title="Normal "class="Normal">		retry_key &#61; </span><span title="cConstant "class="cConstant">NULL</span><span title="Normal "class="Normal">;
+</span><span title="LineNr "class="LineNr">98</span>  <span title="Normal "class="Normal">		</span><span title="cStatement "class="cStatement">goto</span><span title="Normal "class="Normal"> retry;
+</span><span title="LineNr "class="LineNr">99</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">100</span>  <span title="Normal "class="Normal">	</span><span title="cStatement "class="cStatement">return</span><span title="Normal "class="Normal"> </span><span title="cConstant "class="cConstant">NULL</span><span title="Normal "class="Normal">;
+</span><span title="LineNr "class="LineNr">101</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">102</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">103</span>  <span title="cStorageClass "class="cStorageClass">static</span><span title="Normal "class="Normal"> </span><span title="cType "class="cType">void</span><span title="Normal "class="Normal"> *btree_remove_level(</span><span title="cStructure "class="cStructure">struct</span><span title="Normal "class="Normal"> btree_head *head, </span><span title="cStructure "class="cStructure">struct</span><span title="Normal "class="Normal"> btree_geo *geo,
+</span><span title="LineNr "class="LineNr">104</span>  <span title="Normal "class="Normal">		</span><span title="cType "class="cType">unsigned</span><span title="Normal "class="Normal"> </span><span title="cType "class="cType">long</span><span title="Normal "class="Normal"> *key, </span><span title="cType "class="cType">int</span><span title="Normal "class="Normal"> level)
+</span><span title="LineNr "class="LineNr">105</span>  <span title="Normal "class="Normal">{
+</span><span title="LineNr "class="LineNr">106</span>  <span title="Normal "class="Normal">	</span><span title="cType "class="cType">unsigned</span><span title="Normal "class="Normal"> </span><span title="cType "class="cType">long</span><span title="Normal "class="Normal"> *node;
+</span><span title="LineNr "class="LineNr">107</span>  <span title="Normal "class="Normal">	</span><span title="cType "class="cType">int</span><span title="Normal "class="Normal"> i, pos, fill;
+</span><span title="LineNr "class="LineNr">108</span>  <span title="Normal "class="Normal">	</span><span title="cType "class="cType">void</span><span title="Normal "class="Normal"> *ret;
+</span><span title="LineNr "class="LineNr">109</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">110</span>  <span title="Normal "class="Normal">	</span><span title="cConditional "class="cConditional">if</span><span title="Normal "class="Normal"> (level &gt; head-&gt;height) {
+</span><span title="LineNr "class="LineNr">111</span>  <span title="Normal "class="Normal">		</span><span title="cCommentStart "class="cCommentStart">/*</span><span title="cComment "class="cComment"> we recursed all the way up </span><span title="cCommentStart "class="cCommentStart">*/
+</span><span title="LineNr "class="LineNr">112</span>  <span title="Normal "class="Normal">		head-&gt;height &#61; </span><span title="cNumber "class="cNumber">0</span><span title="Normal "class="Normal">;
+</span><span title="LineNr "class="LineNr">113</span>  <span title="Normal "class="Normal">		head-&gt;node &#61; </span><span title="cConstant "class="cConstant">NULL</span><span title="Normal "class="Normal">;
+</span><span title="LineNr "class="LineNr">114</span>  <span title="Normal "class="Normal">		</span><span title="cStatement "class="cStatement">return</span><span title="Normal "class="Normal"> </span><span title="cConstant "class="cConstant">NULL</span><span title="Normal "class="Normal">;
+</span><span title="LineNr "class="LineNr">115</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">116</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">117</span>  <span title="Normal "class="Normal">	node &#61; find_level(head, geo, key, level);
+</span><span title="LineNr "class="LineNr">118</span>  <span title="Normal "class="Normal">	pos &#61; getpos(geo, node, key);
+</span><span title="LineNr "class="LineNr">119</span>  <span title="Normal "class="Normal">	fill &#61; getfill(geo, node, pos);
+</span><span title="LineNr "class="LineNr">120</span>  <span title="Normal "class="Normal">	</span><span title="cConditional "class="cConditional">if</span><span title="Normal "class="Normal"> ((level &#61;&#61; </span><span title="cNumber "class="cNumber">1</span><span title="Normal "class="Normal">) &amp;&amp; (keycmp(geo, node, pos, key) !&#61; </span><span title="cNumber "class="cNumber">0</span><span title="Normal "class="Normal">))
+</span><span title="LineNr "class="LineNr">121</span>  <span title="Normal "class="Normal">		</span><span title="cStatement "class="cStatement">return</span><span title="Normal "class="Normal"> </span><span title="cConstant "class="cConstant">NULL</span><span title="Normal "class="Normal">;
+</span><span title="LineNr "class="LineNr">122</span>  <span title="Normal "class="Normal">	ret &#61; bval(geo, node, pos);
+</span><span title="LineNr "class="LineNr">123</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">124</span>  <span title="Normal "class="Normal">	</span><span title="cCommentStart "class="cCommentStart">/*</span><span title="cComment "class="cComment"> remove and shift </span><span title="cCommentStart "class="cCommentStart">*/
+</span><span title="LineNr "class="LineNr">125</span>  <span title="Normal "class="Normal">	</span><span title="cRepeat "class="cRepeat">for</span><span title="Normal "class="Normal"> (i &#61; pos; i &lt; fill - </span><span title="cNumber "class="cNumber">1</span><span title="Normal "class="Normal">; i++) {
+</span><span title="LineNr "class="LineNr">126</span>  <span title="Normal "class="Normal">		setkey(geo, node, i, bkey(geo, node, i + </span><span title="cNumber "class="cNumber">1</span><span title="Normal "class="Normal">));
+</span><span title="LineNr "class="LineNr">127</span>  <span title="Normal "class="Normal">		setval(geo, node, i, bval(geo, node, i + </span><span title="cNumber "class="cNumber">1</span><span title="Normal "class="Normal">));
+</span><span title="LineNr "class="LineNr">128</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">129</span>  <span title="Normal "class="Normal">	clearpair(geo, node, fill - </span><span title="cNumber "class="cNumber">1</span><span title="Normal "class="Normal">);
+</span><span title="LineNr "class="LineNr">130</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">131</span>  <span title="Normal "class="Normal">	</span><span title="cConditional "class="cConditional">if</span><span title="Normal "class="Normal"> (fill - </span><span title="cNumber "class="cNumber">1</span><span title="Normal "class="Normal"> &lt; geo-&gt;no_pairs / </span><span title="cNumber "class="cNumber">2</span><span title="Normal "class="Normal">) {
+</span><span title="LineNr "class="LineNr">132</span>  <span title="Normal "class="Normal">		</span><span title="cConditional "class="cConditional">if</span><span title="Normal "class="Normal"> (level &lt; head-&gt;height)
+</span><span title="LineNr "class="LineNr">133</span>  <span title="Normal "class="Normal">			rebalance(head, geo, key, level, node, fill - </span><span title="cNumber "class="cNumber">1</span><span title="Normal "class="Normal">);
+</span><span title="LineNr "class="LineNr">134</span>  <span title="Normal "class="Normal">		</span><span title="cConditional "class="cConditional">else</span><span title="Normal "class="Normal"> </span><span title="cConditional "class="cConditional">if</span><span title="Normal "class="Normal"> (fill - </span><span title="cNumber "class="cNumber">1</span><span title="Normal "class="Normal"> &#61;&#61; </span><span title="cNumber "class="cNumber">1</span><span title="Normal "class="Normal">)
+</span><span title="LineNr "class="LineNr">135</span>  <span title="Normal "class="Normal">			btree_shrink(head, geo);
+</span><span title="LineNr "class="LineNr">136</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">137</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">138</span>  <span title="Normal "class="Normal">	</span><span title="cStatement "class="cStatement">return</span><span title="Normal "class="Normal"> ret;
+</span><span title="LineNr "class="LineNr">139</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">140</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">141</span>  <span title="cType "class="cType">void</span><span title="Normal "class="Normal"> *btree_remove(</span><span title="cStructure "class="cStructure">struct</span><span title="Normal "class="Normal"> btree_head *head, </span><span title="cStructure "class="cStructure">struct</span><span title="Normal "class="Normal"> btree_geo *geo,
+</span><span title="LineNr "class="LineNr">142</span>  <span title="Normal "class="Normal">		</span><span title="cType "class="cType">unsigned</span><span title="Normal "class="Normal"> </span><span title="cType "class="cType">long</span><span title="Normal "class="Normal"> *key)
+</span><span title="LineNr "class="LineNr">143</span>  <span title="Normal "class="Normal">{
+</span><span title="LineNr "class="LineNr">144</span>  <span title="Normal "class="Normal">	</span><span title="cConditional "class="cConditional">if</span><span title="Normal "class="Normal"> (head-&gt;height &#61;&#61; </span><span title="cNumber "class="cNumber">0</span><span title="Normal "class="Normal">)
+</span><span title="LineNr "class="LineNr">145</span>  <span title="Normal "class="Normal">		</span><span title="cStatement "class="cStatement">return</span><span title="Normal "class="Normal"> </span><span title="cConstant "class="cConstant">NULL</span><span title="Normal "class="Normal">;
+</span><span title="LineNr "class="LineNr">146</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">147</span>  <span title="Normal "class="Normal">	</span><span title="cStatement "class="cStatement">return</span><span title="Normal "class="Normal"> btree_remove_level(head, geo, key, </span><span title="cNumber "class="cNumber">1</span><span title="Normal "class="Normal">);
+</span><span title="LineNr "class="LineNr">148</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">149</span>  <span title="Normal "class="Normal">EXPORT_SYMBOL_GPL(btree_remove);
+</span><span title="LineNr "class="LineNr">150</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">151</span>  <span title="cType "class="cType">int</span><span title="Normal "class="Normal"> btree_merge(</span><span title="cStructure "class="cStructure">struct</span><span title="Normal "class="Normal"> btree_head *target, </span><span title="cStructure "class="cStructure">struct</span><span title="Normal "class="Normal"> btree_head *victim,
+</span><span title="LineNr "class="LineNr">152</span>  <span title="Normal "class="Normal">		</span><span title="cStructure "class="cStructure">struct</span><span title="Normal "class="Normal"> btree_geo *geo, gfp_t gfp)
+</span><span title="LineNr "class="LineNr">153</span>  <span title="Normal "class="Normal">{
+</span><span title="LineNr "class="LineNr">154</span>  <span title="Normal "class="Normal">	</span><span title="cType "class="cType">unsigned</span><span title="Normal "class="Normal"> </span><span title="cType "class="cType">long</span><span title="Normal "class="Normal"> key[MAX_KEYLEN];
+</span><span title="LineNr "class="LineNr">155</span>  <span title="Normal "class="Normal">	</span><span title="cType "class="cType">unsigned</span><span title="Normal "class="Normal"> </span><span title="cType "class="cType">long</span><span title="Normal "class="Normal"> dup[MAX_KEYLEN];
+</span><span title="LineNr "class="LineNr">156</span>  <span title="Normal "class="Normal">	</span><span title="cType "class="cType">void</span><span title="Normal "class="Normal"> *val;
+</span><span title="LineNr "class="LineNr">157</span>  <span title="Normal "class="Normal">	</span><span title="cType "class="cType">int</span><span title="Normal "class="Normal"> err;
+</span><span title="LineNr "class="LineNr">158</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">159</span>  <span title="Normal "class="Normal">	BUG_ON(target &#61;&#61; victim);
+</span><span title="LineNr "class="LineNr">160</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">161</span>  <span title="Normal "class="Normal">	</span><span title="cConditional "class="cConditional">if</span><span title="Normal "class="Normal"> (!(target-&gt;node)) {
+</span><span title="LineNr "class="LineNr">162</span>  <span title="Normal "class="Normal">		</span><span title="cCommentStart "class="cCommentStart">/*</span><span title="cComment "class="cComment"> target is empty, just copy fields over </span><span title="cCommentStart "class="cCommentStart">*/
+</span><span title="LineNr "class="LineNr">163</span>  <span title="Normal "class="Normal">		target-&gt;node &#61; victim-&gt;node;
+</span><span title="LineNr "class="LineNr">164</span>  <span title="Normal "class="Normal">		target-&gt;height &#61; victim-&gt;height;
+</span><span title="LineNr "class="LineNr">165</span>  <span title="Normal "class="Normal">		__btree_init(victim);
+</span><span title="LineNr "class="LineNr">166</span>  <span title="Normal "class="Normal">		</span><span title="cStatement "class="cStatement">return</span><span title="Normal "class="Normal"> </span><span title="cNumber "class="cNumber">0</span><span title="Normal "class="Normal">;
+</span><span title="LineNr "class="LineNr">167</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">168</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">169</span>  <span title="Normal "class="Normal">	</span><span title="cCommentStart "class="cCommentStart">/*</span><span title="cComment "class="cComment"> </span><span title="cTodo "class="cTodo">TODO</span><span title="cComment "class="cComment">: This needs some optimizations.  Currently we do three tree
+</span><span title="LineNr "class="LineNr">170</span>  <span title="cComment "class="cComment">	 * walks to remove a single object from the victim.
+</span><span title="LineNr "class="LineNr">171</span>  <span title="cComment "class="cComment">	 </span><span title="cCommentStart "class="cCommentStart">*/
+</span><span title="LineNr "class="LineNr">172</span>  <span title="Normal "class="Normal">	</span><span title="cRepeat "class="cRepeat">for</span><span title="Normal "class="Normal"> (;;) {
+</span><span title="LineNr "class="LineNr">173</span>  <span title="Normal "class="Normal">		</span><span title="cConditional "class="cConditional">if</span><span title="Normal "class="Normal"> (!btree_last(victim, geo, key))
+</span><span title="LineNr "class="LineNr">174</span>  <span title="Normal "class="Normal">			</span><span title="cStatement "class="cStatement">break</span><span title="Normal "class="Normal">;
+</span><span title="LineNr "class="LineNr">175</span>  <span title="Normal "class="Normal">		val &#61; btree_lookup(victim, geo, key);
+</span><span title="LineNr "class="LineNr">176</span>  <span title="Normal "class="Normal">		err &#61; btree_insert(target, geo, key, val, gfp);
+</span><span title="LineNr "class="LineNr">177</span>  <span title="Normal "class="Normal">		</span><span title="cConditional "class="cConditional">if</span><span title="Normal "class="Normal"> (err)
+</span><span title="LineNr "class="LineNr">178</span>  <span title="Normal "class="Normal">			</span><span title="cStatement "class="cStatement">return</span><span title="Normal "class="Normal"> err;
+</span><span title="LineNr "class="LineNr">179</span>  <span title="Normal "class="Normal">		</span><span title="cCommentStart "class="cCommentStart">/*</span><span title="cComment "class="cComment"> We must make a copy of the key, as the original will get
+</span><span title="LineNr "class="LineNr">180</span>  <span title="cComment "class="cComment">		 * mangled inside btree_remove. </span><span title="cCommentStart "class="cCommentStart">*/
+</span><span title="LineNr "class="LineNr">181</span>  <span title="Normal "class="Normal">		longcpy(dup, key, geo-&gt;keylen);
+</span><span title="LineNr "class="LineNr">182</span>  <span title="Normal "class="Normal">		btree_remove(victim, geo, dup);
+</span><span title="LineNr "class="LineNr">183</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">184</span>  <span title="Normal "class="Normal">	</span><span title="cStatement "class="cStatement">return</span><span title="Normal "class="Normal"> </span><span title="cNumber "class="cNumber">0</span><span title="Normal "class="Normal">;
+</span><span title="LineNr "class="LineNr">185</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">186</span>  <span title="Normal "class="Normal">EXPORT_SYMBOL_GPL(btree_merge);
+</span><span title="LineNr "class="LineNr">187</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">188</span>  <span title="cStorageClass "class="cStorageClass">static</span><span title="Normal "class="Normal"> </span><span title="cType "class="cType">size_t</span><span title="Normal "class="Normal"> __btree_for_each(</span><span title="cStructure "class="cStructure">struct</span><span title="Normal "class="Normal"> btree_head *head, </span><span title="cStructure "class="cStructure">struct</span><span title="Normal "class="Normal"> btree_geo *geo,
+</span><span title="LineNr "class="LineNr">189</span>  <span title="Normal "class="Normal">			       </span><span title="cType "class="cType">unsigned</span><span title="Normal "class="Normal"> </span><span title="cType "class="cType">long</span><span title="Normal "class="Normal"> *node, </span><span title="cType "class="cType">unsigned</span><span title="Normal "class="Normal"> </span><span title="cType "class="cType">long</span><span title="Normal "class="Normal"> opaque,
+</span><span title="LineNr "class="LineNr">190</span>  <span title="Normal "class="Normal">			       </span><span title="cType "class="cType">void</span><span title="Normal "class="Normal"> (*func)(</span><span title="cType "class="cType">void</span><span title="Normal "class="Normal"> *elem, </span><span title="cType "class="cType">unsigned</span><span title="Normal "class="Normal"> </span><span title="cType "class="cType">long</span><span title="Normal "class="Normal"> opaque,
+</span><span title="LineNr "class="LineNr">191</span>  <span title="Normal "class="Normal">					    </span><span title="cType "class="cType">unsigned</span><span title="Normal "class="Normal"> </span><span title="cType "class="cType">long</span><span title="Normal "class="Normal"> *key, </span><span title="cType "class="cType">size_t</span><span title="Normal "class="Normal"> index,
+</span><span title="LineNr "class="LineNr">192</span>  <span title="Normal "class="Normal">					    </span><span title="cType "class="cType">void</span><span title="Normal "class="Normal"> *func2),
+</span><span title="LineNr "class="LineNr">193</span>  <span title="Normal "class="Normal">			       </span><span title="cType "class="cType">void</span><span title="Normal "class="Normal"> *func2, </span><span title="cType "class="cType">int</span><span title="Normal "class="Normal"> reap, </span><span title="cType "class="cType">int</span><span title="Normal "class="Normal"> height, </span><span title="cType "class="cType">size_t</span><span title="Normal "class="Normal"> count)
+</span><span title="LineNr "class="LineNr">194</span>  <span title="Normal "class="Normal">{
+</span><span title="LineNr "class="LineNr">195</span>  <span title="Normal "class="Normal">	</span><span title="cType "class="cType">int</span><span title="Normal "class="Normal"> i;
+</span><span title="LineNr "class="LineNr">196</span>  <span title="Normal "class="Normal">	</span><span title="cType "class="cType">unsigned</span><span title="Normal "class="Normal"> </span><span title="cType "class="cType">long</span><span title="Normal "class="Normal"> *child;
+</span><span title="LineNr "class="LineNr">197</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">198</span>  <span title="Normal "class="Normal">	</span><span title="cRepeat "class="cRepeat">for</span><span title="Normal "class="Normal"> (i &#61; </span><span title="cNumber "class="cNumber">0</span><span title="Normal "class="Normal">; i &lt; geo-&gt;no_pairs; i++) {
+</span><span title="LineNr "class="LineNr">199</span>  <span title="Normal "class="Normal">		child &#61; bval(geo, node, i);
+</span><span title="LineNr "class="LineNr">200</span>  <span title="Normal "class="Normal">		</span><span title="cConditional "class="cConditional">if</span><span title="Normal "class="Normal"> (!child)
+</span><span title="LineNr "class="LineNr">201</span>  <span title="Normal "class="Normal">			</span><span title="cStatement "class="cStatement">break</span><span title="Normal "class="Normal">;
+</span><span title="LineNr "class="LineNr">202</span>  <span title="Normal "class="Normal">		</span><span title="cConditional "class="cConditional">if</span><span title="Normal "class="Normal"> (height &gt; </span><span title="cNumber "class="cNumber">1</span><span title="Normal "class="Normal">)
+</span><span title="LineNr "class="LineNr">203</span>  <span title="Normal "class="Normal">			count &#61; __btree_for_each(head, geo, child, opaque,
+</span><span title="LineNr "class="LineNr">204</span>  <span title="Normal "class="Normal">					func, func2, reap, height - </span><span title="cNumber "class="cNumber">1</span><span title="Normal "class="Normal">, count);
+</span><span title="LineNr "class="LineNr">205</span>  <span title="Normal "class="Normal">		</span><span title="cConditional "class="cConditional">else
+</span><span title="LineNr "class="LineNr">206</span>  <span title="Normal "class="Normal">			func(child, opaque, bkey(geo, node, i), count++,
+</span><span title="LineNr "class="LineNr">207</span>  <span title="Normal "class="Normal">					func2);
+</span><span title="LineNr "class="LineNr">208</span>  <span title="Normal "class="Normal">	}
+</span><span title="LineNr "class="LineNr">209</span>  <span title="Normal "class="Normal">	</span><span title="cConditional "class="cConditional">if</span><span title="Normal "class="Normal"> (reap)
+</span><span title="LineNr "class="LineNr">210</span>  <span title="Normal "class="Normal">		mempool_free(node, head-&gt;mempool);
+</span><span title="LineNr "class="LineNr">211</span>  <span title="Normal "class="Normal">	</span><span title="cStatement "class="cStatement">return</span><span title="Normal "class="Normal"> count;
+</span><span title="LineNr "class="LineNr">212</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">213</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">214</span>  <span title="cStorageClass "class="cStorageClass">static</span><span title="Normal "class="Normal"> </span><span title="cType "class="cType">void</span><span title="Normal "class="Normal"> empty(</span><span title="cType "class="cType">void</span><span title="Normal "class="Normal"> *elem, </span><span title="cType "class="cType">unsigned</span><span title="Normal "class="Normal"> </span><span title="cType "class="cType">long</span><span title="Normal "class="Normal"> opaque, </span><span title="cType "class="cType">unsigned</span><span title="Normal "class="Normal"> </span><span title="cType "class="cType">long</span><span title="Normal "class="Normal"> *key,
+</span><span title="LineNr "class="LineNr">215</span>  <span title="Normal "class="Normal">		  </span><span title="cType "class="cType">size_t</span><span title="Normal "class="Normal"> index, </span><span title="cType "class="cType">void</span><span title="Normal "class="Normal"> *func2)
+</span><span title="LineNr "class="LineNr">216</span>  <span title="Normal "class="Normal">{
+</span><span title="LineNr "class="LineNr">217</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">218</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">219</span>  <span title="cType "class="cType">void</span><span title="Normal "class="Normal"> visitorl(</span><span title="cType "class="cType">void</span><span title="Normal "class="Normal"> *elem, </span><span title="cType "class="cType">unsigned</span><span title="Normal "class="Normal"> </span><span title="cType "class="cType">long</span><span title="Normal "class="Normal"> opaque, </span><span title="cType "class="cType">unsigned</span><span title="Normal "class="Normal"> </span><span title="cType "class="cType">long</span><span title="Normal "class="Normal"> *key,
+</span><span title="LineNr "class="LineNr">220</span>  <span title="Normal "class="Normal">	      </span><span title="cType "class="cType">size_t</span><span title="Normal "class="Normal"> index, </span><span title="cType "class="cType">void</span><span title="Normal "class="Normal"> *__func)
+</span><span title="LineNr "class="LineNr">221</span>  <span title="Normal "class="Normal">{
+</span><span title="LineNr "class="LineNr">222</span>  <span title="Normal "class="Normal">	visitorl_t func &#61; __func;
+</span><span title="LineNr "class="LineNr">223</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">224</span>  <span title="Normal "class="Normal">	func(elem, opaque, *key, index);
+</span><span title="LineNr "class="LineNr">225</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">226</span>  <span title="Normal "class="Normal">EXPORT_SYMBOL_GPL(visitorl);
+</span><span title="LineNr "class="LineNr">227</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">228</span>  <span title="cType "class="cType">void</span><span title="Normal "class="Normal"> visitor32(</span><span title="cType "class="cType">void</span><span title="Normal "class="Normal"> *elem, </span><span title="cType "class="cType">unsigned</span><span title="Normal "class="Normal"> </span><span title="cType "class="cType">long</span><span title="Normal "class="Normal"> opaque, </span><span title="cType "class="cType">unsigned</span><span title="Normal "class="Normal"> </span><span title="cType "class="cType">long</span><span title="Normal "class="Normal"> *__key,
+</span><span title="LineNr "class="LineNr">229</span>  <span title="Normal "class="Normal">	       </span><span title="cType "class="cType">size_t</span><span title="Normal "class="Normal"> index, </span><span title="cType "class="cType">void</span><span title="Normal "class="Normal"> *__func)
+</span><span title="LineNr "class="LineNr">230</span>  <span title="Normal "class="Normal">{
+</span><span title="LineNr "class="LineNr">231</span>  <span title="Normal "class="Normal">	visitor32_t func &#61; __func;
+</span><span title="LineNr "class="LineNr">232</span>  <span title="Normal "class="Normal">	u32 *key &#61; (</span><span title="cType "class="cType">void</span><span title="Normal "class="Normal"> *)__key;
+</span><span title="LineNr "class="LineNr">233</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">234</span>  <span title="Normal "class="Normal">	func(elem, opaque, *key, index);
+</span><span title="LineNr "class="LineNr">235</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">236</span>  <span title="Normal "class="Normal">EXPORT_SYMBOL_GPL(visitor32);
+</span><span title="LineNr "class="LineNr">237</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">238</span>  <span title="cType "class="cType">void</span><span title="Normal "class="Normal"> visitor64(</span><span title="cType "class="cType">void</span><span title="Normal "class="Normal"> *elem, </span><span title="cType "class="cType">unsigned</span><span title="Normal "class="Normal"> </span><span title="cType "class="cType">long</span><span title="Normal "class="Normal"> opaque, </span><span title="cType "class="cType">unsigned</span><span title="Normal "class="Normal"> </span><span title="cType "class="cType">long</span><span title="Normal "class="Normal"> *__key,
+</span><span title="LineNr "class="LineNr">239</span>  <span title="Normal "class="Normal">	       </span><span title="cType "class="cType">size_t</span><span title="Normal "class="Normal"> index, </span><span title="cType "class="cType">void</span><span title="Normal "class="Normal"> *__func)
+</span><span title="LineNr "class="LineNr">240</span>  <span title="Normal "class="Normal">{
+</span><span title="LineNr "class="LineNr">241</span>  <span title="Normal "class="Normal">	visitor64_t func &#61; __func;
+</span><span title="LineNr "class="LineNr">242</span>  <span title="Normal "class="Normal">	u64 *key &#61; (</span><span title="cType "class="cType">void</span><span title="Normal "class="Normal"> *)__key;
+</span><span title="LineNr "class="LineNr">243</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">244</span>  <span title="Normal "class="Normal">	func(elem, opaque, *key, index);
+</span><span title="LineNr "class="LineNr">245</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">246</span>  <span title="Normal "class="Normal">EXPORT_SYMBOL_GPL(visitor64);
+</span><span title="LineNr "class="LineNr">247</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">248</span>  <span title="cStorageClass "class="cStorageClass">static</span><span title="Normal "class="Normal"> </span><span title="cType "class="cType">int</span><span title="Normal "class="Normal"> __init btree_module_init(</span><span title="cType "class="cType">void</span><span title="Normal "class="Normal">)
+</span><span title="LineNr "class="LineNr">249</span>  <span title="Normal "class="Normal">{
+</span><span title="LineNr "class="LineNr">250</span>  <span title="Normal "class="Normal">	btree_cachep &#61; kmem_cache_create(</span><span title="cString "class="cString">&quot;btree_node&quot;</span><span title="Normal "class="Normal">, NODESIZE, </span><span title="cNumber "class="cNumber">0</span><span title="Normal "class="Normal">,
+</span><span title="LineNr "class="LineNr">251</span>  <span title="Normal "class="Normal">			SLAB_HWCACHE_ALIGN, </span><span title="cConstant "class="cConstant">NULL</span><span title="Normal "class="Normal">);
+</span><span title="LineNr "class="LineNr">252</span>  <span title="Normal "class="Normal">	</span><span title="cStatement "class="cStatement">return</span><span title="Normal "class="Normal"> </span><span title="cNumber "class="cNumber">0</span><span title="Normal "class="Normal">;
+</span><span title="LineNr "class="LineNr">253</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">254</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">255</span>  <span title="cStorageClass "class="cStorageClass">static</span><span title="Normal "class="Normal"> </span><span title="cType "class="cType">void</span><span title="Normal "class="Normal"> __exit btree_module_exit(</span><span title="cType "class="cType">void</span><span title="Normal "class="Normal">)
+</span><span title="LineNr "class="LineNr">256</span>  <span title="Normal "class="Normal">{
+</span><span title="LineNr "class="LineNr">257</span>  <span title="Normal "class="Normal">	kmem_cache_destroy(btree_cachep);
+</span><span title="LineNr "class="LineNr">258</span>  <span title="Normal "class="Normal">}
+</span><span title="LineNr "class="LineNr">259</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">260</span>  <span title="cCommentStart "class="cCommentStart">/*</span><span title="cComment "class="cComment"> If core code starts using btree, initialization should happen even earlier </span><span title="cCommentStart "class="cCommentStart">*/
+</span><span title="LineNr "class="LineNr">261</span>  <span title="Normal "class="Normal">module_init(btree_module_init);
+</span><span title="LineNr "class="LineNr last-LineNr">262</span>  <span title="Normal "class="Normal">module_exit(btree_module_exit);</span>

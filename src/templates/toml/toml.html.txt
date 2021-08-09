@@ -1,0 +1,48 @@
+<span title="LineNr "class="LineNr first-LineNr">1</span>  <span title="Normal "class="Normal">apiVersion &#61; &quot;apps/v1&quot;
+</span><span title="LineNr "class="LineNr">2</span>  <span title="Normal "class="Normal">kind &#61; &quot;StatefulSet&quot;
+</span><span title="LineNr "class="LineNr">3</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">4</span>  <span title="Normal "class="Normal">[metadata]
+</span><span title="LineNr "class="LineNr">5</span>  <span title="Normal "class="Normal">name &#61; &quot;web&quot;
+</span><span title="LineNr "class="LineNr">6</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">7</span>  <span title="Normal "class="Normal">[spec]
+</span><span title="LineNr "class="LineNr">8</span>  <span title="Normal "class="Normal">serviceName &#61; &quot;nginx&quot;
+</span><span title="LineNr "class="LineNr">9</span>  <span title="Normal "class="Normal">replicas &#61; 3
+</span><span title="LineNr "class="LineNr">10</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">11</span>  <span title="Normal "class="Normal">[spec.selector.matchLabels]
+</span><span title="LineNr "class="LineNr">12</span>  <span title="Normal "class="Normal">app &#61; &quot;nginx&quot;
+</span><span title="LineNr "class="LineNr">13</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">14</span>  <span title="Normal "class="Normal">[spec.template.metadata.labels]
+</span><span title="LineNr "class="LineNr">15</span>  <span title="Normal "class="Normal">app &#61; &quot;nginx&quot;
+</span><span title="LineNr "class="LineNr">16</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">17</span>  <span title="Normal "class="Normal">[spec.template.spec]
+</span><span title="LineNr "class="LineNr">18</span>  <span title="Normal "class="Normal">terminationGracePeriodSeconds &#61; 10
+</span><span title="LineNr "class="LineNr">19</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">20</span>  <span title="Normal "class="Normal">  [[spec.template.spec.containers]]
+</span><span title="LineNr "class="LineNr">21</span>  <span title="Normal "class="Normal">  name &#61; &quot;nginx&quot;
+</span><span title="LineNr "class="LineNr">22</span>  <span title="Normal "class="Normal">  image &#61; &quot;k8s.gcr.io/nginx-slim:0.8&quot;
+</span><span title="LineNr "class="LineNr">23</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">24</span>  <span title="Normal "class="Normal">    [[spec.template.spec.containers.ports]]
+</span><span title="LineNr "class="LineNr">25</span>  <span title="Normal "class="Normal">    containerPort &#61; 80
+</span><span title="LineNr "class="LineNr">26</span>  <span title="Normal "class="Normal">    name &#61; &quot;web&quot;
+</span><span title="LineNr "class="LineNr">27</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">28</span>  <span title="Normal "class="Normal">    [[spec.template.spec.containers.volumeMounts]]
+</span><span title="LineNr "class="LineNr">29</span>  <span title="Normal "class="Normal">    name &#61; &quot;www&quot;
+</span><span title="LineNr "class="LineNr">30</span>  <span title="Normal "class="Normal">    mountPath &#61; &quot;/usr/share/nginx/html&quot;
+</span><span title="LineNr "class="LineNr">31</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">32</span>  <span title="Normal "class="Normal">    [[spec.template.spec.containers.env]]
+</span><span title="LineNr "class="LineNr">33</span>  <span title="Normal "class="Normal">    name &#61; &quot;ENV&quot;
+</span><span title="LineNr "class="LineNr">34</span>  <span title="Normal "class="Normal">    value &#61; &quot;&quot;&quot;
+</span><span title="LineNr "class="LineNr">35</span>  <span title="Normal "class="Normal">&#39;Multiline string&#39;
+</span><span title="LineNr "class="LineNr">36</span>  <span title="Normal "class="Normal">&#39;Development&#39;
+</span><span title="LineNr "class="LineNr">37</span>  <span title="Normal "class="Normal">&quot;&quot;&quot;
+</span><span title="LineNr "class="LineNr">38</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">39</span>  <span title="Normal "class="Normal">  [[spec.volumeClaimTemplates]]
+</span><span title="LineNr "class="LineNr">40</span>  <span title="Normal "class="Normal">[spec.volumeClaimTemplates.metadata]
+</span><span title="LineNr "class="LineNr">41</span>  <span title="Normal "class="Normal">name &#61; &quot;www&quot;
+</span><span title="LineNr "class="LineNr">42</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">43</span>  <span title="Normal "class="Normal">[spec.volumeClaimTemplates.spec]
+</span><span title="LineNr "class="LineNr">44</span>  <span title="Normal "class="Normal">accessModes &#61; [ &quot;ReadWriteOnce&quot; ]
+</span><span title="LineNr "class="LineNr">45</span>  <span title="Normal "class="Normal">storageClassName &#61; &quot;my-storage-class&quot;
+</span><span title="LineNr "class="LineNr">46</span>  <span title="Normal "class="Normal">
+</span><span title="LineNr "class="LineNr">47</span>  <span title="Normal "class="Normal">[spec.volumeClaimTemplates.spec.resources.requests]
+</span><span title="LineNr "class="LineNr last-LineNr">48</span>  <span title="Normal "class="Normal">storage &#61; &quot;1Gi&quot;</span>
