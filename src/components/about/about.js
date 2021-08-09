@@ -284,7 +284,7 @@ function AboutView({ props }) {
 
             <li>
               <span class="bold">Updated</span><br />
-              June 10, 2021
+              August 9, 2021
             </li>
 
             <li>
@@ -300,18 +300,6 @@ function AboutView({ props }) {
                   rel="nofollow"
                   href="https://github.com/alajmo/pinto"
                   >github.com/alajmo/pinto</a
-                ></span
-              >
-            </li>
-
-            <li>
-              <span class="bold">Contact</span> <br />
-              <span style="font-weight: bold"
-                ><a
-                  target="_blank"
-                  rel="nofollow"
-                  href="mailto:alajmovic.samir@gmail.com"
-                  >alajmovic.samir@gmail.com</a
                 ></span
               >
             </li>
