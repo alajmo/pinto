@@ -8,6 +8,7 @@
   overflow-y: auto;
   padding-right: calc(var(--padding) * 8);
   background: var(--bg-accent);
+  scrollbar-gutter: stable;
 
   & .toggle-sidebar-display {
     position: absolute;
