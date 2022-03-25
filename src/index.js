@@ -15,6 +15,7 @@ async function main() {
   async function init() {
     const Store = await CreateStore();
     const app = App(Store);
+    console.log(app);
 
     render(() => app, document.body);
     const appLoader = document.getElementById('app-loader');

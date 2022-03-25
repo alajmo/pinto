@@ -1,4 +1,7 @@
 import { mitt } from 'lib/event.js';
+
+// TODO: Left of here, need to switch to solidjs in the below components
+
 import { ToggleSection } from 'components/toggle-section/toggle-section.js';
 import Toggle from 'components/toggle/toggle.jsx';
 import {
