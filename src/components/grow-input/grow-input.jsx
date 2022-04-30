@@ -1,52 +1,52 @@
-import './grow-input.css';
+import { splitProps } from "solid-js";
 
-export default ({
-  value,
-  name,
-  onclick = () => {},
-  onblur = () => {},
-  readonly = false,
-}) => {
-  const handleBlur = e => {
+import "./grow-input.css";
+
+export default (props) => {
+  const [local] = splitProps(props, [
+    "value",
+    "name",
+    "onclick",
+    "onblur",
+    "readonly",
+  ]);
+
+  const handleBlur = (e) => {
     e.target.scroll(0, 0);
-    onblur(e);
+    local.onblur(e);
   };
 
-  const handleKeyDown = e => {
-    if (e.key === 'Enter') {
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
       e.preventDefault();
       e.target.blur();
     }
   };
 
-  const handlePaste = e => {
+  const handlePaste = (e) => {
     e.preventDefault();
-    let text = e.clipboardData.getData('text');
-    text = text.replace(/\r?\n|\r/g, '');
-    document.execCommand('insertText', false, text);
+    let text = e.clipboardData.getData("text");
+    text = text.replace(/\r?\n|\r/g, "");
+    document.execCommand("insertText", false, text);
   };
 
-  const handleMousedown = e => {
-    onclick(e);
+  const handleMousedown = (e) => {
+    local.onclick(e);
   };
-
-  console.log('----------------------');
-  console.log(name);
-  console.log('----------------------');
 
   return (
     <span
       class="input-grow"
-      contenteditable={!readonly}
+      contenteditable={!local.readonly}
       spellcheck="false"
       type="text"
-      name={name}
+      name={local.name}
       onKeyDown={handleKeyDown}
       onMouseDown={handleMousedown}
       onBlur={handleBlur}
       onPaste={handlePaste}
     >
-      {value}
+      {local.value}
     </span>
   );
 };

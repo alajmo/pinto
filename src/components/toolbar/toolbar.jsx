@@ -1,76 +1,79 @@
-import { mitt } from 'lib/event.js';
+import { splitProps } from "solid-js";
+import { mitt } from "lib/event.js";
 
-import GrowInput from 'components/grow-input/grow-input.jsx';
+import GrowInput from "components/grow-input/grow-input.jsx";
 
-import './toolbar.css';
+import "./toolbar.css";
 
-export default ({ store, state }) => {
+export default (cProps) => {
+  const [local] = splitProps(cProps, ["store", "state"]);
+
   const fileSystemEnabled = window.showSaveFilePicker !== undefined;
 
   const props = {
     fileSystemEnabled,
 
     async saveTheme() {
-      await store.dispatch('app', 'saveTheme');
-      mitt.emit('RENDER');
+      await local.store.dispatch("app", "saveTheme");
+      mitt.emit("RENDER");
     },
 
     async saveAs() {
       if (fileSystemEnabled) {
-        await store.dispatch('theme', 'createFileHandle');
+        await local.store.dispatch("theme", "createFileHandle");
       }
-      mitt.emit('RENDER');
+      mitt.emit("RENDER");
     },
 
     removeFileSync() {
       const removeFileHandle = confirm(
-        'Are you sure you want to stop syncing to file? The file will not be deleted.',
+        "Are you sure you want to stop syncing to file? The file will not be deleted."
       );
 
       if (removeFileHandle) {
-        store.dispatch('theme', 'deleteFileHandle');
-        mitt.emit('RENDER');
+        local.store.dispatch("theme", "deleteFileHandle");
+        mitt.emit("RENDER");
       }
     },
 
     createTheme() {
-      store.dispatch('app', 'openModal', 'new');
-      mitt.emit('RENDER');
+      local.store.dispatch("app", "openModal", "new");
+      mitt.emit("RENDER");
     },
 
     exportModal() {
-      store.dispatch('app', 'openModal', 'export');
-      mitt.emit('RENDER');
+      local.store.dispatch("app", "openModal", "export");
+      mitt.emit("RENDER");
     },
 
     openTheme() {
-      store.dispatch('app', 'openModal', 'themes');
-      mitt.emit('RENDER');
+      local.store.dispatch("app", "openModal", "themes");
+      mitt.emit("RENDER");
     },
 
     openHelp() {
-      store.dispatch('app', 'openModal', 'about');
-      mitt.emit('RENDER');
+      local.store.dispatch("app", "openModal", "about");
+      mitt.emit("RENDER");
     },
 
     name: {
-      name: 'theme-name',
-      value: state.theme.name,
+      name: "theme-name",
+      value: local.state.theme.name,
 
       onblur(e) {
         const value = e.target.textContent.trim();
         if (value.length < 1) {
-          e.target.textContent = state.theme.defaultThemeName;
-          store.dispatch(
-            'theme',
-            'updateThemeName',
-            state.theme.defaultThemeName,
+          e.target.textContent = local.state.theme.defaultThemeName;
+          local.store.dispatch(
+            "theme",
+            "updateThemeName",
+            local.state.theme.defaultThemeName
           );
         } else {
-          store.dispatch('theme', 'updateThemeName', value);
+          local.store.dispatch("theme", "updateThemeName", value);
         }
 
-        mitt.emit('RENDER');
+        mitt.emit("RENDER");
       },
     },
   };
@@ -83,22 +86,24 @@ export default ({ store, state }) => {
         </div>
 
         <div class="right-items">
-          {state.app.changesSaved === false && state.theme.id === null && (
-            <div class="warning-message">Unsaved changes</div>
-          )}
+          {local.state.app.changesSaved === false &&
+            local.state.theme.id === null && (
+              <div class="warning-message">Unsaved changes</div>
+            )}
 
-          {state.app.changesSaved === false && state.theme.id !== null && (
-            <div class="info-message">Saving...</div>
-          )}
+          {local.state.app.changesSaved === false &&
+            local.state.theme.id !== null && (
+              <div class="info-message">Saving...</div>
+            )}
 
-          {state.app.changesSaved === true && (
+          {local.state.app.changesSaved === true && (
             <div class="info-message">All changes saved</div>
           )}
 
-          {state.theme.fileHandle && (
+          {local.state.theme.fileHandle && (
             <div class="saved-file">
               <div class="saved-file_filename">
-                {state.theme.fileHandle.name}
+                {local.state.theme.fileHandle.name}
               </div>
 
               <div>
@@ -124,8 +129,8 @@ export default ({ store, state }) => {
             disabled={!props.fileSystemEnabled}
             title={
               props.fileSystemEnabled
-                ? 'Save changes to file (Ctrl + Shift + S)'
-                : 'File System Access API is not enabled for this browser.'
+                ? "Save changes to file (Ctrl + Shift + S)"
+                : "File System Access API is not enabled for this browser."
             }
             onClick={props.saveAs}
           >

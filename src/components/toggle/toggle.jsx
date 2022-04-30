@@ -1,16 +1,14 @@
-export default ({
-  enabled,
-  title = '',
-  iconA = 'fas fa-eye actionable',
-  iconB = 'fas fa-eye-slash actionable',
-  toggle,
-}) => {
-  return enabled ? (
-    <i title="" onclick={toggle} class="fas fa-eye actionable"></i>
+import { splitProps } from "solid-js";
+
+export default (props) => {
+  const [local] = splitProps(props, ["enabled", "title", "toggle"]);
+
+  return local.enabled ? (
+    <i title="" onclick={local.toggle} class="fas fa-eye actionable"></i>
   ) : (
     <i
       title="Disable language keywords"
-      onclick={toggle}
+      onclick={local.toggle}
       class="fas fa-eye-slash actionable"
     ></i>
   );

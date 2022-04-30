@@ -1,48 +1,46 @@
-import { mitt } from 'lib/event.js';
+import { splitProps } from 'solid-js';
+import { mitt } from "lib/event.js";
 
-// TODO: Left of here, need to switch to solidjs in the below components
+import ToggleSection from "components/toggle-section/toggle-section.jsx";
+import Toggle from "components/toggle/toggle.jsx";
+import { KeywordList, ToggleSelectAll, ToggleDisplay,
+} from "components/keyword-list/keyword-list.jsx";
 
-import { ToggleSection } from 'components/toggle-section/toggle-section.js';
-import Toggle from 'components/toggle/toggle.jsx';
-import {
-  KeywordList,
-  ToggleSelectAll,
-  ToggleDisplay,
-} from 'components/keyword-list/keyword-list.js';
+import "./sidebar.css";
 
-import './sidebar.css';
+export default (cProps) => {
+  const [local] = splitProps(cProps, ["store", "state"]);
 
-export default ({ store, state }) => {
   const { selectedOption, selectedKeyword, showSidebar } = state.app;
   const enabledKeywordGroups = Object.entries(state.theme.groups)
-    .filter(l => l[1])
-    .map(l => l[0]);
+    .filter((l) => l[1])
+    .map((l) => l[0]);
 
   const keywords = enabledKeywordGroups.flatMap(
-    g => state.theme.groupKeywords[g],
+    (g) => state.theme.groupKeywords[g]
   );
 
   const groups = Object.entries(state.theme.groups)
-    .filter(group => group[1])
-    .map(group => group[0]);
+    .filter((group) => group[1])
+    .map((group) => group[0]);
 
   const selectedKeywords = state.app.selectedKeyword;
 
   const activeKeywords = Object.entries(state.theme.keywords)
-    .filter(k => k[1].active)
-    .map(k => k[1]);
+    .filter((k) => k[1].active)
+    .map((k) => k[1]);
 
   const allKeywordsSelected = activeKeywords.length === selectedKeywords.length;
-  const allKeywordsEnabled = activeKeywords.every(k => k.enabled);
+  const allKeywordsEnabled = activeKeywords.every((k) => k.enabled);
 
   const groupSelectedKeywords = Object.keys(state.theme.groups).reduce(
     (prev, curr) => ({
-      [curr]: state.theme.groupKeywords[curr].every(k =>
-        selectedKeywords.includes(k),
+      [curr]: state.theme.groupKeywords[curr].every((k) =>
+        selectedKeywords.includes(k)
       ),
       ...prev,
     }),
-    {},
+    {}
   );
 
   const props = {
@@ -66,41 +64,41 @@ export default ({ store, state }) => {
 
     groups,
     toggleSidebar() {
-      store.dispatch('app', 'toggleSidebar');
-      mitt.emit('RENDER');
+      store.dispatch("app", "toggleSidebar");
+      mitt.emit("RENDER");
     },
 
     toggleEnableAllKeywords() {
-      store.dispatch('theme', 'toggleEnableKeywords', {
-        keywords: activeKeywords.map(k => k.name),
+      store.dispatch("theme", "toggleEnableKeywords", {
+        keywords: activeKeywords.map((k) => k.name),
         value: !allKeywordsEnabled,
       });
-      mitt.emit('KEYWORD_ENABLE_TOGGLE');
-      mitt.emit('RENDER', { allKeywords: true });
+      mitt.emit("KEYWORD_ENABLE_TOGGLE");
+      mitt.emit("RENDER", { allKeywords: true });
     },
 
     toggleEnableKeyword(keywords, value) {
-      store.dispatch('theme', 'toggleEnableKeywords', { keywords, value });
-      mitt.emit('KEYWORD_ENABLE_TOGGLE');
-      mitt.emit('RENDER', { allKeywords: true });
+      store.dispatch("theme", "toggleEnableKeywords", { keywords, value });
+      mitt.emit("KEYWORD_ENABLE_TOGGLE");
+      mitt.emit("RENDER", { allKeywords: true });
     },
 
     toggleSelectAllKeywords() {
       const selectedKeywords = state.app.selectedKeyword;
 
       if (allKeywordsSelected) {
-        store.dispatch('app', 'selectKeyword', [selectedKeywords[0]]);
+        store.dispatch("app", "selectKeyword", [selectedKeywords[0]]);
       } else {
         // After selecting all, make sure the initial keyword is in the front of the selected keyword,
         // because after unselecting all, we want it to be highlighted, and not some randon keyword.
         store.dispatch(
-          'app',
-          'selectKeyword',
-          activeKeywords.map(k => k.name),
+          "app",
+          "selectKeyword",
+          activeKeywords.map((k) => k.name)
         );
       }
 
-      mitt.emit('RENDER');
+      mitt.emit("RENDER");
     },
 
     toggleSelectAllGroupKeywords(groups) {
@@ -109,9 +107,9 @@ export default ({ store, state }) => {
 
       let keywords;
       if (groupSelectedKeywords[groups[0]]) {
-        keywords = selectedKeywords.filter(k => !groupKeywords.includes(k));
+        keywords = selectedKeywords.filter((k) => !groupKeywords.includes(k));
       } else {
-        keywords = selectedKeywords.filter(k => !groupKeywords.includes(k));
+        keywords = selectedKeywords.filter((k) => !groupKeywords.includes(k));
         keywords = keywords.concat(groupKeywords);
       }
 
@@ -120,22 +118,22 @@ export default ({ store, state }) => {
         keywords = [selectedKeywords[0]];
       }
 
-      store.dispatch('app', 'selectKeyword', keywords);
-      mitt.emit('RENDER');
+      store.dispatch("app", "selectKeyword", keywords);
+      mitt.emit("RENDER");
     },
 
     toggleMinimizeAllKeywords() {
-      store.dispatch('app', 'toggleMinimizeAllKeywords');
-      mitt.emit('RENDER');
+      store.dispatch("app", "toggleMinimizeAllKeywords");
+      mitt.emit("RENDER");
     },
 
     toggleMinimizeKeywords(groups) {
-      store.dispatch('app', 'toggleMinimizeKeywords', groups);
-      mitt.emit('RENDER');
+      store.dispatch("app", "toggleMinimizeKeywords", groups);
+      mitt.emit("RENDER");
     },
 
     selectKeyword(group, e) {
-      const clickedKeyword = e.target.getAttribute('data-name');
+      const clickedKeyword = e.target.getAttribute("data-name");
       if (clickedKeyword === null) {
         return;
       }
@@ -148,54 +146,56 @@ export default ({ store, state }) => {
         ) {
           return;
         } else if (selectedKeyword.includes(clickedKeyword)) {
-          selectedKeywords = selectedKeyword.filter(k => k !== clickedKeyword);
+          selectedKeywords = selectedKeyword.filter(
+            (k) => k !== clickedKeyword
+          );
         } else {
           selectedKeywords = selectedKeywords.concat(
             selectedKeyword,
-            clickedKeyword,
+            clickedKeyword
           );
         }
       } else {
         selectedKeywords = [clickedKeyword];
       }
 
-      store.dispatch('app', 'selectKeyword', selectedKeywords);
-      store.dispatch('app', 'selectOption', 'keyword');
+      store.dispatch("app", "selectKeyword", selectedKeywords);
+      store.dispatch("app", "selectOption", "keyword");
 
       if (state.theme.languages.includes(group)) {
-        store.dispatch('theme', 'loadTemplate', group);
+        store.dispatch("theme", "loadTemplate", group);
       }
 
-      mitt.emit('RENDER');
+      mitt.emit("RENDER");
     },
 
     copyFromKeywordToKeyword(keyword) {
-      store.dispatch('theme', 'copyFromKeywordToKeyword', {
+      store.dispatch("theme", "copyFromKeywordToKeyword", {
         keywordToCopyFrom: keyword,
         keywordToCopyTo: selectedKeywords,
       });
 
-      mitt.emit('RENDER');
+      mitt.emit("RENDER");
     },
 
     selectSettings() {
-      store.dispatch('app', 'selectOption', 'settings');
-      mitt.emit('RENDER');
+      store.dispatch("app", "selectOption", "settings");
+      mitt.emit("RENDER");
     },
 
     selectPalette() {
-      store.dispatch('app', 'selectOption', 'palette');
-      mitt.emit('RENDER');
+      store.dispatch("app", "selectOption", "palette");
+      mitt.emit("RENDER");
     },
 
     selectColors() {
-      store.dispatch('app', 'selectOption', 'colors');
-      mitt.emit('RENDER');
+      store.dispatch("app", "selectOption", "colors");
+      mitt.emit("RENDER");
     },
 
     selectExport() {
-      store.dispatch('app', 'selectOption', 'export');
-      mitt.emit('RENDER');
+      store.dispatch("app", "selectOption", "export");
+      mitt.emit("RENDER");
     },
   };
 
@@ -225,7 +225,7 @@ export default ({ store, state }) => {
             title="Go to settings (Shift + S)"
             onclick={props.selectSettings}
             data-name="settings"
-            data-selected={props.selectedOption === 'settings'}
+            data-selected={props.selectedOption === "settings"}
           >
             Settings
           </li>
@@ -234,14 +234,13 @@ export default ({ store, state }) => {
             title="Go to palette editor (Shift + P)"
             onclick={props.selectPalette}
             data-name="palette"
-            data-selected={props.selectedOption === 'palette'}
+            data-selected={props.selectedOption === "palette"}
           >
             Palette
           </li>
         </ol>
         <div class="header divider">
           <h3>Keywords</h3>
-
           <div class="keyword-buttons">
             <Toggle
               enableTitle="Enable language keywords"
@@ -261,49 +260,45 @@ export default ({ store, state }) => {
             />
           </div>
         </div>
-        /* goes here */
+
+        {props.groups.map((group) => (
+          <KeywordList
+            store={store}
+            title={group}
+            showEnableKeywordToggle={true}
+            allEnabled={props.groupKeywords[group].every(
+              (k) => props.keywordData[k].enabled
+            )}
+            allSelected={props.groupSelectedKeywords[group]}
+            minimized={props.minimizedGroups[group]}
+            keywordData={props.keywordData}
+            keywords={props.groupKeywords[group]}
+            selectedKeyword={props.selectedKeyword}
+            selectKeyword={(e) => props.selectKeyword(group, e)}
+            descriptions={state.theme.descriptions}
+            copyFromKeywordToKeyword={props.copyFromKeywordToKeyword}
+            toggleEnableKeyword={(keyword) => {
+              props.toggleEnableKeyword([keyword]);
+            }}
+            toggleEnableAll={() => {
+              const allEnabled = props.groupKeywords[group].every(
+                (k) => props.keywordData[k].enabled
+              );
+
+              props.toggleEnableKeyword(
+                props.groupKeywords[group],
+                !allEnabled
+              );
+            }}
+            toggleSelectAll={() => {
+              props.toggleSelectAllGroupKeywords([group]);
+            }}
+            toggleDisplayAll={() => {
+              props.toggleMinimizeKeywords([group]);
+            }}
+          />
+        ))}
       </div>
     </div>
   );
 };
-
-/* {props.groups.map(group => */
-/*   <KeywordList */
-/*     store, */
-/*     props: { */
-/*       title={group} */
-/*       showEnableKeywordToggle={true} */
-/*       allEnabled={props.groupKeywords[group].every} */
-/*         k => props.keywordData[k].enabled, */
-/*       ), */
-/*       allSelected={props.groupSelectedKeywords[group]} */
-/*       minimized={props.minimizedGroups[group]} */
-/*       keywordData={props.keywordData} */
-/*       keywords={props.groupKeywords[group]} */
-/*       selectedKeyword={props.selectedKeyword} */
-/*       selectKeyword={e => props.selectKeyword(group, e)} */
-/*       descriptions={state.theme.descriptions} */
-
-/*       copyFromKeywordToKeyword={props.copyFromKeywordToKeyword} */
-
-/*       toggleEnableKeyword: keyword => { */
-/*         props.toggleEnableKeyword([keyword]); */
-/*       }, */
-/*       toggleEnableAll: () => { */
-/*         const allEnabled = props.groupKeywords[group].every( */
-/*           k => props.keywordData[k].enabled, */
-/*         ); */
-/*         props.toggleEnableKeyword( */
-/*           props.groupKeywords[group], */
-/*           !allEnabled, */
-/*         ); */
-/*       }, */
-/*       toggleSelectAll: () => { */
-/*         props.toggleSelectAllGroupKeywords([group]); */
-/*       }, */
-/*       toggleDisplayAll: () => { */
-/*         props.toggleMinimizeKeywords([group]); */
-/*       }, */
-/*     }, */
-/*   }), */
-/* )} */

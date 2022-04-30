@@ -1,5 +1,3 @@
-import { html } from 'lighterhtml';
-
 export default TemplateRenderer;
 
 function TemplateRenderer() {
@@ -100,17 +98,18 @@ function TemplateRenderer() {
     }
   }
 
+  // TODO: FIX THIS
   function load(elementId, state) {
-    themeElement = html.node`<div id="${elementId}" class="language-preview"></div>`;
-    themeElement.innerHTML = state.theme.template;
+    // themeElement = html.node`<div id="${elementId}" class="language-preview"></div>`;
+    // themeElement.innerHTML = state.theme.template;
 
-    codeElement = document.getElementById('code');
-    codeElement.innerHTML = '';
-    codeElement.appendChild(themeElement);
-    element = document.getElementById(elementId);
-    keywords = state.theme.keywords;
+    // codeElement = document.getElementById('code');
+    // codeElement.innerHTML = '';
+    // codeElement.appendChild(themeElement);
+    // element = document.getElementById(elementId);
+    // keywords = state.theme.keywords;
 
-    updateKeywordElement(state);
+    // updateKeywordElement(state);
   }
 
   return { render, updateKeywordElement, load };

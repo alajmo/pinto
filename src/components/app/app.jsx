@@ -17,7 +17,7 @@ import Sidebar from 'components/sidebar/sidebar.jsx';
 // import { AboutView, AboutTemplate } from 'components/about/about.js';
 // import { compose } from 'lib/util.js';
 // import * as square from 'lib/color-canvas.js';
-// import TemplateRenderer from 'lib/template-renderer.js';
+import TemplateRenderer from 'lib/template-renderer.js';
 import { mitt } from 'lib/event.js';
 
 import './app.css';
@@ -57,6 +57,7 @@ function App(store) {
   const app = (
     <div>
       <div class="app-content">
+
         <div class="row-1">
           <div class="column">
             <Toolbar store={store} state={state} />
@@ -66,7 +67,8 @@ function App(store) {
         <div class="row-2">
           <Sidebar store={store} state={state} />
         </div>
-        </div>
+
+      </div>
     </div>
   );
 
